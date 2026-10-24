@@ -9,7 +9,7 @@ Noise model (per moment, density-matrix simulation):
   * Readout: asymmetric classical flips from zero_errors / one_errors.
 Scores use the notebook's own overall_score (exec'd from the .ipynb).
 
-Usage: python -u scripts/noisy_benchmark.py
+Usage: python -u claude/scripts/noisy_benchmark.py
 """
 
 from __future__ import annotations
@@ -23,8 +23,9 @@ from pathlib import Path
 import cirq
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+ROOT = Path(__file__).resolve().parents[1]  # claude/
+REPO = ROOT.parent  # holds the challenge notebook
+sys.path.insert(0, str(ROOT))  # claude/dicke_prep.py loads the notebook's solution
 sys.path.insert(0, str(ROOT / "tests"))
 import dicke_prep as dp  # noqa: E402
 from test_dicke_prep import fake_calibration  # noqa: E402
@@ -45,7 +46,7 @@ class NoiseConfig:
 
 def load_scoring():
     """Exec the notebook's scoring cell so we use the exact official functions."""
-    nb = json.loads((ROOT / "Google Quantum AI Challenge.ipynb").read_text())
+    nb = json.loads((REPO / "Google Quantum AI Challenge.ipynb").read_text())
     ns: dict = {}
     exec("import itertools, math\nimport numpy as np", ns)
     for cell in nb["cells"]:

@@ -11,11 +11,15 @@ scores the circuit depth of adaptive circuits.
 
 | Path | What |
 | --- | --- |
-| `Google Quantum AI Challenge.ipynb` | Submission notebook (solution injected by the build script) |
-| `dicke_prep.py` | The solution. Imports only cirq / cirq_google / numpy / stdlib, so it can be pasted into the notebook |
-| `tests/test_dicke_prep.py` | Exactness, gate set, device validity and runtime tests |
-| `scripts/build_notebook.py` | Writes `dicke_prep.py` into the notebook cells (idempotent) |
-| `scripts/noisy_benchmark.py` | Density-matrix noise simulation scored with the notebook's own `overall_score` |
+| `Google Quantum AI Challenge.ipynb` | The original challenge notebook, unmodified and read-only. Reference only |
+| `solution.ipynb` | **Working notebook**: the solution code in short sections, plus `check`-tagged test cells |
+| `solution.py` | **Working script**: a jupytext mirror of `solution.ipynb` (same cells, `# %%` format) |
+| `claude/dicke_prep.py` | Loads the solution cells of `solution.ipynb` as the module `dicke_prep` for the tests and tools |
+| `claude/tests/` | Exactness, gate set, device validity and runtime tests, plus a mirror-sync check |
+| `claude/scripts/noisy_benchmark.py` | Density-matrix noise simulation scored with the challenge's own `overall_score` |
+| `claude/tutorial/Dicke_Tutorial.ipynb` | Interactive tutorial that walks through the whole construction, with sliders and exercises |
+| `claude/scripts/build_tutorial.py` | Regenerates the tutorial notebook |
+| `claude/docs/PLAN_STATUS.md` | Phase status and known quirks |
 
 ## Approach
 
@@ -39,12 +43,13 @@ scores the circuit depth of adaptive circuits.
 ## Usage
 
 ```bash
-conda activate duquantum           # python 3.12, cirq / cirq-google 1.8 dev (Willow105 needs >= 1.8)
-pip install -r requirements.txt
-pytest tests/ -v                   # 99 tests
-python scripts/build_notebook.py   # refresh the notebook after editing dicke_prep.py
-python -u scripts/noisy_benchmark.py
+conda activate duquantum                  # python 3.12, cirq / cirq-google 1.8 dev (Willow105 needs >= 1.8)
+pip install -r claude/requirements.txt
+jupytext --sync solution.ipynb            # after editing either solution file (Jupyter Lab does it on save)
+pytest claude/tests -v                    # 101 tests, including the mirror check
+python -u claude/scripts/noisy_benchmark.py
+jupyter lab claude/tutorial/Dicke_Tutorial.ipynb   # or open it in VS Code with the duquantum kernel
 ```
 
 **Note:** the notebook's provided `test_circuit` calls `range(qubits)` on a set and always raises.
-The added verification cells use `check_exact` instead.
+`solution.ipynb` and the tests use `check_exact` instead.

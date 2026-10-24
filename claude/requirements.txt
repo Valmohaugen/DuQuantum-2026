@@ -5,3 +5,7 @@ numpy==2.5.4
 pytest
 nbclient
 ipykernel
+matplotlib
+nbformat
+ipywidgets==8.1.7
+jupytext==1.17.2

@@ -13,7 +13,7 @@ import cirq_google
 import numpy as np
 import pytest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # claude/dicke_prep.py loads the notebook's solution
 import dicke_prep as dp  # noqa: E402
 
 SEED = 1234

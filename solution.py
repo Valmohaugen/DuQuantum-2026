@@ -1,49 +1,39 @@
-"""Hardware-aware Dicke-state preparation for Google Willow (CZ + PhasedXZ only).
+# ---
+# jupyter:
+#   jupytext:
+#     formats: ipynb,py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.17.2
+#   kernelspec:
+#     display_name: duquantum
+#     language: python
+#     name: python3
+# ---
 
-Self-contained: imports only cirq, cirq_google, numpy and the standard library, so
-the whole file can be pasted into the challenge notebook as one cell.
+# %% [markdown]
+# # Dicke-state preparation on Google Willow
+#
+# `create_dicke_state(N, n, ...)` returns a circuit using only CZ and `PhasedXZGate` on low-error Willow qubits.
+#
+# * **n = 1 (W state):** a spanning tree of good qubits. The root starts in |1⟩ and passes each child
+#   its share √(|subtree| / remaining) of the excitation with one Givens rotation (2 CZ). The depth grows
+#   with the tree height, not with N.
+# * **n ≥ 2:** start from |0…01…1⟩ on a path of neighbouring qubits and apply the split-and-cyclic-shift
+#   method of Bärtschi & Eidenbenz ([arXiv:1904.07358](https://arxiv.org/abs/1904.07358)). It uses
+#   nearest-neighbour Givens rotations only, plus a 5-CZ variant where the left neighbour decides
+#   between a partial and a full swap.
+# * **n > N/2:** prepare D(N, N−n), then apply X to every qubit.
+# * **Qubit choice:** a beam search picks the path (or tree) with the lowest total error: CZ errors
+#   weighted by how many CZs each edge carries, plus readout and single-qubit errors.
+# * **Schedule:** CZs as late as possible, single-qubit and CZ layers alternating, and X/Y dynamical
+#   decoupling in idle slots.
+#
+# Code cells tagged `check` are tests and are skipped when the solution is imported elsewhere.
 
-Derivation (nearest-neighbour split-and-cyclic-shift)
------------------------------------------------------
-Target: |D^N_k> = C(N,k)^{-1/2} sum_{|x|=k} |x>. Recursion on the last qubit:
-
-    |D^m_r> = sqrt(r/m) |D^{m-1}_{r-1}>|1> + sqrt((m-r)/m) |D^{m-1}_r>|0>.
-
-Following Baertschi & Eidenbenz, "Deterministic Preparation of Dicke States"
-(FCT 2019, arXiv:1904.07358), start from |0^{N-k} 1^k> on a line of N qubits and
-process the line right to left. Before step m, positions 1..m hold |0^{m-r} 1^r>
-(r = excitations not yet emitted). Step m must leave qubit m in |1> with
-probability r/m; in the |0> branch the remaining ones must sit in positions
-m-r..m-1, i.e. the window is cyclically shifted left by one. That shift is the
-same as moving the rightmost hole (position h = m-r) right through the block of
-ones to position m, which is a chain of *nearest-neighbour* partial swaps.
-
-For pair (p, p+1) the left neighbour c = p-1 tells the gate which case it is in:
-  * c = 0: the hole meets this pair for the first time. Apply the Givens
-    rotation G(theta_r), |01> -> cos|01> + sin|10>, cos(theta_r) = sqrt(r/m), r = m-p.
-  * c = 1: the hole is already moving. Apply a full swap G(pi/2).
-Reachable inputs on (c, p, p+1) are {000, 001, 011, 111, 101}; the others are
-don't-cares. That makes this 5-CZ multiplexed gate exact on them:
-
-    MUX(theta) = Z_c . G_{p,p+1}(beta) . CZ_{c,p} . G_{p,p+1}(alpha),
-    alpha = (theta + pi/2)/2,  beta = (theta - pi/2)/2.
-
-Check: c = 0 gives G(alpha+beta) = G(theta). c = 1 gives, on span{|01>,|10>},
--G(beta) sigma_z G(alpha) = -sigma_z G(alpha-beta) = -sigma_z G(pi/2), which maps
-|01> -> |10>. On |11>, CZ and Z_c each give -1, so the net phase is +1.
-Pairs that can only see a first encounter use plain G(theta); pairs that can
-only see a moving hole use G(pi/2). Bounding r in [max(0, k-(N-m)), min(k, m)]
-removes most multiplexed gates near the start.
-
-For k = 1 (W state) a spanning tree is shallower: the root starts in |1> and
-hands amplitude sqrt(|S_c| / remaining) to each child subtree S_c with one
-Givens rotation (depth ~ tree height instead of N).
-
-For k > N/2 we prepare |D^N_{N-k}> and apply X to every qubit.
-"""
-
-from __future__ import annotations
-
+# %%
 import functools
 import math
 import time
@@ -53,6 +43,10 @@ import cirq
 import cirq_google
 import numpy as np
 
+# %% [markdown]
+# ## Configuration
+
+# %%
 ErrorMap = dict  # qubit or qubit-pair -> (error rate, uncertainty)
 
 
@@ -73,9 +67,12 @@ CZ_PER_MUX_TARGET_PAIR = 4  # two Givens on (p, p+1)
 CZ_PER_MUX_CONTROL_PAIR = 1  # the CZ(c, p)
 
 
-# --------------------------------------------------------------------------- #
-# Logical gate lists (positions on an abstract line / tree)
-# --------------------------------------------------------------------------- #
+# %% [markdown]
+# ## Logical gates on a line
+#
+# Givens / multiplexed gates on line positions that map |0^(N−n) 1^n⟩ to the Dicke state.
+
+# %%
 @dataclass(frozen=True)
 class LineGate:
     """A logical gate on line positions: kind in {'givens', 'mux'}."""
@@ -132,9 +129,12 @@ def line_edge_cz_counts(n_qubits: int, k: int) -> list[int]:
     return counts
 
 
-# --------------------------------------------------------------------------- #
-# Hardware graph and costs
-# --------------------------------------------------------------------------- #
+# %% [markdown]
+# ## Hardware graph and layout search
+#
+# Error-weighted beam search for a path, and a breadth-first tree for the W state.
+
+# %%
 class Hardware:
     """Working-qubit graph with per-qubit and per-coupler error costs."""
 
@@ -260,9 +260,12 @@ def _tree_finish_times(root, children) -> dict:
     return finish
 
 
-# --------------------------------------------------------------------------- #
-# Gate synthesis
-# --------------------------------------------------------------------------- #
+# %% [markdown]
+# ## Gate synthesis
+#
+# Givens rotation in 2 CZ, multiplexed Givens in 5 CZ.
+
+# %%
 _A, _B = cirq.LineQubit.range(2)
 
 
@@ -291,9 +294,12 @@ def mux_ops(c: cirq.Qid, a: cirq.Qid, b: cirq.Qid, theta: float) -> list[cirq.Op
     return [*givens_ops(a, b, alpha), cirq.CZ(c, a), *givens_ops(a, b, beta), cirq.Z(c)]
 
 
-# --------------------------------------------------------------------------- #
-# Scheduling: alternating [1q layer, CZ layer] moments, ALAP, with DD
-# --------------------------------------------------------------------------- #
+# %% [markdown]
+# ## Scheduling and dynamical decoupling
+#
+# Alternating single-qubit / CZ moments, as late as possible, with X/Y pulses in idle slots.
+
+# %%
 def schedule(ops: list[cirq.Operation], dynamical_decoupling: bool) -> cirq.Circuit:
     """Pack ops ALAP into alternating single-qubit / CZ moments and fill idles with DD.
 
@@ -428,9 +434,10 @@ def _fill_gap(oneq: list[dict], q, gap: list[int], fold_into: int | None) -> Non
             oneq[gap[-2]][q] = oneq[gap[-2]][q] @ _X
 
 
-# --------------------------------------------------------------------------- #
-# Public API
-# --------------------------------------------------------------------------- #
+# %% [markdown]
+# ## Circuit construction
+
+# %%
 def build_line_ops(qubits: list[cirq.GridQubit], k: int) -> list[cirq.Operation]:
     """Ops (before scheduling) preparing |D^N_k> on a nearest-neighbour path."""
     n = len(qubits)
@@ -525,6 +532,10 @@ def create_dicke_state(
     return circuit, set(qubits)
 
 
+# %% [markdown]
+# ## Bonus: adaptive circuits
+
+# %%
 def create_dicke_state_adaptive(
     num_qubits: int, num_excitations: int
 ) -> tuple[cirq.Circuit, set[cirq.GridQubit]]:
@@ -551,3 +562,55 @@ def create_dicke_state_adaptive(
     packed = cirq.merge_single_qubit_gates_to_phxz(packed)
     packed = cirq.drop_empty_moments(packed)
     return cirq.Circuit(packed.all_operations()), qubits
+
+
+# %% [markdown]
+# ## Checks
+
+# %% tags=["check"]
+import itertools
+
+def fake_calibration(seed=1234, dropout=0.01):
+    """Challenge-style fake error maps: lognormal rates, random dead qubits and couplers."""
+    rng = np.random.default_rng(seed)
+    dev = cirq_google.Willow105.metadata
+    alive = [q for q in sorted(dev.qubit_set) if rng.random() >= dropout]
+    rates = lambda median: {q: (float(rng.lognormal(np.log(median), 0.5)), 2e-4) for q in alive}
+    cz = {tuple(p): (float(rng.lognormal(np.log(2.5e-3), 0.5)), 5e-4)
+          for p in dev.qubit_pairs if set(p) <= set(alive) and rng.random() > 0.01}
+    return cz, rates(4e-4), rates(5e-3), rates(1e-2)
+
+
+def check_exact(circuit, num_excitations, qubits):
+    """Assert the noiseless output is the Dicke state on `qubits` (up to global phase)."""
+    n = len(qubits)
+    ideal = np.zeros(2**n)
+    for ones in itertools.combinations(range(n), num_excitations):
+        ideal[sum(2**i for i in ones)] = 1
+    ideal /= np.linalg.norm(ideal)
+    psi = cirq.final_state_vector(circuit, qubit_order=sorted(qubits), dtype=np.complex128)
+    assert np.isclose(abs(np.vdot(ideal, psi)) ** 2, 1.0, atol=1e-8)
+
+
+cal = fake_calibration()
+for n_q in range(2, 11):
+    for n_exc in range(0, n_q + 1):
+        t0 = time.monotonic()
+        circuit, qubits = create_dicke_state(n_q, n_exc, *cal)
+        assert time.monotonic() - t0 < 60
+        cirq_google.Willow105.validate_circuit(circuit)
+        for op in circuit.all_operations():
+            assert op.gate == cirq.CZ or isinstance(op.gate, cirq.PhasedXZGate), op
+        check_exact(circuit, n_exc, qubits)
+print("[done] all (N, n) with N <= 10 produce exact Dicke states")
+
+# %% tags=["check"]
+bonus = 0.0
+for n_q in range(2, 16):
+    for n_exc in range(1, n_q // 2 + 1):
+        circuit, qubits = create_dicke_state_adaptive(n_q, n_exc)
+        cirq_google.Willow105.validate_circuit(circuit)
+        if n_q <= 12:
+            check_exact(circuit, n_exc, qubits)
+        bonus += n_q * n_exc / len(circuit)
+print(f"[done] bonus depth score (2 <= N <= 15): {bonus:.2f}")
