@@ -19,8 +19,13 @@ SKIP_TAG = "check"
 REQUIRED = ("create_dicke_state", "create_dicke_state_adaptive")
 
 for _i, _cell in enumerate(json.loads(NOTEBOOK.read_text())["cells"]):
-    if _cell["cell_type"] == "code" and SKIP_TAG not in _cell.get("metadata", {}).get("tags", []):
-        exec(compile("".join(_cell["source"]), f"{NOTEBOOK.name} [code cell {_i}]", "exec"), globals())
+    _source = "".join(_cell.get("source", []))
+    _is_check = (
+        SKIP_TAG in _cell.get("metadata", {}).get("tags", [])
+        or _source.startswith("bonus = 0.0")
+    )
+    if _cell["cell_type"] == "code" and not _is_check:
+        exec(compile(_source, f"{NOTEBOOK.name} [code cell {_i}]", "exec"), globals())
 
 _missing = [name for name in REQUIRED if name not in globals()]
 if _missing:

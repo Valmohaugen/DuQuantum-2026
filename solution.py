@@ -13,29 +13,10 @@
 #     name: python3
 # ---
 
-# %% [markdown]
-# # Dicke-state preparation on Google Willow
-#
-# `create_dicke_state(N, n, ...)` returns a circuit using only CZ and `PhasedXZGate` on low-error Willow qubits.
-#
-# * **n = 1 (W state):** a spanning tree of good qubits. The root starts in |1⟩ and passes each child
-#   its share √(|subtree| / remaining) of the excitation with one Givens rotation (2 CZ). The depth grows
-#   with the tree height, not with N.
-# * **n ≥ 2:** start from |0…01…1⟩ on a path of neighbouring qubits and apply the split-and-cyclic-shift
-#   method of Bärtschi & Eidenbenz ([arXiv:1904.07358](https://arxiv.org/abs/1904.07358)). It uses
-#   nearest-neighbour Givens rotations only, plus a 5-CZ variant where the left neighbour decides
-#   between a partial and a full swap.
-# * **n > N/2:** prepare D(N, N−n), then apply X to every qubit.
-# * **Qubit choice:** a beam search picks the path (or tree) with the lowest total error: CZ errors
-#   weighted by how many CZs each edge carries, plus readout and single-qubit errors.
-# * **Schedule:** CZs as late as possible, single-qubit and CZ layers alternating, and X/Y dynamical
-#   decoupling in idle slots.
-#
-# Code cells tagged `check` are tests and are skipped when the solution is imported elsewhere.
-
 # %%
 import functools
 import math
+import subprocess
 import time
 from dataclasses import dataclass
 
@@ -43,8 +24,20 @@ import cirq
 import cirq_google
 import numpy as np
 
-# %% [markdown]
-# ## Configuration
+# Simulation is the default; change deliberately for a hardware submission.
+HARDWARE = False
+
+# These settings are used when this file is run directly as the benchmark entry point.
+BENCHMARK_CALIBRATION_SEED = 1234
+BENCHMARK_SEEDS = tuple(range(1, 6))
+BENCHMARK_CASES = tuple(
+    (n, k) for n in range(2, 9) for k in range(1, n // 2 + 1)
+)
+BENCHMARK_DETUNING_KHZ = 20.0
+BENCHMARK_SHOTS = 10_000
+BENCHMARK_RUN_IDEAL_BASELINE = True
+RESUME_FROM_CHECKPOINT = True
+OPEN_BENCHMARK_PLOT = True
 
 # %%
 ErrorMap = dict  # qubit or qubit-pair -> (error rate, uncertainty)
@@ -66,11 +59,6 @@ CZ_PER_GIVENS = 2
 CZ_PER_MUX_TARGET_PAIR = 4  # two Givens on (p, p+1)
 CZ_PER_MUX_CONTROL_PAIR = 1  # the CZ(c, p)
 
-
-# %% [markdown]
-# ## Logical gates on a line
-#
-# Givens / multiplexed gates on line positions that map |0^(N−n) 1^n⟩ to the Dicke state.
 
 # %%
 @dataclass(frozen=True)
@@ -129,11 +117,6 @@ def line_edge_cz_counts(n_qubits: int, k: int) -> list[int]:
     return counts
 
 
-# %% [markdown]
-# ## Hardware graph and layout search
-#
-# Error-weighted beam search for a path, and a breadth-first tree for the W state.
-
 # %%
 class Hardware:
     """Working-qubit graph with per-qubit and per-coupler error costs."""
@@ -175,11 +158,13 @@ def find_line(hw: Hardware, edge_weights: list[int], deadline: float) -> list[ci
         If no simple path of the requested length exists in the working graph.
     """
     n = len(edge_weights) + 1
-    beam = sorted(((hw.node[q], (q,)) for q in hw.qubits), key=lambda t: t[0])
+    beam: list[tuple[float, tuple[cirq.GridQubit, ...]]] = sorted(
+        ((hw.node[q], (q,)) for q in hw.qubits), key=lambda t: t[0]
+    )
     beam = beam[: hw.config.beam_width]
     for i in range(n - 1):
         w = edge_weights[i]
-        cand = []
+        cand: list[tuple[float, tuple[cirq.GridQubit, ...]]] = []
         for cost, path in beam:
             tail = path[-1]
             for nb in hw.adj[tail]:
@@ -210,7 +195,7 @@ def find_tree(
         parent = {root: None}
         layer = [root]
         while layer and len(parent) < n:
-            nxt = {}
+            nxt: dict[cirq.GridQubit, tuple[float, cirq.GridQubit]] = {}
             for v in layer:
                 for nb in hw.adj[v]:
                     if nb in parent:
@@ -260,11 +245,6 @@ def _tree_finish_times(root, children) -> dict:
     return finish
 
 
-# %% [markdown]
-# ## Gate synthesis
-#
-# Givens rotation in 2 CZ, multiplexed Givens in 5 CZ.
-
 # %%
 _A, _B = cirq.LineQubit.range(2)
 
@@ -293,11 +273,6 @@ def mux_ops(c: cirq.Qid, a: cirq.Qid, b: cirq.Qid, theta: float) -> list[cirq.Op
     beta = 0.5 * (theta - math.pi / 2)
     return [*givens_ops(a, b, alpha), cirq.CZ(c, a), *givens_ops(a, b, beta), cirq.Z(c)]
 
-
-# %% [markdown]
-# ## Scheduling and dynamical decoupling
-#
-# Alternating single-qubit / CZ moments, as late as possible, with X/Y pulses in idle slots.
 
 # %%
 def schedule(ops: list[cirq.Operation], dynamical_decoupling: bool) -> cirq.Circuit:
@@ -428,14 +403,7 @@ def _fill_gap(oneq: list[dict], q, gap: list[int], fold_into: int | None) -> Non
         oneq[fold_into][q] = oneq[fold_into][q] @ acc.conj().T
     else:
         oneq[gap[-1]][q] = acc.conj().T
-        if cirq.equal_up_to_global_phase(acc, np.eye(2), atol=1e-10):
-            # last pulse would be identity: make the pattern X..X instead
-            oneq[gap[-1]][q] = _X
-            oneq[gap[-2]][q] = oneq[gap[-2]][q] @ _X
 
-
-# %% [markdown]
-# ## Circuit construction
 
 # %%
 def build_line_ops(qubits: list[cirq.GridQubit], k: int) -> list[cirq.Operation]:
@@ -511,6 +479,8 @@ def create_dicke_state(
         raise NotImplementedError(f"invalid (N, n) = ({n_q}, {k})")
     deadline = time.monotonic() + config.search_time_s
     hw = Hardware(cz_pauli_error_rate, sq_pauli_error_rate, zero_errors, one_errors, config)
+    if not hw.qubits:
+        raise NotImplementedError("no usable qubits in the calibration maps")
     flip = k > n_q - k
     k_eff = n_q - k if flip else k
 
@@ -531,9 +501,6 @@ def create_dicke_state(
     circuit = schedule(ops, config.use_dynamical_decoupling)
     return circuit, set(qubits)
 
-
-# %% [markdown]
-# ## Bonus: adaptive circuits
 
 # %%
 def create_dicke_state_adaptive(
@@ -564,9 +531,6 @@ def create_dicke_state_adaptive(
     return cirq.Circuit(packed.all_operations()), qubits
 
 
-# %% [markdown]
-# ## Checks
-
 # %% tags=["check"]
 import itertools
 
@@ -575,7 +539,10 @@ def fake_calibration(seed=1234, dropout=0.01):
     rng = np.random.default_rng(seed)
     dev = cirq_google.Willow105.metadata
     alive = [q for q in sorted(dev.qubit_set) if rng.random() >= dropout]
-    rates = lambda median: {q: (float(rng.lognormal(np.log(median), 0.5)), 2e-4) for q in alive}
+
+    def rates(median):
+        return {q: (float(rng.lognormal(np.log(median), 0.5)), 2e-4) for q in alive}
+
     cz = {tuple(p): (float(rng.lognormal(np.log(2.5e-3), 0.5)), 5e-4)
           for p in dev.qubit_pairs if set(p) <= set(alive) and rng.random() > 0.01}
     return cz, rates(4e-4), rates(5e-3), rates(1e-2)
@@ -604,7 +571,7 @@ for n_q in range(2, 11):
         check_exact(circuit, n_exc, qubits)
 print("[done] all (N, n) with N <= 10 produce exact Dicke states")
 
-# %% tags=["check"]
+# %%
 bonus = 0.0
 for n_q in range(2, 16):
     for n_exc in range(1, n_q // 2 + 1):
@@ -614,3 +581,25 @@ for n_q in range(2, 16):
             check_exact(circuit, n_exc, qubits)
         bonus += n_q * n_exc / len(circuit)
 print(f"[done] bonus depth score (2 <= N <= 15): {bonus:.2f}")
+
+# Run the checkpointed simulation benchmark only when this mirror is executed directly.
+if globals().get("__file__", "").endswith("solution.py"):
+    from claude.scripts import noisy_benchmark
+
+    noisy_benchmark.CALIBRATION_SEED = BENCHMARK_CALIBRATION_SEED
+    noisy_benchmark.BENCHMARK_SEEDS = BENCHMARK_SEEDS
+    noisy_benchmark.BENCHMARK_CASES = BENCHMARK_CASES
+    noisy_benchmark.DETONING_KHZ = BENCHMARK_DETUNING_KHZ
+    noisy_benchmark.SHOTS = BENCHMARK_SHOTS
+    noisy_benchmark.RUN_IDEAL_BASELINE = BENCHMARK_RUN_IDEAL_BASELINE
+    noisy_benchmark.RESUME_FROM_CHECKPOINT = RESUME_FROM_CHECKPOINT
+    noisy_benchmark.main()
+
+    from claude.scripts import analyze_benchmark_results
+
+    analyze_benchmark_results.main()
+    if OPEN_BENCHMARK_PLOT and hasattr(noisy_benchmark, "OUTPUT_DIR"):
+        plot_path = noisy_benchmark.OUTPUT_DIR / "noisy_benchmark_insights.png"
+        if plot_path.exists():
+            subprocess.run(["open", str(plot_path)], check=False)
+            print(f"[opened] plot: {plot_path}")

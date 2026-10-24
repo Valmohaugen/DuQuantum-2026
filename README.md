@@ -39,6 +39,8 @@ scores the circuit depth of adaptive circuits.
 * **Schedule:** as late as possible, alternating single-qubit and CZ moments. Idle slots are
   filled with X/Y dynamical decoupling, and the net pulse product is folded into the next gate
   so the ideal state is unchanged.
+* **Execution:** simulation is the default. The working solution exposes `HARDWARE = False`; hardware
+  execution is deliberately opt-in and is never reached by tests or benchmarks in the default mode.
 
 ## Usage
 
@@ -46,10 +48,22 @@ scores the circuit depth of adaptive circuits.
 conda activate duquantum                  # python 3.12, cirq / cirq-google 1.8 dev (Willow105 needs >= 1.8)
 pip install -r claude/requirements.txt
 jupytext --sync solution.ipynb            # after editing either solution file (Jupyter Lab does it on save)
-pytest claude/tests -v                    # 101 tests, including the mirror check
+pytest claude/tests -v                    # correctness, DD, simulation, and mirror checks
+python -u solution.py                     # exact checks plus resumable multi-seed simulation benchmark
 python -u claude/scripts/noisy_benchmark.py
+python -u claude/scripts/analyze_benchmark_results.py  # display insights from the saved results
 jupyter lab claude/tutorial/Dicke_Tutorial.ipynb   # or open it in VS Code with the duquantum kernel
 ```
 
+The noisy benchmark compares DD and no-DD across multiple seeds. Edit the configuration block at
+the top of `claude/scripts/noisy_benchmark.py` to change the seeds, cases, shot count, or detuning.
+It saves an atomic checkpoint after every score under `benchmark_outputs/` and resumes automatically
+after interruption. Change `RESUME_FROM_CHECKPOINT` to `False` to force a fresh run.
+
 **Note:** the notebook's provided `test_circuit` calls `range(qubits)` on a set and always raises.
 `solution.ipynb` and the tests use `check_exact` instead.
+
+The adaptive entry point is tested through the official `N <= 20` scoring range. The challenge allows
+a non-adaptive circuit for this bonus, so the current implementation keeps the exact standard
+construction as a legal fallback while adaptive measurement/feed-forward remains an optional future
+optimization.

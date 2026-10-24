@@ -44,6 +44,14 @@ def fake_calibration(seed: int, dropout: float = 0.01):
 CAL = fake_calibration(SEED)
 
 
+def matrix_product(oneq, q):
+    product = np.eye(2, dtype=complex)
+    for slot in oneq:
+        if q in slot:
+            product = slot[q] @ product
+    return product
+
+
 def dicke_vector(n: int, k: int) -> np.ndarray:
     psi = np.zeros(2**n)
     for ones in itertools.combinations(range(n), k):
@@ -124,6 +132,27 @@ def test_dd_preserves_state(dd):
     assert_exact_dicke(circuit, qubits, 9, 3)
 
 
+@pytest.mark.parametrize("gap_length", range(1, 11))
+def test_fill_gap_trailing_product_is_identity(gap_length):
+    q = cirq.LineQubit(0)
+    oneq = [{} for _ in range(gap_length)]
+    dp._fill_gap(oneq, q, list(range(gap_length)), fold_into=None)
+    assert cirq.equal_up_to_global_phase(matrix_product(oneq, q), np.eye(2), atol=1e-10)
+
+
+@pytest.mark.parametrize("gap_length", range(1, 11))
+def test_fill_gap_folded_product_is_identity(gap_length):
+    q = cirq.LineQubit(0)
+    oneq = [{} for _ in range(gap_length + 1)]
+    oneq[-1][q] = dp._Y
+    dp._fill_gap(oneq, q, list(range(gap_length)), fold_into=gap_length)
+    assert cirq.equal_up_to_global_phase(matrix_product(oneq, q), dp._Y, atol=1e-10)
+
+
+def test_simulation_is_the_default_execution_mode():
+    assert dp.HARDWARE is False
+
+
 @pytest.mark.parametrize("n,k", [(30, 1), (30, 15), (40, 20), (60, 30)])
 def test_large_instances_fast_and_valid(n, k):
     t0 = time.monotonic()
@@ -135,3 +164,8 @@ def test_large_instances_fast_and_valid(n, k):
 def test_too_many_qubits_raises():
     with pytest.raises(NotImplementedError):
         dp.create_dicke_state(200, 3, *CAL)
+
+
+def test_empty_calibration_maps_raise_not_implemented():
+    with pytest.raises(NotImplementedError, match="no usable qubits"):
+        dp.create_dicke_state(1, 0, {}, {}, {}, {})

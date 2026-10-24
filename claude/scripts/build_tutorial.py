@@ -83,7 +83,22 @@ from tutorial_utils import (
 FAST = dp.PrepConfig(beam_width=300, search_time_s=2.0)
 CAL = fake_calibration(1234)  # same fake Willow calibration as the tests and benchmark
 DEVICE = cirq_google.Willow105.metadata
-print(f"[setup] cirq {cirq.__version__}, widgets: {HAVE_WIDGETS}")
+HARDWARE = dp.HARDWARE  # stays False while developing and benchmarking locally
+print(f"[setup] cirq {cirq.__version__}, widgets: {HAVE_WIDGETS}, hardware: {HARDWARE}")
+assert HARDWARE is False, "Tutorial examples are simulation-only by default"
+""")
+
+md(r"""
+## 0.1 Simulation first, hardware by deliberate choice
+
+The working solution has a single top-level switch, `HARDWARE = False`. This tutorial and the
+benchmark use Cirq's state-vector or density-matrix simulators while it is false, so exactness,
+leakage, score variation, and circuit depth can be checked without touching a processor. The
+hardware path is intentionally opt-in: changing the flag is a submission decision, not something
+that happens accidentally during import or testing.
+
+The tests also load the solution from `solution.ipynb`, while `solution.py` is its jupytext mirror.
+Keeping those two files synchronized means the tutorial and the test suite exercise the same code.
 """)
 
 # --------------------------------------------------------------------------- #
@@ -657,7 +672,40 @@ judged over many shots.
 
 # --------------------------------------------------------------------------- #
 md(r"""
-## 11. Recap and where to go next
+## 11. What the implementation checks before submission
+
+The construction is deliberately testable without hardware. For a generated circuit we check:
+
+* every operation is either a CZ on a calibrated Willow coupler or a `PhasedXZGate` on a calibrated qubit;
+* the circuit has no more than 1750 moments;
+* a noiseless simulator has unit overlap with the target Dicke state, up to global phase;
+* DD pulse products are identity, with any residual pulse folded into the next logical gate;
+* layout search uses the measured error maps, while the simulation benchmark uses explicit noise and readout models.
+
+The adaptive entry point currently uses the same exact deterministic preparation as a legal fallback.
+It is benchmarked separately because the bonus rewards depth, not merely state correctness; a genuinely
+measurement-and-feed-forward construction must first match the evaluator's allowed adaptive API.
+""")
+code(r"""
+def validate_simulated_solution(N, n):
+    circuit, qubits = dp.create_dicke_state(N, n, *CAL, config=FAST)
+    order = sorted(qubits)
+    psi = cirq.final_state_vector(circuit, qubit_order=order, dtype=np.complex128)
+    fidelity = abs(np.vdot(dicke_vector(N, n), psi)) ** 2
+    assert dp.HARDWARE is False
+    assert len(circuit) < 1750
+    assert fidelity > 1 - 1e-10
+    assert all(op.gate == cirq.CZ or isinstance(op.gate, cirq.PhasedXZGate)
+               for op in circuit.all_operations())
+    print(f"[done] D^{N}_{n}: {len(circuit)} moments, fidelity {fidelity:.12f}")
+
+
+interactive(validate_simulated_solution, N=(2, 12, 1, 6), n=(0, 6, 1, 2))
+""")
+
+# --------------------------------------------------------------------------- #
+md(r"""
+## 12. Recap and where to go next
 
 | Idea | Where in the solution cell |
 | --- | --- |
@@ -686,7 +734,7 @@ def main() -> None:
     nb = nbformat.v4.new_notebook()
     nb.cells = [nbformat.v4.new_markdown_cell(s) if kind == "md" else nbformat.v4.new_code_cell(s)
                 for kind, s in CELLS]
-    nb.metadata["kernelspec"] = {"name": "python3", "display_name": "Python 3", "language": "python"}
+    nb.metadata["kernelspec"] = {"name": "duquantum", "display_name": "duquantum", "language": "python"}
     OUT_PATH.parent.mkdir(exist_ok=True)
     nbformat.write(nb, OUT_PATH)
     print(f"[done] wrote {OUT_PATH.relative_to(ROOT)} ({len(nb.cells)} cells)")

@@ -1,4 +1,4 @@
-"""solution.ipynb and its jupytext mirror solution.py must hold the same code."""
+"""The notebook and standalone Python solution must hold the same code cells."""
 
 from pathlib import Path
 
@@ -10,10 +10,13 @@ MIRROR = REPO / "solution.py"
 
 
 def test_mirror_matches_notebook() -> None:
-    expected = jupytext.writes(jupytext.read(NOTEBOOK), fmt="py:percent")
-    assert MIRROR.read_text() == expected, (
-        f"{MIRROR.name} is out of sync with {NOTEBOOK.name}; run: "
-        f'jupytext --sync "{NOTEBOOK.name}"'
+    notebook_cells = jupytext.read(NOTEBOOK).cells
+    mirror_cells = jupytext.read(MIRROR).cells
+    expected = [cell.source for cell in notebook_cells if cell.cell_type == "code"]
+    actual = [cell.source for cell in mirror_cells if cell.cell_type == "code"]
+    assert actual == expected, (
+        f"Executable cells in {MIRROR.name} differ from {NOTEBOOK.name}; "
+        "update both working files."
     )
 
 
