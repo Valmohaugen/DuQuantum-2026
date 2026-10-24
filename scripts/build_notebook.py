@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-NB_PATH = ROOT / "DuQuantum_Google_Standard.ipynb"
+NB_PATH = ROOT / "Google Quantum AI Challenge.ipynb"
 SRC = (ROOT / "dicke_prep.py").read_text()
 TAG = "added-by-build_notebook"
 BONUS_MARKER = "\n\ndef create_dicke_state_adaptive("

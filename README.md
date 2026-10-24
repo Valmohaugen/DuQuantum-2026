@@ -11,8 +11,7 @@ scores the circuit depth of adaptive circuits.
 
 | Path | What |
 | --- | --- |
-| `DuQuantum_Google_Standard.ipynb` | Submission notebook (solution injected by the build script) |
-| `[standard_track] Google Quantum AI Challenge.ipynb` | Original challenge notebook, untouched |
+| `Google Quantum AI Challenge.ipynb` | Submission notebook (solution injected by the build script) |
 | `dicke_prep.py` | The solution. Imports only cirq / cirq_google / numpy / stdlib, so it can be pasted into the notebook |
 | `tests/test_dicke_prep.py` | Exactness, gate set, device validity and runtime tests |
 | `scripts/build_notebook.py` | Writes `dicke_prep.py` into the notebook cells (idempotent) |

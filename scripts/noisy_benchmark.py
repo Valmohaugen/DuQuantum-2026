@@ -45,7 +45,7 @@ class NoiseConfig:
 
 def load_scoring():
     """Exec the notebook's scoring cell so we use the exact official functions."""
-    nb = json.loads((ROOT / "DuQuantum_Google_Standard.ipynb").read_text())
+    nb = json.loads((ROOT / "Google Quantum AI Challenge.ipynb").read_text())
     ns: dict = {}
     exec("import itertools, math\nimport numpy as np", ns)
     for cell in nb["cells"]:
