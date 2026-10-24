@@ -27,8 +27,9 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import importlib
 import csv
+import importlib
+import inspect
 import math
 import time
 
@@ -36,11 +37,11 @@ import cirq
 import numpy as np
 
 import judge
-import inspect
 
 
 def count_cz(circuit):
     return sum(1 for op in circuit.all_operations() if len(op.qubits) == 2)
+
 
 T1, T2 = 68e-6, 89e-6  # Willow spec sheet / QEC paper medians
 DUR_CZ, DUR_1Q = 42e-9, 25e-9  # Cirq willow_pink device spec
