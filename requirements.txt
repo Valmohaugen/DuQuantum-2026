@@ -1,0 +1,7 @@
+cirq==1.8.0.dev20261023221525
+cirq-core==1.8.0.dev20261023221525
+cirq-google==1.8.0.dev20261023221525
+numpy==2.5.4
+pytest
+nbclient
+ipykernel
