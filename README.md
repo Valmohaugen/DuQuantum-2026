@@ -243,6 +243,7 @@ Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/I
 | 2026-10-25 03:45 | 5a0a94f | N >= 11: (11,4) (11,5) (12,3) (12,4) (13,4) (15,3) | 17.480 (N <= 8 unchanged) |
 | 2026-10-25 04:05 | c2e760e | brickwork-start lines (8,3) (9,3); (9,4) 33 cz; (10,5) 42 cz | 17.495 |
 | 2026-10-25 04:10 | 0dc1b2c | (10,4) 45-cz line; (11,5) 59 cz (in bec93b1) | 17.495 (N <= 8 unchanged) |
+| 2026-10-25 05:40 | 5fbdb31 | depth-weighted pruning (cost = cz + 3 x cz layers): (5,2) (6,2) (6,3) (7,2) | 17.528 |
 
 Readout-only ceiling for the same placements (gate and idle noise switched off): 18.474 for N = 2..8,
 so roughly 1.0 is still recoverable at small N; the theoretical maximum (no noise at all) is 19.18.

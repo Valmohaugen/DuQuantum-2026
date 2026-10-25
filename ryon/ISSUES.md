@@ -12,7 +12,7 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **17.495** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
+Baseline at 0dc262c: total 16.615. Current: **17.528** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
 
 ## Open
 
@@ -177,6 +177,10 @@ path, fit, then prune) beat the line-construction start in score even with more 
 18.474 vs 17.495 now, so about 1.0 is left at small N, mostly (8,2..4) and N = 7. Brickwork k = 2 runs going.
 Negative: pruning inside the weight-preserving family (givens + cz + z only, wfit.py) stalls far above toby_sol
 ((7,2) 34 -> 32 vs 19), and brickwork k = 2 circuits are shallower but lose on Zb (seed-dependent 0.027..0.078).
+
+Loss split at small N (fast_eval, (5,2)..(8,4), 3 seeds): removing gate error would add 0.39, removing idle T1/T2
+would add 0.29, so depth is worth almost as much as CZ count. Pruning with ALPHA=3 (cost = cz + 3 x cz layers) found
+(5,2) 9 cz / 6 layers (was 11 / 8) and won (5,2) (6,2) (6,3) (7,2) in 5fbdb31 (+0.033). ALPHA=5 runs going for N = 6..10.
 
 ### 13. N = 12..14 with k >= 5 (open, unassigned)
 Every start stalls near toby_sol's own count: (12,5) 115-134, (12,6) 128-158, (13,5) 142, (14,7) 187-229 CZ, while
