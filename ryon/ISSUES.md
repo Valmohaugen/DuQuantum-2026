@@ -133,6 +133,8 @@ trajectories: +0.005 for the line on average (+-0.06 per seed). Equal; kept the 
   depth 34..56 in 1.5 h; over-parameterised random starts failed the same way. Paths are the bottleneck.
 - Verification at 5732c7b (seed 33): N = 2..20, 100 cases, 0 rule/device failures, exact up to N = 14, max build
   12.4 s at (19,3). fast_eval N <= 8 (3 seeds): 17.528. Bonus (test_dicke --bonus, N <= 15): 44.148.
+- (10,3) half 51 -> 47 at equal depth (b685abb): (19,3) 93, (20,3) 99 CZ, both exact. Search results for
+  (8,3) 36 and others keep landing in sol_hwarm_*.json until the jobs end; each was one layer deeper, so not installed.
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
