@@ -114,6 +114,10 @@ QA at d2665c8 (seed 21): N = 2..20, 100 cases, 0 rule/device failures, all exact
 (15..20, 3) checked separately, max build 12.7 s. fast_eval N <= 8: 17.495.
 Open: a better k >= 4 half start. The line warm start only shaves ~5 %, and random over-parameterised starts on
 a path don't fit exactly even at L = 140..160 with 3000 Adam steps (6,4) (6,5) (7,4) (7,5).
+(7,3) half 32 -> 30 (579bd35): (13,3) 60, (14,3) 65 CZ. The (6,4) half reached 39 (line 49), but no current case
+uses it (11,4), (12,4) have whole-state circuits; (14,4) splits 7 + 7), so it isn't installed.
+(15,3): whole-state line (68 CZ, 95 moments) vs the ladder with the new halves (73 CZ, ~60 moments), 3 seeds x 100
+trajectories: +0.005 for the line on average (+-0.06 per seed). Equal; kept the line.
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
