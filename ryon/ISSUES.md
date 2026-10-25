@@ -12,9 +12,33 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **17.192** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
+Baseline at 0dc262c: total 16.615. Current: **17.435** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
 
 ## Open
+
+### BR-108. Merge checked circuit pools without overwriting concurrent artifacts
+Status: full 56-case verification passed at 43.2219421632
+`research/bonus_portfolio_20261025/merge.py` reconciles the frozen 42.353
+portfolio with band/terminal-decoder enumeration and small state brickwork
+fits. Every accepted circuit passes independent complex128 amplitude/phase,
+native gate, qubit-count and Willow device checks. The frozen standalone
+`portfolio_submission.py` returns explicit native moments; no online fitting.
+The first merge contains 22 accepted changes. Later refined band results
+are available and will be reconciled at the next merge.
+
+### BR-109. General complex single-qubit synthesis and reusable path decoders
+Status: checked numerical kernel; bounded decoder experiments in progress
+Prior searches restrict intermediate states to real amplitudes (CZ + Ry).
+`research/bonus_portfolio_20261025/complex_fit.py` allows Ry and Rz at every
+local slot and fits all isometry columns with a common global phase. Its
+states, single-state gradients and coherent-column gradients match independent
+Cirq simulation and finite differences. A bounded four-CZ D(4,2) search over
+28 square-topology classes found no exact circuit; that is negative search
+evidence, not a lower-bound proof.
+`path_decoder.py` is fitting complete unary-to-Dicke decoders for five sites
+(r=0..5), on a path, using both real and complex local gates. The real search
+has reached 33 CZ / 53 moments from 35 CZ / 55 moments. These can terminate
+longer cascades without changing their prefix or straight input registers.
 
 ### 9. Whole-state CZ pruning for every (N, k), N = 7..12 (primary score)
 Status: in progress (ryon session, Slurm sweep running; please don't duplicate, add footprints instead)
@@ -30,6 +54,15 @@ First 40 s of search, CZ counts (current toby_sol in brackets): (7,3) 21 [26], (
 k = 2 and k = 1 circuits don't prune at all from the toby_sol start (W uses 2N - 3, k = 2 uses
 4N - 9); a different start (over-parameterised random brickwork, then prune) is needed there.
 A complex Rz Ry Rz ansatz did not beat the real one on (5,2) 11 or (6,3) 12.
+Installed (toby_sol `patches`): (7,3) 20, (8,3) 26, (8,4) 22, (9,3) 33, (9,4) 36 CZ. Per case, 3 seeds:
+(7,3) 0.840 -> 0.888, (8,3) 0.824 -> 0.843, (8,4) 0.675 -> 0.845, (9,3) 0.724 -> 0.779, (9,4) 0.607 -> 0.734.
+Total N = 2..8: 17.199 -> 17.435. New knob `prefer_synth`: for k >= 3 a synthesised patch/line that fits
+skips the line/ladder builds (estimate_error was picking the ladder over the better (8,3) patch).
+Pruned circuits only use the edges of one Hamiltonian path of the footprint (D(8,4), D(9,4)), i.e.
+they are line circuits with repeated CZs on the same pairs. So toby_sol now also has a `lines` table
+(cz sequence on path positions), placed with best_path like the line construction: works for any N
+without needing a grid block. The 3-row runs win because their start is the line construction on a
+snake; the ladder start (2xL) stalls. Path runs for N = 7..14 are running.
 k = 2 from an over-parameterised brickwork start on 2-row ladder footprints: in progress (toby session 2),
 N = 7..10 first; results will use the same patch keys so they drop into ex_sol / toby_sol.
 
