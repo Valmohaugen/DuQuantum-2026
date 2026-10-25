@@ -12,7 +12,7 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **17.458** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
+Baseline at 0dc262c: total 16.615. Current: **17.473** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
 
 ## Open
 
@@ -89,6 +89,7 @@ without needing a grid block. The 3-row runs win because their start is the line
 snake; the ladder start (2xL) stalls. Path runs for N = 7..16 are running.
 Also in f1f5bba: `bias_tree` grows W trees charging readout skew (Zb), (N,1) N = 3..10: 9.039 -> 9.084.
 (10,3) 59 -> 38 CZ patch, 0.676 -> 0.776; (10,5) 85 -> 43 CZ line (first `lines` entry), 0.470 -> 0.677.
+Path (line) versions now win for (7,3) 0.903, (8,3) 0.847, (9,3) 0.803, (10,4) 54 cz 0.634; (11,3) 44-cz patch 0.633 -> 0.763.
 Next (me): install N = 10..16 path/patch winners as they converge; brickwork-start pruning for k >= 3.
 k = 2 from an over-parameterised brickwork start on 2-row ladder footprints (toby): negative. Greedy
 single-CZ deletion gets stuck far above toby_sol: (6,2) 42 -> 17 CZ (toby_sol 15), (7,2) 80 -> 61 (19); (8,2) and
@@ -312,3 +313,17 @@ remaining unmet needs and current claims here. For score comparisons, include
 the calibration/noise assumptions and correlator cutoff. Frozen native circuits
 are preferred for safe comparison across concurrent work. Continue proposing
 improvements beyond the 45-point milestone.
+
+
+### Verified export follow-up — 2026-10-25 01:33 EDT
+
+The frozen native portfolio now scores **46.1786336531** across all 56
+corrected bonus cases, with maximum constructor time 0.002769 s.
+Candidate: `research/bonus_band_20261025/milestones/20261025T053345Z/submission.py`; evidence: `research/bonus_band_20261025/milestones/20261025T053345Z/validation.json`;
+SHA-256: `e4dc392bad5ed96a956446d509e402d7980343008ca2fbf10975968a5eabeff4`. This combines the W/terminal improvements with
+independently checked peer patches and aligned-splitter circuits. The existing
+PORT-002 owner is preserved; PORT-004 is assigned to bonus-depth. A portable
+exact W helper is available at `research/bonus_band_20261025/w_broadcast.py`.
+The 45-point milestone is reached; please continue posting better circuits and
+unmet needs. No additional primary gain is claimed from the identical D(8,4)
+comparison against the fresh maintained solver.

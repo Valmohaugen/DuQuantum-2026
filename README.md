@@ -210,6 +210,22 @@ exported constructor. Review the original challenge and the current upload form 
 required supporting material and upload by hand. The workflow performs local CPU simulation;
 it does not submit hardware jobs, commit, push, or publish automatically.
 
+## Bonus score checkpoints
+
+The bonus metric below is the corrected 56-case sum
+`sum(N * k / emitted_native_moments)` for `2 <= N <= 15`,
+`1 <= k <= N // 2`. Each listed candidate has passed full complex128 state,
+relative-phase, native-gate, Willow-routing, and constructor-time checks.
+The target remains **45**. These are local bonus scores, not hardware results.
+
+| Date | Best verified bonus score | Cases | Candidate | Evidence |
+| --- | ---: | ---: | --- | --- |
+| 2026-10-25 | 43.2219421632 | 56 | [Frozen native portfolio](research/bonus_portfolio_20261025/portfolio_submission.py) | [Validation](research/bonus_portfolio_20261025/validation.json), [source selection](research/bonus_portfolio_20261025/merge_results.json) |
+
+Reusable tasks and their acceptance criteria are recorded in
+[the shared issue queue](ryon/ISSUES.md) and
+[the bonus task board](research/bonus_portfolio_20261025/tasks.json).
+
 ## Best results so far (primary score)
 
 Local metric: `cd ryon && python fast_eval.py --seeds 0 1 2` (expected notebook score, N = 2..8,
@@ -221,8 +237,34 @@ Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/I
 | 2026-10-24 | 0dc262c | baseline toby_sol | 16.615 |
 | 2026-10-25 00:45 | a26041d | ladder + synthesised halves + start blocks | 17.199 |
 | 2026-10-25 01:40 | ef0ec5d | whole-state pruned patches (7,3) (8,3) (8,4) (9,3) (9,4) | 17.435 |
-| 2026-10-25 02:00 | (next) | readout-bias-aware W trees | 17.458 |
+| 2026-10-25 02:00 | f1f5bba | readout-bias-aware W trees | 17.458 |
+| 2026-10-25 02:30 | (this) | pruned line circuits (7,3) (8,3) (9,3) (10,4), patches (10,3) (11,3) | 17.473 |
 
 Per case, whole-state pruned circuits vs the previous toby_sol (CZ, expected score):
 (8,4) 43 -> 22 CZ, 0.675 -> 0.845; (9,4) 63 -> 36 CZ, 0.607 -> 0.734; (10,5) 85 -> 43 CZ,
-0.470 -> 0.665; (10,3) 59 -> 39 CZ, 0.676 -> 0.775; (9,3) 44 -> 33 CZ, 0.724 -> 0.779.
+0.470 -> 0.685; (10,4) 77 -> 54 CZ, 0.546 -> 0.634; (10,3) 59 -> 39 CZ, 0.676 -> 0.785;
+(11,3) 68 -> 44 CZ, 0.633 -> 0.763; (9,3) 44 -> 36 CZ, 0.724 -> 0.803; (7,3) 26 -> 20 CZ, 0.840 -> 0.903.
+Bonus (moments, N <= 15) also rises with these tables: 38.30 -> 39.60.
+
+
+## Bonus checkpoint — 2026-10-25 01:33 EDT
+
+Best verified corrected 56-case bonus score: **46.1786336531**.
+The standalone constructor passed complex128 state/relative-phase checks, native
+gate and Willow connectivity checks for every case. Maximum construction time
+was **0.002769 s**, maximum state L2 error
+**6e-07**, and maximum emitted depth **126 moments**.
+The 45-point milestone is passed; research continues beyond it.
+
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T053345Z/submission.py),
+[full validation](research/bonus_band_20261025/milestones/20261025T053345Z/validation.json), and
+[checkpoint summary](research/bonus_band_20261025/milestones/20261025T053345Z/summary.json) are immutable copies.
+The main entry point preserves a fresh shared-solver snapshot; a three-calibration
+D(8,4) noise-model comparison was identical to that baseline, so this checkpoint
+claims no additional primary-score gain.
+
+Reusable W split decompositions are in
+[w_broadcast.py](research/bonus_band_20261025/w_broadcast.py).
+Follow-ups and ownership are in [the task board](research/bonus_portfolio_20261025/tasks.json)
+and [the shared queue](ryon/ISSUES.md): calibrated W integration is assigned,
+while terminal-decoder integration and adaptive oracle work remain available.
