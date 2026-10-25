@@ -252,7 +252,7 @@ Per case, whole-state pruned circuits vs the previous toby_sol (CZ, expected sco
 0.470 -> 0.708; (10,4) 77 -> 45 CZ, 0.546 -> 0.724; (10,3) 59 -> 39 CZ, 0.676 -> 0.785;
 (11,3) 68 -> 44 CZ, 0.633 -> 0.763; (9,3) 44 -> 36 CZ, 0.724 -> 0.803; (7,3) 26 -> 20 CZ, 0.840 -> 0.903.
 Bonus (moments, N <= 15) also rises with these tables: 38.30 -> 39.60.
-N >= 11: (11,5) 104 -> 59 CZ (89 -> 53 moments), (12,3) 77 -> 51 CZ (0.611 -> 0.724, 1 seed),
+N >= 11: (11,5) 104 -> 59 CZ (89 -> 53 moments, fast_eval 1 seed 0.417 -> 0.596), (12,3) 77 -> 51 CZ (0.611 -> 0.724, 1 seed),
 (12,4) 105 -> 96, (13,4) 119 -> 112, (15,3) 91 -> 68. Robust under coherent CZ errors and ZZ crosstalk
 (toby's trajectory check, ISSUES #10).
 
