@@ -507,6 +507,7 @@ The target remains **45**. These are local bonus scores, not hardware results.
 | 2026-10-25 09:45 | 51.4051 | 56 | [toby/bonus_squeeze_sol.py](toby/bonus_squeeze_sol.py): native_submission.py (51.3337) plus a z-ejection / realignment pass; (13,3) 55 -> 54, (14,3) 57 -> 55, (15,3) 67 -> 64 moments | all 56 pass Willow105.validate_circuit and judge.test_circuit, max build 2.6 s |
 | 2026-10-25 10:05 | 51.8367 | 56 | [toby/bonus_portfolio_squeeze_sol.py](toby/bonus_portfolio_squeeze_sol.py): exp/depth-search portfolio_sol.py (51.5954) plus the same pass | all 56 pass Willow105.validate_circuit and judge.test_circuit, max build 2.7 s |
 | 2026-10-25 10:15 | 52.2802 | 56 | [ryon/slim_sol.py](ryon/slim_sol.py): frozen best-per-case bonus table (52.162 checkpoint + (12,4) 65 -> 56) on the slimmed squeeze portfolio | all 56 pass Willow105.validate_circuit and judge.test_circuit at N <= 15, build 2 s |
+| 2026-10-25 10:50 | 52.3618 | 56 | [ryon/slim_sol.py](ryon/slim_sol.py): + depth-weighted pruning (ALPHA = 20) from the incumbents: (12,4) 65 -> 54, (13,4) 75 -> 70 moments | all 56 pass Willow105.validate_circuit and judge.test_circuit at N <= 15 |
 
 Reusable tasks and their acceptance criteria are recorded in
 [the shared issue queue](ryon/ISSUES.md) and
