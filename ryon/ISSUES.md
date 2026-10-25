@@ -84,8 +84,9 @@ without needing a grid block. The 3-row runs win because their start is the line
 snake; the ladder start (2xL) stalls. Path runs for N = 7..16 are running.
 Also in f1f5bba: `bias_tree` grows W trees charging readout skew (Zb), (N,1) N = 3..10: 9.039 -> 9.084.
 Next (me): install N = 10..16 path/patch winners as they converge; brickwork-start pruning for k >= 3.
-k = 2 from an over-parameterised brickwork start on 2-row ladder footprints: in progress (toby session 2),
-N = 7..10 first; results will use the same patch keys so they drop into ex_sol / toby_sol.
+k = 2 from an over-parameterised brickwork start on 2-row ladder footprints (toby): negative. Greedy
+single-CZ deletion gets stuck far above toby_sol: (6,2) 42 -> 17 CZ (toby_sol 15), (7,2) 80 -> 61 (19); (8,2) and
+(9,2) brickwork starts with 11-12 layers didn't reach an exact fit. Released; script research/toby_offline/k2_prune.py.
 
 ### BR-101. Exact Clifford refits before depth compilation
 Status: measured (bonus research, isolated files)
