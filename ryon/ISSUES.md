@@ -12,7 +12,7 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **17.435** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
+Baseline at 0dc262c: total 16.615. Current: **17.458** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
 
 ## Open
 
@@ -40,6 +40,25 @@ evidence, not a lower-bound proof.
 has reached 33 CZ / 53 moments from 35 CZ / 55 moments. These can terminate
 longer cascades without changing their prefix or straight input registers.
 
+### 10. Trajectory / realistic-noise check of the new pruned patches and lines (N = 9..16)
+Status: open, suggested owner: toby (has the trajectory simulator in eval/ and the ZZ / coherent-CZ models)
+fast_eval can't reach N >= 13 and has no crosstalk. Compare toby_sol @ HEAD (pruned patches for k >= 3,
+`prefer_synth`) against @ a26041d on N = 9..16 with ZZ crosstalk and coherent CZ errors. Pruned circuits
+reuse the same few couplers many times (up to 9 CZs on one pair), so check coherent-error accumulation.
+If they lose under coherent errors, report the case list and set `prefer_synth = False` for those.
+
+### 11. Pruned line halves for the ladder at N >= 17
+Status: open, suggested owner: bonus-research session (BR-102 / path_decoder.py already fit isometries)
+Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
+Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
+target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
+
+### 12. W states below 2N - 3 CZ
+Status: open, unassigned (research)
+Whole-state pruning never removed a CZ from the W trees (N = 4..12). Is 2N - 3 optimal for CZ + 1q gates?
+A proof or a counterexample (e.g. fit random 2N - 4 CZ sequences on trees / paths, many restarts) settles it.
+W cases are about 40 % of the small-N score, so even one CZ matters at N >= 8.
+
 ### 9. Whole-state CZ pruning for every (N, k), N = 7..12 (primary score)
 Status: in progress (ryon session, Slurm sweep running; please don't duplicate, add footprints instead)
 Same idea as BR-105, applied to the hardware problem: build toby_sol's circuit inside a grid
@@ -62,7 +81,9 @@ Pruned circuits only use the edges of one Hamiltonian path of the footprint (D(8
 they are line circuits with repeated CZs on the same pairs. So toby_sol now also has a `lines` table
 (cz sequence on path positions), placed with best_path like the line construction: works for any N
 without needing a grid block. The 3-row runs win because their start is the line construction on a
-snake; the ladder start (2xL) stalls. Path runs for N = 7..14 are running.
+snake; the ladder start (2xL) stalls. Path runs for N = 7..16 are running.
+Also in f1f5bba: `bias_tree` grows W trees charging readout skew (Zb), (N,1) N = 3..10: 9.039 -> 9.084.
+Next (me): install N = 10..16 path/patch winners as they converge; brickwork-start pruning for k >= 3.
 k = 2 from an over-parameterised brickwork start on 2-row ladder footprints: in progress (toby session 2),
 N = 7..10 first; results will use the same patch keys so they drop into ex_sol / toby_sol.
 
