@@ -118,6 +118,16 @@ a path don't fit exactly even at L = 140..160 with 3000 Adam steps (6,4) (6,5) (
 uses it (11,4), (12,4) have whole-state circuits; (14,4) splits 7 + 7), so it isn't installed.
 (15,3): whole-state line (68 CZ, 95 moments) vs the ladder with the new halves (73 CZ, ~60 moments), 3 seeds x 100
 trajectories: +0.005 for the line on average (+-0.06 per seed). Equal; kept the line.
+**Handoff (ryon halves session ends about 07:30 on 2026-10-25; issue 11 is then free to claim).**
+- Searches still writing results until ~07:40: `benchmark_outputs/synth/log_*half_warm*`, best per target via
+  `python benchmark_outputs/synth/status.py`; result JSONs `sol_hwarm_<a>_<k>_s*.json` (keys a, k, lmin, edges,
+  angles, zset). Install: `cd ryon && python ../benchmark_outputs/synth/install_half.py <json>`.
+- Rule that held up: install a half only if a current case uses it (check with a half_plan hook, as in
+  benchmark_outputs/halfuse.txt), it cuts >= 15 % CZ with less depth, and a 100-trajectory A/B passes
+  (`benchmark_outputs/synth/ab2.py` against a copy in AB_SOL, or `ab.py halves <a,k,0> <N:n> <seed> 100`).
+- Still open: k >= 4 halves for N >= 14 (line plan still used everywhere there, e.g. (14,7) 187, (16,8) 253 CZ);
+  warm starts only shave 5-9 %. Possibly unbalanced ladder splits: with the (6,4) half, (14,4) at 6 + 8 would be
+  123 CZ vs 133, but the 8 s split budget may stop before a = 6 is tried.
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
