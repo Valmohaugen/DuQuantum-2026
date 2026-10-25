@@ -201,6 +201,17 @@ Loss split at small N (fast_eval, (5,2)..(8,4), 3 seeds): removing gate error wo
 would add 0.29, so depth is worth almost as much as CZ count. Pruning with ALPHA=3 (cost = cz + 3 x cz layers) found
 (5,2) 9 cz / 6 layers (was 11 / 8) and won (5,2) (6,2) (6,3) (7,2) in 5fbdb31 (+0.033). ALPHA=5 runs going for N = 6..10.
 
+### 14. Merge primary-search circuits into the bonus portfolio (+1.9 points available)
+Status: open, suggested owner: bonus-portfolio session (merge.py owner)
+The whole-state pruning searches (issue 9) also produce shallow circuits. Packed with toby_sol's compiler they beat the
+latest milestone (research/bonus_band_20261025/milestones/20261025T101047Z, 49.112) in 14 cases, total +1.906:
+(4,2) 7 vs 9, (6,2) 13 vs 15, (6,3) 12 vs 15, (7,2) 15 vs 16, (7,3) 17 vs 21, (8,2) 17 vs 18, (9,2) 19 vs 20,
+(10,2) 21 vs 22, (10,3) 29 vs 35, (10,5) 31 vs 35, (11,2) 23 vs 25, (11,3) 35 vs 45, (12,3) 41 vs 45, (13,2) 27 vs 29.
+Explicit native circuits (cirq JSON {"circuit", "qubits"}), each checked with Willow validate_circuit, the notebook
+test_circuit and a PhasedXZ/CZ-only gate check: research/primary_depth_20261025/d_N_k.json, summary.json.
+Your commutation/Clifford passes may shave more. Depth-first runs (gpar ALPHA=20, N = 4..12) are going; rerun
+`python research/primary_depth_20261025/export_bonus.py <portfolio moments json>` from benchmark_outputs/ex later.
+
 ### 13. N = 12..14 with k >= 5 (open, unassigned)
 Every start stalls near toby_sol's own count: (12,5) 115-134, (12,6) 128-158, (13,5) 142, (14,7) 187-229 CZ, while
 (11,5) went 104 -> 59 from a 3-row line start. Ideas: longer 3-row runs (they need hours at N = 12), splitting the
