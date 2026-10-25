@@ -37,6 +37,7 @@ from claude.score_diagnostics import (  # noqa: E402
     score_diagnostics,
     table_header,
     table_row,
+    table_totals,
 )
 from claude.scripts.challenge_calibration import make_challenge_calibration  # noqa: E402
 from claude.validation import validate_preparation  # noqa: E402
@@ -522,18 +523,21 @@ def main() -> Path:
     clean_cal = tuple({key: (0.0, 0.0) for key in mapping} for mapping in cal)
     modes = ("dd", "no-dd", "ideal") if RUN_IDEAL_BASELINE else ("dd", "no-dd")
     print(
-        f"[setup] run {directory.name}; shots {SHOTS}; seeds {list(BENCHMARK_SEEDS)}; CPU complex128"
+        f"[setup] Benchmark fingerprint: {directory.name}; shots {SHOTS}; seeds {list(BENCHMARK_SEEDS)}; CPU complex128"
     )
     print(
         f"[setup] model: T1 {base_noise.t1_us} us, Tphi {base_noise.tphi_us} us, detuning {DETUNING_KHZ} kHz"
     )
     print(
-        f"[setup] cirq {cirq.__version__}; numpy {np.__version__}; calibration {signature['calibration_sha256'][:12]}"
+        f"[setup] cirq {cirq.__version__}; numpy {np.__version__}; calibration hash {signature['calibration_sha256'][:12]}"
     )
     done = 0
     expected = len(_expected_keys())
     print(TABLE_NOTE)
     print("[table] Cached rows reuse original build times and diagnostics; no resampling.")
+    print(
+        "[table] SUM adds each variant's stored rows, including cached build times and row score proxies; identifiers, fidelity, survival and rules are not summed."
+    )
     prepared: dict[tuple[int, int, str], Prepared] = {}
     metadata: dict[tuple[int, int, str], dict] = {}
     probability_cache: dict[tuple, tuple[np.ndarray, np.ndarray]] = {}
@@ -597,6 +601,10 @@ def main() -> Path:
                 saved[key] = record
                 atomic_write_json(checkpoint_path, checkpoint)
                 print(table_row(n, k, mode, record), flush=True)
+        print("-" * len(table_header().splitlines()[0]))
+        for mode in modes:
+            rows = [saved[result_key(n, k, seed, mode)] for n, k in BENCHMARK_CASES]
+            print(table_totals(mode, rows), flush=True)
     aggregates = paired_aggregate(
         case_statistics({"signature": signature, "complete": True, "results": saved})
     )

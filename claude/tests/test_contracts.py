@@ -12,16 +12,107 @@ from pathlib import Path
 import cirq
 import cirq_google
 import pytest
-from test_dicke_prep import dp
+
+from claude import dicke_prep as dp
 
 REPO = Path(__file__).resolve().parents[2]
+PATH_COORDINATES: tuple[tuple[int, int], ...] = (
+    (6, 0),
+    (6, 1),
+    (5, 1),
+    (5, 2),
+    (4, 2),
+    (4, 3),
+    (3, 3),
+    (3, 4),
+    (2, 4),
+    (2, 5),
+    (1, 5),
+    (1, 6),
+    (0, 6),
+    (0, 7),
+    (0, 8),
+    (1, 8),
+    (1, 7),
+    (2, 7),
+    (2, 6),
+    (3, 6),
+    (3, 5),
+    (4, 5),
+    (4, 4),
+    (5, 4),
+    (5, 3),
+    (6, 3),
+    (6, 2),
+    (7, 2),
+    (8, 2),
+    (8, 3),
+    (7, 3),
+    (7, 4),
+    (6, 4),
+    (6, 5),
+    (5, 5),
+    (5, 6),
+    (4, 6),
+    (4, 7),
+    (3, 7),
+    (3, 8),
+    (2, 8),
+    (2, 9),
+    (2, 10),
+    (3, 10),
+    (3, 9),
+    (4, 9),
+    (4, 8),
+    (5, 8),
+    (5, 7),
+    (6, 7),
+    (6, 6),
+    (7, 6),
+    (7, 5),
+    (8, 5),
+    (8, 4),
+    (9, 4),
+    (10, 4),
+    (10, 5),
+    (9, 5),
+    (9, 6),
+    (8, 6),
+    (8, 7),
+    (7, 7),
+    (7, 8),
+    (6, 8),
+    (6, 9),
+    (5, 9),
+    (5, 10),
+    (4, 10),
+    (4, 11),
+    (4, 12),
+    (5, 12),
+    (5, 11),
+    (6, 11),
+    (6, 10),
+    (7, 10),
+    (7, 9),
+    (8, 9),
+    (8, 8),
+    (9, 8),
+    (9, 7),
+    (10, 7),
+    (10, 6),
+    (11, 6),
+    (12, 6),
+    (12, 7),
+    (12, 8),
+    (11, 8),
+    (10, 8),
+    (10, 9),
+)
 
 
 def path_calibration() -> tuple[dict, dict, dict, dict]:
     """Reconstruct the valid full-topology moment-limit review fixture."""
-    text = (REPO / "claude/docs/REVIEW_2026-10-24.md").read_text()
-    source = text.split("path_coordinates = ", 1)[1].split("\n```", 1)[0]
-    path = [cirq.GridQubit(*pair) for pair in ast.literal_eval(source)]
+    path = [cirq.GridQubit(*pair) for pair in PATH_COORDINATES]
     edges = {frozenset(pair) for pair in zip(path, path[1:])}
     metadata = cirq_google.Willow105.metadata
     one = {q: (0.001, 0.0) for q in metadata.qubit_set}
@@ -161,3 +252,8 @@ assert matplotlib.get_backend()==before, (before,matplotlib.get_backend())
         [sys.executable, "-c", script], cwd=tmp_path, capture_output=True, text=True, timeout=60
     )
     assert result.returncode == 0, result.stderr
+
+
+def test_solution_compiles_as_python() -> None:
+    source = REPO / "solution.py"
+    compile(source.read_text(), str(source), "exec")

@@ -211,7 +211,6 @@ def _report(data: dict, root: Path) -> str:
         "## Historical data",
         "",
         "The original report and PNG survive. The original 240 raw records are unavailable after the documented regression-test incident. The user chose to retain the surviving summaries only; they have not been reconstructed or relabeled as current data.",
-        f"See [incident record]({REPO / 'claude/docs/DATA_RECOVERY_2026-10-24.md'}).",
         "",
         "## Machine-readable outputs",
         "",

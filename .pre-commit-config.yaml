@@ -3,30 +3,25 @@ repos:
     hooks:
       - id: ruff
         name: Python lint
-        entry: python -m ruff check
+        entry: python -m claude.scripts.check_quality lint
         exclude: '^(ryon|toby)/'
         language: system
         types: [python]
       - id: ruff-format
         name: Python format
-        entry: python -m ruff format --check
+        entry: python -m claude.scripts.check_quality format
         exclude: '^(ryon|toby)/'
         language: system
         types: [python]
-      - id: nbstripout
-        name: Strip working notebook outputs
-        entry: python -m nbstripout --keep-id
-        language: system
-        files: '^(solution|claude/tutorial/Dicke_Tutorial)\.ipynb$'
       - id: artifacts
-        name: Notebook and protected challenge contracts
+        name: Python syntax and protected challenge contracts
         entry: python -m claude.scripts.check_artifacts
         language: system
         pass_filenames: false
         always_run: true
       - id: pytest
         name: Complete offline test suite
-        entry: python -m pytest -q
+        entry: python -m pytest claude/tests -q
         language: system
         pass_filenames: false
         always_run: true

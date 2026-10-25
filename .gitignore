@@ -8,3 +8,4 @@ submission_outputs/
 .ruff_cache/
 .mypy_cache/
 .superpowers/
+/claude/.docs/

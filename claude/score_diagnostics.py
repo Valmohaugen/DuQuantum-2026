@@ -1,6 +1,6 @@
 """Finite-shot score diagnostics and the shared terminal table.
 
-Derivation: docs/TERMINAL_TABLE.md, from the protected original scoring cell.
+Derivation from the protected original challenge scoring cell.
 Z=S/M^2 sum_i(A_i-M/C)^2. For A|M~Multinomial(M,q),
 E[Z|M>0]=S E[1/M|M>0](1-sum q_i^2)+S sum(q_i-1/C)^2.
 For X, per-shot average subset parity h_r has mean mu and variance v;
@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import math
 import numbers
+from collections.abc import Sequence
 
 import numpy as np
 from scipy.special import logsumexp
@@ -22,7 +23,12 @@ from scipy.stats import binom
 
 ATOL = 1e-12
 RTOL = 1e-10
-TABLE_NOTE = "[table] E[s] = inverse mean penalty conditional on target Z counts >0; it is a proxy, not the expected sampled score. X includes finite-shot variance. -- means unavailable."
+TABLE_NOTE = (
+    "[table] E[s] = 1 / (Zfloor + Zbias + X), assuming at least one target-sector Z shot.\n"
+    "[table] E[s] is a score proxy; sampled is the score from the drawn measurements.\n"
+    "[table] Averaging scores differs from taking the reciprocal of the mean penalty.\n"
+    "[table] X includes finite-shot sampling variance; -- unavailable, inf infinite, undef undefined."
+)
 
 
 def _probabilities(values: np.ndarray, n: int) -> np.ndarray:
@@ -129,7 +135,7 @@ def table_header() -> str:
     return header + "\n" + "-" * len(header)
 
 
-def table_row(n: int, k: int, variant: str, record: dict) -> str:
+def table_row(n: int | str, k: int | str, variant: str, record: dict) -> str:
     """Format real resource/diagnostic values, keeping nonfinite/missing states explicit."""
 
     def number(key: str, width: int = 6, decimals: int = 3) -> str:
@@ -140,7 +146,7 @@ def table_row(n: int, k: int, variant: str, record: dict) -> str:
                 if key == "score"
                 else record.get("score_proxy_status", "")
                 if key == "score_proxy"
-                else ""
+                else record.get(key + "_status", "")
             )
             word = "inf" if status == "infinite" else "undef" if status == "undefined" else "--"
             return f"{word:>{width}}"
@@ -151,3 +157,62 @@ def table_row(n: int, k: int, variant: str, record: dict) -> str:
     moments = "--" if record.get("moments") is None else str(record["moments"])
     build = "--" if record.get("build_seconds") is None else f"{record['build_seconds']:.1f}s"
     return f"{n:>3} {k:>2} {variant:>15} {cz:>4} {moments:>4} {build:>6} {record.get('rules', '--'):>5} {number('fidelity', 7, 5)} {number('f')} {number('z_floor')} {number('z_bias')} {number('x_penalty')} {number('score_proxy', 7)} {number('score', 7)}"
+
+
+def table_totals(variant: str, records: Sequence[dict]) -> str:
+    """Format arithmetic sums of stored additive columns for one seed and variant.
+
+    Parameters
+    ----------
+    variant : str
+        Display label for one DD/no-DD/ideal variant.
+    records : sequence of dict
+        Stored rows for one seed, with native counts, build times in seconds,
+        dimensionless penalties/scores and explicit nonfinite score statuses.
+
+    Returns
+    -------
+    str
+        An aligned SUM row. Missing, undefined and infinite contributors remain
+        explicit. Build time includes cached values. Fidelity, survival, rule
+        labels and case identifiers are not additive. No diagnostics, simulation
+        or sampling are performed.
+
+    Raises
+    ------
+    ValueError
+        If no records are supplied.
+    """
+    if not records:
+        raise ValueError("seed totals require at least one record")
+    totals = {}
+    for key in (
+        "cz_count",
+        "moments",
+        "build_seconds",
+        "z_floor",
+        "z_bias",
+        "x_penalty",
+        "score_proxy",
+        "score",
+    ):
+        status_key = "score_status" if key == "score" else key + "_status"
+        statuses = [row.get(status_key) for row in records]
+        values = [row.get(key) for row in records]
+        totals[key] = None
+        if "undefined" in statuses or any(
+            value is not None and math.isnan(value) for value in values
+        ):
+            totals[status_key] = "undefined"
+        elif any(value is None and status != "infinite" for value, status in zip(values, statuses)):
+            continue
+        elif "infinite" in statuses or any(
+            value is not None and math.isinf(value) for value in values
+        ):
+            totals[status_key] = "infinite"
+        else:
+            try:
+                totals[key] = sum(values) if key in {"cz_count", "moments"} else math.fsum(values)
+            except OverflowError:
+                totals[status_key] = "infinite"
+    return table_row("SUM", "--", variant, totals)

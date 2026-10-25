@@ -102,3 +102,53 @@ def test_proxy_overflow_is_explicit_and_json_safe() -> None:
     assert d["score_proxy"] is None
     assert d["score_proxy_status"] == "infinite"
     json.dumps(d, allow_nan=False)
+
+
+def test_seed_totals_sum_stored_precision_and_only_additive_columns() -> None:
+    from claude.score_diagnostics import table_totals
+
+    row = dict(
+        cz_count=3,
+        moments=7,
+        build_seconds=0.049,
+        fidelity=1.0,
+        f=0.9,
+        z_floor=0.5004,
+        z_bias=0.0004,
+        x_penalty=0.0004,
+        score_proxy=1.2344,
+        score=2.3454,
+        rules="ok",
+        score_status="finite",
+        score_proxy_status="finite",
+    )
+    fields = table_totals("dd", [row, row]).split()
+    assert fields[:6] == ["SUM", "--", "dd", "6", "14", "0.1s"]
+    assert fields[6:9] == ["--", "--", "--"]
+    assert fields[9:] == ["1.001", "0.001", "0.001", "2.469", "4.691"]
+
+
+@pytest.mark.parametrize(
+    "status,expected", [("infinite", "inf"), ("undefined", "undef"), (None, "--")]
+)
+def test_seed_totals_preserve_unavailable_and_nonfinite_states(
+    status: str | None, expected: str
+) -> None:
+    from claude.score_diagnostics import table_totals
+
+    finite = dict(
+        score=2.0, score_status="finite", score_proxy=3.0, score_proxy_status="finite", cz_count=1
+    )
+    missing = dict(score=None, score_proxy=None, cz_count=None)
+    if status is not None:
+        missing.update(score_status=status, score_proxy_status=status)
+    fields = table_totals("no-dd", [finite, missing]).split()
+    assert fields[3] == "--"
+    assert fields[-2:] == [expected, expected]
+
+
+def test_undefined_total_is_not_hidden_by_an_infinite_row() -> None:
+    from claude.score_diagnostics import table_totals
+
+    rows = [dict(score=None, score_status=status) for status in ("infinite", "undefined")]
+    assert table_totals("ideal", rows).split()[-1] == "undef"

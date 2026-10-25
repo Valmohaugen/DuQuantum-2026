@@ -3,284 +3,209 @@
 Prepare exact weight-n Dicke states on calibrated Willow qubits using CZ and
 `cirq.PhasedXZGate`. Hardware judging compares Z distributions and X correlators.
 The bonus rewards depth and permits the current non-adaptive construction.
-The organizer's email confirms bonus grading for **2 ≤ N ≤ 15** and corrects
-`test_circuit` to use `range(len(qubits))`. The original notebook stays unchanged;
-[the recorded corrections](claude/docs/CHALLENGE_CORRECTIONS.md) govern interpretation.
-Grading cases and `max_correlator_size` remain undisclosed.
+The organizer confirmed bonus grading for **2 ≤ N ≤ 15** and corrected the original
+validator to use `range(len(qubits))`. Hidden grading cases and correlator sizes remain
+undisclosed. The original challenge notebook stays unchanged and supplies the official scorer.
 
-## Source of truth and artifacts
+## Environment and local checks
 
-| Path | Purpose |
-| --- | --- |
-| `Google Quantum AI Challenge.ipynb` | Protected original challenge; reference only |
-| `claude/dicke_prep.py` | Canonical tested physics, layout, synthesis, scheduling, and entry points |
-| `solution.ipynb`, `solution.py` | Thin working notebook and jupytext mirror; imports are inert |
-| `claude/scripts/run_solution.py` | Validated CLI settings and complete local workflow, logs and run index |
-| `claude/reference_routing.py` | Local pinned-Cirq compatibility guard for minimal-reference comparisons; original source preserved |
-| `claude/validation.py` | Independent exact-state and gate/routing/depth checks |
-| `claude/scripts/noisy_benchmark.py` | Local density-matrix experiments with explicit model/provenance |
-| `claude/scripts/analyze_benchmark_results.py` | Matched-seed analysis with explicit score exclusions |
-| `claude/tutorial/Dicke_Tutorial.ipynb` | Generated tutorial, including independent shot/noise controls |
-| `claude/scripts/build_submission.py` | Export both entry points as one standalone Python file |
-| `claude/docs/REVIEW_2026-10-24.md` | Historical review and exact reproductions |
-| `claude/docs/REPAIR_PLAN.md`, `claude/docs/PLAN_STATUS.md` | Repair plan and current verification status |
-
-## Environment and checks
-
-Use Python **3.12** and a project environment. The lock is generated with pip-tools for the
-tested macOS environment; the local CI definition uses macOS and the same Python version.
-Willow105 requires the pinned Cirq 1.8 development build.
+Use the project environment with Python **3.12.15**. The dependency lock targets the tested
+macOS environment and pins the Cirq 1.8 development build required for Willow105.
+From the repository root, create an environment when needed, then install the lock:
 
 ```bash
-conda env create -f environment.yml        # from repository root, for a new environment
+conda create --name duquantum --channel conda-forge python=3.12.15 pip
 conda activate duquantum
-python -m pip install -r claude/requirements.txt  # update an existing project environment
+python -m pip install -r claude/requirements.txt
 python -m pip check
-python -m pytest -q
-python -m ruff check solution.py claude
-python -m ruff format --check solution.py claude
+```
+
+For an existing environment, start at activation. The dependency files keep their existing
+locations. To deliberately update dependencies, edit `claude/requirements.in`, regenerate
+with `pip-compile --output-file claude/requirements.lock claude/requirements.in`, and rerun
+all checks. No global package installation is needed.
+
+```bash
+python -m claude.scripts.check_quality lint
+python -m claude.scripts.check_quality format
 python -m claude.scripts.check_artifacts
+python -m pytest claude/tests -v
 pre-commit install
 pre-commit run --all-files
 ```
 
-The original notebook is excluded from output stripping and checked by SHA-256. Working
-notebooks must have cleared outputs before committing. Python sources are linted/formatted;
-generated notebooks are checked for valid syntax/schema, clear outputs, and source consistency.
-To update the lock deliberately, edit `claude/requirements.in`, then run
-`pip-compile --output-file claude/requirements.lock claude/requirements.in` and rerun the checks.
+The check helper supplies isolated Ruff settings: Python 3.12, a 100-character formatting
+width, and `E4/E7/E9/F/I`. Reference implementations, generated artifacts and notebooks are
+excluded. The artifact checker verifies the original challenge's SHA-256 and compiles
+maintained Python sources. Tests remain tracked under `claude/tests/` and do not require
+working notebooks or private documentation. The local commit hook runs these checks.
 
-## Working notebooks
-
-```bash
-jupyter lab solution.ipynb
-jupyter lab claude/tutorial/Dicke_Tutorial.ipynb
-jupytext --sync solution.ipynb
-python -m claude.scripts.build_tutorial
-```
-
-The Python physics module is independent of notebook files. After editing notebook-only
-exploration, synchronize the working mirror; after editing the tutorial generator, regenerate
-the tutorial. Both import the same module. There is no hardware execution toggle or job path.
-The original challenge's `test_circuit` calls `range(qubits)` on a set; keep it unchanged and
-use `validate_preparation` instead.
-
-## Preparation
-
-For n=1, a low-error spanning tree distributes the excitation using subtree-size Givens angles.
-The first known-input split uses one CZ; later Givens splits use two. The same first-split
-saving applies to the general line construction. A bounded connected-patch routing fallback
-handles small cases without a full path, using the existing logical construction.
-For n≥2, a nearest-neighbor split-and-cyclic-shift construction follows
-[Bärtschi and Eidenbenz](https://arxiv.org/abs/1904.07358). Its five-CZ flagged gate is valid on the
-reachable subspace, rather than a general controlled rotation. For n>N/2, bitwise X complements
-the smaller-weight state. The module includes the derivations and limiting cases.
-
-The default `optimized` construction merges a reachable first Givens/MUX pair into four
-CZ gates, saving three while retaining the other pruned gates and known first split.
-For D(4,2), an exact five-CZ square is selected when its calibration-cost estimate beats
-the general path. Both improvements were derived from the user-provided `test_sol.py`;
-the fitted angle tables have been replaced by closed-form angles. No runtime file or
-optimizer is needed. Missing or costly squares retain the path/routing fallback.
-See [the derivation and validation](claude/docs/OPTIMIZED_SYNTHESIS.md).
-
-Use `python -u solution.py --construction analytic` to run the previous constructor,
-or `--construction optimized` for the new default. This choice reaches benchmark,
-diagnostics, comparison, notebook consumers and standalone export, and enters the
-checkpoint fingerprint. Existing recorded datasets without this setting retain their
-original analytical construction when reanalyzed.
-
-The constructor enforces the **1,750-moment inclusive limit** and rejects unsupported inputs
-with `NotImplementedError`. A failed beam search is a heuristic failure, not proof that no path
-exists. Routing, gate restrictions, exact small states, DD phase preservation, and the provided
-bonus range through N=15 are checked independently, including complementary and boundary
-excitation counts. The original N=16–20 cases remain additional structural stress tests.
-
-## Reproducible simulation
-
-With the `duquantum` environment active, the default command runs the complete supported
-workflow: software checks, both notebooks, validation, configured export, full bonus-range
-checks, the paired benchmark, analysis, all eight diagnostic views and solution comparison:
+## Run the solution
 
 ```bash
 python -u solution.py
 ```
 
-Use flags when you want a smaller or specific experiment:
+The default full run shows six phases:
+
+1. **Checks** — lint, formatting, Python syntax/original-file protection, and pytest.
+2. **Validation** — selected constructors checked against exact states and device rules.
+3. **Submission** — build the configured standalone local `submission.py` export.
+4. **Bonus validation** — load that export and validate both actual entry points.
+5. **Benchmark** — run or resume DD/no-DD/ideal simulations and save analysis quietly.
+6. **Diagnostics** — save the eight-view scientific report and figures.
+
+The checks phase uses one updating progress bar. Each preliminary check and each completed
+pytest item contributes one unit; the total becomes available after collection. Skipped
+items and setup/teardown failures are counted once per item. The percentage measures work
+items, not elapsed time. Redirected output uses concise status lines. Full diagnostics are
+saved to the terminal log and replayed on failure; failures return a nonzero status.
+
+Comparison is optional:
+
+```bash
+python -u solution.py --comparison
+python -u solution.py --mode compare --cases 2,1 4,2 15,7 --seed 42
+```
+
+`--comparison` appends a seventh phase in all mode. `--mode compare` requests comparison
+directly. `--skip-comparison` remains accepted and is mutually exclusive with `--comparison`.
+The comparison includes maintained dense/sparse/off DD variants and teammate references;
+`--no-upstream` omits reference variants, and `--baseline /absolute/path/to/module.py` adds
+a frozen constructor. Optional reference failures retain their traceback and receive no
+score; maintained-solver and shared scoring failures stop the run.
+
+The default **full** preset benchmarks all **28 nontrivial cases N=2–8**, with five seeds,
+10,000 shots per basis, two detuning realizations, and all applicable X-correlator orders.
+DD/no-DD/ideal produce 420 records. Both exported functions are also checked exactly for
+**N=2–15, n=0–N**: 133 cases and **266 circuits**, including product boundaries. These
+bonus checks test exact state fidelity and device rules, rather than a noisy sampled score.
+Constructor-only resource probes extend through N=90 without density simulation.
+
+Smaller and focused runs keep the existing flags:
 
 ```bash
 python -u solution.py --preset quick
-python -u solution.py --cases 2,1 4,2 6,3 --seeds 1,2,3,4,5 --shots 10000 --dd-strategy sparse --max-correlator-size 6
+python -u solution.py --preset standard
+python -u solution.py --cases 2,1 4,2 6,3 --seeds 1,2,3 --shots 2000 --dd-strategy sparse
 python -u solution.py --no-check --no-bonus-check
+python -u solution.py --mode validate --cases 15,7 --bonus-check
+python -u solution.py --mode diagnose --results path/to/noisy_benchmark_results.json
 python -u solution.py --plan
 python -u solution.py --help
 ```
 
-The default **`full`** preset benchmarks all **28 nontrivial (N,n) cases through N=8**,
-including complementary excitations, with five seeds, 10,000 shots per basis, two detuning
-realizations and all applicable X-correlator orders. DD/no-DD/ideal produce 420 records.
-Both exported entry points are also checked exactly for every **N=2–15, n=0–N**:
-133 cases and **266 circuits**, including product boundaries. Larger resource probes extend
-through N=90 without density simulation. The software checks include lint, formatting,
-protected/generated artifact checks, the full test suite and both notebook executions.
+Quick uses two cases, one seed, 1,000 shots and one realization; standard uses six cases
+and three seeds. Smaller presets, narrower modes and explicit case ranges skip broad
+software/bonus suites by default. Add `--check` or `--bonus-check` to include them.
+Explicit model/case options override presets. `--plan` and `--help` run no experiments
+and create no output directories.
 
-`--preset standard` retains six cases through N=6 and three seeds. `--preset quick` uses
-two cases, one seed, 1,000 shots and one realization; its uncertainty is unestimated.
-These smaller presets, narrower modes and explicit `--cases`/`--nmax` runs skip broad
-software/bonus suites by default. Add `--check` or `--bonus-check` to include them. An
-explicit bonus check with focused cases checks those cases in both exported functions.
-`--no-check` and `--no-bonus-check` skip those suites in a full run. Explicit model/case
-options override preset values; `--fresh` saves a separate benchmark repeat.
+## Terminal tables and score interpretation
 
-Every invocation prints its run index and saves `report.md`, `run.json`, the complete
-`terminal-output.log`, stage reports/data, comparison source/circuit snapshots, and a
-standalone `submission.py` under `benchmark_outputs/solution_runs/<run-id>/`.
-Full runs also save `bonus_validation/report.md`, `results.json` and `results.csv` with
-every main/bonus check; failures retain completed rows and their traceback.
-The export uses the selected preparation settings. Noise and shot settings belong to local
-testing and do not modify the exported constructor. All figures are saved automatically,
-under **`figs/solution_runs/<run-id>/`**, including PNG/PDF diagnostic and comparison views
-and the analyzer PNG. Matching raw benchmark checkpoints remain under
-`benchmark_outputs/runs/<fingerprint>/`. Reports link to the actual saved figures.
+Each benchmark seed prints native resources and diagnostic values:
 
-Optional reference construction/validation errors are reported with full tracebacks and
-receive no score. The run index counts these failures, while unexpected maintained-solver
-or shared noise/scoring errors stop the run. The reference source files remain unchanged.
-The minimal reference uses a local compatibility guard for the pinned Cirq router's empty
-swap-candidate case, including the five-qubit star at D(5,4). It retains the original
-constructor body and records the adapter source in comparison provenance. See
-[the routing repair](claude/docs/REFERENCE_ROUTING_FIX.md).
-The matched DD/no-DD score plot displays 0–2, with boundary markers for clipped means or
-SD bars and numeric labels for overflowing means. Full scores remain in the report and
-raw data. Comparison reports explain every implementation/DD variant; the same glossary
-is in [the run guide](claude/docs/RUN_GUIDE.md#terminal-table).
+| Column | Meaning |
+| --- | --- |
+| N, n, var | Qubits, target excitation count and DD/no-DD/ideal variant |
+| CZ, mom, build | Native CZ count, circuit moments and recorded construction time |
+| rules, ideal | Device-rule status and exact noiseless Dicke-state fidelity |
+| f | Probability of measuring the target excitation count in Z |
+| Zfloor | Mean Z penalty from finite-shot sampling in the target sector |
+| Zbias | Mean Z penalty from nonuniform probabilities within that sector |
+| X | Mean X-correlator penalty, including finite-shot variance |
+| E[s] | Reciprocal mean-penalty score proxy, defined below |
+| sampled | Official score from the actual drawn Z/X measurement samples |
 
-For narrower runs:
+`E[s] = 1 / (Zfloor + Zbias + X)` assumes at least one Z shot has exactly n excitations.
+It is a proxy: the reciprocal of a mean penalty differs from the mean of reciprocal
+scores. For example, penalties 1 and 3 give a reciprocal mean penalty of 0.5, while the
+mean sampled reciprocal is 2/3. X includes sampling variance even for an ideal circuit.
+`--` means unavailable, `inf` infinite, and `undef` undefined.
 
-```bash
-python -u solution.py --mode benchmark --nmax 6 --seed 42 --shots 2000
-python -u solution.py --mode compare --cases 2,1 6,3 15,7
-python -u solution.py --mode validate --cases 15,7 --dd-strategy sparse
-python -u solution.py --mode diagnose --results path/to/noisy_benchmark_results.json
-```
+Each seed table ends with a **SUM row per variant** for CZ, moments, build time, Zfloor,
+Zbias, X, E[s], and sampled score. These are arithmetic sums of full-precision stored
+values, including each row's score proxy; they are not a recomputed reciprocal of summed
+penalties. IDs, fidelity, survival probability and rule labels are not summed. Build-time
+totals include recorded cached times, rather than measuring the current seed's wall time.
+Missing, undefined and infinite contributors remain explicit. `--no-ideal` omits ideal
+rows and totals. Resuming a checkpoint prints the same summaries without resampling.
 
-`benchmark` includes validation, analysis and diagnostics; `compare` builds a fresh comparison;
-`validate` performs rule checks and exact fidelity through N=16 (structural checks above
-that); `diagnose` uses the supplied dataset's recorded model and preparation settings, or
-generates six state/circuit views without score data when no dataset is supplied.
-Density benchmarks are bounded to N≤10; solution comparison samples noise only through
-N=6 and validates larger circuits. Constructor-only `--resource-sizes` probes may be larger.
-See [RUN_GUIDE.md](claude/docs/RUN_GUIDE.md) for flags, output details and preservation.
+## Saved results and reproducibility
 
-The individual tools also remain available:
+Every invocation creates `benchmark_outputs/solution_runs/<run-id>/` with a run index,
+`run.json`, the complete `terminal-output.log`, stage reports/data, and the local export
+when applicable. Analysis still saves its report and plot and is linked from the run index,
+without printing a separate phase or its full report body. A failed analysis retains the
+completed raw benchmark in the manifest. Failed stages keep partial results and tracebacks.
+Checks also save `checks.json` and structured pytest progress in `check-progress.jsonl`.
+
+Figures are saved under **`figs/solution_runs/<run-id>/`**. Diagnostics and optional
+comparison save PNG/PDF; analysis saves PNG. Bonus validation saves Markdown, JSON and
+CSV evidence for both entry points. Standalone tools retain their existing commands:
 
 ```bash
 python -u -m claude.scripts.noisy_benchmark
 python -u -m claude.scripts.analyze_benchmark_results path/to/noisy_benchmark_results.json
-```
-
-CLI noise/preparation overrides reach every applicable stage and enter the checkpoint
-fingerprint. The individual benchmark module still supports its legacy explicit settings.
-New results go under `benchmark_outputs/runs/<fingerprint>/`. The original historical
-report and PNG survive; the historical raw JSON was lost in the documented
-[regression-test incident](claude/docs/DATA_RECOVERY_2026-10-24.md), and the user chose to retain
-the surviving summaries only. The corrected workflow preserves existing files. Its fingerprint
-covers effective noise/preparation settings, calibration, source,
-original scoring code, and runtime versions. Matching checkpoints resume; incompatible records
-are not reused. A forced fresh run receives a separate repeat directory.
-
-Shot seeds and physical-noise seeds are independent. Paired comparisons use matching finite
-seed observations, and the aggregate uncertainty is estimated across paired seed means.
-Across-case spread describes different cases, not uncertainty of that aggregate. Infinite or
-undefined official scores use explicit JSON statuses and are not silently clipped into finite
-averages. A singleton does not estimate uncertainty. Historical data without fingerprints is
-clearly labeled legacy.
-
-The noise model is approximate. Native single-qubit gates can temporarily change excitation
-number, so detuning inserted between compiled gates can change final leakage. The tutorial
-uses the same detuning ensemble for its plotted distribution and displayed score. Density
-simulation is bounded to ten qubits because its memory grows as 4^N; structural checks support
-larger circuits without constructing huge state vectors.
-The default correlator cutoff of four and the selected benchmark cases are local experimental
-settings; they do not predict the organizer's hidden grading choices.
-
-## Diagnostic notebooks and saved reports
-
-Both working notebooks now save and display a diagnostic bundle. Their examples reuse an
-existing current raw score run when available; they do not silently launch a full benchmark.
-The report marks paired comparisons unavailable when no raw dataset is supplied.
-
-```bash
-python -u -m claude.scripts.diagnose --benchmark       # six cases, five paired seeds, 10,000 shots
 python -u -m claude.scripts.diagnose --results path/to/noisy_benchmark_results.json
-python -u -m claude.scripts.diagnose --qubits 4 --excitations 2
-python -u -m claude.scripts.diagnose --full-benchmark # all 16 cases through N=8
-python -m claude.scripts.check_notebooks             # clean in-memory notebook execution
+python -u -m claude.scripts.compare_solutions --cases 4,2 6,3 --seeds 1,2,3
 ```
 
-Reports are saved under `benchmark_outputs/diagnostics/D<N>_<n>-<fingerprint>/` with
-`report.md`, strict `diagnostics.json`, and three CSV cost tables. All saved figures go into
-the repository's **`figs/`** directory: diagnostic PNG/PDF under
-`figs/diagnostics/D<N>_<n>-<fingerprint>/`, analyzer plots under `figs/benchmarks/<dataset-hash>/`,
-and the surviving original PNG under `figs/historical/`. Reports and notebook displays use the
-recorded figure directory. Tests and isolated notebook checks override it with a temporary root.
-The diagnostic views are:
+Reusable benchmark checkpoints live under `benchmark_outputs/runs/<fingerprint>/`.
+The **benchmark fingerprint** identifies the effective noise/preparation settings,
+calibration maps, participating sources, original scoring code and runtime versions.
+The **calibration hash** identifies the generated qubit/coupler rates and uncertainties;
+`--calibration-seed` controls their reproducible generation. Matching validated checkpoints
+resume. Source or model changes produce a different fingerprint; `--fresh` creates a
+separate repeat. Existing runs, figures and recorded outputs are preserved.
 
-| View | What it diagnoses |
-| --- | --- |
-| Exact state | Fidelity, leakage, global-phase alignment, relative phase and amplitude residuals |
-| Distributions | Hamming weights, conditional Z uniformity, ideal/observed X correlators |
-| Placement and cost | Actual coupler use, readout proxies, single-qubit overhead and idle time |
-| Native schedule | Single-qubit/CZ activity against modeled time, with and without DD |
-| Scaling | Gate count, moments, additive error proxy, runtime and unsupported requests |
-| Noise sensitivity | Detuning-induced population/coherence errors in a fixed physical ensemble |
-| Paired scores | Individual observations, exclusions, paired differences and approximate t intervals |
-| Seed convergence | Dependence on replicate count; uncertainty is unavailable at one replicate |
+Shot seeds and physical-noise seeds are independent. Paired comparisons match replicate
+seeds; aggregate uncertainty comes from paired seed means. Across-case spread describes
+different cases, rather than uncertainty reduced by more shots. One seed cannot estimate
+uncertainty. Undefined/infinite scores remain explicit and are excluded from finite paired
+statistics. Historical data without complete provenance is labeled legacy. The original
+historical report and PNG survive; the original 240 raw records are unavailable and have
+not been reconstructed or relabeled as current data.
 
-Six figures are available without score data; all eight are available with a completed dataset.
-`figs/` is ignored by Git, so generated binaries are not staged by the usual add-all command.
-The figures use an explicit rendering canvas and preserve a live notebook's plotting backend.
-The JSON records all participating source hashes, noise/calibration settings, runtime versions,
-and raw-score dataset identity. CSV coupler endpoints are numeric columns for analysis.
-Intervals are approximate for reciprocal scores and conditional on a single synthetic rate map;
-calibration-rate uncertainties are not propagated. No plot turns a small simulation comparison
-into a hardware-wide DD policy.
+## Physics, diagnostics and export
 
-## Submission
+For n=1, a low-error spanning tree distributes excitation using subtree-size Givens angles.
+The known first split uses one CZ; later splits use two. For n≥2, nearest-neighbor
+split-and-cyclic-shift preparation follows [Bärtschi and Eidenbenz](https://arxiv.org/abs/1904.07358).
+The five-CZ flagged gate is valid on the reachable subspace. Complementary states use
+bitwise X. The default optimized constructor combines a reachable first Givens/MUX pair
+into four CZ gates and can use an exact five-CZ square for D(4,2). Closed-form angles,
+derivations and limiting cases remain in the canonical module. Path/routing fallbacks
+remain available. `--construction analytic` retains the previous constructor and older
+recorded datasets retain their original preparation when reanalyzed.
+
+Supported circuits obey the **1,750-moment inclusive limit**. Unsupported inputs raise
+`NotImplementedError`; a heuristic search failure is not proof that no legal path exists.
+The independent validator checks gates, connectivity, depth, exact amplitudes and relative
+phases. Extra N=16–20 cases remain structural stress tests. Teammate implementations under
+`ryon/` and `toby/` and the local reference-routing adapter remain available for comparison.
+
+Density simulation is bounded to ten qubits because memory grows as 4^N. Comparison samples
+noise only through N=6 and checks larger states structurally/exactly. Constructor-only
+resource probes can be larger. The approximate noise model includes depolarizing errors,
+T1/Tphi decay, readout and quasi-static detuning between native moments. Native single-qubit
+gates can temporarily change excitation number, so detuning can affect final leakage.
+Local correlator cutoffs and cases do not establish hidden grading choices or hardware-wide
+DD performance. Sparse DD is optional and can add emitted moments; depth is checked afterward.
+
+Diagnostics save exact-state, distribution/correlator, placement/cost, native schedule,
+resource scaling, detuning sensitivity, paired-score and seed-convergence views. Six views
+are available without raw score data; all eight require a completed dataset. The matched
+score plot displays 0–2 with overflow markers while full values remain in tables/JSON.
+Intervals are approximate and conditional on one synthetic calibration; calibration-rate
+uncertainties are not propagated. Report generation is independent of private documentation.
 
 ```bash
 python -m claude.scripts.build_submission submission_outputs/submission.py
 ```
 
-Use the [submission checklist](claude/docs/SUBMISSION_CHECKLIST.md) and review the original
-challenge and current upload form for all required supporting material. Upload by hand
-after reviewing the form. Nothing commits, pushes, publishes, or submits automatically.
-
-## Teammate integration and repeatable local runs
-
-Work continues on `main`, combining the reviewed workflow with the latest teammate changes
-from upstream main. The upstream files under `ryon/` and `toby/` remain comparison references;
-the tested canonical implementation remains `claude/dicke_prep.py`. See the
-[integration status](claude/docs/MAIN_INTEGRATION.md) and
-[run and preservation guide](claude/docs/RUN_GUIDE.md) for local Git checkpoint commands,
-teammate comparisons, and artifact retention.
-
-```bash
-python -u -m claude.scripts.diagnose --benchmark
-python -u -m claude.scripts.compare_solutions
-```
-
-The first command saves the complete eight-view report and PNG/PDF under figs/diagnostics/.
-The second saves common-model comparisons, raw score/status records, source/circuit snapshots
-and PNG/PDF under figs/comparisons/. Comparison invocations use distinct directories.
-Tutorial exploration plots also save automatically through save_and_show under figs/notebooks/.
-Use that helper for additional matplotlib plots you write. Generated results are local and
-Git-ignored; the guide includes a separate artifact archive command. Sparse DD is optional and
-can add emitted moments when filling empty slots; the depth cap is checked afterward.
-
-Both benchmark and comparison runs print aligned terminal tables with:
-`N n var CZ mom build rules ideal f Zfloor Zbias X E[s] sampled`, grouped by seed.
-The columns use the actual native circuits, ideal validation and modeled measurement probabilities.
-`Zfloor` and `X` include finite-shot sampling variance. The requested `E[s]` heading denotes an
-inverse-mean-penalty proxy, not the mean sampled reciprocal score; the console and JSON record
-this definition. See [the derivation and column definitions](claude/docs/TERMINAL_TABLE.md).
+The export includes both required entry points and imports outside the repository. Unified
+runs embed the selected preparation settings; local noise/shot settings do not alter the
+exported constructor. Review the original challenge and the current upload form for all
+required supporting material and upload by hand. The workflow performs local CPU simulation;
+it does not submit hardware jobs, commit, push, or publish automatically.

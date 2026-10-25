@@ -1,48 +1,30 @@
-"""Verify generated/paired notebooks, syntax, outputs, and the protected challenge."""
+"""Verify maintained Python syntax and the protected original challenge."""
 
 from __future__ import annotations
 
 import hashlib
-import runpy
 from pathlib import Path
-
-import jupytext
-import nbformat
 
 REPO = Path(__file__).resolve().parents[2]
 CHALLENGE_SHA256 = "ee1d7d53f64bde2e5f8da114d0bc198ea2666e40cc65ea4eadca2f97c062acd1"
 
 
 def main() -> None:
-    """Fail on protected-file drift, invalid/stale notebooks, or committed outputs."""
-    if (
-        hashlib.sha256((REPO / "Google Quantum AI Challenge.ipynb").read_bytes()).hexdigest()
-        != CHALLENGE_SHA256
-    ):
-        raise ValueError("protected original challenge notebook changed")
-    notebook = jupytext.read(REPO / "solution.ipynb")
-    mirror = jupytext.read(REPO / "solution.py")
-    if [c.source for c in notebook.cells if c.cell_type == "code"] != [
-        c.source for c in mirror.cells if c.cell_type == "code"
-    ]:
-        raise ValueError("working solution notebook and mirror disagree")
-    generated = runpy.run_path(str(REPO / "claude/scripts/build_tutorial.py"))["CELLS"]
-    tutorial = nbformat.read(REPO / "claude/tutorial/Dicke_Tutorial.ipynb", as_version=4)
-    if len(generated) != len(tutorial.cells) or any(
-        src != cell.source for (_, src), cell in zip(generated, tutorial.cells)
-    ):
-        raise ValueError("tutorial is stale; regenerate it from build_tutorial.py")
-    for path in (REPO / "solution.ipynb", REPO / "claude/tutorial/Dicke_Tutorial.ipynb"):
-        nb = nbformat.read(path, as_version=4)
-        nbformat.validate(nb)
-        for index, cell in enumerate(nb.cells):
-            if cell.cell_type == "code":
-                compile(cell.source, f"{path.name}:cell-{index}", "exec")
-                if cell.outputs or cell.execution_count is not None:
-                    raise ValueError(
-                        f"working notebook has saved output: {path.name}, cell {index}"
-                    )
-    print("[done] original protected; working notebooks valid, synchronized, output-free")
+    """Raise on original-file drift or Python syntax errors; notebooks are optional.
+
+    Reads the original challenge and maintained Python sources beneath REPO.
+    Private documentation is excluded. No files are modified or executed.
+    Missing files raise OSError; changed original bytes raise ValueError and
+    invalid Python raises SyntaxError with its filename and line number.
+    """
+    actual = hashlib.sha256((REPO / "Google Quantum AI Challenge.ipynb").read_bytes()).hexdigest()
+    if actual != CHALLENGE_SHA256:
+        raise ValueError(f"protected original challenge notebook changed: {actual}")
+    sources = [REPO / "solution.py", *sorted((REPO / "claude").rglob("*.py"))]
+    sources = [path for path in sources if ".docs" not in path.parts]
+    for path in sources:
+        compile(path.read_text(), str(path), "exec")
+    print(f"[done] original protected; {len(sources)} Python sources compile")
 
 
 if __name__ == "__main__":

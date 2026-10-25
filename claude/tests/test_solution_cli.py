@@ -59,10 +59,20 @@ def test_default_is_full_and_covers_all_stages_and_bonus_cases() -> None:
         "submission",
         "bonus_validation",
         "benchmark",
-        "analysis",
         "diagnostics",
-        "comparison",
     ]
+    assert not config.comparison
+
+
+def test_comparison_is_explicit_and_flags_are_mutually_exclusive() -> None:
+    from claude.scripts.run_solution import _stages, parse_args
+
+    assert _stages(parse_args(["--comparison"]))[-1] == "comparison"
+    assert _stages(parse_args(["--mode", "compare"])) == ["comparison"]
+    assert "comparison" not in _stages(parse_args(["--skip-comparison"]))
+    with pytest.raises(SystemExit) as exc:
+        parse_args(["--comparison", "--skip-comparison"])
+    assert exc.value.code == 2
 
 
 def test_focused_runs_skip_broad_suites_unless_requested() -> None:
@@ -228,7 +238,9 @@ def test_effective_model_and_preparation_changes_cannot_reuse_a_checkpoint(tmp_p
     assert not (tmp_path / "runs").exists()
 
 
-def test_one_command_runs_every_stage_and_restores_options(tmp_path: Path) -> None:
+def test_one_command_runs_every_stage_and_restores_options(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
     from claude.scripts import noisy_benchmark as benchmark
     from claude.scripts.compare_solutions import CALIBRATION_SEED
     from claude.scripts.run_solution import main
@@ -260,6 +272,7 @@ def test_one_command_runs_every_stage_and_restores_options(tmp_path: Path) -> No
         "--detuning-levels",
         "0",
         "--no-upstream",
+        "--comparison",
         "--no-ideal",
         "--output-dir",
         str(tmp_path / "data"),
@@ -267,6 +280,9 @@ def test_one_command_runs_every_stage_and_restores_options(tmp_path: Path) -> No
         str(tmp_path / "figs"),
     ]
     assert main(args) == 0
+    console = capsys.readouterr()
+    assert "# Noisy benchmark report" not in console.out
+    assert "] analysis" not in console.out
     manifests = list((tmp_path / "data" / "solution_runs").glob("*/run.json"))
     assert len(manifests) == 1
     manifest = json.loads(manifests[0].read_text())
@@ -297,7 +313,8 @@ def test_one_command_runs_every_stage_and_restores_options(tmp_path: Path) -> No
         inspect.signature(exported["create_dicke_state"]).parameters["config"].default
         == exported["CONFIG"]
     )
-    assert (manifests[0].parent / "terminal-output.log").stat().st_size > 0
+    log = (manifests[0].parent / "terminal-output.log").read_text()
+    assert "# Noisy benchmark report" in log
     assert before == (
         benchmark.SHOTS,
         benchmark.BENCHMARK_CASES,
@@ -314,6 +331,37 @@ def test_one_command_runs_every_stage_and_restores_options(tmp_path: Path) -> No
     assert resumed.preparation.dd_strategy == "sparse"
     assert resumed.cases == ((2, 1),) and resumed.seeds == (7,)
     assert resumed.diagnostic_case == (2, 1)
+
+
+def test_analysis_is_quiet_and_benchmark_survives_analysis_failure(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    from claude.scripts import run_solution
+
+    raw = tmp_path / "raw.json"
+    raw.write_text("{}")
+    monkeypatch.setattr(run_solution.benchmark, "main", lambda: raw)
+
+    def fail_analysis(*args: object) -> None:
+        print("private analysis report body")
+        raise ValueError("deliberate analysis failure")
+
+    monkeypatch.setattr(run_solution.analyzer, "main", fail_analysis)
+    assert (
+        run_solution.main(
+            ["--preset", "quick", "--cases", "2,1", "--output-dir", str(tmp_path / "data")]
+        )
+        == 1
+    )
+    console = capsys.readouterr()
+    manifest_path = next((tmp_path / "data/solution_runs").glob("*/run.json"))
+    manifest = json.loads(manifest_path.read_text())
+    assert manifest["outputs"]["benchmark"] == str(raw)
+    assert "analysis" not in manifest["stages"]
+    assert "private analysis report body" not in console.out
+    assert "deliberate analysis failure" in console.err
+    log = (manifest_path.parent / "terminal-output.log").read_text()
+    assert "private analysis report body" in log and "Traceback" in log
 
 
 def test_failed_run_saves_traceback_and_restores_settings(

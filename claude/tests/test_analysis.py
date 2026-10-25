@@ -1,91 +1,13 @@
-"""Test reachable tutorial controls and consistency of the physical experiment."""
+"""Analysis regressions independent of notebooks and private documentation."""
 
 from __future__ import annotations
 
-import ast
 import json
-import math
-import runpy
-import warnings
 from pathlib import Path
 
-import cirq
-import matplotlib
-import numpy as np
 import pytest
 
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-
-from claude import dicke_prep as dp
 from claude.scripts import noisy_benchmark as benchmark
-from claude.scripts.challenge_calibration import make_challenge_calibration
-from claude.validation import dicke_vector
-
-REPO = Path(__file__).resolve().parents[2]
-
-
-def tutorial_functions() -> tuple[dict, dict]:
-    cells = runpy.run_path(str(REPO / "claude/scripts/build_tutorial.py"))["CELLS"]
-    controls = {}
-
-    def interactive(fn, **kwargs):
-        controls[fn.__name__] = kwargs
-
-    namespace = dict(
-        cirq=cirq,
-        np=np,
-        math=math,
-        dp=dp,
-        nbm=benchmark,
-        plt=plt,
-        dicke_vector=dicke_vector,
-        CAL=make_challenge_calibration(),
-        FAST=dp.PrepConfig(beam_width=300, search_time_s=2),
-        interactive=interactive,
-    )
-    for kind, source in cells:
-        if kind != "code":
-            continue
-        tree = ast.parse(source)
-        selected = [node for node in tree.body if isinstance(node, ast.FunctionDef)]
-        if any(
-            getattr(node, "name", "")
-            in ("line_program", "trace_states", "show_trace", "validate_simulated_solution")
-            for node in selected
-        ):
-            # Definitions and their associated widget registration, without rendering.
-            tree.body = [
-                node for node in tree.body if not isinstance(node, (ast.Import, ast.ImportFrom))
-            ]
-            exec(compile(tree, "tutorial control definitions", "exec"), namespace)
-    return namespace, controls
-
-
-def test_trace_control_can_reach_every_allowed_final_state() -> None:
-    namespace, controls = tutorial_functions()
-    for n in range(2, 8):
-        for k in range(1, n):
-            _, steps = namespace["line_program"](n, k)
-            assert controls["show_trace"]["step"][1] >= len(steps) - 1
-
-
-def test_validation_control_handles_its_full_allowed_range() -> None:
-    namespace, _ = tutorial_functions()
-    namespace["validate_simulated_solution"](2, 6)
-
-
-def test_detuning_probabilities_can_change_final_weight_leakage() -> None:
-    cal = make_challenge_calibration()
-    clean = tuple({key: (0.0, 0.0) for key in mapping} for mapping in cal)
-    circuit, qubits = dp.create_dicke_state(
-        4, 2, *clean, config=dp.PrepConfig(use_dynamical_decoupling=False)
-    )
-    order = sorted(qubits)
-    cfg = benchmark.NoiseConfig(t1_us=1e12, tphi_us=1e12, detuning_khz=50, noise_seed=2)
-    pz, _ = benchmark.simulate_probabilities(circuit, order, clean, cfg)
-    leakage = 1 - sum(probability for i, probability in enumerate(pz) if i.bit_count() == 2)
-    assert leakage > 1e-5
 
 
 def test_singleton_analysis_plot_and_nonfinite_statuses(tmp_path: Path) -> None:
@@ -105,18 +27,6 @@ def test_singleton_analysis_plot_and_nonfinite_statuses(tmp_path: Path) -> None:
     assert "undefined" in report.lower()
     analysis.write_insight_plot(data, tmp_path / "plot.png")
     assert (tmp_path / "plot.png").stat().st_size > 0
-
-
-def test_mux_explanation_retains_complex_matrix_dtype() -> None:
-    cells = runpy.run_path(str(REPO / "claude/scripts/build_tutorial.py"))["CELLS"]
-    namespace = dict(cirq=cirq, np=np, math=math, dp=dp, bits=lambda j, n: format(j, f"0{n}b"))
-    source = next(src for kind, src in cells if kind == "code" and "def mux_table" in src)
-    tree = ast.parse(source)
-    tree.body = [node for node in tree.body if isinstance(node, ast.FunctionDef)]
-    exec(compile(tree, "mux explanation", "exec"), namespace)
-    with warnings.catch_warnings():
-        warnings.simplefilter("error", np.exceptions.ComplexWarning)
-        namespace["mux_table"](0.9)
 
 
 def test_analyzer_saves_figure_under_configured_figs_root(tmp_path: Path) -> None:

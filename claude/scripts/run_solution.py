@@ -12,16 +12,18 @@ import platform
 import runpy
 import subprocess
 import sys
+import threading
 import time
 import traceback
 import uuid
-from contextlib import contextmanager, redirect_stderr, redirect_stdout
+from contextlib import ExitStack, contextmanager, redirect_stderr, redirect_stdout
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterator, Sequence, TextIO
 
 import cirq
+from tqdm import tqdm
 
 from claude import dicke_prep as dp
 from claude.output_paths import figure_root
@@ -34,6 +36,8 @@ from claude.scripts.diagnose import SCORE_CASES, build_report, resolve_report_se
 from claude.validation import MAX_EXACT_QUBITS, validate_preparation
 
 REPO = Path(__file__).resolve().parents[2]
+CHECK_POLL_SECONDS = 0.05
+CHECK_STOP_SECONDS = 5.0
 FULL_CASES = tuple((n, k) for n in range(2, 9) for k in range(1, n))
 BONUS_CASES = tuple((n, k) for n in range(2, 16) for k in range(n + 1))
 PRESETS = {
@@ -196,8 +200,12 @@ def parse_args(argv: Sequence[str] | None = None) -> RunConfig:
         action="store_true",
         help="compare only the three maintained hybrid variants",
     )
-    parser.add_argument(
-        "--skip-comparison", action="store_true", help="skip solution comparison in all mode"
+    comparison = parser.add_mutually_exclusive_group()
+    comparison.add_argument(
+        "--comparison", action="store_true", help="include solution comparison in all mode"
+    )
+    comparison.add_argument(
+        "--skip-comparison", action="store_true", help="omit comparison (the default in all mode)"
     )
     parser.add_argument(
         "--results",
@@ -213,7 +221,7 @@ def parse_args(argv: Sequence[str] | None = None) -> RunConfig:
         "--check",
         action=argparse.BooleanOptionalAction,
         default=None,
-        help="software and both notebook checks; on for an unfocused full all-mode run",
+        help="Python software checks; on for an unfocused full all-mode run",
     )
     parser.add_argument(
         "--bonus-check",
@@ -374,7 +382,7 @@ def parse_args(argv: Sequence[str] | None = None) -> RunConfig:
         fresh=args.fresh,
         ideal=not args.no_ideal,
         upstream=not args.no_upstream,
-        comparison=not args.skip_comparison,
+        comparison=args.comparison,
         check=check,
         bonus_check=bonus_check,
         bonus_cases=bonus_cases,
@@ -389,7 +397,7 @@ def _stages(config: RunConfig) -> list[str]:
     if config.bonus_check:
         stages.extend(("submission", "bonus_validation"))
     if config.mode in {"all", "benchmark"}:
-        stages.extend(("benchmark", "analysis", "diagnostics"))
+        stages.extend(("benchmark", "diagnostics"))
     if config.mode == "diagnose":
         stages.append("diagnostics")
     if config.mode == "compare" or (config.mode == "all" and config.comparison):
@@ -447,26 +455,167 @@ class _Tee:
         return False
 
 
-def _checks(root: Path) -> Path:
-    commands = [
-        [sys.executable, "-m", "ruff", "check", "."],
-        [sys.executable, "-m", "ruff", "format", "--check", "."],
-        [sys.executable, "-m", "claude.scripts.check_artifacts"],
-        [sys.executable, "-m", "pytest", "-v"],
-        [sys.executable, "-m", "claude.scripts.check_notebooks"],
-    ]
-    for command in commands:
-        print(f"[check] {' '.join(command)}", flush=True)
-        with subprocess.Popen(
-            command, cwd=REPO, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
-        ) as process:
-            assert process.stdout is not None
-            for line in process.stdout:
-                print(line, end="", flush=True)
-            if process.wait() != 0:
-                raise RuntimeError(f"quality check failed: {' '.join(command)}")
+def _checks(
+    root: Path,
+    *,
+    commands: Sequence[tuple[str, list[str]]] | None = None,
+    console: TextIO | None = None,
+    log: TextIO | None = None,
+) -> Path:
+    """Run gates with compact terminal progress and complete, separately saved output."""
+    events_path = root / "check-progress.jsonl"
+    events_path.write_text("")
+    commands = (
+        commands
+        if commands is not None
+        else [
+            ("lint", [sys.executable, "-u", "-m", "claude.scripts.check_quality", "lint"]),
+            ("format", [sys.executable, "-u", "-m", "claude.scripts.check_quality", "format"]),
+            ("artifacts", [sys.executable, "-u", "-m", "claude.scripts.check_artifacts"]),
+            (
+                "pytest",
+                [
+                    sys.executable,
+                    "-u",
+                    "-m",
+                    "claude.scripts.check_quality",
+                    "pytest",
+                    "--progress-file",
+                    str(events_path),
+                    "--",
+                    "claude/tests",
+                    "-v",
+                ],
+            ),
+        ]
+    )
+    console = console if console is not None else sys.stderr
+    preliminary = sum(name != "pytest" for name, _ in commands)
+    state = {
+        "status": "running",
+        "commands": [cmd for _, cmd in commands],
+        "completed_checks": 0,
+        "total_checks": None,
+        "tests_completed": 0,
+        "progress_events": str(events_path),
+    }
     path = root / "checks.json"
-    benchmark.atomic_write_json(path, {"status": "passed", "commands": commands})
+    with ExitStack() as stack:
+        log = (
+            log if log is not None else stack.enter_context((root / "checks-output.log").open("w"))
+        )
+        events = stack.enter_context(events_path.open())
+        bar = tqdm(
+            total=None,
+            desc="[checks]",
+            unit="check",
+            file=console,
+            dynamic_ncols=True,
+            disable=not console.isatty(),
+        )
+        pending = ""
+        interrupted = False
+
+        def consume_progress() -> None:
+            nonlocal pending, interrupted
+            pending += events.read()
+            while "\n" in pending:
+                line, pending = pending.split("\n", 1)
+                if not line:
+                    continue
+                event = json.loads(line)
+                if event["event"] == "collected" and not event["errors"]:
+                    state["total_checks"] = preliminary + event["total"]
+                    bar.total = state["total_checks"]
+                elif event["event"] == "completed":
+                    completed = event["completed"]
+                    bar.update(completed - state["tests_completed"])
+                    state["tests_completed"] = completed
+                    state["completed_checks"] = preliminary + completed
+                elif event["event"] == "interrupted":
+                    interrupted = event["keyboard"]
+                bar.refresh()
+
+        try:
+            for name, command in commands:
+                bar.set_description(f"[checks] {name}")
+                if bar.disable:
+                    print(f"[check] {name}: running", file=console, flush=True)
+                log.write(f"[check] {' '.join(command)}\n")
+                log.flush()
+                lines: list[str] = []
+                read_errors: list[Exception] = []
+                with subprocess.Popen(
+                    command,
+                    cwd=REPO,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    bufsize=1,
+                ) as process:
+                    assert process.stdout is not None
+
+                    def drain() -> None:
+                        try:
+                            for line in process.stdout:
+                                lines.append(line)
+                                log.write(line)
+                                log.flush()
+                        except Exception as exc:
+                            read_errors.append(exc)
+
+                    reader = threading.Thread(target=drain, daemon=True)
+                    reader.start()
+                    try:
+                        while process.poll() is None:
+                            consume_progress()
+                            if read_errors:
+                                raise RuntimeError("could not save check output") from read_errors[
+                                    0
+                                ]
+                            time.sleep(CHECK_POLL_SECONDS)
+                        reader.join()
+                        consume_progress()
+                        if read_errors:
+                            raise RuntimeError("could not save check output") from read_errors[0]
+                        if interrupted:
+                            raise KeyboardInterrupt()
+                        if process.returncode:
+                            raise RuntimeError(f"quality check failed: {name}: {' '.join(command)}")
+                    except BaseException:
+                        if process.poll() is None:
+                            process.terminate()
+                            try:
+                                process.wait(timeout=CHECK_STOP_SECONDS)
+                            except subprocess.TimeoutExpired:
+                                process.kill()
+                                process.wait()
+                        reader.join()
+                        consume_progress()
+                        bar.clear()
+                        console.write("".join(lines))
+                        console.flush()
+                        raise
+                if name != "pytest":
+                    state["completed_checks"] += 1
+                    bar.update(1)
+                elif (
+                    state["total_checks"] is None
+                    or state["completed_checks"] != state["total_checks"]
+                ):
+                    raise RuntimeError("pytest progress did not account for all collected tests")
+                if bar.disable:
+                    print(f"[check] {name}: passed", file=console, flush=True)
+            state["status"] = "passed"
+        except BaseException as exc:
+            state["status"] = "interrupted" if isinstance(exc, KeyboardInterrupt) else "failed"
+            state["error"] = f"{type(exc).__name__}: {exc}"
+            bar.set_description(f"[checks] {state['status']}")
+            raise
+        finally:
+            bar.close()
+            benchmark.atomic_write_json(path, state)
+    print(f"[check] Passed; {state['tests_completed']} tests completed", file=console, flush=True)
     return path
 
 
@@ -699,7 +848,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             f"[setup] Preset {config.preset}; {config.noise.shots} shots; {config.noise.n_realizations} detuning realizations; DD={config.preparation.dd_strategy}; construction={config.preparation.construction}"
         )
         print(
-            f"[setup] {len(config.cases)} benchmark cases; X cutoff={config.noise.max_correlator_size}; software/notebook checks={config.check}; bonus cases={len(config.bonus_cases)}",
+            f"[setup] {len(config.cases)} benchmark cases; X cutoff={config.noise.max_correlator_size}; software checks={config.check}; bonus cases={len(config.bonus_cases)}",
             flush=True,
         )
         if config.results is not None:
@@ -710,7 +859,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             for index, stage in enumerate(stages, 1):
                 print(f"\n[{index}/{len(stages)}] {stage}", flush=True)
                 if stage == "checks":
-                    path = _checks(root)
+                    path = _checks(root, console=sys.stderr.console, log=log)
                 elif stage == "validation":
                     path = _validate(config, root / "validation.json")
                 elif stage == "bonus_validation":
@@ -722,8 +871,11 @@ def main(argv: Sequence[str] | None = None) -> int:
                     )
                 elif stage == "benchmark":
                     path = benchmark.main()
-                elif stage == "analysis":
-                    path = analyzer.main(Path(manifest["outputs"]["benchmark"]), root / "analysis")
+                    manifest["outputs"][stage] = str(path)
+                    benchmark.atomic_write_json(root / "run.json", manifest)
+                    with redirect_stdout(log), redirect_stderr(log):
+                        analysis_path = analyzer.main(path, root / "analysis")
+                    manifest["outputs"]["analysis"] = str(analysis_path)
                 elif stage == "diagnostics":
                     data_path = (
                         Path(manifest["outputs"]["benchmark"])
@@ -767,6 +919,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                     path = build_submission(
                         root / "submission.py", configuration=config.preparation
                     )
+                    print(f"[saved] Local Python export: {path}", flush=True)
                 manifest["outputs"][stage] = str(path)
                 benchmark.atomic_write_json(root / "run.json", manifest)
             manifest["status"] = "complete"

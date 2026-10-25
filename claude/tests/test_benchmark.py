@@ -12,6 +12,7 @@ import cirq_google
 import numpy as np
 import pytest
 
+from claude import dicke_prep as dp
 from claude.scripts import challenge_calibration as calibration
 from claude.scripts import noisy_benchmark as benchmark
 
@@ -206,3 +207,66 @@ def test_rng_domains_are_distinct_even_for_equal_numeric_seeds() -> None:
     noise = benchmark.make_rng(7, "noise").random(16)
     np.testing.assert_array_equal(shots, benchmark.make_rng(7, "shots").random(16))
     assert not np.allclose(shots, noise, atol=1e-12, rtol=1e-10)
+
+
+def test_detuning_probabilities_can_change_final_weight_leakage() -> None:
+    cal = calibration.make_challenge_calibration()
+    clean = tuple({key: (0.0, 0.0) for key in mapping} for mapping in cal)
+    circuit, qubits = dp.create_dicke_state(
+        4, 2, *clean, config=dp.PrepConfig(use_dynamical_decoupling=False)
+    )
+    order = sorted(qubits)
+    cfg = benchmark.NoiseConfig(t1_us=1e12, tphi_us=1e12, detuning_khz=50, noise_seed=2)
+    pz, _ = benchmark.simulate_probabilities(circuit, order, clean, cfg)
+    leakage = 1 - sum(probability for i, probability in enumerate(pz) if i.bit_count() == 2)
+    assert leakage > 1e-5
+
+
+@pytest.mark.parametrize("ideal", [True, False])
+def test_seed_totals_cover_fresh_mixed_and_cached_rows_without_extra_sampling(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str], ideal: bool
+) -> None:
+    monkeypatch.setattr(benchmark, "OUTPUT_DIR", tmp_path)
+    monkeypatch.setattr(benchmark, "BENCHMARK_CASES", ((2, 1), (3, 1)))
+    monkeypatch.setattr(benchmark, "BENCHMARK_SEEDS", (1, 2))
+    monkeypatch.setattr(benchmark, "RUN_IDEAL_BASELINE", ideal)
+    monkeypatch.setattr(benchmark, "SHOTS", 37)
+    modes = ("dd", "no-dd", "ideal") if ideal else ("dd", "no-dd")
+    path = benchmark.main()
+    first = capsys.readouterr().out
+    totals = [line.split() for line in first.splitlines() if line.startswith("SUM")]
+    assert [fields[2] for fields in totals] == list(modes) * 2
+    assert all(fields[3:5] == ["4", "10"] for fields in totals)
+    assert "Benchmark fingerprint:" in first and "calibration hash" in first
+
+    checkpoint_path = path.with_name("noisy_benchmark_checkpoint.json")
+    checkpoint = json.loads(checkpoint_path.read_text())
+    del checkpoint["results"][benchmark.result_key(2, 1, 1, "dd")]
+    benchmark.atomic_write_json(checkpoint_path, checkpoint)
+    seen = []
+    original = benchmark.sample_bits
+
+    def sample(*args: object, **kwargs: object) -> np.ndarray:
+        seen.append(True)
+        return original(*args, **kwargs)
+
+    monkeypatch.setattr(benchmark, "sample_bits", sample)
+    benchmark.main()
+    mixed = [
+        line.split() for line in capsys.readouterr().out.splitlines() if line.startswith("SUM")
+    ]
+    assert len(seen) == 2  # Z and X for the one missing record only.
+    assert [fields[:5] + fields[6:] for fields in mixed] == [
+        fields[:5] + fields[6:] for fields in totals
+    ]
+
+    def forbid(*args: object, **kwargs: object) -> None:
+        raise AssertionError("cached totals must not resimulate or sample")
+
+    monkeypatch.setattr(benchmark, "simulate_probabilities", forbid)
+    monkeypatch.setattr(benchmark, "score_instance", forbid)
+    benchmark.main()
+    cached = [
+        line.split() for line in capsys.readouterr().out.splitlines() if line.startswith("SUM")
+    ]
+    assert cached == mixed

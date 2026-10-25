@@ -2,9 +2,12 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import pytest
+
+os.environ.setdefault("MPLBACKEND", "Agg")
 
 
 @pytest.fixture(autouse=True)
