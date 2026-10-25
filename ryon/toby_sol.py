@@ -255,31 +255,27 @@ def best_path(adj, node, weights, deadline, bias=lambda qs: 0.0):
     return list(min(beam, key=lambda t: t[0] + bias(t[1]))[1])
 
 
-def best_plaquette(adj, node, bias=lambda qs: 0.0):
-    #cheapest 2x2 square for the 5-cz d(4,2) circuit, trying all 8 labellings
-    counts = collections.Counter(tuple(sorted(e)) for e in d42_seq)
+def best_patch(adj, node, cells, seq, bias=lambda qs: 0.0):
+    #cheapest placement of a small grid patch, over every position and all 8 rotations/reflections
+    counts = collections.Counter(tuple(sorted(e)) for e in seq)
+    syms = [(a, 0, 0, b) for a in (1, -1) for b in (1, -1)] + [(0, a, b, 0) for a in (1, -1) for b in (1, -1)]
     best = None
     for q in node:
-        sq = [q, cirq.GridQubit(q.row, q.col + 1), cirq.GridQubit(q.row + 1, q.col + 1), cirq.GridQubit(q.row + 1, q.col)]
-        if not all(x in node for x in sq) or not all(sq[(i + 1) % 4] in adj[sq[i]] for i in range(4)):
-            continue
-        for rot in range(4):
-            for rev in (False, True):
-                cyc = [sq[(rot + (-i if rev else i)) % 4] for i in range(4)]
-                lab = [cyc[0], cyc[1], cyc[3], cyc[2]]
-                cost = (sum(node[x] for x in lab) + bias(lab)
-                        + sum(c * adj[lab[a]][lab[b]] for (a, b), c in counts.items()))
-                if best is None or cost < best[0]:
-                    best = (cost, lab)
+        for a, b, c, d in syms:
+            lab = [cirq.GridQubit(q.row + a * r + b * s, q.col + c * r + d * s) for r, s in cells]
+            if not all(x in node for x in lab) or any(lab[j] not in adj[lab[i]] for i, j in counts):
+                continue
+            cost = (sum(node[x] for x in lab) + bias(lab)
+                    + sum(n * adj[lab[i]][lab[j]] for (i, j), n in counts.items()))
+            if best is None or cost < best[0]:
+                best = (cost, lab)
     return None if best is None else best[1]
 
 
-def d42_ops(lab):
-    th, i, ops = d42_angles, 0, []
-    for q in lab:
-        ops.append(cirq.ry(th[i]).on(q))
-        i += 1
-    for a, b in d42_seq:
+def patch_ops(lab, seq, th):
+    ops = [cirq.ry(t).on(q) for q, t in zip(lab, th)]
+    i = len(lab)
+    for a, b in seq:
         ops += [cirq.CZ(lab[a], lab[b]), cirq.ry(th[i]).on(lab[a]), cirq.ry(th[i + 1]).on(lab[b])]
         i += 2
     return ops
@@ -379,14 +375,15 @@ def create_dicke_state(
 
     skew = {q: rate(one_errors[q]) - rate(zero_errors[q]) for q in node}
     bias = lambda qs: readout_bias(qs, n_q, n, skew)
-    plaquette = best_plaquette(adj, node, bias) if (n_q, k) == (4, 2) else None
+    patch = patches.get((n_q, k))
+    lab = best_patch(adj, node, patch[0], patch[1], bias) if patch else None
     if k == 1:
         root, children = best_tree(adj, node, n_q, deadline, bias)
         qubits = [root] + [c for v in list(children) for c in children[v]]
         ops = w_ops(root, children)
-    elif plaquette is not None:
-        qubits = plaquette
-        ops = d42_ops(qubits)
+    elif lab is not None:
+        qubits = lab
+        ops = patch_ops(lab, patch[1], patch[2])
     else:
         steps, weights = line_plan(n_q, k)
         qubits = best_path(adj, node, weights, deadline, bias)
@@ -412,8 +409,6 @@ def create_dicke_state_adaptive(num_qubits: int, num_excitations: int) -> tuple[
 
 #ry angles fitted offline (research/toby_offline/build_data.py), one list per circuit
 #each list is the initial ry layer, then one ry per qubit after every cz
-d42_seq = ((3, 2), (2, 0), (0, 1), (2, 0), (1, 3))
-d42_angles = (1.107148713763576, -1.570796315714004, -2.225390530798368, -1.920221412087157, 2.60229140661367, 3.561182602987168, -1.570796336225327, 1.107148723429225, 1.570796336908662, 3.141592660823991, 3.141592671341913, -4.712389007131684, 1.570796327634962, -3.141592649593266,)
 block_angles = {
     (3, 2): (5.667705579006681, -1.141944962210588e-09, -7.853981634511448, 0.6154797281729056, 1.570796325786793, 2.526112951247368, 7.238501926405615, -6.283185307719148, -7.853981663165608, -1.570796327799044, -4.712388981113577,),
     (4, 2): (5.497787143055775, 4.997205196106064e-10, -7.853981633740823, 0.7853981641238115, 1.570796327083304, 2.61799384594876, 7.330382859318225, -6.283185306944421, -7.853981616578396, -1.57079632644832, -4.712388980108769,),
@@ -496,4 +491,14 @@ block_angles = {
     (18, 2): (-1.91063323730746, -3.141592705908477, -1.570796340751256, 1.230959416282333, 1.570796310936586, -2.903651530709671, 1.332855202047696, -3.141592604237624, -1.570796327100192, -1.570796311032385, 1.570796325103631,),
     (18, 3): (-1.150261985413888, -3.141592447991819, -1.570795982871973, -1.570793174411707, -1.150261985414001, 4.712388743092869, -0.339836935632588, -1.910633236909379, -2.269964118691383e-07, -1.570796304353879, 4.712389084543951, 1.570796993165668, 1.451825769390106, -1.570796361825229, 3.141592661447751, -3.260563210950147, -0.1189705574074185, 1.57079696645878, -3.141592821313247, -1.451825769439916, -3.14159577219552, -1.570796018870773,),
     (19, 2): (-1.901218972416652, -3.141592717177287, -1.570796341089012, 1.240373681173161, 1.570796307688766, -2.91011528996254, 1.339318962067403, -3.14159259352945, -1.570796327890909, -1.57079631063114, 1.570796325051486,),
+}
+
+
+#small (N, k) circuits on 2d grid patches, fitted offline with synth.py:
+#(cells as (row, col) offsets, cz sequence on cell indices, ry angles in patch_ops order)
+patches = {
+    (4, 2): (((0, 0), (0, 1), (1, 0), (1, 1)), ((3, 2), (2, 0), (0, 1), (2, 0), (1, 3)),
+             (1.107148713763576, -1.570796315714004, -2.225390530798368, -1.920221412087157, 2.60229140661367, 3.561182602987168, -1.570796336225327, 1.107148723429225, 1.570796336908662, 3.141592660823991, 3.141592671341913, -4.712389007131684, 1.570796327634962, -3.141592649593266)),
+    (5, 2): (((0, 0), (0, 1), (1, 0), (1, 1), (0, 2)), ((1, 4), (0, 1), (0, 2), (0, 2), (1, 3), (2, 3), (0, 2), (1, 3), (0, 1), (2, 3), (0, 2)),
+             (-2.6179938319018805, 4.5680537742202345, 1.4936174671748064, -0.7853981596381358, -1.4299042367402177, -0.7681850764008674, -0.7924089055550535, 2.149103800434233, 3.141592624494074, -0.6175922217379014, -2.5261130368032343, 4.712388194348653, 1.6653679725259671, -4.7123889449822975, -5.497787122412533, 2.3561944909816726, 1.5707962551232608, 4.5334804732943306e-07, -2.3561943209184886, 3.14159265721829, -3.504491094226879e-08, 4.712388974045261, 1.5707963192930996, -1.5707963796169442, 3.1415926873761064, 1.570796279802648, 3.141592642331173)),
 }
