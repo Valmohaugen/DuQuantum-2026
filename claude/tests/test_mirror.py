@@ -15,10 +15,9 @@ def test_mirror_matches_notebook() -> None:
     expected = [cell.source for cell in notebook_cells if cell.cell_type == "code"]
     actual = [cell.source for cell in mirror_cells if cell.cell_type == "code"]
     assert actual == expected, (
-        f"Executable cells in {MIRROR.name} differ from {NOTEBOOK.name}; "
-        "update both working files."
+        f"Executable cells in {MIRROR.name} differ from {NOTEBOOK.name}; update both working files."
     )
 
 
-def test_mirror_runs_as_python() -> None:
+def test_mirror_compiles_as_python() -> None:
     compile(MIRROR.read_text(), str(MIRROR), "exec")  # e.g. no mid-file __future__ import

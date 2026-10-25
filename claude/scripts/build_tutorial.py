@@ -1,5 +1,5 @@
 """Write claude/tutorial/Dicke_Tutorial.ipynb, an interactive walk-through of the solution
-in solution.ipynb (imported as ``dicke_prep`` through claude/dicke_prep.py).
+in the canonical Python module claude/dicke_prep.py.
 
 The notebook is generated so its source stays reviewable as plain Python. It only
 reads the challenge notebook (for the official scoring functions) and never writes it.
@@ -31,8 +31,8 @@ def code(src: str) -> None:
 md(r"""
 # Preparing Dicke states on Google Willow: an interactive tutorial
 
-This notebook explains, step by step, how the solution in `solution.ipynb`
-(imported here as `dicke_prep`) builds the circuits for the
+This notebook explains, step by step, how the tested module `claude/dicke_prep.py`
+(imported here as `dp`) builds the circuits for the
 Google Quantum AI challenge. That challenge asks for an $N$-qubit, weight-$n$ Dicke state
 on the Willow 105-qubit chip, using only CZ and `PhasedXZGate`.
 
@@ -55,7 +55,6 @@ in the call.
 
 md("## 0. Setup")
 code(r"""
-import itertools
 import math
 import sys
 from pathlib import Path
@@ -70,35 +69,30 @@ while not (REPO / "solution.ipynb").exists():  # repo root or claude/tutorial/
     if REPO == REPO.parent:
         raise FileNotFoundError("run this notebook from inside the DuQuantum-2026 repo")
     REPO = REPO.parent
-for sub in ("", "tutorial", "tests", "scripts"):  # claude/dicke_prep.py loads the notebook's solution
-    sys.path.insert(0, str(REPO / "claude" / sub))
+sys.path.insert(0, str(REPO))
 
-import dicke_prep as dp
-from test_dicke_prep import fake_calibration
-from tutorial_utils import (
+from claude import dicke_prep as dp  # noqa: E402
+from claude.notebook_figures import save_and_show  # noqa: E402
+from claude.scripts.challenge_calibration import make_challenge_calibration as fake_calibration  # noqa: E402
+from claude.tutorial.tutorial_utils import (  # noqa: E402
     HAVE_WIDGETS, bits, dicke_vector, draw_willow, interactive, plot_line_occupation, plot_probs,
 )
 
 # Faster layout search than the submission defaults, so sliders feel responsive.
 FAST = dp.PrepConfig(beam_width=300, search_time_s=2.0)
-CAL = fake_calibration(1234)  # same fake Willow calibration as the tests and benchmark
+CAL = fake_calibration(1234)  # production calibration generator; no test-suite dependency
 DEVICE = cirq_google.Willow105.metadata
-HARDWARE = dp.HARDWARE  # stays False while developing and benchmarking locally
-print(f"[setup] cirq {cirq.__version__}, widgets: {HAVE_WIDGETS}, hardware: {HARDWARE}")
-assert HARDWARE is False, "Tutorial examples are simulation-only by default"
+print(f"[setup] cirq {cirq.__version__}, widgets: {HAVE_WIDGETS}, simulator: local CPU")
 """)
 
 md(r"""
-## 0.1 Simulation first, hardware by deliberate choice
+## 0.1 Explicit local simulation
 
-The working solution has a single top-level switch, `HARDWARE = False`. This tutorial and the
-benchmark use Cirq's state-vector or density-matrix simulators while it is false, so exactness,
-leakage, score variation, and circuit depth can be checked without touching a processor. The
-hardware path is intentionally opt-in: changing the flag is a submission decision, not something
-that happens accidentally during import or testing.
-
-The tests also load the solution from `solution.ipynb`, while `solution.py` is its jupytext mirror.
-Keeping those two files synchronized means the tutorial and the test suite exercise the same code.
+The working examples use Cirq state-vector and density-matrix simulators. No hardware
+submission or execution path is included, and there is no unused hardware toggle.
+The source of truth is `claude/dicke_prep.py`; both working notebooks import it.
+`solution.py` is a thin jupytext mirror, and importing it performs no experiments.
+The standalone submission export contains the same tested preparation functions.
 """)
 
 # --------------------------------------------------------------------------- #
@@ -129,7 +123,7 @@ def show_dicke(N, n):
     fig, ax = plt.subplots(figsize=(9, 2.8))
     plot_probs(ax, dicke_vector(N, n), N,
                title=f"|D^{N}_{n}>: {math.comb(N, n)} terms, each with probability 1/{math.comb(N, n)}")
-    plt.show()
+    save_and_show("tutorial")
 
 interactive(show_dicke, N=(2, 8, 1, 4), n=(0, 8, 1, 2))
 """)
@@ -228,7 +222,7 @@ def show_givens(theta):
                                   qubit_order=[a, b], dtype=np.complex128)
     fig, ax = plt.subplots(figsize=(4, 2.5))
     plot_probs(ax, psi, 2, title=f"cos^2 = {math.cos(theta)**2:.3f}, sin^2 = {math.sin(theta)**2:.3f}")
-    plt.show()
+    save_and_show("tutorial")
 
 interactive(show_givens, theta=(0.0, math.pi / 2, 0.01, 0.6))
 """)
@@ -268,10 +262,12 @@ In superposition, different branches have their hole in different places, so a p
 
 🎛️ `step` walks through the gates of `dp.line_gates(N, n)`. Top: the basis states present (the
 weight never changes). Bottom: the line, with the active qubits boxed.
+This view deliberately follows the original logical gates; the production constructor
+can merge adjacent native blocks without changing these final amplitudes (see §6).
 """)
 code(r"""
 def line_program(N, n):
-    # Split dp.build_line_ops into one chunk of ops per logical gate (for stepping).
+    # Original logical gates for stepping; production synthesis can merge pairs.
     q = cirq.LineQubit.range(N)
     steps = [(f"prepare |0^{N-n} 1^{n}>", [cirq.X(x) for x in q[N - n:]], list(range(N - n, N)))]
     gates = dp.line_gates(N, n)
@@ -310,9 +306,11 @@ def show_trace(N, n, step):
                title=f"step {step}/{len(trace) - 1}: {label}   (fidelity with D: {fid:.3f})")
     plot_line_occupation(ax2, psi, N, active)
     plt.tight_layout()
-    plt.show()
+    save_and_show("tutorial")
 
-interactive(show_trace, N=(2, 7, 1, 4), n=(1, 6, 1, 2), step=(0, 20, 1, 0))
+TRACE_MAX_QUBITS = 7
+TRACE_MAX_STEP = max(len(dp.line_gates(TRACE_MAX_QUBITS, k)) for k in range(1, TRACE_MAX_QUBITS))
+interactive(show_trace, N=(2, TRACE_MAX_QUBITS, 1, 4), n=(1, 6, 1, 2), step=(0, TRACE_MAX_STEP, 1, 0))
 """)
 md(r"""
 Things to notice for $N = 4,\ n = 2$:
@@ -369,7 +367,7 @@ code(r"""
 def mux_table(theta):
     c, p, p1 = cirq.LineQubit.range(3)
     U = cirq.Circuit(dp.mux_ops(c, p, p1, theta)).unitary(qubit_order=[c, p, p1])
-    want = np.zeros((8, 8))
+    want = np.zeros((8, 8), dtype=np.complex128)
     want[:4, :4] = cirq.unitary(cirq.givens(theta))     # c = 0 block
     want[4:, 4:] = cirq.unitary(cirq.givens(math.pi / 2))  # c = 1 block
     phase = want[0, 0] / U[0, 0]  # fix the global phase on |000>
@@ -400,18 +398,27 @@ md(r"""
 
 A MUX costs 5 CZs, a Givens 2. Many pairs can only ever see one case. Bounding the number of ones
 still to be placed, $r \in [\max(0, n-(N-m)),\ \min(n, m)]$, lets `dp.line_gates` use plain
-Givens gates there. The table counts gates and checks the count against the compiled circuit.
+Givens gates there. The first known-input split saves one CZ. Additionally, the optimized
+constructor merges the first adjacent Givens/MUX pair of a stage with $m>n$: four CZs
+replace seven on the reachable local inputs $000,001,011$, with the same positive phase.
+The remaining pruned gates stay unchanged. This uses exact angle formulas and no fitted tables.
+The table compares the original and optimized **line** counts. For $D(4,2)$ the full physical
+constructor can instead choose a calibrated five-CZ square when its cost estimate is better.
 """)
 code(r"""
-print(f"{'N':>3} {'n':>3} {'givens':>7} {'mux':>4} {'CZ = 2g + 5m':>13}")
+print(f"{'N':>3} {'n':>3} {'givens':>7} {'mux':>4} {'line old CZ':>12} {'line opt CZ':>12} {'saved':>6}")
 for N in (4, 6, 8, 10, 12):
     for n in range(1, N // 2 + 1):
         g = dp.line_gates(N, n)
         n_giv = sum(x.kind == "givens" for x in g)
         n_mux = len(g) - n_giv
         ops = dp.build_line_ops(cirq.LineQubit.range(N), n)
-        assert sum(len(op.qubits) == 2 for op in ops) == 2 * n_giv + 5 * n_mux
-        print(f"{N:>3} {n:>3} {n_giv:>7} {n_mux:>4} {2 * n_giv + 5 * n_mux:>13}")
+        old_count = 2 * n_giv + 5 * n_mux - 1
+        new_count = sum(len(op.qubits) == 2 for op in ops)
+        assert sum(dp.line_edge_cz_counts(N, n)) == new_count
+        assert sum(len(op.qubits) == 2 for op in dp.build_line_ops(cirq.LineQubit.range(N), n, construction="analytic")) == old_count
+        assert new_count <= old_count
+        print(f"{N:>3} {n:>3} {n_giv:>7} {n_mux:>4} {old_count:>12} {new_count:>12} {old_count-new_count:>6}")
 """)
 md(r"""
 🎛️ CZs are not spread evenly along the line. `dp.line_edge_cz_counts` gives the load on each edge.
@@ -425,7 +432,7 @@ def show_edge_load(N, n):
     ax.bar([f"{i}-{i+1}" for i in range(N - 1)], counts, color="C2")
     ax.set_ylabel("CZs on edge")
     ax.set_title(f"D^{N}_{n}: {sum(counts)} CZs in total")
-    plt.show()
+    save_and_show("tutorial")
 
 interactive(show_edge_load, N=(3, 16, 1, 10), n=(1, 8, 1, 3))
 """)
@@ -444,7 +451,7 @@ $$
 $$
 
 Different branches then work in parallel, so the depth is about the tree height times the branching factor.
-A hand-made tree first:
+The first split has a known product input and uses one CZ; later splits use two-CZ Givens gates. A hand-made tree first:
 """)
 code(r"""
 q = cirq.LineQubit.range(6)
@@ -454,7 +461,9 @@ psi = cirq.final_state_vector(cirq.Circuit(ops), qubit_order=q, dtype=np.complex
 print("fidelity with W_6:", round(abs(np.vdot(dicke_vector(6, 1), psi)) ** 2, 12))
 print(cirq.Circuit(ops))
 """)
-md("🎛️ Line vs. tree on the fake Willow calibration: number of CZ layers (time steps) for the W state.")
+md(
+    "🎛️ Line vs. tree on the fake Willow calibration: number of CZ layers (time steps) for the W state."
+)
 code(r"""
 def cz_layers(ops):
     return sum(any(len(op.qubits) == 2 for op in m) for m in dp.schedule(ops, dynamical_decoupling=False))
@@ -474,8 +483,8 @@ def compare_line_tree(N_max):
     ax.set_xlabel("N")
     ax.set_ylabel("CZ layers")
     ax.legend()
-    ax.set_title("W state depth (both use 2(N-1) CZs)")
-    plt.show()
+    ax.set_title("W depth: line 2N−3 CZs; optimized tree 2N−3 CZs")
+    save_and_show("tutorial")
 
 interactive(compare_line_tree, N_max=(6, 24, 2, 16))
 """)
@@ -504,19 +513,17 @@ $$
 
 where $w_i$ is the edge load from §6. The beam search keeps the best `beam_width` partial paths at each length.
 For the W state, `dp.find_tree` grows a breadth-first tree from each candidate root instead.
+For $D(4,2)$, the production constructor also evaluates calibrated square layouts and their
+five-CZ load. The figure below shows the actual returned circuit's couplers.
 
 🎛️ Couplers are coloured by CZ error (dotted ones are dead), qubits by readout + single-qubit cost
 (× marks a dead qubit). The chosen layout is red. Change `seed` to get a different fake chip.
 """)
 code(r"""
 def choose_layout(N, n, cal):
-    hw = dp.Hardware(*cal, config=FAST)
-    k = min(n, N - n)
-    if k == 1 and N > 2:
-        root, kids = dp.find_tree(hw, N, deadline=0)
-        return list(kids), [(v, c) for v in kids for c in kids[v]]
-    path = dp.find_line(hw, dp.line_edge_cz_counts(N, k), deadline=0)
-    return path, list(zip(path, path[1:]))
+    circuit, qubits = dp.create_dicke_state(N, n, *cal, config=FAST)
+    pairs = {tuple(sorted(op.qubits)) for op in circuit.all_operations() if op.gate == cirq.CZ}
+    return sorted(qubits), sorted(pairs)
 
 
 def show_layout(N, n, seed):
@@ -525,8 +532,8 @@ def show_layout(N, n, seed):
     qs, edges = choose_layout(N, n, cal)
     fig, ax = plt.subplots(figsize=(7, 7))
     draw_willow(ax, cal, DEVICE.qubit_set, DEVICE.qubit_pairs, edges, qs)
-    ax.set_title(f"D^{N}_{n}: {'tree' if min(n, N - n) == 1 and N > 2 else 'line'} on {len(qs)} qubits")
-    plt.show()
+    ax.set_title(f"D^{N}_{n}: {len(edges)} used couplers on {len(qs)} qubits")
+    save_and_show("tutorial")
 
 interactive(show_layout, N=(2, 20, 1, 8), n=(1, 10, 1, 2), seed=(1, 2000, 1, 1234))
 """)
@@ -601,38 +608,38 @@ alone caps it. The cells below reuse the exact official functions and the noise 
 detuning, and readout flips.
 
 🎛️ Press **Run** (density-matrix simulation takes a few seconds). The printed scores use 4000
-sampled shots, and `shot_seed` picks which sample. The plot is computed exactly from the density matrix
-(DD on, no detuning). It shows the Hamming weights of the Z-basis outcomes. Anything outside the target
+sampled shots. `shot_seed` controls sampling; `noise_seed` selects an independent physical
+detuning ensemble. The plot uses the same DD-on ensemble, including detuning and readout, as its score. It shows the Hamming weights of the Z-basis outcomes. Anything outside the target
 weight is **leakage**, which the Z score penalises.
 """)
 code(r"""
-import noisy_benchmark as nbm
+from claude.scripts import noisy_benchmark as nbm
 
 overall_score = nbm.load_scoring()  # read-only exec of the challenge notebook's scoring cell
 
 
-def noisy_demo(N, n, detuning_khz, cz_error_scale, shot_seed):
+def noisy_demo(N, n, detuning_khz, cz_error_scale, shot_seed, noise_seed=7):
     n = min(n, N)
     cal = ({p: (e * cz_error_scale, u) for p, (e, u) in CAL[0].items()}, *CAL[1:])
-    noise = nbm.NoiseConfig(detuning_khz=detuning_khz, shots=4000, seed=shot_seed)
+    noise = nbm.NoiseConfig(detuning_khz=detuning_khz, shots=4000, seed=shot_seed, noise_seed=noise_seed)
     clean_cal = tuple({key: (0.0, 0) for key in m} for m in CAL)
     rows = []
     for name, c, nz, cfg in [
         ("noiseless (shot noise only)", clean_cal,
-         nbm.NoiseConfig(t1_us=1e12, tphi_us=1e12, shots=4000, seed=shot_seed), FAST),
+         nbm.NoiseConfig(t1_us=1e12, tphi_us=1e12, shots=4000, seed=shot_seed, noise_seed=noise_seed), FAST),
         ("noisy, DD on", cal, noise, FAST),
         ("noisy, DD off", cal, noise, dp.PrepConfig(beam_width=300, search_time_s=2.0, use_dynamical_decoupling=False)),
     ]:
-        s, moments = nbm.score_instance(N, n, c, nz, overall_score, cfg)
+        prepared = dp.create_dicke_state(N, n, *c, config=cfg)
+        probabilities = nbm.simulate_probabilities(prepared[0], sorted(prepared[1]), c, nz)
+        s, moments = nbm.score_instance(N, n, c, nz, overall_score, cfg,
+                                       prepared=prepared, probabilities=probabilities)
         rows.append((name, s, moments))
+        if name == "noisy, DD on":
+            pz = probabilities[0]
     for name, s, mom in rows:
         print(f"{name:<30} score {s:8.2f}   ({mom} moments)")
 
-    circuit, qset = dp.create_dicke_state(N, n, *cal, config=FAST)
-    order = sorted(qset)
-    rho = cirq.DensityMatrixSimulator(dtype=np.complex128).simulate(
-        nbm.noisy_circuit(circuit, order, cal, noise, {}), qubit_order=order).final_density_matrix
-    pz = nbm.apply_readout(np.diag(rho).real, order, cal)
     weight = np.array([bits(i, N).count("1") for i in range(2**N)])
     fig, ax = plt.subplots(figsize=(5, 2.6))
     ax.bar(range(N + 1), [pz[weight == w].sum() for w in range(N + 1)],
@@ -640,11 +647,11 @@ def noisy_demo(N, n, detuning_khz, cz_error_scale, shot_seed):
     ax.set_xlabel("Hamming weight of Z outcome")
     ax.set_ylabel("probability")
     ax.set_title(f"leakage out of weight {n}: {1 - pz[weight == n].sum():.3f}")
-    plt.show()
+    save_and_show("tutorial")
 
 interactive(noisy_demo, manual=True, N=(2, 6, 1, 4), n=(1, 3, 1, 2),
             detuning_khz=(0.0, 50.0, 5.0, 20.0), cz_error_scale=(0.0, 5.0, 0.5, 1.0),
-            shot_seed=(0, 20, 1, 7))
+            shot_seed=(0, 20, 1, 7), noise_seed=(0, 20, 1, 7))
 """)
 md(r"""
 ✏️ **Exercise 8.** At $N = 6$, $n = 3$:
@@ -656,17 +663,18 @@ md(r"""
 
 <details><summary>Solution</summary>
 
-1. A lot. Over 8 shot seeds the score has a standard deviation of about 0.3–0.9, on means near 1,
-   even for a noiseless circuit. That is as large as the DD on/off gaps, so one run can't tell them
-   apart. To compare circuits, average many seeds or use more shots.
-2. Leakage is computed exactly, so it has no shot noise. With CZ error switched off it is still
-   about 0.13, from readout flips, $T_1$ decay and single-qubit errors. Real CZ errors add
-   about 0.07, and tripling them adds only about 0.04 more. Detuning does not change leakage at all: a Z
-   rotation keeps the Hamming weight, so detuning only affects the X-basis (phase) part of the score.
-   DD *raises* leakage slightly (about 0.02), because every extra pulse carries its own error.
+1. Changing only `shot_seed` now holds the physical noise ensemble fixed. Scores
+   still fluctuate because they are reciprocal statistics of finite samples. Compare
+   paired seeds and report their spread; one sample does not establish a DD advantage.
+2. The plotted leakage is exact for the finite ensemble, so it has no shot noise, but
+   changing `noise_seed` can change that ensemble. Readout flips, T1, and Pauli errors
+   cause leakage. Detuning can also cause leakage: the native single-qubit gates inside
+   a compiled Givens rotation need not conserve excitation number, so a Z error between
+   them can turn into a population error. The ideal complete Givens gate conserves weight;
+   that does not imply its noisy decomposition does. The plot includes the selected detuning.
+   DD adds imperfect pulses and can help or hurt, depending on the physical noise model.
 
-So at this size, readout and decay matter as much as CZ count. Any change to the circuit has to be
-judged over many shots.
+Compare the same case and physical ensemble before drawing conclusions about a pulse policy.
 </details>
 """)
 
@@ -685,15 +693,20 @@ The construction is deliberately testable without hardware. For a generated circ
 The adaptive entry point currently uses the same exact deterministic preparation as a legal fallback.
 It is benchmarked separately because the bonus rewards depth, not merely state correctness; a genuinely
 measurement-and-feed-forward construction must first match the evaluator's allowed adaptive API.
+
+The organizer's email confirms bonus grading for $2 \le N \le 15$ and fixes the original
+validator to use `range(len(qubits))`. The original notebook remains unchanged. Grading
+$(N,n)$ cases and `max_correlator_size` remain undisclosed; the local cutoff of four is a
+simulation setting. Exact amplitudes and relative phases are validated independently of it.
 """)
 code(r"""
 def validate_simulated_solution(N, n):
+    n = max(0, min(n, N))
     circuit, qubits = dp.create_dicke_state(N, n, *CAL, config=FAST)
     order = sorted(qubits)
     psi = cirq.final_state_vector(circuit, qubit_order=order, dtype=np.complex128)
     fidelity = abs(np.vdot(dicke_vector(N, n), psi)) ** 2
-    assert dp.HARDWARE is False
-    assert len(circuit) < 1750
+    assert len(circuit) <= 1750
     assert fidelity > 1 - 1e-10
     assert all(op.gate == cirq.CZ or isinstance(op.gate, cirq.PhasedXZGate)
                for op in circuit.all_operations())
@@ -704,6 +717,44 @@ interactive(validate_simulated_solution, N=(2, 12, 1, 6), n=(0, 6, 1, 2))
 """)
 
 # --------------------------------------------------------------------------- #
+md(r"""
+## 11.1 Diagnostic bundle: inspect the physics, circuit and experiment separately
+
+The following cell saves a report with PNG/PDF figures and JSON/CSV metrics. It includes
+phase-sensitive exact-state checks, observed weight distributions and X correlations,
+physical layout and native schedules, resource scaling, and detuning sensitivity.
+When a current raw score run is available, it adds paired differences and seed convergence.
+
+The example is a fixed small physical-noise ensemble; its exact probabilities have no shot
+noise. Approximate t intervals describe matched seed replicates in the separate score dataset.
+The report records those assumptions. To generate fresh paired data explicitly, run
+`python -m claude.scripts.diagnose --benchmark` from the repository root.
+All saved figures go under `figs/`; reports and machine-readable tables remain under
+`benchmark_outputs/`. The notebook uses each report's recorded figure directory.
+""")
+code(r"""
+import json
+import os
+
+from IPython.display import Image, Markdown, display
+
+from claude.scripts.analyze_benchmark_results import latest_results
+from claude.scripts.diagnose import DEFAULT_OUTPUT, build_report
+
+try:
+    current_results = latest_results()
+except FileNotFoundError:
+    current_results = None
+report_path = build_report(
+    Path(os.environ.get("DUQUANTUM_DIAGNOSTICS_DIR", str(DEFAULT_OUTPUT))),
+    results_path=current_results, resource_sizes=(4, 8, 16, 30, 60),
+)
+report_data = json.loads((report_path.parent / "diagnostics.json").read_text())
+display(Markdown(report_path.read_text().split("## Figures")[0]))
+for figure_name in report_data["figures"]:
+    display(Image(filename=str(Path(report_data["figure_dir"]) / (figure_name + ".png")), width=950))
+""")
+
 md(r"""
 ## 12. Recap and where to go next
 
@@ -732,9 +783,15 @@ md(r"""
 
 def main() -> None:
     nb = nbformat.v4.new_notebook()
-    nb.cells = [nbformat.v4.new_markdown_cell(s) if kind == "md" else nbformat.v4.new_code_cell(s)
-                for kind, s in CELLS]
-    nb.metadata["kernelspec"] = {"name": "duquantum", "display_name": "duquantum", "language": "python"}
+    nb.cells = [
+        nbformat.v4.new_markdown_cell(s) if kind == "md" else nbformat.v4.new_code_cell(s)
+        for kind, s in CELLS
+    ]
+    nb.metadata["kernelspec"] = {
+        "name": "duquantum",
+        "display_name": "duquantum",
+        "language": "python",
+    }
     OUT_PATH.parent.mkdir(exist_ok=True)
     nbformat.write(nb, OUT_PATH)
     print(f"[done] wrote {OUT_PATH.relative_to(ROOT)} ({len(nb.cells)} cells)")

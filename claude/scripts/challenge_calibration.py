@@ -25,13 +25,15 @@ CalibrationMaps: TypeAlias = tuple[
 ]
 
 
-def make_challenge_calibration(seed: int = 1234) -> CalibrationMaps:
+def make_challenge_calibration(seed: int = 1234, dropout: float = 0.01) -> CalibrationMaps:
     """Generate the four challenge-style Willow calibration maps.
 
     Parameters
     ----------
     seed : int
         Seed for reproducible dropout and lognormal error-rate generation.
+    dropout : float
+        Probability of a failed qubit or coupler, between zero and one.
 
     Returns
     -------
@@ -44,29 +46,25 @@ def make_challenge_calibration(seed: int = 1234) -> CalibrationMaps:
     11–12, not private hardware telemetry. They are the correct local inputs
     for simulation and layout benchmarking.
     """
+    if not np.isfinite(dropout) or not 0 <= dropout <= 1:
+        raise ValueError(f"dropout probability must be in [0,1]; got {dropout}")
     rng = np.random.default_rng(seed)
     device = cirq_google.Willow105.metadata
     all_qubits = sorted(device.qubit_set)
-    dropouts = {q for q in all_qubits if rng.random() < 0.01}
+    dropouts = {q for q in all_qubits if rng.random() < dropout}
     working_qubits = [q for q in all_qubits if q not in dropouts]
 
     def qubit_rates(median: float, uncertainty: float) -> QubitErrorMap:
         rates = rng.lognormal(np.log(median), 0.5, len(working_qubits))
-        return {
-            q: (float(rate), uncertainty)
-            for q, rate in zip(working_qubits, rates)
-        }
+        return {q: (float(rate), uncertainty) for q, rate in zip(working_qubits, rates)}
 
     working_pairs = [
         tuple(pair)
-        for pair in sorted(device.qubit_pairs)
-        if not (set(pair) & dropouts) and rng.random() > 0.01
+        for pair in sorted(tuple(sorted(pair)) for pair in device.qubit_pairs)
+        if not (set(pair) & dropouts) and rng.random() > dropout
     ]
     cz_rates = rng.lognormal(np.log(2.5e-3), 0.5, len(working_pairs))
-    cz_pauli_error_rate = {
-        pair: (float(rate), 5e-4)
-        for pair, rate in zip(working_pairs, cz_rates)
-    }
+    cz_pauli_error_rate = {pair: (float(rate), 5e-4) for pair, rate in zip(working_pairs, cz_rates)}
     return (
         cz_pauli_error_rate,
         qubit_rates(4e-4, 2e-4),

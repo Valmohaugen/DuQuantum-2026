@@ -1,0 +1,8 @@
+name: duquantum
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.15
+  - pip
+  - pip:
+      - -r claude/requirements.lock

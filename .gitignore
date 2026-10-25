@@ -3,3 +3,8 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 benchmark_outputs/
+figs/
+submission_outputs/
+.ruff_cache/
+.mypy_cache/
+.superpowers/

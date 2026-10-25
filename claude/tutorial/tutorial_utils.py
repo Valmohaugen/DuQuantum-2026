@@ -1,6 +1,6 @@
 """Plotting and widget helpers for the Dicke-state tutorial notebook.
 
-The physics lives in ``solution.ipynb`` and in the tutorial's own cells. This module only
+The physics lives in ``claude/dicke_prep.py`` and the tutorial's explanatory cells. This module only
 draws things and wires up sliders, so the notebook stays readable. Everything
 works without ipywidgets: ``interactive`` then runs the function once with the
 default values.
@@ -8,14 +8,17 @@ default values.
 
 from __future__ import annotations
 
-import itertools
-import math
 import os
-from collections.abc import Callable, Sequence
+from collections.abc import Callable, Iterable, Sequence
 
+import cirq
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import cm, colors
+from matplotlib.axes import Axes
+
+from claude.notebook_figures import save_and_show
+from claude.validation import dicke_vector as dicke_vector
 
 try:
     import ipywidgets as widgets
@@ -49,7 +52,7 @@ def interactive(fn: Callable, manual: bool = False, **controls: tuple) -> None:
     """
     defaults = {k: (v[0] if isinstance(v, list) else v[3]) for k, v in controls.items()}
     if not HAVE_WIDGETS:
-        print(f"[warn] ipywidgets not installed; running once with {defaults}")
+        print(f"[setup] static controls (widgets disabled or unavailable): {defaults}")
         fn(**defaults)
         return
     ws = {}
@@ -59,16 +62,18 @@ def interactive(fn: Callable, manual: bool = False, **controls: tuple) -> None:
             continue
         lo, hi, step, value = spec
         cls = widgets.IntSlider if all(isinstance(x, int) for x in spec) else widgets.FloatSlider
-        ws[name] = cls(min=lo, max=hi, step=step, value=value, description=name, continuous_update=False)
+        ws[name] = cls(
+            min=lo, max=hi, step=step, value=value, description=name, continuous_update=False
+        )
     if manual:
         out = widgets.Output()
         button = widgets.Button(description="Run", button_style="primary")
 
-        def run(_=None) -> None:
+        def run(_: object | None = None) -> None:
             out.clear_output(wait=True)
             with out:
                 fn(**{k: w.value for k, w in ws.items()})
-                plt.show()
+                save_and_show("tutorial")
 
         button.on_click(run)
         display(widgets.VBox([widgets.HBox(list(ws.values())), button, out]))
@@ -81,20 +86,14 @@ def interactive(fn: Callable, manual: bool = False, **controls: tuple) -> None:
 # --------------------------------------------------------------------------- #
 # States
 # --------------------------------------------------------------------------- #
-def dicke_vector(n: int, k: int) -> np.ndarray:
-    """Ideal |D^n_k> as a length-2^n real vector (any qubit order: it is symmetric)."""
-    psi = np.zeros(2**n)
-    for ones in itertools.combinations(range(n), k):
-        psi[sum(2**i for i in ones)] = 1.0
-    return psi / math.sqrt(math.comb(n, k))
-
-
 def bits(index: int, n: int) -> str:
     """Bitstring of a basis index, most significant (first qubit) on the left."""
     return format(index, f"0{n}b")
 
 
-def plot_probs(ax, psi: np.ndarray, n: int, only_nonzero: bool = False, title: str = "") -> None:
+def plot_probs(
+    ax: Axes, psi: np.ndarray, n: int, only_nonzero: bool = False, title: str = ""
+) -> None:
     """Bar chart of |amplitude|^2 over basis states, coloured by Hamming weight."""
     probs = np.abs(psi) ** 2
     idx = np.flatnonzero(probs > PROB_EPS) if only_nonzero else np.arange(2**n)
@@ -110,17 +109,21 @@ def plot_probs(ax, psi: np.ndarray, n: int, only_nonzero: bool = False, title: s
     ax.set_title(title)
 
 
-def plot_line_occupation(ax, psi: np.ndarray, n: int, active: Sequence[int] = ()) -> None:
+def plot_line_occupation(ax: Axes, psi: np.ndarray, n: int, active: Sequence[int] = ()) -> None:
     """Draw the qubit line, shading each qubit by <n_i> and boxing the active ones."""
     probs = (np.abs(psi) ** 2).reshape([2] * n)
     occ = [float(np.moveaxis(probs, i, 0)[1].sum()) for i in range(n)]
     for i, p in enumerate(occ):
         ax.add_patch(plt.Circle((i, 0), 0.35, color=plt.get_cmap("Blues")(0.15 + 0.8 * p), ec="k"))
-        ax.text(i, 0, f"{p:.2f}", ha="center", va="center", fontsize=8, color="w" if p > 0.5 else "k")
+        ax.text(
+            i, 0, f"{p:.2f}", ha="center", va="center", fontsize=8, color="w" if p > 0.5 else "k"
+        )
         ax.text(i, -0.6, str(i), ha="center", fontsize=8)
     if len(active):
         lo, hi = min(active), max(active)
-        ax.add_patch(plt.Rectangle((lo - 0.45, -0.45), hi - lo + 0.9, 0.9, fill=False, ec="C3", lw=2))
+        ax.add_patch(
+            plt.Rectangle((lo - 0.45, -0.45), hi - lo + 0.9, 0.9, fill=False, ec="C3", lw=2)
+        )
     ax.set_xlim(-0.6, n - 0.4)
     ax.set_ylim(-0.8, 0.6)
     ax.set_aspect("equal")
@@ -131,7 +134,14 @@ def plot_line_occupation(ax, psi: np.ndarray, n: int, active: Sequence[int] = ()
 # --------------------------------------------------------------------------- #
 # Willow grid
 # --------------------------------------------------------------------------- #
-def draw_willow(ax, cal: tuple, all_qubits, all_pairs, layout_edges=(), layout_qubits=()) -> None:
+def draw_willow(
+    ax: Axes,
+    cal: tuple,
+    all_qubits: Iterable[cirq.GridQubit],
+    all_pairs: Iterable[Iterable[cirq.GridQubit]],
+    layout_edges: Iterable[tuple[cirq.GridQubit, cirq.GridQubit]] = (),
+    layout_qubits: Iterable[cirq.GridQubit] = (),
+) -> None:
     """Draw the Willow grid: nodes by readout+1q cost, couplers by CZ error.
 
     Parameters
@@ -144,7 +154,10 @@ def draw_willow(ax, cal: tuple, all_qubits, all_pairs, layout_edges=(), layout_q
         Chosen couplers (drawn thick) and qubits (drawn with a ring).
     """
     cz, sq, e0, e1 = cal
-    xy = lambda q: (q.col, -q.row)
+
+    def xy(q: cirq.GridQubit) -> tuple[int, int]:
+        return q.col, -q.row
+
     cz_err = {frozenset(p): e for p, (e, _) in cz.items()}
     norm = colors.LogNorm(1e-3, 1e-2)
     for p in all_pairs:

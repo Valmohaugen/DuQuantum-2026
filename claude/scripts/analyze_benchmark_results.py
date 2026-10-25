@@ -1,180 +1,212 @@
-"""Summarize and interpret a saved noisy benchmark run.
-
-Usage:
-    python -u claude/scripts/analyze_benchmark_results.py
-    python -u claude/scripts/analyze_benchmark_results.py path/to/results.json
-
-The script prints a compact report and writes a Markdown copy next to the JSON.
-"""
+"""Analyze matched finite DD/no-DD observations without changing recorded data."""
 
 from __future__ import annotations
 
+import argparse
+import hashlib
 import json
 import sys
-from collections import defaultdict
+from collections import Counter
 from pathlib import Path
-from statistics import mean, stdev
 
-import matplotlib
-
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-DEFAULT_RESULTS = Path(__file__).resolve().parents[2] / "benchmark_outputs" / "noisy_benchmark_results.json"
+REPO = Path(__file__).resolve().parents[2]
+if str(REPO) not in sys.path:
+    sys.path.insert(0, str(REPO))
+from claude.benchmark_statistics import (  # noqa: E402
+    _finite,
+    case_statistics,
+    has_complete_provenance,
+    paired_aggregate,
+    validate_declared_records,
+)
+from claude.output_paths import figure_root  # noqa: E402
+
+DEFAULT_RESULTS = (
+    Path(__file__).resolve().parents[2] / "benchmark_outputs/noisy_benchmark_results.json"
+)
+SCORE_DISPLAY_LIMITS = (0.0, 2.0)
+
+
+def latest_results(root: Path | None = None) -> Path:
+    """Find a current-run JSON, never substitute unavailable historical raw data."""
+    root = root if root is not None else REPO / "benchmark_outputs"
+    candidates = list((root / "runs").glob("*/noisy_benchmark_results.json"))
+    if not candidates:
+        raise FileNotFoundError(
+            "No new run JSON exists. Historical raw data is unavailable; the original report and figure survive. Run a new experiment or pass an explicit results path."
+        )
+    return max(candidates, key=lambda path: path.stat().st_mtime_ns)
 
 
 def load_results(path: Path) -> dict:
+    """Read completed benchmark JSON; raise clear errors for missing/incomplete data."""
     if not path.exists():
         raise FileNotFoundError(f"results file not found: {path}")
     data = json.loads(path.read_text())
-    if not data.get("complete", False):
-        raise RuntimeError("benchmark results are incomplete; use the checkpoint file or rerun the benchmark")
+    if (
+        not isinstance(data, dict)
+        or not data.get("complete")
+        or not isinstance(data.get("results"), dict)
+    ):
+        raise ValueError("expected completed benchmark data with a results mapping")
+    validate_declared_records(data)
     return data
 
 
+def _format(value: float | None) -> str:
+    return "unavailable" if value is None else f"{value:.4g}"
+
+
 def summarize(data: dict) -> str:
-    cases: dict[tuple[int, int], dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
-    for key, result in data["results"].items():
-        n_text, k_text, _seed_text, mode = key.split(",")
-        cases[(int(n_text), int(k_text))][mode].append(result)
-
+    """Return an honest paired comparison, sample counts, exclusions, and provenance caveats."""
+    rows = case_statistics(data)
+    aggregate = paired_aggregate(rows)
+    statuses = Counter(
+        record.get("score_status", "finite" if _finite(record) else "undefined")
+        for record in data["results"].values()
+    )
+    modern = has_complete_provenance(data)
     lines = [
-        "# Noisy Benchmark Report",
+        "# Noisy benchmark report",
         "",
-        f"Cases analyzed: {len(cases)}",
-        f"Completed scores: {len(data['results'])}",
+        f"Cases: {len(rows)}; records: {len(data['results'])}; statuses: {dict(statuses)}.",
+        "Provenance: "
+        + (
+            "effective configuration, sources and runtime recorded."
+            if modern
+            else "UNVERIFIED / LEGACY — complete source/model fingerprint unavailable; interpret cautiously."
+        ),
         "",
-        "## Aggregate result",
+        "## Matched comparison",
         "",
+        f"Common finite paired seeds across every case: {aggregate['n_pairs']}.",
+        f"DD mean: {_format(aggregate['dd_mean'])}; no-DD mean: {_format(aggregate['no_dd_mean'])}.",
+        f"DD minus no-DD: {_format(aggregate['difference'])}; paired standard error: {_format(aggregate['difference_se'])}.",
+        "Standard error is estimated across paired seed means, not across different cases.",
+        "",
+        "| N | n | Paired seeds | Excluded | DD mean | no-DD mean | Difference | Paired SE |",
+        "| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
-    aggregate = data["aggregate"]
-    dd_mean = aggregate["dd_mean"]
-    no_dd_mean = aggregate["no_dd_mean"]
-    difference = dd_mean - no_dd_mean
-    winner = "DD" if difference > 0 else "no-DD" if difference < 0 else "tie"
-    lines.extend(
-        [
-            f"- DD: {dd_mean:.3f} +/- {aggregate['dd_std']:.3f}",
-            f"- no-DD: {no_dd_mean:.3f} +/- {aggregate['no_dd_std']:.3f}",
-            f"- Difference (DD - no-DD): {difference:+.3f}",
-            f"- Aggregate winner: {winner}",
-            "",
-            "The aggregate values are averages of per-case means. The very large spread indicates "
-            "that scores should be compared per case, not only by one pooled total.",
-            "",
-            "## Per-case comparison",
-            "",
-            "| N | n | Moments | DD mean +/- std | no-DD mean +/- std | Difference | Winner |",
-            "|---:|---:|---:|---:|---:|---:|:---|",
-        ]
-    )
-
-    wins = {"DD": 0, "no-DD": 0, "tie": 0}
-    differences: list[tuple[float, tuple[int, int]]] = []
-    for case in sorted(cases):
-        values = cases[case]
-        dd = values.get("dd", [])
-        no_dd = values.get("no-dd", [])
-        if not dd or not no_dd:
-            continue
-        dd_scores = [float(item["score"]) for item in dd]
-        no_dd_scores = [float(item["score"]) for item in no_dd]
-        dd_avg = mean(dd_scores)
-        no_dd_avg = mean(no_dd_scores)
-        delta = dd_avg - no_dd_avg
-        case_winner = "DD" if delta > 0 else "no-DD" if delta < 0 else "tie"
-        wins[case_winner] += 1
-        differences.append((delta, case))
-        dd_spread = stdev(dd_scores) if len(dd_scores) > 1 else 0.0
-        no_dd_spread = stdev(no_dd_scores) if len(no_dd_scores) > 1 else 0.0
-        moments = int(dd[0]["moments"])
+    for row in rows:
         lines.append(
-            f"| {case[0]} | {case[1]} | {moments} | {dd_avg:.3f} +/- {dd_spread:.3f} "
-            f"| {no_dd_avg:.3f} +/- {no_dd_spread:.3f} | {delta:+.3f} | {case_winner} |"
+            f"| {row['n']} | {row['k']} | {row['n_pairs']} | {row['excluded']} | "
+            f"{_format(row['dd_mean'])} | {_format(row['no_dd_mean'])} | "
+            f"{_format(row['difference'])} | {_format(row['difference_se'])} |"
         )
-
-    strongest_gain = max(differences, default=(0.0, (0, 0)))
-    strongest_loss = min(differences, default=(0.0, (0, 0)))
-    lines.extend(
-        [
-            "",
-            "## Insights",
-            "",
-            f"- DD wins {wins['DD']} cases; no-DD wins {wins['no-DD']}; ties: {wins['tie']}.",
-            f"- Strongest DD improvement: D^{strongest_gain[1][0]}_{strongest_gain[1][1]} "
-            f"({strongest_gain[0]:+.3f}).",
-            f"- Strongest DD regression: D^{strongest_loss[1][0]}_{strongest_loss[1][1]} "
-            f"({strongest_loss[0]:+.3f}).",
-            "- A large standard deviation means more seeds or more shots are needed before changing the default.",
-            "- Use the per-case winners to design conditional DD rather than enabling DD globally.",
-            "",
-            "## Recommended decision",
-            "",
-        ]
-    )
-    if difference < 0:
-        lines.append("The current aggregate favors no-DD. Keep the default unchanged until a larger seed set confirms it.")
-    elif difference > 0:
-        lines.append("The current aggregate favors DD. Confirm the result with more seeds before making DD the default.")
-    else:
-        lines.append("The current aggregate is tied. Collect more seeds before changing the default.")
+    lines += [
+        "",
+        "## Interpretation",
+        "",
+        "- Undefined and infinite official scores are reported explicitly and excluded from finite paired statistics.",
+        "- A single seed does not estimate uncertainty. Plot SD bars describe dispersion, not a confidence interval.",
+        "- The matched-score panel displays 0–2. Boundary triangles mark clipped means or SD bars; labels show means above 2. Official scores are not bounded by 2, and the table/raw data retain their full values.",
+        "- Increasing shots reduces sampling variation; increasing noise seeds samples more physical realizations.",
+        "- Between-case spread measures case heterogeneity and does not imply that more shots will reduce it.",
+        "- These are results for the stated synthetic noise model and calibration; they do not establish a hardware-wide DD preference.",
+        "- Maximum correlator size is a local experiment setting; the original challenge does not fix it.",
+    ]
     return "\n".join(lines) + "\n"
 
 
 def write_insight_plot(data: dict, path: Path) -> None:
-    """Write a PNG comparing DD and no-DD scores with uncertainty bars."""
-    cases: dict[tuple[int, int], dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
-    for key, result in data["results"].items():
-        n_text, k_text, _seed_text, mode = key.split(",")
-        cases[(int(n_text), int(k_text))][mode].append(result)
+    """Save paired scores in a 0–2 view with explicit overflow; retain full statistics.
 
-    ordered = sorted(cases)
-    labels = [f"D{n},{k}" for n, k in ordered]
-    dd_means = [mean([float(item["score"]) for item in cases[case]["dd"]]) for case in ordered]
-    no_dd_means = [mean([float(item["score"]) for item in cases[case]["no-dd"]]) for case in ordered]
-    dd_std = [stdev([float(item["score"]) for item in cases[case]["dd"]]) for case in ordered]
-    no_dd_std = [stdev([float(item["score"]) for item in cases[case]["no-dd"]]) for case in ordered]
-    deltas = np.asarray(dd_means) - np.asarray(no_dd_means)
-    x = np.arange(len(ordered))
-
-    aggregate = data["aggregate"]
-    figure, (score_axis, delta_axis) = plt.subplots(
-        2, 1, figsize=(max(12, len(labels) * 0.7), 8), height_ratios=(2, 1), constrained_layout=True
+    Mean/SD bars are visually clipped, never numerically capped. Boundary markers
+    indicate clipped means or SD endpoints; overflowing means retain numeric labels.
+    The difference panel keeps its own scale. Singleton/undefined cases are supported.
+    """
+    rows = case_statistics(data)
+    valid = [row for row in rows if row["n_pairs"]]
+    figure, axes = plt.subplots(
+        2, 1, figsize=(max(9, len(valid) * 0.7), 7), constrained_layout=True
     )
-    width = 0.38
-    score_axis.bar(x - width / 2, dd_means, width, yerr=dd_std, capsize=3, label="DD", color="#2878b5")
-    score_axis.bar(x + width / 2, no_dd_means, width, yerr=no_dd_std, capsize=3, label="no-DD", color="#e07a35")
-    score_axis.set_ylabel("Official score")
-    score_axis.set_title(
-        f"Dicke benchmark: DD {aggregate['dd_mean']:.2f} vs no-DD {aggregate['no_dd_mean']:.2f}"
+    if valid:
+        x = np.arange(len(valid))
+        for key, label, offset, color in (
+            ("dd", "DD", -0.19, "#2878b5"),
+            ("no_dd", "no-DD", 0.19, "#e07a35"),
+        ):
+            positions = x + offset
+            means = np.asarray([r[f"{key}_mean"] for r in valid], dtype=float)
+            spread = np.asarray([r[f"{key}_std"] for r in valid], dtype=float)
+            axes[0].bar(positions, means, 0.38, yerr=spread, label=label, color=color, capsize=3)
+            # Undefined singleton SD does not hide an overflowing finite mean.
+            finite_spread = np.where(np.isfinite(spread), spread, 0.0)
+            for boundary, mask, marker in (
+                (SCORE_DISPLAY_LIMITS[1], means + finite_spread > SCORE_DISPLAY_LIMITS[1], "^"),
+                (SCORE_DISPLAY_LIMITS[0], means - finite_spread < SCORE_DISPLAY_LIMITS[0], "v"),
+            ):
+                axes[0].scatter(
+                    positions[mask],
+                    np.full(np.count_nonzero(mask), boundary),
+                    marker=marker,
+                    color=color,
+                    s=30,
+                    zorder=5,
+                    clip_on=False,
+                )
+            for position, mean in zip(positions, means):
+                if mean > SCORE_DISPLAY_LIMITS[1]:
+                    axes[0].annotate(
+                        f"{mean:.3g}",
+                        (position, SCORE_DISPLAY_LIMITS[1]),
+                        xytext=(0, -8),
+                        textcoords="offset points",
+                        ha="center",
+                        va="top",
+                        fontsize=8,
+                        bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.85},
+                    )
+        differences = np.array([r["difference"] for r in valid])
+        axes[1].bar(x, differences, color=np.where(differences >= 0, "#2878b5", "#c94c4c"))
+        labels = [f"D({r['n']},{r['k']})\nn={r['n_pairs']}" for r in valid]
+        for axis in axes:
+            axis.set_xticks(x, labels, rotation=45, ha="right")
+        axes[0].legend()
+    else:
+        for axis in axes:
+            axis.text(
+                0.5, 0.5, "No finite paired observations", transform=axis.transAxes, ha="center"
+            )
+    axes[0].set_ylim(*SCORE_DISPLAY_LIMITS)
+    axes[0].set_title(
+        "Matched scores; bars show seed SD (singleton spread unestimated)\n"
+        "View 0–2; triangles mark clipped means or SD bars; full values retained in report/data"
     )
-    score_axis.set_xticks(x, labels)
-    score_axis.legend()
-    score_axis.grid(axis="y", alpha=0.25)
-
-    delta_axis.bar(x, deltas, color=np.where(deltas >= 0, "#2878b5", "#c94c4c"))
-    delta_axis.axhline(0, color="black", linewidth=0.8)
-    delta_axis.set_ylabel("DD - no-DD")
-    delta_axis.set_xlabel("Case (N, n)")
-    delta_axis.set_xticks(x, labels, rotation=45, ha="right")
-    delta_axis.grid(axis="y", alpha=0.25)
+    axes[0].set_ylabel("Official score — higher is better")
+    axes[1].axhline(0, color="black", linewidth=0.8)
+    axes[1].set_ylabel("DD minus no-DD")
+    axes[1].set_xlabel("Case and finite paired sample count")
+    for axis in axes:
+        axis.grid(axis="y", alpha=0.2)
+    path.parent.mkdir(parents=True, exist_ok=True)
     figure.savefig(path, dpi=160)
     plt.close(figure)
 
 
-def main() -> None:
-    path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_RESULTS
+def main(path: Path | None = None, output_dir: Path | None = None) -> Path:
+    """Write analysis in a separate folder, preserving historical reports and figures."""
+    path = path if path is not None else latest_results()
     data = load_results(path)
+    output_dir = output_dir if output_dir is not None else path.parent / "analysis"
+    output_dir.mkdir(parents=True, exist_ok=True)
     report = summarize(data)
-    report_path = path.with_name("noisy_benchmark_report.md")
-    plot_path = path.with_name("noisy_benchmark_insights.png")
-    report_path.write_text(report)
-    write_insight_plot(data, plot_path)
+    dataset_id = hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+    figure_path = figure_root() / "benchmarks" / dataset_id / "noisy_benchmark_insights.png"
+    write_insight_plot(data, figure_path)
+    report += f"\n![Matched score comparison]({figure_path})\n"
+    destination = output_dir / "noisy_benchmark_report.md"
+    destination.write_text(report)
     print(report)
-    print(f"[saved] report: {report_path}")
-    print(f"[saved] plot: {plot_path}")
+    print(f"[saved] {destination}")
+    return destination
 
 
 if __name__ == "__main__":
-    main()
+    plt.switch_backend("Agg")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("path", nargs="?", type=Path)
+    main(parser.parse_args().path)

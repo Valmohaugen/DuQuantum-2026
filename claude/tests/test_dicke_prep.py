@@ -4,41 +4,19 @@ from __future__ import annotations
 
 import itertools
 import math
-import sys
 import time
-from pathlib import Path
 
 import cirq
 import cirq_google
 import numpy as np
 import pytest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # claude/dicke_prep.py loads the notebook's solution
-import dicke_prep as dp  # noqa: E402
+from claude import dicke_prep as dp
+from claude.scripts.challenge_calibration import make_challenge_calibration as fake_calibration
 
 SEED = 1234
 MAX_MOMENTS = 1750
 TIME_LIMIT_S = 60.0
-
-
-def fake_calibration(seed: int, dropout: float = 0.01):
-    """Challenge-style fake error maps (lognormal rates, random dropouts)."""
-    rng = np.random.default_rng(seed)
-    dev = cirq_google.Willow105.metadata
-    qubits = sorted(dev.qubit_set)
-    dead = {q for q in qubits if rng.random() < dropout}
-    alive = [q for q in qubits if q not in dead]
-
-    def rates(median):
-        return {q: (float(rng.lognormal(np.log(median), 0.5)), 2e-4) for q in alive}
-
-    pairs = [tuple(p) for p in dev.qubit_pairs]
-    cz = {
-        p: (float(rng.lognormal(np.log(2.5e-3), 0.5)), 5e-4)
-        for p in pairs
-        if not (set(p) & dead) and rng.random() > 0.01
-    }
-    return cz, rates(4e-4), rates(5e-3), rates(1e-2)
 
 
 CAL = fake_calibration(SEED)
@@ -116,9 +94,7 @@ def test_line_gates_logically_exact(n):
         np.testing.assert_allclose(abs(np.vdot(dicke_vector(n, k), psi)), 1, atol=1e-10)
 
 
-@pytest.mark.parametrize(
-    "n,k", [(n, k) for n in range(1, 12) for k in range(0, n + 1)]
-)
+@pytest.mark.parametrize("n,k", [(n, k) for n in range(1, 12) for k in range(0, n + 1)])
 def test_create_dicke_state_exact(n, k):
     circuit, qubits = dp.create_dicke_state(n, k, *CAL)
     check_circuit(circuit, qubits, n, k)
@@ -147,10 +123,6 @@ def test_fill_gap_folded_product_is_identity(gap_length):
     oneq[-1][q] = dp._Y
     dp._fill_gap(oneq, q, list(range(gap_length)), fold_into=gap_length)
     assert cirq.equal_up_to_global_phase(matrix_product(oneq, q), dp._Y, atol=1e-10)
-
-
-def test_simulation_is_the_default_execution_mode():
-    assert dp.HARDWARE is False
 
 
 @pytest.mark.parametrize("n,k", [(30, 1), (30, 15), (40, 20), (60, 30)])

@@ -1,11 +1,2 @@
-cirq==1.8.0.dev20261023221525
-cirq-core==1.8.0.dev20261023221525
-cirq-google==1.8.0.dev20261023221525
-numpy==2.5.4
-pytest
-nbclient
-ipykernel
-matplotlib
-nbformat
-ipywidgets==8.1.7
-jupytext==1.17.2
+# Install the complete pip-tools lock. Regenerate from requirements.in.
+-r requirements.lock
