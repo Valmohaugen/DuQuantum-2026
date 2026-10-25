@@ -16,6 +16,28 @@ Baseline at 0dc262c: total 16.615. Current: **17.473** (3 seeds, N = 2..8). Bonu
 
 ## Open
 
+### BR-110. Verified bonus portfolio exceeds 45
+Status: complete scientific checkpoint; publication being prepared
+`research/bonus_portfolio_20261025/portfolio_submission.py` scores
+**46.2165739570** over all 56 corrected bonus cases. Full complex128 amplitudes
+and relative phases, native gates, Willow edges/qubits, inclusive moment limit,
+and per-call construction time all pass (`validation.json`). Maximum state
+L2 error is 1.21e-7; the slowest observed constructor call was below 0.1 s.
+The portfolio merges independently verified complete circuits, and returns
+explicit native moments with no fitting or hidden nested circuits at runtime.
+README records both the archived 43.222 checkpoint and the current best.
+
+### BR-111. Mixed exact splitting identities shorten W-state broadcasts
+Status: complete; calibrated main-path integration is available for pickup
+`research/bonus_w_20261025/random_w_circuits.json` has W depths for N=5..15
+of **9,9,9,10,10,11,12,12,12,12,13**, all with the same CZ counts 2N-3.
+Gain relative to the former frozen W portfolio: **+1.3693639694** bonus points.
+The fresh-target split and full Givens split agree on the reachable vacuum/
+single-excitation columns; choosing identities per edge changes which local
+rotations cancel. All 11 full-state/native/device checks pass to <1.5e-15.
+The standalone bonus portfolio includes these improvements. The main constructor
+can use the same identity choices after a paired calibrated E[score] comparison.
+
 ### BR-108. Merge checked circuit pools without overwriting concurrent artifacts
 Status: full 56-case verification passed at 43.2219421632
 `research/bonus_portfolio_20261025/merge.py` reconciles the frozen 42.353
@@ -222,6 +244,10 @@ and (5,3) and help (10..12, 2..3). The first try, (8,2) from two 2x2 halves, is 
 so only worth it when the 2-row half beats the path half.
 
 ### 2. Evaluate larger N
+`ryon/traj_eval.py` (ryon): state-vector trajectories of the same noise model, so N up to ~20 fits
+(N = 12: 7 s per 10 trajectories). Unbiased squared terms; f, Z floor and X match fast_eval within
+a few 1e-3 at 300 trajectories at N = 6..8. The Z-bias term stays noisy (shots x squares), so use
+its `no-Zb` column for A/B at large N. `--kmax 4` gives the other correlator-size convention.
 `fast_eval` stops at N = 8, but the judges' N range is unknown. Add N = 9..12 (density matrix
 size 4^N, so N = 12 is about 256 MB) with fewer seeds, so changes aren't tuned to small N only.
 
