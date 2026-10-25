@@ -1,0 +1,53 @@
+{
+  "score": 48.93687446093003,
+  "baseline_score": 48.87987806686537,
+  "delta": 0.05699639406465451,
+  "improvements": [
+    {
+      "N": 13,
+      "k": 3,
+      "before": 59,
+      "depth": 57,
+      "CZ": 62,
+      "state_l2_error": 1.6737431901864692e-15,
+      "source": "ladder-6-True-standard-standard"
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "before": 75,
+      "depth": 71,
+      "CZ": 78,
+      "state_l2_error": 2.2369503838542357e-15,
+      "source": "ladder-7-True-standard-peer_faithful7"
+    }
+  ],
+  "gain_attribution": {
+    "13,3": "Offset-1 split6/7; newly polished6 and newly faithful7, both standard private half lookup.",
+    "15,3": "Offset-1 split7/8; newly faithful7 on left, line prefix plus newly faithful7 on right."
+  },
+  "attempt_count": 196,
+  "coverage_status_counts": {
+    "complete": 48
+  },
+  "attempt_status_counts": {
+    "no-depth-gain": 34,
+    "optimize-screen": 27,
+    "compile-screen": 133,
+    "accepted": 2
+  },
+  "unfinished_groups": [],
+  "search_budget_seconds": 90.0,
+  "search_seconds": 44.203991336748004,
+  "total_seconds": 46.896205212920904,
+  "all56_verified": true,
+  "max_retained_state_error": 1.486027890605259e-07,
+  "strict_new_candidate_tolerance": 1e-10,
+  "scope": "N8..15 k2/3 balanced and adjacent splits; candidates filtered to include the newly faithful7-site decoder. Only top3 compiler-ranked half options per side are compared; complete means complete within this bounded explicit generator, not exhaustive topology/placement search.",
+  "compiler": "Faithful public PhasedXZGate.from_matrix merge and commuting scheduler; no default ejection or target-gateset pass. Coefficients frozen, no new fit.",
+  "remaining_needs": [
+    "Finite native-depth construction for high-count coherent7-site decoding remains unresolved.",
+    "Exact safe ejection is still a potential compiler optimization; current52moment7-site row fails precision and remains excluded.",
+    "Any future search beyond recorded placements/top3 options needs a separate bounded ticket; no additional numerical work this turn."
+  ]
+}

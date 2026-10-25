@@ -1,0 +1,17 @@
+{
+  "cases": 56,
+  "candidate": "native_submission.py",
+  "sha256": "69229ce3b5c05aeb0ce80ed655e2e7f67c35bc528189f794ffcc699cc74547ce",
+  "sources": {
+    "primary_snapshot.py": "f39b16ce4054bcfbb5ec92ff7a75cf6e05bf60682f537500328baafcd00fad33",
+    "ensemble.py": "e3d6388d10bb483a081dcd39cb9bc645bdd5e0044fa640f994f904b139b84ccd",
+    "refine_selected.py": "3d9322842810ca2c997c829d781088c52169d4298210c98d540b25fdc56e9dcd",
+    "grid_tail.py": "3d0689cb3a9d5eff4f3fd2af0adc7894e6e5481eb957952d76e91b83906f0cef",
+    "harvest_patches.py": "70a20da00a5edc8a22d2b2bf108f79b0fd701bad35a1ead4d034c10c7e233acb",
+    "external_patches.json": "25bc9e2495183562ddc8693c7dc9146c096b11d8ed4d0f6c5d8cc505dc67095b",
+    "w_variants.py": "dee60e0c941a4f0e6e137cea70fb6ad3514c5d7352cfacf216b432c188891e66",
+    "best8_circuits.json": "39b6e6784e73406521acc1afd1f65a1616d3099494a3ff45702bad8f25170551",
+    "best8_results.json": "9bfd9001c9912c07c6a2dd212f11351bfb8c9d7588d118ec11286d96c423fb64",
+    "external_incremental_patches.json": "f67f15c7e40ae98ec9f56f867df652db178340ac08b636829f879aefc6337253"
+  }
+}

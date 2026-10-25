@@ -1,0 +1,113 @@
+{
+  "status": "Prepared only; no numerical certification, fitting, integration or state simulation run",
+  "files": [
+    {
+      "path": "research/bonus_peer_halves_20261025/baseline_circuits.json",
+      "sha256": "de95ccc2a5655a0b7eb7bc754a630ab3cb4084275b39f8f2019d464ce87a7b0f"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/baseline_results.json",
+      "sha256": "62bf48279ef1094670ada871e549b92a8290f11f35c7f93f0a92578fad3836f2"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/clean_clifford_tables.json",
+      "sha256": "d96165008545bdbece617635620b16ab6525b63c78415821cd91119f4a7979fd"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/committed_snapshot.py",
+      "sha256": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/five_complex.json",
+      "sha256": "58625bb615547fc142942b0bb0cdb46421c59c3023b2cfc68067813f81f582cc"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/five_four.json",
+      "sha256": "7ce75852af8ec9c4d4c62d46a69c9c076f8c1f0a38ec25208bf471e21342b39d"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/five_real.json",
+      "sha256": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/harvest.py",
+      "sha256": "69cc14f2da10171414a774699903c83bab1d15e8691f3e573622583abab383e8"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_00.json",
+      "sha256": "0c438f1ddcf4924cb4dac403de5790efdf26385d1a774f057c27c63b56e8b75b"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_01.json",
+      "sha256": "35349b94106ed78a92522b81e2f9b7c5d7fae6268438d554521eeb8d293ea1ab"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_02.json",
+      "sha256": "fccef10017d88c6492aaeaaaebca390d63680353b02f5aaef3e8d56a8b950497"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_03.json",
+      "sha256": "bb3d4ecf7c68ffde27db000cdf2c5b2221d9d501fd1d83868b7bc64395f1a281"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_04.json",
+      "sha256": "974a01fe2053c8dec12eef0a8abe449b534a082c0ecaf870b23bb4fc45bf3e1c"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_05.json",
+      "sha256": "5b467d45d095eb3f9a58cda65125a16fe70ae55213c173614e3a90f5bf57d1f0"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_06.json",
+      "sha256": "082794c32af865b8b908c7e6fef7f950757cd176741741c95e32bba1933d8c39"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_07.json",
+      "sha256": "386548a3d89ff2f5059bf6995d65c22a105b0e00593ea6bae8b11505eae33b2f"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_08.json",
+      "sha256": "f030570269856f46531a3a40ababe65fa07bd7e4e68cc5125666f2b4f2789194"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_09.json",
+      "sha256": "df6c44c598bc925f33de8293112afa9cefc80742dde0d740044a38265e3abcfd"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/peer_inputs.json",
+      "sha256": "15ec0fe550b1a954d7fe3a6df9f693a95cf1edeaeaf371f90a9495d311d58cb6"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/prepared_handoff.json",
+      "sha256": "aea074f5b2853227c399884898fe808f7006302cedb5004d6661d27d5aac2781"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/refined_halves.json",
+      "sha256": "4f2db62fd3eefa138e48b756843dcb0ae0b7b319143e3acff47754f917af9440"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/six_real.json",
+      "sha256": "7c16c4e27188432212472f2f648d36602cb2e39778a97ad2a7c4938b313db79d"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/snapshot.py",
+      "sha256": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba"
+    },
+    {
+      "path": "research/bonus_peer_halves_20261025/sources.json",
+      "sha256": "11b86489f6047c6301c421e37a380232efe4092bbcf5b00a3803813abe4e91a2"
+    }
+  ]
+}

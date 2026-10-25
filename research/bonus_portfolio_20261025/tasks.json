@@ -147,14 +147,14 @@
       ],
       "result_status": "completed for N8/10 seeds0..5, four detuning realizations; held-out seeds3..5; no primary gain claimed"
     },
-    "pilot_status": "Standalone export functional checks passed; promotion rejected after signed-ZZ stress regression at N10seed17. Maintained main unchanged.",
+    "pilot_status": "PORT016 fixed physical-field selector evaluated on two disjoint cohorts and exported separately; pooled positive means with disclosed confirmation/individual regressions.",
     "pilot_evidence": [
       "research/bonus_band_20261025/w_hardware_results.json",
       "research/bonus_band_20261025/w_hardware_summary.json",
       "research/bonus_band_20261025/w_zz_confirmation_manifest.json",
       "research/bonus_band_20261025/w_zz_confirmation_summary.json"
     ],
-    "next_work": "PORT016: extend Z-surrogate to heterogeneous coupling patterns and validate held-out outcomes before reconsidering promotion.",
+    "next_work": "PORT023: use remaining constructor time for direct finite-strength modeled scoring before further promotion decisions.",
     "cost_pilot_evidence": [
       "research/bonus_band_20261025/w_cost_summary.json",
       "research/bonus_band_20261025/w_tree_summary.json",
@@ -790,7 +790,7 @@
   {
     "id": "PORT-016",
     "title": "Model heterogeneous coupler interactions in W-tree placement",
-    "status": "prepared; weighted derivative checked, selector not evaluated",
+    "status": "bounded studies and standalone export complete; maintained solver unchanged",
     "assignee": "bonus-depth",
     "scope": "Separate research; preserve current baseline and frozen experimental selector. No maintained solver change until held-out stress evidence supports it.",
     "inputs": [
@@ -810,8 +810,17 @@
       "research/bonus_band_20261025/w_edge_sensitivity_checks.json",
       "research/bonus_band_20261025/w_edge_selection.py",
       "research/bonus_band_20261025/w_edge_model_plan.json",
-      "research/bonus_band_20261025/w_edge_prepared_manifest.json"
-    ]
+      "research/bonus_band_20261025/w_edge_prepared_manifest.json",
+      "research/bonus_band_20261025/w_edge_manifest.json",
+      "research/bonus_band_20261025/w_edge_confirmation_manifest.json",
+      "research/bonus_band_20261025/w_edge_confirmation_summary.json",
+      "research/bonus_band_20261025/edge_hardware_submission.py",
+      "research/bonus_band_20261025/edge_hardware_verified.json"
+    ],
+    "evaluation": "N8/N10,seeds21..26,nominal/coherent/uniformZZ/signedZZ; fixed4patterns frozen before outputs; evaluator sources frozen.",
+    "approximation_check": "Independent nonreal4q mixed-field coefficient check7.31e-11; max full-strength probability error5.79e-6. Does not bound larger circuits or mixed noise.",
+    "result": "All24 calibrated exports match evaluated selector. Pooled12-seed-per-size means positive under all4models; N10uniformZZ confirmation cohort negative and individual regressions retained. Max mainbuild1.440s; refreshed56-case bonus48.9368744609.",
+    "remaining_work": "PORT023 finite-strength density reranking; no measured hardware improvement claimed."
   },
   {
     "id": "PORT-017",
@@ -939,5 +948,1312 @@
       "research/bonus_peer_harvest_20261025/handoff_manifest.json"
     ],
     "pool_sha256": "de95ccc2a5655a0b7eb7bc754a630ab3cb4084275b39f8f2019d464ce87a7b0f"
+  },
+  {
+    "id": "PORT-018",
+    "title": "Certify and harvest fresh peer coherent half tables",
+    "status": "complete; supplied coefficients failed strict certification",
+    "assignee": "bonus-integration",
+    "scope": "Isolated research/bonus_peer_halves_20261025; freeze48.414135897467595 pool, committed and concurrent source separately; no coefficient fitting or maintained-solver edits.",
+    "proposed_search_budget_seconds": 90,
+    "inputs": [
+      "research/bonus_peer_halves_20261025/sources.json",
+      "research/bonus_peer_halves_20261025/peer_inputs.json"
+    ],
+    "acceptance": [
+      "Require common-phase native column error<1e-10 for each supported count; reject or defer uncertified peer rows without weakening the criterion.",
+      "Prioritize all-count5,5 terminal alternatives for high-weight cases and6/7/8-site k3 halves for N12..15.",
+      "Preserve every best7 depth and verify all56 retained native states/device cases after integration.",
+      "Record exact input hashes, uncommitted provenance, attempted coverage and peer needs; do not run until explicit CPU release."
+    ],
+    "search_budget_seconds": 90,
+    "CPU_release": "Root explicitly released6692 after completed96-row hardware study.",
+    "result": {
+      "status": "Strict certification screen complete; no new row certified; no coefficient fitting",
+      "score": 48.414135897467595,
+      "baseline_score": 48.414135897467595,
+      "gain": 0,
+      "search_seconds": 7.436173398047686,
+      "total_seconds": 10.037317522801459,
+      "certified_peer_names": [],
+      "column_checks": [
+        {
+          "name": "peer_03",
+          "n": 5,
+          "k": 5,
+          "depth": 59,
+          "CZ": 35,
+          "max_column_error": 3.8869444331157905e-07,
+          "column_errors": [
+            1.0618801924601423e-07,
+            1.591093137443067e-07,
+            2.667474886267776e-07,
+            2.616934180430145e-07,
+            3.8869444331157905e-07,
+            1.5015013844430457e-07
+          ],
+          "common_phase": [
+            -0.5819192200952159,
+            -0.8132465931584195
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_04",
+          "n": 5,
+          "k": 5,
+          "depth": 59,
+          "CZ": 35,
+          "max_column_error": 2.0012573588957731e-07,
+          "column_errors": [
+            5.1480813101796115e-08,
+            7.514011980892102e-08,
+            1.6190245074292893e-07,
+            1.4865517310590595e-07,
+            2.0012573588957731e-07,
+            6.754479046967604e-08
+          ],
+          "common_phase": [
+            -0.9707869843745308,
+            0.23994297441059728
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_02",
+          "n": 5,
+          "k": 3,
+          "depth": 34,
+          "CZ": 19,
+          "max_column_error": 5.5746672279840215e-08,
+          "column_errors": [
+            5.5746672279840215e-08,
+            4.875734572344366e-08,
+            2.477647989788229e-08,
+            4.031212318686919e-08
+          ],
+          "common_phase": [
+            0.7813169325952748,
+            -0.6241344813739352
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_00",
+          "n": 6,
+          "k": 3,
+          "depth": 43,
+          "CZ": 25,
+          "max_column_error": 5.986154958072205e-08,
+          "column_errors": [
+            1.8026615561707814e-08,
+            2.7799634450050796e-08,
+            3.3887700083197524e-08,
+            5.986154958072205e-08
+          ],
+          "common_phase": [
+            0.9278005066807833,
+            0.37307669426390355
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_05",
+          "n": 6,
+          "k": 3,
+          "depth": 45,
+          "CZ": 25,
+          "max_column_error": 7.846339334164779e-08,
+          "column_errors": [
+            7.846339334164779e-08,
+            7.814243609755038e-08,
+            7.557781487549373e-08,
+            7.58097630822429e-08
+          ],
+          "common_phase": [
+            0.3624747076144292,
+            0.9319936085294975
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_06",
+          "n": 6,
+          "k": 3,
+          "depth": 45,
+          "CZ": 25,
+          "max_column_error": 5.2704805316773436e-08,
+          "column_errors": [
+            1.586020346312931e-08,
+            2.256613989569362e-08,
+            5.2704805316773436e-08,
+            4.105240569965172e-08
+          ],
+          "common_phase": [
+            0.7658543587098476,
+            0.6430140754642374
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_01",
+          "n": 7,
+          "k": 3,
+          "depth": 52,
+          "CZ": 32,
+          "max_column_error": 1.2344816651298385e-07,
+          "column_errors": [
+            6.85055511962417e-08,
+            7.59497934997992e-08,
+            8.973594038740046e-08,
+            1.2344816651298385e-07
+          ],
+          "common_phase": [
+            -0.3377109652126277,
+            -0.9412498626693953
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_07",
+          "n": 7,
+          "k": 3,
+          "depth": 52,
+          "CZ": 32,
+          "max_column_error": 5.68203112772294e-07,
+          "column_errors": [
+            8.186974280111327e-08,
+            1.945541991883849e-07,
+            4.865143943802288e-07,
+            5.68203112772294e-07
+          ],
+          "common_phase": [
+            0.9167509620032538,
+            -0.3994592265377142
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_08",
+          "n": 8,
+          "k": 3,
+          "depth": 65,
+          "CZ": 40,
+          "max_column_error": 1.869836393206661e-07,
+          "column_errors": [
+            9.94979703332693e-08,
+            9.583944942802724e-08,
+            9.202671424695824e-08,
+            1.869836393206661e-07
+          ],
+          "common_phase": [
+            -0.6996601067510348,
+            0.7144758463525067
+          ],
+          "accepted": false
+        },
+        {
+          "name": "peer_09",
+          "n": 8,
+          "k": 3,
+          "depth": 67,
+          "CZ": 40,
+          "max_column_error": 1.242618253923246e-07,
+          "column_errors": [
+            6.109687245492719e-08,
+            1.1492562891916775e-07,
+            1.242618253923246e-07,
+            1.1107644987436491e-07
+          ],
+          "common_phase": [
+            -0.6272880733373425,
+            0.7787873092499165
+          ],
+          "accepted": false
+        }
+      ],
+      "all56_retained_cases_verified": true,
+      "max_retained_state_error": 1.486027890605259e-07,
+      "interpretation": "Rejection concerns numerical precision of supplied coefficients, not impossibility of their fixed topologies.",
+      "next_work": "Matched-pipeline comparison of six/seven-site r0..3 alternatives before any narrowly gated precision repair. Defer five-site all-count rows and eight-site repair until a matching certified comparator exists."
+    },
+    "artifacts": [
+      "research/bonus_peer_halves_20261025/peer_column_checks.json",
+      "research/bonus_peer_halves_20261025/harvest_results.json",
+      "research/bonus_peer_halves_20261025/sources.json",
+      "research/bonus_peer_halves_20261025/matched_range_comparison.json",
+      "research/bonus_peer_halves_20261025/handoff_summary.json",
+      "research/bonus_peer_halves_20261025/handoff_manifest.json"
+    ]
+  },
+  {
+    "id": "PORT-019",
+    "title": "Audit controlled reversal and spin-flip-symmetric decoder reachability",
+    "status": "complete; Rx/ZZ obstruction proved and XX algebra screened",
+    "assignee": "coordination-research",
+    "scope": "Exact Boolean/Pauli/antiunitary analysis in research/bonus_spinflip_audit_20261025; no fitting, dense matrices or hardware changes.",
+    "inputs": [
+      "research/bonus_band_20261025/symmetry_decoder_research.json"
+    ],
+    "acceptance": [
+      "Verify odd-n controlled-reversal identities and count native controlled-swap/routing costs.",
+      "Independently test the bipartite antiunitary obstruction for Rx/ZZ-only exact low-column mapping.",
+      "Compare sparse Pauli Lie closures for path/branched graphs and distinguish algebra dimension from finite native depth or isometry reachability."
+    ],
+    "results": {
+      "path_dimensions": [
+        15,
+        45,
+        91
+      ],
+      "branched_dimensions": [
+        255,
+        4095
+      ],
+      "plus_XX_dimensions": [
+        30,
+        510,
+        8190
+      ],
+      "no_go": "Exact ancilla-free low-column decoder impossible for Rx/ZZ-only on connected bipartite graph, by preserved antiunitary overlap.",
+      "caveat": "XX reaches full noncentral global-X-preserving algebra for tested n3,5,7 only; no finite CZ-depth result.",
+      "controlled_reversal_unrouted_CZ": [
+        8,
+        16,
+        24
+      ],
+      "controlled_reversal_path_routing_CZ_upper_bounds": [
+        32,
+        136,
+        312
+      ],
+      "generic_rotation_primitives": "ZZ: Ht,CZ,Rxt,CZ,Ht; XX: Hc,CZ,Rxt,CZ,Hc. Each uses2CZ +3single-qubit gates,5 serial native moments before special-angle simplification."
+    },
+    "artifacts": [
+      "research/bonus_spinflip_audit_20261025/audit.py",
+      "research/bonus_spinflip_audit_20261025/audit_results.json",
+      "research/bonus_spinflip_audit_20261025/handoff_manifest.json"
+    ]
+  },
+  {
+    "id": "PORT-020",
+    "title": "Compare matched-range half schedules before conditional precision repair",
+    "status": "complete; faithful seven-site decoder certified, integration tracked by PORT-022",
+    "assignee": "bonus-precision",
+    "scope": "Six/seven-site r0..3 fixed topology only; first recompile existing certified alternatives with the same pipeline. No broad topology fitting. Ryon retains half-synthesis ownership.",
+    "inputs": [
+      "research/bonus_peer_halves_20261025/peer_00.json",
+      "research/bonus_peer_halves_20261025/peer_01.json",
+      "research/bonus_peer_halves_20261025/matched_range_comparison.json"
+    ],
+    "acceptance": [
+      "First compare native depths using identical compilation/optimization/scheduling for the same coherent r0..3 range.",
+      "CPU released by root; combined fixed-topology numerical polish budget<=60s, then targeted integration<=90s plus all56 retained checks.",
+      "Require one common-phase column error<1e-10 and retain every prior best; no acceptance-threshold relaxation.",
+      "Defer5,5 dominated candidates and8,3 until a matched certified comparison is available."
+    ],
+    "results": {
+      "score": 48.51972588602354,
+      "baseline_score": 48.414135897467595,
+      "improvements": [
+        {
+          "N": 13,
+          "k": 3,
+          "before": 62,
+          "depth": 59,
+          "CZ": 61,
+          "state_l2_error": 2.0664832714903375e-15,
+          "source": "ladder-7-True-standard-standard"
+        },
+        {
+          "N": 14,
+          "k": 3,
+          "before": 65,
+          "depth": 59,
+          "CZ": 67,
+          "state_l2_error": 2.1638214756365507e-15,
+          "source": "ladder-7-True-standard-standard"
+        },
+        {
+          "N": 15,
+          "k": 3,
+          "before": 76,
+          "depth": 75,
+          "CZ": 76,
+          "state_l2_error": 2.3712846279963463e-15,
+          "source": "ladder-8-True-peer_certified7-standard"
+        }
+      ],
+      "gain_attribution": {
+        "13,3": "Existing certified7 plus newly polished6 at split7/6.",
+        "14,3": "Existing certified7 on both sides at split7/7; no polished6.",
+        "15,3": "Line prefix + existing certified7 on left8; existing certified7 on right7; no polished6."
+      },
+      "attempts": 78,
+      "coverage_status_counts": {
+        "complete": 4,
+        "partial": 1,
+        "not-started": 43
+      },
+      "unfinished_groups": [
+        {
+          "N": 11,
+          "k": 3,
+          "offset": 0,
+          "status": "partial"
+        },
+        {
+          "N": 10,
+          "k": 3,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 9,
+          "k": 3,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 8,
+          "k": 3,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 12,
+          "k": 2,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 13,
+          "k": 2,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 14,
+          "k": 2,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 15,
+          "k": 2,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 11,
+          "k": 2,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 10,
+          "k": 2,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 9,
+          "k": 2,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 8,
+          "k": 2,
+          "offset": 0,
+          "status": "not-started"
+        },
+        {
+          "N": 12,
+          "k": 3,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 13,
+          "k": 3,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 14,
+          "k": 3,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 15,
+          "k": 3,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 11,
+          "k": 3,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 10,
+          "k": 3,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 9,
+          "k": 3,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 8,
+          "k": 3,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 12,
+          "k": 2,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 13,
+          "k": 2,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 14,
+          "k": 2,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 15,
+          "k": 2,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 11,
+          "k": 2,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 10,
+          "k": 2,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 9,
+          "k": 2,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 8,
+          "k": 2,
+          "offset": -1,
+          "status": "not-started"
+        },
+        {
+          "N": 12,
+          "k": 3,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 13,
+          "k": 3,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 14,
+          "k": 3,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 15,
+          "k": 3,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 11,
+          "k": 3,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 10,
+          "k": 3,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 9,
+          "k": 3,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 8,
+          "k": 3,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 12,
+          "k": 2,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 13,
+          "k": 2,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 14,
+          "k": 2,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 15,
+          "k": 2,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 11,
+          "k": 2,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 10,
+          "k": 2,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 9,
+          "k": 2,
+          "offset": 1,
+          "status": "not-started"
+        },
+        {
+          "N": 8,
+          "k": 2,
+          "offset": 1,
+          "status": "not-started"
+        }
+      ],
+      "search_budget_seconds": 90,
+      "actual_search_seconds": 90.70649225637317,
+      "budget_note": "Deadline checked between candidates; final in-flight candidate overran by0.7065s; validation separate.",
+      "all56_verified": true,
+      "max_retained_error": 1.486027890605259e-07,
+      "raw_precision": [
+        {
+          "n": 6,
+          "raw_common_phase_column_errors": [
+            5.26768751598885e-16,
+            6.384254937119406e-16,
+            5.343737017186696e-16,
+            7.287427699889693e-16
+          ],
+          "raw_max_error": 7.287427699889693e-16,
+          "raw_accepted": true
+        },
+        {
+          "n": 7,
+          "raw_common_phase_column_errors": [
+            7.435174986129697e-16,
+            7.745413922868109e-16,
+            7.283580180037768e-16,
+            7.072676781250348e-16
+          ],
+          "raw_max_error": 7.745413922868109e-16,
+          "raw_accepted": true
+        }
+      ],
+      "seven_site_diagnosis": "Raw polished common-phase columns pass7.75e-16; native pipeline loses precision at1.06e-8. Excluded. Local merge/drop/eject_phased_paulis/CZTargetGateset default tolerances1e-8 require private audit; no refit.",
+      "next_work": "Audit explicit compiler tolerances; finish precise coverage without repeating unaffected groups; harvest fresh peer whole-state tables separately.",
+      "strict_public_tolerance_audit": {
+        "atol": 1e-12,
+        "seconds": 1.2980930227786303,
+        "checks": [
+          {
+            "stage": "raw",
+            "depth": 54,
+            "CZ": 32,
+            "max_column_error": 1.2151858673485023e-15,
+            "column_errors": [
+              1.1404365557097217e-15,
+              9.361169071028492e-16,
+              1.142604904443772e-15,
+              1.2151858673485023e-15
+            ],
+            "accepted": true
+          },
+          {
+            "stage": "default-merge",
+            "depth": 53,
+            "CZ": 32,
+            "max_column_error": 1.0634054953714467e-08,
+            "column_errors": [
+              5.959115298215944e-09,
+              8.619575564721211e-09,
+              1.000771906941379e-08,
+              1.0634054953714467e-08
+            ],
+            "accepted": false
+          },
+          {
+            "stage": "default-drop",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 1.0634054882222025e-08,
+            "column_errors": [
+              5.959115305116496e-09,
+              8.619575639537722e-09,
+              1.000771902368989e-08,
+              1.0634054882222025e-08
+            ],
+            "accepted": false
+          },
+          {
+            "stage": "default-optimize-schedule",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 1.0634054882222025e-08,
+            "column_errors": [
+              5.959115305116496e-09,
+              8.619575639537722e-09,
+              1.000771902368989e-08,
+              1.0634054882222025e-08
+            ],
+            "accepted": false
+          },
+          {
+            "stage": "strict-compile",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.659194393122085e-09,
+            "column_errors": [
+              8.071278214524778e-09,
+              8.370399213631339e-09,
+              8.564011267281372e-09,
+              8.659194393122085e-09
+            ],
+            "accepted": false
+          },
+          {
+            "stage": "strict-eject-0",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.65919449208425e-09,
+            "column_errors": [
+              8.07127828911026e-09,
+              8.37039925986699e-09,
+              8.56401142538992e-09,
+              8.65919449208425e-09
+            ],
+            "accepted": false
+          },
+          {
+            "stage": "strict-eject-1",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.659194519407165e-09,
+            "column_errors": [
+              8.071278367205488e-09,
+              8.370399162615643e-09,
+              8.564011374017304e-09,
+              8.659194519407165e-09
+            ],
+            "accepted": false
+          },
+          {
+            "stage": "strict-eject-2",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.659194519407165e-09,
+            "column_errors": [
+              8.071278367205488e-09,
+              8.370399162615643e-09,
+              8.564011374017304e-09,
+              8.659194519407165e-09
+            ],
+            "accepted": false
+          },
+          {
+            "stage": "strict-gateset",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.659194450397965e-09,
+            "column_errors": [
+              8.071278346270069e-09,
+              8.370399284994507e-09,
+              8.564011466053133e-09,
+              8.659194450397965e-09
+            ],
+            "accepted": false
+          },
+          {
+            "stage": "strict-final-schedule",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.659194393122085e-09,
+            "column_errors": [
+              8.071278214524778e-09,
+              8.370399213631339e-09,
+              8.564011267281372e-09,
+              8.659194393122085e-09
+            ],
+            "accepted": false
+          }
+        ],
+        "final": {
+          "stage": "strict-final-schedule",
+          "depth": 52,
+          "CZ": 32,
+          "max_column_error": 8.659194393122085e-09,
+          "column_errors": [
+            8.071278214524778e-09,
+            8.370399213631339e-09,
+            8.564011267281372e-09,
+            8.659194393122085e-09
+          ],
+          "accepted": false
+        },
+        "strict_depth_opportunity": false,
+        "no_refit": true
+      },
+      "compiler_next_step": "Certified53-moment/32CZ seven-site r0..3 decoder;53moment pre-ejection stage only.52moment ejection still fails8.66e-9. Separate PORT022 integration prepared, not run.",
+      "faithful_compiler_audit": {
+        "seconds": 0.525751338340342,
+        "checks": [
+          {
+            "stage": "direct-analytic-Ry-Z-conversion",
+            "depth": 54,
+            "CZ": 32,
+            "max_column_error": 1.71337911096862e-15,
+            "accepted": true
+          },
+          {
+            "stage": "direct-analytic-schedule",
+            "depth": 54,
+            "CZ": 32,
+            "max_column_error": 1.71337911096862e-15,
+            "accepted": true
+          },
+          {
+            "stage": "faithful-merge",
+            "depth": 53,
+            "CZ": 32,
+            "max_column_error": 1.224911097013102e-15,
+            "accepted": true
+          },
+          {
+            "stage": "faithful-schedule",
+            "depth": 53,
+            "CZ": 32,
+            "max_column_error": 1.224911097013102e-15,
+            "accepted": true
+          },
+          {
+            "stage": "faithful-eject-0",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.659194098026619e-09,
+            "accepted": false
+          },
+          {
+            "stage": "faithful-eject-1",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.65919414335672e-09,
+            "accepted": false
+          },
+          {
+            "stage": "faithful-eject-2",
+            "depth": 52,
+            "CZ": 32,
+            "max_column_error": 8.65919416899541e-09,
+            "accepted": false
+          }
+        ],
+        "best": {
+          "stage": "faithful-merge",
+          "depth": 53,
+          "CZ": 32,
+          "max_column_error": 1.224911097013102e-15,
+          "accepted": true
+        },
+        "strict_depth_opportunity": true,
+        "no_refit": true,
+        "witness_rows": [
+          {
+            "name": "near-half-turn--1e-08",
+            "default_merge_error": 7.02166695455248e-16,
+            "faithful_matrix_error": 3.723801229870911e-16
+          },
+          {
+            "name": "near-half-turn--1e-09",
+            "default_merge_error": 7.130536482749599e-16,
+            "faithful_matrix_error": 3.1401849173675503e-16
+          },
+          {
+            "name": "near-half-turn--5e-10",
+            "default_merge_error": 1.1107208600692468e-09,
+            "faithful_matrix_error": 2.7755575615628914e-16
+          },
+          {
+            "name": "near-half-turn--1e-10",
+            "default_merge_error": 2.2214430409509754e-10,
+            "faithful_matrix_error": 3.7238012298709097e-16
+          },
+          {
+            "name": "near-half-turn-0.0",
+            "default_merge_error": 2.3551386880256624e-16,
+            "faithful_matrix_error": 8.455206652451151e-16
+          },
+          {
+            "name": "near-half-turn-1e-10",
+            "default_merge_error": 2.2214413090295686e-10,
+            "faithful_matrix_error": 1.8772256780889594e-16
+          },
+          {
+            "name": "near-half-turn-5e-10",
+            "default_merge_error": 1.1107206868778275e-09,
+            "faithful_matrix_error": 2.8541562887069247e-16
+          },
+          {
+            "name": "near-half-turn-1e-09",
+            "default_merge_error": 2.2214414603512395e-09,
+            "faithful_matrix_error": 3.4859923109503855e-16
+          },
+          {
+            "name": "near-half-turn-1e-08",
+            "default_merge_error": 3.835254025219435e-16,
+            "faithful_matrix_error": 3.112386909543786e-16
+          },
+          {
+            "name": "fixed-random-unitary-0",
+            "default_merge_error": 1.6883057536160649e-16,
+            "faithful_matrix_error": 2.5589376332604516e-16
+          },
+          {
+            "name": "fixed-random-unitary-1",
+            "default_merge_error": 5.620075719058478e-16,
+            "faithful_matrix_error": 6.101493737192989e-16
+          },
+          {
+            "name": "fixed-random-unitary-2",
+            "default_merge_error": 3.908020529499657e-16,
+            "faithful_matrix_error": 3.908020529499657e-16
+          },
+          {
+            "name": "fixed-random-unitary-3",
+            "default_merge_error": 2.2929868617541516e-16,
+            "faithful_matrix_error": 2.2929868617541516e-16
+          },
+          {
+            "name": "fixed-random-unitary-4",
+            "default_merge_error": 3.389598180387331e-16,
+            "faithful_matrix_error": 3.389598180387331e-16
+          },
+          {
+            "name": "fixed-random-unitary-5",
+            "default_merge_error": 4.728641100182568e-16,
+            "faithful_matrix_error": 6.355057114912527e-16
+          },
+          {
+            "name": "fixed-random-unitary-6",
+            "default_merge_error": 8.444665240007941e-16,
+            "faithful_matrix_error": 6.69531352229514e-16
+          },
+          {
+            "name": "fixed-random-unitary-7",
+            "default_merge_error": 7.656716496459005e-16,
+            "faithful_matrix_error": 9.38778750585887e-16
+          },
+          {
+            "name": "fixed-random-unitary-8",
+            "default_merge_error": 2.947243623411584e-16,
+            "faithful_matrix_error": 4.840375884166904e-16
+          },
+          {
+            "name": "fixed-random-unitary-9",
+            "default_merge_error": 3.466670283279959e-16,
+            "faithful_matrix_error": 3.1401849173675503e-16
+          },
+          {
+            "name": "fixed-random-unitary-10",
+            "default_merge_error": 4.98406311797409e-16,
+            "faithful_matrix_error": 3.730260560362745e-16
+          },
+          {
+            "name": "fixed-random-unitary-11",
+            "default_merge_error": 6.18535353437881e-16,
+            "faithful_matrix_error": 3.467364658907009e-16
+          },
+          {
+            "name": "fixed-random-unitary-12",
+            "default_merge_error": 4.2276033262255756e-16,
+            "faithful_matrix_error": 3.640109616122045e-16
+          },
+          {
+            "name": "fixed-random-unitary-13",
+            "default_merge_error": 9.473559806558736e-16,
+            "faithful_matrix_error": 4.20934145542537e-16
+          },
+          {
+            "name": "fixed-random-unitary-14",
+            "default_merge_error": 8.044330061068549e-16,
+            "faithful_matrix_error": 5.775561153410717e-16
+          },
+          {
+            "name": "fixed-random-unitary-15",
+            "default_merge_error": 2.1677797545656835e-16,
+            "faithful_matrix_error": 2.897767167584095e-16
+          },
+          {
+            "name": "fixed-random-unitary-16",
+            "default_merge_error": 4.3534301830838683e-16,
+            "faithful_matrix_error": 4.3534301830838683e-16
+          },
+          {
+            "name": "fixed-random-unitary-17",
+            "default_merge_error": 5.593454384060948e-16,
+            "faithful_matrix_error": 5.666999366742259e-16
+          },
+          {
+            "name": "fixed-random-unitary-18",
+            "default_merge_error": 2.5589376332604516e-16,
+            "faithful_matrix_error": 2.5438405243138006e-16
+          },
+          {
+            "name": "fixed-random-unitary-19",
+            "default_merge_error": 6.897483921780876e-16,
+            "faithful_matrix_error": 5.589256426768789e-16
+          },
+          {
+            "name": "fixed-random-unitary-20",
+            "default_merge_error": 5.701727585675814e-16,
+            "faithful_matrix_error": 5.701727585675814e-16
+          },
+          {
+            "name": "fixed-random-unitary-21",
+            "default_merge_error": 6.197407354365409e-16,
+            "faithful_matrix_error": 4.51454910666369e-16
+          },
+          {
+            "name": "fixed-random-unitary-22",
+            "default_merge_error": 5.295426327528139e-16,
+            "faithful_matrix_error": 3.640109616122045e-16
+          },
+          {
+            "name": "fixed-random-unitary-23",
+            "default_merge_error": 2.603703785810335e-16,
+            "faithful_matrix_error": 3.4219371797089426e-16
+          },
+          {
+            "name": "fixed-random-unitary-24",
+            "default_merge_error": 6.449812927423887e-16,
+            "faithful_matrix_error": 6.449812927423887e-16
+          },
+          {
+            "name": "fixed-random-unitary-25",
+            "default_merge_error": 6.353541660708338e-16,
+            "faithful_matrix_error": 6.911082593979286e-16
+          },
+          {
+            "name": "fixed-random-unitary-26",
+            "default_merge_error": 1.21935143296219e-15,
+            "faithful_matrix_error": 4.742874840267547e-16
+          },
+          {
+            "name": "fixed-random-unitary-27",
+            "default_merge_error": 4.355503409735122e-16,
+            "faithful_matrix_error": 4.355503409735122e-16
+          },
+          {
+            "name": "fixed-random-unitary-28",
+            "default_merge_error": 4.3709524189038457e-16,
+            "faithful_matrix_error": 3.5652682413747997e-16
+          },
+          {
+            "name": "fixed-random-unitary-29",
+            "default_merge_error": 2.7694793740922077e-16,
+            "faithful_matrix_error": 2.7694793740922077e-16
+          },
+          {
+            "name": "fixed-random-unitary-30",
+            "default_merge_error": 3.5760557644884744e-16,
+            "faithful_matrix_error": 3.5760557644884744e-16
+          },
+          {
+            "name": "fixed-random-unitary-31",
+            "default_merge_error": 4.484050470211362e-16,
+            "faithful_matrix_error": 3.764949453935611e-16
+          }
+        ],
+        "max_local_matrix_error": 5.661048867003676e-16,
+        "implementation": "Direct Ry/Z->PhasedXZ parameters and public Cirq PhasedXZGate.from_matrix; no library edits or copied package code."
+      }
+    },
+    "artifacts": [
+      "research/bonus_matched_half_precision_20261025/handoff_summary.json",
+      "research/bonus_matched_half_precision_20261025/handoff_manifest.json",
+      "research/bonus_matched_half_precision_20261025/harvest_circuits.json",
+      "research/bonus_matched_half_precision_20261025/harvest_results.json"
+    ]
+  },
+  {
+    "id": "PORT-021",
+    "title": "Harvest five new peer whole-state tables from frozen0dc1b2c",
+    "status": "complete; all five peer candidates and all56 retained cases verified",
+    "assignee": "bonus-integration",
+    "scope": "No-fit native compilation of (8,3),(9,3),(9,4),(10,5),(10,4); preserve PORT020 retained pool and all56 checks. No maintained-source edits.",
+    "inputs": [
+      "research/bonus_fresh_whole_harvest_20261025/sources.json"
+    ],
+    "acceptance": [
+      "Freeze clean committed coefficients, not concurrent working edits.",
+      "Bound candidate construction/checks to60s; retain only strict depth improvements.",
+      "Validate all56 retained native/device/state circuits; record every tested candidate and exact input hashes."
+    ],
+    "results": {
+      "score": 48.87987806686537,
+      "baseline_score": 48.51972588602354,
+      "delta": 0.36015218084183687,
+      "improvements": [
+        {
+          "N": 9,
+          "k": 3,
+          "source": "0dc1b2c-line",
+          "baseline_depth": 33,
+          "compiled_depth": 29,
+          "optimized_depth": 29,
+          "CZ": 33,
+          "state_l2_error": 8.713499910934055e-08,
+          "seconds": 1.173430884256959,
+          "accepted": true
+        },
+        {
+          "N": 9,
+          "k": 4,
+          "source": "0dc1b2c-patch",
+          "baseline_depth": 30,
+          "compiled_depth": 29,
+          "optimized_depth": 29,
+          "CZ": 33,
+          "state_l2_error": 3.220639057542116e-08,
+          "seconds": 2.216798280365765,
+          "accepted": true
+        },
+        {
+          "N": 10,
+          "k": 5,
+          "source": "0dc1b2c-line",
+          "baseline_depth": 37,
+          "compiled_depth": 35,
+          "optimized_depth": 35,
+          "CZ": 42,
+          "state_l2_error": 1.0767229558167871e-07,
+          "seconds": 3.3732954170554876,
+          "accepted": true
+        },
+        {
+          "N": 10,
+          "k": 4,
+          "source": "0dc1b2c-line",
+          "baseline_depth": 42,
+          "compiled_depth": 37,
+          "optimized_depth": 37,
+          "CZ": 45,
+          "state_l2_error": 1.418538326537195e-07,
+          "seconds": 4.599233315326273,
+          "accepted": true
+        }
+      ],
+      "all56_verified": true,
+      "max_retained_state_error": 1.486027890605259e-07,
+      "construction_seconds": 5.112930400297046,
+      "total_seconds": 7.725326801650226,
+      "coverage": [
+        {
+          "N": 8,
+          "k": 3,
+          "status": "complete",
+          "sources": [
+            "line"
+          ]
+        },
+        {
+          "N": 9,
+          "k": 3,
+          "status": "complete",
+          "sources": [
+            "line"
+          ]
+        },
+        {
+          "N": 9,
+          "k": 4,
+          "status": "complete",
+          "sources": [
+            "patch"
+          ]
+        },
+        {
+          "N": 10,
+          "k": 5,
+          "status": "complete",
+          "sources": [
+            "line"
+          ]
+        },
+        {
+          "N": 10,
+          "k": 4,
+          "status": "complete",
+          "sources": [
+            "line"
+          ]
+        }
+      ],
+      "source_commit": "0dc1b2cef14c54d69143fb2da60db8651a1e271e"
+    },
+    "artifacts": [
+      "research/bonus_fresh_whole_harvest_20261025/harvest_circuits.json",
+      "research/bonus_fresh_whole_harvest_20261025/harvest_results.json",
+      "research/bonus_fresh_whole_harvest_20261025/handoff_manifest.json"
+    ]
+  },
+  {
+    "id": "PORT-022",
+    "title": "Integrate certified seven-site decoder with faithful native compilation",
+    "status": "complete; bounded faithful integration and all56 checks passed",
+    "assignee": "bonus-integration",
+    "scope": "Reuse fixed coefficients and certified53moment seven-site r0..3 decoder; no fitting or package edits. Use analytical PhasedXZ conversion, no lossy eject/gateset optimization.",
+    "inputs": [
+      "research/bonus_faithful_terminal_integration_20261025/sources.json"
+    ],
+    "acceptance": [
+      "Only alternatives using the newly certified7-site decoder; freeze48.87987806686537 baseline.",
+      "Require new candidate state error<1e-10 and native column certificate<1e-10; validate all56 retained cases with incumbent criterion.",
+      "Bound integration to90s plus retained-pool validation after explicit CPU release; preserve every best depth.",
+      "Record exact coverage, failed precision candidates, and gains; no new topology search."
+    ],
+    "results": {
+      "score": 48.93687446093003,
+      "baseline_score": 48.87987806686537,
+      "delta": 0.05699639406465451,
+      "improvements": [
+        {
+          "N": 13,
+          "k": 3,
+          "before": 59,
+          "depth": 57,
+          "CZ": 62,
+          "state_l2_error": 1.6737431901864692e-15,
+          "source": "ladder-6-True-standard-standard"
+        },
+        {
+          "N": 15,
+          "k": 3,
+          "before": 75,
+          "depth": 71,
+          "CZ": 78,
+          "state_l2_error": 2.2369503838542357e-15,
+          "source": "ladder-7-True-standard-peer_faithful7"
+        }
+      ],
+      "gain_attribution": {
+        "13,3": "Offset-1 split6/7; newly polished6 and newly faithful7, both standard private half lookup.",
+        "15,3": "Offset-1 split7/8; newly faithful7 on left, line prefix plus newly faithful7 on right."
+      },
+      "attempt_count": 196,
+      "coverage_status_counts": {
+        "complete": 48
+      },
+      "attempt_status_counts": {
+        "no-depth-gain": 34,
+        "optimize-screen": 27,
+        "compile-screen": 133,
+        "accepted": 2
+      },
+      "unfinished_groups": [],
+      "search_budget_seconds": 90.0,
+      "search_seconds": 44.203991336748004,
+      "total_seconds": 46.896205212920904,
+      "all56_verified": true,
+      "max_retained_state_error": 1.486027890605259e-07,
+      "strict_new_candidate_tolerance": 1e-10,
+      "scope": "N8..15 k2/3 balanced and adjacent splits; candidates filtered to include the newly faithful7-site decoder. Only top3 compiler-ranked half options per side are compared; complete means complete within this bounded explicit generator, not exhaustive topology/placement search.",
+      "compiler": "Faithful public PhasedXZGate.from_matrix merge and commuting scheduler; no default ejection or target-gateset pass. Coefficients frozen, no new fit.",
+      "remaining_needs": [
+        "Finite native-depth construction for high-count coherent7-site decoding remains unresolved.",
+        "Exact safe ejection is still a potential compiler optimization; current52moment7-site row fails precision and remains excluded.",
+        "Any future search beyond recorded placements/top3 options needs a separate bounded ticket; no additional numerical work this turn."
+      ]
+    },
+    "artifacts": [
+      "research/bonus_faithful_terminal_integration_20261025/harvest_circuits.json",
+      "research/bonus_faithful_terminal_integration_20261025/harvest_results.json",
+      "research/bonus_faithful_terminal_integration_20261025/handoff_summary.json",
+      "research/bonus_faithful_terminal_integration_20261025/handoff_manifest.json"
+    ]
+  },
+  {
+    "id": "PORT-023",
+    "title": "Use constructor time for finite-strength W-candidate reranking",
+    "status": "assigned; proposal only",
+    "assignee": "bonus-depth",
+    "scope": "Separate research based on density_rerank_plan.json; preserve all baseline/bonus behavior until independently validated.",
+    "inputs": [
+      "research/bonus_band_20261025/density_rerank_plan.json",
+      "research/bonus_band_20261025/w_edge_selection.py",
+      "research/bonus_band_20261025/w_edge_confirmation_summary.json"
+    ],
+    "acceptance": [
+      "Freeze scenario and shot-sampling seeds before unseen evaluation calibrations.",
+      "Rank actual E[1/penalty], not reciprocal mean penalty.",
+      "Measure full constructors under60s; retain baseline if comparison cannot finish.",
+      "Report N8/N10 matched noise-model outcomes, including regressions and calibration uncertainty."
+    ]
+  },
+  {
+    "id": "PORT-024",
+    "title": "Screen a symmetry decoder with an added XX Clifford block",
+    "status": "available; cost and reachability screen before fitting",
+    "assignee": null,
+    "scope": "Follow PORT019 obstruction; do not repeat the impossible Rx/ZZ-only family or overlap broad ryon half synthesis.",
+    "inputs": [
+      "research/bonus_band_20261025/symmetric_clifford_decoder_plan.json",
+      "research/bonus_spinflip_audit_20261025/audit_results.json"
+    ],
+    "acceptance": [
+      "Verify each block commutes with globalX up to phase and addedXX breaks the antiunitary witness.",
+      "Check fixed-Clifford conjugation closure separately; continuous-generator reachability does not prove a shallow fixed-angle ansatz.",
+      "Fit only the lower unary columns with one common phase, then independently verify all upper columns after controlled reversal.",
+      "Respect ryon half-synthesis ownership and use an isolated small pilot only after cost/reachability screening."
+    ]
   }
 ]

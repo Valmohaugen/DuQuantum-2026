@@ -396,3 +396,49 @@ native-gate and device checks pass; maximum constructor time is
 [checkpoint summary](research/bonus_band_20261025/milestones/20261025T074513Z/summary.json) are frozen copies.
 The native main entry point is unchanged; the separate experimental W selector
 is still unpromoted after its signed-coupling regression. Research continues.
+
+
+## Verified bonus checkpoint — 2026-10-25
+
+Best corrected 56-case bonus score: **48.5197258860**. Native depths
+improved for D(13,3), **62 → 59**; D(14,3), **65 → 59**; and D(15,3),
+**76 → 75**, adding **0.1055899886** points. The first uses a newly
+precision-certified six-site decoder; the other two reuse an existing certified
+seven-site decoder in newly checked combinations. All 56 state/native/device
+checks pass. Maximum constructor time: **0.002485 s**;
+maximum state L2 error: **1.49e-07**.
+[Standalone bonus candidate](research/bonus_band_20261025/milestones/20261025T082016Z/submission.py),
+[validation](research/bonus_band_20261025/milestones/20261025T082016Z/validation.json), and
+[summary](research/bonus_band_20261025/milestones/20261025T082016Z/summary.json) are frozen copies.
+The native main prefix is unchanged. Research continues beyond this checkpoint.
+
+
+## Verified bonus checkpoint — 2026-10-25
+
+Best corrected 56-case bonus score: **48.9368744609**, up
+**0.5227385635** from the previous published best.
+This combines four fresh peer circuits with a faithful seven-site decoder;
+D(13,3) now uses **57 moments**, and D(15,3) uses **71**. All 56 standalone
+state/native/device checks pass. Maximum construction time: **0.002592 s**;
+maximum state L2 error: **1.49e-07**.
+[Standalone bonus candidate](research/bonus_band_20261025/milestones/20261025T082924Z/submission.py),
+[validation](research/bonus_band_20261025/milestones/20261025T082924Z/validation.json), and
+[summary](research/bonus_band_20261025/milestones/20261025T082924Z/summary.json) are immutable copies.
+
+A separate [combined research candidate](research/bonus_band_20261025/edge_hardware_submission.py)
+uses maintained main tables from commit0dc1b2c, this bonus cache, and the
+fixed-pattern W selector for N8/N10. Its24 calibrated outputs match the evaluated
+selector; maximum measured main construction time was **1.440 s**.
+[Export verification](research/bonus_band_20261025/edge_hardware_verified.json)
+records exact bonus equality and unchanged-main checks across the cache refresh.
+Across12 calibration seeds per size, pooled score changes are positive under
+all four assumed models. However, N10 uniform-ZZ was negative in the confirmation
+cohort alone, and individual regressions remain. These are **simulated results**,
+not measured hardware gains; the maintained solver is unchanged.
+[Full results and uncertainty](research/bonus_band_20261025/w_edge_confirmation_summary.json).
+
+The [compiler audit](research/bonus_matched_half_precision_20261025/faithful_native_results.json)
+keeps the accurate53-moment decoder; the inaccurate52-moment conversion is excluded.
+The [symmetry audit](research/bonus_spinflip_audit_20261025/audit_results.json)
+rules out one restricted decoder family and records the limits of its proposed extension.
+Research and ticket handoffs continue.

@@ -1,0 +1,14 @@
+{
+  "status": "complete reserved confirmation",
+  "files": {
+    "research/bonus_band_20261025/w_edge_confirmation.py": "0b5567b3194cf3e74e03898ee15529664c58f9d4624e868c33e759f2c934f3d8",
+    "research/bonus_band_20261025/w_edge_confirmation_results.json": "9716daf9cacd70739815a7efbb202f53c1d40bc1b726c45422348e2327bf8c41",
+    "research/bonus_band_20261025/w_edge_confirmation_selections.json": "ff0d2be6824386e270d5002276b98163ead9e706adf3c48f31f268fd2d96059e",
+    "research/bonus_band_20261025/w_edge_confirmation_summary.json": "e0d8f7009fff9a774e8ad308622842a3dc591acccf4a0616e0530137376b76f2"
+  },
+  "dependencies": [
+    "w_edge_manifest.json",
+    "w_edge_prepared_manifest.json",
+    "w_edge_evaluation_sources.json"
+  ]
+}

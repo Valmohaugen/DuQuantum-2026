@@ -1,0 +1,23 @@
+{
+  "status": "Prepared only; no numerical certification, fitting, integration or state simulation run",
+  "ticket": "PORT-018",
+  "baseline_score": 48.414135897467595,
+  "unique_peer_rows": 10,
+  "proposed_search_seconds": 90,
+  "strict_common_phase_column_error": 1e-10,
+  "CPU_gate": "Wait for explicit root release; root hardwarestudy session6692 ownsCPU.",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/tmp/duq-mpl XDG_CACHE_HOME=/tmp/duq-cache PYTHONWARNINGS=ignore /home/rpeddap/.venvs/duq/bin/python -m research.bonus_peer_halves_20261025.harvest --seconds 90",
+  "coverage_plan": [
+    "Certify35-CZ all-count5-site variants first, then19/25/32/40-CZ k3peerhalf rows.",
+    "Remove uncertified newpeer standardlookup entries; install onlystrictlycertified rows and retain existing certified alternatives.",
+    "Prioritize high-weight N10..15 terminalreplacements thenk3 N10..15, balanced andadjacent splits, with explicit budget/coverage.",
+    "If allnewrowsfail1e-10, record errors andrequestpeerprecisioncertification; do notfit orweakenacceptance.",
+    "Revalidateall56 retainednative states/device circuits; parentexports standalone."
+  ],
+  "peer_needs": [
+    "Ryon continuesa7..10halfsearches andrequests nonduplicatedfootprints.",
+    "Need common-phase precisioncertificates for rawpeerrows beforebonusreuse.",
+    "Need coherenthighweight r0..5/6/7terminalalternatives; root compresseddecoder work remains symbolic."
+  ],
+  "source_caveat": "Observeduncommitted8,3sourceadditiondisappearedbeforefreeze; actualworkingsnapshotmatchescommittedHEAD.8sitecandidatesarefrozenfrompeerJSONfiles."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "Original Rx/ZZ-only decoder proposal ruled out for connected bipartite graphs without ancillas; symbolic extension audit ongoing",
+  "sources": [
+    {
+      "title": "Dicke-state preparation through global transverse control of Ising-coupled qubits",
+      "url": "https://arxiv.org/abs/2302.12483",
+      "finding": "Global control with all-to-all Ising interactions prepares specified symmetric states from a symmetric initial state; this is not a coherent unary decoder."
+    },
+    {
+      "title": "Global variational quantum circuits for arbitrary symmetric state preparation",
+      "url": "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.7.L022072",
+      "finding": "Uses global one-axis twisting and global rotations. Reported pulse steps and approximate fidelities are not native Willow CZ depths or simultaneous-column guarantees."
+    },
+    {
+      "title": "The computational power of matchgates and the XY interaction on arbitrary graphs",
+      "url": "https://arxiv.org/abs/1308.1463",
+      "finding": "General matchgates are classically simulable on paths/cycles and computationally universal on other connected graphs. This does not imply finite-size reachability for a fixed gate subset or this isometry."
+    }
+  ],
+  "original_analysis": {
+    "obstruction": "If U commutes with every qubit permutation and U|x>=|D_r>, then U P|x>=P|D_r>=|D_r>=U|x>, so P|x>=|x>. Thus such U cannot turn a nonsymmetric unary basis state into a symmetric Dicke state.",
+    "proposal": "For odd n=2m+1, controlled reversal V=R^(center bit) maps upper unary counts to global-X partners of lower unary counts. A U commuting only with global X can then cover all counts after fitting the lower half with a common phase.",
+    "existence": "The paired input/output vectors (u_r +/- X u_r)/sqrt2 and (D_r +/- D_(n-r))/sqrt2 form orthonormal sets in equal-dimensional global-X eigenspaces. Separate unitary extensions exist, but this does not prove reachability or depth for any chosen native ansatz.",
+    "cost_gate": "V needs m controlled swaps before routing. Native compilation and boundary cancellation must be counted before any fit.",
+    "distinction": "Independent local controls must break permutation invariance while retaining global-X symmetry; global pulse state-preparation results do not supply this isometry.",
+    "path_caution": "H on every site changes localX generators to localZ and nearest-neighborZZ to nearest-neighborXX, placing the path-only continuous control family within the matchgate/Gaussian setting. Audit its generated algebra before assuming enough expressivity.",
+    "bipartite_obstruction_independently_checked": "For smaller bipartition A of sizea, T=(Y on A)(Z on B)K anticommutes with every X_i and edgeZZ Hamiltonian, hence commutes with their time evolutions. Low-column targets u0->D0,ua->Da require preserving |<ua|T u0>| in{0,1}, but |<Da|T D0>|=1/sqrt(C(n,a)). This blocks the proposed Rx/ZZ-only decoder with no extra ancillas on bipartite Willow. An XX rotation breaks this antiunitary while retaining globalX, but no sufficient gate set or depth result follows."
+  }
+}

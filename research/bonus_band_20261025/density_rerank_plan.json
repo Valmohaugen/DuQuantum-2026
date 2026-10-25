@@ -1,0 +1,18 @@
+{
+  "status": "proposal; no reranker implementation or gain claim",
+  "motivation": "The constructor has60s available; the current analytic W selector uses about1.4s. Direct finite-strength density evaluation could capture mixed noise and X penalties that the expansion omits.",
+  "timing_evidence": "Completed PORT016 probes take about0.5s per distinctN8circuit/model and10.5s perN10circuit/model with4detuning draws, including current score sampling overhead.",
+  "proposal": {
+    "N8": "Use the analytic16-tree shortlist, retain baseline plus at most3finalists, evaluate6-8 frozen scenarios directly; estimated12-16s plus screening.",
+    "N10": "Baseline plus one finalist,3 scenarios with2detuning draws each; estimated31.5s plus screening. Soft deadline near45s and retain baseline unless comparison is complete.",
+    "objective": "Evaluate actual finite-shot E[1/penalty] with fixed common random numbers or a separately validated deterministic approximation. Do not rank inverse mean penalty as E[score].",
+    "noise": "Scenario choices must be fixed before new-seed results; include nominal, coherent and heterogeneousZZ risks. These remain assumed models, not measured hardware."
+  },
+  "acceptance": [
+    "Measure full constructor walltime below60s on representative cases.",
+    "Return only exact native W circuits; all other main/bonus paths unchanged.",
+    "Freeze scenario/MCseeds independently of evaluation seeds and report winner-selection uncertainty.",
+    "Require fresh paired evaluation after algorithm freeze; compare against both current baseline and PORT016 selector."
+  ],
+  "risk": "Timing estimates are empirical and cannot guarantee runtime under external contention; deadline checks must happen before beginning expensive optional work. Direct modeled optimization can still overfit incorrect hardware assumptions."
+}

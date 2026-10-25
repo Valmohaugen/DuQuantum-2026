@@ -1,0 +1,267 @@
+{
+  "status": "untouched-seed pilot complete; no main promotion",
+  "seeds": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "summary": [
+    {
+      "N": 8,
+      "model": "nominal",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.018426353084830094,
+      "conditional_MC_standard_error": 0.0036441726143526094,
+      "calibration_standard_error": 0.00921337817951459,
+      "positive": 4,
+      "negative": 2,
+      "unchanged": 0
+    },
+    {
+      "N": 8,
+      "model": "nominal",
+      "cutoff": 8,
+      "cases": 6,
+      "mean_score_delta": 0.01839665206151689,
+      "conditional_MC_standard_error": 0.0036370668850518816,
+      "calibration_standard_error": 0.009186673785504328,
+      "positive": 4,
+      "negative": 2,
+      "unchanged": 0
+    },
+    {
+      "N": 8,
+      "model": "coherent",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.02601713084376367,
+      "conditional_MC_standard_error": 0.0035662225995599724,
+      "calibration_standard_error": 0.010318139112501859,
+      "positive": 5,
+      "negative": 1,
+      "unchanged": 0
+    },
+    {
+      "N": 8,
+      "model": "coherent",
+      "cutoff": 8,
+      "cases": 6,
+      "mean_score_delta": 0.025997980866986632,
+      "conditional_MC_standard_error": 0.0035614639208165198,
+      "calibration_standard_error": 0.01030955536272734,
+      "positive": 5,
+      "negative": 1,
+      "unchanged": 0
+    },
+    {
+      "N": 8,
+      "model": "zz",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.06017376761894549,
+      "conditional_MC_standard_error": 0.003496208567084146,
+      "calibration_standard_error": 0.025526292819010456,
+      "positive": 6,
+      "negative": 0,
+      "unchanged": 0
+    },
+    {
+      "N": 8,
+      "model": "zz",
+      "cutoff": 8,
+      "cases": 6,
+      "mean_score_delta": 0.06012925211238809,
+      "conditional_MC_standard_error": 0.003491439959310082,
+      "calibration_standard_error": 0.02551284240674619,
+      "positive": 6,
+      "negative": 0,
+      "unchanged": 0
+    },
+    {
+      "N": 8,
+      "model": "signed_zz",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.01278972712663408,
+      "conditional_MC_standard_error": 0.003481071446459434,
+      "calibration_standard_error": 0.016182208823435292,
+      "positive": 3,
+      "negative": 3,
+      "unchanged": 0
+    },
+    {
+      "N": 8,
+      "model": "signed_zz",
+      "cutoff": 8,
+      "cases": 6,
+      "mean_score_delta": 0.012774347709653643,
+      "conditional_MC_standard_error": 0.003476172285678049,
+      "calibration_standard_error": 0.016171605085511558,
+      "positive": 3,
+      "negative": 3,
+      "unchanged": 0
+    },
+    {
+      "N": 10,
+      "model": "nominal",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.0032925883367465104,
+      "conditional_MC_standard_error": 0.0017342546617906214,
+      "calibration_standard_error": 0.0022800994022051093,
+      "positive": 2,
+      "negative": 1,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "nominal",
+      "cutoff": 10,
+      "cases": 6,
+      "mean_score_delta": 0.0032898588449258364,
+      "conditional_MC_standard_error": 0.0017328927000908143,
+      "calibration_standard_error": 0.0022784312141655993,
+      "positive": 2,
+      "negative": 1,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "coherent",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.009583404234824486,
+      "conditional_MC_standard_error": 0.0017350146379403457,
+      "calibration_standard_error": 0.0053100300086963165,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "coherent",
+      "cutoff": 10,
+      "cases": 6,
+      "mean_score_delta": 0.009580731766888315,
+      "conditional_MC_standard_error": 0.0017336193340841773,
+      "calibration_standard_error": 0.005307753070619267,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "zz",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.02042279277357518,
+      "conditional_MC_standard_error": 0.0016727964072548243,
+      "calibration_standard_error": 0.01143687509551973,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "zz",
+      "cutoff": 10,
+      "cases": 6,
+      "mean_score_delta": 0.020412263003860436,
+      "conditional_MC_standard_error": 0.0016716146341075493,
+      "calibration_standard_error": 0.011431299941383265,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "signed_zz",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.0439624195050117,
+      "conditional_MC_standard_error": 0.001688069386563489,
+      "calibration_standard_error": 0.032326016359446895,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "signed_zz",
+      "cutoff": 10,
+      "cases": 6,
+      "mean_score_delta": 0.04394250339475103,
+      "conditional_MC_standard_error": 0.0016867271915758644,
+      "calibration_standard_error": 0.03231126406830043,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    }
+  ],
+  "max_constructor_seconds": 1.3704224657267332,
+  "unchanged_selections": 3,
+  "regressions": [
+    {
+      "N": 8,
+      "seed": 21,
+      "model": "signed_zz",
+      "cutoff": 8,
+      "mean_delta": -0.004087551361657902,
+      "paired_MC_standard_error": 0.008648192853877173
+    },
+    {
+      "N": 8,
+      "seed": 22,
+      "model": "nominal",
+      "cutoff": 8,
+      "mean_delta": -0.004486144123261178,
+      "paired_MC_standard_error": 0.00794634471312088
+    },
+    {
+      "N": 8,
+      "seed": 22,
+      "model": "signed_zz",
+      "cutoff": 8,
+      "mean_delta": -0.019456298020691647,
+      "paired_MC_standard_error": 0.008270774404065297
+    },
+    {
+      "N": 8,
+      "seed": 23,
+      "model": "signed_zz",
+      "cutoff": 8,
+      "mean_delta": -0.021974407623210165,
+      "paired_MC_standard_error": 0.0085080569276919
+    },
+    {
+      "N": 8,
+      "seed": 25,
+      "model": "nominal",
+      "cutoff": 8,
+      "mean_delta": -0.0014278024656301748,
+      "paired_MC_standard_error": 0.009414096942142498
+    },
+    {
+      "N": 8,
+      "seed": 25,
+      "model": "coherent",
+      "cutoff": 8,
+      "mean_delta": -0.004859830925114368,
+      "paired_MC_standard_error": 0.008549239535204155
+    },
+    {
+      "N": 10,
+      "seed": 21,
+      "model": "nominal",
+      "cutoff": 10,
+      "mean_delta": -0.00026112910865135714,
+      "paired_MC_standard_error": 0.006308297931721933
+    }
+  ],
+  "decision": "All model/size means are positive, but individual signed-coupling regressions remain and calibration uncertainty is substantial. Run previously reserved seeds27..32 with selector and patterns unchanged before considering a separate export.",
+  "scope": "Four fixed physical-edge sign patterns and both orientations, chosen before this study; not a worst-field guarantee. All noise models are assumptions, not measured Willow results."
+}

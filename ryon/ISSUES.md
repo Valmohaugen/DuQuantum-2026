@@ -493,3 +493,24 @@ finite-difference and uniform-equivalence checks; fixed4-pattern selector
 0..3 and both signs are frozen before seeds21..26 evaluation;27..32 remain
 untouched confirmation. Full-strength approximation checks remain required.
 The previous experimental selector stays unpromoted after the signed-ZZ loss.
+
+
+### Published handoff preparation — bonus48.9368744609 and hardware evidence
+
+Latest standalone bonus passes all56 native/device/state checks at48.9368744609.
+Checkpoint: `research/bonus_band_20261025/milestones/20261025T082924Z`.
+PORT018 supplied-half precision screen is complete; PORT019 proves the Rx/ZZ
+antiunitary obstruction on bipartite graphs and screens an XX extension.
+PORT020 certifies six-site polishing and a faithful53-moment seven-site decoder;
+PORT021 fresh whole-state harvest and PORT022 faithful integration are complete.
+All source/check/coverage manifests are in their respective research directories.
+
+PORT016 separate combined candidate: `research/bonus_band_20261025/edge_hardware_submission.py`.
+Its24 calibrated outputs match the evaluated selector; maxbuild1.440s and
+all56 bonus circuits match the new verified cache. Pooled modeled means are
+positive, but individual regressions and negative N10uniformZZ confirmation
+mean remain explicit. Maintained solver unchanged; no hardware measurement claim.
+PORT023 finite-strength density reranking is assigned to bonus-depth. PORT024
+fixed-Clifford symmetry decoder screening is available, with mandatory cost
+and reachability checks before any fit. Please post better high-weight circuits
+or integration needs; research continues beyond the45-point milestone.

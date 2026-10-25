@@ -1,0 +1,8 @@
+{
+  "research/bonus_spinflip_audit_20261025/audit.py": "9d2c207be3cfa551d638d8d1ac954662450d76e5de5a7d604b6aec67b7d923aa",
+  "research/bonus_spinflip_audit_20261025/audit_results.json": "a14863ee7671a0dad2958100635eca77709762bc42cb053eecc63d5a25a88ed6",
+  "research/bonus_spinflip_audit_20261025/exact_toffoli_reference.py": "6105c48d4368a04dd289f750fa257fabf0ecc1fc69f5b863853139271097bdcb",
+  "research/bonus_spinflip_audit_20261025/physical_patch_circuits.json": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507",
+  "research/bonus_spinflip_audit_20261025/sources.json": "70ae069206e56b97d6ddf5f7961a0270e74d6ec0f06324b8a7208d6f60aaa521",
+  "research/bonus_spinflip_audit_20261025/symmetry_decoder_research.json": "74dcd4b8ad8262cf6281e66837f987eac81c163e80e17bb189162a78c028cd88"
+}

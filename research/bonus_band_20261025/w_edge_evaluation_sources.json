@@ -1,0 +1,25 @@
+{
+  "status": "evaluation sources frozen before seeds21..26",
+  "files": {
+    "research/bonus_band_20261025/w_edge_eval_snapshot/judge.py": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6",
+    "research/bonus_band_20261025/w_edge_eval_snapshot/test_dicke.py": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f",
+    "research/bonus_band_20261025/w_edge_eval_snapshot/fast_eval.py": "95d512861996d76c23c714676c0ac731f57564bef6226a958386adc39ff4d924"
+  },
+  "maintained_W_functions_identical": [
+    "create_dicke_state",
+    "make_chip",
+    "rate",
+    "readout_bias",
+    "prim_tree",
+    "bfs_tree",
+    "bias_tree",
+    "best_tree",
+    "broadcast_order",
+    "compile_circuit",
+    "w_ops",
+    "sparse_echo",
+    "check_circuit"
+  ],
+  "maintained_solver_sha256": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba",
+  "selector_sha256": "c01d07d186d6b945bbde1f1dccb95a12fc6afb00590c7d1473d42290857b2e06"
+}

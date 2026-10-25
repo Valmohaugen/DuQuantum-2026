@@ -1,0 +1,90 @@
+{
+  "files": [
+    {
+      "source": "research/bonus_peer_halves_20261025/helpers.py",
+      "frozen": "research/bonus_matched_half_precision_20261025/helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/snapshot.py",
+      "frozen": "research/bonus_matched_half_precision_20261025/snapshot.py",
+      "sha256": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/probe.py",
+      "frozen": "research/bonus_matched_half_precision_20261025/probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/commuting_schedule.py",
+      "frozen": "research/bonus_matched_half_precision_20261025/commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/harvest.py",
+      "frozen": "research/bonus_matched_half_precision_20261025/harvest.py",
+      "sha256": "69cc14f2da10171414a774699903c83bab1d15e8691f3e573622583abab383e8"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/clean_clifford_tables.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/clean_clifford_tables.json",
+      "sha256": "d96165008545bdbece617635620b16ab6525b63c78415821cd91119f4a7979fd"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/refined_halves.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/refined_halves.json",
+      "sha256": "4f2db62fd3eefa138e48b756843dcb0ae0b7b319143e3acff47754f917af9440"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/five_real.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/five_real.json",
+      "sha256": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/five_complex.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/five_complex.json",
+      "sha256": "58625bb615547fc142942b0bb0cdb46421c59c3023b2cfc68067813f81f582cc"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/six_real.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/six_real.json",
+      "sha256": "7c16c4e27188432212472f2f648d36602cb2e39778a97ad2a7c4938b313db79d"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/five_four.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/five_four.json",
+      "sha256": "7ce75852af8ec9c4d4c62d46a69c9c076f8c1f0a38ec25208bf471e21342b39d"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/peer_00.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/peer_00.json",
+      "sha256": "0c438f1ddcf4924cb4dac403de5790efdf26385d1a774f057c27c63b56e8b75b"
+    },
+    {
+      "source": "research/bonus_peer_halves_20261025/peer_01.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/peer_01.json",
+      "sha256": "35349b94106ed78a92522b81e2f9b7c5d7fae6268438d554521eeb8d293ea1ab"
+    },
+    {
+      "source": "research/bonus_depth_20261024/grid_half_6_3.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/certified_6_3.json",
+      "sha256": "deacb1f6c8a3295ca2a83ce5082845ebca44528b5ac36765d4a01877e0a8d4aa"
+    },
+    {
+      "source": "research/bonus_depth_20261024/grid_half_7_3.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/certified_7_3.json",
+      "sha256": "0195cdbb866b8abc4133c9f16c14af24f684c7523cb8d17b7ff4c275f82e45ef"
+    },
+    {
+      "source": "research/bonus_band_20261025/best7_circuits.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/baseline_circuits.json",
+      "sha256": "de95ccc2a5655a0b7eb7bc754a630ab3cb4084275b39f8f2019d464ce87a7b0f"
+    },
+    {
+      "source": "research/bonus_band_20261025/best7_results.json",
+      "frozen": "research/bonus_matched_half_precision_20261025/baseline_results.json",
+      "sha256": "62bf48279ef1094670ada871e549b92a8290f11f35c7f93f0a92578fad3836f2"
+    }
+  ],
+  "baseline_score": 48.414135897467595
+}

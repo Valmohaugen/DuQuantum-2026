@@ -1,0 +1,10 @@
+{
+  "source_directory": "research/bonus_faithful_terminal_integration_20261025",
+  "files": {
+    "harvest_circuits.json": "252fc950292a941d814c82754c3cc92f1430eab4764a04e60bdca868cfc9ed60",
+    "harvest_results.json": "506b949b2e003fb19fac4bc9c82d63e884e1a7056283b6d873a3f26c89b29491"
+  },
+  "previous_exported_score": 48.51972588602354,
+  "score": 48.93687446093003,
+  "attribution": "Includes fresh whole-state peer harvest48.879878 and faithful seven-site decoder gains at N13/15k3. Main prefix remains unchanged."
+}

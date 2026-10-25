@@ -1,0 +1,10 @@
+{
+  "source_directory": "research/bonus_matched_half_precision_20261025",
+  "files": {
+    "harvest_circuits.json": "39b6e6784e73406521acc1afd1f65a1616d3099494a3ff45702bad8f25170551",
+    "harvest_results.json": "9bfd9001c9912c07c6a2dd212f11351bfb8c9d7588d118ec11286d96c423fb64"
+  },
+  "previous_score": 48.414135897467595,
+  "score": 48.51972588602354,
+  "attribution": "N13k3 uses polished6 plus existing certified7; N14/15 gains use existing certified7 through new integration coverage. Seven-site polished candidate excluded after native compiler precision loss."
+}

@@ -1,0 +1,7 @@
+{'stage': 'direct-analytic-Ry-Z-conversion', 'depth': 54, 'CZ': 32, 'max_column_error': 1.71337911096862e-15, 'accepted': True}
+{'stage': 'direct-analytic-schedule', 'depth': 54, 'CZ': 32, 'max_column_error': 1.71337911096862e-15, 'accepted': True}
+{'stage': 'faithful-merge', 'depth': 53, 'CZ': 32, 'max_column_error': 1.224911097013102e-15, 'accepted': True}
+{'stage': 'faithful-schedule', 'depth': 53, 'CZ': 32, 'max_column_error': 1.224911097013102e-15, 'accepted': True}
+{'stage': 'faithful-eject-0', 'depth': 52, 'CZ': 32, 'max_column_error': 8.659194098026619e-09, 'accepted': False}
+{'stage': 'faithful-eject-1', 'depth': 52, 'CZ': 32, 'max_column_error': 8.65919414335672e-09, 'accepted': False}
+{'stage': 'faithful-eject-2', 'depth': 52, 'CZ': 32, 'max_column_error': 8.65919416899541e-09, 'accepted': False}

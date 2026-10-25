@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "20261025T082924Z",
+  "bonus_score": 48.93687446093003,
+  "previous_exported_score": 48.51972588602354,
+  "previous_published_score": 48.414135897467595,
+  "increment_since_published": 0.5227385634624326,
+  "cases": 56,
+  "source_sha256": "e9e13c948d7fd24f0c297192e513cdefc2959295b28738f55de5a34b61d2b233",
+  "max_build_seconds": 0.00259249284863472,
+  "max_state_l2_error": 1.486027890605259e-07,
+  "max_moments": 119,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "improvement": "Four fresh whole-state peer circuits plus faithful seven-site integration; final N13k3=57 andN15k3=71. All prior bests retained.",
+  "main_entry_point": "Native main prefix unchanged. Separate evaluated edge_hardware_submission preserves0dc1b2c main except guardedN8/N10W selector and this bonus cache."
+}

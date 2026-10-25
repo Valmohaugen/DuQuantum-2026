@@ -1,0 +1,25 @@
+{
+  "policy": "No package edits or copied library implementation; use public from_matrix and no ejection/target-gateset passes for new certified7-site alternatives.",
+  "sources": [
+    {
+      "source": "/home/rpeddap/.venvs/duq/lib/python3.11/site-packages/cirq/transformers/analytical_decompositions/single_qubit_decompositions.py",
+      "sha256": "484c8fc7e679494e00f4a9ce804ac0bc64137588f6202d8a8aa96747fe337a3d",
+      "finding": "single_qubit_matrix_to_phxz near-half-turn math.isclose specifies abs_tol but retains default relative tolerance."
+    },
+    {
+      "source": "/home/rpeddap/.venvs/duq/lib/python3.11/site-packages/cirq/transformers/eject_phased_paulis.py",
+      "sha256": "57e07858c7c4f5179c068a4c657de93577e9d930296ccde0e2e3908ebbb392b3",
+      "finding": "PhasedXZ recognition uses np.isclose for zero exponents without forwarding caller atol."
+    },
+    {
+      "source": "/home/rpeddap/.venvs/duq/lib/python3.11/site-packages/cirq/transformers/eject_z.py",
+      "sha256": "9627b52e1ab8566c95ed933f106b99c4cf6baadfc6382b0199acee9849a7bca4",
+      "finding": "Integral exponent recognition uses np.isclose with default tolerances."
+    },
+    {
+      "source": "/home/rpeddap/.venvs/duq/lib/python3.11/site-packages/cirq/ops/phased_x_z_gate.py",
+      "sha256": "cca2cbde08f68f921f0c6be23e7b5b5b594d7e8145f44308e4f9647a022df715",
+      "finding": "Public from_matrix uses angle decomposition and exact-equality canonicalization; selected as faithful merge API."
+    }
+  ]
+}

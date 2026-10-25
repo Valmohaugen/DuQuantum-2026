@@ -1,0 +1,192 @@
+[
+  {
+    "name": "peer_00",
+    "frozen": "peer_00.json",
+    "n": 6,
+    "k": 3,
+    "CZ": 25,
+    "data_sha256": "d6b6eb3787e32b50a304e430a8c90b68f029086ee3b2fb2af74376c8777323d4",
+    "origins": [
+      {
+        "kind": "committed",
+        "source": "ryon/toby_sol.py",
+        "table_key": [
+          6,
+          3,
+          0
+        ],
+        "uncommitted": false
+      },
+      {
+        "kind": "working",
+        "source": "ryon/toby_sol.py",
+        "table_key": [
+          6,
+          3,
+          0
+        ],
+        "uncommitted": false
+      },
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_6_3_s2.json",
+        "source_sha256": "53d9e69affa38072ed11b78ccdf99bd9b5dc4f0fa6975238073bfcb90a46f292"
+      }
+    ]
+  },
+  {
+    "name": "peer_01",
+    "frozen": "peer_01.json",
+    "n": 7,
+    "k": 3,
+    "CZ": 32,
+    "data_sha256": "bcd2b7f23c280d1e414235ba26d322c5cd7f4d52c81bc86f012d876d9d45e0d4",
+    "origins": [
+      {
+        "kind": "committed",
+        "source": "ryon/toby_sol.py",
+        "table_key": [
+          7,
+          3,
+          0
+        ],
+        "uncommitted": false
+      },
+      {
+        "kind": "working",
+        "source": "ryon/toby_sol.py",
+        "table_key": [
+          7,
+          3,
+          0
+        ],
+        "uncommitted": false
+      },
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_7_3_s1.json",
+        "source_sha256": "e4c8b2fe08359a6b01f836a1a79dd8174813f97ae0fe3f4a50453f97556212d4"
+      }
+    ]
+  },
+  {
+    "name": "peer_02",
+    "frozen": "peer_02.json",
+    "n": 5,
+    "k": 3,
+    "CZ": 19,
+    "data_sha256": "9cda30a5eae5e7b050714f8f110253f3a97f6787a54575fee66d062a85305291",
+    "origins": [
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_5_3_s2.json",
+        "source_sha256": "6fd8a588e67a8362644fdf65c78f8072602b82ffa574229498af23df4c7ad78a"
+      }
+    ]
+  },
+  {
+    "name": "peer_03",
+    "frozen": "peer_03.json",
+    "n": 5,
+    "k": 5,
+    "CZ": 35,
+    "data_sha256": "78dc4e50f7b364d06ac00ba04608417c293eadad978e912f7fa7343898526f91",
+    "origins": [
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_5_5_s11.json",
+        "source_sha256": "417fdaeb30d10927db737402167bcd6bc923ec3ee6c59904850f21851a9a8e1b"
+      }
+    ]
+  },
+  {
+    "name": "peer_04",
+    "frozen": "peer_04.json",
+    "n": 5,
+    "k": 5,
+    "CZ": 35,
+    "data_sha256": "49dcf46d3145773c17a4816e75ff1ad22fe080612618f2a1fdb50efa8668a70b",
+    "origins": [
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_5_5_s2.json",
+        "source_sha256": "9dfd66ad5dea863a0e9cc88abc7d5f298438e7748dbf4a4badd2bb0d95a85e1a"
+      }
+    ]
+  },
+  {
+    "name": "peer_05",
+    "frozen": "peer_05.json",
+    "n": 6,
+    "k": 3,
+    "CZ": 25,
+    "data_sha256": "80e2d340295d2164b09c4a73cf550690f6b0d47cab3001345c9e293e0d1c72d5",
+    "origins": [
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_6_3_s11.json",
+        "source_sha256": "c2fa361f4e71e6c9084ac96bf950e02013257f9736191d8066322f2dbc081dbe"
+      }
+    ]
+  },
+  {
+    "name": "peer_06",
+    "frozen": "peer_06.json",
+    "n": 6,
+    "k": 3,
+    "CZ": 25,
+    "data_sha256": "8c3128a1d472adfced25cb86683f8fd0512a0dc3376f951a21d3bec5c0b2e3dc",
+    "origins": [
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_6_3_s12.json",
+        "source_sha256": "3fe8bb585a6fbce7ebcf82dcfd235d175938842270bc1e83175f68f7d6cfd9d7"
+      }
+    ]
+  },
+  {
+    "name": "peer_07",
+    "frozen": "peer_07.json",
+    "n": 7,
+    "k": 3,
+    "CZ": 32,
+    "data_sha256": "72126124659402e0c0b53f0c4e4b62cbe62934cca50984cf9108855743a3747e",
+    "origins": [
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_7_3_s11.json",
+        "source_sha256": "a3ef3595a597f75501c3022d4d1dfe00b6a918cccb630ebaf9e481382d52f0ad"
+      }
+    ]
+  },
+  {
+    "name": "peer_08",
+    "frozen": "peer_08.json",
+    "n": 8,
+    "k": 3,
+    "CZ": 40,
+    "data_sha256": "e2da4a97935914944e7baa4ad99fa4451dc5806ce347bd7f753ba3b4f8870f84",
+    "origins": [
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_8_3_s11.json",
+        "source_sha256": "f6603c837b1adb6b6921aea9eb3161688811ef4cbb9904696bff592a36e41b8a"
+      }
+    ]
+  },
+  {
+    "name": "peer_09",
+    "frozen": "peer_09.json",
+    "n": 8,
+    "k": 3,
+    "CZ": 40,
+    "data_sha256": "6d3f0a521eea56a4eac19558eb7d4de0aa82a869cadab994eca467e2b5bfb2a9",
+    "origins": [
+      {
+        "kind": "peer_artifact",
+        "source": "benchmark_outputs/synth/sol_hwarm_8_3_s12.json",
+        "source_sha256": "8115c13de2cfa5146dee679270f4128809b7f76b4a612189adcd230cbe4c951a"
+      }
+    ]
+  }
+]

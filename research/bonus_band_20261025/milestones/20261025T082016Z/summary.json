@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "20261025T082016Z",
+  "bonus_score": 48.51972588602354,
+  "previous_score": 48.414135897467595,
+  "increment": 0.10558998855594126,
+  "cases": 56,
+  "source_sha256": "69229ce3b5c05aeb0ce80ed655e2e7f67c35bc528189f794ffcc699cc74547ce",
+  "max_build_seconds": 0.002484714612364769,
+  "max_state_l2_error": 1.486027890605259e-07,
+  "max_moments": 119,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "improvement": "N13k3:62to59;N14k3:65to59;N15k3:76to75. N13 uses polished6+existing7;N14/15 use existing7 through new integration coverage.",
+  "main_entry_point": "Native main prefix unchanged; calibrated selector research remains separate."
+}

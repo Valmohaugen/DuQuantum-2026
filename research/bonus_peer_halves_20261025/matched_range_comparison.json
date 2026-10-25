@@ -1,0 +1,62 @@
+[
+  {
+    "n": 5,
+    "supported_r": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "existing_source": "research/bonus_depth_20261024/grid_half_5_3.json",
+    "existing_sha256": "6293f3e4cb8f07826df3cd70a78233d0b513219b8fec2080a187871baa0bbcb5",
+    "existing_published_depth": 34,
+    "existing_CZ": 19,
+    "existing_column_error": 7.504414547848765e-16,
+    "existing_edges_form_path": true,
+    "peer": "peer_02",
+    "raw_peer_depth": 34,
+    "raw_peer_CZ": 19,
+    "raw_peer_column_error": 5.5746672279840215e-08,
+    "prefit_gate": "Recompile existing certified alternative using exactly the same optimize/schedule pipeline before inferring a strict depth opportunity."
+  },
+  {
+    "n": 6,
+    "supported_r": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "existing_source": "research/bonus_depth_20261024/grid_half_6_3.json",
+    "existing_sha256": "deacb1f6c8a3295ca2a83ce5082845ebca44528b5ac36765d4a01877e0a8d4aa",
+    "existing_published_depth": 44,
+    "existing_CZ": 26,
+    "existing_column_error": 2.246764475129726e-15,
+    "existing_edges_form_path": true,
+    "peer": "peer_00",
+    "raw_peer_depth": 43,
+    "raw_peer_CZ": 25,
+    "raw_peer_column_error": 5.986154958072205e-08,
+    "prefit_gate": "Recompile existing certified alternative using exactly the same optimize/schedule pipeline before inferring a strict depth opportunity."
+  },
+  {
+    "n": 7,
+    "supported_r": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "existing_source": "research/bonus_depth_20261024/grid_half_7_3.json",
+    "existing_sha256": "0195cdbb866b8abc4133c9f16c14af24f684c7523cb8d17b7ff4c275f82e45ef",
+    "existing_published_depth": 55,
+    "existing_CZ": 31,
+    "existing_column_error": 1.2365455442474606e-15,
+    "existing_edges_form_path": true,
+    "peer": "peer_01",
+    "raw_peer_depth": 52,
+    "raw_peer_CZ": 32,
+    "raw_peer_column_error": 1.2344816651298385e-07,
+    "prefit_gate": "Recompile existing certified alternative using exactly the same optimize/schedule pipeline before inferring a strict depth opportunity."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "research/bonus_fresh_whole_harvest_20261025/baseline_circuits.json": "39b6e6784e73406521acc1afd1f65a1616d3099494a3ff45702bad8f25170551",
+  "research/bonus_fresh_whole_harvest_20261025/baseline_results.json": "9bfd9001c9912c07c6a2dd212f11351bfb8c9d7588d118ec11286d96c423fb64",
+  "research/bonus_fresh_whole_harvest_20261025/commuting_schedule.py": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1",
+  "research/bonus_fresh_whole_harvest_20261025/handoff_summary.json": "cf16cfce3b5071656fd0738a1a96e263989eb2856612c2df222079ef385510d3",
+  "research/bonus_fresh_whole_harvest_20261025/harvest.log": "ec0bd2c5199e07debec7a60928a1c94e8ea1523c655edd9a75aca8f1ce7cc764",
+  "research/bonus_fresh_whole_harvest_20261025/harvest.py": "bbbb833d677bd4dcb1082c2c77b3f288eab55d0d2ba81fc6ddf6a11ca2efb87e",
+  "research/bonus_fresh_whole_harvest_20261025/harvest_circuits.json": "19b2dcb901da9414d2e3795afa3cd2aa935e5360fc95a59d3e98677bfd090f7a",
+  "research/bonus_fresh_whole_harvest_20261025/harvest_results.json": "28bfe81fc652457378cf0f817aa3a1664404cbc5d3fc2c8932e59e1880be6de6",
+  "research/bonus_fresh_whole_harvest_20261025/helpers.py": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d",
+  "research/bonus_fresh_whole_harvest_20261025/probe.py": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b",
+  "research/bonus_fresh_whole_harvest_20261025/snapshot.py": "8f752750f7246eb7d92a56015958e63debf229f4f3909cb69585ccd8252db7b8",
+  "research/bonus_fresh_whole_harvest_20261025/sources.json": "d133f22f76883b25b741431689eed441832f2030dd9daad4112f04fb7ba2aa5a"
+}

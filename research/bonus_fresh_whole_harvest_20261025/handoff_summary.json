@@ -1,0 +1,102 @@
+{
+  "score": 48.87987806686537,
+  "baseline_score": 48.51972588602354,
+  "delta": 0.36015218084183687,
+  "improvements": [
+    {
+      "N": 9,
+      "k": 3,
+      "source": "0dc1b2c-line",
+      "baseline_depth": 33,
+      "compiled_depth": 29,
+      "optimized_depth": 29,
+      "CZ": 33,
+      "state_l2_error": 8.713499910934055e-08,
+      "seconds": 1.173430884256959,
+      "accepted": true
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "source": "0dc1b2c-patch",
+      "baseline_depth": 30,
+      "compiled_depth": 29,
+      "optimized_depth": 29,
+      "CZ": 33,
+      "state_l2_error": 3.220639057542116e-08,
+      "seconds": 2.216798280365765,
+      "accepted": true
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "source": "0dc1b2c-line",
+      "baseline_depth": 37,
+      "compiled_depth": 35,
+      "optimized_depth": 35,
+      "CZ": 42,
+      "state_l2_error": 1.0767229558167871e-07,
+      "seconds": 3.3732954170554876,
+      "accepted": true
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "source": "0dc1b2c-line",
+      "baseline_depth": 42,
+      "compiled_depth": 37,
+      "optimized_depth": 37,
+      "CZ": 45,
+      "state_l2_error": 1.418538326537195e-07,
+      "seconds": 4.599233315326273,
+      "accepted": true
+    }
+  ],
+  "all56_verified": true,
+  "max_retained_state_error": 1.486027890605259e-07,
+  "construction_seconds": 5.112930400297046,
+  "total_seconds": 7.725326801650226,
+  "coverage": [
+    {
+      "N": 8,
+      "k": 3,
+      "status": "complete",
+      "sources": [
+        "line"
+      ]
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "status": "complete",
+      "sources": [
+        "line"
+      ]
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "status": "complete",
+      "sources": [
+        "patch"
+      ]
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "status": "complete",
+      "sources": [
+        "line"
+      ]
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "status": "complete",
+      "sources": [
+        "line"
+      ]
+    }
+  ],
+  "source_commit": "0dc1b2cef14c54d69143fb2da60db8651a1e271e"
+}

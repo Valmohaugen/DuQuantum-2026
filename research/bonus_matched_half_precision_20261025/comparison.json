@@ -1,0 +1,102 @@
+{
+  "rows": [
+    {
+      "n": 6,
+      "supported_r": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "certified": {
+        "name": "certified-6",
+        "n": 6,
+        "k": 3,
+        "depth": 44,
+        "CZ": 26,
+        "max_column_error": 2.7525161380970686e-15,
+        "column_errors": [
+          2.662115599047007e-15,
+          2.5411142593601427e-15,
+          2.6191534133567287e-15,
+          2.7525161380970686e-15
+        ],
+        "common_phase": [
+          -0.33821015908135615,
+          -0.9410706074966765
+        ],
+        "accepted": true
+      },
+      "peer": {
+        "name": "peer_00",
+        "n": 6,
+        "k": 3,
+        "depth": 43,
+        "CZ": 25,
+        "max_column_error": 5.986154958072205e-08,
+        "column_errors": [
+          1.8026615561707814e-08,
+          2.7799634450050796e-08,
+          3.3887700083197524e-08,
+          5.986154958072205e-08
+        ],
+        "common_phase": [
+          0.9278005066807833,
+          0.37307669426390355
+        ],
+        "accepted": false
+      },
+      "strict_depth_opportunity": true
+    },
+    {
+      "n": 7,
+      "supported_r": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "certified": {
+        "name": "certified-7",
+        "n": 7,
+        "k": 3,
+        "depth": 54,
+        "CZ": 31,
+        "max_column_error": 1.5932837830622405e-15,
+        "column_errors": [
+          1.5505043165962769e-15,
+          1.2504540929031157e-15,
+          1.5932837830622405e-15,
+          1.4876712824519173e-15
+        ],
+        "common_phase": [
+          -0.8134572314989353,
+          -0.5816247351360565
+        ],
+        "accepted": true
+      },
+      "peer": {
+        "name": "peer_01",
+        "n": 7,
+        "k": 3,
+        "depth": 52,
+        "CZ": 32,
+        "max_column_error": 1.2344816651298385e-07,
+        "column_errors": [
+          6.85055511962417e-08,
+          7.59497934997992e-08,
+          8.973594038740046e-08,
+          1.2344816651298385e-07
+        ],
+        "common_phase": [
+          -0.3377109652126277,
+          -0.9412498626693953
+        ],
+        "accepted": false
+      },
+      "strict_depth_opportunity": true
+    }
+  ],
+  "seconds": 1.9054155657067895,
+  "pipeline": "compile_ops -> optimize -> commuting_schedule(restarts=3), identical path"
+}

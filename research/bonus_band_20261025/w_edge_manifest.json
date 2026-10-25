@@ -1,0 +1,21 @@
+{
+  "status": "completed untouched-seed pilot",
+  "files": {
+    "research/bonus_band_20261025/w_edge_sensitivity.py": "ec301e342f11b60d4824b0bf17c77472abd1a1f739071c0a946d1672230e7649",
+    "research/bonus_band_20261025/w_edge_sensitivity_checks.json": "40265c2d3ac66ee323423d316d24991b4bc2bb461b9be406609861529c971153",
+    "research/bonus_band_20261025/w_edge_fullfield_check.py": "e72b715ae96667de8738584156191e83bacb4b05c9315e11add7faab3f13b69a",
+    "research/bonus_band_20261025/w_edge_fullfield_checks.json": "36e807987de78e2ddac46aa958920cf997024d601f5b2c932ed8e0dbe8e80854",
+    "research/bonus_band_20261025/w_edge_selection.py": "c01d07d186d6b945bbde1f1dccb95a12fc6afb00590c7d1473d42290857b2e06",
+    "research/bonus_band_20261025/w_edge_probe.py": "d3c6e84ccc96f0d832648ce6db58e37cbd6096f806eb515dfe0db62e473129ed",
+    "research/bonus_band_20261025/w_edge_results.json": "eea5e90033e313197ad6be95dfcb041f18b82357e626336e5f51aed2b8146eb2",
+    "research/bonus_band_20261025/w_edge_selections.json": "fe48fdcd496e4b86423d6cbdf67514dec4c57a49a53a58ddcdcc2a477cbd4387",
+    "research/bonus_band_20261025/w_edge_summary.json": "cfd46920cd456992c7d675685660910b3dd3cc3294c8932b8a5438212ad2234b",
+    "research/bonus_band_20261025/w_edge_evaluation_sources.json": "03a2a22479606262e38dbf5fac6f43c858300dfe8673f461b2adfeb17f1b5dae"
+  },
+  "dependencies": [
+    "w_edge_prepared_manifest.json",
+    "w_stress_manifest.json",
+    "w_heterogeneous_manifest.json"
+  ],
+  "frozen_evaluator": "w_edge_evaluation_sources.json"
+}

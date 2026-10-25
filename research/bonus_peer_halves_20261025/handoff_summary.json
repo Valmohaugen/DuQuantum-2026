@@ -1,0 +1,209 @@
+{
+  "status": "Strict certification screen complete; no new row certified; no coefficient fitting",
+  "score": 48.414135897467595,
+  "baseline_score": 48.414135897467595,
+  "gain": 0,
+  "search_seconds": 7.436173398047686,
+  "total_seconds": 10.037317522801459,
+  "certified_peer_names": [],
+  "column_checks": [
+    {
+      "name": "peer_03",
+      "n": 5,
+      "k": 5,
+      "depth": 59,
+      "CZ": 35,
+      "max_column_error": 3.8869444331157905e-07,
+      "column_errors": [
+        1.0618801924601423e-07,
+        1.591093137443067e-07,
+        2.667474886267776e-07,
+        2.616934180430145e-07,
+        3.8869444331157905e-07,
+        1.5015013844430457e-07
+      ],
+      "common_phase": [
+        -0.5819192200952159,
+        -0.8132465931584195
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_04",
+      "n": 5,
+      "k": 5,
+      "depth": 59,
+      "CZ": 35,
+      "max_column_error": 2.0012573588957731e-07,
+      "column_errors": [
+        5.1480813101796115e-08,
+        7.514011980892102e-08,
+        1.6190245074292893e-07,
+        1.4865517310590595e-07,
+        2.0012573588957731e-07,
+        6.754479046967604e-08
+      ],
+      "common_phase": [
+        -0.9707869843745308,
+        0.23994297441059728
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_02",
+      "n": 5,
+      "k": 3,
+      "depth": 34,
+      "CZ": 19,
+      "max_column_error": 5.5746672279840215e-08,
+      "column_errors": [
+        5.5746672279840215e-08,
+        4.875734572344366e-08,
+        2.477647989788229e-08,
+        4.031212318686919e-08
+      ],
+      "common_phase": [
+        0.7813169325952748,
+        -0.6241344813739352
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_00",
+      "n": 6,
+      "k": 3,
+      "depth": 43,
+      "CZ": 25,
+      "max_column_error": 5.986154958072205e-08,
+      "column_errors": [
+        1.8026615561707814e-08,
+        2.7799634450050796e-08,
+        3.3887700083197524e-08,
+        5.986154958072205e-08
+      ],
+      "common_phase": [
+        0.9278005066807833,
+        0.37307669426390355
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_05",
+      "n": 6,
+      "k": 3,
+      "depth": 45,
+      "CZ": 25,
+      "max_column_error": 7.846339334164779e-08,
+      "column_errors": [
+        7.846339334164779e-08,
+        7.814243609755038e-08,
+        7.557781487549373e-08,
+        7.58097630822429e-08
+      ],
+      "common_phase": [
+        0.3624747076144292,
+        0.9319936085294975
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_06",
+      "n": 6,
+      "k": 3,
+      "depth": 45,
+      "CZ": 25,
+      "max_column_error": 5.2704805316773436e-08,
+      "column_errors": [
+        1.586020346312931e-08,
+        2.256613989569362e-08,
+        5.2704805316773436e-08,
+        4.105240569965172e-08
+      ],
+      "common_phase": [
+        0.7658543587098476,
+        0.6430140754642374
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_01",
+      "n": 7,
+      "k": 3,
+      "depth": 52,
+      "CZ": 32,
+      "max_column_error": 1.2344816651298385e-07,
+      "column_errors": [
+        6.85055511962417e-08,
+        7.59497934997992e-08,
+        8.973594038740046e-08,
+        1.2344816651298385e-07
+      ],
+      "common_phase": [
+        -0.3377109652126277,
+        -0.9412498626693953
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_07",
+      "n": 7,
+      "k": 3,
+      "depth": 52,
+      "CZ": 32,
+      "max_column_error": 5.68203112772294e-07,
+      "column_errors": [
+        8.186974280111327e-08,
+        1.945541991883849e-07,
+        4.865143943802288e-07,
+        5.68203112772294e-07
+      ],
+      "common_phase": [
+        0.9167509620032538,
+        -0.3994592265377142
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_08",
+      "n": 8,
+      "k": 3,
+      "depth": 65,
+      "CZ": 40,
+      "max_column_error": 1.869836393206661e-07,
+      "column_errors": [
+        9.94979703332693e-08,
+        9.583944942802724e-08,
+        9.202671424695824e-08,
+        1.869836393206661e-07
+      ],
+      "common_phase": [
+        -0.6996601067510348,
+        0.7144758463525067
+      ],
+      "accepted": false
+    },
+    {
+      "name": "peer_09",
+      "n": 8,
+      "k": 3,
+      "depth": 67,
+      "CZ": 40,
+      "max_column_error": 1.242618253923246e-07,
+      "column_errors": [
+        6.109687245492719e-08,
+        1.1492562891916775e-07,
+        1.242618253923246e-07,
+        1.1107644987436491e-07
+      ],
+      "common_phase": [
+        -0.6272880733373425,
+        0.7787873092499165
+      ],
+      "accepted": false
+    }
+  ],
+  "all56_retained_cases_verified": true,
+  "max_retained_state_error": 1.486027890605259e-07,
+  "interpretation": "Rejection concerns numerical precision of supplied coefficients, not impossibility of their fixed topologies.",
+  "next_work": "Matched-pipeline comparison of six/seven-site r0..3 alternatives before any narrowly gated precision repair. Defer five-site all-count rows and eight-site repair until a matching certified comparator exists."
+}

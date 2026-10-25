@@ -1,0 +1,17 @@
+[
+  {
+    "source": "research/bonus_band_20261025/symmetry_decoder_research.json",
+    "frozen": "research/bonus_spinflip_audit_20261025/symmetry_decoder_research.json",
+    "sha256": "74dcd4b8ad8262cf6281e66837f987eac81c163e80e17bb189162a78c028cd88"
+  },
+  {
+    "source": "research/bonus_half_precision_20261025/comparison_circuits.json",
+    "frozen": "research/bonus_spinflip_audit_20261025/physical_patch_circuits.json",
+    "sha256": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507"
+  },
+  {
+    "source": "research/bonus_binary_resource_audit_20261025/audit.py",
+    "frozen": "research/bonus_spinflip_audit_20261025/exact_toffoli_reference.py",
+    "sha256": "6105c48d4368a04dd289f750fa257fabf0ecc1fc69f5b863853139271097bdcb"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "status": "standalone candidate; not promoted to native_submission",
+  "candidate": "edge_hardware_submission.py",
+  "candidate_sha256": "2b1bffed4382b517295d4d5861e5fbdd1a2d84bf308590b67d007b2be74e97df",
+  "domain": "N in {8,10}, k=1, default DD enabled and pack=False; all other calls use preserved baseline",
+  "sources": {
+    "native_submission.py": "e9e13c948d7fd24f0c297192e513cdefc2959295b28738f55de5a34b61d2b233",
+    "edge_primary_snapshot.py": "8f752750f7246eb7d92a56015958e63debf229f4f3909cb69585ccd8252db7b8",
+    "edge_primary_origin.json": "c6047fa48866c9e4b3047c2b95c4af2f47e8a534e1403b2043c33c066fc3bf4d",
+    "w_z_sensitivity.py": "b5be11f4af7566baac6608bbeed501bcf672fd9554a42446d8e2bb7f604ffe12",
+    "w_zz_sensitivity.py": "1542665a179ff46069238c6c1aac78a3f38f94e4d76d993ba3d921250c4acbce",
+    "w_edge_sensitivity.py": "ec301e342f11b60d4824b0bf17c77472abd1a1f739071c0a946d1672230e7649",
+    "w_edge_selection.py": "c01d07d186d6b945bbde1f1dccb95a12fc6afb00590c7d1473d42290857b2e06",
+    "export_edge_hardware.py": "8cf7bc4f71ee84d9d62f6838435ade74f810811f9237f0bc8b61bda950330865"
+  }
+}
