@@ -30,6 +30,8 @@ First 40 s of search, CZ counts (current toby_sol in brackets): (7,3) 21 [26], (
 k = 2 and k = 1 circuits don't prune at all from the toby_sol start (W uses 2N - 3, k = 2 uses
 4N - 9); a different start (over-parameterised random brickwork, then prune) is needed there.
 A complex Rz Ry Rz ansatz did not beat the real one on (5,2) 11 or (6,3) 12.
+k = 2 from an over-parameterised brickwork start on 2-row ladder footprints: in progress (toby session 2),
+N = 7..10 first; results will use the same patch keys so they drop into ex_sol / toby_sol.
 
 ### BR-101. Exact Clifford refits before depth compilation
 Status: measured (bonus research, isolated files)
