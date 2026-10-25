@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-25",
+  "sources": [
+    {
+      "title": "Suppressing Quantum Circuit Errors Due to System Variability",
+      "url": "https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.4.010327",
+      "finding": "The paper ranks postcompilation circuit placements using calibration-derived costs.",
+      "local_inference": "Rank compiled W tree candidates, including single-qubit multiplicity and intermediate-state noise sensitivity. Test the challenge score separately; paper fidelity results do not establish gains here."
+    },
+    {
+      "title": "Short-Depth Circuits for Dicke State Preparation",
+      "url": "https://laro.lanl.gov/esploro/outputs/conferenceProceeding/Short-Depth-Circuits-for-Dicke-State-Preparation/9916458526703761",
+      "finding": "The authors give ancilla-free grid constructions with depth O(sqrt(nk)) and O(nk) gates.",
+      "local_inference": "Prefer explicit routed divide-and-conquer circuits as resource benchmarks. Asymptotic improvements do not establish a native-moment win at N<=15."
+    },
+    {
+      "title": "A Divide-and-Conquer Approach to Dicke State Preparation",
+      "url": "https://arxiv.org/abs/2112.12435",
+      "finding": "The approach distributes Hamming weight between blocks and then applies coherent Dicke unitaries within blocks.",
+      "local_inference": "Use peer unary-to-Dicke isometries only for their certified input-count ranges; complete-state fidelity alone does not certify a reusable coherent decoder."
+    }
+  ],
+  "next_hypothesis": "A first-order estimate of each valid Z-string probability may rank circuits better than global state fidelity, since the score penalizes nonuniform valid outcomes. Derive channel insertion contributions with backward-evolved projectors; verify against scaled-noise density matrices before using for selection.",
+  "status": "hypothesis; not implemented or claimed as an improvement"
+}

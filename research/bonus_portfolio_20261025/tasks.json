@@ -145,27 +145,36 @@
         "exact W state and calibrated native connectivity",
         "paired case/seed comparison before recommending a main-constructor change"
       ],
-      "result_status": "pilot complete; unconditional replacement not accepted; calibration-aware selection remains in progress"
+      "result_status": "completed for N8/10 seeds0..5, four detuning realizations; held-out seeds3..5; no primary gain claimed"
     },
-    "pilot_status": "pilot complete; unconditional replacement not accepted; PORT-004 remains in progress",
+    "pilot_status": "fixed-tree and tree-placement pilots complete; no replacement accepted; objective refinement in progress",
     "pilot_evidence": [
       "research/bonus_band_20261025/w_hardware_results.json",
       "research/bonus_band_20261025/w_hardware_summary.json"
     ],
-    "next_work": "Choose decompositions using calibration-dependent single-qubit cost, CZ cost and schedule duration; compare alternatives on matched calibrations before changing the main constructor.",
+    "next_work": "Derive a first-order estimate of valid Z-string probabilities, including within-sector bias; check against scaled-noise density matrices before another placement pilot.",
+    "cost_pilot_evidence": [
+      "research/bonus_band_20261025/w_cost_summary.json",
+      "research/bonus_band_20261025/w_tree_summary.json",
+      "research/bonus_band_20261025/w_experiment_manifest.json"
+    ],
+    "research_sources": "research/bonus_band_20261025/research_followup.json",
     "publication_note": "Completed artifact paths are included in this branch. Some original search inputs/scripts refer to the shared research workspace; the published standalone submission and W helper are self-contained."
   },
   {
     "id": "PORT-005",
     "title": "Integrate certified five/six-site terminal decoders into the native portfolio",
-    "status": "available",
-    "assignee": null,
+    "status": "in progress",
+    "assignee": "bonus-integration",
     "suggested_owner": "Existing portfolio integration worker (BR-108); suggestion only, not an accepted assignment",
     "scope": "Consume BR-109 and PORT-001 artifacts after their column checks; do not duplicate their decoder synthesis",
     "inputs": [
       "research/bonus_portfolio_20261025/path_decoder_5_5_real_refined.json",
       "research/bonus_portfolio_20261025/path_decoder_5_5_complex_refined.json",
-      "PORT-001 outputs in research/bonus_terminal6_20261025"
+      "PORT-001 outputs in research/bonus_terminal6_20261025",
+      "benchmark_outputs/synth/sol_half_5_4_0_s2.json",
+      "research/bonus_terminal6_20261025/five_certified_circuit.json",
+      "research/bonus_band_20261025/best2_circuits.json"
     ],
     "acceptance": [
       "Verify every supported unary input column with one common global phase and error below 1e-10",
@@ -174,7 +183,9 @@
       "Run all 56 corrected bonus cases for exact state, native gates, Willow connectivity and build time below 60 seconds",
       "Publish reconstructible circuits with source hashes and report the incremental score gain"
     ],
-    "publication_note": "Completed artifact paths are included in this branch. Some original search inputs/scripts refer to the shared research workspace; the published standalone submission and W helper are self-contained."
+    "publication_note": "Completed artifact paths are included in this branch. Some original search inputs/scripts refer to the shared research workspace; the published standalone submission and W helper are self-contained.",
+    "integration_directory": "research/bonus_terminal_integration_20261025",
+    "current_scope": "Bounded reuse/integration of frozen terminal-five, terminal-six and maintained (5,4,0) tables; no new decoder synthesis. Baseline best2_circuits.json; preserve per-case best native depth."
   },
   {
     "id": "PORT-006",

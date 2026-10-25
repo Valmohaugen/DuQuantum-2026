@@ -1,0 +1,1701 @@
+{
+  "status": "experimental; no maintained constructor changes",
+  "baseline_sha256": "02512364d908c1e6f28fe288f5c94ff301fbf36e99e7fd0b9b853c462eceaae3",
+  "model": "Four matched detuning realizations, 10000 shots per basis, 32768 score repetitions. Selection uses only calibration and first-order or gate-count costs, not noisy evaluation.",
+  "rows": [
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 0,
+      "held_out": false,
+      "variant": "baseline",
+      "moments": 11,
+      "CZ": 13,
+      "single_qubit_gates": 27,
+      "state_l2_error": 3.8412691569637417e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.04176959271437639,
+        "state_terms": {
+          "single_qubit": 0.012573210857431493,
+          "two_qubit": 0.019514220291949224,
+          "relaxation": 0.00700822113208094,
+          "dephasing": 0.00267394043291474
+        },
+        "count_cost": 0.06361097673970371,
+        "moments": 11
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4658880005647035,
+          "MC_standard_error": 0.006412285882383512,
+          "penalty_inverse_proxy": 1.0367383402490218
+        },
+        "8": {
+          "E_score": 1.4653344219359377,
+          "MC_standard_error": 0.006403260540327528,
+          "penalty_inverse_proxy": 1.0367383155303105
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 0,
+      "held_out": false,
+      "variant": "count",
+      "moments": 9,
+      "CZ": 13,
+      "single_qubit_gates": 27,
+      "state_l2_error": 3.037896567077389e-16,
+      "selection": {
+        "pattern": "010111",
+        "state_cost": 0.04688734418441419,
+        "state_terms": {
+          "single_qubit": 0.012170984405755782,
+          "two_qubit": 0.019514220291949224,
+          "relaxation": 0.011049134798176461,
+          "dephasing": 0.004153004688532721
+        },
+        "count_cost": 0.059081526222441366,
+        "moments": 9
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.458197437228905,
+          "MC_standard_error": 0.006361577471245343,
+          "penalty_inverse_proxy": 1.0297635309060726
+        },
+        "8": {
+          "E_score": 1.4576804937261494,
+          "MC_standard_error": 0.006353817874158845,
+          "penalty_inverse_proxy": 1.029763503599044
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 0,
+      "held_out": false,
+      "variant": "state",
+      "moments": 11,
+      "CZ": 13,
+      "single_qubit_gates": 27,
+      "state_l2_error": 3.8412691569637417e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.04176959271437639,
+        "state_terms": {
+          "single_qubit": 0.012573210857431493,
+          "two_qubit": 0.019514220291949224,
+          "relaxation": 0.00700822113208094,
+          "dephasing": 0.00267394043291474
+        },
+        "count_cost": 0.06361097673970371,
+        "moments": 11
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4658880005647035,
+          "MC_standard_error": 0.006412285882383512,
+          "penalty_inverse_proxy": 1.0367383402490218
+        },
+        "8": {
+          "E_score": 1.4653344219359377,
+          "MC_standard_error": 0.006403260540327528,
+          "penalty_inverse_proxy": 1.0367383155303105
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 1,
+      "held_out": false,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 4.400882432915618e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.050126940722281105,
+        "state_terms": {
+          "single_qubit": 0.009883904110771835,
+          "two_qubit": 0.025452408329123738,
+          "relaxation": 0.010934035076282862,
+          "dephasing": 0.0038565932061026685
+        },
+        "count_cost": 0.07705389871729135,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4518322167597155,
+          "MC_standard_error": 0.006446132615953044,
+          "penalty_inverse_proxy": 1.0334668615181122
+        },
+        "8": {
+          "E_score": 1.45127186542034,
+          "MC_standard_error": 0.006432776015663923,
+          "penalty_inverse_proxy": 1.0334668452121358
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 1,
+      "held_out": false,
+      "variant": "count",
+      "moments": 14,
+      "CZ": 13,
+      "single_qubit_gates": 35,
+      "state_l2_error": 5.071329903966123e-16,
+      "selection": {
+        "pattern": "101000",
+        "state_cost": 0.05860725764544934,
+        "state_terms": {
+          "single_qubit": 0.011007586796931021,
+          "two_qubit": 0.025452408329123734,
+          "relaxation": 0.017226488911496363,
+          "dephasing": 0.0049207736078982186
+        },
+        "count_cost": 0.07662300110357731,
+        "moments": 14
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4540740947928659,
+          "MC_standard_error": 0.006596955195050478,
+          "penalty_inverse_proxy": 1.0293717849883948
+        },
+        "8": {
+          "E_score": 1.4535378727883332,
+          "MC_standard_error": 0.006588137454653254,
+          "penalty_inverse_proxy": 1.0293717644101357
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 1,
+      "held_out": false,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 4.400882432915618e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.050126940722281105,
+        "state_terms": {
+          "single_qubit": 0.009883904110771835,
+          "two_qubit": 0.025452408329123738,
+          "relaxation": 0.010934035076282862,
+          "dephasing": 0.0038565932061026685
+        },
+        "count_cost": 0.07705389871729135,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4518322167597155,
+          "MC_standard_error": 0.006446132615953044,
+          "penalty_inverse_proxy": 1.0334668615181122
+        },
+        "8": {
+          "E_score": 1.45127186542034,
+          "MC_standard_error": 0.006432776015663923,
+          "penalty_inverse_proxy": 1.0334668452121358
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 2,
+      "held_out": false,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 5.835603993082667e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.04571765358733284,
+        "state_terms": {
+          "single_qubit": 0.007800323197310015,
+          "two_qubit": 0.024178866108484055,
+          "relaxation": 0.010294878139216672,
+          "dephasing": 0.003443586142322099
+        },
+        "count_cost": 0.0734048690713875,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4754258594188268,
+          "MC_standard_error": 0.006450008944712987,
+          "penalty_inverse_proxy": 1.0445315160714925
+        },
+        "8": {
+          "E_score": 1.4748652233947372,
+          "MC_standard_error": 0.006439773336349676,
+          "penalty_inverse_proxy": 1.044531500136403
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 2,
+      "held_out": false,
+      "variant": "count",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 6.162690546571577e-16,
+      "selection": {
+        "pattern": "000001",
+        "state_cost": 0.04664096121055969,
+        "state_terms": {
+          "single_qubit": 0.007696503198575914,
+          "two_qubit": 0.024178866108484052,
+          "relaxation": 0.01115127449465416,
+          "dephasing": 0.0036143174088455634
+        },
+        "count_cost": 0.07323548015048356,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4805040054888352,
+          "MC_standard_error": 0.006572299764188094,
+          "penalty_inverse_proxy": 1.0442558392045422
+        },
+        "8": {
+          "E_score": 1.479950624048057,
+          "MC_standard_error": 0.006563389205914323,
+          "penalty_inverse_proxy": 1.04425582341822
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 2,
+      "held_out": false,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 5.835603993082667e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.04571765358733284,
+        "state_terms": {
+          "single_qubit": 0.007800323197310015,
+          "two_qubit": 0.024178866108484055,
+          "relaxation": 0.010294878139216672,
+          "dephasing": 0.003443586142322099
+        },
+        "count_cost": 0.0734048690713875,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4754258594188268,
+          "MC_standard_error": 0.006450008944712987,
+          "penalty_inverse_proxy": 1.0445315160714925
+        },
+        "8": {
+          "E_score": 1.4748652233947372,
+          "MC_standard_error": 0.006439773336349676,
+          "penalty_inverse_proxy": 1.044531500136403
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 3,
+      "held_out": true,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 5.391787879216403e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.052854446621342935,
+        "state_terms": {
+          "single_qubit": 0.011318690341437279,
+          "two_qubit": 0.027931567483386627,
+          "relaxation": 0.009976321287155736,
+          "dephasing": 0.0036278675093632975
+        },
+        "count_cost": 0.08134261176344057,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4291730429129061,
+          "MC_standard_error": 0.0060540035775939315,
+          "penalty_inverse_proxy": 1.0213468517919726
+        },
+        "8": {
+          "E_score": 1.4286469907041872,
+          "MC_standard_error": 0.006043449678622055,
+          "penalty_inverse_proxy": 1.0213468365732006
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 3,
+      "held_out": true,
+      "variant": "count",
+      "moments": 14,
+      "CZ": 13,
+      "single_qubit_gates": 31,
+      "state_l2_error": 6.066745929695098e-16,
+      "selection": {
+        "pattern": "010101",
+        "state_cost": 0.05931508739116188,
+        "state_terms": {
+          "single_qubit": 0.011674369103284649,
+          "two_qubit": 0.02793156748338662,
+          "relaxation": 0.014465868625045803,
+          "dephasing": 0.005243282179444812
+        },
+        "count_cost": 0.07982538574224007,
+        "moments": 14
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4117812883628267,
+          "MC_standard_error": 0.0058734044701345064,
+          "penalty_inverse_proxy": 1.0142228921984058
+        },
+        "8": {
+          "E_score": 1.411304013617402,
+          "MC_standard_error": 0.005867187653464243,
+          "penalty_inverse_proxy": 1.0142228746363013
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 3,
+      "held_out": true,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 5.391787879216403e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.052854446621342935,
+        "state_terms": {
+          "single_qubit": 0.011318690341437279,
+          "two_qubit": 0.027931567483386627,
+          "relaxation": 0.009976321287155736,
+          "dephasing": 0.0036278675093632975
+        },
+        "count_cost": 0.08134261176344057,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4291730429129061,
+          "MC_standard_error": 0.0060540035775939315,
+          "penalty_inverse_proxy": 1.0213468517919726
+        },
+        "8": {
+          "E_score": 1.4286469907041872,
+          "MC_standard_error": 0.006043449678622055,
+          "penalty_inverse_proxy": 1.0213468365732006
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 4,
+      "held_out": true,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 8.031485921484936e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.04378361483195536,
+        "state_terms": {
+          "single_qubit": 0.010108677902599152,
+          "two_qubit": 0.0189979615704019,
+          "relaxation": 0.010902766763999467,
+          "dephasing": 0.0037742085949548383
+        },
+        "count_cost": 0.07005175334370181,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4219890517965719,
+          "MC_standard_error": 0.0060939707365030675,
+          "penalty_inverse_proxy": 1.0133500989135156
+        },
+        "8": {
+          "E_score": 1.4214928179682484,
+          "MC_standard_error": 0.006087312847353494,
+          "penalty_inverse_proxy": 1.0133500973329612
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 4,
+      "held_out": true,
+      "variant": "count",
+      "moments": 14,
+      "CZ": 13,
+      "single_qubit_gates": 35,
+      "state_l2_error": 7.806101442730353e-16,
+      "selection": {
+        "pattern": "100101",
+        "state_cost": 0.05302379486868451,
+        "state_terms": {
+          "single_qubit": 0.011038219392990616,
+          "two_qubit": 0.0189979615704019,
+          "relaxation": 0.017635971369766554,
+          "dephasing": 0.005351642535525451
+        },
+        "count_cost": 0.0695457360497739,
+        "moments": 14
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4252935021316584,
+          "MC_standard_error": 0.006166627055395062,
+          "penalty_inverse_proxy": 1.0121552241414429
+        },
+        "8": {
+          "E_score": 1.4247744421745099,
+          "MC_standard_error": 0.006159220981911565,
+          "penalty_inverse_proxy": 1.0121552215368825
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 4,
+      "held_out": true,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "state_l2_error": 8.031485921484936e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.04378361483195536,
+        "state_terms": {
+          "single_qubit": 0.010108677902599152,
+          "two_qubit": 0.0189979615704019,
+          "relaxation": 0.010902766763999467,
+          "dephasing": 0.0037742085949548383
+        },
+        "count_cost": 0.07005175334370181,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4219890517965719,
+          "MC_standard_error": 0.0060939707365030675,
+          "penalty_inverse_proxy": 1.0133500989135156
+        },
+        "8": {
+          "E_score": 1.4214928179682484,
+          "MC_standard_error": 0.006087312847353494,
+          "penalty_inverse_proxy": 1.0133500973329612
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 5,
+      "held_out": true,
+      "variant": "baseline",
+      "moments": 11,
+      "CZ": 13,
+      "single_qubit_gates": 27,
+      "state_l2_error": 2.805063063383162e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.047654621568549584,
+        "state_terms": {
+          "single_qubit": 0.012008887439644764,
+          "two_qubit": 0.025963572563909142,
+          "relaxation": 0.00700822113208094,
+          "dephasing": 0.00267394043291474
+        },
+        "count_cost": 0.06982051209143914,
+        "moments": 11
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4621455847607912,
+          "MC_standard_error": 0.006418630313882808,
+          "penalty_inverse_proxy": 1.0420426489514054
+        },
+        "8": {
+          "E_score": 1.461586762969837,
+          "MC_standard_error": 0.006408277033250263,
+          "penalty_inverse_proxy": 1.0420426063668586
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 5,
+      "held_out": true,
+      "variant": "count",
+      "moments": 9,
+      "CZ": 13,
+      "single_qubit_gates": 27,
+      "state_l2_error": 2.3452794184379016e-16,
+      "selection": {
+        "pattern": "010111",
+        "state_cost": 0.05266655734416159,
+        "state_terms": {
+          "single_qubit": 0.01150084529354327,
+          "two_qubit": 0.02596357256390914,
+          "relaxation": 0.011049134798176461,
+          "dephasing": 0.004153004688532721
+        },
+        "count_cost": 0.06525286442172568,
+        "moments": 9
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4426246153550675,
+          "MC_standard_error": 0.006264400437317225,
+          "penalty_inverse_proxy": 1.0265011297169986
+        },
+        "8": {
+          "E_score": 1.4421076654462657,
+          "MC_standard_error": 0.006255394945537954,
+          "penalty_inverse_proxy": 1.0265010782564883
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 5,
+      "held_out": true,
+      "variant": "state",
+      "moments": 11,
+      "CZ": 13,
+      "single_qubit_gates": 27,
+      "state_l2_error": 2.805063063383162e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.047654621568549584,
+        "state_terms": {
+          "single_qubit": 0.012008887439644764,
+          "two_qubit": 0.025963572563909142,
+          "relaxation": 0.00700822113208094,
+          "dephasing": 0.00267394043291474
+        },
+        "count_cost": 0.06982051209143914,
+        "moments": 11
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.4621455847607912,
+          "MC_standard_error": 0.006418630313882808,
+          "penalty_inverse_proxy": 1.0420426489514054
+        },
+        "8": {
+          "E_score": 1.461586762969837,
+          "MC_standard_error": 0.006408277033250263,
+          "penalty_inverse_proxy": 1.0420426063668586
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 0,
+      "held_out": false,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 35,
+      "state_l2_error": 5.0394992397183375e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.05356272691472979,
+        "state_terms": {
+          "single_qubit": 0.015355113899197793,
+          "two_qubit": 0.024780835474342004,
+          "relaxation": 0.00975719999106882,
+          "dephasing": 0.003669577550121168
+        },
+        "count_cost": 0.09235238998991982,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2593504138410418,
+          "MC_standard_error": 0.004425672567494987,
+          "penalty_inverse_proxy": 0.9765255760739565
+        },
+        "10": {
+          "E_score": 1.2590299640239508,
+          "MC_standard_error": 0.004421823774108932,
+          "penalty_inverse_proxy": 0.9765255727568277
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 0,
+      "held_out": false,
+      "variant": "count",
+      "moments": 14,
+      "CZ": 17,
+      "single_qubit_gates": 39,
+      "state_l2_error": 7.423359912255865e-16,
+      "selection": {
+        "pattern": "01011001",
+        "state_cost": 0.06380761974775072,
+        "state_terms": {
+          "single_qubit": 0.015940273672039477,
+          "two_qubit": 0.02478083547434201,
+          "relaxation": 0.016706214005202672,
+          "dephasing": 0.006380296596166552
+        },
+        "count_cost": 0.09080617226311452,
+        "moments": 14
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2400417186885742,
+          "MC_standard_error": 0.00416298366088056,
+          "penalty_inverse_proxy": 0.9619250306978759
+        },
+        "10": {
+          "E_score": 1.2397402442087353,
+          "MC_standard_error": 0.0041602260686786005,
+          "penalty_inverse_proxy": 0.9619250267599672
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 0,
+      "held_out": false,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 35,
+      "state_l2_error": 5.0394992397183375e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.05356272691472979,
+        "state_terms": {
+          "single_qubit": 0.015355113899197793,
+          "two_qubit": 0.024780835474342004,
+          "relaxation": 0.00975719999106882,
+          "dephasing": 0.003669577550121168
+        },
+        "count_cost": 0.09235238998991982,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2593504138410418,
+          "MC_standard_error": 0.004425672567494987,
+          "penalty_inverse_proxy": 0.9765255760739565
+        },
+        "10": {
+          "E_score": 1.2590299640239508,
+          "MC_standard_error": 0.004421823774108932,
+          "penalty_inverse_proxy": 0.9765255727568277
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 1,
+      "held_out": false,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 4.607428791494007e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.059616929551155384,
+        "state_terms": {
+          "single_qubit": 0.01354314426385893,
+          "two_qubit": 0.030453435233174498,
+          "relaxation": 0.011240530435263178,
+          "dephasing": 0.004379819618858777
+        },
+        "count_cost": 0.0965762788284463,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2835111377150525,
+          "MC_standard_error": 0.0044060806253346085,
+          "penalty_inverse_proxy": 0.9926099880209668
+        },
+        "10": {
+          "E_score": 1.283176744880144,
+          "MC_standard_error": 0.004401728177747305,
+          "penalty_inverse_proxy": 0.9926099840073174
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 1,
+      "held_out": false,
+      "variant": "count",
+      "moments": 14,
+      "CZ": 17,
+      "single_qubit_gates": 43,
+      "state_l2_error": 4.566229766543974e-16,
+      "selection": {
+        "pattern": "10110010",
+        "state_cost": 0.07075625233154975,
+        "state_terms": {
+          "single_qubit": 0.014600558870815324,
+          "two_qubit": 0.030453435233174495,
+          "relaxation": 0.01927163777151234,
+          "dephasing": 0.006430620456047584
+        },
+        "count_cost": 0.0954278659671032,
+        "moments": 14
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.271826762990372,
+          "MC_standard_error": 0.0043148532562763495,
+          "penalty_inverse_proxy": 0.982850092625696
+        },
+        "10": {
+          "E_score": 1.2715060899702575,
+          "MC_standard_error": 0.0043118427322009125,
+          "penalty_inverse_proxy": 0.9828500873623863
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 1,
+      "held_out": false,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 4.607428791494007e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.059616929551155384,
+        "state_terms": {
+          "single_qubit": 0.01354314426385893,
+          "two_qubit": 0.030453435233174498,
+          "relaxation": 0.011240530435263178,
+          "dephasing": 0.004379819618858777
+        },
+        "count_cost": 0.0965762788284463,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2835111377150525,
+          "MC_standard_error": 0.0044060806253346085,
+          "penalty_inverse_proxy": 0.9926099880209668
+        },
+        "10": {
+          "E_score": 1.283176744880144,
+          "MC_standard_error": 0.004401728177747305,
+          "penalty_inverse_proxy": 0.9926099840073174
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 2,
+      "held_out": false,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 35,
+      "state_l2_error": 6.003920763109635e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.055810680935118026,
+        "state_terms": {
+          "single_qubit": 0.010369956542133518,
+          "two_qubit": 0.03154530099448336,
+          "relaxation": 0.009989965698567242,
+          "dephasing": 0.0039054576999339036
+        },
+        "count_cost": 0.0941725148850151,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2948989998650884,
+          "MC_standard_error": 0.004437742640037993,
+          "penalty_inverse_proxy": 1.003536694331204
+        },
+        "10": {
+          "E_score": 1.294562375043471,
+          "MC_standard_error": 0.004434286085868243,
+          "penalty_inverse_proxy": 1.003536690938978
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 2,
+      "held_out": false,
+      "variant": "count",
+      "moments": 13,
+      "CZ": 17,
+      "single_qubit_gates": 39,
+      "state_l2_error": 5.906046415956311e-16,
+      "selection": {
+        "pattern": "10111010",
+        "state_cost": 0.06715542187086057,
+        "state_terms": {
+          "single_qubit": 0.011955248821921836,
+          "two_qubit": 0.03154530099448336,
+          "relaxation": 0.017301368254058813,
+          "dephasing": 0.006353503800396559
+        },
+        "count_cost": 0.09128169688997964,
+        "moments": 13
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2701773739782065,
+          "MC_standard_error": 0.004250935198636508,
+          "penalty_inverse_proxy": 0.9865143658827511
+        },
+        "10": {
+          "E_score": 1.2698579846331015,
+          "MC_standard_error": 0.004247992264643313,
+          "penalty_inverse_proxy": 0.9865143617268984
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 2,
+      "held_out": false,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 35,
+      "state_l2_error": 6.003920763109635e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.055810680935118026,
+        "state_terms": {
+          "single_qubit": 0.010369956542133518,
+          "two_qubit": 0.03154530099448336,
+          "relaxation": 0.009989965698567242,
+          "dephasing": 0.0039054576999339036
+        },
+        "count_cost": 0.0941725148850151,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2948989998650884,
+          "MC_standard_error": 0.004437742640037993,
+          "penalty_inverse_proxy": 1.003536694331204
+        },
+        "10": {
+          "E_score": 1.294562375043471,
+          "MC_standard_error": 0.004434286085868243,
+          "penalty_inverse_proxy": 1.003536690938978
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 3,
+      "held_out": true,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 1.1272428820163253e-15,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.061760314923707656,
+        "state_terms": {
+          "single_qubit": 0.012081499067291503,
+          "two_qubit": 0.033480069108835935,
+          "relaxation": 0.011619903252316944,
+          "dephasing": 0.004578843495263271
+        },
+        "count_cost": 0.09818436251573512,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2753063052473312,
+          "MC_standard_error": 0.004417886338464189,
+          "penalty_inverse_proxy": 0.9838328608278749
+        },
+        "10": {
+          "E_score": 1.2749860557554094,
+          "MC_standard_error": 0.004415124371137017,
+          "penalty_inverse_proxy": 0.9838328586546757
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 3,
+      "held_out": true,
+      "variant": "count",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 1.0924122889293133e-15,
+      "selection": {
+        "pattern": "00010000",
+        "state_cost": 0.06256310304290207,
+        "state_terms": {
+          "single_qubit": 0.012058609752978166,
+          "two_qubit": 0.033480069108835935,
+          "relaxation": 0.012334578262383407,
+          "dephasing": 0.004689845918704558
+        },
+        "count_cost": 0.09812125058565278,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2736199728996274,
+          "MC_standard_error": 0.004385910735135261,
+          "penalty_inverse_proxy": 0.983129486264863
+        },
+        "10": {
+          "E_score": 1.2732923070481603,
+          "MC_standard_error": 0.004382744843154661,
+          "penalty_inverse_proxy": 0.9831294836546441
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 3,
+      "held_out": true,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 1.1272428820163253e-15,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.061760314923707656,
+        "state_terms": {
+          "single_qubit": 0.012081499067291503,
+          "two_qubit": 0.033480069108835935,
+          "relaxation": 0.011619903252316944,
+          "dephasing": 0.004578843495263271
+        },
+        "count_cost": 0.09818436251573512,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2753063052473312,
+          "MC_standard_error": 0.004417886338464189,
+          "penalty_inverse_proxy": 0.9838328608278749
+        },
+        "10": {
+          "E_score": 1.2749860557554094,
+          "MC_standard_error": 0.004415124371137017,
+          "penalty_inverse_proxy": 0.9838328586546757
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 4,
+      "held_out": true,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 35,
+      "state_l2_error": 1.1177652746652718e-15,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.054544013153142654,
+        "state_terms": {
+          "single_qubit": 0.013393927879343086,
+          "two_qubit": 0.026558577328481006,
+          "relaxation": 0.01047730126826572,
+          "dephasing": 0.004114206677052841
+        },
+        "count_cost": 0.09202790494974127,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.261112305345078,
+          "MC_standard_error": 0.004373886243974181,
+          "penalty_inverse_proxy": 0.9758481887937881
+        },
+        "10": {
+          "E_score": 1.2607854485431744,
+          "MC_standard_error": 0.0043702606137223845,
+          "penalty_inverse_proxy": 0.9758481860416707
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 4,
+      "held_out": true,
+      "variant": "count",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 1.0917000888234478e-15,
+      "selection": {
+        "pattern": "11011111",
+        "state_cost": 0.06052633046936226,
+        "state_terms": {
+          "single_qubit": 0.013271060951209722,
+          "two_qubit": 0.02655857732848101,
+          "relaxation": 0.01557627827691542,
+          "dephasing": 0.005120413912756114
+        },
+        "count_cost": 0.09117148042134987,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2577009712844496,
+          "MC_standard_error": 0.004229890553657055,
+          "penalty_inverse_proxy": 0.972779141205523
+        },
+        "10": {
+          "E_score": 1.2573868413949407,
+          "MC_standard_error": 0.004226900116640276,
+          "penalty_inverse_proxy": 0.9727791372392544
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 4,
+      "held_out": true,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 35,
+      "state_l2_error": 1.1177652746652718e-15,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.054544013153142654,
+        "state_terms": {
+          "single_qubit": 0.013393927879343086,
+          "two_qubit": 0.026558577328481006,
+          "relaxation": 0.01047730126826572,
+          "dephasing": 0.004114206677052841
+        },
+        "count_cost": 0.09202790494974127,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.261112305345078,
+          "MC_standard_error": 0.004373886243974181,
+          "penalty_inverse_proxy": 0.9758481887937881
+        },
+        "10": {
+          "E_score": 1.2607854485431744,
+          "MC_standard_error": 0.0043702606137223845,
+          "penalty_inverse_proxy": 0.9758481860416707
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 5,
+      "held_out": true,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 9.633511568959769e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.06382474546414407,
+        "state_terms": {
+          "single_qubit": 0.015516669141725475,
+          "two_qubit": 0.03194650312276829,
+          "relaxation": 0.011849504599738447,
+          "dephasing": 0.00451206859991187
+        },
+        "count_cost": 0.10075662500673366,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2755510473266893,
+          "MC_standard_error": 0.004325193962365307,
+          "penalty_inverse_proxy": 0.983989488243668
+        },
+        "10": {
+          "E_score": 1.2752308487691848,
+          "MC_standard_error": 0.00432234068711124,
+          "penalty_inverse_proxy": 0.9839894850954813
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 5,
+      "held_out": true,
+      "variant": "count",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 9.763153992188852e-16,
+      "selection": {
+        "pattern": "00010000",
+        "state_cost": 0.06458292204487678,
+        "state_terms": {
+          "single_qubit": 0.01515497314015354,
+          "two_qubit": 0.03194650312276829,
+          "relaxation": 0.012774255734587698,
+          "dephasing": 0.004707190047367258
+        },
+        "count_cost": 0.10017815013343176,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2739144194205188,
+          "MC_standard_error": 0.004361701395867567,
+          "penalty_inverse_proxy": 0.9813476420983872
+        },
+        "10": {
+          "E_score": 1.2735971343419392,
+          "MC_standard_error": 0.004358545515594094,
+          "penalty_inverse_proxy": 0.981347639003618
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 5,
+      "held_out": true,
+      "variant": "state",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "state_l2_error": 9.633511568959769e-16,
+      "selection": {
+        "pattern": "baseline",
+        "state_cost": 0.06382474546414407,
+        "state_terms": {
+          "single_qubit": 0.015516669141725475,
+          "two_qubit": 0.03194650312276829,
+          "relaxation": 0.011849504599738447,
+          "dephasing": 0.00451206859991187
+        },
+        "count_cost": 0.10075662500673366,
+        "moments": 15
+      },
+      "scores": {
+        "4": {
+          "E_score": 1.2755510473266893,
+          "MC_standard_error": 0.004325193962365307,
+          "penalty_inverse_proxy": 0.983989488243668
+        },
+        "10": {
+          "E_score": 1.2752308487691848,
+          "MC_standard_error": 0.00432234068711124,
+          "penalty_inverse_proxy": 0.9839894850954813
+        }
+      }
+    }
+  ],
+  "paired_differences": [
+    {
+      "N": 8,
+      "seed": 0,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.007690563335798326,
+      "paired_MC_standard_error": 0.008745254577820664
+    },
+    {
+      "N": 8,
+      "seed": 0,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 8,
+      "mean_delta": -0.007653928209788177,
+      "paired_MC_standard_error": 0.008733714271310769
+    },
+    {
+      "N": 8,
+      "seed": 0,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 0,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 8,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 1,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": 0.002241878033150104,
+      "paired_MC_standard_error": 0.008898848034082831
+    },
+    {
+      "N": 8,
+      "seed": 1,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 8,
+      "mean_delta": 0.0022660073679931078,
+      "paired_MC_standard_error": 0.00888375011957037
+    },
+    {
+      "N": 8,
+      "seed": 1,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 1,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 8,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 2,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": 0.005078146070008366,
+      "paired_MC_standard_error": 0.009105176825939058
+    },
+    {
+      "N": 8,
+      "seed": 2,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 8,
+      "mean_delta": 0.005085400653320134,
+      "paired_MC_standard_error": 0.009091787037031413
+    },
+    {
+      "N": 8,
+      "seed": 2,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 2,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 8,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 3,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.01739175455007978,
+      "paired_MC_standard_error": 0.008410655323341884
+    },
+    {
+      "N": 8,
+      "seed": 3,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 8,
+      "mean_delta": -0.01734297708678519,
+      "paired_MC_standard_error": 0.008398767406482056
+    },
+    {
+      "N": 8,
+      "seed": 3,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 3,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 8,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 4,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": 0.0033044503350864083,
+      "paired_MC_standard_error": 0.008615735174592788
+    },
+    {
+      "N": 8,
+      "seed": 4,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 8,
+      "mean_delta": 0.003281624206261393,
+      "paired_MC_standard_error": 0.008605923495268333
+    },
+    {
+      "N": 8,
+      "seed": 4,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 4,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 8,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 5,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.019520969405723836,
+      "paired_MC_standard_error": 0.008318204279266678
+    },
+    {
+      "N": 8,
+      "seed": 5,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 8,
+      "mean_delta": -0.01947909752357124,
+      "paired_MC_standard_error": 0.008304865997414142
+    },
+    {
+      "N": 8,
+      "seed": 5,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 8,
+      "seed": 5,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 8,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 0,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.019308695152467914,
+      "paired_MC_standard_error": 0.006042669482293631
+    },
+    {
+      "N": 10,
+      "seed": 0,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 10,
+      "mean_delta": -0.019289719815215642,
+      "paired_MC_standard_error": 0.006037999642751981
+    },
+    {
+      "N": 10,
+      "seed": 0,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 0,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 10,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 1,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.011684374724680579,
+      "paired_MC_standard_error": 0.0060601650331577675
+    },
+    {
+      "N": 10,
+      "seed": 1,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 10,
+      "mean_delta": -0.011670654909886679,
+      "paired_MC_standard_error": 0.006054994514972668
+    },
+    {
+      "N": 10,
+      "seed": 1,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 1,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 10,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 2,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.024721625886881857,
+      "paired_MC_standard_error": 0.006079103130473985
+    },
+    {
+      "N": 10,
+      "seed": 2,
+      "held_out": false,
+      "variant": "count",
+      "cutoff": 10,
+      "mean_delta": -0.024704390410369197,
+      "paired_MC_standard_error": 0.006074589147874116
+    },
+    {
+      "N": 10,
+      "seed": 2,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 2,
+      "held_out": false,
+      "variant": "state",
+      "cutoff": 10,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 3,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.00168633234770385,
+      "paired_MC_standard_error": 0.00622722209449299
+    },
+    {
+      "N": 10,
+      "seed": 3,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 10,
+      "mean_delta": -0.0016937487072491797,
+      "paired_MC_standard_error": 0.006223018310037775
+    },
+    {
+      "N": 10,
+      "seed": 3,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 3,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 10,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 4,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.003411334060628306,
+      "paired_MC_standard_error": 0.005890389939465742
+    },
+    {
+      "N": 10,
+      "seed": 4,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 10,
+      "mean_delta": -0.0033986071482335406,
+      "paired_MC_standard_error": 0.005885819128768917
+    },
+    {
+      "N": 10,
+      "seed": 4,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 4,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 10,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 5,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 4,
+      "mean_delta": -0.0016366279061704708,
+      "paired_MC_standard_error": 0.005786436547821864
+    },
+    {
+      "N": 10,
+      "seed": 5,
+      "held_out": true,
+      "variant": "count",
+      "cutoff": 10,
+      "mean_delta": -0.0016337144272457543,
+      "paired_MC_standard_error": 0.005782390015721513
+    },
+    {
+      "N": 10,
+      "seed": 5,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 4,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    },
+    {
+      "N": 10,
+      "seed": 5,
+      "held_out": true,
+      "variant": "state",
+      "cutoff": 10,
+      "mean_delta": 0.0,
+      "paired_MC_standard_error": 0.0
+    }
+  ]
+}

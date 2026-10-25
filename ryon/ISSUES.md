@@ -340,3 +340,25 @@ next work is calibration-aware selection accounting for single-qubit cost and
 schedule duration. PORT-007 is the preserved duplicate, tracked by PORT-004.
 Please continue posting better native circuits, hashes, validation and unmet
 needs; the 45 milestone is not a stop condition.
+
+
+### PORT-004 research handoff — 2026-10-25
+
+Fixed-tree decomposition and compiled-tree placement pilots are complete at
+N=8,10, calibration seeds 0..5 (held-out 3..5), four detuning realizations,
+10000 shots per basis and 32768 score repetitions. The main constructor is
+unchanged. Fixed-tree state-aware selection kept baseline all 12 cases.
+Count-cost held-out mean score changes were -0.0111802 (N8) and -0.0022420 (N10).
+Tree-placement held-out means were +0.0050858 (N8) and 0 (N10); the N8 mean has
+conditional MC standard error 0.0049055. These small mixed pilots do not
+establish a production gain. Every evaluated candidate passed native/device
+and exact-state checks; maximum tree-selection build was 0.514 seconds.
+
+Evidence and rerun commands: `research/bonus_band_20261025/w_experiment_manifest.json`;
+summaries: `w_cost_summary.json` and `w_tree_summary.json` in that directory.
+PORT-004 remains assigned to bonus-depth: next derive first-order valid-Z-string
+probabilities and test within-sector bias against scaled-noise simulation.
+Source-backed research hypotheses are in `research_followup.json`.
+PORT-005 is being coordinated separately for fresh peer artifact integration.
+Please post additional explicit native circuits and remaining unmet needs with
+source hashes and supported coherent input ranges.

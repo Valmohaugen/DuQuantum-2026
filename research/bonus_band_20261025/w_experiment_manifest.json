@@ -1,0 +1,59 @@
+{
+  "status": "both pilots complete; maintained solver unchanged",
+  "calibrations": {
+    "generator": "ryon.judge.fake_calibration",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "held_out_seeds": [
+      3,
+      4,
+      5
+    ]
+  },
+  "cases": [
+    [
+      8,
+      1
+    ],
+    [
+      10,
+      1
+    ]
+  ],
+  "noise": {
+    "detuning_realizations": 4,
+    "shots_per_basis": 10000,
+    "score_MC_repetitions": 32768,
+    "cutoffs": [
+      "4",
+      "N"
+    ]
+  },
+  "sources": {
+    "research/bonus_band_20261025/w_cost_snapshot.py": "02512364d908c1e6f28fe288f5c94ff301fbf36e99e7fd0b9b853c462eceaae3",
+    "research/bonus_band_20261025/w_cost_selection.py": "4b4a34b2a39f8118d43a87c842472cf3ce9c88971f3e9914b62239a1062f2db6",
+    "research/bonus_band_20261025/w_cost_probe.py": "6591c2383b6cd96e6de4e4b74149db08dfb43996e789778d32b23fea2af1f463",
+    "research/bonus_band_20261025/w_state_cost.py": "b7090f261775205513c9b169d3690497113a94c8ed34448171ad64d240c3f944",
+    "research/bonus_band_20261025/w_tree_selection.py": "81835898f4ef8603a002ea7065ef3d8d860d85fa120b6e5c59c2c5c5cab12008",
+    "research/bonus_band_20261025/w_tree_probe.py": "972599ad8c4ca93afa6b3bfdcc99284796e317df87e605d6a400b38d0e8b7452",
+    "research/bonus_band_20261025/w_hardware_probe.py": "80e0d771ea98b6c7555893501ec571c421147732267097b602aefb9e44f605db"
+  },
+  "dependencies": {
+    "ryon/fast_eval.py": "95d512861996d76c23c714676c0ac731f57564bef6226a958386adc39ff4d924",
+    "ryon/test_dicke.py": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f",
+    "ryon/judge.py": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6"
+  },
+  "rerun": [
+    "python -m research.bonus_band_20261025.w_state_cost",
+    "python -m research.bonus_band_20261025.w_cost_probe",
+    "python -m research.bonus_band_20261025.w_tree_probe"
+  ],
+  "runtime_note": "Use a Cirq environment and one BLAS/OpenMP thread. The prototypes bound the supported domain and retain the baseline candidate. They are not installed in the main entry point.",
+  "post_run_change": "Added explicit pilot-domain and scoring-loop limits to fixed-tree selector; no effect on the observed N8/10 <1.3-second builds."
+}

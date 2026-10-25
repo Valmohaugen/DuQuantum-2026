@@ -265,3 +265,22 @@ so the main constructor is unchanged. [Pilot evidence](research/bonus_band_20261
 records both correlator cutoffs and Monte Carlo uncertainty. PORT-004 continues
 with calibration-aware selection; PORT-005/006 cover terminal integration and
 adaptive oracle work. Existing ownership is preserved.
+
+
+## Continued research checkpoint — 2026-10-25
+
+Best fully verified bonus remains **46.5862094107** across all 56 corrected
+cases ([immutable validation](research/bonus_band_20261025/milestones/20261025T055319Z/validation.json)).
+Research continues beyond the 45-point milestone. Two further calibrated W
+pilots tested N=8,10 over six calibration seeds, including three held-out seeds.
+The fixed-tree state-aware cost retained the baseline in every case; tree
+placement changed four of twelve choices with mixed results. Neither pilot
+justifies a main-constructor replacement. See the
+[fixed-tree summary](research/bonus_band_20261025/w_cost_summary.json),
+[placement summary](research/bonus_band_20261025/w_tree_summary.json), and
+[reproduction manifest](research/bonus_band_20261025/w_experiment_manifest.json).
+Reported Monte Carlo uncertainty excludes calibration and detuning uncertainty.
+
+PORT-004 continues with output-probability sensitivity; PORT-005 tracks fresh
+peer decoder/circuit integration. The [task board](research/bonus_portfolio_20261025/tasks.json)
+preserves ownership and acceptance checks.

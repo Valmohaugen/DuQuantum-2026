@@ -1,0 +1,39 @@
+{
+  "status": "complete; experimental only",
+  "cases": 12,
+  "changed_choices": 4,
+  "max_build_seconds": 0.5135463057085872,
+  "max_state_l2_error": 1.1272428820163253e-15,
+  "summary": [
+    {
+      "N": 8,
+      "held_out": false,
+      "cases": 3,
+      "mean_score_delta": 0.0,
+      "MC_standard_error_of_mean": 0.0
+    },
+    {
+      "N": 8,
+      "held_out": true,
+      "cases": 3,
+      "mean_score_delta": 0.005085793405437799,
+      "MC_standard_error_of_mean": 0.0049055300031169945
+    },
+    {
+      "N": 10,
+      "held_out": false,
+      "cases": 3,
+      "mean_score_delta": 0.007546130618608898,
+      "MC_standard_error_of_mean": 0.0020280332293304945
+    },
+    {
+      "N": 10,
+      "held_out": true,
+      "cases": 3,
+      "mean_score_delta": 0.0,
+      "MC_standard_error_of_mean": 0.0
+    }
+  ],
+  "decision": "Do not install from this small mixed pilot. No held-out N10 selection changes. Next objective should explicitly model Z-sector leakage and within-sector bias.",
+  "uncertainty": "MC standard errors condition on four detuning draws and do not cover calibration population or detuning uncertainty. Shared streams couple sorted qubit positions rather than physical chip detunings across differing layouts."
+}
