@@ -12,15 +12,19 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: **total 16.62** (3 seeds, N = 2..8).
+Baseline at 0dc262c: total 16.615. Current: **16.755** (3 seeds, N = 2..8).
 
 ## Open
 
 ### 1. Short CZ circuits on grid patches for small (N, k)
 Status: in progress (ryon session)
 `synth.py` fits CZ + Ry circuits exactly and prunes CZs. (4,2) has 5 CZ and (5,2) has 11 CZ
-(the line versions use 5 and 14). Next targets and the line CZ counts to beat:
-(6,2) 18, (6,3) 33, (7,2) 22, (7,3) 42, (8,2) 26, (8,3) 51, (8,4) 68.
+(the line versions use 5 and 14). (6,2) has 14 and (6,3) has 12 on a 2x3 patch. Next targets
+and the line CZ counts to beat: (7,2) 22, (7,3) 42, (8,2) 26, (8,3) 51, (8,4) 68.
+Random starting sequences don't converge exactly at N >= 7. What works there: take the line
+circuit on a Hamiltonian path of the patch, convert it with `synth.from_ops` (the leftover Z
+layer becomes the patch's `zset`), insert cancelling CZ pairs on patch edges, perturb, polish,
+then prune. (7,2) went 22 -> 18 in about 3 minutes this way.
 Shapes to try: 2x3, 2x3+1, 2x4, 3x3 minus a corner. Rank finalists with `fast_eval`, not by CZ
 count alone, because depth also costs idle decoherence.
 
@@ -51,4 +55,5 @@ dephasing. Check how much comes from depth and how much from CZ error, and wheth
 DD placement or a shallower schedule recovers it.
 
 ## Done
+- (6,2) 18 -> 14 CZ and (6,3) 33 -> 12 CZ on a 2x3 patch: E[s] 0.932 -> 0.962 and 0.825 -> 0.934.
 - (5,2) on a 5-qubit patch: 11 CZ, E[s] 0.986 -> 1.005 (0dc262c).
