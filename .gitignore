@@ -1,11 +1,5 @@
 __pycache__/
-.pytest_cache/
 .ipynb_checkpoints/
+.pytest_cache/
 .DS_Store
 benchmark_outputs/
-figs/
-submission_outputs/
-.ruff_cache/
-.mypy_cache/
-.superpowers/
-/claude/.docs/
