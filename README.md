@@ -406,6 +406,32 @@ Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/I
 | 2026-10-25 06:15 | 484dc11 | (10,5) 40-cz depth-weighted line, 0.708 -> 0.728 | 17.528 (N <= 8 unchanged) |
 | 2026-10-25 07:10 | a453a9c | (9,4) 37-cz shallow line, 0.778 -> 0.784 | 17.528 (N <= 8 unchanged) |
 
+Source note: the start blocks in the a26041d row were ported from `toby/halves_start_sol.py` (0d47ab3).
+
+## Revised judging metric: 1 / mean(Z + X)
+
+Judging now takes the harmonic mean of the per-case scores, 1 / mean over cases of (Z + X),
+instead of the sum of 1 / (Z + X). Every case's penalty counts equally, so the worst cases
+(large N, n near N/2) matter most and the small-N lottery no longer helps. `ryon/fast_eval.py`
+now prints this metric under its total. Scripts, raw rows and the summary are in
+[research/new_metric_20261025](research/new_metric_20261025/summary.txt). The noise model is
+fast_eval's, with all X correlator sizes and three fake calibrations (seed 0 only for N = 11, 12).
+
+| date (EDT) | commit | solution | 1/mean(Z+X) N = 2..8 | N = 2..10 | N = 2..12 (seed 0) | mean moments N = 2..8 |
+|---|---|---|---|---|---|---|
+| 2026-10-25 09:10 | de2d0d0 | ryon/toby_sol.py (main entry point) | 1.050 | 0.959 | 0.805 | 14.1 |
+| 2026-10-25 09:10 | 105326Z | bonus milestone 51.04, `create_dicke_state_adaptive` (bonus_sub_105326Z.py) | 0.951 | 0.872 | 0.715 | 12.0 |
+
+The bonus build is about 15 % shallower, but its penalty is 5 to 25 % higher than main's in all
+36 cases (N = 2..12). It places circuits without calibration data, and the packed 1q gates
+raise Z bias (zb 0.05 to 0.13 against 0.01 to 0.02). Depth does cost score: zeroing the
+selector's idle term (`idle_err = 0`) gives 15.9 moments and 1.045 instead of 14.1 and 1.050.
+The extra main-entry moments are 25 ns single-qubit layers. The current depth weighting is
+already at the optimum: `idle_err` 1e-3 and 3e-3, `idle_penalty` 3e-3, `prefer_synth = False` and no DD
+all land within 0.001 of main. Packing 1q gates into CZ moments (`pack=True`) scores lower (1.036).
+Bonus metric (sum N n / moments, N = 2..15) is unchanged: milestone 105326Z 51.04, toby_sol
+`create_dicke_state_adaptive` 44.00.
+
 Part 2 (bonus): the same searches gave 15 circuits shallower than the bonus portfolio (+2.2 points vs milestone
 101047Z); most are now merged (milestone 105326Z, 51.04). Remaining 4 are in research/primary_depth_20261025 (ISSUES 14).
 

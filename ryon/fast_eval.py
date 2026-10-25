@@ -1,7 +1,8 @@
 """Fast noisy evaluation: the same noise model as test_dicke.py, simulated with a plain numpy
 density matrix instead of cirq.DensityMatrixSimulator (much faster, so many seeds fit).
 
-Scores with test_dicke.expected_score (the shot-noise-free E[score]). The detuning draws are
+Scores with test_dicke.expected_score (the shot-noise-free E[score]); also prints the revised
+judging metric, 1 / mean(Z + X) over the cases. The detuning draws are
 seeded per (seed, N, n), so two variants of a solution see the same noise realisations.
 
 Usage:
@@ -152,6 +153,8 @@ def evaluate(build, case_list, seeds, verbose=True, **kw):
     total = sum(r["es"] for r in rows)
     if verbose:
         print(f"total {total:.4f}")
+        #revised judging: 1 / mean over cases of (Z + X), i.e. the harmonic mean of the per-case scores
+        print(f"harmonic 1/mean(Z+X) {1 / np.mean([r['zf'] + r['zb'] + r['x'] for r in rows]):.4f}")
     return total, rows
 
 
