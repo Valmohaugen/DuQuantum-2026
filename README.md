@@ -245,6 +245,28 @@ Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/I
 | 2026-10-25 04:10 | 0dc1b2c | (10,4) 45-cz line; (11,5) 59 cz (in bec93b1) | 17.495 (N <= 8 unchanged) |
 | 2026-10-25 05:40 | 5fbdb31 | depth-weighted pruning (cost = cz + 3 x cz layers): (5,2) (6,2) (6,3) (7,2) | 17.528 |
 | 2026-10-25 06:15 | 484dc11 | (10,5) 40-cz depth-weighted line, 0.708 -> 0.728 | 17.528 (N <= 8 unchanged) |
+| 2026-10-25 06:32 | candidate | [toby/calibrated_score_sol.py](toby/calibrated_score_sol.py): exhaustive direct Bell pair/gauge ranking with a primary-proxy guard | **17.5470** |
+
+The new standalone candidate preserves the current construction outside D(2,1). Its Bell
+selector screens both orientations of every calibrated coupler and 36 exact local gauges,
+using the emitted three-moment noise model and a Gaussian reciprocal-score surrogate.
+It only accepts a candidate whose modeled primary proxy improves on the incumbent; the
+surrogate chooses among that feasible set. The default paired proxy total is **17.5278 ->
+17.5470** with seeds 0,1,2, N=2..8 and all X orders.
+
+A separate 50-calibration Bell holdout (seeds 50000..50049, 64 fresh detuning realizations,
+100,000 independent 10,000-shot score draws per calibration/variant, K=2) gives primary
+proxy **1.93518 -> 1.94665** and finite-batch sampled mean **59.7855 -> 66.2007**
+(paired gains **0.01147 +/- 0.00133** and **6.4153 +/- 0.7917** calibration SE).
+Median and lower-decile scores also improve. Every emitted Bell circuit uses **1 CZ and
+3 moments**; the slowest Bell construction was **4.96 s** in this environment.
+This is simulated model evidence, not a hardware score. The sampled mean is a fixed-budget
+statistic; the raw reciprocal scorer has rare zero-denominator events and no finite exact
+expectation is asserted. [Recorded data](research/score_20261025/bell_checkpoint_results.json)
+and [reproduction script](research/score_20261025/bell_checkpoint.py) preserve the protocol.
+Independent complex128/native/device checks cover all main states N=2..15, n=0..N and all
+56 nontrivial bonus cases, including N=12 and N=15; no extra qubits or nonnative gates are
+introduced by this candidate.
 
 Readout-only ceiling for the same placements (gate and idle noise switched off): 18.474 for N = 2..8,
 so roughly 1.0 is still recoverable at small N; the theoretical maximum (no noise at all) is 19.18.
