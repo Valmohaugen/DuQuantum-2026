@@ -1,0 +1,11 @@
+{
+  "source_directory": "research/bonus_peer_harvest_20261025",
+  "files": {
+    "harvest_circuits.json": "de95ccc2a5655a0b7eb7bc754a630ab3cb4084275b39f8f2019d464ce87a7b0f",
+    "harvest_results.json": "62bf48279ef1094670ada871e549b92a8290f11f35c7f93f0a92578fad3836f2",
+    "snapshot.py": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba",
+    "harvest.py": "b9acf34a8d306754bc8ade949aac0325b6e8cd2210ef1d043489e155ab89daed"
+  },
+  "previous_score": 48.018571018834095,
+  "score": 48.414135897467595
+}

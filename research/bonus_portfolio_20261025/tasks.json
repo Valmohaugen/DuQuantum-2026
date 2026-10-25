@@ -790,7 +790,7 @@
   {
     "id": "PORT-016",
     "title": "Model heterogeneous coupler interactions in W-tree placement",
-    "status": "assigned",
+    "status": "prepared; weighted derivative checked, selector not evaluated",
     "assignee": "bonus-depth",
     "scope": "Separate research; preserve current baseline and frozen experimental selector. No maintained solver change until held-out stress evidence supports it.",
     "inputs": [
@@ -804,6 +804,140 @@
       "Choose coupling patterns without using evaluation seed or held-out coupler fields.",
       "Recheck known failure cases, then evaluate untouched calibration seeds for nominal,uniform andsignedcouplingmodels.",
       "Preserve native exact-state behavior and constructorunder60s; report actual E[1/penalty] with uncertainty."
+    ],
+    "artifacts": [
+      "research/bonus_band_20261025/w_edge_sensitivity.py",
+      "research/bonus_band_20261025/w_edge_sensitivity_checks.json",
+      "research/bonus_band_20261025/w_edge_selection.py",
+      "research/bonus_band_20261025/w_edge_model_plan.json",
+      "research/bonus_band_20261025/w_edge_prepared_manifest.json"
     ]
+  },
+  {
+    "id": "PORT-017",
+    "title": "Harvest fresh peer native circuits from5a0a94f",
+    "status": "complete",
+    "assignee": "bonus-integration",
+    "scope": "Freeze maintained source and best6 in research/bonus_peer_harvest_20261025; construct/verify six new peer cases within60s, without fitting or maintained-solver changes.",
+    "compute_budget_seconds": 60,
+    "inputs": [
+      "ryon/toby_sol.py",
+      "research/bonus_band_20261025/best6_circuits.json"
+    ],
+    "cases": [
+      [
+        11,
+        4
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        12,
+        4
+      ],
+      [
+        13,
+        4
+      ],
+      [
+        15,
+        3
+      ]
+    ],
+    "acceptance": [
+      "Preserve every prior per-case best depth and report sourcecommit/hash.",
+      "Verify each accepted native circuit and all56 retained states/device cases.",
+      "Return explicit circuit pool/results/hashes; root owns native_submission export and publication."
+    ],
+    "result": {
+      "score": 48.414135897467595,
+      "baseline_score": 48.018571018834095,
+      "gain": 0.3955648786335004,
+      "construction_seconds": 8.185674992389977,
+      "total_seconds": 10.70095595344901,
+      "all56_verified": true,
+      "max_state_l2_error": 1.486027890605259e-07,
+      "improvements": [
+        {
+          "N": 11,
+          "k": 5,
+          "source": "5a0a94f-patch",
+          "baseline_depth": 71,
+          "compiled_depth": 53,
+          "optimized_depth": 47,
+          "CZ": 56,
+          "state_l2_error": 1.486027890605259e-07,
+          "seconds": 2.3578155850991607,
+          "accepted": true
+        }
+      ],
+      "coverage": [
+        {
+          "N": 11,
+          "k": 4,
+          "status": "complete",
+          "sources": [
+            "patch"
+          ]
+        },
+        {
+          "N": 11,
+          "k": 5,
+          "status": "complete",
+          "sources": [
+            "patch"
+          ]
+        },
+        {
+          "N": 12,
+          "k": 3,
+          "status": "complete",
+          "sources": [
+            "patch"
+          ]
+        },
+        {
+          "N": 12,
+          "k": 4,
+          "status": "complete",
+          "sources": [
+            "patch"
+          ]
+        },
+        {
+          "N": 13,
+          "k": 4,
+          "status": "complete",
+          "sources": [
+            "patch"
+          ]
+        },
+        {
+          "N": 15,
+          "k": 3,
+          "status": "complete",
+          "sources": [
+            "line"
+          ]
+        }
+      ],
+      "source_HEAD": "aab15da93af24e1c44a2a7e1d7eec5f13cea08b2",
+      "source_data_commit": "5a0a94f",
+      "unmet_needs": "No unfinished cases in the six-case harvest. New equal-depth alternatives are recorded but not substituted. Future peer coefficient/table updates should be frozen and independently rechecked before portfolio merge."
+    },
+    "artifacts": [
+      "research/bonus_peer_harvest_20261025/harvest_circuits.json",
+      "research/bonus_peer_harvest_20261025/harvest_results.json",
+      "research/bonus_peer_harvest_20261025/sources.json",
+      "research/bonus_peer_harvest_20261025/handoff_summary.json",
+      "research/bonus_peer_harvest_20261025/handoff_manifest.json"
+    ],
+    "pool_sha256": "de95ccc2a5655a0b7eb7bc754a630ab3cb4084275b39f8f2019d464ce87a7b0f"
   }
 ]

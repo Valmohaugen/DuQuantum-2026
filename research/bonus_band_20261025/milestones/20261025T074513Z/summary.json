@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "20261025T074513Z",
+  "bonus_score": 48.414135897467595,
+  "previous_score": 48.018571018834095,
+  "increment": 0.3955648786335004,
+  "cases": 56,
+  "source_sha256": "88eacd878b1d02ec96a94c4ee52cb9fdc66ffc289d862fdc3fac2b84161b3be4",
+  "max_build_seconds": 0.002553311176598072,
+  "max_state_l2_error": 1.486027890605259e-07,
+  "max_moments": 119,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "improvement": "Fresh peer D(11,5) circuit:71to47 native moments,56CZ. Other retained bonus circuits unchanged.",
+  "main_entry_point": "Published native main prefix unchanged. Experimental W selector remains separate and unpromoted after signed-coupling regression."
+}

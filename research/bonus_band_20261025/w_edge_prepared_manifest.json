@@ -1,0 +1,10 @@
+{
+  "status": "prepared; selector not evaluated yet",
+  "files": {
+    "research/bonus_band_20261025/w_edge_sensitivity.py": "ec301e342f11b60d4824b0bf17c77472abd1a1f739071c0a946d1672230e7649",
+    "research/bonus_band_20261025/w_edge_sensitivity_checks.json": "40265c2d3ac66ee323423d316d24991b4bc2bb461b9be406609861529c971153",
+    "research/bonus_band_20261025/w_edge_selection.py": "c01d07d186d6b945bbde1f1dccb95a12fc6afb00590c7d1473d42290857b2e06",
+    "research/bonus_band_20261025/w_edge_model_plan.json": "ab2744a980da6537159be3f595a014a10d350476f5408a7506b0611b4ebe4ef7"
+  },
+  "note": "Fixed patterns0..3 and both orientations selected before any new selector output or seeds21..32 evaluation."
+}

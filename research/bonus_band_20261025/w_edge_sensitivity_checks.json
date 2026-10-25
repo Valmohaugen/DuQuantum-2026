@@ -1,0 +1,22 @@
+{
+  "status": "weighted derivative checks passed; selector not changed",
+  "checks": [
+    {
+      "epsilon": 0.1,
+      "max_linear_error": 5.267488304913637e-09,
+      "max_quadratic_error": 5.4307731888727975e-11
+    },
+    {
+      "epsilon": 0.03,
+      "max_linear_error": 4.740743288385307e-10,
+      "max_quadratic_error": 4.85685794764123e-12
+    },
+    {
+      "epsilon": 0.01,
+      "max_linear_error": 5.267507090234158e-11,
+      "max_quadratic_error": 4.369351729656846e-13
+    }
+  ],
+  "uniform_equivalence": true,
+  "physical_pattern_stability": true
+}

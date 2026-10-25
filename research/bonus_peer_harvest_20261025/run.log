@@ -1,0 +1,7 @@
+CANDIDATE {'N': 11, 'k': 4, 'source': '5a0a94f-patch', 'baseline_depth': 61, 'compiled_depth': 61, 'optimized_depth': 61, 'CZ': 82, 'state_l2_error': 7.911038801383173e-07, 'seconds': 1.493726377375424, 'accepted': False}
+CANDIDATE {'N': 11, 'k': 5, 'source': '5a0a94f-patch', 'baseline_depth': 71, 'compiled_depth': 53, 'optimized_depth': 47, 'CZ': 56, 'state_l2_error': 1.486027890605259e-07, 'seconds': 2.3578155850991607, 'accepted': True}
+CANDIDATE {'N': 12, 'k': 3, 'source': '5a0a94f-patch', 'baseline_depth': 45, 'compiled_depth': 45, 'optimized_depth': 45, 'CZ': 51, 'state_l2_error': 9.430532348135018e-08, 'seconds': 3.6983091607689857, 'accepted': False}
+CANDIDATE {'N': 12, 'k': 4, 'source': '5a0a94f-patch', 'baseline_depth': 65, 'compiled_depth': 73, 'optimized_depth': 73, 'CZ': 96, 'state_l2_error': 3.9779952480923537e-07, 'seconds': 5.190112521871924, 'accepted': False}
+CANDIDATE {'N': 13, 'k': 4, 'source': '5a0a94f-patch', 'baseline_depth': 75, 'compiled_depth': 85, 'optimized_depth': 85, 'CZ': 112, 'state_l2_error': 4.1472536497574127e-07, 'seconds': 7.041842279024422, 'accepted': False}
+CANDIDATE {'N': 15, 'k': 3, 'source': '5a0a94f-line', 'baseline_depth': 76, 'compiled_depth': 95, 'optimized_depth': 95, 'CZ': 68, 'state_l2_error': 5.079336695681594e-07, 'seconds': 8.185438542626798, 'accepted': False}
+COMPLETE 48.414135897467595 10.70095595344901

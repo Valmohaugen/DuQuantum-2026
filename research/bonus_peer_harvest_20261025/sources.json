@@ -1,0 +1,37 @@
+{
+  "shared_HEAD": "aab15da93af24e1c44a2a7e1d7eec5f13cea08b2",
+  "peer_data_commit": "5a0a94f",
+  "snapshot_matches_HEAD": true,
+  "files": [
+    {
+      "source": "ryon/toby_sol.py",
+      "frozen": "research/bonus_peer_harvest_20261025/snapshot.py",
+      "sha256": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba"
+    },
+    {
+      "source": "research/bonus_half_precision_20261025/probe.py",
+      "frozen": "research/bonus_peer_harvest_20261025/probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "source": "research/bonus_half_precision_20261025/commuting_schedule.py",
+      "frozen": "research/bonus_peer_harvest_20261025/commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "source": "research/bonus_half_precision_20261025/helpers.py",
+      "frozen": "research/bonus_peer_harvest_20261025/helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "source": "research/bonus_band_20261025/best6_circuits.json",
+      "frozen": "research/bonus_peer_harvest_20261025/baseline_circuits.json",
+      "sha256": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507"
+    },
+    {
+      "source": "research/bonus_band_20261025/best6_results.json",
+      "frozen": "research/bonus_peer_harvest_20261025/baseline_results.json",
+      "sha256": "54a7832cb65ccd36e83e433a756592552fbc1ee6ae1828c9c3f5939d3b2b9f58"
+    }
+  ]
+}

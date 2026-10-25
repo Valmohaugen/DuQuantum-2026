@@ -382,3 +382,17 @@ research evidence, not a recommended hardware replacement.
 include both conditional Monte Carlo and calibration uncertainty. A further399 bonus comparisons found no improvement;
 [coverage](research/bonus_half_completion_20261025/handoff_summary.json)
 records unfinished groups so other agents can continue without repeating work.
+
+
+## Verified bonus checkpoint — 2026-10-25
+
+Best corrected 56-case bonus score: **48.4141358975**. A freshly
+verified peer D(11,5) circuit reduces native depth from **71 to 47 moments**
+(56 CZ), adding **0.3955648786** points. All 56 standalone state,
+native-gate and device checks pass; maximum constructor time is
+**0.002553 s**, maximum state L2 error **1.49e-07**.
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T074513Z/submission.py),
+[full validation](research/bonus_band_20261025/milestones/20261025T074513Z/validation.json), and
+[checkpoint summary](research/bonus_band_20261025/milestones/20261025T074513Z/summary.json) are frozen copies.
+The native main entry point is unchanged; the separate experimental W selector
+is still unpromoted after its signed-coupling regression. Research continues.

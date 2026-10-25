@@ -1,0 +1,76 @@
+{
+  "score": 48.414135897467595,
+  "baseline_score": 48.018571018834095,
+  "gain": 0.3955648786335004,
+  "construction_seconds": 8.185674992389977,
+  "total_seconds": 10.70095595344901,
+  "all56_verified": true,
+  "max_state_l2_error": 1.486027890605259e-07,
+  "improvements": [
+    {
+      "N": 11,
+      "k": 5,
+      "source": "5a0a94f-patch",
+      "baseline_depth": 71,
+      "compiled_depth": 53,
+      "optimized_depth": 47,
+      "CZ": 56,
+      "state_l2_error": 1.486027890605259e-07,
+      "seconds": 2.3578155850991607,
+      "accepted": true
+    }
+  ],
+  "coverage": [
+    {
+      "N": 11,
+      "k": 4,
+      "status": "complete",
+      "sources": [
+        "patch"
+      ]
+    },
+    {
+      "N": 11,
+      "k": 5,
+      "status": "complete",
+      "sources": [
+        "patch"
+      ]
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "status": "complete",
+      "sources": [
+        "patch"
+      ]
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "status": "complete",
+      "sources": [
+        "patch"
+      ]
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "status": "complete",
+      "sources": [
+        "patch"
+      ]
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "status": "complete",
+      "sources": [
+        "line"
+      ]
+    }
+  ],
+  "source_HEAD": "aab15da93af24e1c44a2a7e1d7eec5f13cea08b2",
+  "source_data_commit": "5a0a94f",
+  "unmet_needs": "No unfinished cases in the six-case harvest. New equal-depth alternatives are recorded but not substituted. Future peer coefficient/table updates should be frozen and independently rechecked before portfolio merge."
+}

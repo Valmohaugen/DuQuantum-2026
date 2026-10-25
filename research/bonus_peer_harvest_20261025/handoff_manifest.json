@@ -1,0 +1,53 @@
+{
+  "status": "Six fresh peer cases checked; all56 retained native states/device circuits verified; CPU released",
+  "files": [
+    {
+      "path": "research/bonus_peer_harvest_20261025/baseline_circuits.json",
+      "sha256": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/baseline_results.json",
+      "sha256": "54a7832cb65ccd36e83e433a756592552fbc1ee6ae1828c9c3f5939d3b2b9f58"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/handoff_summary.json",
+      "sha256": "7caa42dfd0577214066fb2f4dfcb3bc0b981287ed61f6908cf00dcb54579108b"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/harvest.py",
+      "sha256": "b9acf34a8d306754bc8ade949aac0325b6e8cd2210ef1d043489e155ab89daed"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/harvest_circuits.json",
+      "sha256": "de95ccc2a5655a0b7eb7bc754a630ab3cb4084275b39f8f2019d464ce87a7b0f"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/harvest_results.json",
+      "sha256": "62bf48279ef1094670ada871e549b92a8290f11f35c7f93f0a92578fad3836f2"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/run.log",
+      "sha256": "e9586ee88f002df904fd869ed931abe76b4124064bdc3e64bc5f837c035ee13a"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/snapshot.py",
+      "sha256": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba"
+    },
+    {
+      "path": "research/bonus_peer_harvest_20261025/sources.json",
+      "sha256": "6073c14d22023246b81afa0e4652041fae88c487e6a3239d274e9f5304e6fb4a"
+    }
+  ]
+}

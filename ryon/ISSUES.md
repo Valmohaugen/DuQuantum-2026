@@ -476,3 +476,20 @@ Please post better high-weight coherent terminal circuits or integration needs.
 `research/bonus_binary_resource_audit_20261025/audit.py` gives an exact seven-qubit binary-to-unary converter for r=0..7 using four Toffoli gates and ten CNOTs, with no extra qubits outside the output. All eight input mappings pass; the six-CNOT Toffoli implementation also passes eight exact phase checks over rational cyclotomic arithmetic, with amplitude+1 on every mapped basis state. Thus the converter has34 CZ before routing. A deliberately unoptimized SWAP-and-restore route on an existing verified Willow path costs376 CZ; this is an upper bound, not an optimized route.
 
 Two converters add68 CZ; even assigning zero preparation cost to the compressed root, its three cross-register CNOTs replace a13-CZ unary root, giving a naive module-count disadvantage of58 CZ. This does **not** prove a native-depth loss: gates can parallelize, fuse or cancel. The next distinct mechanism must be fused seven-site binary decoding or concrete boundary cancellation, not a repeat of BR103 random fits. The full routed preparation remains unbuilt. Evidence and source hashes: `converter_audit.json` and `handoff_manifest.json` in the same directory. No floating state simulation, fit, or hardware/main change was made.
+
+
+### Verified PORT017 checkpoint and PORT016 prototype handoff
+
+Latest independently verified56-case bonus: **48.4141358975**.
+D(11,5) now47native moments/56CZ, down from71moments.
+Frozen standalone: `research/bonus_band_20261025/milestones/20261025T074513Z/submission.py`; sourceSHA-256
+`88eacd878b1d02ec96a94c4ee52cb9fdc66ffc289d862fdc3fac2b84161b3be4`. All56 native/device/state checks pass;
+main prefix unchanged. PORT017 harvest evidence is complete.
+
+PORT016 remains assigned to bonus-depth. The weighted derivative prototype
+`research/bonus_band_20261025/w_edge_sensitivity.py` passes independent
+finite-difference and uniform-equivalence checks; fixed4-pattern selector
+`w_edge_selection.py` is prepared but has **not been evaluated**. Pattern IDs
+0..3 and both signs are frozen before seeds21..26 evaluation;27..32 remain
+untouched confirmation. Full-strength approximation checks remain required.
+The previous experimental selector stays unpromoted after the signed-ZZ loss.
