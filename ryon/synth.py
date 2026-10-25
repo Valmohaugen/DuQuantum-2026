@@ -109,9 +109,60 @@ def run(N, edges, theta, inputs=None):
     return psi.reshape(theta.shape[0], ins.shape[0], -1)
 
 
+def _load_kernel():
+    #compile synth_kernel.c once per source version (atomic rename, so parallel jobs don't clash)
+    import ctypes, hashlib, os, subprocess, tempfile
+    here = os.path.dirname(os.path.abspath(__file__))
+    src = os.path.join(here, "synth_kernel.c")
+    try:
+        tag = hashlib.sha1(open(src, "rb").read()).hexdigest()[:10]
+        lib = os.path.join(here, "__pycache__", f"synth_kernel_{tag}.so")
+        if not os.path.exists(lib):
+            os.makedirs(os.path.dirname(lib), exist_ok=True)
+            fd, tmp = tempfile.mkstemp(suffix=".so", dir=os.path.dirname(lib))
+            os.close(fd)
+            subprocess.run(["gcc", "-O3", "-shared", "-fPIC", src, "-o", tmp, "-lm"], check=True)
+            os.replace(tmp, lib)
+        k = ctypes.CDLL(lib).fid_grad
+        ip, dp = ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_double)
+        k.argtypes = [ctypes.c_int, ctypes.c_int, ctypes.c_int, ip, ip, ip, ip, dp, ctypes.c_int, dp, dp, dp, dp, dp]
+        return k
+    except Exception:
+        return None  #no compiler: fid_grad uses numpy
+
+
+_kernel = None if __import__("os").environ.get("SYNTH_KERNEL") == "0" else _load_kernel()  #SYNTH_KERNEL=0 forces numpy
+
+
+def _fid_grad_c(N, edges, theta, ins, outs):
+    import ctypes
+    kind, m1, m2, par, p = [], [], [], [], 0
+    for g, d in gate_list(N, edges):
+        if g == "ry":
+            kind.append(0); m1.append(1 << (N - 1 - d)); m2.append(0); par.append(p); p += 1
+        else:
+            kind.append(1); m1.append(1 << (N - 1 - d[0])); m2.append(1 << (N - 1 - d[1])); par.append(0)
+    I = lambda x: np.ascontiguousarray(x, dtype=np.int32)
+    kind, m1, m2, par = I(kind), I(m1), I(m2), I(par)
+    ins, outs = np.ascontiguousarray(ins, float), np.ascontiguousarray(outs, float)
+    R, B, P = ins.shape[0], theta.shape[0], theta.shape[1]
+    work, fb = np.empty(2 * R * 2 ** N), np.empty(1)
+    f, grad = np.empty(B), np.empty((B, P))
+    ptr = lambda a, t: a.ctypes.data_as(ctypes.POINTER(t))
+    ci, cd = ctypes.c_int, ctypes.c_double
+    for b in range(B):
+        th, gb = np.ascontiguousarray(theta[b], float), np.empty(P)
+        _kernel(N, R, len(kind), ptr(kind, ci), ptr(m1, ci), ptr(m2, ci), ptr(par, ci), ptr(th, cd), P,
+                ptr(ins, cd), ptr(outs, cd), ptr(fb, cd), ptr(gb, cd), ptr(work, cd))
+        f[b], grad[b] = fb[0], gb
+    return f, grad
+
+
 def fid_grad(N, edges, theta, target, k=None):
     """Mean overlap f = sum_r <out_r|U|in_r> / R per batch row, and df/dtheta."""
     ins, outs = _problem(N, k, target)
+    if _kernel is not None:
+        return _fid_grad_c(N, edges, theta, ins, outs)
     R = ins.shape[0]
     gates = gate_list(N, edges)
     B, P = theta.shape
