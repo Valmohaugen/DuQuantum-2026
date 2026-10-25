@@ -64,6 +64,11 @@ so only worth it when the 2-row half beats the path half.
 `fast_eval` stops at N = 8, but the judges' N range is unknown. Add N = 9..12 (density matrix
 size 4^N, so N = 12 is about 256 MB) with fewer seeds, so changes aren't tuned to small N only.
 
+Data (toby, trajectory simulator in eval/, same noise model family, expected score with max_correlator_size 4):
+N = 2..16 is covered on 10 notebook calibrations per round (44 instances, includes N = 14, 16 at n = 1, 2, 4, N/2).
+Spot checks for toby_sol @7e7133a, 1 calibration, 40 trajectories: D(18,2) 0.579 (63 cz), D(18,9) 0.239 (329 cz),
+D(20,5) 0.205 (275 cz), D(20,10) 0.207 (415 cz); combined_sol and halves_start_sol build the same circuits there.
+
 ### 3. Better n >= 2 construction for N >= 9
 Partly done: toby's two-half ladder (toby/ladder_sol.py) is merged into toby_sol and chosen per
 case by `estimate_error`. Its selector is crude, but an oracle that always picks the best
