@@ -512,6 +512,7 @@ Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/I
 | 2026-10-25 05:40 | 5fbdb31 | depth-weighted pruning (cost = cz + 3 x cz layers): (5,2) (6,2) (6,3) (7,2) | 17.528 |
 | 2026-10-25 06:15 | 484dc11 | (10,5) 40-cz depth-weighted line, 0.708 -> 0.728 | 17.528 (N <= 8 unchanged) |
 | 2026-10-25 07:10 | a453a9c | (9,4) 37-cz shallow line, 0.778 -> 0.784 | 17.528 (N <= 8 unchanged) |
+| 2026-10-25 10:15 | 9a76864 | toby/bonus_portfolio_squeeze_sol.py (main entry = exp/depth-search portfolio_sol.py) | 17.658 |
 
 Source note: the start blocks in the a26041d row were ported from `toby/halves_start_sol.py` (0d47ab3).
 
@@ -528,6 +529,7 @@ fast_eval's, with all X correlator sizes and three fake calibrations (seed 0 onl
 |---|---|---|---|---|---|---|
 | 2026-10-25 09:10 | de2d0d0 | ryon/toby_sol.py (main entry point) | 1.050 | 0.959 | 0.805 | 14.1 |
 | 2026-10-25 09:10 | 105326Z | bonus milestone 51.04, `create_dicke_state_adaptive` (bonus_sub_105326Z.py) | 0.951 | 0.872 | 0.715 | 12.0 |
+| 2026-10-25 10:15 | 9a76864 | toby/bonus_portfolio_squeeze_sol.py (portfolio_sol.py main entry) | 1.058 | 0.959 | not run | |
 
 The bonus build is about 15 % shallower, but its penalty is 5 to 25 % higher than main's in all
 36 cases (N = 2..12). It places circuits without calibration data, and the packed 1q gates
