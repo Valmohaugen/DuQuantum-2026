@@ -61,6 +61,8 @@ Status: open, unassigned (research)
 Whole-state pruning never removed a CZ from the W trees (N = 4..12). Is 2N - 3 optimal for CZ + 1q gates?
 A proof or a counterexample (e.g. fit random 2N - 4 CZ sequences on trees / paths, many restarts) settles it.
 W cases are about 40 % of the small-N score, so even one CZ matters at N >= 8.
+Evidence (ryon): random CZ sequences on a 2x2 / 2x3 patch with random restarts never fit W(4) with 4 CZ
+(28k tries) or W(5) with 6 CZ (19k tries), while 2N - 3 fits in a few tries. Likely optimal; low priority.
 
 ### 9. Whole-state CZ pruning for every (N, k), N = 7..12 (primary score)
 Status: in progress (ryon session, Slurm sweep running; please don't duplicate, add footprints instead)
@@ -86,6 +88,7 @@ they are line circuits with repeated CZs on the same pairs. So toby_sol now also
 without needing a grid block. The 3-row runs win because their start is the line construction on a
 snake; the ladder start (2xL) stalls. Path runs for N = 7..16 are running.
 Also in f1f5bba: `bias_tree` grows W trees charging readout skew (Zb), (N,1) N = 3..10: 9.039 -> 9.084.
+(10,3) 59 -> 38 CZ patch, 0.676 -> 0.776; (10,5) 85 -> 43 CZ line (first `lines` entry), 0.470 -> 0.677.
 Next (me): install N = 10..16 path/patch winners as they converge; brickwork-start pruning for k >= 3.
 k = 2 from an over-parameterised brickwork start on 2-row ladder footprints (toby): negative. Greedy
 single-CZ deletion gets stuck far above toby_sol: (6,2) 42 -> 17 CZ (toby_sol 15), (7,2) 80 -> 61 (19); (8,2) and
@@ -279,3 +282,33 @@ removes the detuning, so DD placement can't recover it. Only shorter circuits (l
 - Merged toby/ladder_sol.py (ladder split, doubling tree, two-variant bonus) with the patch table: 16.755 -> 17.077, bonus 26.35 -> 37.81.
 - (6,2) 18 -> 14 CZ and (6,3) 33 -> 12 CZ on a 2x3 patch: E[s] 0.932 -> 0.962 and 0.825 -> 0.934.
 - (5,2) on a 5-qubit patch: 11 CZ, E[s] 0.986 -> 1.005 (0dc262c).
+
+
+## Coordination update — 2026-10-25, bonus W native-depth result
+
+PORT-002 remains assigned to `w_depth`. Contributor `bonus-depth` completed
+921 W decomposition/topology trials and produced a 56-case native circuit pool
+scoring **45.14220419051065**. Newly accepted W circuits pass full-state,
+relative-phase, native-gate and Willow checks; standalone export/build-time
+verification is pending. Evidence: `research/bonus_band_20261025/w_results.json`;
+circuits: `research/bonus_band_20261025/w_circuits.json`.
+`operations(root, children, kinds)` in `w_variants.py` is reusable: it selects
+between two exact broadcast-edge decompositions on the single-excitation
+subspace. `w_depth`: please review/reuse these results before repeating that
+search; your existing ownership is preserved.
+
+Follow-ups are recorded in `research/bonus_portfolio_20261025/tasks.json`:
+PORT-004 (calibrated W integration) is assigned to `bonus-depth`;
+PORT-005 (certified terminal-decoder integration) is available, with the existing
+BR-108 integration worker suggested but not assigned;
+PORT-006 (adaptive weight-band uncomputation) is available to claim.
+Five/six-site decoder fitting and the claimed k=2 brickwork searches remain
+with their current workers. Hardware comparisons will use a fresh maintained
+solver snapshot rather than the older bonus-research baseline.
+
+**Request to other workers:** please append your best candidate circuit/data
+paths, source hashes, emitted native depths/CZ counts, validation evidence,
+remaining unmet needs and current claims here. For score comparisons, include
+the calibration/noise assumptions and correlator cutoff. Frozen native circuits
+are preferred for safe comparison across concurrent work. Continue proposing
+improvements beyond the 45-point milestone.
