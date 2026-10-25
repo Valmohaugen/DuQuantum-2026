@@ -1,128 +1,38 @@
 {
- "10,2": {
-  "moments": 21,
-  "portfolio": 22,
-  "cz": 32,
-  "overlap": 1.0000002399612742,
-  "file": "d_10_2.json",
-  "source": "out/gp_10_2_a2.json",
-  "gain": 0.04329004329004327
- },
- "10,3": {
-  "moments": 29,
-  "portfolio": 35,
-  "cz": 45,
-  "overlap": 1.0000000931328943,
-  "file": "d_10_3.json",
-  "source": "out/gp_10_3_brick10s1.json",
-  "gain": 0.17733990147783263
- },
  "10,5": {
-  "moments": 31,
-  "portfolio": 35,
+  "moments": 29,
+  "portfolio": 31,
   "cz": 48,
-  "overlap": 0.9999999154275989,
+  "overlap": 1.000000125161625,
   "file": "d_10_5.json",
-  "source": "out/gp_10_5_brick13s3.json",
-  "gain": 0.1843317972350229
- },
- "11,2": {
-  "moments": 23,
-  "portfolio": 25,
-  "cz": 37,
-  "overlap": 1.0000001791478645,
-  "file": "d_11_2.json",
-  "source": "out/gp_11_2_path.json",
-  "gain": 0.07652173913043481
+  "source": "out/gp_10_5_dzP.json",
+  "gain": 0.11123470522803114
  },
  "11,3": {
-  "moments": 35,
-  "portfolio": 45,
-  "cz": 55,
-  "overlap": 0.9999996515548596,
+  "moments": 33,
+  "portfolio": 35,
+  "cz": 53,
+  "overlap": 1.0000001967679815,
   "file": "d_11_3.json",
-  "source": "out/gp_11_3_brick12s2.json",
-  "gain": 0.20952380952380956
+  "source": "out/gp_11_3_dzP.json",
+  "gain": 0.05714285714285716
  },
  "12,3": {
-  "moments": 41,
-  "portfolio": 45,
-  "cz": 74,
-  "overlap": 0.9999993025890638,
+  "moments": 39,
+  "portfolio": 41,
+  "cz": 55,
+  "overlap": 1.0000002050644128,
   "file": "d_12_3.json",
-  "source": "out/gp_12_3_brick13s2.json",
-  "gain": 0.07804878048780484
+  "source": "out/gp_12_3_dzP.json",
+  "gain": 0.04502814258911825
  },
- "13,2": {
-  "moments": 27,
-  "portfolio": 29,
-  "cz": 51,
-  "overlap": 0.9999997801610877,
-  "file": "d_13_2.json",
-  "source": "out/gp_13_2_path.json",
-  "gain": 0.06641123882503186
- },
- "7,2": {
-  "moments": 15,
-  "portfolio": 16,
-  "cz": 18,
-  "overlap": 1.0000004172887822,
-  "file": "d_7_2.json",
-  "source": "out/gp_7_2_da5.json",
-  "gain": 0.05833333333333335
- },
- "7,3": {
-  "moments": 17,
-  "portfolio": 21,
-  "cz": 20,
-  "overlap": 1.000000045432381,
-  "file": "d_7_3.json",
-  "source": "out/gp_7_3_x3xa1.json",
-  "gain": 0.23529411764705888
- },
- "8,2": {
-  "moments": 17,
-  "portfolio": 18,
-  "cz": 23,
-  "overlap": 1.0000006621165114,
-  "file": "d_8_2.json",
-  "source": "out/gp_8_2_a2.json",
-  "gain": 0.05228758169934644
- },
- "9,2": {
-  "moments": 19,
-  "portfolio": 20,
-  "cz": 29,
-  "overlap": 1.0000000328115328,
-  "file": "d_9_2.json",
-  "source": "out/gp_9_2_brick9s3.json",
-  "gain": 0.047368421052631504
- },
- "6,2": {
-  "moments": 13,
-  "portfolio": 15,
-  "cz": 15,
-  "overlap": 1.0000001330538084,
-  "file": "d_6_2.json",
-  "source": "out/gp_6_2_pa3.json",
-  "gain": 0.12307692307692308
- },
- "6,3": {
-  "moments": 12,
-  "portfolio": 15,
-  "cz": 12,
-  "overlap": 1.0000002604433975,
-  "file": "d_6_3.json",
-  "source": "out/gp_6_3_pa3.json",
-  "gain": 0.30000000000000004
- },
- "4,2": {
-  "moments": 7,
-  "portfolio": 9,
-  "cz": 5,
-  "overlap": 1.000000012908699,
-  "file": "d_4_2.json",
-  "source": "out/gp_4_2_pa3.json",
-  "gain": 0.25396825396825395
+ "8,3": {
+  "moments": 23,
+  "portfolio": 25,
+  "cz": 25,
+  "overlap": 1.0000001522966593,
+  "file": "d_8_3.json",
+  "source": "out/gp_8_3_dzG.json",
+  "gain": 0.08347826086956522
  }
 }

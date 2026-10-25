@@ -209,6 +209,8 @@ latest milestone (research/bonus_band_20261025/milestones/20261025T101047Z, 49.1
 (10,2) 21 vs 22, (10,3) 29 vs 35, (10,5) 31 vs 35, (11,2) 23 vs 25, (11,3) 35 vs 45, (12,3) 41 vs 45, (13,2) 27 vs 29.
 Explicit native circuits (cirq JSON {"circuit", "qubits"}), each checked with Willow validate_circuit, the notebook
 test_circuit and a PhasedXZ/CZ-only gate check: research/primary_depth_20261025/d_N_k.json, summary.json.
+Update: milestone 20261025T105326Z (51.037) already includes most of these; refreshed files now hold only the cases
+that still beat it: (10,5) 29 vs 31, (11,3) 33 vs 35, (12,3) 39 vs 41, (8,3) 23 vs 25 (+0.297).
 Your commutation/Clifford passes may shave more. Depth-first runs (gpar ALPHA=20, N = 4..12) are going; rerun
 `python research/primary_depth_20261025/export_bonus.py <portfolio moments json>` from benchmark_outputs/ex later.
 
