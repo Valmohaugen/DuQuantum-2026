@@ -1,0 +1,35 @@
+/tmp/duquantum-eval-venv/lib/python3.11/site-packages/google/api_core/_python_version_support.py:254: FutureWarning: You are using a Python version (3.11.5) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2027-10-24). Please upgrade to the latest Python version, or at least Python 3.12, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+PATTERN (0, 2, 1, 2, 1) best {2: 13, 3: 12} seconds 2.824570498429239
+PATTERN (1, 2, 0, 2, 1) best {2: 13, 3: 12} seconds 5.863537548109889
+PATTERN (0, 2, 0, 2, 0) best {2: 13, 3: 12} seconds 6.841400000266731
+PATTERN (0, 1, 2, 1, 2) best {2: 13, 3: 12} seconds 9.869102812372148
+PATTERN (0, 1, 0, 1, 0) best {2: 13, 3: 12} seconds 10.902658002451062
+PATTERN (0, 2, 0, 2, 1) best {2: 13, 3: 12} seconds 12.282699995674193
+PATTERN (0, 2, 1, 0, 1) best {2: 13, 3: 12} seconds 15.268553139641881
+PATTERN (1, 2, 0, 2, 0) best {2: 13, 3: 12} seconds 17.953012972138822
+PATTERN (0, 1, 2, 0, 2) best {2: 13, 3: 12} seconds 20.285102386027575
+PATTERN (1, 0, 2, 1, 2) best {2: 13, 3: 12} seconds 22.760795073583722
+PATTERN (1, 0, 2, 0, 1) best {2: 13, 3: 12} seconds 25.81875254958868
+PATTERN (1, 2, 1, 2, 1) best {2: 13, 3: 12} seconds 29.05704133026302
+PATTERN (0, 2, 1, 0, 2) best {2: 13, 3: 12} seconds 32.80573948100209
+PATTERN (1, 0, 1, 2, 1) best {2: 13, 3: 12} seconds 35.65700118802488
+PATTERN (0, 1, 2, 1, 0) best {2: 13, 3: 12} seconds 39.673505736514926
+PATTERN (0, 2, 0, 1, 2) best {2: 13, 3: 12} seconds 41.56334936246276
+PATTERN (0, 1, 0, 2, 0) best {2: 13, 3: 12} seconds 43.43054106738418
+PATTERN (0, 1, 2, 0, 1) best {2: 13, 3: 12} seconds 46.96587965358049
+PATTERN (1, 0, 2, 1, 0) best {2: 13, 3: 12} seconds 49.98707290366292
+PATTERN (1, 0, 1, 0, 2) best {2: 13, 3: 12} seconds 51.37538956478238
+PATTERN (0, 1, 0, 1, 2) best {2: 13, 3: 12} seconds 52.86994835361838
+PATTERN (1, 2, 0, 1, 0) best {2: 13, 3: 12} seconds 56.15182012505829
+PATTERN (0, 2, 0, 1, 0) best {2: 13, 3: 12} seconds 57.87539415527135
+PATTERN (1, 2, 1, 0, 2) best {2: 13, 3: 12} seconds 62.62347444426268
+PATTERN (1, 0, 2, 0, 2) best {2: 13, 3: 12} seconds 64.94932669121772
+PATTERN (1, 0, 1, 2, 0) best {2: 13, 3: 12} seconds 67.27536281570792
+GAIN {'k': 3, 'pattern': (0, 2, 1, 2, 0), 'restart': 1, 'infidelity': 1.3322676295501878e-15, 'seconds': 67.47731630597264, 'moments': 11, 'state_l2_error': 6.047192044560878e-08}
+PATTERN (0, 2, 1, 2, 0) best {2: 13, 3: 11} seconds 70.11610871180892
+PATTERN (1, 2, 0, 1, 2) best {2: 13, 3: 11} seconds 72.90132295060903
+PATTERN (0, 1, 0, 2, 1) best {2: 13, 3: 11} seconds 74.21447838563472
+PATTERN (1, 0, 1, 0, 1) best {2: 13, 3: 11} seconds 74.85089749004692
+PATTERN (1, 2, 1, 0, 1) best {2: 13, 3: 11} seconds 76.49457294307649
+PATTERN (1, 2, 1, 2, 0) best {2: 13, 3: 11} seconds 79.00876325834543

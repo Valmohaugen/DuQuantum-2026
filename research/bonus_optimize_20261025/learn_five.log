@@ -1,0 +1,22 @@
+/tmp/duquantum-eval-venv/lib/python3.11/site-packages/google/api_core/_python_version_support.py:254: FutureWarning: You are using a Python version (3.11.5) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2027-10-24). Please upgrade to the latest Python version, or at least Python 3.12, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+PATTERN (1, 0, 2, 3, 2) minimum 0.029977170072755577 seconds 0.7281347159296274
+PATTERN (3, 0, 2, 0, 3) minimum 0.003791680363282257 seconds 1.252031653188169
+PATTERN (0, 2, 3, 2, 3) minimum 0.003791680363282257 seconds 1.7931555146351457
+PATTERN (1, 3, 2, 1, 0) minimum 0.003791680363282257 seconds 2.1473154900595546
+PATTERN (3, 0, 1, 3, 1) minimum 0.003791680363282257 seconds 2.7082167947664857
+PATTERN (1, 0, 2, 1, 2) minimum 0.003791680363282257 seconds 3.0696541192010045
+PATTERN (2, 0, 2, 1, 3) minimum 0.003791680363282257 seconds 3.4779562996700406
+PATTERN (1, 3, 1, 3, 0) minimum 0.003791680363282257 seconds 3.7550512831658125
+PATTERN (1, 0, 2, 1, 0) minimum 0.003791680363282257 seconds 4.176615313626826
+PATTERN (2, 0, 2, 3, 2) minimum 0.003791680363282257 seconds 4.539941753260791
+PATTERN (3, 2, 3, 1, 2) minimum 0.003791680363282257 seconds 5.005768273957074
+PATTERN (1, 2, 3, 2, 0) minimum 0.003791680363282257 seconds 5.616377944126725
+PATTERN (2, 0, 2, 1, 0) minimum 0.003791680363282257 seconds 6.104084748774767
+PATTERN (3, 0, 3, 1, 3) minimum 0.003791680363282257 seconds 6.804558488540351
+PATTERN (0, 1, 2, 0, 3) minimum 0.003791680363282257 seconds 7.333069487474859
+PATTERN (1, 3, 1, 3, 2) minimum 0.003791680363282257 seconds 7.605508541688323
+PATTERN (2, 1, 3, 1, 2) minimum 0.003791680363282257 seconds 8.068366404622793
+PATTERN (2, 1, 2, 1, 3) minimum 0.003791680363282257 seconds 8.33594618178904
+PATTERN (3, 1, 0, 2, 3) minimum 0.003791680363282257 seconds 8.933685016818345
+GAIN {'pattern': (3, 0, 2, 3, 0), 'restart': 0, 'infidelity': 2.220446049250313e-16, 'seconds': 9.006960341706872, 'moments': 11, 'state_l2_error': 4.0635893948007463e-08}

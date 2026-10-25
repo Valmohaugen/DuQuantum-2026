@@ -24,6 +24,21 @@ validated, max 119 moments, build <= 2.7 s). It applies the same pass to the unp
 `toby/portfolio_sol.py` from exp/depth-search 4df75cc, which scores 51.5954 on its own. It is equal to or shallower than
 bonus_squeeze_sol in every case: (8,3) 23 -> 21, (11,3) 33 -> 32, (11,4) 61 -> 60, (12,3) 39 -> 38,
 (13,3) 54 -> 51, (14,3) 55 -> 51, (15,3) 64 -> 52.
+Best verified bonus: **52.16161121597764**, up **0.8279441499** from
+51.3336670661 across all **56** corrected cases. The
+[current standalone submission and optimization handoff](research/bonus_optimize_20261025/README.md)
+include editable circuits, learned angles, exact scheduling certificates and
+fresh validation. Offline learning cuts D(5,2) **13→11** and D(6,3) **12→11**
+moments. Combining fresh shared circuits and exact scheduling improves seven
+more cases, including D(13,3) **55→50**, D(14,3) **57→50** and D(15,3)
+**67→51**. More CZ gates are accepted when they reduce emitted depth.
+
+Use `research/bonus_optimize_20261025/submission.py` for this bonus-first
+checkpoint. It improves the newer 51.836654 shared portfolio by **0.324957**.
+The earlier [51.333667 checkpoint](research/bonus_priority_20261025/README.md)
+is preserved. Cached native layers reconstruct in milliseconds; further runtime
+caching does not change the score. Offline angle learning and circuit changes
+produce the gains. The main constructor is preserved.
 
 ## Harmonic objective and paired evaluations — 2026-10-25
 

@@ -1,0 +1,365 @@
+{
+  "baseline_score": 51.33366706608946,
+  "score": 51.387219471975534,
+  "trials": 336,
+  "seconds": 126.26292678806931,
+  "improvements": [
+    {
+      "N": 14,
+      "k": 3,
+      "before": 57,
+      "moments": 55,
+      "phase": 0.0,
+      "state_l2_error": 1.7126331732025112e-15,
+      "gain": 0.026794258373205745
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "before": 55,
+      "moments": 53,
+      "phase": 0.0,
+      "state_l2_error": 1.648413164823806e-15,
+      "gain": 0.0267581475128645
+    }
+  ],
+  "coverage": [
+    {
+      "case": "2,1",
+      "trials": 6,
+      "before": 3,
+      "after": 3
+    },
+    {
+      "case": "4,2",
+      "trials": 6,
+      "before": 7,
+      "after": 7
+    },
+    {
+      "case": "6,3",
+      "trials": 6,
+      "before": 12,
+      "after": 12
+    },
+    {
+      "case": "14,1",
+      "trials": 6,
+      "before": 12,
+      "after": 12
+    },
+    {
+      "case": "3,1",
+      "trials": 6,
+      "before": 6,
+      "after": 6
+    },
+    {
+      "case": "9,1",
+      "trials": 6,
+      "before": 10,
+      "after": 10
+    },
+    {
+      "case": "13,1",
+      "trials": 6,
+      "before": 12,
+      "after": 12
+    },
+    {
+      "case": "7,1",
+      "trials": 6,
+      "before": 9,
+      "after": 9
+    },
+    {
+      "case": "15,1",
+      "trials": 6,
+      "before": 13,
+      "after": 13
+    },
+    {
+      "case": "4,1",
+      "trials": 6,
+      "before": 7,
+      "after": 7
+    },
+    {
+      "case": "10,1",
+      "trials": 6,
+      "before": 11,
+      "after": 11
+    },
+    {
+      "case": "12,1",
+      "trials": 6,
+      "before": 12,
+      "after": 12
+    },
+    {
+      "case": "5,1",
+      "trials": 6,
+      "before": 8,
+      "after": 8
+    },
+    {
+      "case": "8,1",
+      "trials": 6,
+      "before": 10,
+      "after": 10
+    },
+    {
+      "case": "6,1",
+      "trials": 6,
+      "before": 9,
+      "after": 9
+    },
+    {
+      "case": "11,1",
+      "trials": 6,
+      "before": 12,
+      "after": 12
+    },
+    {
+      "case": "7,3",
+      "trials": 6,
+      "before": 17,
+      "after": 17
+    },
+    {
+      "case": "6,2",
+      "trials": 6,
+      "before": 13,
+      "after": 13
+    },
+    {
+      "case": "8,4",
+      "trials": 6,
+      "before": 21,
+      "after": 21
+    },
+    {
+      "case": "7,2",
+      "trials": 6,
+      "before": 15,
+      "after": 15
+    },
+    {
+      "case": "5,2",
+      "trials": 6,
+      "before": 13,
+      "after": 13
+    },
+    {
+      "case": "10,5",
+      "trials": 6,
+      "before": 29,
+      "after": 29
+    },
+    {
+      "case": "8,2",
+      "trials": 6,
+      "before": 17,
+      "after": 17
+    },
+    {
+      "case": "9,2",
+      "trials": 6,
+      "before": 19,
+      "after": 19
+    },
+    {
+      "case": "10,2",
+      "trials": 6,
+      "before": 21,
+      "after": 21
+    },
+    {
+      "case": "8,3",
+      "trials": 6,
+      "before": 23,
+      "after": 23
+    },
+    {
+      "case": "9,4",
+      "trials": 6,
+      "before": 29,
+      "after": 29
+    },
+    {
+      "case": "11,2",
+      "trials": 6,
+      "before": 23,
+      "after": 23
+    },
+    {
+      "case": "12,2",
+      "trials": 6,
+      "before": 25,
+      "after": 25
+    },
+    {
+      "case": "13,2",
+      "trials": 6,
+      "before": 27,
+      "after": 27
+    },
+    {
+      "case": "10,3",
+      "trials": 6,
+      "before": 29,
+      "after": 29
+    },
+    {
+      "case": "15,2",
+      "trials": 6,
+      "before": 29,
+      "after": 29
+    },
+    {
+      "case": "14,2",
+      "trials": 6,
+      "before": 29,
+      "after": 29
+    },
+    {
+      "case": "9,3",
+      "trials": 6,
+      "before": 29,
+      "after": 29
+    },
+    {
+      "case": "11,3",
+      "trials": 6,
+      "before": 33,
+      "after": 33
+    },
+    {
+      "case": "10,4",
+      "trials": 6,
+      "before": 37,
+      "after": 37
+    },
+    {
+      "case": "11,5",
+      "trials": 6,
+      "before": 47,
+      "after": 47
+    },
+    {
+      "case": "12,3",
+      "trials": 6,
+      "before": 39,
+      "after": 39
+    },
+    {
+      "case": "14,3",
+      "trials": 6,
+      "before": 57,
+      "after": 55
+    },
+    {
+      "case": "13,3",
+      "trials": 6,
+      "before": 55,
+      "after": 53
+    },
+    {
+      "case": "11,4",
+      "trials": 6,
+      "before": 61,
+      "after": 61
+    },
+    {
+      "case": "12,4",
+      "trials": 6,
+      "before": 65,
+      "after": 65
+    },
+    {
+      "case": "12,6",
+      "trials": 6,
+      "before": 82,
+      "after": 82
+    },
+    {
+      "case": "15,3",
+      "trials": 6,
+      "before": 67,
+      "after": 67
+    },
+    {
+      "case": "12,5",
+      "trials": 6,
+      "before": 78,
+      "after": 78
+    },
+    {
+      "case": "13,4",
+      "trials": 6,
+      "before": 75,
+      "after": 75
+    },
+    {
+      "case": "13,5",
+      "trials": 6,
+      "before": 86,
+      "after": 86
+    },
+    {
+      "case": "14,7",
+      "trials": 6,
+      "before": 108,
+      "after": 108
+    },
+    {
+      "case": "14,4",
+      "trials": 6,
+      "before": 82,
+      "after": 82
+    },
+    {
+      "case": "13,6",
+      "trials": 6,
+      "before": 97,
+      "after": 97
+    },
+    {
+      "case": "14,5",
+      "trials": 6,
+      "before": 96,
+      "after": 96
+    },
+    {
+      "case": "14,6",
+      "trials": 6,
+      "before": 106,
+      "after": 106
+    },
+    {
+      "case": "15,6",
+      "trials": 6,
+      "before": 110,
+      "after": 110
+    },
+    {
+      "case": "15,4",
+      "trials": 6,
+      "before": 90,
+      "after": 90
+    },
+    {
+      "case": "15,7",
+      "trials": 6,
+      "before": 119,
+      "after": 119
+    },
+    {
+      "case": "15,5",
+      "trials": 6,
+      "before": 101,
+      "after": 101
+    }
+  ],
+  "baseline_sha256": "6f968f77b7b55d319424771d4071a6cbab1a49289f8d8fb7dc06febd52437b48"
+}

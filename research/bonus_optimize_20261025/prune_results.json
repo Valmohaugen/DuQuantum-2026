@@ -1,0 +1,2596 @@
+{
+  "rows": [
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 60,
+      "restart": 0,
+      "infidelity": 0.06309002962356125,
+      "seconds": 0.4602331630885601
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 60,
+      "restart": 1,
+      "infidelity": 0.1799393121726509,
+      "seconds": 0.48636780492961407
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 60,
+      "restart": 2,
+      "infidelity": 0.20143822781553256,
+      "seconds": 0.521792221814394
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 60,
+      "restart": 3,
+      "infidelity": 0.06309002962356058,
+      "seconds": 0.5595929706469178
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 60,
+      "restart": 4,
+      "infidelity": 0.06309002962355892,
+      "seconds": 0.6220653597265482
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 60,
+      "restart": 5,
+      "infidelity": 0.2335536210400615,
+      "seconds": 0.6688801301643252
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 71,
+      "restart": 0,
+      "infidelity": 0.19549508111289748,
+      "seconds": 0.7013927130028605
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 71,
+      "restart": 1,
+      "infidelity": 0.1770184917046489,
+      "seconds": 0.741198637522757
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 71,
+      "restart": 2,
+      "infidelity": 0.17701849170464867,
+      "seconds": 0.7735190913081169
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 71,
+      "restart": 3,
+      "infidelity": 0.457609066504979,
+      "seconds": 0.8118746504187584
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 71,
+      "restart": 4,
+      "infidelity": 0.17701849170464812,
+      "seconds": 0.8610195266082883
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 71,
+      "restart": 5,
+      "infidelity": 0.22583426132260565,
+      "seconds": 0.9210761934518814
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 92,
+      "restart": 0,
+      "infidelity": 0.16243710467018335,
+      "seconds": 0.9387560319155455
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 92,
+      "restart": 1,
+      "infidelity": 0.15801557054601334,
+      "seconds": 0.9894651975482702
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 92,
+      "restart": 2,
+      "infidelity": 0.15801557054601312,
+      "seconds": 1.037356867454946
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 92,
+      "restart": 3,
+      "infidelity": 0.22583426132260498,
+      "seconds": 1.0773106859996915
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 92,
+      "restart": 4,
+      "infidelity": 0.12573593128807103,
+      "seconds": 1.1115301018580794
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 92,
+      "restart": 5,
+      "infidelity": 0.09999999999999942,
+      "seconds": 1.1503445142880082
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 18,
+      "restart": 0,
+      "infidelity": 0.3999999999999999,
+      "seconds": 1.1688315384089947
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 18,
+      "restart": 1,
+      "infidelity": 0.07573593128807021,
+      "seconds": 1.2069531921297312
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 18,
+      "restart": 2,
+      "infidelity": 0.3999999999999996,
+      "seconds": 1.2358591733500361
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 18,
+      "restart": 3,
+      "infidelity": 0.03944487245360073,
+      "seconds": 1.2637409577146173
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 18,
+      "restart": 4,
+      "infidelity": 0.03944487245360073,
+      "seconds": 1.300504431128502
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 18,
+      "restart": 5,
+      "infidelity": 0.4171572875253805,
+      "seconds": 1.337292443960905
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 19,
+      "restart": 0,
+      "infidelity": 0.0394448724536004,
+      "seconds": 1.3608801681548357
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 19,
+      "restart": 1,
+      "infidelity": 0.02871343589140929,
+      "seconds": 1.403109360486269
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 19,
+      "restart": 2,
+      "infidelity": 0.02871343589140929,
+      "seconds": 1.4374842327088118
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 19,
+      "restart": 3,
+      "infidelity": 0.2335536210400615,
+      "seconds": 1.4803182473406196
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 19,
+      "restart": 4,
+      "infidelity": 0.18904485611274457,
+      "seconds": 1.5323119712993503
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 19,
+      "restart": 5,
+      "infidelity": 0.03944487245360073,
+      "seconds": 1.56593694165349
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 20,
+      "restart": 0,
+      "infidelity": 0.13944487245360104,
+      "seconds": 1.572781415656209
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 20,
+      "restart": 1,
+      "infidelity": 0.13944487245360437,
+      "seconds": 1.5991266136988997
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 20,
+      "restart": 2,
+      "infidelity": 0.13944487245360226,
+      "seconds": 1.632291916757822
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 20,
+      "restart": 3,
+      "infidelity": 0.13944487245360204,
+      "seconds": 1.6844473546370864
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 20,
+      "restart": 4,
+      "infidelity": 0.23944487245360013,
+      "seconds": 1.7312880335375667
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 20,
+      "restart": 5,
+      "infidelity": 0.17192224864858618,
+      "seconds": 1.7936046598479152
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 39,
+      "restart": 0,
+      "infidelity": 0.2176836201672716,
+      "seconds": 1.8608048791065812
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 39,
+      "restart": 1,
+      "infidelity": 0.20000000000000084,
+      "seconds": 1.9976801024749875
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 39,
+      "restart": 2,
+      "infidelity": 0.2043125697031506,
+      "seconds": 2.039103259332478
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 39,
+      "restart": 3,
+      "infidelity": 0.19999999999999973,
+      "seconds": 2.0870507545769215
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 39,
+      "restart": 4,
+      "infidelity": 0.20431256970315104,
+      "seconds": 2.1251538451761007
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 39,
+      "restart": 5,
+      "infidelity": 0.20431256970315026,
+      "seconds": 2.1778418365865946
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 40,
+      "restart": 0,
+      "infidelity": 0.03944487245360084,
+      "seconds": 2.194297879934311
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 40,
+      "restart": 1,
+      "infidelity": 0.0394448724535994,
+      "seconds": 2.221889146603644
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 40,
+      "restart": 2,
+      "infidelity": 0.03944487245360051,
+      "seconds": 2.2364304400980473
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 40,
+      "restart": 3,
+      "infidelity": 0.1136261117650259,
+      "seconds": 2.266787047497928
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 40,
+      "restart": 4,
+      "infidelity": 0.03944487245360051,
+      "seconds": 2.296900549903512
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 40,
+      "restart": 5,
+      "infidelity": 0.039444872453600954,
+      "seconds": 2.3238448975607753
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 41,
+      "restart": 0,
+      "infidelity": 0.2000000000000003,
+      "seconds": 2.335247900336981
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 41,
+      "restart": 1,
+      "infidelity": 0.19999999999999907,
+      "seconds": 2.372093616053462
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 41,
+      "restart": 2,
+      "infidelity": 0.20000000000000007,
+      "seconds": 2.4053344279527664
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 41,
+      "restart": 3,
+      "infidelity": 0.22583426132260465,
+      "seconds": 2.4484999645501375
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 41,
+      "restart": 4,
+      "infidelity": 0.22583426132260676,
+      "seconds": 2.494579266756773
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 41,
+      "restart": 5,
+      "infidelity": 0.21549231503121258,
+      "seconds": 2.567645982839167
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 61,
+      "restart": 0,
+      "infidelity": 0.2535898384862241,
+      "seconds": 2.6433915458619595
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 61,
+      "restart": 1,
+      "infidelity": 0.25358983848622396,
+      "seconds": 2.7037654407322407
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 61,
+      "restart": 2,
+      "infidelity": 0.25358983848622396,
+      "seconds": 2.776560585014522
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 61,
+      "restart": 3,
+      "infidelity": 0.17999999999999905,
+      "seconds": 2.860573524609208
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 61,
+      "restart": 4,
+      "infidelity": 0.476393202250021,
+      "seconds": 2.8911495562642813
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 61,
+      "restart": 5,
+      "infidelity": 0.2585786437626898,
+      "seconds": 2.920148684643209
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 78,
+      "restart": 0,
+      "infidelity": 0.183772233983162,
+      "seconds": 2.9406939884647727
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 78,
+      "restart": 1,
+      "infidelity": 0.12061772650537017,
+      "seconds": 2.973577067255974
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 78,
+      "restart": 2,
+      "infidelity": 0.19003801568082124,
+      "seconds": 3.0520506035536528
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 78,
+      "restart": 3,
+      "infidelity": 0.19003801568082135,
+      "seconds": 3.1283052479848266
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 78,
+      "restart": 4,
+      "infidelity": 0.09531609726773138,
+      "seconds": 3.16714118886739
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 78,
+      "restart": 5,
+      "infidelity": 0.19825150072472053,
+      "seconds": 3.203325620852411
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 79,
+      "restart": 0,
+      "infidelity": 0.20836184482550435,
+      "seconds": 3.247285702265799
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 79,
+      "restart": 1,
+      "infidelity": 0.06932351609256249,
+      "seconds": 3.287746445275843
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 79,
+      "restart": 2,
+      "infidelity": 0.06932351609256315,
+      "seconds": 3.321374664083123
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 79,
+      "restart": 3,
+      "infidelity": 0.1845882012583352,
+      "seconds": 3.356309344060719
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 79,
+      "restart": 4,
+      "infidelity": 0.1842729367126703,
+      "seconds": 3.430502067320049
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "removed": 79,
+      "restart": 5,
+      "infidelity": 0.10842194860085497,
+      "seconds": 3.468735618516803
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 33,
+      "restart": 0,
+      "infidelity": 0.19999999999999962,
+      "seconds": 4.066498571075499
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 33,
+      "restart": 1,
+      "infidelity": 0.1999999999999994,
+      "seconds": 4.102279907092452
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 33,
+      "restart": 2,
+      "infidelity": 0.2000000000000065,
+      "seconds": 4.133623140864074
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 33,
+      "restart": 3,
+      "infidelity": 0.2856546195402895,
+      "seconds": 4.1983747696504
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 33,
+      "restart": 4,
+      "infidelity": 0.1999999999999995,
+      "seconds": 4.249717330560088
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 33,
+      "restart": 5,
+      "infidelity": 0.1999999999999994,
+      "seconds": 4.28793503716588
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 18,
+      "restart": 0,
+      "infidelity": 0.10913225533187598,
+      "seconds": 4.3270044988021255
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 18,
+      "restart": 1,
+      "infidelity": 0.10913225533187365,
+      "seconds": 4.407676788046956
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 18,
+      "restart": 2,
+      "infidelity": 0.10913225533187387,
+      "seconds": 4.527270211838186
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 18,
+      "restart": 3,
+      "infidelity": 0.14558330782575557,
+      "seconds": 4.6135128531605005
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 18,
+      "restart": 4,
+      "infidelity": 0.1455833078257598,
+      "seconds": 4.699516050517559
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 18,
+      "restart": 5,
+      "infidelity": 0.1091322553318762,
+      "seconds": 4.822569747455418
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 19,
+      "restart": 0,
+      "infidelity": 0.07901580553218357,
+      "seconds": 4.865575040690601
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 19,
+      "restart": 1,
+      "infidelity": 0.07901580553218246,
+      "seconds": 4.911635169759393
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 19,
+      "restart": 2,
+      "infidelity": 0.07901580553218412,
+      "seconds": 4.950887897983193
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 19,
+      "restart": 3,
+      "infidelity": 0.07901580553218346,
+      "seconds": 5.01724554784596
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 19,
+      "restart": 4,
+      "infidelity": 0.14331064249335368,
+      "seconds": 5.170363871380687
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 19,
+      "restart": 5,
+      "infidelity": 0.0790158055321818,
+      "seconds": 5.230051607824862
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 32,
+      "restart": 0,
+      "infidelity": 0.061568452067804036,
+      "seconds": 5.261921284720302
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 32,
+      "restart": 1,
+      "infidelity": 0.061568452067803925,
+      "seconds": 5.307493645697832
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 32,
+      "restart": 2,
+      "infidelity": 0.06156845206780337,
+      "seconds": 5.383807519450784
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 32,
+      "restart": 3,
+      "infidelity": 0.1969044909688793,
+      "seconds": 5.529334160499275
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 32,
+      "restart": 4,
+      "infidelity": 0.061568452067803925,
+      "seconds": 5.589941537939012
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 32,
+      "restart": 5,
+      "infidelity": 0.06156845206780315,
+      "seconds": 5.654019484296441
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 34,
+      "restart": 0,
+      "infidelity": 0.22085619457120542,
+      "seconds": 5.751718878746033
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 34,
+      "restart": 1,
+      "infidelity": 0.22085619457121086,
+      "seconds": 5.836210121400654
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 34,
+      "restart": 2,
+      "infidelity": 0.2208561945712021,
+      "seconds": 5.940398495644331
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 34,
+      "restart": 3,
+      "infidelity": 0.23444288328049834,
+      "seconds": 6.0286986622959375
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 34,
+      "restart": 4,
+      "infidelity": 0.2208561945712023,
+      "seconds": 6.165276613086462
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 34,
+      "restart": 5,
+      "infidelity": 0.24558859112714482,
+      "seconds": 6.805839609354734
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 47,
+      "restart": 0,
+      "infidelity": 0.10986928599547152,
+      "seconds": 6.841746034100652
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 47,
+      "restart": 1,
+      "infidelity": 0.10986928599547197,
+      "seconds": 6.899258920922875
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 47,
+      "restart": 2,
+      "infidelity": 0.10986928599546841,
+      "seconds": 6.945662390440702
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 47,
+      "restart": 3,
+      "infidelity": 0.1998473039680576,
+      "seconds": 6.994831669144332
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 47,
+      "restart": 4,
+      "infidelity": 0.23363227074944282,
+      "seconds": 7.073574994690716
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 47,
+      "restart": 5,
+      "infidelity": 0.10986928599546841,
+      "seconds": 7.17431921325624
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 48,
+      "restart": 0,
+      "infidelity": 0.03669188412920188,
+      "seconds": 7.201684629544616
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 48,
+      "restart": 1,
+      "infidelity": 0.03669188412919955,
+      "seconds": 7.243943572975695
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 48,
+      "restart": 2,
+      "infidelity": 0.0366918841292001,
+      "seconds": 7.28159074485302
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 48,
+      "restart": 3,
+      "infidelity": 0.08708564932591067,
+      "seconds": 7.411350934766233
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 48,
+      "restart": 4,
+      "infidelity": 0.14744617124359183,
+      "seconds": 7.46754727140069
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 48,
+      "restart": 5,
+      "infidelity": 0.03669188412920166,
+      "seconds": 7.523274974897504
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 61,
+      "restart": 0,
+      "infidelity": 0.06156845206780359,
+      "seconds": 7.556979565881193
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 61,
+      "restart": 1,
+      "infidelity": 0.06156845206780248,
+      "seconds": 7.593475530855358
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 61,
+      "restart": 2,
+      "infidelity": 0.06156845206780459,
+      "seconds": 7.621366268955171
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 61,
+      "restart": 3,
+      "infidelity": 0.06156845206780337,
+      "seconds": 7.670432113111019
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 61,
+      "restart": 4,
+      "infidelity": 0.0615684520678037,
+      "seconds": 7.71503225248307
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 61,
+      "restart": 5,
+      "infidelity": 0.061568452067802815,
+      "seconds": 7.773848206736147
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 62,
+      "restart": 0,
+      "infidelity": 0.10966634391135399,
+      "seconds": 7.8190327333286405
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 62,
+      "restart": 1,
+      "infidelity": 0.17645274225971663,
+      "seconds": 7.88404980674386
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 62,
+      "restart": 2,
+      "infidelity": 0.17645274225971685,
+      "seconds": 7.923630401492119
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 62,
+      "restart": 3,
+      "infidelity": 0.10966634391135299,
+      "seconds": 8.057174211367965
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 62,
+      "restart": 4,
+      "infidelity": 0.20053975018606462,
+      "seconds": 8.102391543798149
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 62,
+      "restart": 5,
+      "infidelity": 0.10966634391135421,
+      "seconds": 8.21613516844809
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 72,
+      "restart": 0,
+      "infidelity": 0.050319535805315674,
+      "seconds": 8.257540098391473
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 72,
+      "restart": 1,
+      "infidelity": 0.05031953580531967,
+      "seconds": 8.299984276294708
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 72,
+      "restart": 2,
+      "infidelity": 0.050319535805320226,
+      "seconds": 8.347469449043274
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 72,
+      "restart": 3,
+      "infidelity": 0.050319535805316784,
+      "seconds": 8.449340189807117
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 72,
+      "restart": 4,
+      "infidelity": 0.050319535805315785,
+      "seconds": 8.531407747417688
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 72,
+      "restart": 5,
+      "infidelity": 0.050319535805315785,
+      "seconds": 8.604471914470196
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 73,
+      "restart": 0,
+      "infidelity": 0.056875826485810244,
+      "seconds": 8.658693550154567
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 73,
+      "restart": 1,
+      "infidelity": 0.05687582648580891,
+      "seconds": 8.71586216147989
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 73,
+      "restart": 2,
+      "infidelity": 0.056875826485810355,
+      "seconds": 8.762458019889891
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 73,
+      "restart": 3,
+      "infidelity": 0.13544048668233777,
+      "seconds": 8.875414064154029
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 73,
+      "restart": 4,
+      "infidelity": 0.0568758264858118,
+      "seconds": 8.931087288074195
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 73,
+      "restart": 5,
+      "infidelity": 0.16274388131379203,
+      "seconds": 9.019787545315921
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 74,
+      "restart": 0,
+      "infidelity": 0.05687582648581313,
+      "seconds": 9.044014090672135
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 74,
+      "restart": 1,
+      "infidelity": 0.05687582648581091,
+      "seconds": 9.087063048034906
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 74,
+      "restart": 2,
+      "infidelity": 0.056875826485810466,
+      "seconds": 9.131990157999098
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 74,
+      "restart": 3,
+      "infidelity": 0.10581033207280399,
+      "seconds": 9.216713592410088
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 74,
+      "restart": 4,
+      "infidelity": 0.05687582648581013,
+      "seconds": 9.293454538099468
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 74,
+      "restart": 5,
+      "infidelity": 0.0568758264858108,
+      "seconds": 9.374454925768077
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 93,
+      "restart": 0,
+      "infidelity": 0.10958414339683542,
+      "seconds": 9.57980774808675
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 93,
+      "restart": 1,
+      "infidelity": 0.10958414339683653,
+      "seconds": 9.690616716630757
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 93,
+      "restart": 2,
+      "infidelity": 0.10939695743722588,
+      "seconds": 9.873637898825109
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 93,
+      "restart": 3,
+      "infidelity": 0.14558330782575601,
+      "seconds": 9.99483385682106
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 93,
+      "restart": 4,
+      "infidelity": 0.10958414339683586,
+      "seconds": 10.22256372962147
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 93,
+      "restart": 5,
+      "infidelity": 0.10939695743722622,
+      "seconds": 10.406468074768782
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 94,
+      "restart": 0,
+      "infidelity": 0.05687582648581091,
+      "seconds": 10.461646787822247
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 94,
+      "restart": 1,
+      "infidelity": 0.056875826485812464,
+      "seconds": 10.502973242662847
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 94,
+      "restart": 2,
+      "infidelity": 0.05687582648580991,
+      "seconds": 10.55621934402734
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 94,
+      "restart": 3,
+      "infidelity": 0.1518858999088324,
+      "seconds": 10.649488205090165
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 94,
+      "restart": 4,
+      "infidelity": 0.13544048668233688,
+      "seconds": 10.745744130574167
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 94,
+      "restart": 5,
+      "infidelity": 0.12368531091215607,
+      "seconds": 10.813668602146208
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 95,
+      "restart": 0,
+      "infidelity": 0.05687582648581169,
+      "seconds": 10.862541367299855
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 95,
+      "restart": 1,
+      "infidelity": 0.05687582648581091,
+      "seconds": 10.90714982431382
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 95,
+      "restart": 2,
+      "infidelity": 0.05687582648580891,
+      "seconds": 10.95748670399189
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 95,
+      "restart": 3,
+      "infidelity": 0.09983427079016127,
+      "seconds": 11.056521041318774
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 95,
+      "restart": 4,
+      "infidelity": 0.0998342707901505,
+      "seconds": 11.166909920983016
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "removed": 95,
+      "restart": 5,
+      "infidelity": 0.15227359899805903,
+      "seconds": 11.338253295049071
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 15,
+      "restart": 0,
+      "infidelity": 0.17692398084959948,
+      "seconds": 11.60922212060541
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 15,
+      "restart": 1,
+      "infidelity": 0.0999999999999992,
+      "seconds": 11.63129516132176
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 15,
+      "restart": 2,
+      "infidelity": 0.09999999999999909,
+      "seconds": 11.65107609052211
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 15,
+      "restart": 3,
+      "infidelity": 0.10000000000000009,
+      "seconds": 11.684910678304732
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 15,
+      "restart": 4,
+      "infidelity": 0.09999999999999942,
+      "seconds": 11.708795323036611
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 15,
+      "restart": 5,
+      "infidelity": 0.09999999999999964,
+      "seconds": 11.73641852941364
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 22,
+      "restart": 0,
+      "infidelity": 0.10482906485417343,
+      "seconds": 11.752344940789044
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 22,
+      "restart": 1,
+      "infidelity": 0.10482906486664101,
+      "seconds": 11.93929001968354
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 22,
+      "restart": 2,
+      "infidelity": 0.1048290648541691,
+      "seconds": 12.034567541442811
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 22,
+      "restart": 3,
+      "infidelity": 0.09482351779241005,
+      "seconds": 12.07591038197279
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 22,
+      "restart": 4,
+      "infidelity": 0.1066218142718992,
+      "seconds": 12.110527580603957
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 22,
+      "restart": 5,
+      "infidelity": 0.08952188803122718,
+      "seconds": 12.145662584342062
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 36,
+      "restart": 0,
+      "infidelity": 0.4000000000000097,
+      "seconds": 12.165165282785892
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 36,
+      "restart": 1,
+      "infidelity": 0.40000000000167335,
+      "seconds": 12.304543458856642
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 36,
+      "restart": 2,
+      "infidelity": 0.40000000000000036,
+      "seconds": 12.332269517704844
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 36,
+      "restart": 3,
+      "infidelity": 0.3999999999999997,
+      "seconds": 12.364341414533556
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 36,
+      "restart": 4,
+      "infidelity": 0.3999999999999997,
+      "seconds": 12.388701722957194
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 36,
+      "restart": 5,
+      "infidelity": 0.3999999999999999,
+      "seconds": 12.41662414278835
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 50,
+      "restart": 0,
+      "infidelity": 0.16676874587461765,
+      "seconds": 12.47629270516336
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 50,
+      "restart": 1,
+      "infidelity": 0.16833752096445942,
+      "seconds": 12.516971969977021
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 50,
+      "restart": 2,
+      "infidelity": 0.16833752096445875,
+      "seconds": 12.553014559671283
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 50,
+      "restart": 3,
+      "infidelity": 0.1667687458746181,
+      "seconds": 12.665425328537822
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 50,
+      "restart": 4,
+      "infidelity": 0.16833752096445953,
+      "seconds": 12.714832172729075
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 50,
+      "restart": 5,
+      "infidelity": 0.1667687458746172,
+      "seconds": 12.771621331572533
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 57,
+      "restart": 0,
+      "infidelity": 0.02925073580728732,
+      "seconds": 12.803946337662637
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 57,
+      "restart": 1,
+      "infidelity": 0.02552601403082977,
+      "seconds": 12.827398251742125
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 57,
+      "restart": 2,
+      "infidelity": 0.025526014030830657,
+      "seconds": 12.861321527510881
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 57,
+      "restart": 3,
+      "infidelity": 0.025526014030830213,
+      "seconds": 12.89245031028986
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 57,
+      "restart": 4,
+      "infidelity": 0.029250735807120343,
+      "seconds": 12.94441984500736
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 57,
+      "restart": 5,
+      "infidelity": 0.06411010564593178,
+      "seconds": 12.982788954861462
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 71,
+      "restart": 0,
+      "infidelity": 0.02925073580712123,
+      "seconds": 13.00240997876972
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 71,
+      "restart": 1,
+      "infidelity": 0.029250735807120454,
+      "seconds": 13.03881253208965
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 71,
+      "restart": 2,
+      "infidelity": 0.025526014030831323,
+      "seconds": 13.074721322394907
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 71,
+      "restart": 3,
+      "infidelity": 0.15358983848622354,
+      "seconds": 13.133655390702188
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 71,
+      "restart": 4,
+      "infidelity": 0.06411010564593234,
+      "seconds": 13.172397002577782
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 71,
+      "restart": 5,
+      "infidelity": 0.07269964785312855,
+      "seconds": 13.225213231518865
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 23,
+      "restart": 0,
+      "infidelity": 0.13804353509839984,
+      "seconds": 13.252830208279192
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 23,
+      "restart": 1,
+      "infidelity": 0.13804353509839884,
+      "seconds": 13.281236917711794
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 23,
+      "restart": 2,
+      "infidelity": 0.13804353509839862,
+      "seconds": 13.308172919787467
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 23,
+      "restart": 3,
+      "infidelity": 0.15456881767833286,
+      "seconds": 13.341264761984348
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 23,
+      "restart": 4,
+      "infidelity": 0.06686540632405036,
+      "seconds": 13.395675018429756
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 23,
+      "restart": 5,
+      "infidelity": 0.10842194860085608,
+      "seconds": 13.430241203866899
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 37,
+      "restart": 0,
+      "infidelity": 0.06991197695551443,
+      "seconds": 13.44271815288812
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 37,
+      "restart": 1,
+      "infidelity": 0.06991197695550533,
+      "seconds": 13.472497845068574
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 37,
+      "restart": 2,
+      "infidelity": 0.06991197695550655,
+      "seconds": 13.500877582468092
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 37,
+      "restart": 3,
+      "infidelity": 0.11075094468152968,
+      "seconds": 13.541070515289903
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 37,
+      "restart": 4,
+      "infidelity": 0.0825116216784505,
+      "seconds": 13.567418718710542
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 37,
+      "restart": 5,
+      "infidelity": 0.0773791241822328,
+      "seconds": 13.601958284154534
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 58,
+      "restart": 0,
+      "infidelity": 0.15519947082654728,
+      "seconds": 13.649200080893934
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 58,
+      "restart": 1,
+      "infidelity": 0.17160414958306092,
+      "seconds": 13.683806324377656
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 58,
+      "restart": 2,
+      "infidelity": 0.1683375209644592,
+      "seconds": 13.72574664838612
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 58,
+      "restart": 3,
+      "infidelity": 0.16594508110643025,
+      "seconds": 13.761997371912003
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 58,
+      "restart": 4,
+      "infidelity": 0.16465110750183554,
+      "seconds": 13.808520928025246
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "removed": 58,
+      "restart": 5,
+      "infidelity": 0.16838336720457836,
+      "seconds": 13.878584649413824
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 42,
+      "restart": 0,
+      "infidelity": 0.2857142857142846,
+      "seconds": 15.050633480772376
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 42,
+      "restart": 1,
+      "infidelity": 0.1428571428571428,
+      "seconds": 15.170645234175026
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 42,
+      "restart": 2,
+      "infidelity": 0.16791234702946456,
+      "seconds": 15.521371659822762
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 42,
+      "restart": 3,
+      "infidelity": 0.1621685198886359,
+      "seconds": 15.966959871351719
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 42,
+      "restart": 4,
+      "infidelity": 0.14483938664563967,
+      "seconds": 16.19655032735318
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 42,
+      "restart": 5,
+      "infidelity": 0.2197132285991047,
+      "seconds": 16.479487100616097
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 21,
+      "restart": 0,
+      "infidelity": 0.01293256440950108,
+      "seconds": 16.542646415531635
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 21,
+      "restart": 1,
+      "infidelity": 0.01293256440950219,
+      "seconds": 16.654515615664423
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 21,
+      "restart": 2,
+      "infidelity": 0.012932564409503744,
+      "seconds": 16.746210591867566
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 21,
+      "restart": 3,
+      "infidelity": 0.052518580193886,
+      "seconds": 16.95490817539394
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 21,
+      "restart": 4,
+      "infidelity": 0.06773932395666349,
+      "seconds": 17.369117695838213
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 21,
+      "restart": 5,
+      "infidelity": 0.045789108528066835,
+      "seconds": 17.708187588490546
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 22,
+      "restart": 0,
+      "infidelity": 0.042633983040510026,
+      "seconds": 17.72295454610139
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 22,
+      "restart": 1,
+      "infidelity": 0.04263398304050858,
+      "seconds": 17.823934650979936
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 22,
+      "restart": 2,
+      "infidelity": 0.042633983040515466,
+      "seconds": 17.899817099794745
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 22,
+      "restart": 3,
+      "infidelity": 0.12125635488190845,
+      "seconds": 18.40059135109186
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 22,
+      "restart": 4,
+      "infidelity": 0.1379641151201454,
+      "seconds": 18.74011936970055
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 22,
+      "restart": 5,
+      "infidelity": 0.10967876966581347,
+      "seconds": 18.974887635558844
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 23,
+      "restart": 0,
+      "infidelity": 0.03140912865186141,
+      "seconds": 19.009295476600528
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 23,
+      "restart": 1,
+      "infidelity": 0.07760450541859587,
+      "seconds": 19.18631405942142
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 23,
+      "restart": 2,
+      "infidelity": 0.031409128893607585,
+      "seconds": 19.30025971494615
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 23,
+      "restart": 3,
+      "infidelity": 0.08133873872803776,
+      "seconds": 19.493838069960475
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 23,
+      "restart": 4,
+      "infidelity": 0.052984664882448906,
+      "seconds": 19.666721149347723
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 23,
+      "restart": 5,
+      "infidelity": 0.08057021512680151,
+      "seconds": 20.156106081791222
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 43,
+      "restart": 0,
+      "infidelity": 0.14285714285724882,
+      "seconds": 20.25321172270924
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 43,
+      "restart": 1,
+      "infidelity": 0.14285714285714324,
+      "seconds": 20.387977182865143
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 43,
+      "restart": 2,
+      "infidelity": 0.14285714285714501,
+      "seconds": 20.469923473894596
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 43,
+      "restart": 3,
+      "infidelity": 0.15941321104449901,
+      "seconds": 20.903116040863097
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 43,
+      "restart": 4,
+      "infidelity": 0.1618520217795374,
+      "seconds": 21.307055794633925
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 43,
+      "restart": 5,
+      "infidelity": 0.15545101896506286,
+      "seconds": 22.25634504761547
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 56,
+      "restart": 0,
+      "infidelity": 0.012932564409500857,
+      "seconds": 22.31857337243855
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 56,
+      "restart": 1,
+      "infidelity": 0.012932564409502412,
+      "seconds": 22.39502685237676
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 56,
+      "restart": 2,
+      "infidelity": 0.012932564409500968,
+      "seconds": 22.485719720833004
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 56,
+      "restart": 3,
+      "infidelity": 0.09919455419198586,
+      "seconds": 22.680538876913488
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 56,
+      "restart": 4,
+      "infidelity": 0.09734185533071116,
+      "seconds": 22.861015405505896
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 56,
+      "restart": 5,
+      "infidelity": 0.08919789357724872,
+      "seconds": 23.03920851368457
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 57,
+      "restart": 0,
+      "infidelity": 0.05922767275027441,
+      "seconds": 23.075673930346966
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 57,
+      "restart": 1,
+      "infidelity": 0.05922767275421126,
+      "seconds": 23.189439855515957
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 57,
+      "restart": 2,
+      "infidelity": 0.059227672776493656,
+      "seconds": 23.285602310672402
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 57,
+      "restart": 3,
+      "infidelity": 0.07117597619908089,
+      "seconds": 23.778837707825005
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 57,
+      "restart": 4,
+      "infidelity": 0.08991471797584427,
+      "seconds": 24.357938619330525
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 57,
+      "restart": 5,
+      "infidelity": 0.12357751209242362,
+      "seconds": 24.54062605276704
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 70,
+      "restart": 0,
+      "infidelity": 0.15532801219759684,
+      "seconds": 24.64272738341242
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 70,
+      "restart": 1,
+      "infidelity": 0.07313801832677425,
+      "seconds": 24.81254896055907
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 70,
+      "restart": 2,
+      "infidelity": 0.03824666953995859,
+      "seconds": 24.940352752804756
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 70,
+      "restart": 3,
+      "infidelity": 0.10692283498622346,
+      "seconds": 25.142610349692404
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 70,
+      "restart": 4,
+      "infidelity": 0.0886069683540398,
+      "seconds": 25.381779240444303
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 70,
+      "restart": 5,
+      "infidelity": 0.0850294067020334,
+      "seconds": 25.687126555480063
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 71,
+      "restart": 0,
+      "infidelity": 0.0840107042136975,
+      "seconds": 25.90570849739015
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 71,
+      "restart": 1,
+      "infidelity": 0.0931618424079117,
+      "seconds": 26.1039345478639
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 71,
+      "restart": 2,
+      "infidelity": 0.07240928486752707,
+      "seconds": 26.232876709662378
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 71,
+      "restart": 3,
+      "infidelity": 0.1175831474541077,
+      "seconds": 26.501748329028487
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 71,
+      "restart": 4,
+      "infidelity": 0.16650302851332732,
+      "seconds": 26.863589268177748
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 71,
+      "restart": 5,
+      "infidelity": 0.1890775759023977,
+      "seconds": 27.17285866010934
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 72,
+      "restart": 0,
+      "infidelity": 0.029268830391029677,
+      "seconds": 27.19696034770459
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 72,
+      "restart": 1,
+      "infidelity": 0.02926883042274453,
+      "seconds": 27.299519242718816
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 72,
+      "restart": 2,
+      "infidelity": 0.0292688305681168,
+      "seconds": 27.41584095451981
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 72,
+      "restart": 3,
+      "infidelity": 0.08276599829455566,
+      "seconds": 27.720239560119808
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 72,
+      "restart": 4,
+      "infidelity": 0.04318222908918812,
+      "seconds": 27.944348148070276
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 72,
+      "restart": 5,
+      "infidelity": 0.11497136339925884,
+      "seconds": 28.089110379107296
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 88,
+      "restart": 0,
+      "infidelity": 0.012932564409499303,
+      "seconds": 28.207713055424392
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 88,
+      "restart": 1,
+      "infidelity": 0.012932564409501746,
+      "seconds": 28.274497013539076
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 88,
+      "restart": 2,
+      "infidelity": 0.012932564409500746,
+      "seconds": 28.37872403115034
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 88,
+      "restart": 3,
+      "infidelity": 0.08161390101539634,
+      "seconds": 28.503267257474363
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 88,
+      "restart": 4,
+      "infidelity": 0.10579577720766697,
+      "seconds": 28.62470678333193
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 88,
+      "restart": 5,
+      "infidelity": 0.0848004992380067,
+      "seconds": 28.866407649591565
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 89,
+      "restart": 0,
+      "infidelity": 0.10842052847102279,
+      "seconds": 29.009004525840282
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 89,
+      "restart": 1,
+      "infidelity": 0.08633595238012293,
+      "seconds": 30.064188825897872
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 89,
+      "restart": 2,
+      "infidelity": 0.11850491184372847,
+      "seconds": 30.340027816593647
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 89,
+      "restart": 3,
+      "infidelity": 0.0776409269623598,
+      "seconds": 30.811437501572073
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 89,
+      "restart": 4,
+      "infidelity": 0.08004635061978138,
+      "seconds": 31.142501481808722
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 89,
+      "restart": 5,
+      "infidelity": 0.059344158467893315,
+      "seconds": 31.35155989229679
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 90,
+      "restart": 0,
+      "infidelity": 0.09901771809813442,
+      "seconds": 31.44705510046333
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 90,
+      "restart": 1,
+      "infidelity": 0.08314888713584023,
+      "seconds": 31.627646220847964
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 90,
+      "restart": 2,
+      "infidelity": 0.12265436099872451,
+      "seconds": 31.886340216733515
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 90,
+      "restart": 3,
+      "infidelity": 0.1068792387967028,
+      "seconds": 32.31513449084014
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 90,
+      "restart": 4,
+      "infidelity": 0.12759005792264178,
+      "seconds": 32.469006799161434
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 90,
+      "restart": 5,
+      "infidelity": 0.1203718302636495,
+      "seconds": 33.517063667066395
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 109,
+      "restart": 0,
+      "infidelity": 0.21013954006356272,
+      "seconds": 33.54591131955385
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 109,
+      "restart": 1,
+      "infidelity": 0.2101395400635656,
+      "seconds": 33.63781504984945
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 109,
+      "restart": 2,
+      "infidelity": 0.21013954006356572,
+      "seconds": 33.72933435998857
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 109,
+      "restart": 3,
+      "infidelity": 0.07288083040337212,
+      "seconds": 33.96005485672504
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 109,
+      "restart": 4,
+      "infidelity": 0.10490831400704492,
+      "seconds": 34.40663713775575
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 109,
+      "restart": 5,
+      "infidelity": 0.10305352142996915,
+      "seconds": 35.111171117052436
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 110,
+      "restart": 0,
+      "infidelity": 0.09304887921715677,
+      "seconds": 35.29743775725365
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 110,
+      "restart": 1,
+      "infidelity": 0.07817703921855146,
+      "seconds": 36.230042713694274
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 110,
+      "restart": 2,
+      "infidelity": 0.05715595374259563,
+      "seconds": 36.406970132142305
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 110,
+      "restart": 3,
+      "infidelity": 0.10866388580715047,
+      "seconds": 37.170005267485976
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 110,
+      "restart": 4,
+      "infidelity": 0.1308063021756698,
+      "seconds": 37.310768608003855
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 110,
+      "restart": 5,
+      "infidelity": 0.09869722402015524,
+      "seconds": 37.9616166325286
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 123,
+      "restart": 0,
+      "infidelity": 0.09040263625285294,
+      "seconds": 38.052442350424826
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 123,
+      "restart": 1,
+      "infidelity": 0.06450095099832798,
+      "seconds": 38.21143493242562
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 123,
+      "restart": 2,
+      "infidelity": 0.10435038289229737,
+      "seconds": 38.367481680586934
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 123,
+      "restart": 3,
+      "infidelity": 0.06291076617527702,
+      "seconds": 38.57005866616964
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 123,
+      "restart": 4,
+      "infidelity": 0.1882330724241298,
+      "seconds": 38.75169287342578
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 123,
+      "restart": 5,
+      "infidelity": 0.06308089735191436,
+      "seconds": 39.806825620122254
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 124,
+      "restart": 0,
+      "infidelity": 0.11927752344543474,
+      "seconds": 40.35651210602373
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 124,
+      "restart": 1,
+      "infidelity": 0.09273774277686964,
+      "seconds": 40.74965697713196
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 124,
+      "restart": 2,
+      "infidelity": 0.09273774277687352,
+      "seconds": 41.1070396983996
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 124,
+      "restart": 3,
+      "infidelity": 0.1383533484922479,
+      "seconds": 41.79076144937426
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 124,
+      "restart": 4,
+      "infidelity": 0.06246376931621378,
+      "seconds": 41.98876290116459
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 124,
+      "restart": 5,
+      "infidelity": 0.12104242122537934,
+      "seconds": 42.120004513300955
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 125,
+      "restart": 0,
+      "infidelity": 0.07147742559088854,
+      "seconds": 42.27952654287219
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 125,
+      "restart": 1,
+      "infidelity": 0.1186107794742095,
+      "seconds": 42.4312103940174
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 125,
+      "restart": 2,
+      "infidelity": 0.12684484692232156,
+      "seconds": 42.69012498576194
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 125,
+      "restart": 3,
+      "infidelity": 0.13669394201817275,
+      "seconds": 43.00415225327015
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 125,
+      "restart": 4,
+      "infidelity": 0.06271217090681669,
+      "seconds": 43.46590255573392
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "removed": 125,
+      "restart": 5,
+      "infidelity": 0.13600560430913466,
+      "seconds": 43.83868139144033
+    }
+  ]
+}
