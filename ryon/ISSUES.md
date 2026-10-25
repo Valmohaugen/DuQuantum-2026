@@ -68,6 +68,9 @@ fast_eval can't reach N >= 13 and has no crosstalk. Compare toby_sol @ HEAD (pru
 `prefer_synth`) against @ a26041d on N = 9..16 with ZZ crosstalk and coherent CZ errors. Pruned circuits
 reuse the same few couplers many times (up to 9 CZs on one pair), so check coherent-error accumulation.
 If they lose under coherent errors, report the case list and set `prefer_synth = False` for those.
+Partial result (ryon, fast_eval + per-coupler coherent CZ error: extra |11> phase and local Z phases, sigma 0.03 rad,
+fixed per coupler, 2 seeds): sum over (7,3) (8,4) (9,3) (9,4) (10,3) (10,4) (10,5) is 3.836 @ a26041d vs 5.264 @ 8993717,
+every case better. Repeated CZs on one coupler don't hurt at this level. Crosstalk and N >= 11 still open.
 
 ### 11. Pruned line halves for the ladder at N >= 17
 Status: in progress (ryon session, claimed 2026-10-25 01:35). Running on the cluster: half isometries
@@ -112,6 +115,9 @@ snake; the ladder start (2xL) stalls. Path runs for N = 7..16 are running.
 Also in f1f5bba: `bias_tree` grows W trees charging readout skew (Zb), (N,1) N = 3..10: 9.039 -> 9.084.
 (10,3) 59 -> 38 CZ patch, 0.676 -> 0.776; (10,5) 85 -> 43 CZ line (first `lines` entry), 0.470 -> 0.677.
 Path (line) versions now win for (7,3) 0.903, (8,3) 0.847, (9,3) 0.803, (10,4) 54 cz 0.634; (11,3) 44-cz patch 0.633 -> 0.763.
+k = 2 selection (3 seeds): pruned circuits (17-18 cz for (7,2)) have higher f but larger Zb (gate-error pattern makes
+the in-subspace distribution uneven; C(N,2) is small, so shots/C is large) and end up equal or worse: best gain +0.003
+((10,2) gp_10_2_a2), not installed. Any k = 2 work should score with fast_eval's Zb, not CZ count.
 Next (me): install N = 10..16 path/patch winners as they converge; brickwork-start pruning for k >= 3.
 k = 2 from an over-parameterised brickwork start on 2-row ladder footprints (toby): negative. Greedy
 single-CZ deletion gets stuck far above toby_sol: (6,2) 42 -> 17 CZ (toby_sol 15), (7,2) 80 -> 61 (19); (8,2) and
@@ -353,3 +359,29 @@ exact W helper is available at `research/bonus_band_20261025/w_broadcast.py`.
 The 45-point milestone is reached; please continue posting better circuits and
 unmet needs. No additional primary gain is claimed from the identical D(8,4)
 comparison against the fresh maintained solver.
+
+
+### Published pickup pointer — 2026-10-25
+
+The immutable **46.17863365311297** bonus checkpoint is published on
+`origin/bonus-native-20261025T053245Z`, commit
+`6e7dbdbc28796918a68756c6c7954c9c23d403b7`.
+Candidate and evidence are `research/bonus_band_20261025/milestones/20261025T053345Z/submission.py`
+and the adjacent `validation.json`: all 56 cases passed; maximum constructor
+0.0027686692774295807 s. Candidate SHA-256:
+`e4dc392bad5ed96a956446d509e402d7980343008ca2fbf10975968a5eabeff4`.
+
+PORT-004 is **in progress (bonus-depth)**: planned paired W comparisons at
+N=8 and N=10, three fake calibrations (seeds 0,1,2), all-X-order and cutoff-four
+scores, against a fresh frozen maintained solver. No new primary gain is yet
+claimed. To resolve a concurrent ticket-ID collision, the newly added,
+unassigned PORT-004 was renumbered to PORT-007;
+its original title/content are preserved and its work is tracked by the
+accepted PORT-004. Completed PORT-001/PORT-002 ownership and evidence remain
+unchanged.
+
+**Worker pickup/request:** please post remaining unmet needs and improved
+explicit native circuits here, including artifact paths, source hashes,
+actual depths/CZ counts and validation evidence. State any current claim so
+other workers can coordinate the next frozen merge. Research continues beyond
+this published milestone.
