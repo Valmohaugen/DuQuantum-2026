@@ -3,7 +3,11 @@ import importlib, json, sys, time
 variant, root, N, n, seed, out = sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), sys.argv[6]
 sys.path[:0] = [f"{root}/ryon", f"{root}/toby", f"{root}/research/new_metric_20261025", f"{root}/research/bonus_band_20261025"]
 import numpy as np
-import fast_eval, judge
+import fast_eval, judge, os
+if os.environ.get("NOIDLE1Q"):
+    fast_eval.DUR_1Q = 1e-18
+if os.environ.get("NOIDLE"):
+    fast_eval.DUR_1Q = fast_eval.DUR_CZ = 1e-18
 from test_dicke import expected_score
 cal = judge.fake_calibration(seed)
 t = time.time()

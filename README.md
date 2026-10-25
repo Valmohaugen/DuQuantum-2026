@@ -555,6 +555,15 @@ fast_eval's, with all X correlator sizes and three fake calibrations (seed 0 onl
 | 2026-10-25 10:30 | 5764eb4 | bonus 51.33 `native_submission.py`, `create_dicke_state_adaptive` | 0.953 | 0.874 | not run | 11.9 |
 | 2026-10-25 10:30 | 9a76864 | bonus 51.84 `toby/bonus_portfolio_squeeze_sol.py`, `create_dicke_state_adaptive` | 0.951 | 0.868 | not run | 11.8 |
 
+Measured depth cost (N = 2..8, 3 seeds; [rows](research/new_metric_20261025/rows_idle_counterfactual.jsonl)):
+main averages 14.1 moments, 6.5 with CZ and 7.5 single-qubit only (463 ns). The 51.33 bonus build averages
+11.9 moments, 6.4 with CZ and 5.5 single-qubit only (405 ns). The extra main moments are all single-qubit layers.
+Switching off idle decoherence in single-qubit-only moments raises main from 1.050 to 1.063 (+1.3 %), and
+switching off all idle decoherence raises it to 1.079 (+2.8 %). With no idle noise at all, the bonus build still
+reaches only 0.988, below main's real 1.050. Depth costs about 3 % in this model; qubit choice and gate errors
+explain the gap. The model has T1 = 68 us, T2 = 89 us, 7.5 kHz detuning and no crosstalk (ISSUES #10 covers
+ZZ and coherent CZ errors).
+
 The bonus build is about 15 % shallower, but its penalty is 5 to 25 % higher than main's in all
 36 cases (N = 2..12). It places circuits without calibration data, and the packed 1q gates
 raise Z bias (zb 0.05 to 0.13 against 0.01 to 0.02). Depth does cost score: zeroing the
