@@ -7,6 +7,16 @@ The organizer confirmed bonus grading for **2 ≤ N ≤ 15** and corrected the o
 validator to use `range(len(qubits))`. Hidden grading cases and correlator sizes remain
 undisclosed. The original challenge notebook stays unchanged and supplies the official scorer.
 
+## Current priority: bonus depth
+
+The current objective is nearly entirely bonus depth. The best verified
+standalone scores **51.33366706608946** over all **56** corrected cases,
+with maximum depth **119 moments**. Start from the
+[bonus checkpoint and iteration handoff](research/bonus_priority_20261025/README.md),
+which includes the standalone submission, editable circuits, fresh validation
+and per-case marginal score gains. Keep the main entry point valid, but prefer
+strict emitted-depth improvements even when they use more CZ gates.
+
 ## Harmonic objective and paired evaluations — 2026-10-25
 
 The reported new primary objective, `1 / mean(1 / score)`, is the **harmonic
