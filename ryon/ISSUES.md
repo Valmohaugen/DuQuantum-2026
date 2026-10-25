@@ -94,6 +94,10 @@ A proof or a counterexample (e.g. fit random 2N - 4 CZ sequences on trees / path
 W cases are about 40 % of the small-N score, so even one CZ matters at N >= 8.
 Evidence (ryon): random CZ sequences on a 2x2 / 2x3 patch with random restarts never fit W(4) with 4 CZ
 (28k tries) or W(5) with 6 CZ (19k tries), while 2N - 3 fits in a few tries. Likely optimal; low priority.
+Exhaustive (toby, research/toby_offline/w_bound.py): every CZ sequence up to qubit relabelling, all-to-all
+connectivity (a superset of any chip), general u3 on every qubit before, between and after, 40 restarts each.
+W(3) with 2 CZ: best infidelity 0.127. W(4) with 4 CZ: all 39 canonical sequences stop at 0.066987 = 1 - (2+sqrt3)/4;
+with 5 CZ they fit exactly. So 2N - 3 is optimal at N = 3, 4 (numerically); no CZ to gain for W on hardware there.
 
 ### 9. Whole-state CZ pruning for every (N, k), N = 7..12 (primary score)
 Status: in progress (ryon session, Slurm sweep running; please don't duplicate, add footprints instead)
