@@ -104,7 +104,12 @@ Also found, not used by any current case: (5,3) 19, (5,5) 35. `synth.py` now has
 **Use >= 100 trajectories for N >= 13 A/B**: the same comparison at 30 trajectories read -0.06.
 Candidate with 10 more halves (CZ and depth both below the line plan): (5,5) 32, (6,4) 46, (6,5) 52,
 (7,4) 58, (7,5) 72, (7,6) 80, (7,7) 83, (8,3) 38, (8,4) 72, (9,3) 43. Exact at N = 12..14; A/B at
-N = 14..16 running (`benchmark_outputs/synth/ab2.py`), installs after it passes.
+N = 14..16 ran (`benchmark_outputs/synth/ab2.py`, 2 seeds, 100 trajectories, no-Zb):
+(14,4) -0.012/-0.010, (14,5) +0.057/-0.069, (14,7) -0.028/-0.028, (15,4) +0.015/+0.017, (15,5) -0.012/-0.051.
+So the k >= 4 halves (about 5 % fewer CZ) don't help and are NOT installed; data stays in
+benchmark_outputs/synth/sol_hwarm_*.json. Installed instead: k = 3 halves (8,3) 38 and (9,3) 41 (bec93b1):
+(16,3) 113 -> 81, (17,3) 122 -> 84, (18,3) 131 -> 87 CZ, all exact. k = 2 halves never beat the line plan.
+Open: (10,3) for (19,3), (20,3); a better k >= 4 start (the line warm start only shaves ~5 %).
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
