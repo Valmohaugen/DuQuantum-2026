@@ -12,7 +12,7 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **16.755** (3 seeds, N = 2..8).
+Baseline at 0dc262c: total 16.615. Current: **17.077** (3 seeds, N = 2..8). Bonus (N <= 15): 37.81.
 
 ## Open
 
@@ -20,7 +20,9 @@ Baseline at 0dc262c: total 16.615. Current: **16.755** (3 seeds, N = 2..8).
 Status: in progress (ryon session)
 `synth.py` fits CZ + Ry circuits exactly and prunes CZs. (4,2) has 5 CZ and (5,2) has 11 CZ
 (the line versions use 5 and 14). (6,2) has 14 and (6,3) has 12 on a 2x3 patch. Next targets
-and the line CZ counts to beat: (7,2) 22, (7,3) 42, (8,2) 26, (8,3) 51, (8,4) 68.
+and the ladder CZ counts to beat (toby's ladder, now merged): (7,2) 19, (7,3) 32, (8,2) 23,
+(8,3) 41, (8,4) 49. The search script also warm-starts from the ladder circuit on its own grid
+footprint (row 0 = left half, row 1 = right half).
 Random starting sequences don't converge exactly at N >= 7. What works there: take the line
 circuit on a Hamiltonian path of the patch, convert it with `synth.from_ops` (the leftover Z
 layer becomes the patch's `zset`), insert cancelling CZ pairs on patch edges, perturb, polish,
@@ -33,6 +35,10 @@ count alone, because depth also costs idle decoherence.
 size 4^N, so N = 12 is about 256 MB) with fewer seeds, so changes aren't tuned to small N only.
 
 ### 3. Better n >= 2 construction for N >= 9
+Partly done: toby's two-half ladder (toby/ladder_sol.py) is merged into toby_sol and chosen per
+case by `estimate_error`. That selector is crude: on (5,2) and (6,2) it sometimes picks the
+option that simulates worse. A better estimate (or a small numpy noise simulation for N <= 8,
+since numpy is a cirq dependency) would fix it.
 The line split-and-cyclic-shift costs about 5 CZ per flagged gate and uses only a path. Options
 to evaluate: a grid-native layout (shorter paths between the SCS blocks), divide-and-conquer
 (Aktar, Bartschi, Badawy, Eidenbenz, IEEE TQE 2022), and the short-depth 2D construction of
@@ -55,5 +61,6 @@ dephasing. Check how much comes from depth and how much from CZ error, and wheth
 DD placement or a shallower schedule recovers it.
 
 ## Done
+- Merged toby/ladder_sol.py (ladder split, doubling tree, two-variant bonus) with the patch table: 16.755 -> 17.077, bonus 26.35 -> 37.81.
 - (6,2) 18 -> 14 CZ and (6,3) 33 -> 12 CZ on a 2x3 patch: E[s] 0.932 -> 0.962 and 0.825 -> 0.934.
 - (5,2) on a 5-qubit patch: 11 CZ, E[s] 0.986 -> 1.005 (0dc262c).

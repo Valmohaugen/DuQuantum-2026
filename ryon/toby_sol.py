@@ -11,6 +11,8 @@ search_time_s = 20.0
 beam_width = 3000
 idle_penalty = 1e-3
 dd_min_idle = 8
+idle_err = 3e-4
+layout_mode = "auto"
 shots = 10_000
 use_bias_penalty = True
 
@@ -113,12 +115,35 @@ def bfs_tree(adj, node, root, n):
     return parent if len(seen) == n else None
 
 
-def best_tree(adj, node, n, deadline, bias=lambda qs: 0.0):
+def doubling_tree(adj, node, root, n):
+    #each round every informed qubit hands the excitation to a fresh neighbour, preferring
+    #neighbours with the most fresh neighbours of their own, so the tree finishes in few rounds
+    parent, informed = {}, [root]
+    seen = {root}
+    while len(seen) < n:
+        added = []
+        for v in informed:
+            if len(seen) >= n:
+                break
+            free = [c for c in adj[v] if c not in seen]
+            if not free:
+                continue
+            c = max(free, key=lambda x: (sum(1 for y in adj[x] if y not in seen), -node[x]))
+            parent[c] = v
+            seen.add(c)
+            added.append(c)
+        if not added:
+            return None
+        informed += added
+    return parent
+
+
+def best_tree(adj, node, n, deadline, bias=lambda qs: 0.0, fast=False):
     best = None
     for root in sorted(node, key=lambda q: node[q]):
         if best is not None and time.monotonic() > deadline:
             break
-        for builder in (prim_tree, bfs_tree):
+        for builder in (prim_tree, bfs_tree) + ((doubling_tree,) if fast else ()):
             parent = builder(adj, node, root, n)
             if parent is None:
                 continue
@@ -175,9 +200,10 @@ def block_structure(k):
     return seq
 
 
-def flagged_step(n_qubits, k, m):
+def flagged_step(n_qubits, k, m, l_min=None):
     #one split-and-cyclic-shift step on positions 0..m-1, skipping excitation counts that can't occur
-    r_min, r_max = max(0, k - (n_qubits - m)), min(k, m)
+    #(the path holds between l_min and k excitations; l_min = k unless it is half of a ladder)
+    r_min, r_max = max(0, (k if l_min is None else l_min) - (n_qubits - m)), min(k, m)
     first = {m - 1 - r: r for r in range(max(1, r_min), min(r_max, m - 1) + 1)}
     if not first:
         return []
@@ -191,13 +217,13 @@ def flagged_step(n_qubits, k, m):
     return gates
 
 
-def line_plan(n_qubits, k):
+def line_plan(n_qubits, k, use_blocks=True, l_min=None):
     #per step, use whichever exact version needs fewer cz; also count cz on each path edge
-    steps, weights = [], [0] * (n_qubits - 1)
+    steps, weights = [], [0] * max(n_qubits - 1, 0)
     for m in range(n_qubits, 1, -1):
-        gates = flagged_step(n_qubits, k, m)
+        gates = flagged_step(n_qubits, k, m, l_min)
         flagged_cost = sum(5 if g[0] == "flagged" else 2 for g in gates)
-        if m > k >= 2 and (m, k) in block_angles and 5 * k - 6 < flagged_cost:
+        if use_blocks and m > k >= 2 and (m, k) in block_angles and 5 * k - 6 < flagged_cost:
             base = m - k - 1
             steps.append(("block", m, base))
             for a, b in block_structure(k):
@@ -213,9 +239,9 @@ def line_plan(n_qubits, k):
     return steps, weights
 
 
-def line_ops(path, k, steps):
+def line_ops(path, k, steps, preload=True):
     n = len(path)
-    ops = [cirq.X(q) for q in path[n - k:]]
+    ops = [cirq.X(q) for q in path[n - k:]] if preload else []
     for step in steps:
         if step[0] == "block":
             _, m, base = step
@@ -253,6 +279,92 @@ def best_path(adj, node, weights, deadline, bias=lambda qs: 0.0):
         width = beam_width if time.monotonic() < deadline else 50
         beam = heapq.nsmallest(width, cand, key=lambda t: t[0])
     return list(min(beam, key=lambda t: t[0] + bias(t[1]))[1])
+
+
+def split_ops(left, right, k):
+    #unary chain on the last k qubits of left holds how many excitations stay left (l),
+    #then each rung copies the complement so right's last k qubits hold k - l
+    a, b = len(left), len(right)
+    p = [math.comb(a, l) * math.comb(b, k - l) / math.comb(a + b, k) for l in range(k + 1)]
+    tail = [sum(p[j:]) for j in range(k + 2)]
+    top, bottom = left[a - k:], right[b - k:]
+    ops = [cirq.ry(2 * math.asin(math.sqrt(min(1.0, tail[1])))).on(top[k - 1])]
+    for j in range(1, k):
+        t = 2 * math.asin(math.sqrt(min(1.0, tail[j + 1] / tail[j]))) if tail[j] > 0 else 0.0
+        ops += [cirq.ry(-t / 2).on(top[k - 1 - j]), cirq.CZ(top[k - j], top[k - 1 - j]), cirq.ry(t / 2).on(top[k - 1 - j])]
+    for i in range(k):
+        ops += [cirq.H(bottom[i]), cirq.CZ(top[k - 1 - i], bottom[i]), cirq.H(bottom[i]), cirq.X(bottom[i])]
+    return ops
+
+
+def grow_tail(adj, node, start, length, weights, offset, avoid, width):
+    #paths growing outward from start; step j lands on position offset - j of its half
+    beam = [(0.0, (start,))]
+    for j in range(1, length + 1):
+        w = weights[offset - j]
+        cand = []
+        for cost, path in beam:
+            for nb, e in adj[path[-1]].items():
+                if nb not in path and nb not in avoid:
+                    cand.append((cost + w * e + node[nb], path + (nb,)))
+        beam = heapq.nsmallest(width, cand, key=lambda t: t[0])
+        if not beam:
+            return []
+    return beam
+
+
+def best_ladder(adj, node, n_q, k, use_blocks, bias, deadline, a=None):
+    #two half paths joined by a straight 2-row ladder of k rungs; returns (left, right, plans) or none
+    a = (n_q + 1) // 2 if a is None else a
+    b = n_q - a
+    lsteps, lw = line_plan(a, k, use_blocks, max(0, k - b))
+    rsteps, rw = line_plan(b, k, use_blocks, max(0, k - a))
+    found = []
+    for q0 in node:
+        for d in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+            for e in ((d[1], d[0]), (-d[1], -d[0])):
+                top = [cirq.GridQubit(q0.row + w * d[0], q0.col + w * d[1]) for w in range(k)]
+                bottom = [cirq.GridQubit(top[k - 1 - i].row + e[0], top[k - 1 - i].col + e[1]) for i in range(k)]
+                if not all(q in node for q in top + bottom):
+                    continue
+                pairs = [(top[w], top[w + 1]) for w in range(k - 1)] + [(bottom[i], bottom[i + 1]) for i in range(k - 1)]
+                pairs += [(top[w], bottom[k - 1 - w]) for w in range(k)]
+                if not all(y in adj[x] for x, y in pairs):
+                    continue
+                cost = sum(node[q] for q in top + bottom)
+                cost += sum(adj[top[w]][top[w + 1]] * (1 + lw[a - k + w]) for w in range(k - 1))
+                cost += sum(adj[bottom[i]][bottom[i + 1]] * rw[b - k + i] for i in range(k - 1))
+                cost += sum(adj[top[w]][bottom[k - 1 - w]] for w in range(k))
+                found.append((cost, top, bottom))
+    best = None
+    for cost, top, bottom in heapq.nsmallest(60, found, key=lambda t: t[0]):
+        if best is not None and time.monotonic() > deadline:
+            break
+        used = set(top + bottom)
+        ltails = grow_tail(adj, node, top[0], a - k, lw, a - k, used, 40)
+        for lcost, lpath in ltails[:8]:
+            rtails = grow_tail(adj, node, bottom[0], b - k, rw, b - k, used | set(lpath), 40)
+            if not rtails:
+                continue
+            rcost, rpath = rtails[0]
+            left = list(reversed(lpath[1:])) + top
+            right = list(reversed(rpath[1:])) + bottom
+            total = cost + lcost + rcost + bias(left + right)
+            if best is None or total < best[0]:
+                best = (total, left, right)
+    if best is None:
+        return None
+    return best[1], best[2], lsteps, rsteps
+
+
+def ladder_ops(left, right, k, lsteps, rsteps):
+    return split_ops(left, right, k) + line_ops(left, k, lsteps, False) + line_ops(right, k, rsteps, False)
+
+
+def estimate_error(circuit, qubits, adj, node, bias):
+    #cz errors actually used + readout/1q cost per qubit + readout bias + idle time on every qubit
+    cz = sum(adj[op.qubits[0]][op.qubits[1]] for op in circuit.all_operations() if len(op.qubits) == 2)
+    return cz + sum(node[q] for q in qubits) + bias(qubits) + idle_err * len(qubits) * len(circuit)
 
 
 def best_patch(adj, node, cells, seq, bias=lambda qs: 0.0):
@@ -356,6 +468,7 @@ def create_dicke_state(
     one_errors: dict[cirq.GridQubit, tuple[float, float]],
     dynamical_decoupling: bool = True,
     pack: bool = False,
+    use_blocks: bool = True,
 ) -> tuple[cirq.Circuit, set[cirq.GridQubit]]:
     n_q, n = int(num_qubits), int(num_excitations)
     if n_q < 1 or not 0 <= n <= n_q:
@@ -375,21 +488,40 @@ def create_dicke_state(
 
     skew = {q: rate(one_errors[q]) - rate(zero_errors[q]) for q in node}
     bias = lambda qs: readout_bias(qs, n_q, n, skew)
+    if k == 1:
+        root, children = best_tree(adj, node, n_q, deadline, bias, fast=pack)
+        qubits = [root] + [c for v in list(children) for c in children[v]]
+        circuit = compile_circuit(w_ops(root, children), qubits if flip else (), dynamical_decoupling and not pack, pack)
+        check_circuit(circuit, cz_pauli_error_rate, sq_pauli_error_rate)
+        return circuit, set(qubits)
+    #build every layout that fits (synthesised patch, single path, two-half ladder) and keep the
+    #one with the lowest estimated error on hardware, or the fewest moments when packing for the bonus
+    cands = []
     patch = patches.get((n_q, k))
     lab = best_patch(adj, node, patch[0], patch[1], bias) if patch else None
-    if k == 1:
-        root, children = best_tree(adj, node, n_q, deadline, bias)
-        qubits = [root] + [c for v in list(children) for c in children[v]]
-        ops = w_ops(root, children)
-    elif lab is not None:
-        qubits = lab
-        ops = patch_ops(lab, *patch[1:])
-    else:
-        steps, weights = line_plan(n_q, k)
-        qubits = best_path(adj, node, weights, deadline, bias)
-        ops = line_ops(qubits, k, steps)
-    qubits = list(dict.fromkeys(qubits))
-    circuit = compile_circuit(ops, qubits if flip else (), dynamical_decoupling and not pack, pack)
+    if lab is not None:
+        cands.append((lab, patch_ops(lab, *patch[1:])))
+    if layout_mode in ("auto", "line"):
+        steps, weights = line_plan(n_q, k, use_blocks)
+        path = best_path(adj, node, weights, deadline, bias)
+        cands.append((path, line_ops(path, k, steps)))
+    if layout_mode in ("auto", "ladder"):
+        #the bonus tries every split point; on hardware the balanced split
+        splits = range(k, n_q - k + 1) if pack else [(n_q + 1) // 2]
+        for a in splits:
+            lad = best_ladder(adj, node, n_q, k, use_blocks, bias, deadline + 15, a)
+            if lad is not None:
+                left, right, lsteps, rsteps = lad
+                cands.append((left + right, ladder_ops(left, right, k, lsteps, rsteps)))
+    if not cands:
+        raise NotImplementedError("no layout found")
+    best = None
+    for qs, ops in cands:
+        c = compile_circuit(ops, qs if flip else (), dynamical_decoupling and not pack, pack)
+        score = len(c) if pack else estimate_error(c, qs, adj, node, bias)
+        if best is None or score < best[0]:
+            best = (score, c, qs)
+    _, circuit, qubits = best
     check_circuit(circuit, cz_pauli_error_rate, sq_pauli_error_rate)
     return circuit, set(qubits)
 
@@ -403,8 +535,14 @@ def create_dicke_state_adaptive(num_qubits: int, num_excitations: int) -> tuple[
     dev = device.metadata
     uniform_q = {q: (1e-3, 0.0) for q in dev.qubit_set}
     uniform_p = {tuple(p): (1e-3, 0.0) for p in dev.qubit_pairs}
-    return create_dicke_state(num_qubits, num_excitations, uniform_p, uniform_q, uniform_q, uniform_q,
-                              dynamical_decoupling=False, pack=True)
+    #blocks save cz but the flagged steps sometimes pack shallower, so keep whichever is shorter
+    best = None
+    for use_blocks in (True, False):
+        circuit, qubits = create_dicke_state(num_qubits, num_excitations, uniform_p, uniform_q, uniform_q, uniform_q,
+                                             dynamical_decoupling=False, pack=True, use_blocks=use_blocks)
+        if best is None or len(circuit) < len(best[0]):
+            best = (circuit, qubits)
+    return best
 
 
 #ry angles fitted offline (research/toby_offline/build_data.py), one list per circuit
