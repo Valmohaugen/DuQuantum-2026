@@ -17,6 +17,7 @@ idle_err = 3e-4
 layout_mode = "auto"
 shots = 10_000
 use_bias_penalty = True
+use_bias_tree = True
 prefer_synth = True  #for k >= 3 a synthesised patch / line that fits wins outright (checked offline in fast_eval)
 
 x_pulse = cirq.PhasedXZGate(x_exponent=1.0, z_exponent=0.0, axis_phase_exponent=0.0)
@@ -140,12 +141,34 @@ def doubling_tree(adj, node, root, n):
     return parent
 
 
+def bias_tree(adj, node, root, n, bias):
+    #greedy growth that also charges the readout-bias increase of each added qubit
+    parent, seen = {}, [root]
+    while len(seen) < n:
+        best = None
+        for v in seen:
+            for c, e in adj[v].items():
+                if c in parent or c == root:
+                    continue
+                cost = node[c] + 2 * e + bias(seen + [c])
+                if best is None or cost < best[0]:
+                    best = (cost, c, v)
+        if best is None:
+            return None
+        parent[best[1]] = best[2]
+        seen.append(best[1])
+    return parent
+
+
 def best_tree(adj, node, n, deadline, bias=lambda qs: 0.0, fast=False):
     best = None
     for root in sorted(node, key=lambda q: node[q]):
         if best is not None and time.monotonic() > deadline:
             break
-        for builder in (prim_tree, bfs_tree) + ((doubling_tree,) if fast else ()):
+        builders = (prim_tree, bfs_tree) + ((doubling_tree,) if fast else ())
+        if use_bias_tree and not fast:
+            builders += (lambda a, nd, r, m: bias_tree(a, nd, r, m, bias),)
+        for builder in builders:
             parent = builder(adj, node, root, n)
             if parent is None:
                 continue

@@ -209,3 +209,20 @@ runs embed the selected preparation settings; local noise/shot settings do not a
 exported constructor. Review the original challenge and the current upload form for all
 required supporting material and upload by hand. The workflow performs local CPU simulation;
 it does not submit hardware jobs, commit, push, or publish automatically.
+
+## Best results so far (primary score)
+
+Local metric: `cd ryon && python fast_eval.py --seeds 0 1 2` (expected notebook score, N = 2..8,
+n <= N/2, three fake calibrations, density-matrix noise model with all X correlator sizes).
+Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/ISSUES.md`.
+
+| date (EDT) | commit | change | total N = 2..8 |
+|---|---|---|---|
+| 2026-10-24 | 0dc262c | baseline toby_sol | 16.615 |
+| 2026-10-25 00:45 | a26041d | ladder + synthesised halves + start blocks | 17.199 |
+| 2026-10-25 01:40 | ef0ec5d | whole-state pruned patches (7,3) (8,3) (8,4) (9,3) (9,4) | 17.435 |
+| 2026-10-25 02:00 | (next) | readout-bias-aware W trees | 17.458 |
+
+Per case, whole-state pruned circuits vs the previous toby_sol (CZ, expected score):
+(8,4) 43 -> 22 CZ, 0.675 -> 0.845; (9,4) 63 -> 36 CZ, 0.607 -> 0.734; (10,5) 85 -> 43 CZ,
+0.470 -> 0.665; (10,3) 59 -> 39 CZ, 0.676 -> 0.775; (9,3) 44 -> 33 CZ, 0.724 -> 0.779.
