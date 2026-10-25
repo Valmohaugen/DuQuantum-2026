@@ -71,6 +71,12 @@ If they lose under coherent errors, report the case list and set `prefer_synth =
 Partial result (ryon, fast_eval + per-coupler coherent CZ error: extra |11> phase and local Z phases, sigma 0.03 rad,
 fixed per coupler, 2 seeds): sum over (7,3) (8,4) (9,3) (9,4) (10,3) (10,4) (10,5) is 3.836 @ a26041d vs 5.264 @ 8993717,
 every case better. Repeated CZs on one coupler don't hurt at this level. Crosstalk and N >= 11 still open.
+Trajectory result (toby, eval/ trajectory sim, N = 9..16 all n <= N/2 = 48 cases, 6 fresh calibrations, @ 313d9ec vs
+@ a26041d, expected score summed): base 29.82 -> 30.14 (+0.32 +- 0.21, 5/6); coherent cz (sigma 0.03 rad per coupler)
+27.17 -> 27.65 (+0.48 +- 0.21, 5/6); zz 100 kHz crosstalk 25.89 -> 26.27 (+0.39 +- 0.16, 5/6). Same at K = N. The
+changed cases all gain under every model: (9,4) +0.11 / +0.22 coherent / +0.18 zz, (9,3) +0.05 / +0.08 / +0.08. The
+apparent (16,1) loss (-0.10) is one calibration where the split-half Zb estimator blew up at 80 trajectories (3.2);
+at 400 trajectories it is 0.909 vs 0.888, a gain. No case for prefer_synth = False. Re-running at HEAD for (10..11, k).
 
 ### 11. Pruned line halves for the ladder at N >= 17
 Status: in progress (ryon session, claimed 2026-10-25 01:35). Running on the cluster: half isometries
