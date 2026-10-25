@@ -1,0 +1,414 @@
+{
+  "status": "Rx/ZZ-only family obstructed; enlarged algebra screened without fitting",
+  "exact_boolean_checks": [
+    {
+      "n": 3,
+      "basis_inputs": 8,
+      "unary_columns": 4,
+      "all_identities_exact": true
+    },
+    {
+      "n": 5,
+      "basis_inputs": 32,
+      "unary_columns": 6,
+      "all_identities_exact": true
+    },
+    {
+      "n": 7,
+      "basis_inputs": 128,
+      "unary_columns": 8,
+      "all_identities_exact": true
+    }
+  ],
+  "pauli_closures": [
+    {
+      "n": 3,
+      "graph": "path",
+      "cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "smaller_color": [
+        1
+      ],
+      "antiunitary_input_overlap_squared": 0,
+      "antiunitary_output_overlap_squared": "1/3",
+      "exact_obstruction": true,
+      "rx_zz": {
+        "dimension": 15,
+        "full_parity_traceless_target": 30,
+        "reaches_target": false,
+        "pauli_set_sha256": "e976b0a4d621360886951b9ffbd1cd0c04a7b7bb73c87a4b00fc302c564a8aee"
+      },
+      "rx_zz_plus_first_edge_xx": {
+        "dimension": 30,
+        "full_parity_traceless_target": 30,
+        "reaches_target": true,
+        "pauli_set_sha256": "0e7a936fe1dfc4096a3299e09579f6a650443ce4d16dafd37cd8dac1635f662d"
+      }
+    },
+    {
+      "n": 5,
+      "graph": "path",
+      "cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "smaller_color": [
+        1,
+        3
+      ],
+      "antiunitary_input_overlap_squared": 0,
+      "antiunitary_output_overlap_squared": "1/10",
+      "exact_obstruction": true,
+      "rx_zz": {
+        "dimension": 45,
+        "full_parity_traceless_target": 510,
+        "reaches_target": false,
+        "pauli_set_sha256": "159858b5c0e55bcb3b8bca390ca31637687b6857b92647f330313909dd7c17ab"
+      },
+      "rx_zz_plus_first_edge_xx": {
+        "dimension": 510,
+        "full_parity_traceless_target": 510,
+        "reaches_target": true,
+        "pauli_set_sha256": "3195472a444e752ba04b49ce43c8d33442081bbbd75e516544dac79c0ded15fb"
+      }
+    },
+    {
+      "n": 5,
+      "graph": "branched",
+      "cells": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "smaller_color": [
+        1,
+        4
+      ],
+      "antiunitary_input_overlap_squared": 0,
+      "antiunitary_output_overlap_squared": "1/10",
+      "exact_obstruction": true,
+      "rx_zz": {
+        "dimension": 255,
+        "full_parity_traceless_target": 510,
+        "reaches_target": false,
+        "pauli_set_sha256": "6991143e0c7bae87db433c51733cf9fa625ef6116154ed315e4d2ef717d24cbb"
+      },
+      "rx_zz_plus_first_edge_xx": {
+        "dimension": 510,
+        "full_parity_traceless_target": 510,
+        "reaches_target": true,
+        "pauli_set_sha256": "3195472a444e752ba04b49ce43c8d33442081bbbd75e516544dac79c0ded15fb"
+      }
+    },
+    {
+      "n": 7,
+      "graph": "path",
+      "cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "smaller_color": [
+        1,
+        3,
+        5
+      ],
+      "antiunitary_input_overlap_squared": 0,
+      "antiunitary_output_overlap_squared": "1/35",
+      "exact_obstruction": true,
+      "rx_zz": {
+        "dimension": 91,
+        "full_parity_traceless_target": 8190,
+        "reaches_target": false,
+        "pauli_set_sha256": "124564859a37cf0e07fe95cad7c5284d77ac297297f629e00e24e995a765fd5f"
+      },
+      "rx_zz_plus_first_edge_xx": {
+        "dimension": 8190,
+        "full_parity_traceless_target": 8190,
+        "reaches_target": true,
+        "pauli_set_sha256": "60b80889885e170e160eb848d6bf64edd8efb8839ebbf82934cf1d621b9f60ba"
+      }
+    },
+    {
+      "n": 7,
+      "graph": "branched",
+      "cells": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "smaller_color": [
+        1,
+        3,
+        5
+      ],
+      "antiunitary_input_overlap_squared": 0,
+      "antiunitary_output_overlap_squared": "1/35",
+      "exact_obstruction": true,
+      "rx_zz": {
+        "dimension": 4095,
+        "full_parity_traceless_target": 8190,
+        "reaches_target": false,
+        "pauli_set_sha256": "e66c69ccb736a18c33930c0cd8367f78e3f296b73c70330920f9b67429d31248"
+      },
+      "rx_zz_plus_first_edge_xx": {
+        "dimension": 8190,
+        "full_parity_traceless_target": 8190,
+        "reaches_target": true,
+        "pauli_set_sha256": "60b80889885e170e160eb848d6bf64edd8efb8839ebbf82934cf1d621b9f60ba"
+      }
+    }
+  ],
+  "controlled_reversal_costs": [
+    {
+      "n": 3,
+      "controlled_swaps": 1,
+      "unrouted_CZ": 8,
+      "unrouted_serial_native_moment_upper_bound": 33,
+      "path_swap_restore_CZ_upper_bound": 32,
+      "path_serial_native_moment_upper_bound": 105
+    },
+    {
+      "n": 5,
+      "controlled_swaps": 2,
+      "unrouted_CZ": 16,
+      "unrouted_serial_native_moment_upper_bound": 66,
+      "path_swap_restore_CZ_upper_bound": 136,
+      "path_serial_native_moment_upper_bound": 426
+    },
+    {
+      "n": 7,
+      "controlled_swaps": 3,
+      "unrouted_CZ": 24,
+      "unrouted_serial_native_moment_upper_bound": 99,
+      "path_swap_restore_CZ_upper_bound": 312,
+      "path_serial_native_moment_upper_bound": 963
+    }
+  ],
+  "proof": "For T=(Y_A Z_B)K, T H T^-1=-H for real Xi and bipartite edgeZZ. Antiunitarity also flips i, hence T commutes with every generated evolution U. But |<ua|T u0>| is 0 or1, whereas |<Da|T D0>|=1/sqrt(C(n,a)); a is smaller color size. Required two columns contradict overlap preservation, even with independent phases. V leaves these low columns unchanged.",
+  "scope": "Odd n; connected bipartite graph; no extra ancillas; exact low columns including r=0,a. No no-go claim for general native decoders.",
+  "enlarged_algebra_scope": "Closure under adjoints of original Pauli generators spans the generated Lie algebra by Jacobi. Dimensions reaching 2^(2n-1)-2 certify continuous-control algebra su(2^(n-1)) plus su(2^(n-1)), excluding central globalX and identity. They provide no finite CZ-depth or fixed-layer ansatz guarantee.",
+  "generic_rotation_primitives": {
+    "ZZ": "H(target), CZ, Rx(target,theta), CZ, H(target)",
+    "XX": "H(control), CZ, Rx(target,theta), CZ, H(control)",
+    "CZ_per_rotation": 2,
+    "single_qubit_gates_per_rotation": 3,
+    "serial_native_moments": 5,
+    "scope": "Exact conjugation constructions for exp(-i theta PP/2), adjacent pair; special angles can simplify. Counts are explicit upper bounds, not lower bounds."
+  },
+  "cost_caveat": "Controlled-reversal counts are explicit decomposition upper bounds, not lower bounds. SWAP/restore routes each CNOT separately. Arbitrary ZZ/XX rotations generally require2CZ; special Clifford angles may be cheaper. Routing, cancellation and finite depth remain unoptimized.",
+  "odd_scope": "Even n has a self-complementary middle-count complication; paired-column construction is not asserted there.",
+  "literature": [
+    {
+      "title": "Dicke-state preparation through global transverse control of Ising-coupled qubits",
+      "url": "https://arxiv.org/abs/2302.12483",
+      "finding": "Global control with all-to-all Ising interactions prepares specified symmetric states from a symmetric initial state; this is not a coherent unary decoder."
+    },
+    {
+      "title": "Global variational quantum circuits for arbitrary symmetric state preparation",
+      "url": "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.7.L022072",
+      "finding": "Uses global one-axis twisting and global rotations. Reported pulse steps and approximate fidelities are not native Willow CZ depths or simultaneous-column guarantees."
+    },
+    {
+      "title": "The computational power of matchgates and the XY interaction on arbitrary graphs",
+      "url": "https://arxiv.org/abs/1308.1463",
+      "finding": "General matchgates are classically simulable on paths/cycles and computationally universal on other connected graphs. This does not imply finite-size reachability for a fixed gate subset or this isometry."
+    }
+  ],
+  "permutation_obstruction": "If U commutes with every qubit permutation and U|x>=|D_r>, then U P|x>=P|D_r>=|D_r>=U|x>, so P|x>=|x>. Thus such U cannot turn a nonsymmetric unary basis state into a symmetric Dicke state."
+}

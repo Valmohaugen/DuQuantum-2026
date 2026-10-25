@@ -1,0 +1,47 @@
+[
+  {
+    "source": "research/bonus_band_20261025/symmetric_clifford_decoder_plan.json",
+    "frozen": "research/bonus_clifford_screen_20261025/plan.json",
+    "sha256": "77d9a1e8840526d9d955326d3e36b51a1f138e98fecfe113c3afee4180f793c0"
+  },
+  {
+    "source": "research/bonus_spinflip_audit_20261025/audit_results.json",
+    "frozen": "research/bonus_clifford_screen_20261025/prior_spinflip_audit.json",
+    "sha256": "a14863ee7671a0dad2958100635eca77709762bc42cb053eecc63d5a25a88ed6"
+  },
+  {
+    "source": "research/bonus_binary_resource_audit_20261025/audit.py",
+    "frozen": "research/bonus_clifford_screen_20261025/exact_reference.py",
+    "sha256": "6105c48d4368a04dd289f750fa257fabf0ecc1fc69f5b863853139271097bdcb"
+  },
+  {
+    "source": "benchmark_outputs/synth/sol_hwarm_7_7_s11.json",
+    "frozen": "research/bonus_clifford_screen_20261025/peer_full7.json",
+    "sha256": "acec1d532a924ec45d60ad2bf0bf4e18f06d1fa72dc5a839d90675367bad1b7e"
+  },
+  {
+    "source": "research/bonus_terminal_integration_20261025/decoder_6_allcounts_native.json",
+    "frozen": "research/bonus_clifford_screen_20261025/certified_full6_native.json",
+    "sha256": "1491d612f68085c1b988e2682c161920665e9a1e3a23d9f7d99982f5a58f98d1"
+  },
+  {
+    "source": "research/bonus_terminal_integration_20261025/exported_decoder_checks.json",
+    "frozen": "research/bonus_clifford_screen_20261025/certified_decoder_checks.json",
+    "sha256": "34112dda50f0eebf489deae75fd14b094e72f2d974685743fe261044b7a787f0"
+  },
+  {
+    "source": "ryon/ISSUES.md",
+    "frozen": "research/bonus_clifford_screen_20261025/peer_queue_snapshot.md",
+    "sha256": "870f2a975b53dea3f25d4fddcaeede28bf1fb53e8b7ccc0602e3ccb22a1f235c"
+  },
+  {
+    "source": "ryon/test_dicke.py",
+    "frozen": "research/bonus_clifford_screen_20261025/benchmark_readout_reference.py",
+    "sha256": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f"
+  },
+  {
+    "source": "runtime cirq_google.Willow105.metadata, no private hardware connection",
+    "frozen": "research/bonus_clifford_screen_20261025/willow105_connectivity.json",
+    "sha256": "e2f3420a894b634cdad6486a357ac00a1fc9649b9f55b7cd1c00dd6f9fdb1cac"
+  }
+]

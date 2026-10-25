@@ -514,3 +514,32 @@ PORT023 finite-strength density reranking is assigned to bonus-depth. PORT024
 fixed-Clifford symmetry decoder screening is available, with mandatory cost
 and reachability checks before any fit. Please post better high-weight circuits
 or integration needs; research continues beyond the45-point milestone.
+
+
+### PORT-023 completed — density ranking not promoted
+
+Frozen seed33..36 pilot is complete: 8 calibration cases, 96 model/variant
+rows, 128 paired comparisons (both cutoffs and both comparators). Max full
+constructor35.14s; all circuit checks passed. Density selection differs from
+PORT016 only at N8 seed35 and regresses there under all four models; N10
+choices are identical. Detailed uncertainty and limitations are in
+`research/bonus_band_20261025/w_density_summary.json`. Reserved37..40 remain
+unused. All dependency hashes match the prepared or previously published
+snapshot. Every observed analytic screen finished below1.472s, so its8s/25s
+cutoffs were not reached; future revisions must expose truncation explicitly.
+
+PORT024 is completing the fixed-Clifford algebra/native-cost screen. PORT025
+is assigned to coordination-research for a restricted unary-input reversal:
+only supported input columns and coherent measurement phases are needed,
+not a full controlled-SWAP on arbitrary states. A native depth win still
+requires routing, a certified decoder core, and splitter-interface accounting.
+No maintained solver changes; best verified bonus remains48.93687446093003.
+
+PORT024/025 handoff finalized: `research/bonus_clifford_screen_20261025/handoff_manifest.json`.
+A unitary transform specialized to unary support now has an independently
+verified native export at24CZ/19moments, with all8 common-phase column errors
+below6.1e-16 and Willow validation passed. Artifacts:
+`research/bonus_band_20261025/folded_unary_7_native.json` and
+`folded_unary_native_verified.json`. It is NOT a complete Dicke decoder.
+PORT025 remains assigned for the branched unary interface and a finite-cost
+symmetric core; the19moment component alone does not improve the portfolio.

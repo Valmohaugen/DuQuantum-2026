@@ -1,0 +1,144 @@
+{
+  "algebra": [
+    [
+      3,
+      "path",
+      30,
+      23
+    ],
+    [
+      5,
+      "path",
+      510,
+      69
+    ],
+    [
+      5,
+      "branched",
+      510,
+      383
+    ],
+    [
+      7,
+      "path",
+      8190,
+      131
+    ],
+    [
+      7,
+      "branched",
+      8190,
+      6143
+    ]
+  ],
+  "costs": [
+    {
+      "n": 3,
+      "Fredkin": 1,
+      "logical_CX": 8,
+      "fully_connected_native_CZ": 8,
+      "fully_connected_native_moments": 15,
+      "fixed_path_swaps": 4,
+      "fixed_path_native_CZ": 20,
+      "fixed_path_native_moments": 41,
+      "fixed_path_single_qubit_gates": 33,
+      "physical_path_cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "physical_edges_checked": true,
+      "serialization": "Abstract exact local matrices are stored as H/T/Tdag words and counted as one allowed1q gate. No Cirq PhasedXZ conversion, native circuit export or device gate validation was performed; physical cells/edges were checked against frozen Willow105 metadata.",
+      "scope": "One explicit nonoptimized routing and exact local-fusion schedule; constructive upper bounds only, not lower bounds or optimal depth. Unary ordering remains0..n-1 along the physical path."
+    },
+    {
+      "n": 5,
+      "Fredkin": 2,
+      "logical_CX": 16,
+      "fully_connected_native_CZ": 16,
+      "fully_connected_native_moments": 23,
+      "fixed_path_swaps": 14,
+      "fixed_path_native_CZ": 58,
+      "fixed_path_native_moments": 99,
+      "fixed_path_single_qubit_gates": 103,
+      "physical_path_cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "physical_edges_checked": true,
+      "serialization": "Abstract exact local matrices are stored as H/T/Tdag words and counted as one allowed1q gate. No Cirq PhasedXZ conversion, native circuit export or device gate validation was performed; physical cells/edges were checked against frozen Willow105 metadata.",
+      "scope": "One explicit nonoptimized routing and exact local-fusion schedule; constructive upper bounds only, not lower bounds or optimal depth. Unary ordering remains0..n-1 along the physical path."
+    },
+    {
+      "n": 7,
+      "Fredkin": 3,
+      "logical_CX": 24,
+      "fully_connected_native_CZ": 24,
+      "fully_connected_native_moments": 31,
+      "fixed_path_swaps": 28,
+      "fixed_path_native_CZ": 108,
+      "fixed_path_native_moments": 155,
+      "fixed_path_single_qubit_gates": 197,
+      "physical_path_cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "physical_edges_checked": true,
+      "serialization": "Abstract exact local matrices are stored as H/T/Tdag words and counted as one allowed1q gate. No Cirq PhasedXZ conversion, native circuit export or device gate validation was performed; physical cells/edges were checked against frozen Willow105 metadata.",
+      "scope": "One explicit nonoptimized routing and exact local-fusion schedule; constructive upper bounds only, not lower bounds or optimal depth. Unary ordering remains0..n-1 along the physical path."
+    }
+  ]
+}

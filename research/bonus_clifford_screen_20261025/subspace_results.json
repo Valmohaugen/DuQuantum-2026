@@ -1,0 +1,857 @@
+{
+  "status": "Supported-subspace unitary and adaptive branches verified; no full decoder or bonus gain claimed",
+  "margolus_exact_mapping_checked": [
+    {
+      "input": 0,
+      "output": 0,
+      "amplitude": 1,
+      "error": 5.551115123125783e-17
+    },
+    {
+      "input": 1,
+      "output": 1,
+      "amplitude": 1,
+      "error": 5.551115123125783e-17
+    },
+    {
+      "input": 2,
+      "output": 2,
+      "amplitude": 1,
+      "error": 0.0
+    },
+    {
+      "input": 3,
+      "output": 3,
+      "amplitude": 1,
+      "error": 0.0
+    },
+    {
+      "input": 4,
+      "output": 4,
+      "amplitude": 1,
+      "error": 1.1102230246251565e-16
+    },
+    {
+      "input": 5,
+      "output": 5,
+      "amplitude": -1,
+      "error": 1.1102230246251565e-16
+    },
+    {
+      "input": 6,
+      "output": 7,
+      "amplitude": 1,
+      "error": 0.0
+    },
+    {
+      "input": 7,
+      "output": 6,
+      "amplitude": 1,
+      "error": 0.0
+    }
+  ],
+  "rows": [
+    {
+      "n": 3,
+      "unary_columns": 4,
+      "unitary_logical_CX": 5,
+      "unitary_max_common_phase_error": 1.1102230246251565e-16,
+      "measurement_branches_per_column": 2,
+      "measurement_max_branch_amplitude_error": 1.1102230246251565e-16,
+      "measurement_max_branch_probability_error": 1.1102230246251565e-16,
+      "CNOT_only_required_linear_rank": 2,
+      "invertibility_required_rank": 3
+    },
+    {
+      "n": 5,
+      "unary_columns": 6,
+      "unitary_logical_CX": 10,
+      "unitary_max_common_phase_error": 1.5700924586837752e-16,
+      "measurement_branches_per_column": 4,
+      "measurement_max_branch_amplitude_error": 1.1102230246251565e-16,
+      "measurement_max_branch_probability_error": 1.1102230246251565e-16,
+      "CNOT_only_required_linear_rank": 3,
+      "invertibility_required_rank": 5
+    },
+    {
+      "n": 7,
+      "unary_columns": 8,
+      "unitary_logical_CX": 15,
+      "unitary_max_common_phase_error": 1.9229626863835638e-16,
+      "measurement_branches_per_column": 8,
+      "measurement_max_branch_amplitude_error": 1.1102230246251565e-16,
+      "measurement_max_branch_probability_error": 5.551115123125783e-17,
+      "CNOT_only_required_linear_rank": 4,
+      "invertibility_required_rank": 7
+    }
+  ],
+  "unitary_identity": "CX(a,b); Margolus(controls b,c;target a); CX(a,b) agrees with controlled swap on000,001,011,111 in(a,c,b) order, with common+1phase. The transformed(control b,c,target a) support excludes the sole negative-phase pattern101.",
+  "measurement_identity": "After b<-b XOR c XOR a, support has a=c*b. Measuring H(a) yields(-1)^(m c b)/sqrt2; conditionalCZ cancels that phase. Reset a and CX(c,a) give the required image. Every branch has the same positive amplitude2^(-m_pairs/2).",
+  "measurement_resources_per_pair": {
+    "CNOT": 3,
+    "conditional_CZ": 1,
+    "H": 1,
+    "measurement": 1,
+    "conditional_reset_X": 1,
+    "warning": "Unrouted branch counts only; classical latency, reset, physical routing and actual native moments unmeasured."
+  },
+  "CNOT_obstruction": "Since f(u0)=0, an affine CNOT/X map has zero offset. Required images of basis differences u_r XOR u_(r-1) span onlym+1<n dimensions, so no invertible affine map realizes the requested unary images.",
+  "three_arm_unitary": {
+    "logical_qubit_cells": [
+      [
+        1,
+        7
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        2,
+        7
+      ]
+    ],
+    "center": 3,
+    "mirror_pairs": [
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "CZ": 24,
+    "unfused_abstract_native_moments": 25,
+    "gate_sequence_common_phase_error": 2.5056998261368797e-16,
+    "native_decomposition_common_phase_error": 4.457708759800732e-15,
+    "physical_edges_checked_against": "willow105_connectivity.json",
+    "external_ancillas": 0,
+    "measurements": 0,
+    "construction": "X-conjugated Margolus moves its exceptional phase to100, absent from supported inputs. Each remoteCX(c,a) uses CX(b,a),CX(c,b),CX(b,a),CX(c,b), restoring dirty b. Across arms these remote gates share c only as control.",
+    "interface": "Logical unary order a0,a1,a2,c,b2,b1,b0 is NOT a nearest-neighbor path on this footprint. Upstream splitter or an explicit interface permutation/routing must supply it. That cost is not included.",
+    "readout_groups_all_used_qubits": {
+      "8": [
+        0
+      ],
+      "12": [
+        1,
+        2
+      ],
+      "10": [
+        3
+      ],
+      "11": [
+        4,
+        5
+      ],
+      "9": [
+        6
+      ]
+    },
+    "readout_note": "This unitary construction has no intermediate measurement. For an adaptive variant on the same7qubits, measuring a0,a1,a2 together touches all used qubits on diagonals8 and12. Sequentially measuring onlya1 or a2 would violate diagonal12 completeness. The dirty-intermediate remoteCX uses only these same7qubits, so no additional routing-qubit diagonals are hidden.",
+    "serialization": "Schedule stores abstract H/Ry/X/CZ operations. H/Ry/X admit exact native PhasedXZ representatives, but this file has not performed Cirq PhasedXZ conversion or device gate validation. Cell/edge membership and explicit H-CZ-H state action were independently checked.",
+    "schedule": [
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          6
+        ]
+      },
+      {
+        "moment": 1,
+        "operation": [
+          "CZ",
+          0,
+          6
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          6
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          5
+        ]
+      },
+      {
+        "moment": 1,
+        "operation": [
+          "CZ",
+          1,
+          5
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          5
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          4
+        ]
+      },
+      {
+        "moment": 1,
+        "operation": [
+          "CZ",
+          2,
+          4
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          4
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "X",
+          0
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "X",
+          1
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "X",
+          2
+        ]
+      },
+      {
+        "moment": 3,
+        "operation": [
+          "RY",
+          0,
+          0.7853981633974483
+        ]
+      },
+      {
+        "moment": 3,
+        "operation": [
+          "RY",
+          1,
+          0.7853981633974483
+        ]
+      },
+      {
+        "moment": 3,
+        "operation": [
+          "RY",
+          2,
+          0.7853981633974483
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          0
+        ]
+      },
+      {
+        "moment": 5,
+        "operation": [
+          "CZ",
+          6,
+          0
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          0
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          1
+        ]
+      },
+      {
+        "moment": 5,
+        "operation": [
+          "CZ",
+          5,
+          1
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          1
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          2
+        ]
+      },
+      {
+        "moment": 5,
+        "operation": [
+          "CZ",
+          4,
+          2
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          2
+        ]
+      },
+      {
+        "moment": 7,
+        "operation": [
+          "RY",
+          0,
+          0.7853981633974483
+        ]
+      },
+      {
+        "moment": 7,
+        "operation": [
+          "RY",
+          1,
+          0.7853981633974483
+        ]
+      },
+      {
+        "moment": 7,
+        "operation": [
+          "RY",
+          2,
+          0.7853981633974483
+        ]
+      },
+      {
+        "moment": 8,
+        "operation": [
+          "H",
+          0
+        ]
+      },
+      {
+        "moment": 9,
+        "operation": [
+          "CZ",
+          6,
+          0
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          0
+        ]
+      },
+      {
+        "moment": 8,
+        "operation": [
+          "H",
+          1
+        ]
+      },
+      {
+        "moment": 9,
+        "operation": [
+          "CZ",
+          5,
+          1
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          1
+        ]
+      },
+      {
+        "moment": 8,
+        "operation": [
+          "H",
+          2
+        ]
+      },
+      {
+        "moment": 9,
+        "operation": [
+          "CZ",
+          4,
+          2
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          2
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          6
+        ]
+      },
+      {
+        "moment": 11,
+        "operation": [
+          "CZ",
+          3,
+          6
+        ]
+      },
+      {
+        "moment": 12,
+        "operation": [
+          "H",
+          6
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          5
+        ]
+      },
+      {
+        "moment": 12,
+        "operation": [
+          "CZ",
+          3,
+          5
+        ]
+      },
+      {
+        "moment": 13,
+        "operation": [
+          "H",
+          5
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          4
+        ]
+      },
+      {
+        "moment": 13,
+        "operation": [
+          "CZ",
+          3,
+          4
+        ]
+      },
+      {
+        "moment": 14,
+        "operation": [
+          "H",
+          4
+        ]
+      },
+      {
+        "moment": 11,
+        "operation": [
+          "H",
+          0
+        ]
+      },
+      {
+        "moment": 13,
+        "operation": [
+          "CZ",
+          6,
+          0
+        ]
+      },
+      {
+        "moment": 14,
+        "operation": [
+          "H",
+          0
+        ]
+      },
+      {
+        "moment": 11,
+        "operation": [
+          "H",
+          1
+        ]
+      },
+      {
+        "moment": 14,
+        "operation": [
+          "CZ",
+          5,
+          1
+        ]
+      },
+      {
+        "moment": 15,
+        "operation": [
+          "H",
+          1
+        ]
+      },
+      {
+        "moment": 11,
+        "operation": [
+          "H",
+          2
+        ]
+      },
+      {
+        "moment": 15,
+        "operation": [
+          "CZ",
+          4,
+          2
+        ]
+      },
+      {
+        "moment": 16,
+        "operation": [
+          "H",
+          2
+        ]
+      },
+      {
+        "moment": 14,
+        "operation": [
+          "H",
+          6
+        ]
+      },
+      {
+        "moment": 15,
+        "operation": [
+          "CZ",
+          3,
+          6
+        ]
+      },
+      {
+        "moment": 16,
+        "operation": [
+          "H",
+          6
+        ]
+      },
+      {
+        "moment": 15,
+        "operation": [
+          "H",
+          5
+        ]
+      },
+      {
+        "moment": 16,
+        "operation": [
+          "CZ",
+          3,
+          5
+        ]
+      },
+      {
+        "moment": 17,
+        "operation": [
+          "H",
+          5
+        ]
+      },
+      {
+        "moment": 16,
+        "operation": [
+          "H",
+          4
+        ]
+      },
+      {
+        "moment": 17,
+        "operation": [
+          "CZ",
+          3,
+          4
+        ]
+      },
+      {
+        "moment": 18,
+        "operation": [
+          "H",
+          4
+        ]
+      },
+      {
+        "moment": 15,
+        "operation": [
+          "RY",
+          0,
+          -0.7853981633974483
+        ]
+      },
+      {
+        "moment": 16,
+        "operation": [
+          "RY",
+          1,
+          -0.7853981633974483
+        ]
+      },
+      {
+        "moment": 17,
+        "operation": [
+          "RY",
+          2,
+          -0.7853981633974483
+        ]
+      },
+      {
+        "moment": 16,
+        "operation": [
+          "H",
+          0
+        ]
+      },
+      {
+        "moment": 17,
+        "operation": [
+          "CZ",
+          6,
+          0
+        ]
+      },
+      {
+        "moment": 18,
+        "operation": [
+          "H",
+          0
+        ]
+      },
+      {
+        "moment": 17,
+        "operation": [
+          "H",
+          1
+        ]
+      },
+      {
+        "moment": 18,
+        "operation": [
+          "CZ",
+          5,
+          1
+        ]
+      },
+      {
+        "moment": 19,
+        "operation": [
+          "H",
+          1
+        ]
+      },
+      {
+        "moment": 18,
+        "operation": [
+          "H",
+          2
+        ]
+      },
+      {
+        "moment": 19,
+        "operation": [
+          "CZ",
+          4,
+          2
+        ]
+      },
+      {
+        "moment": 20,
+        "operation": [
+          "H",
+          2
+        ]
+      },
+      {
+        "moment": 19,
+        "operation": [
+          "RY",
+          0,
+          -0.7853981633974483
+        ]
+      },
+      {
+        "moment": 20,
+        "operation": [
+          "RY",
+          1,
+          -0.7853981633974483
+        ]
+      },
+      {
+        "moment": 21,
+        "operation": [
+          "RY",
+          2,
+          -0.7853981633974483
+        ]
+      },
+      {
+        "moment": 20,
+        "operation": [
+          "X",
+          0
+        ]
+      },
+      {
+        "moment": 21,
+        "operation": [
+          "X",
+          1
+        ]
+      },
+      {
+        "moment": 22,
+        "operation": [
+          "X",
+          2
+        ]
+      },
+      {
+        "moment": 18,
+        "operation": [
+          "H",
+          6
+        ]
+      },
+      {
+        "moment": 21,
+        "operation": [
+          "CZ",
+          0,
+          6
+        ]
+      },
+      {
+        "moment": 22,
+        "operation": [
+          "H",
+          6
+        ]
+      },
+      {
+        "moment": 19,
+        "operation": [
+          "H",
+          5
+        ]
+      },
+      {
+        "moment": 22,
+        "operation": [
+          "CZ",
+          1,
+          5
+        ]
+      },
+      {
+        "moment": 23,
+        "operation": [
+          "H",
+          5
+        ]
+      },
+      {
+        "moment": 20,
+        "operation": [
+          "H",
+          4
+        ]
+      },
+      {
+        "moment": 23,
+        "operation": [
+          "CZ",
+          2,
+          4
+        ]
+      },
+      {
+        "moment": 24,
+        "operation": [
+          "H",
+          4
+        ]
+      }
+    ]
+  },
+  "next_action": "Freeze the24CZ three-arm supported-subspace transform, then cost and validate its interface to a concrete splitter before any symmetric-core fit. A certified full7 decoder still requires a finite-cost global-X-symmetric core; algebra closure alone is insufficient.",
+  "adaptive_arm_cost": {
+    "worst_case_CZ": 21,
+    "explanation": "Per pair two local preprocessingCNOT + one conditionalCZ + final remoteCX implemented with4adjacentCNOT =7CZ. This counts classically conditionedCZ in every branch; H, simultaneous measurement, resetX and classical latency are additional.",
+    "readout_diagonals_checked_for_used_qubits": true,
+    "compiled_native_depth": null,
+    "latency_and_full_rule_validation": "Not evaluated; no adaptive circuit export or hardware claim."
+  },
+  "limitations": [
+    "The unitary transform agrees with V only on unary input support; it is not asserted equal on other basis inputs.",
+    "Measurement-adaptive full-rule legality, reset/classical latency and compiled native depth remain unresolved; readout-group membership alone was checked.",
+    "No routing beam, coefficient fitting, maintained solver change, native export, or portfolio integration ran."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "PORT024_status": "symbolic screen complete; no fitted symmetric core",
+  "PORT025_status": "supported-column/unitary and adaptive-branch checks complete; native export/interface/core remain",
+  "fixed_block_algebra": [
+    {
+      "n": 3,
+      "graph": "path",
+      "repeated_dimension": 30,
+      "one_XX_dimension": 23
+    },
+    {
+      "n": 5,
+      "graph": "path",
+      "repeated_dimension": 510,
+      "one_XX_dimension": 69
+    },
+    {
+      "n": 5,
+      "graph": "branched",
+      "repeated_dimension": 510,
+      "one_XX_dimension": 383
+    },
+    {
+      "n": 7,
+      "graph": "path",
+      "repeated_dimension": 8190,
+      "one_XX_dimension": 131
+    },
+    {
+      "n": 7,
+      "graph": "branched",
+      "repeated_dimension": 8190,
+      "one_XX_dimension": 6143
+    }
+  ],
+  "full_reversal_path7": {
+    "CZ": 108,
+    "abstract_moments": 155,
+    "meaning": "One explicit upper-bound construction, not a routing or depth lower bound."
+  },
+  "unitary_unary_only_three_arm7": {
+    "CZ": 24,
+    "abstract_unfused_moments": 25,
+    "max_state_error": 4.457708759800732e-15,
+    "physical_edges_checked": true,
+    "actual_PhasedXZ_export": false,
+    "unary_splitter_interface_unresolved": true
+  },
+  "adaptive_unary_only": {
+    "all_n3_5_7_columns_and_branches_checked": true,
+    "worst_case_arm7_CZ": 21,
+    "native_depth": null,
+    "simultaneous_measured_qubits": [
+      0,
+      1,
+      2
+    ],
+    "all_used_qubit_readout_groups": {
+      "8": [
+        0
+      ],
+      "12": [
+        1,
+        2
+      ],
+      "10": [
+        3
+      ],
+      "11": [
+        4,
+        5
+      ],
+      "9": [
+        6
+      ]
+    },
+    "classical_latency_and_full_rule_validation_pending": true
+  },
+  "next_action": "Export and independently certify the24CZ/25abstract-moment unitary three-arm transform; then cost its non-path unary interface to an explicit splitter and a finite symmetric core. No gain is claimed until the entire composition is built and verified.",
+  "scope": "No routing beam, fit, maintained solver edit, new hardware result or portfolio score change. Root retains publication/taskboard/queue updates under new-directory-only scope."
+}

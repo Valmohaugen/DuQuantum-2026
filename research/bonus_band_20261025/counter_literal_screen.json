@@ -1,0 +1,1357 @@
+{
+  "status": "literal architecture screened; no routed candidate or gain",
+  "rows": [
+    {
+      "N": 2,
+      "k": 1,
+      "output_qubits": 4,
+      "count_bits": 2,
+      "batch_source_lengths": [
+        [
+          2
+        ],
+        [],
+        []
+      ],
+      "borrowed_workspace_feasible": false,
+      "max_product_overlap_squared": 0.5,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": null,
+      "literal_preparation_CZ_layer_bound": null,
+      "literal_target_reflections_only_bound": null,
+      "incumbent_native_depth": 3
+    },
+    {
+      "N": 3,
+      "k": 1,
+      "output_qubits": 5,
+      "count_bits": 2,
+      "batch_source_lengths": [
+        [
+          2
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": false,
+      "max_product_overlap_squared": 0.44444444444444453,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": null,
+      "literal_preparation_CZ_layer_bound": null,
+      "literal_target_reflections_only_bound": null,
+      "incumbent_native_depth": 6
+    },
+    {
+      "N": 4,
+      "k": 1,
+      "output_qubits": 7,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": false,
+      "max_product_overlap_squared": 0.421875,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": null,
+      "literal_preparation_CZ_layer_bound": null,
+      "literal_target_reflections_only_bound": null,
+      "incumbent_native_depth": 7
+    },
+    {
+      "N": 4,
+      "k": 2,
+      "output_qubits": 7,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          1
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": false,
+      "max_product_overlap_squared": 0.375,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": null,
+      "literal_preparation_CZ_layer_bound": null,
+      "literal_target_reflections_only_bound": null,
+      "incumbent_native_depth": 9
+    },
+    {
+      "N": 5,
+      "k": 1,
+      "output_qubits": 8,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": false,
+      "max_product_overlap_squared": 0.4096000000000001,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": null,
+      "literal_preparation_CZ_layer_bound": null,
+      "literal_target_reflections_only_bound": null,
+      "incumbent_native_depth": 8
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "output_qubits": 8,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          2
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": false,
+      "max_product_overlap_squared": 0.3456,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": null,
+      "literal_preparation_CZ_layer_bound": null,
+      "literal_target_reflections_only_bound": null,
+      "incumbent_native_depth": 14
+    },
+    {
+      "N": 6,
+      "k": 1,
+      "output_qubits": 9,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.401877572016461,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 24,
+      "literal_preparation_CZ_layer_bound": 96,
+      "literal_target_reflections_only_bound": 48,
+      "incumbent_native_depth": 9
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "output_qubits": 9,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3292181069958849,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 24,
+      "literal_preparation_CZ_layer_bound": 96,
+      "literal_target_reflections_only_bound": 48,
+      "incumbent_native_depth": 15
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "output_qubits": 9,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3125,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 24,
+      "literal_preparation_CZ_layer_bound": 96,
+      "literal_target_reflections_only_bound": 48,
+      "incumbent_native_depth": 15
+    },
+    {
+      "N": 7,
+      "k": 1,
+      "output_qubits": 10,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3965694566039662,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 28,
+      "literal_preparation_CZ_layer_bound": 112,
+      "literal_target_reflections_only_bound": 56,
+      "incumbent_native_depth": 9
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "output_qubits": 10,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3187447407117783,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 28,
+      "literal_preparation_CZ_layer_bound": 112,
+      "literal_target_reflections_only_bound": 56,
+      "incumbent_native_depth": 17
+    },
+    {
+      "N": 7,
+      "k": 3,
+      "output_qubits": 10,
+      "count_bits": 3,
+      "batch_source_lengths": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.29375515303997474,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 28,
+      "literal_preparation_CZ_layer_bound": 112,
+      "literal_target_reflections_only_bound": 56,
+      "incumbent_native_depth": 21
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "output_qubits": 12,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.39269590377807617,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 32,
+      "literal_preparation_CZ_layer_bound": 128,
+      "literal_target_reflections_only_bound": 64,
+      "incumbent_native_depth": 10
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "output_qubits": 12,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.31146240234375,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 32,
+      "literal_preparation_CZ_layer_bound": 128,
+      "literal_target_reflections_only_bound": 64,
+      "incumbent_native_depth": 18
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "output_qubits": 12,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2816319465637207,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 32,
+      "literal_preparation_CZ_layer_bound": 128,
+      "literal_target_reflections_only_bound": 64,
+      "incumbent_native_depth": 25
+    },
+    {
+      "N": 8,
+      "k": 4,
+      "output_qubits": 12,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        []
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2734375,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 32,
+      "literal_preparation_CZ_layer_bound": 128,
+      "literal_target_reflections_only_bound": 64,
+      "incumbent_native_depth": 21
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "output_qubits": 13,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          1
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3897443431289457,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 36,
+      "literal_preparation_CZ_layer_bound": 144,
+      "literal_target_reflections_only_bound": 72,
+      "incumbent_native_depth": 10
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "output_qubits": 13,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          1
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3061020141348281,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 36,
+      "literal_preparation_CZ_layer_bound": 144,
+      "literal_target_reflections_only_bound": 72,
+      "incumbent_native_depth": 20
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "output_qubits": 13,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          1
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.27312909617436376,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 36,
+      "literal_preparation_CZ_layer_bound": 144,
+      "literal_target_reflections_only_bound": 72,
+      "incumbent_native_depth": 29
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "output_qubits": 13,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          1
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2601824190046903,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 36,
+      "literal_preparation_CZ_layer_bound": 144,
+      "literal_target_reflections_only_bound": 72,
+      "incumbent_native_depth": 29
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "output_qubits": 14,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          2
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3874204890000001,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 40,
+      "literal_preparation_CZ_layer_bound": 160,
+      "literal_target_reflections_only_bound": 80,
+      "incumbent_native_depth": 11
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "output_qubits": 14,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          2
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3019898880000002,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 40,
+      "literal_preparation_CZ_layer_bound": 160,
+      "literal_target_reflections_only_bound": 80,
+      "incumbent_native_depth": 22
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "output_qubits": 14,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          2
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2668279319999998,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 40,
+      "literal_preparation_CZ_layer_bound": 160,
+      "literal_target_reflections_only_bound": 80,
+      "incumbent_native_depth": 35
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "output_qubits": 14,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          2
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.250822656,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 40,
+      "literal_preparation_CZ_layer_bound": 160,
+      "literal_target_reflections_only_bound": 80,
+      "incumbent_native_depth": 37
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "output_qubits": 14,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          2
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.24609375,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 40,
+      "literal_preparation_CZ_layer_bound": 320,
+      "literal_target_reflections_only_bound": 160,
+      "incumbent_native_depth": 35
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "output_qubits": 15,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          3
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.38554328942953164,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 44,
+      "literal_preparation_CZ_layer_bound": 176,
+      "literal_target_reflections_only_bound": 88,
+      "incumbent_native_depth": 12
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "output_qubits": 15,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          3
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.29873473944291523,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 44,
+      "literal_preparation_CZ_layer_bound": 176,
+      "literal_target_reflections_only_bound": 88,
+      "incumbent_native_depth": 25
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "output_qubits": 15,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          3
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.26196789328644565,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 44,
+      "literal_preparation_CZ_layer_bound": 176,
+      "literal_target_reflections_only_bound": 88,
+      "incumbent_native_depth": 45
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "output_qubits": 15,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          3
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.24384881449471862,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 44,
+      "literal_preparation_CZ_layer_bound": 352,
+      "literal_target_reflections_only_bound": 176,
+      "incumbent_native_depth": 61
+    },
+    {
+      "N": 11,
+      "k": 5,
+      "output_qubits": 15,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          3
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2360912887150679,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 44,
+      "literal_preparation_CZ_layer_bound": 352,
+      "literal_target_reflections_only_bound": 176,
+      "incumbent_native_depth": 47
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "output_qubits": 16,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.38399523056087664,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 12
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "output_qubits": 16,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2960935686313839,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 25
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "output_qubits": 16,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.258103609085083,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 45
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "output_qubits": 16,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2384460363426986,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 65
+    },
+    {
+      "N": 12,
+      "k": 5,
+      "output_qubits": 16,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.22860542417943336,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 78
+    },
+    {
+      "N": 12,
+      "k": 6,
+      "output_qubits": 16,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2255859375,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 82
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "output_qubits": 17,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3826967066770909,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 12
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "output_qubits": 17,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2939074202307153,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 29
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "output_qubits": 17,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2549565755628696,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 57
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "output_qubits": 17,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.23413428427456584,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 75
+    },
+    {
+      "N": 13,
+      "k": 5,
+      "output_qubits": 17,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2227844551478433,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 86
+    },
+    {
+      "N": 13,
+      "k": 6,
+      "output_qubits": 17,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2176945145831753,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 97
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "output_qubits": 18,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.3815918725444636,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 12
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "output_qubits": 18,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2920679058350208,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 29
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "output_qubits": 18,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2523435363912401,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 59
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "output_qubits": 18,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.23061180939036321,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 82
+    },
+    {
+      "N": 14,
+      "k": 5,
+      "output_qubits": 18,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.21812436514450492,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 96
+    },
+    {
+      "N": 14,
+      "k": 6,
+      "output_qubits": 18,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.211538894761167,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 106
+    },
+    {
+      "N": 14,
+      "k": 7,
+      "output_qubits": 18,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          2
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.20947265625,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 108
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "output_qubits": 19,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.38064039267229743,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 13
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "output_qubits": 19,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.29049856041176375,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 29
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "output_qubits": 19,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.2501388953190402,
+      "fixed_pi_iterations": 1,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 192,
+      "literal_target_reflections_only_bound": 96,
+      "incumbent_native_depth": 71
+    },
+    {
+      "N": 15,
+      "k": 4,
+      "output_qubits": 19,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.22767915325695495,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 90
+    },
+    {
+      "N": 15,
+      "k": 5,
+      "output_qubits": 19,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.21430705488578344,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 101
+    },
+    {
+      "N": 15,
+      "k": 6,
+      "output_qubits": 19,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.20659760529408,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 110
+    },
+    {
+      "N": 15,
+      "k": 7,
+      "output_qubits": 19,
+      "count_bits": 4,
+      "batch_source_lengths": [
+        [
+          4,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          4
+        ]
+      ],
+      "borrowed_workspace_feasible": true,
+      "max_product_overlap_squared": 0.20304198073369517,
+      "fixed_pi_iterations": 2,
+      "literal_counter_CZ_layer_bound": 48,
+      "literal_preparation_CZ_layer_bound": 384,
+      "literal_target_reflections_only_bound": 192,
+      "incumbent_native_depth": 119
+    }
+  ],
+  "source": {
+    "title": "Exact quantum Hamming-weight computation at optimal depth and minimum width",
+    "url": "https://arxiv.org/html/2610.25315",
+    "submitted": "2026-10-18",
+    "consulted_sections": [
+      "III.1",
+      "V.1",
+      "V.2",
+      "Appendix A"
+    ],
+    "summary": "The paper gives an exact n+ceil(log2(n+1))-qubit all-to-all counter. Its three input batches borrow and restore dirty words. It applies the counter to expected-depth adaptive balanced-state preparation and fixed-weight unitary amplitude amplification."
+  },
+  "local_derivation": "Each literal D/D-inverse stage separately decomposes controlled phases. A fractional-phase dirty target requires two CZ per control. Serial batch boundaries are preserved; additions, Fourier transforms, reflections, and routing are omitted. Reported bounds are lower bounds on CZ layers for this specified literal decomposition, not full circuit depths or universal lower bounds.",
+  "exclusions": "The bound does not cover cross-stage cancellation, collective phase synthesis, replacing the zero-weight reflection, generalized final amplification phases, a different counter, or another preparation algorithm. It is not a lower bound on exact Dicke preparation.",
+  "challenge_inference": "Almost-sure termination and expected adaptive depth do not provide a finite returned Cirq circuit that succeeds on every branch. A bounded exact fallback and legal readout diagonals would need explicit construction. Unitary circuits avoid this measurement issue but still require native routing.",
+  "next_action": "Do not port the literal small-N three-batch architecture. A future optimized counter proposal must beat the native depth budget after both weight reflections, routing, and all amplification iterations; record any changed stage assumptions."
+}

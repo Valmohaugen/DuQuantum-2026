@@ -1,0 +1,54 @@
+{
+  "status": "frozen before any seed33+ result",
+  "files": {
+    "w_density_selection.py": "b7074087bd3343fa47c7633c153d6c15bbe93eda27ea02a0695ddeda1b8799a1",
+    "w_density_candidates.py": "4bf3d729fd2eb4af66b2834b38937acc8fb020fab20f7be6ce5449cc7ce86f54",
+    "w_density_probe.py": "b9b090dfabe1ed2a670585bf3d06511bf74ba47bf7e523fc10baf3dc2555a767",
+    "w_edge_selection.py": "c01d07d186d6b945bbde1f1dccb95a12fc6afb00590c7d1473d42290857b2e06",
+    "w_stress_noise.py": "8998c4e7f1dba256d04061eba1cfbe8dfcec092e4d66225eb604b72c20136543",
+    "w_heterogeneous_noise.py": "20cc0f24a876a57f31f1bac1a67c94abfbf001c7b6e34d8a08208fb9d6d61573",
+    "w_hardware_probe.py": "80e0d771ea98b6c7555893501ec571c421147732267097b602aefb9e44f605db",
+    "w_cost_snapshot.py": "02512364d908c1e6f28fe288f5c94ff301fbf36e99e7fd0b9b853c462eceaae3",
+    "w_edge_eval_snapshot/fast_eval.py": "95d512861996d76c23c714676c0ac731f57564bef6226a958386adc39ff4d924",
+    "w_edge_eval_snapshot/test_dicke.py": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f",
+    "w_edge_eval_snapshot/judge.py": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6"
+  },
+  "ranking": {
+    "scenario_seed": 90210,
+    "score_seed": 90211,
+    "replicates": 8192,
+    "detuning_draws": 2,
+    "N8_models": [
+      "nominal",
+      "coherent",
+      "zz",
+      "signed_zz"
+    ],
+    "N10_models": [
+      "nominal",
+      "zz",
+      "signed_zz"
+    ],
+    "N8_max_finalists": 3,
+    "N10_max_finalists": 1,
+    "soft_seconds": 45,
+    "decision": "Maximize mean actual finite-shot expected score over models and cutoffs4/all; require positive pooled improvement beyond2MCSE and no endpoint regression beyond2MCSE. MCSE is numerical sampling uncertainty, not model uncertainty.",
+    "timeout": "Incomplete full comparison returns baseline"
+  },
+  "timing_pilot_seeds": [
+    0
+  ],
+  "evaluation_seeds": [
+    33,
+    34,
+    35,
+    36
+  ],
+  "reserved_confirmation_seeds": [
+    37,
+    38,
+    39,
+    40
+  ],
+  "limitations": "Assumed noise only. Selection can overfit model scenarios. Single density call not preemptible; measured constructor timing required."
+}

@@ -1,0 +1,40 @@
+{
+  "rows": [
+    {
+      "n": 3,
+      "unary_columns": 4,
+      "unitary_logical_CX": 5,
+      "unitary_max_common_phase_error": 1.1102230246251565e-16,
+      "measurement_branches_per_column": 2,
+      "measurement_max_branch_amplitude_error": 1.1102230246251565e-16,
+      "measurement_max_branch_probability_error": 1.1102230246251565e-16,
+      "CNOT_only_required_linear_rank": 2,
+      "invertibility_required_rank": 3
+    },
+    {
+      "n": 5,
+      "unary_columns": 6,
+      "unitary_logical_CX": 10,
+      "unitary_max_common_phase_error": 1.5700924586837752e-16,
+      "measurement_branches_per_column": 4,
+      "measurement_max_branch_amplitude_error": 1.1102230246251565e-16,
+      "measurement_max_branch_probability_error": 1.1102230246251565e-16,
+      "CNOT_only_required_linear_rank": 3,
+      "invertibility_required_rank": 5
+    },
+    {
+      "n": 7,
+      "unary_columns": 8,
+      "unitary_logical_CX": 15,
+      "unitary_max_common_phase_error": 1.9229626863835638e-16,
+      "measurement_branches_per_column": 8,
+      "measurement_max_branch_amplitude_error": 1.1102230246251565e-16,
+      "measurement_max_branch_probability_error": 5.551115123125783e-17,
+      "CNOT_only_required_linear_rank": 4,
+      "invertibility_required_rank": 7
+    }
+  ],
+  "arm_CZ": 24,
+  "arm_abstract_moments": 25,
+  "max_native_error": 4.457708759800732e-15
+}

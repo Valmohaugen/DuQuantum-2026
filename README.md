@@ -442,3 +442,34 @@ keeps the accurate53-moment decoder; the inaccurate52-moment conversion is exclu
 The [symmetry audit](research/bonus_spinflip_audit_20261025/audit_results.json)
 rules out one restricted decoder family and records the limits of its proposed extension.
 Research and ticket handoffs continue.
+
+
+## Research checkpoint — density ranking and decoder screening
+
+Best verified corrected bonus remains **48.9368744609**; the immutable
+[56-case checkpoint](research/bonus_band_20261025/milestones/20261025T082924Z/summary.json)
+is unchanged. A new direct density-matrix W reranker completed eight fresh
+calibration cases (seeds 33–36, N8/N10), four assumed evaluation models, and
+both X-score cutoffs. Maximum constructor time was **35.14 s**; all tested
+outputs passed exact-state, native-gate and device checks.
+
+The reranker is **not promoted**: its N10 outputs equal the prior selector,
+and its only changed N8 choice loses under all four evaluation models.
+[Results and uncertainty](research/bonus_band_20261025/w_density_summary.json)
+include comparisons with both the maintained baseline and prior selector.
+These are simulated results, not measured hardware gains.
+
+A [finite-size counter screen](research/bonus_band_20261025/counter_literal_screen.json)
+finds that a literal implementation of a recent low-workspace counter is too
+costly for the current small instances; this is not a lower bound on other
+implementations. Decoder research continues with fixed Clifford blocks and
+a transformation specialized to unary inputs. Tickets PORT024 and PORT025
+track the remaining reachability, phase, routing and interface checks.
+
+The new [unary-input transformation](research/bonus_band_20261025/folded_unary_native_verified.json)
+uses **24 CZ gates and 19 native moments** on a checked Willow footprint. All
+eight supported input columns share one phase, with error below6.1e-16. This
+is a reusable component, **not a complete Dicke decoder**: its upstream
+layout and a symmetric decoder core remain open. The
+[agent handoff](research/bonus_clifford_screen_20261025/handoff_summary.json)
+also records the fixed-Clifford algebra and adaptive-branch checks.

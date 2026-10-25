@@ -1,0 +1,15 @@
+{
+  "status": "unimplemented cost/reachability proposal",
+  "inputs": [
+    "research/bonus_spinflip_audit_20261025/audit_results.json"
+  ],
+  "idea": "Use local Rx and fixed pi/4 ZZ Clifford entanglers, with an XX Clifford entangler to break the proved antiunitary obstruction. Fixed pi/4 ZZ/XX blocks can use oneCZ plus local Cliffords; arbitrary-angle rotations generally use2CZ.",
+  "identity": "CZ*(S tensor S) equals a global phase times exp(-i*pi/4 Z tensor Z); conjugating both sites by H gives the XX block.",
+  "cost_screen": "For seven sites, generic controlled reversal needs3Fredkins before routing. Count its actual native cost plus the core before fitting; compare with existing complete7-site decoder. No depth gain is inferred from Lie dimension.",
+  "checks": [
+    "Verify each block commutes with globalX up to phase and addedXX breaks the antiunitary witness.",
+    "Check fixed-Clifford conjugation closure separately; continuous-generator reachability does not prove a shallow fixed-angle ansatz.",
+    "Fit only the lower unary columns with one common phase, then independently verify all upper columns after controlled reversal.",
+    "Respect ryon half-synthesis ownership and use an isolated small pilot only after cost/reachability screening."
+  ]
+}

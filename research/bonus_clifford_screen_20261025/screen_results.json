@@ -1,0 +1,448 @@
+{
+  "status": "Repeated fixed-Clifford algebra passes; explicit full-reversal route losesCZscreen; no finite-depth fit justified by this construction",
+  "exact_block_checks": {
+    "field": "Q(exp(i*pi/4)) with exact rational coefficients",
+    "ZZ_identity": "CZ(S tensor S) = exp(i*pi/4) exp(-i*pi*ZZ/4)",
+    "XX_identity": "(H tensor H) CZ(S tensor S) (H tensor H) = exp(i*pi/4) exp(-i*pi*XX/4)",
+    "matrix_identities_exact": true,
+    "global_X_commutation_exact": true,
+    "antiunitary": "For T=Y_A Z_B K, T C_ZZ T^-1=C_ZZ while T C_XX T^-1=C_XX^dagger for the exponential representatives. C_XX^dagger C_XX^-1=iXX is not a scalar, so the old antiunitary symmetry is broken even projectively.",
+    "inverse": "The physical fixed blocks have fourth powerI. Their inverse is available by three repetitions; allowing signed local Cliffords can implement the inverse with oneCZ. Algebra results do not assume inverse gates are free."
+  },
+  "exact_toffoli_phase_checks": 8,
+  "algebra": [
+    {
+      "n": 3,
+      "graph": "path",
+      "cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "fixed_ZZ_only_orbit_size": 8,
+      "fixed_ZZ_XX_orbit_size": 11,
+      "fixed_ZZ_continuous_Rx_dimension": 15,
+      "fixed_ZZ_XX_continuous_Rx_dimension": 30,
+      "target_dimension": 30,
+      "repeated_block_full_algebra": true,
+      "one_XX_product_family_dimension": 23,
+      "one_XX_intersection_dimension": 7,
+      "closure_sha256": "0e7a936fe1dfc4096a3299e09579f6a650443ce4d16dafd37cd8dac1635f662d"
+    },
+    {
+      "n": 5,
+      "graph": "path",
+      "cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "fixed_ZZ_only_orbit_size": 16,
+      "fixed_ZZ_XX_orbit_size": 20,
+      "fixed_ZZ_continuous_Rx_dimension": 45,
+      "fixed_ZZ_XX_continuous_Rx_dimension": 510,
+      "target_dimension": 510,
+      "repeated_block_full_algebra": true,
+      "one_XX_product_family_dimension": 69,
+      "one_XX_intersection_dimension": 21,
+      "closure_sha256": "3195472a444e752ba04b49ce43c8d33442081bbbd75e516544dac79c0ded15fb"
+    },
+    {
+      "n": 5,
+      "graph": "branched",
+      "cells": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "fixed_ZZ_only_orbit_size": 18,
+      "fixed_ZZ_XX_orbit_size": 28,
+      "fixed_ZZ_continuous_Rx_dimension": 255,
+      "fixed_ZZ_XX_continuous_Rx_dimension": 510,
+      "target_dimension": 510,
+      "repeated_block_full_algebra": true,
+      "one_XX_product_family_dimension": 383,
+      "one_XX_intersection_dimension": 127,
+      "closure_sha256": "3195472a444e752ba04b49ce43c8d33442081bbbd75e516544dac79c0ded15fb"
+    },
+    {
+      "n": 7,
+      "graph": "path",
+      "cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "fixed_ZZ_only_orbit_size": 24,
+      "fixed_ZZ_XX_orbit_size": 28,
+      "fixed_ZZ_continuous_Rx_dimension": 91,
+      "fixed_ZZ_XX_continuous_Rx_dimension": 8190,
+      "target_dimension": 8190,
+      "repeated_block_full_algebra": true,
+      "one_XX_product_family_dimension": 131,
+      "one_XX_intersection_dimension": 51,
+      "closure_sha256": "60b80889885e170e160eb848d6bf64edd8efb8839ebbf82934cf1d621b9f60ba"
+    },
+    {
+      "n": 7,
+      "graph": "branched",
+      "cells": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "fixed_ZZ_only_orbit_size": 26,
+      "fixed_ZZ_XX_orbit_size": 32,
+      "fixed_ZZ_continuous_Rx_dimension": 4095,
+      "fixed_ZZ_XX_continuous_Rx_dimension": 8190,
+      "target_dimension": 8190,
+      "repeated_block_full_algebra": true,
+      "one_XX_product_family_dimension": 6143,
+      "one_XX_intersection_dimension": 2047,
+      "closure_sha256": "60b80889885e170e160eb848d6bf64edd8efb8839ebbf82934cf1d621b9f60ba"
+    }
+  ],
+  "controlled_reversal_costs": [
+    {
+      "n": 3,
+      "Fredkin": 1,
+      "logical_CX": 8,
+      "fully_connected_native_CZ": 8,
+      "fully_connected_native_moments": 15,
+      "fixed_path_swaps": 4,
+      "fixed_path_native_CZ": 20,
+      "fixed_path_native_moments": 41,
+      "fixed_path_single_qubit_gates": 33,
+      "physical_path_cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "physical_edges_checked": true,
+      "serialization": "Abstract exact local matrices are stored as H/T/Tdag words and counted as one allowed1q gate. No Cirq PhasedXZ conversion, native circuit export or device gate validation was performed; physical cells/edges were checked against frozen Willow105 metadata.",
+      "scope": "One explicit nonoptimized routing and exact local-fusion schedule; constructive upper bounds only, not lower bounds or optimal depth. Unary ordering remains0..n-1 along the physical path."
+    },
+    {
+      "n": 5,
+      "Fredkin": 2,
+      "logical_CX": 16,
+      "fully_connected_native_CZ": 16,
+      "fully_connected_native_moments": 23,
+      "fixed_path_swaps": 14,
+      "fixed_path_native_CZ": 58,
+      "fixed_path_native_moments": 99,
+      "fixed_path_single_qubit_gates": 103,
+      "physical_path_cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "physical_edges_checked": true,
+      "serialization": "Abstract exact local matrices are stored as H/T/Tdag words and counted as one allowed1q gate. No Cirq PhasedXZ conversion, native circuit export or device gate validation was performed; physical cells/edges were checked against frozen Willow105 metadata.",
+      "scope": "One explicit nonoptimized routing and exact local-fusion schedule; constructive upper bounds only, not lower bounds or optimal depth. Unary ordering remains0..n-1 along the physical path."
+    },
+    {
+      "n": 7,
+      "Fredkin": 3,
+      "logical_CX": 24,
+      "fully_connected_native_CZ": 24,
+      "fully_connected_native_moments": 31,
+      "fixed_path_swaps": 28,
+      "fixed_path_native_CZ": 108,
+      "fixed_path_native_moments": 155,
+      "fixed_path_single_qubit_gates": 197,
+      "physical_path_cells": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "physical_edges_checked": true,
+      "serialization": "Abstract exact local matrices are stored as H/T/Tdag words and counted as one allowed1q gate. No Cirq PhasedXZ conversion, native circuit export or device gate validation was performed; physical cells/edges were checked against frozen Willow105 metadata.",
+      "scope": "One explicit nonoptimized routing and exact local-fusion schedule; constructive upper bounds only, not lower bounds or optimal depth. Unary ordering remains0..n-1 along the physical path."
+    }
+  ],
+  "primitive_costs": {
+    "fixed_ZZ_CZ": 1,
+    "fixed_ZZ_native_moments": 2,
+    "fixed_XX_CZ": 1,
+    "fixed_XX_native_moments": 3,
+    "fixed_XX_note": "Two local H conjugations; H followed by S is merged into one allowed local gate. Boundary merging with core may reduce moments.",
+    "arbitrary_angle_ZZ_XX_CZ": 2
+  },
+  "closure_proof": "The identity-component Lie algebra is invariant under conjugation by every available discrete Clifford and under commutation with each continuous Xi. BFS closes those operations on Pauli masks. Jacobi and Ad_C ad_X Ad_C^-1=ad_(Ad_C X) establish sufficiency. Independent Paulis give exact dimension; full target is su(2^(n-1)) direct-sum su(2^(n-1)), excluding central globalX and identity.",
+  "single_insertion_scope": "For one fixedXX between arbitrary identity-component base circuits, tangent space after translation is g + Ad_C(g), so the Pauli union dimension is the product-family dimension. Its failure to fill the full group does NOT prove the specific coherent decoder unreachable.",
+  "finite_depth_caveat": "Arbitrary repeated blocks and continuous controls can generate the full algebra in tested sizes, but no finite layer count, fixed sequence, CZ budget, decoder coefficients or exact shallow isometry is supplied.",
+  "comparison": {
+    "peer_full7_CZ": 83,
+    "peer_full7_supported_counts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "peer_full7_status": "Supplied coefficient table; no strict common-phase certification or compiled moment comparison in this screen. Queue reports noisy A/B unhelpful; not installed.",
+    "existing_r0to3_native_moments": 53,
+    "restricted_range_warning": "The53moment decoder supports onlyr0..3 and is not an all-count comparison.",
+    "certified_full6_native_moments": 70,
+    "certified_full6_CZ": 54,
+    "analytic_full7_prefix_CZ": 27,
+    "analytic_full7_plus_full6_CZ": 81,
+    "analytic_composition_status": "One all-count seven-site flagged SCS step (one2CZ Givens +five5CZ flagged Givens) then the certified six-site terminal; cost reference only, not separately compiled/certified here.",
+    "route_only_disadvantage": "The explicit108CZ path V already exceeds83CZ supplied full7 and81CZ analytic composition before adding the decoder core. This rules out a CZ-count advantage for THIS module composition, not an optimal native-depth or general-routing lower bound.",
+    "unrouted_optimistic_core_CZ_budget_vs81": 56,
+    "optimistic_budget_scope": "To beat81 totalCZ with24CZ unrouted V, core must use<=56CZ before routing/cancellation; no lower bound or feasible core claim."
+  },
+  "next_action": "PORT025 subspace_results.json supplies a distinct unary-only transform, avoiding the full-V requirement. First cost its interface to a concrete splitter and export/certify its24CZ three-arm schedule; only then assess a finite core skeleton. A routing beam on fullV is deferred and was not run.",
+  "ownership": "PORT024 symbolic-only isolated screen; no overlap with ryon coefficient/topology synthesis. Root PORT023 owns heavy CPU. No routing beam or fit run.",
+  "peer_needs": [
+    "Queue issue11 requests better k>=4 half starts; raw7,4/5/6/7 tables are available but not installed after mixed/noisy A/B.",
+    "PORT022 previous combinations are complete and were not repeated.",
+    "High-count coherent7-site native decoding remains the relevant integration bottleneck."
+  ]
+}

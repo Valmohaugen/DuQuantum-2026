@@ -1,0 +1,22 @@
+{
+  "research/bonus_clifford_screen_20261025/benchmark_readout_reference.py": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f",
+  "research/bonus_clifford_screen_20261025/certified_decoder_checks.json": "34112dda50f0eebf489deae75fd14b094e72f2d974685743fe261044b7a787f0",
+  "research/bonus_clifford_screen_20261025/certified_full6_native.json": "1491d612f68085c1b988e2682c161920665e9a1e3a23d9f7d99982f5a58f98d1",
+  "research/bonus_clifford_screen_20261025/controlled_reversal_3_native_schedule.json": "5de3a767f6a142adfbe96d8f41f1c7f92bf11ba5cd102a78128421f56f5e40f4",
+  "research/bonus_clifford_screen_20261025/controlled_reversal_5_native_schedule.json": "404e440e25b7276c027ef0e7896097f1ce71f03b43ffe26fb30c1a49086659c2",
+  "research/bonus_clifford_screen_20261025/controlled_reversal_7_native_schedule.json": "d041fd607be7df93609c465f321417fc5e7c8b9b28a93b078d7fe2b26e84c900",
+  "research/bonus_clifford_screen_20261025/exact_reference.py": "6105c48d4368a04dd289f750fa257fabf0ecc1fc69f5b863853139271097bdcb",
+  "research/bonus_clifford_screen_20261025/handoff_summary.json": "cb1be2d9254b7257b325396000645122e82bef5f849a8873f9d1bafb87501298",
+  "research/bonus_clifford_screen_20261025/peer_full7.json": "acec1d532a924ec45d60ad2bf0bf4e18f06d1fa72dc5a839d90675367bad1b7e",
+  "research/bonus_clifford_screen_20261025/peer_queue_snapshot.md": "870f2a975b53dea3f25d4fddcaeede28bf1fb53e8b7ccc0602e3ccb22a1f235c",
+  "research/bonus_clifford_screen_20261025/plan.json": "77d9a1e8840526d9d955326d3e36b51a1f138e98fecfe113c3afee4180f793c0",
+  "research/bonus_clifford_screen_20261025/prior_spinflip_audit.json": "a14863ee7671a0dad2958100635eca77709762bc42cb053eecc63d5a25a88ed6",
+  "research/bonus_clifford_screen_20261025/screen.log": "faacbb170afd435f058cf65d3e9cbe1694855365e1ea75d568745b2c74da58ac",
+  "research/bonus_clifford_screen_20261025/screen.py": "45b026ccae0d25cd0519187435805d23949ff8bc5005981a78d3e8bb4e2c3f7e",
+  "research/bonus_clifford_screen_20261025/screen_results.json": "858220c383b7a584d2024046de88b5b027c5f1b8733796b17736c6ba9d497d4f",
+  "research/bonus_clifford_screen_20261025/sources.json": "948fb683c8aeda2da721611f25ea227cb820fce7c774057dd08bb5b31cd491df",
+  "research/bonus_clifford_screen_20261025/subspace_checks.log": "2f39c6df8878d58e4fa8b0a04b274f940dbf5c3bc40cdec142b2b119c5d5133c",
+  "research/bonus_clifford_screen_20261025/subspace_checks.py": "213ad2dcf846cd40e0c62116bb4d53ad0b1c0351525b076769a1079cb1a71a92",
+  "research/bonus_clifford_screen_20261025/subspace_results.json": "cd5e4edfc2c6de1c1d04ff95484acb662c7437eed0e8a7f6feb0d3ce1e6be3b5",
+  "research/bonus_clifford_screen_20261025/willow105_connectivity.json": "e2f3420a894b634cdad6486a357ac00a1fc9649b9f55b7cd1c00dd6f9fdb1cac"
+}
