@@ -539,6 +539,39 @@ def create_dicke_state(
         root, children = best_tree(adj, node, n_q, deadline, bias, fast=pack)
         qubits = [root] + [c for v in list(children) for c in children[v]]
         circuit = compile_circuit(w_ops(root, children), qubits if flip else (), dynamical_decoupling and not pack, pack)
+        if n_q <= 3 and not pack:
+            from small_score import select_layout
+
+            layouts = {(tuple(sorted(qubits)), str(circuit)): (circuit, set(qubits))}
+            for candidate_root in sorted(node):
+                for builder in (prim_tree, bfs_tree, doubling_tree):
+                    parent = builder(adj, node, candidate_root, n_q)
+                    if parent is None:
+                        continue
+                    candidate_children = collections.defaultdict(list)
+                    for child, parent_node in parent.items():
+                        candidate_children[parent_node].append(child)
+                    candidate_children, _, _ = broadcast_order(candidate_root, candidate_children)
+                    candidate_qubits = [candidate_root] + [
+                        child for vertex in candidate_children for child in candidate_children[vertex]
+                    ]
+                    candidate = compile_circuit(
+                        w_ops(candidate_root, candidate_children),
+                        candidate_qubits if flip else (),
+                        dynamical_decoupling,
+                        False,
+                    )
+                    layouts[(tuple(sorted(candidate_qubits)), str(candidate))] = (
+                        candidate, set(candidate_qubits)
+                    )
+            circuit, selected = select_layout(
+                list(layouts.values()),
+                (circuit, set(qubits)),
+                (cz_pauli_error_rate, sq_pauli_error_rate, zero_errors, one_errors),
+                n_q,
+                n,
+            )
+            qubits = sorted(selected)
         check_circuit(circuit, cz_pauli_error_rate, sq_pauli_error_rate)
         return circuit, set(qubits)
     #build every layout that fits (synthesised patch, single path, two-half ladder) and keep the
@@ -548,6 +581,28 @@ def create_dicke_state(
     lab = best_patch(adj, node, patch[0], patch[1], bias) if patch else None
     if lab is not None:
         cands.append((lab, patch_ops(lab, *patch[1:])))
+    if patch and n_q <= 4:
+        cells, seq, th = patch
+        counts = collections.Counter(tuple(sorted(edge)) for edge in seq)
+        syms = [(a, 0, 0, b) for a in (1, -1) for b in (1, -1)] + [
+            (0, a, b, 0) for a in (1, -1) for b in (1, -1)
+        ]
+        seen_labels = set()
+        for origin in node:
+            for a, b, c, d in syms:
+                candidate_lab = [
+                    cirq.GridQubit(origin.row + a * r + b * s, origin.col + c * r + d * s)
+                    for r, s in cells
+                ]
+                key = tuple(candidate_lab)
+                if key in seen_labels:
+                    continue
+                if not all(q in node for q in candidate_lab) or any(
+                    candidate_lab[j] not in adj[candidate_lab[i]] for i, j in counts
+                ):
+                    continue
+                seen_labels.add(key)
+                cands.append((candidate_lab, patch_ops(candidate_lab, seq, th)))
     if layout_mode in ("auto", "line"):
         steps, weights = line_plan(n_q, k, use_blocks)
         path = best_path(adj, node, weights, deadline, bias)
@@ -573,6 +628,21 @@ def create_dicke_state(
         if best is None or score < best[0]:
             best = (score, c, qs)
     _, circuit, qubits = best
+    if n_q <= 4 and not pack:
+        from small_score import select_layout
+
+        layouts = {}
+        for qs, ops in cands:
+            candidate = compile_circuit(ops, qs if flip else (), dynamical_decoupling, False)
+            layouts[(tuple(sorted(qs)), str(candidate))] = (candidate, set(qs))
+        circuit, selected = select_layout(
+            list(layouts.values()),
+            (circuit, set(qubits)),
+            (cz_pauli_error_rate, sq_pauli_error_rate, zero_errors, one_errors),
+            n_q,
+            n,
+        )
+        qubits = sorted(selected)
     check_circuit(circuit, cz_pauli_error_rate, sq_pauli_error_rate)
     return circuit, set(qubits)
 
