@@ -251,19 +251,18 @@ def fig_main_scores():
     labels = [f"D({int(r['N'])},{int(r['n'])})" for r in rows]
     y = np.arange(len(rows))[::-1]
     fig, ax = plt.subplots(figsize=(SINGLE, 3.6), layout="constrained")
-    ax.barh(y, [r["expected_score"] for r in rows], height=0.62, color=BLUE, label="Our circuits (noise model)")
+    tot, ideal = sum(r["expected_score"] for r in rows), sum(r["ideal_score"] for r in rows)
+    ax.barh(y, [r["expected_score"] for r in rows], height=0.62, color=BLUE,
+            label=f"Our circuits, noise model (sum {tot:.2f}, {100 * tot / ideal:.0f}% of limit)")
     ax.plot([r["ideal_score"] for r in rows], y, "|", color=INK, markersize=9, markeredgewidth=1.4,
-            label="Noiseless limit (10,000 shots)")
+            label=f"Noiseless limit, 10,000 shots (sum {ideal:.2f})")
     ax.set_yticks(y)
     ax.set_yticklabels(labels)
     ax.set_xlabel("Expected score per case, 1/(Z + X)")
     ax.grid(axis="x")
     ax.set_axisbelow(True)
     ax.tick_params(axis="y", length=0)
-    ax.legend(loc="lower right", handlelength=1.2)
-    tot, ideal = sum(r["expected_score"] for r in rows), sum(r["ideal_score"] for r in rows)
-    ax.text(0.98, 0.30, f"Sum {tot:.2f} of {ideal:.2f} ({100 * tot / ideal:.0f}%)", transform=ax.transAxes,
-            ha="right", va="bottom", color=INK)
+    fig.legend(loc="outside upper left", handlelength=1.2)
     save(fig, "fig5_main_scores")
 
 

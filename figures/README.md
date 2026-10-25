@@ -45,3 +45,9 @@ the hackathon, one marker per pushed improvement (commit times; sources in
 [`data/progression.csv`](data/progression.csv)). (a) Verified bonus score on the 56-case metric,
 46.18 → 52.48. (b) Main entry in the local noise model: summed expected score over N = 2–8,
 three calibrations, 16.62 → 17.66.
+
+**Fig. 5** ([pdf](fig5_main_scores.pdf), [png](fig5_main_scores.png)), single column. Main-entry
+expected score 1/(Z + X) for every case with N ≤ 8 and n ≤ N/2. Each bar is the mean over three
+synthetic calibrations in the local noise model (gate and readout errors, T1/T2, 7.5 kHz detuning).
+Ticks mark the noiseless limit for 10,000 shots per basis, where the Z term's shot-noise floor
+remains even for a perfect state. The circuits reach 17.66 of the possible 19.18 (92 %).
