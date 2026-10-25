@@ -51,6 +51,12 @@ The harness has no ZZ crosstalk, leakage, coherent CZ phase errors or drift. Add
 term (for example, about 100 kHz static ZZ between idle neighbours) and check that the DD and
 scheduling choices still win.
 
+Result (toby, 6 calibrations, N = 4..14, expected score summed over 25 cases): with 100 kHz static ZZ on every
+coupled pair, ryon/toby_sol.py (preliminary submission) 16.08 vs the ladder (toby/ladder_sol.py) 20.36, +4.28 +- 0.07
+(6/6); with coherent CZ phase errors (per-coupler conditional + local Z phase, sigma 0.03 rad) 20.03 vs 21.05,
++1.03 +- 0.20 (6/6). The shorter ladder circuits gain the most under crosstalk; DD (one x-x pair per idle window
+>= 8 moments) stays on in both.
+
 ### 5. Bonus question: adaptive circuits with lower depth (2 <= N <= 15)
 The bonus compares moment counts and allows mid-circuit measurement with feed-forward. The current
 code returns the packed standard circuit. Ideas: measurement-based fusion of W states, or the
