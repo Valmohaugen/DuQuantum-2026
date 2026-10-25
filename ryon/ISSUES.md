@@ -12,9 +12,67 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **17.077** (3 seeds, N = 2..8). Bonus (N <= 15): 37.81.
+Baseline at 0dc262c: total 16.615. Current: **17.192** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
 
 ## Open
+
+### BR-101. Exact Clifford refits before depth compilation
+Status: measured (bonus research, isolated files)
+`research/bonus_depth_20261024/clean_cliffords.py` fixes near-Clifford fitted
+rotations to exact multiples of pi/2, then refits every remaining angle against
+all coherent input columns. The aim is to expose commutation and cancellation
+that numerical residuals in the current SCS tables may hide. No maintained
+constructor changes are claimed. Acceptance: column error < 1e-10, then full
+56-case native/device/state validation and recorded depth score. Result:
+all accepted blocks have column error below 4e-15, but total bonus score is only
+39.4903307292 versus 39.4452746282. Native commuting-CZ rescheduling saves one
+additional moment on (15,7), with no change on (8,4), (10,5), or (12,6). GitHub's
+unauthenticated issues endpoint still returns 404; local queue is authoritative
+for this coordination note.
+
+### BR-102. Warm topology growth for two-row coherent halves
+Status: precision verified (isolated bonus experiment; overlaps fat-ladder layout)
+`research/bonus_depth_20261024/grid_half_5_3.json` currently holds a coherent
+(5,3,0) decoder with **19 CZ, depth 34** versus 27 CZ and depth 47 at start.
+Its cells follow a snake path on a 2x3 patch with one missing corner; final three
+unary count qubits occupy the boundary row. Every r=0..3 input maps to D(5,r)
+with one common global sign (column error 1.85e-8 before final precision refit).
+The search inserts cancelling CZ pairs on unused grid edges and allows
+intermediate depth increases while retaining the best depth. The shared
+constructor has not been edited; table may be useful to the fat-ladder work.
+Final tables: (5,3) 19 CZ / 34 moments; (6,3) 26 CZ / 44 moments;
+(7,3) 31 CZ / 55 moments. All r=0..3 columns pass to <3e-15 with
+one common phase. `grid_submission_v2.py` passes all 56 bonus cases at
+41.8172105916. The first export, `grid_submission.py`, scored 41.5087032261.
+
+### BR-104. Actual expected reciprocal score for a calibrated grid construction
+Status: measured at D(10,3), three paired calibrations
+`grid_hardware_probe.json`: mean E[score] 0.68514 -> 0.77570, with gains
++0.09496, +0.08875, +0.08795. Each score averages 4096 repetitions of
+10,000 shots per basis from the local density model, two detuning realizations,
+and all X orders. The sufficient-statistic scorer agrees with the original
+notebook (`grid_score_validation.json`), and the calibrated selector chooses
+43 CZ / 41 hardware moments on all three seeds (`grid_hardware_selector_checks.json`).
+These are local model results. The 19-CZ half is available for integration.
+
+### BR-105. Global state-only depth search escapes the ladder-isometry cost
+Status: independent D(8,4) validation passed; larger targets running
+`global_grid_8_4.json`: **25 CZ / 26 moments** as emitted before final compiler
+and commutation passes; complete constructor is **25 CZ / 25 moments**, versus
+49 CZ / 43 moments. Full complex128 state error 1.3e-15 and Willow native/device
+validation pass (`global_grid_8_4_independent.json`). Unlike a half-isometry fit,
+the optimization constrains only the final pure state, while alternating topology
+growth with pruning and preserving the best depth. Calibrated hardware-model
+comparison is running. Searches also target (9,4) and (10,5). No shared constructor
+edits; the patch data are in the research directory.
+
+### BR-103. Compressed binary Schmidt labels
+Status: exploratory
+A three-qubit binary-to-Dicke decoder was fitted with 7 CZ (unary uses 8).
+The first five-qubit, four-column binary-label search at 33 CZ did not converge
+exactly (best infidelity 0.00134); those fitted angles are not a valid candidate.
+Files: `research/bonus_depth_20261024/binary_decoder.py`,
+`binary_decoder_3.json`, `binary_5_3_0_20.json`.
 
 ### 1. Short CZ circuits on grid patches for small (N, k)
 Status: in progress (ryon session)
@@ -26,19 +84,53 @@ footprint (row 0 = left half, row 1 = right half).
 Random starting sequences don't converge exactly at N >= 7. What works there: take the line
 circuit on a Hamiltonian path of the patch, convert it with `synth.from_ops` (the leftover Z
 layer becomes the patch's `zset`), insert cancelling CZ pairs on patch edges, perturb, polish,
-then prune. (7,2) went 22 -> 18 in about 3 minutes this way.
+then prune. (7,2) went 22 -> 18 in about 3 minutes this way. Pruning the ladder circuit itself
+didn't help (its footprint has no spare edges). What converges reliably at N = 7: a random
+sequence that's heavily over-parameterised (L = 90 for (7,3) fits exactly in under a minute),
+then `synth.prune(..., window=4)`, which re-randomises only the angles near the removed CZ.
 Shapes to try: 2x3, 2x3+1, 2x4, 3x3 minus a corner. Rank finalists with `fast_eval`, not by CZ
 count alone, because depth also costs idle decoherence.
+
+### 7. Synthesised ladder halves
+Status: in progress (ryon session)
+Each ladder half maps |0^(a-l) 1^l> to D(a, l) for every l in range. `toby_sol.halves` holds
+synthesised versions on a path, keyed (a, min(k, a), l_min); `synth.py` fits them with
+target = (inputs, outputs). Path results so far: (4,3) 12 (line 18, installed), (3,3) 8 (line 9),
+and (3,2) 6, (4,2) 10, (4,4) 21 (equal to the line), (5,2) 15 (line 14). The (3,3) one scored
+worse than the line in simulation despite one CZ fewer (fully sequential, deeper), so only
+install a half after `fast_eval` confirms it helps.
+(4,4) 18 (line 21) is neutral in A/B (+0.006 on (8,4), -0.005 on (9,4)): the synthesised
+circuits are nearly fully sequential. Rule of thumb from the noise model: at N = 8 one extra CZ
+layer costs about as much as 2-3 extra CZs (idle T1/T2 on every qubit), so synthesis has to
+watch depth too. `search_brick.py` (benchmark_outputs/synth) starts from brickwork layers of the
+shape's edge colouring and minimises depth first, then CZ count. Use `ab.py <table> <key>
+<cases> <seeds>` to A/B a table entry before installing it.
+Still to beat: (5,3) 27, (5,4) 35, (5,5) 38, (6,2) 18, (6,3) 36, (6,4) 49, (6,5) 57, (6,6) 60.
+
+**Fat ladder** (in progress): give each half 2 rows, with its k register qubits in the row next
+to the rungs, then compose split + halves into one patch entry (exact, checked numerically).
+A 2x3 patch took (6,3) from 33 to 12 CZ, so 2-row halves could do the same for (6,2), (6,3)
+and (5,3) and help (10..12, 2..3). The first try, (8,2) from two 2x2 halves, is 25 CZ (ladder 23),
+so only worth it when the 2-row half beats the path half.
 
 ### 2. Evaluate larger N
 `fast_eval` stops at N = 8, but the judges' N range is unknown. Add N = 9..12 (density matrix
 size 4^N, so N = 12 is about 256 MB) with fewer seeds, so changes aren't tuned to small N only.
 
+Data (toby, trajectory simulator in eval/, same noise model family, expected score with max_correlator_size 4):
+N = 2..16 is covered on 10 notebook calibrations per round (44 instances, includes N = 14, 16 at n = 1, 2, 4, N/2).
+Spot checks for toby_sol @7e7133a, 1 calibration, 40 trajectories: D(18,2) 0.579 (63 cz), D(18,9) 0.239 (329 cz),
+D(20,5) 0.205 (275 cz), D(20,10) 0.207 (415 cz); combined_sol and halves_start_sol build the same circuits there.
+
+**Correlator size.** `fast_eval` sums X correlators up to weight N; toby's evaluator stops at 4.
+The judges' `max_correlator_size` isn't stated. With N, the X term dominates at n ~ N/2 for
+N >= 10 (for example (11,5) X = 0.90 of a 2.5 denominator), so the choice changes how much depth
+matters there. Worth reporting both.
+
 ### 3. Better n >= 2 construction for N >= 9
 Partly done: toby's two-half ladder (toby/ladder_sol.py) is merged into toby_sol and chosen per
-case by `estimate_error`. That selector is crude: on (5,2) and (6,2) it sometimes picks the
-option that simulates worse. A better estimate (or a small numpy noise simulation for N <= 8,
-since numpy is a cirq dependency) would fix it.
+case by `estimate_error`. Its selector is crude, but an oracle that always picks the best
+simulated candidate gains only +0.006 over N = 4..8 (5 seeds), so it's not worth replacing.
 The line split-and-cyclic-shift costs about 5 CZ per flagged gate and uses only a path. Options
 to evaluate: a grid-native layout (shorter paths between the SCS blocks), divide-and-conquer
 (Aktar, Bartschi, Badawy, Eidenbenz, IEEE TQE 2022), and the short-depth 2D construction of
@@ -48,6 +140,12 @@ Bartschi and Eidenbenz (arXiv:2207.09998).
 The harness has no ZZ crosstalk, leakage, coherent CZ phase errors or drift. Add a simple ZZ
 term (for example, about 100 kHz static ZZ between idle neighbours) and check that the DD and
 scheduling choices still win.
+
+Result (toby, 6 calibrations, N = 4..14, expected score summed over 25 cases): with 100 kHz static ZZ on every
+coupled pair, ryon/toby_sol.py (preliminary submission) 16.08 vs the ladder (toby/ladder_sol.py) 20.36, +4.28 +- 0.07
+(6/6); with coherent CZ phase errors (per-coupler conditional + local Z phase, sigma 0.03 rad) 20.03 vs 21.05,
++1.03 +- 0.20 (6/6). The shorter ladder circuits gain the most under crosstalk; DD (one x-x pair per idle window
+>= 8 moments) stays on in both.
 
 ### 5. Bonus question: adaptive circuits with lower depth (2 <= N <= 15)
 The bonus compares moment counts and allows mid-circuit measurement with feed-forward. The current
@@ -60,7 +158,15 @@ For (8,4), X is about 0.42 out of 1.77 in the denominator. High-weight X correla
 dephasing. Check how much comes from depth and how much from CZ error, and whether a different
 DD placement or a shallower schedule recovers it.
 
+Diagnosis (toby, D(12,6) with toby_sol @7e7133a, 2 calibrations, noise sources switched off one at a time):
+full E 0.457 (X 0.332, f 0.556); no detuning 0.470 (X 0.325); no Tphi 0.509 (X 0.281); no T1 0.580 (X 0.155);
+no gate error 0.609 (X 0.129). The X term near N/2 comes from T1 decay and gate error, not dephasing: DD already
+removes the detuning, so DD placement can't recover it. Only shorter circuits (less T1 time) and fewer CZ help.
+
 ## Done
+- Ported start blocks (restricted-range scs steps) from toby/halves_start_sol.py; ryon/toby_sol.py logic now matches it. Bonus 37.81 -> 38.30, N <= 8 unchanged.
+- Ported multi-split ladder search from toby/combined_sol.py (tries splits outward from balanced for 8 s): 17.173 -> 17.192. Max build time 20 s at N = 20.
+- Ladder half (4,3) on a path: 18 -> 12 CZ. (7,3) 0.789 -> 0.830, (8,3) 0.768 -> 0.824, and (9,3) 50 -> 44 CZ.
 - Merged toby/ladder_sol.py (ladder split, doubling tree, two-variant bonus) with the patch table: 16.755 -> 17.077, bonus 26.35 -> 37.81.
 - (6,2) 18 -> 14 CZ and (6,3) 33 -> 12 CZ on a 2x3 patch: E[s] 0.932 -> 0.962 and 0.825 -> 0.934.
 - (5,2) on a 5-qubit patch: 11 CZ, E[s] 0.986 -> 1.005 (0dc262c).

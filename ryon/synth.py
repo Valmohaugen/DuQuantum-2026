@@ -152,12 +152,19 @@ def polish(N, k, edges, x0, target=None):
     return float(r.fun), r.x
 
 
-def fit(N, k, edges, restarts=64, iters=400, seed=0, tol=1e-10, target=None):
-    """Best (infidelity, angles) over random restarts: batched Adam, then L-BFGS polish."""
+def fit(N, k, edges, restarts=64, iters=400, seed=0, tol=1e-10, target=None, x0=None, free=None):
+    """Best (infidelity, angles) over random restarts: batched Adam, then L-BFGS polish.
+
+    With x0, every restart starts from x0 and only the parameters in free are randomised.
+    """
     target = _problem(N, k, target)
     rng = np.random.default_rng(seed)
     P = n_params(N, edges)
     th = rng.uniform(-math.pi, math.pi, (restarts, P))
+    if x0 is not None:
+        keep = np.ones(P, bool)
+        keep[list(free)] = False
+        th[:, keep] = np.asarray(x0)[keep]
     m, v = np.zeros_like(th), np.zeros_like(th)
     lr, b1, b2 = 0.1, 0.9, 0.999
     for t in range(1, iters + 1):
@@ -188,8 +195,13 @@ def layers(edges):
     return depth
 
 
-def prune(N, k, edges, theta, rng, tol=1e-10, restarts=16, iters=300, target=None):
-    """Drop CZs one at a time (warm start, then random restarts) while an exact fit survives."""
+def prune(N, k, edges, theta, rng, tol=1e-10, restarts=16, iters=300, target=None, window=0):
+    """Drop CZs one at a time while an exact fit survives.
+
+    Each try first polishes from the old angles. If that fails and restarts > 0, it refits with
+    random restarts: all angles if window = 0, else only the angles of the CZs within window
+    places of the removed one (the rest stay warm, which works far better on long circuits).
+    """
     target = _problem(N, k, target)
     edges = list(edges)
     improved = True
@@ -201,8 +213,14 @@ def prune(N, k, edges, theta, rng, tol=1e-10, restarts=16, iters=300, target=Non
             x0 = np.concatenate([theta[:p], theta[p + 2:]])
             inf, x = polish(N, k, trial, x0, target)
             if inf > tol and restarts:
-                inf, x = fit(N, k, trial, restarts=restarts, iters=iters,
-                             seed=int(rng.integers(1 << 30)), tol=tol, target=target)
+                free = None
+                if window:
+                    lo, hi = max(0, i - window), min(len(trial), i + window)
+                    qs = {q for e in trial[lo:hi] for q in e}
+                    free = [N + 2 * j + h for j in range(lo, hi) for h in (0, 1)]
+                    free += [q for q in qs if all(q not in e for e in trial[:lo])]
+                inf, x = fit(N, k, trial, restarts=restarts, iters=iters, seed=int(rng.integers(1 << 30)),
+                             tol=tol, target=target, x0=x0 if window else None, free=free)
             if inf < tol:
                 edges, theta, improved = trial, x, True
                 break
