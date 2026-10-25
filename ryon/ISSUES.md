@@ -86,6 +86,10 @@ Trajectory result (toby, eval/ trajectory sim, N = 9..16 all n <= N/2 = 48 cases
 changed cases all gain under every model: (9,4) +0.11 / +0.22 coherent / +0.18 zz, (9,3) +0.05 / +0.08 / +0.08. The
 apparent (16,1) loss (-0.10) is one calibration where the split-half Zb estimator blew up at 80 trajectories (3.2);
 at 400 trajectories it is 0.909 vs 0.888, a gain. No case for prefer_synth = False. Re-running at HEAD for (10..11, k).
+At HEAD 59f8300 (6 more calibrations, >= 300 trajectories): base 29.82 -> 30.51 (+0.69 +- 0.08), coherent cz
+27.69 -> 28.77 (+1.09 +- 0.11), zz 100 kHz 25.75 -> 26.72 (+0.97 +- 0.05), 6/6 calibrations each; K = N +0.81 / +1.09 /
++0.99. Every changed case gains under every model, largest (10,5) +0.17 / +0.32 / +0.27, (11,3) +0.11 / +0.16 / +0.13.
+Status: done (toby). The pruned circuits are more robust to crosstalk and coherent error than the ladder, not less.
 
 ### 11. Pruned line halves for the ladder at N >= 17
 Status: in progress (ryon session, claimed 2026-10-25 01:35). Running on the cluster: half isometries
