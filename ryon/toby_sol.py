@@ -7,6 +7,7 @@ import cirq
 import cirq_google
 
 max_moments = 1750
+ladder_budget_s = 8.0
 search_time_s = 20.0
 beam_width = 3000
 idle_penalty = 1e-3
@@ -523,9 +524,13 @@ def create_dicke_state(
         path = best_path(adj, node, weights, deadline, bias)
         cands.append((path, line_ops(path, k, steps)))
     if layout_mode in ("auto", "ladder"):
-        #the bonus tries every split point; on hardware the balanced split
-        splits = range(k, n_q - k + 1) if pack else [(n_q + 1) // 2]
+        #try split points from the balanced one outward until the time budget runs out
+        mid = (n_q + 1) // 2
+        splits = sorted(range(k, n_q - k + 1), key=lambda a: (abs(a - mid), a))
+        started = time.monotonic()
         for a in splits:
+            if a != mid and time.monotonic() - started > ladder_budget_s:
+                break
             lad = best_ladder(adj, node, n_q, k, use_blocks, bias, deadline + 15, a)
             if lad is not None:
                 left, right, lsteps, rsteps = lad
