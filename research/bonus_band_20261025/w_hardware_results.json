@@ -1,0 +1,405 @@
+{
+  "status": "paired synthetic-calibration pilot; no maintained solver changes",
+  "source_sha256": "02512364d908c1e6f28fe288f5c94ff301fbf36e99e7fd0b9b853c462eceaae3",
+  "model": "2 detuning realizations, 10000 independent shots per basis; 32768 score Monte Carlo repetitions; identical calibrated qubit sets",
+  "rows": [
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 0,
+      "variant": "baseline",
+      "moments": 11,
+      "CZ": 13,
+      "single_qubit_gates": 27,
+      "build_seconds": 0.045734936371445656,
+      "state_l2_error": 3.8412691569637417e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.4525571041190357,
+          "MC_standard_error": 0.006244561696079683,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0367307875982354
+        },
+        "8": {
+          "E_score": 1.4520148966144395,
+          "MC_standard_error": 0.0062354299404730395,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0367307629079199
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 0,
+      "variant": "givens",
+      "moments": 10,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "build_seconds": 0.04640142526477575,
+      "state_l2_error": 3.618551672893828e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.4572071544326801,
+          "MC_standard_error": 0.006251751633017455,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0346679342162088
+        },
+        "8": {
+          "E_score": 1.456685308648943,
+          "MC_standard_error": 0.0062439927523322515,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0346678977324608
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 1,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "build_seconds": 0.043711294420063496,
+      "state_l2_error": 4.400882432915618e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.459541142430977,
+          "MC_standard_error": 0.006328390256246074,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0335122795720386
+        },
+        "8": {
+          "E_score": 1.4590123840330456,
+          "MC_standard_error": 0.006318875403030321,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0335122632189782
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 1,
+      "variant": "givens",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 31,
+      "build_seconds": 0.04595711175352335,
+      "state_l2_error": 6.171569809683408e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.4683407675326994,
+          "MC_standard_error": 0.006311139553929189,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.043235077230681
+        },
+        "8": {
+          "E_score": 1.4678152114934182,
+          "MC_standard_error": 0.006303008172531746,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0432350593821844
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 2,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 29,
+      "build_seconds": 0.04433895740658045,
+      "state_l2_error": 5.835603993082667e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.4733408327642643,
+          "MC_standard_error": 0.006522049968822766,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0445170009774785
+        },
+        "8": {
+          "E_score": 1.4727824255204034,
+          "MC_standard_error": 0.006512826689076004,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0445169850220941
+        }
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 2,
+      "variant": "givens",
+      "moments": 15,
+      "CZ": 13,
+      "single_qubit_gates": 31,
+      "build_seconds": 0.046314993873238564,
+      "state_l2_error": 6.821611210087772e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.4649579249440186,
+          "MC_standard_error": 0.006356932885143787,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.044237297644985
+        },
+        "8": {
+          "E_score": 1.4644278906767663,
+          "MC_standard_error": 0.006348660717455643,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0442372766699877
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 0,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 35,
+      "build_seconds": 0.05958862043917179,
+      "state_l2_error": 5.0394992397183375e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.2682968630289437,
+          "MC_standard_error": 0.004474266130489411,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9764377707219998
+        },
+        "10": {
+          "E_score": 1.267971033053895,
+          "MC_standard_error": 0.004470885264110897,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9764377674061451
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 0,
+      "variant": "givens",
+      "moments": 14,
+      "CZ": 17,
+      "single_qubit_gates": 41,
+      "build_seconds": 0.06191670149564743,
+      "state_l2_error": 6.66822379030534e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.2613375912767744,
+          "MC_standard_error": 0.00439343187290201,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9722140514577952
+        },
+        "10": {
+          "E_score": 1.2610208489573198,
+          "MC_standard_error": 0.004390037217428472,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9722140466452657
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 1,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 37,
+      "build_seconds": 0.06448263302445412,
+      "state_l2_error": 4.607428791494007e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.2858800790337197,
+          "MC_standard_error": 0.004405752547273823,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9925926056744312
+        },
+        "10": {
+          "E_score": 1.2855413583557054,
+          "MC_standard_error": 0.004401719834754647,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9925926016655151
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 1,
+      "variant": "givens",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 39,
+      "build_seconds": 0.06280610989779234,
+      "state_l2_error": 5.981243782991101e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.2866166378143116,
+          "MC_standard_error": 0.004430982623832581,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9880297195598272
+        },
+        "10": {
+          "E_score": 1.2862813829129354,
+          "MC_standard_error": 0.004427470071280269,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.988029712828401
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 2,
+      "variant": "baseline",
+      "moments": 15,
+      "CZ": 17,
+      "single_qubit_gates": 35,
+      "build_seconds": 0.06220776215195656,
+      "state_l2_error": 6.003920763109635e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.3004122601171626,
+          "MC_standard_error": 0.004377191609706474,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0035583905391796
+        },
+        "10": {
+          "E_score": 1.3000765576891937,
+          "MC_standard_error": 0.004373888238252784,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 1.0035583871506095
+        }
+      }
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 2,
+      "variant": "givens",
+      "moments": 14,
+      "CZ": 17,
+      "single_qubit_gates": 41,
+      "build_seconds": 0.0631610183045268,
+      "state_l2_error": 6.49046272732731e-16,
+      "scores": {
+        "4": {
+          "E_score": 1.2766062086395875,
+          "MC_standard_error": 0.004331896414343716,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9817056291951072
+        },
+        "10": {
+          "E_score": 1.2762881202377008,
+          "MC_standard_error": 0.0043288194781748,
+          "replicates": 32768,
+          "penalty_inverse_proxy": 0.9817056249958285
+        }
+      }
+    }
+  ],
+  "paired_differences": [
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 0,
+      "cutoff": 4,
+      "mean_delta": 0.004650050313644603,
+      "paired_MC_standard_error": 0.008752088152443169
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 0,
+      "cutoff": 8,
+      "mean_delta": 0.004670412034503392,
+      "paired_MC_standard_error": 0.008740122134943695
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 1,
+      "cutoff": 4,
+      "mean_delta": 0.008799625101722271,
+      "paired_MC_standard_error": 0.008709229957307213
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 1,
+      "cutoff": 8,
+      "mean_delta": 0.008802827460372472,
+      "paired_MC_standard_error": 0.008696847279706293
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 2,
+      "cutoff": 4,
+      "mean_delta": -0.008382907820245884,
+      "paired_MC_standard_error": 0.008903372392476683
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "seed": 2,
+      "cutoff": 8,
+      "mean_delta": -0.008354534843637091,
+      "paired_MC_standard_error": 0.008891154617138448
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 0,
+      "cutoff": 4,
+      "mean_delta": -0.006959271752169217,
+      "paired_MC_standard_error": 0.006200876314104531
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 0,
+      "cutoff": 10,
+      "mean_delta": -0.006950184096575332,
+      "paired_MC_standard_error": 0.0061960905257476395
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 1,
+      "cutoff": 4,
+      "mean_delta": 0.0007365587805918351,
+      "paired_MC_standard_error": 0.006233499944869779
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 1,
+      "cutoff": 10,
+      "mean_delta": 0.0007400245572299941,
+      "paired_MC_standard_error": 0.006228172139292559
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 2,
+      "cutoff": 4,
+      "mean_delta": -0.023806051477575037,
+      "paired_MC_standard_error": 0.005979075924045324
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "seed": 2,
+      "cutoff": 10,
+      "mean_delta": -0.023788437451492908,
+      "paired_MC_standard_error": 0.005974663561832851
+    }
+  ]
+}

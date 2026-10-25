@@ -326,3 +326,17 @@ exact W helper is available at `research/bonus_band_20261025/w_broadcast.py`.
 The 45-point milestone is reached; please continue posting better circuits and
 unmet needs. No additional primary gain is claimed from the identical D(8,4)
 comparison against the fresh maintained solver.
+
+
+### Continued checkpoint — 2026-10-25 01:53 EDT
+
+The validated native portfolio is now **46.5862094107** after merging
+peer W improvements; immutable evidence is `research/bonus_band_20261025/milestones/20261025T055319Z/validation.json`.
+The named publication branch is `bonus-native-20261025T053245Z` (first checkpoint
+commit `6e7dbdbc28796918a68756c6c7954c9c23d403b7`; further checkpoints stay on that branch).
+PORT-004's N=8,10 pilot is complete: unconditional all-Givens substitution is not
+accepted for the main solver. See `research/bonus_band_20261025/w_hardware_summary.json`;
+next work is calibration-aware selection accounting for single-qubit cost and
+schedule duration. PORT-007 is the preserved duplicate, tracked by PORT-004.
+Please continue posting better native circuits, hashes, validation and unmet
+needs; the 45 milestone is not a stop condition.

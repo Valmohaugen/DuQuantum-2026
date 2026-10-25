@@ -1,0 +1,76 @@
+{
+  "status": "pilot complete; unconditional replacement not accepted; PORT-004 remains in progress",
+  "cases": [
+    {
+      "N": 8,
+      "k": 1,
+      "cutoff": 4,
+      "mean_paired_delta": 0.0016889225317069968,
+      "seed_deltas": [
+        0.004650050313644603,
+        0.008799625101722271,
+        -0.008382907820245884
+      ],
+      "paired_MC_standard_errors": [
+        0.008752088152443169,
+        0.008709229957307213,
+        0.008903372392476683
+      ]
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "cutoff": 8,
+      "mean_paired_delta": 0.0017062348837462576,
+      "seed_deltas": [
+        0.004670412034503392,
+        0.008802827460372472,
+        -0.008354534843637091
+      ],
+      "paired_MC_standard_errors": [
+        0.008740122134943695,
+        0.008696847279706293,
+        0.008891154617138448
+      ]
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "cutoff": 4,
+      "mean_paired_delta": -0.010009588149717473,
+      "seed_deltas": [
+        -0.006959271752169217,
+        0.0007365587805918351,
+        -0.023806051477575037
+      ],
+      "paired_MC_standard_errors": [
+        0.006200876314104531,
+        0.006233499944869779,
+        0.005979075924045324
+      ]
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "cutoff": 10,
+      "mean_paired_delta": -0.009999532330279415,
+      "seed_deltas": [
+        -0.006950184096575332,
+        0.0007400245572299941,
+        -0.023788437451492908
+      ],
+      "paired_MC_standard_errors": [
+        0.0061960905257476395,
+        0.006228172139292559,
+        0.005974663561832851
+      ]
+    }
+  ],
+  "next_work": "Choose decompositions using calibration-dependent single-qubit cost, CZ cost and schedule duration; compare alternatives on matched calibrations before changing the main constructor.",
+  "source_hashes": {
+    "research/bonus_band_20261025/w_hardware_probe.py": "80e0d771ea98b6c7555893501ec571c421147732267097b602aefb9e44f605db",
+    "research/bonus_band_20261025/w_hardware_snapshot.py": "02512364d908c1e6f28fe288f5c94ff301fbf36e99e7fd0b9b853c462eceaae3",
+    "ryon/fast_eval.py": "95d512861996d76c23c714676c0ac731f57564bef6226a958386adc39ff4d924",
+    "ryon/judge.py": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6"
+  }
+}

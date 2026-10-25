@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "20261025T055319Z",
+  "bonus_score": 46.586209410688724,
+  "cases": 56,
+  "source_sha256": "bf7b0935a93196759e59425035f087eef9245ad2648885956d5b267f75604a94",
+  "max_build_seconds": 0.002403002232313156,
+  "max_state_l2_error": 6.004450501381107e-07,
+  "max_moments": 126,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "previous_score": 46.17863365311297,
+  "improvement": "Five independently validated peer W circuits at N=9,10,12,13,14",
+  "main_entry_point": "Unchanged from the preceding checkpoint; unconditional all-Givens hardware pilot did not justify replacement.",
+  "status": "Research continues beyond 45; PORT-004 remains in progress"
+}

@@ -249,3 +249,19 @@ Reusable W split decompositions are in
 Follow-ups and ownership are in [the task board](research/bonus_portfolio_20261025/tasks.json)
 and [the shared queue](ryon/ISSUES.md): calibrated W integration is assigned,
 while terminal-decoder integration and adaptive oracle work remain available.
+
+
+## Bonus checkpoint — 2026-10-25 01:53 EDT
+
+Best verified corrected 56-case bonus score: **46.5862094107**, up from
+46.1786336531 after independently checking five peer W-state improvements.
+All exported native/device/state checks passed; maximum constructor time was
+**0.002403 s** and maximum state L2 error **6e-07**.
+[Immutable candidate](research/bonus_band_20261025/milestones/20261025T055319Z/submission.py),
+[validation](research/bonus_band_20261025/milestones/20261025T055319Z/validation.json), and [summary](research/bonus_band_20261025/milestones/20261025T055319Z/summary.json).
+
+The calibrated-W pilot at N=8,10 gave mixed results and an adverse N=10 case,
+so the main constructor is unchanged. [Pilot evidence](research/bonus_band_20261025/w_hardware_summary.json)
+records both correlator cutoffs and Monte Carlo uncertainty. PORT-004 continues
+with calibration-aware selection; PORT-005/006 cover terminal integration and
+adaptive oracle work. Existing ownership is preserved.

@@ -1,0 +1,152 @@
+{
+  "status": "complete",
+  "all_owned_processes_terminal": true,
+  "certified_parameters": "six_decoder_baseline_refined.json",
+  "certified_native_circuit": "five_certified_circuit.json",
+  "comparison": [
+    {
+      "source": "four",
+      "n": 6,
+      "k": 6,
+      "depth": 77,
+      "CZ": 57,
+      "template_CZ": 57,
+      "max_column_error": 4.926430812087611e-15,
+      "column_errors": [
+        2.0634647453970263e-15,
+        3.577221899016452e-15,
+        4.926430812087611e-15,
+        4.758170362840016e-15,
+        4.169063495845127e-15,
+        2.065811677235254e-15,
+        2.4507920409984543e-15
+      ],
+      "qubits": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "common_phase": [
+        0.992322235922299,
+        -0.12367934384596875
+      ],
+      "native_device_validation": true
+    },
+    {
+      "source": "five",
+      "n": 6,
+      "k": 6,
+      "depth": 74,
+      "CZ": 55,
+      "template_CZ": 59,
+      "max_column_error": 2.0907056656590523e-15,
+      "column_errors": [
+        2.0907056656590523e-15,
+        1.5005766674246715e-15,
+        1.7746958782927742e-15,
+        1.8312767175468783e-15,
+        1.8603823529630847e-15,
+        1.8572213969503375e-15,
+        1.6966212304414126e-15
+      ],
+      "qubits": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "common_phase": [
+        -0.7125807465995656,
+        -0.7015901079516484
+      ],
+      "native_device_validation": true
+    }
+  ],
+  "improvement": {
+    "moments": 3,
+    "native_CZ": 2
+  },
+  "encoding": "For each r=0..6, |0^(6-r)1^r> maps to D(6,r) with one common global phase; nearest-neighbor path only.",
+  "validation": "Independent full Cirq 64x64 unitary checked against all seven input/output columns; PhasedXZ/CZ native gates and translated Willow circuit validated.",
+  "experiments": [
+    {
+      "seed": 6842,
+      "source": "five",
+      "grow_first": 0,
+      "budget_seconds": 240,
+      "trials": 364,
+      "growth_cycles": 2,
+      "best_moments": 74,
+      "process_exit_code": 0
+    },
+    {
+      "seed": 6843,
+      "source": "five",
+      "grow_first": 4,
+      "budget_seconds": 240,
+      "trials": 345,
+      "growth_cycles": 3,
+      "best_moments": 74,
+      "process_exit_code": 0
+    },
+    {
+      "seed": 6844,
+      "source": "five",
+      "grow_first": 80,
+      "budget_seconds": 240,
+      "trials": 363,
+      "growth_cycles": 3,
+      "best_moments": 74,
+      "process_exit_code": 0
+    }
+  ],
+  "conclusion": "No bounded experiment improved the 74-moment composed decoder. These searches do not establish a lower bound.",
+  "source_hashes": {
+    "search.py": "dbd7e22f815b51a20ccd557b5ffc628a0eaa255f025ce7cda77cab0dd4933671",
+    "six_decoder_baseline_refined.json": "7c16c4e27188432212472f2f648d36602cb2e39778a97ad2a7c4938b313db79d",
+    "five_certified_circuit.json": "27cf89861959cbe42cefc54fbda1d956ff0a30bda619a3e912ec1e3702d9c021",
+    "four_certified_circuit.json": "d2723c04cfad55c4661f176e8a0a69ade3f3171b4b746839c99ebc818b9c1a70",
+    "source_comparison.json": "4f32c6d6a07a91b05d021bad2a99d9f1c0a61b7ad9ff22b353b906f62bbf339f"
+  }
+}

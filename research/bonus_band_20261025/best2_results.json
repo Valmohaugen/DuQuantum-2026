@@ -1,0 +1,46 @@
+{
+  "cases": 56,
+  "score": 46.586209410688724,
+  "base": "best",
+  "peer_source": {
+    "source": "research/bonus_w_20261025/random_w_circuits.json",
+    "sha256": "28f78a4e653297609441f8464587e4671353b4f3dd47a41c0462ddc0073742de"
+  },
+  "improvements": [
+    {
+      "N": 9,
+      "k": 1,
+      "before": 11,
+      "depth": 10,
+      "state_l2_error": 7.163156750151689e-16
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "before": 12,
+      "depth": 11,
+      "state_l2_error": 5.74756259255024e-16
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "before": 13,
+      "depth": 12,
+      "state_l2_error": 1.4171180138116394e-15
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "before": 13,
+      "depth": 12,
+      "state_l2_error": 1.2874435381804815e-15
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "before": 13,
+      "depth": 12,
+      "state_l2_error": 1.1932724751302696e-15
+    }
+  ]
+}
