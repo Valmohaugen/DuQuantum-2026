@@ -1,0 +1,38 @@
+{
+  "status": "symmetric finite-difference check passed; no selection gain claimed",
+  "coefficients": {
+    "ideal": [
+      0.25,
+      0.2499999999999999,
+      0.2499999999999999,
+      0.25
+    ],
+    "linear": [
+      -1.3325067076795744e-19,
+      -8.515666042670634e-19,
+      1.5332125668338595e-18,
+      2.2199209400918126e-20
+    ],
+    "quadratic": [
+      -0.0002745286269465774,
+      -0.0002535570379282166,
+      -0.00036431867331944195,
+      -0.00016376699155535207
+    ],
+    "reference_hz": 100000.0
+  },
+  "checks": [
+    {
+      "epsilon": 0.1,
+      "max_quadratic_coefficient_error": 5.2619920759534e-09
+    },
+    {
+      "epsilon": 0.03,
+      "max_quadratic_coefficient_error": 4.736371780889037e-10
+    },
+    {
+      "epsilon": 0.01,
+      "max_quadratic_coefficient_error": 5.2770133206724024e-11
+    }
+  ]
+}

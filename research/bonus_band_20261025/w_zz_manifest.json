@@ -1,0 +1,14 @@
+{
+  "status": "complete fresh-seed pilot",
+  "files": {
+    "research/bonus_band_20261025/w_zz_sensitivity.py": "1542665a179ff46069238c6c1aac78a3f38f94e4d76d993ba3d921250c4acbce",
+    "research/bonus_band_20261025/w_zz_sensitivity_checks.json": "76bf45b7ebd229c7d5bc37755ebcea0c80368d310730860c5ed45f57ea7447fd",
+    "research/bonus_band_20261025/w_zz_selection.py": "2010b9c946432cdf8743251eb39247e038b2799c9a2dec1370dfdf8803c68871",
+    "research/bonus_band_20261025/w_zz_probe.py": "7ee25ca783a29b9330f303334e1e3cb2c8d3e3c3306943ca25cc1086ffaed485",
+    "research/bonus_band_20261025/w_zz_results.json": "cc70fc05cc9edd6d5d3b9af4153f15dd0d8ad357003e5427716066abe9be372a",
+    "research/bonus_band_20261025/w_zz_selections.json": "915309d751d8a83d8ca8212f2703acdc70da2742585a654a967c19dca5a04520",
+    "research/bonus_band_20261025/w_zz_summary.json": "ab55735ada04dcf34fb23cd922444d10d7012217c69e74f9755bb60a8c76d787"
+  },
+  "dependencies": "w_stress_manifest.json and w_z_manifest.json",
+  "command": "python -m research.bonus_band_20261025.w_zz_probe"
+}

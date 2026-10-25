@@ -1,0 +1,68 @@
+{
+  "status": "stress comparison complete; no promotion to main",
+  "summary": [
+    {
+      "N": 8,
+      "model": "nominal",
+      "cases": 6,
+      "mean_score_delta": 0.019350635760094038,
+      "conditional_MC_standard_error": 0.003707219591782649,
+      "calibration_standard_error": 0.00614420771229616,
+      "positive": 6,
+      "negative": 0
+    },
+    {
+      "N": 8,
+      "model": "coherent",
+      "cases": 6,
+      "mean_score_delta": 0.05243111976508747,
+      "conditional_MC_standard_error": 0.0034926151499992814,
+      "calibration_standard_error": 0.019718340360305682,
+      "positive": 5,
+      "negative": 1
+    },
+    {
+      "N": 8,
+      "model": "zz",
+      "cases": 6,
+      "mean_score_delta": -0.039033234454590233,
+      "conditional_MC_standard_error": 0.003458810974437069,
+      "calibration_standard_error": 0.05245615605512488,
+      "positive": 2,
+      "negative": 4
+    },
+    {
+      "N": 10,
+      "model": "nominal",
+      "cases": 6,
+      "mean_score_delta": 0.009769951548633795,
+      "conditional_MC_standard_error": 0.0020217885008258223,
+      "calibration_standard_error": 0.0063663224059908345,
+      "positive": 3,
+      "negative": 1
+    },
+    {
+      "N": 10,
+      "model": "coherent",
+      "cases": 6,
+      "mean_score_delta": 0.011638529627591232,
+      "conditional_MC_standard_error": 0.001979822306041116,
+      "calibration_standard_error": 0.010218059017756171,
+      "positive": 3,
+      "negative": 1
+    },
+    {
+      "N": 10,
+      "model": "zz",
+      "cases": 6,
+      "mean_score_delta": -0.022187867134981516,
+      "conditional_MC_standard_error": 0.001932308328350303,
+      "calibration_standard_error": 0.01998337371993549,
+      "positive": 2,
+      "negative": 2
+    }
+  ],
+  "decision": "Nominal and coherent-model mean gains do not carry over to the defined100kHz ZZ model. Keep current published main; test explicit ZZ-sensitive ranking before promotion.",
+  "scope": "100kHz uniform residual coupling is an assumed stress model, not a measured Willow parameter. Only selected-qubit calibrated couplers are included; no external spectators or pulse-overlap model.",
+  "model_source_sha256": "8998c4e7f1dba256d04061eba1cfbe8dfcec092e4d66225eb604b72c20136543"
+}

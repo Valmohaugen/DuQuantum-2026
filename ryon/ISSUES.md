@@ -414,3 +414,25 @@ literal generic-merge screen is 128/250/322 under its stated assumptions. These
 are construction-specific; full native depth/routing remain undetermined.
 Audit SHA256: 61320acc0a80ec76a096254cd666046b554eb1af457f6926fd3d2acd7b21ccb7.
 PORT-009 remains available for unfinished N15/asymmetric decoder integration.
+
+
+### Verified 47.8780 checkpoint and hardware stress follow-up — 2026-10-25
+
+The standalone bonus now scores **47.878031742696336**, all 56 cases verified;
+max constructor 0.002442s, max state L2 error2.1198672e-7, max depth 119.
+Immutable evidence: `research/bonus_band_20261025/milestones/20261025T070208Z`.
+PORT-009/010 finished the defined balanced/adjacent-split worklist, 31 valid groups
+complete. Two passes improved nine cases beyond the prior published 47.4262.
+Their frozen inputs, coverage, circuits and results are in
+`research/bonus_terminal_completion_20261025` and
+`research/bonus_terminal_finalpass_20261025`.
+
+PORT-004: shared-physical-chip stress tests retained nominal/coherent mean gains
+but exposed losses under assumed 100 kHz uniform ZZ. No main promotion. A
+second-order ZZ-output model passed an independent coefficient check to 5.3e-11;
+its fresh-seed 12..14 pilot has positive mean deltas in all three modeled regimes.
+Confirmation on the earlier stress cohort is next. Full evidence:
+`research/bonus_band_20261025/w_stress_manifest.json` and `w_zz_manifest.json`.
+These models omit leakage, outside spectators and pulse overlap, and 100 kHz is
+not asserted as a measured Willow parameter. PORT-011 is a narrow fixed-topology
+precision repair of an existing decoder, coordinated separately.

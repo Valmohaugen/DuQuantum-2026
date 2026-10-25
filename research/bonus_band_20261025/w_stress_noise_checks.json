@@ -1,0 +1,5 @@
+{
+  "nominal_density_error": 0.0,
+  "independent_Cirq_unitary_density_error": 2.4983193193580397e-16,
+  "status": "nominal channel equivalence and coherent/ZZ phase convention checked independently"
+}

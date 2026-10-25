@@ -324,3 +324,21 @@ The [symmetrization resource audit](research/bonus_symmetrization_audit_20261025
 found an optimistic 116-qubit lower bound for its direct N15 register layout,
 before scratch space. This limits that implementation, not all Dicke circuits;
 no native-depth improvement is claimed.
+
+
+## Verified bonus checkpoint — 2026-10-25
+
+Best corrected 56-case bonus score: **47.8780317427**, up **0.4518655480**
+from the previous published 47.4261661947 checkpoint. Two completed integration
+passes improved nine cases. All 31 valid groups in the defined balanced/adjacent
+split worklist are covered; broader circuit searches remain open.
+All standalone state/native/device checks pass. Maximum construction time:
+**0.002442 s**; maximum state L2 error: **2.12e-07**.
+
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T070208Z/submission.py),
+[full validation](research/bonus_band_20261025/milestones/20261025T070208Z/validation.json),
+[checkpoint summary](research/bonus_band_20261025/milestones/20261025T070208Z/summary.json).
+The main entry point remains unchanged. The nominal W-selector gains were
+sensitive to an explicitly assumed 100 kHz ZZ stress model; a coupling-aware
+selector is being tested before any main-path promotion. This stress rate is
+not a measured Willow calibration value.

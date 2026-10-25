@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "20261025T065041Z",
+  "bonus_score": 47.714449422770166,
+  "previous_score": 47.42616619465258,
+  "increment": 0.2882832281175851,
+  "cases": 56,
+  "source_sha256": "580e2dde3d74fb3b431eb79ea6df7397fa7de95fcb31621811722654aed7a6bb",
+  "max_build_seconds": 0.0024567749351263046,
+  "max_state_l2_error": 2.1198671890529493e-07,
+  "max_moments": 119,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "improvement": "Six native-depth reductions: N15 k4..7 and N13 k4,5; all N15 balanced and adjacent splits covered.",
+  "main_entry_point": "Preserved published main entry point; hardware-selector stress validation is separate and ongoing."
+}

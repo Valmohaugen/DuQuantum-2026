@@ -147,12 +147,12 @@
       ],
       "result_status": "completed for N8/10 seeds0..5, four detuning realizations; held-out seeds3..5; no primary gain claimed"
     },
-    "pilot_status": "Z-probability selector validated on original and fresh synthetic seeds0..11;20wins,1loss,3baseline over24cases; main unchanged",
+    "pilot_status": "Stress test complete: mean nominal/coherent gains, mean losses under assumed100kHz uniformZZ; candidate not promoted.",
     "pilot_evidence": [
       "research/bonus_band_20261025/w_hardware_results.json",
       "research/bonus_band_20261025/w_hardware_summary.json"
     ],
-    "next_work": "Run coherent-error/crosstalk robustness checks against the maintained solver, then integrate a guarded bounded-domain selector if supported. Current W-related maintained functions match the frozen baseline.",
+    "next_work": "Evaluate second-order ZZ-sensitive ranking on fresh seeds12..14; preserve baseline and distinguish assumed stress models from measured hardware.",
     "cost_pilot_evidence": [
       "research/bonus_band_20261025/w_cost_summary.json",
       "research/bonus_band_20261025/w_tree_summary.json",
@@ -167,6 +167,10 @@
     "confirmation_evidence": [
       "research/bonus_band_20261025/w_z_baseline_summary.json",
       "research/bonus_band_20261025/w_z_baseline_manifest.json"
+    ],
+    "stress_evidence": [
+      "research/bonus_band_20261025/w_stress_summary.json",
+      "research/bonus_band_20261025/w_stress_manifest.json"
     ]
   },
   {
@@ -318,8 +322,8 @@
   {
     "id": "PORT-009",
     "title": "Finish bounded terminal integration at N15 and asymmetric splits",
-    "status": "available",
-    "assignee": null,
+    "status": "complete",
+    "assignee": "bonus-integration",
     "scope": "Reuse PORT005 frozen decoder library and 47.4261661947 best3 portfolio; no new coefficient synthesis.",
     "inputs": [
       "research/bonus_terminal_integration_20261025/integrate.py",
@@ -331,6 +335,206 @@
       "Retain every previous per-case best depth; report coverage and elapsed budget.",
       "Maintain coherent decoder error <1e-10 and revalidate all 56 native state/device cases before publishing any score."
     ],
-    "suggested_owner": "Portfolio integration worker; available for pickup"
+    "suggested_owner": "Portfolio integration worker; available for pickup",
+    "integration_directory": "research/bonus_terminal_completion_20261025",
+    "compute_budget_seconds": 240,
+    "current_scope": "Freeze best3; prioritize N15 k>=4 balanced and +/-1 splits, then other asymmetric cases; no fitting; verify all 56 retained cases.",
+    "result_scope": "Completed bounded 240-second pass; all feasible N15 balanced/+/-1 splits finished; lower-N remainder explicitly recorded.",
+    "result": {
+      "score": 47.714449422770166,
+      "baseline_score": 47.42616619465258,
+      "gain": 0.2882832281175851,
+      "trials": 280,
+      "search_seconds": 240.09387295972556,
+      "total_seconds": 242.74262504838407,
+      "max_state_l2_error": 2.1198671890529493e-07,
+      "max_cached_build_seconds": 0.00016450602561235428,
+      "coverage_counts": {
+        "complete": 15,
+        "infeasible-split": 9,
+        "partial": 1,
+        "not-started": 15
+      },
+      "improved_cases": [
+        {
+          "N": 13,
+          "k": 4,
+          "before": 84,
+          "depth": 79,
+          "CZ": 113,
+          "state_l2_error": 1.9121874301883697e-14,
+          "build_seconds": 6.132107228040695e-05
+        },
+        {
+          "N": 13,
+          "k": 5,
+          "before": 93,
+          "depth": 86,
+          "CZ": 139,
+          "state_l2_error": 1.7607720053659528e-14,
+          "build_seconds": 9.94345173239708e-05
+        },
+        {
+          "N": 15,
+          "k": 4,
+          "before": 99,
+          "depth": 92,
+          "CZ": 156,
+          "state_l2_error": 1.3015511094703886e-14,
+          "build_seconds": 8.214730769395828e-05
+        },
+        {
+          "N": 15,
+          "k": 5,
+          "before": 108,
+          "depth": 101,
+          "CZ": 183,
+          "state_l2_error": 1.3283837302077408e-14,
+          "build_seconds": 8.552055805921555e-05
+        },
+        {
+          "N": 15,
+          "k": 6,
+          "before": 117,
+          "depth": 110,
+          "CZ": 200,
+          "state_l2_error": 1.1425558864243036e-14,
+          "build_seconds": 0.00010845623910427094
+        },
+        {
+          "N": 15,
+          "k": 7,
+          "before": 126,
+          "depth": 119,
+          "CZ": 207,
+          "state_l2_error": 1.4185837371491e-14,
+          "build_seconds": 0.0001091938465833664
+        }
+      ]
+    },
+    "artifacts": [
+      "research/bonus_terminal_completion_20261025/integration_circuits.json",
+      "research/bonus_terminal_completion_20261025/integration_results.json",
+      "research/bonus_terminal_completion_20261025/coverage.json",
+      "research/bonus_terminal_completion_20261025/handoff_summary.json",
+      "research/bonus_terminal_completion_20261025/sources.json",
+      "research/bonus_terminal_completion_20261025/handoff_manifest.json"
+    ],
+    "remaining_work": "Eight candidates remain in N13,k5 offset-1 False-block group; 15 valid lower-N groups not started. Exact list in handoff_summary.json. Restricted5,4 remains rejected at8.32e-8.",
+    "pool_sha256": "1027642eb585280bdf1f74a3a00427e88eadeb487cdf0b620ad55e51e8d5b553"
+  },
+  {
+    "id": "PORT-010",
+    "title": "Complete remaining lower-N asymmetric terminal coverage",
+    "status": "complete",
+    "assignee": "bonus-integration",
+    "scope": "Reuse the frozen PORT009 pool and decoder inputs; no coefficient fitting. Coordinate one-CPU slot before starting.",
+    "inputs": [
+      "research/bonus_terminal_completion_20261025/integrate.py",
+      "research/bonus_terminal_completion_20261025/coverage.json",
+      "research/bonus_terminal_completion_20261025/integration_circuits.json"
+    ],
+    "priority": "Start with N13,k6 at6/7 split, then remaining N13,k5 candidates; enumerate the other 14 not-started groups from coverage rather than rerunning completed N15.",
+    "acceptance": [
+      "Retain per-case best depth and report every attempted/skipped group.",
+      "Preserve coherent decoder error <1e-10; do not introduce the uncertified restricted5,4 table.",
+      "Validate all56 native state/device cases and report score, hashes and explicit elapsed budget."
+    ],
+    "integration_directory": "research/bonus_terminal_finalpass_20261025",
+    "compute_budget_seconds": 90,
+    "current_scope": "Explicit CPU release received; running90-second frozen-pool integration and all56validation, with no synthesis.",
+    "result_scope": "All 16 remaining valid PORT009 groups complete; combined coverage is 31 complete groups and 9 infeasible splits.",
+    "result": {
+      "score": 47.878031742696336,
+      "baseline_score": 47.714449422770166,
+      "gain": 0.16358231992617078,
+      "trials": 260,
+      "search_seconds": 88.50824978388846,
+      "total_seconds": 91.1081092664972,
+      "max_state_l2_error": 2.1198671890529493e-07,
+      "max_cached_build_seconds": 0.00019052810966968536,
+      "coverage_counts": {
+        "complete": 16
+      },
+      "improved_cases": [
+        {
+          "N": 11,
+          "k": 4,
+          "before": 66,
+          "depth": 61,
+          "CZ": 85,
+          "state_l2_error": 6.032375059033332e-15,
+          "build_seconds": 3.78219410777092e-05
+        },
+        {
+          "N": 11,
+          "k": 5,
+          "before": 78,
+          "depth": 71,
+          "CZ": 95,
+          "state_l2_error": 2.1223235726369204e-14,
+          "build_seconds": 4.605483263731003e-05
+        },
+        {
+          "N": 13,
+          "k": 6,
+          "before": 102,
+          "depth": 97,
+          "CZ": 143,
+          "state_l2_error": 2.3600030021912277e-14,
+          "build_seconds": 6.353762000799179e-05
+        }
+      ],
+      "unfinished": [],
+      "combined_PORT009_010_coverage": {
+        "complete": 31,
+        "infeasible-split": 9
+      },
+      "scope_limit": "This completes top-three decoder choices for the PORT009/010 N15 balanced and N10..15 +/-1 split worklist, not every topology, terminal combination, or offset. Restricted5,4 precision still uncertified."
+    },
+    "artifacts": [
+      "research/bonus_terminal_finalpass_20261025/integration_circuits.json",
+      "research/bonus_terminal_finalpass_20261025/integration_results.json",
+      "research/bonus_terminal_finalpass_20261025/coverage.json",
+      "research/bonus_terminal_finalpass_20261025/previous_coverage.json",
+      "research/bonus_terminal_finalpass_20261025/handoff_summary.json",
+      "research/bonus_terminal_finalpass_20261025/sources.json",
+      "research/bonus_terminal_finalpass_20261025/handoff_manifest.json"
+    ],
+    "pool_sha256": "cbed65c446eacf841c2e615556e3a37d9e670f91e8fc681ab473601adc791785",
+    "remaining_work": "No remaining groups in this worklist. Broader offsets/topologies and candidates outside the top-three terminal screen are unsearched; restricted5,4 still requires precision certification coordinated with shared issue7 owner."
+  },
+  {
+    "id": "PORT-011",
+    "title": "Precision-certify the existing restricted five-site 26-CZ decoder",
+    "status": "shared-workspace study; publication pending",
+    "assignee": "bonus-precision",
+    "scope": "Fixed-sequence coefficient polishing only in research/bonus_half_precision_20261025; no topology search or maintained-solver changes. Ryon retains broader issue7 synthesis ownership.",
+    "inputs": [
+      "benchmark_outputs/synth/sol_half_5_4_0_s2.json",
+      "research/bonus_band_20261025/best5_circuits.json"
+    ],
+    "compute_budget_seconds": 60,
+    "acceptance": [
+      "Freeze the existing26-CZ sequence and57angles; fit all unary r=0..4 columns with one common phase, not independent column phases.",
+      "Retain strict native-column error below1e-10; no threshold relaxation and no unsupported r5 use.",
+      "After certification prepare affected k<=4 depth comparisons against frozen47.878031742696336 pool; preserve all prior best circuits.",
+      "Do not launch until explicit CPU release; publish source hashes and measured certification evidence."
+    ],
+    "precision_result": {
+      "max_native_column_error": 1.5249433019913284e-15,
+      "native_depth": 35,
+      "CZ": 26,
+      "numerical_seconds": 0.2619206830859184,
+      "supported_r": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "comparison_budget_seconds": 90,
+    "publication_note": "This ticket records a concurrent shared-workspace study. Its precision evidence and subsequent integration result will be published with the next checkpoint; they are not included in this 47.8780 snapshot."
   }
 ]

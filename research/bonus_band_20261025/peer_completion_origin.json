@@ -1,0 +1,18 @@
+{
+  "source_directory": "research/bonus_terminal_completion_20261025",
+  "files": {
+    "integration_circuits.json": "1027642eb585280bdf1f74a3a00427e88eadeb487cdf0b620ad55e51e8d5b553",
+    "integration_results.json": "f377c116a3228faf0e0cc58d67cebac9cfd01df8b4d8c1061f243bd8bafe1326",
+    "integrate.py": "62d0cf1b80602554a5a060e74429afdfb9bbf378548b521d4f97d4de34bd5dbe",
+    "sources.json": "877ce95c0e8d314bf3f5ed87ddb15648f632990a91d772327628e5e06eed77bf",
+    "decoder_checks.json": "ede7a467a752f83386be169b7c1f78b24ec7eb6c6fc46258541c7ded1e91f87d",
+    "coverage.json": "8865a7d73c8bc2e6d2c7bf0efce56bcfa01e7177ed16c8097c7fff6d7e84eb82"
+  },
+  "previous_score": 47.42616619465258,
+  "score": 47.714449422770166,
+  "manifest_finalization": {
+    "capture_time_sha256": "ee0fd1d1f25c35175722dd18e9f10e6c38f490f999b6e059911b82b3f6fe583c",
+    "published_sha256": "877ce95c0e8d314bf3f5ed87ddb15648f632990a91d772327628e5e06eed77bf",
+    "note": "Source-list metadata was finalized after the circuit pool capture; the captured integration code, pool and results hashes still match."
+  }
+}

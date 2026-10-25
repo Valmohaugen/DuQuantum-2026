@@ -1,0 +1,48 @@
+{
+  "score": 47.878031742696336,
+  "baseline_score": 47.714449422770166,
+  "gain": 0.16358231992617078,
+  "trials": 260,
+  "search_seconds": 88.50824978388846,
+  "total_seconds": 91.1081092664972,
+  "max_state_l2_error": 2.1198671890529493e-07,
+  "max_cached_build_seconds": 0.00019052810966968536,
+  "coverage_counts": {
+    "complete": 16
+  },
+  "improved_cases": [
+    {
+      "N": 11,
+      "k": 4,
+      "before": 66,
+      "depth": 61,
+      "CZ": 85,
+      "state_l2_error": 6.032375059033332e-15,
+      "build_seconds": 3.78219410777092e-05
+    },
+    {
+      "N": 11,
+      "k": 5,
+      "before": 78,
+      "depth": 71,
+      "CZ": 95,
+      "state_l2_error": 2.1223235726369204e-14,
+      "build_seconds": 4.605483263731003e-05
+    },
+    {
+      "N": 13,
+      "k": 6,
+      "before": 102,
+      "depth": 97,
+      "CZ": 143,
+      "state_l2_error": 2.3600030021912277e-14,
+      "build_seconds": 6.353762000799179e-05
+    }
+  ],
+  "unfinished": [],
+  "combined_PORT009_010_coverage": {
+    "complete": 31,
+    "infeasible-split": 9
+  },
+  "scope_limit": "This completes top-three decoder choices for the PORT009/010 N15 balanced and N10..15 +/-1 split worklist, not every topology, terminal combination, or offset. Restricted5,4 precision still uncertified."
+}

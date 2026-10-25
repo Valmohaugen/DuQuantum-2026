@@ -1,0 +1,553 @@
+{
+  "search_budget_seconds": 90.0,
+  "search_seconds": 88.50824978388846,
+  "coverage_file": "coverage.json",
+  "status": "56 retained explicit native circuits validated",
+  "cases": 56,
+  "baseline_score": 47.714449422770166,
+  "score": 47.878031742696336,
+  "trials": 260,
+  "seconds": 91.1081092664972,
+  "improvements": [
+    {
+      "N": 13,
+      "k": 6,
+      "before": 102,
+      "depth": 97,
+      "CZ": 143,
+      "state_l2_error": 2.3600030021912277e-14,
+      "source": "ladder-6-True-five_complex-five_complex",
+      "trials": 1,
+      "seconds": 5.118068826384842
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "before": 66,
+      "depth": 61,
+      "CZ": 85,
+      "state_l2_error": 6.032375059033332e-15,
+      "source": "ladder-5-True-old-4-4-five_complex",
+      "trials": 63,
+      "seconds": 44.61777174286544
+    },
+    {
+      "N": 11,
+      "k": 5,
+      "before": 78,
+      "depth": 71,
+      "CZ": 95,
+      "state_l2_error": 2.1223235726369204e-14,
+      "source": "ladder-5-True-old-4-4-five_complex",
+      "trials": 81,
+      "seconds": 50.65338160470128
+    }
+  ],
+  "rows": [
+    {
+      "N": 2,
+      "k": 1,
+      "before": 3,
+      "depth": 3,
+      "CZ": 1,
+      "state_l2_error": 0.0,
+      "build_seconds": 2.081599086523056e-05
+    },
+    {
+      "N": 3,
+      "k": 1,
+      "before": 6,
+      "depth": 6,
+      "CZ": 3,
+      "state_l2_error": 2.5702022701040905e-16,
+      "build_seconds": 2.116616815328598e-05
+    },
+    {
+      "N": 4,
+      "k": 1,
+      "before": 7,
+      "depth": 7,
+      "CZ": 5,
+      "state_l2_error": 1.9329521701561158e-16,
+      "build_seconds": 2.3414380848407745e-05
+    },
+    {
+      "N": 4,
+      "k": 2,
+      "before": 9,
+      "depth": 9,
+      "CZ": 7,
+      "state_l2_error": 2.1516166256609977e-16,
+      "build_seconds": 2.2541731595993042e-05
+    },
+    {
+      "N": 5,
+      "k": 1,
+      "before": 8,
+      "depth": 8,
+      "CZ": 7,
+      "state_l2_error": 2.4447108884999422e-09,
+      "build_seconds": 2.552475780248642e-05
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "before": 14,
+      "depth": 14,
+      "CZ": 11,
+      "state_l2_error": 1.6114759184751652e-08,
+      "build_seconds": 3.247614949941635e-05
+    },
+    {
+      "N": 6,
+      "k": 1,
+      "before": 9,
+      "depth": 9,
+      "CZ": 9,
+      "state_l2_error": 4.016338140445276e-09,
+      "build_seconds": 2.375338226556778e-05
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "before": 15,
+      "depth": 15,
+      "CZ": 15,
+      "state_l2_error": 2.2575742155111936e-08,
+      "build_seconds": 3.493111580610275e-05
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "before": 15,
+      "depth": 15,
+      "CZ": 12,
+      "state_l2_error": 3.2304185442991374e-08,
+      "build_seconds": 3.240909427404404e-05
+    },
+    {
+      "N": 7,
+      "k": 1,
+      "before": 9,
+      "depth": 9,
+      "CZ": 11,
+      "state_l2_error": 5.227824558750047e-16,
+      "build_seconds": 2.6469118893146515e-05
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "before": 17,
+      "depth": 17,
+      "CZ": 18,
+      "state_l2_error": 4.6191797977234656e-08,
+      "build_seconds": 3.562215715646744e-05
+    },
+    {
+      "N": 7,
+      "k": 3,
+      "before": 21,
+      "depth": 21,
+      "CZ": 21,
+      "state_l2_error": 2.603088029569278e-08,
+      "build_seconds": 4.050787538290024e-05
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "before": 10,
+      "depth": 10,
+      "CZ": 13,
+      "state_l2_error": 3.9287561387859713e-16,
+      "build_seconds": 2.7461908757686615e-05
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "before": 18,
+      "depth": 18,
+      "CZ": 23,
+      "state_l2_error": 2.326878117158936e-08,
+      "build_seconds": 3.5142526030540466e-05
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "before": 25,
+      "depth": 25,
+      "CZ": 29,
+      "state_l2_error": 2.0213302093701373e-08,
+      "build_seconds": 4.4131651520729065e-05
+    },
+    {
+      "N": 8,
+      "k": 4,
+      "before": 21,
+      "depth": 21,
+      "CZ": 22,
+      "state_l2_error": 9.76707831187842e-09,
+      "build_seconds": 3.9628706872463226e-05
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "before": 10,
+      "depth": 10,
+      "CZ": 15,
+      "state_l2_error": 7.163156750151689e-16,
+      "build_seconds": 2.6518478989601135e-05
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "before": 20,
+      "depth": 20,
+      "CZ": 27,
+      "state_l2_error": 3.943117394416659e-08,
+      "build_seconds": 3.85381281375885e-05
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "before": 33,
+      "depth": 33,
+      "CZ": 33,
+      "state_l2_error": 5.558814965212267e-08,
+      "build_seconds": 5.410145968198776e-05
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "before": 30,
+      "depth": 30,
+      "CZ": 35,
+      "state_l2_error": 3.386351269327107e-08,
+      "build_seconds": 4.921760410070419e-05
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "before": 11,
+      "depth": 11,
+      "CZ": 17,
+      "state_l2_error": 5.74756259255024e-16,
+      "build_seconds": 2.9507093131542206e-05
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "before": 22,
+      "depth": 22,
+      "CZ": 35,
+      "state_l2_error": 4.883160239634143e-08,
+      "build_seconds": 5.307048559188843e-05
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "before": 35,
+      "depth": 35,
+      "CZ": 40,
+      "state_l2_error": 5.4014329981805946e-08,
+      "build_seconds": 6.587710231542587e-05
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "before": 45,
+      "depth": 45,
+      "CZ": 48,
+      "state_l2_error": 2.1198671890529493e-07,
+      "build_seconds": 6.527174264192581e-05
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "before": 37,
+      "depth": 37,
+      "CZ": 44,
+      "state_l2_error": 6.582569078603236e-08,
+      "build_seconds": 5.732383579015732e-05
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "before": 12,
+      "depth": 12,
+      "CZ": 19,
+      "state_l2_error": 5.801100496966566e-16,
+      "build_seconds": 2.956390380859375e-05
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "before": 25,
+      "depth": 25,
+      "CZ": 43,
+      "state_l2_error": 2.1123704936143705e-15,
+      "build_seconds": 4.618987441062927e-05
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "before": 45,
+      "depth": 45,
+      "CZ": 45,
+      "state_l2_error": 1.1862592072738487e-07,
+      "build_seconds": 6.75572082400322e-05
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "before": 66,
+      "depth": 61,
+      "CZ": 85,
+      "state_l2_error": 6.032375059033332e-15,
+      "build_seconds": 3.78219410777092e-05
+    },
+    {
+      "N": 11,
+      "k": 5,
+      "before": 78,
+      "depth": 71,
+      "CZ": 95,
+      "state_l2_error": 2.1223235726369204e-14,
+      "build_seconds": 4.605483263731003e-05
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "before": 12,
+      "depth": 12,
+      "CZ": 21,
+      "state_l2_error": 1.4171180138116394e-15,
+      "build_seconds": 2.9735267162322998e-05
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "before": 25,
+      "depth": 25,
+      "CZ": 47,
+      "state_l2_error": 2.3613278660637557e-15,
+      "build_seconds": 4.993937909603119e-05
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "before": 45,
+      "depth": 45,
+      "CZ": 52,
+      "state_l2_error": 6.852568833587258e-08,
+      "build_seconds": 6.527360528707504e-05
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "before": 66,
+      "depth": 66,
+      "CZ": 99,
+      "state_l2_error": 1.3234683823202386e-14,
+      "build_seconds": 9.932555258274078e-05
+    },
+    {
+      "N": 12,
+      "k": 5,
+      "before": 78,
+      "depth": 78,
+      "CZ": 111,
+      "state_l2_error": 2.6464032491251588e-14,
+      "build_seconds": 0.00010999199002981186
+    },
+    {
+      "N": 12,
+      "k": 6,
+      "before": 82,
+      "depth": 82,
+      "CZ": 119,
+      "state_l2_error": 1.9918113421449034e-14,
+      "build_seconds": 0.00011921301484107971
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "before": 12,
+      "depth": 12,
+      "CZ": 23,
+      "state_l2_error": 1.2874435381804815e-15,
+      "build_seconds": 3.2534822821617126e-05
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "before": 29,
+      "depth": 29,
+      "CZ": 51,
+      "state_l2_error": 3.395992695024018e-08,
+      "build_seconds": 6.217695772647858e-05
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "before": 62,
+      "depth": 62,
+      "CZ": 66,
+      "state_l2_error": 3.804778336371741e-15,
+      "build_seconds": 8.599739521741867e-05
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "before": 79,
+      "depth": 79,
+      "CZ": 113,
+      "state_l2_error": 1.9121874301883697e-14,
+      "build_seconds": 0.0001131892204284668
+    },
+    {
+      "N": 13,
+      "k": 5,
+      "before": 86,
+      "depth": 86,
+      "CZ": 139,
+      "state_l2_error": 1.7607720053659528e-14,
+      "build_seconds": 0.00013795867562294006
+    },
+    {
+      "N": 13,
+      "k": 6,
+      "before": 102,
+      "depth": 97,
+      "CZ": 143,
+      "state_l2_error": 2.3600030021912277e-14,
+      "build_seconds": 6.353762000799179e-05
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "before": 12,
+      "depth": 12,
+      "CZ": 25,
+      "state_l2_error": 1.1932724751302696e-15,
+      "build_seconds": 3.1764619052410126e-05
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "before": 29,
+      "depth": 29,
+      "CZ": 55,
+      "state_l2_error": 3.781075940197318e-08,
+      "build_seconds": 5.920138210058212e-05
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "before": 65,
+      "depth": 65,
+      "CZ": 75,
+      "state_l2_error": 3.921702795301946e-15,
+      "build_seconds": 8.711870759725571e-05
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "before": 84,
+      "depth": 84,
+      "CZ": 127,
+      "state_l2_error": 1.6599398120716233e-14,
+      "build_seconds": 0.00012535788118839264
+    },
+    {
+      "N": 14,
+      "k": 5,
+      "before": 96,
+      "depth": 96,
+      "CZ": 149,
+      "state_l2_error": 1.6096673241466857e-14,
+      "build_seconds": 0.00014613382518291473
+    },
+    {
+      "N": 14,
+      "k": 6,
+      "before": 106,
+      "depth": 106,
+      "CZ": 167,
+      "state_l2_error": 2.2902378514092858e-14,
+      "build_seconds": 0.00018165353685617447
+    },
+    {
+      "N": 14,
+      "k": 7,
+      "before": 108,
+      "depth": 108,
+      "CZ": 175,
+      "state_l2_error": 1.1222259693402608e-14,
+      "build_seconds": 0.00019052810966968536
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "before": 13,
+      "depth": 13,
+      "CZ": 27,
+      "state_l2_error": 8.459304009881071e-16,
+      "build_seconds": 3.496650606393814e-05
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "before": 29,
+      "depth": 29,
+      "CZ": 59,
+      "state_l2_error": 2.3900102927861927e-15,
+      "build_seconds": 5.851965397596359e-05
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "before": 76,
+      "depth": 76,
+      "CZ": 84,
+      "state_l2_error": 3.876706579593244e-15,
+      "build_seconds": 0.00010811816900968552
+    },
+    {
+      "N": 15,
+      "k": 4,
+      "before": 92,
+      "depth": 92,
+      "CZ": 156,
+      "state_l2_error": 1.3015511094703886e-14,
+      "build_seconds": 0.00014270935207605362
+    },
+    {
+      "N": 15,
+      "k": 5,
+      "before": 101,
+      "depth": 101,
+      "CZ": 183,
+      "state_l2_error": 1.3283837302077408e-14,
+      "build_seconds": 0.00016785692423582077
+    },
+    {
+      "N": 15,
+      "k": 6,
+      "before": 110,
+      "depth": 110,
+      "CZ": 200,
+      "state_l2_error": 1.1425558864243036e-14,
+      "build_seconds": 0.00017040688544511795
+    },
+    {
+      "N": 15,
+      "k": 7,
+      "before": 119,
+      "depth": 119,
+      "CZ": 207,
+      "state_l2_error": 1.4185837371491e-14,
+      "build_seconds": 0.0001730639487504959
+    }
+  ],
+  "constructor_note": "Cached explicit circuit copy; final standalone export belongs to the parent publication pass"
+}

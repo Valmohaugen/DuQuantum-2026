@@ -1,0 +1,8 @@
+{
+  "artifact": "peer_source.json",
+  "field": "files.sources.json",
+  "capture_time_sha256": "ee0fd1d1f25c35175722dd18e9f10e6c38f490f999b6e059911b82b3f6fe583c",
+  "published_sha256": "877ce95c0e8d314bf3f5ed87ddb15648f632990a91d772327628e5e06eed77bf",
+  "published_file": "research/bonus_terminal_completion_20261025/sources.json",
+  "note": "The original capture record is retained. This amendment identifies the finalized bundled source-list metadata. Candidate, validation, integration code and circuit pool are unchanged."
+}

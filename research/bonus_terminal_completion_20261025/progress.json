@@ -1,0 +1,94 @@
+{
+  "improvements": [
+    {
+      "N": 15,
+      "k": 4,
+      "before": 99,
+      "depth": 92,
+      "CZ": 156,
+      "state_l2_error": 1.3015511094703886e-14,
+      "source": "ladder-7-False-five_complex-five_complex",
+      "trials": 82,
+      "seconds": 54.62537130899727
+    },
+    {
+      "N": 15,
+      "k": 5,
+      "before": 108,
+      "depth": 101,
+      "CZ": 183,
+      "state_l2_error": 1.3283837302077408e-14,
+      "source": "ladder-7-False-five_complex-five_complex",
+      "trials": 100,
+      "seconds": 86.68951863888651
+    },
+    {
+      "N": 15,
+      "k": 6,
+      "before": 117,
+      "depth": 110,
+      "CZ": 200,
+      "state_l2_error": 1.1425558864243036e-14,
+      "source": "ladder-7-False-five_complex-five_complex",
+      "trials": 118,
+      "seconds": 130.96478698775172
+    },
+    {
+      "N": 15,
+      "k": 7,
+      "before": 126,
+      "depth": 122,
+      "CZ": 204,
+      "state_l2_error": 1.4530877376378922e-14,
+      "source": "ladder-7-True-five_complex-five_complex",
+      "trials": 127,
+      "seconds": 149.5221597114578
+    },
+    {
+      "N": 15,
+      "k": 7,
+      "before": 122,
+      "depth": 119,
+      "CZ": 207,
+      "state_l2_error": 1.4185837371491e-14,
+      "source": "ladder-7-False-five_complex-five_complex",
+      "trials": 136,
+      "seconds": 169.01392484363168
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "before": 84,
+      "depth": 79,
+      "CZ": 113,
+      "state_l2_error": 1.9121874301883697e-14,
+      "source": "ladder-6-True-five_complex-five_complex",
+      "trials": 253,
+      "seconds": 207.53964619338512
+    },
+    {
+      "N": 13,
+      "k": 5,
+      "before": 93,
+      "depth": 89,
+      "CZ": 130,
+      "state_l2_error": 2.211859925222011e-14,
+      "source": "ladder-6-True-five_complex-five_complex",
+      "trials": 271,
+      "seconds": 225.92598468903452
+    },
+    {
+      "N": 13,
+      "k": 5,
+      "before": 89,
+      "depth": 86,
+      "CZ": 139,
+      "state_l2_error": 1.7607720053659528e-14,
+      "source": "ladder-6-False-five_complex-five_complex",
+      "trials": 280,
+      "seconds": 239.457964877598
+    }
+  ],
+  "trials": 280,
+  "seconds": 240.09059027209878
+}

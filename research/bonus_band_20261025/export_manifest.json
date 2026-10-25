@@ -1,7 +1,7 @@
 {
   "cases": 56,
   "candidate": "native_submission.py",
-  "sha256": "91f5cb0b69af173bf1a3e89b3fbe00511975f9d57512c47caafbbc55e199619d",
+  "sha256": "a87430f9cec88a5ec9d3f4c38758d7446ba2eba54fd70f140d8c569a138acfbc",
   "sources": {
     "primary_snapshot.py": "f39b16ce4054bcfbb5ec92ff7a75cf6e05bf60682f537500328baafcd00fad33",
     "ensemble.py": "e3d6388d10bb483a081dcd39cb9bc645bdd5e0044fa640f994f904b139b84ccd",
@@ -10,9 +10,9 @@
     "harvest_patches.py": "70a20da00a5edc8a22d2b2bf108f79b0fd701bad35a1ead4d034c10c7e233acb",
     "external_patches.json": "25bc9e2495183562ddc8693c7dc9146c096b11d8ed4d0f6c5d8cc505dc67095b",
     "w_variants.py": "dee60e0c941a4f0e6e137cea70fb6ad3514c5d7352cfacf216b432c188891e66",
-    "best3_circuits.json": "691ac70c3a54e94814c1ece639ec09c03983d75abc115b0b15821c45657410af",
-    "best3_results.json": "671666d6cd99a9e3103099385f11a0738879084217b831c8f057834e0f86422b",
+    "best5_circuits.json": "cbed65c446eacf841c2e615556e3a37d9e670f91e8fc681ab473601adc791785",
+    "best5_results.json": "5b8ac7e3139f4a1ce3acf2ed7372ffcbebd8e53996863e4de2679cd529299528",
     "external_incremental_patches.json": "f67f15c7e40ae98ec9f56f867df652db178340ac08b636829f879aefc6337253"
   },
-  "publication_note": "Source hashes record offline provenance. The standalone candidate performs no runtime file reads; integration inputs and reproducer are bundled in research/bonus_terminal_integration_20261025."
+  "publication_note": "Offline source hashes record provenance; standalone construction has no runtime file reads. Frozen completion/finalpass inputs and reproducers are bundled in their research directories."
 }

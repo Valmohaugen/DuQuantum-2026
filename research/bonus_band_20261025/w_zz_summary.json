@@ -1,0 +1,72 @@
+{
+  "status": "fresh-seed coupling-aware pilot complete; no main promotion yet",
+  "seeds": [
+    12,
+    13,
+    14
+  ],
+  "summary": [
+    {
+      "N": 8,
+      "model": "nominal",
+      "cases": 3,
+      "mean_score_delta": 0.01935180379349333,
+      "conditional_MC_standard_error": 0.004331311313887898,
+      "calibration_standard_error": 0.009702424077239705,
+      "positive": 2,
+      "negative": 0
+    },
+    {
+      "N": 8,
+      "model": "coherent",
+      "cases": 3,
+      "mean_score_delta": 0.01624448210073529,
+      "conditional_MC_standard_error": 0.004088474499712595,
+      "calibration_standard_error": 0.017274138568121388,
+      "positive": 1,
+      "negative": 1
+    },
+    {
+      "N": 8,
+      "model": "zz",
+      "cases": 3,
+      "mean_score_delta": 0.014759099766910347,
+      "conditional_MC_standard_error": 0.004139774940894148,
+      "calibration_standard_error": 0.009723740393439,
+      "positive": 2,
+      "negative": 0
+    },
+    {
+      "N": 10,
+      "model": "nominal",
+      "cases": 3,
+      "mean_score_delta": 0.000663935708956228,
+      "conditional_MC_standard_error": 0.0019448989206650063,
+      "calibration_standard_error": 0.000663935708956228,
+      "positive": 1,
+      "negative": 0
+    },
+    {
+      "N": 10,
+      "model": "coherent",
+      "cases": 3,
+      "mean_score_delta": 0.007068242586322402,
+      "conditional_MC_standard_error": 0.0018957304089964524,
+      "calibration_standard_error": 0.007068242586322402,
+      "positive": 1,
+      "negative": 0
+    },
+    {
+      "N": 10,
+      "model": "zz",
+      "cases": 3,
+      "mean_score_delta": 0.0026820905296286845,
+      "conditional_MC_standard_error": 0.0021104611818975032,
+      "calibration_standard_error": 0.0026820905296286845,
+      "positive": 1,
+      "negative": 0
+    }
+  ],
+  "decision": "Confirm on earlier complete stress cohort before promoting; this small fresh-seed study has positive model means but limited calibration coverage.",
+  "scope": "Worst surrogate Z penalty across assumed J=0,25,50,100kHz with nominal surrogate no worse than baseline. Second-order coherent expansion omits mixed noise terms and X penalty."
+}

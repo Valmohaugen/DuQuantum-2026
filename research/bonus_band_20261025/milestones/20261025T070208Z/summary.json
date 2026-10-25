@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "20261025T070208Z",
+  "bonus_score": 47.878031742696336,
+  "previous_score": 47.714449422770166,
+  "previous_published_score": 47.42616619465258,
+  "increment": 0.16358231992617078,
+  "cases": 56,
+  "source_sha256": "a87430f9cec88a5ec9d3f4c38758d7446ba2eba54fd70f140d8c569a138acfbc",
+  "max_build_seconds": 0.0024415673688054085,
+  "max_state_l2_error": 2.1198671890529493e-07,
+  "max_moments": 119,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "improvement": "Three further native-depth reductions at11,4;11,5;13,6. All31valid groups in the defined balanced/adjacent-split worklist are now covered.",
+  "main_entry_point": "Preserved published main entry point; experimental hardware selectors are separate."
+}

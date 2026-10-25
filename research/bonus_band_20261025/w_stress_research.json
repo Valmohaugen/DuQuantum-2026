@@ -1,0 +1,11 @@
+{
+  "source": {
+    "title": "Quantum error correction below the surface code threshold",
+    "url": "https://arxiv.org/html/2408.13687v1",
+    "section": "III and Supplementary IV.1.1",
+    "finding": "The paper includes correlated ZZ and swap-like errors from stray interactions during CZ operations. Its detailed simulation also includes leakage and nearest/diagonal-neighbor crosstalk during parallel CZ gates."
+  },
+  "local_model_scope": "Our100kHz uniform static ZZ model is a defined sensitivity test, not a measured Willow value or a reproduction of the paper. It omits external spectators, diagonal-neighbor interactions, leakage and pulse overlap. The source motivates testing correlated errors but does not validate the assumed rate.",
+  "next_experiment": "Rank using first-order Markovian/readout output probabilities plus independently checked second-order coherent ZZ coefficients; require no worse nominal surrogate, then test fresh calibrations under full density-matrix models.",
+  "derivative_check": "w_zz_sensitivity_checks.json"
+}

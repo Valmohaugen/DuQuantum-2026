@@ -1,0 +1,215 @@
+{
+  "score": 47.714449422770166,
+  "baseline_score": 47.42616619465258,
+  "gain": 0.2882832281175851,
+  "trials": 280,
+  "search_seconds": 240.09387295972556,
+  "total_seconds": 242.74262504838407,
+  "max_state_l2_error": 2.1198671890529493e-07,
+  "max_cached_build_seconds": 0.00016450602561235428,
+  "coverage_counts": {
+    "complete": 15,
+    "infeasible-split": 9,
+    "partial": 1,
+    "not-started": 15
+  },
+  "improved_cases": [
+    {
+      "N": 13,
+      "k": 4,
+      "before": 84,
+      "depth": 79,
+      "CZ": 113,
+      "state_l2_error": 1.9121874301883697e-14,
+      "build_seconds": 6.132107228040695e-05
+    },
+    {
+      "N": 13,
+      "k": 5,
+      "before": 93,
+      "depth": 86,
+      "CZ": 139,
+      "state_l2_error": 1.7607720053659528e-14,
+      "build_seconds": 9.94345173239708e-05
+    },
+    {
+      "N": 15,
+      "k": 4,
+      "before": 99,
+      "depth": 92,
+      "CZ": 156,
+      "state_l2_error": 1.3015511094703886e-14,
+      "build_seconds": 8.214730769395828e-05
+    },
+    {
+      "N": 15,
+      "k": 5,
+      "before": 108,
+      "depth": 101,
+      "CZ": 183,
+      "state_l2_error": 1.3283837302077408e-14,
+      "build_seconds": 8.552055805921555e-05
+    },
+    {
+      "N": 15,
+      "k": 6,
+      "before": 117,
+      "depth": 110,
+      "CZ": 200,
+      "state_l2_error": 1.1425558864243036e-14,
+      "build_seconds": 0.00010845623910427094
+    },
+    {
+      "N": 15,
+      "k": 7,
+      "before": 126,
+      "depth": 119,
+      "CZ": 207,
+      "state_l2_error": 1.4185837371491e-14,
+      "build_seconds": 0.0001091938465833664
+    }
+  ],
+  "unfinished": [
+    {
+      "N": 13,
+      "k": 5,
+      "offset": -1,
+      "left_size": 6,
+      "status": "partial",
+      "blocks": [
+        {
+          "blocks": true,
+          "status": "complete",
+          "attempted": 9,
+          "planned": 9
+        },
+        {
+          "blocks": false,
+          "status": "partial",
+          "attempted": 1,
+          "planned": 9
+        }
+      ]
+    },
+    {
+      "N": 13,
+      "k": 6,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 5,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 5,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 5,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 6,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 5,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 5,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "status": "complete; main unchanged",
+  "sources_and_evidence": {
+    "research/bonus_band_20261025/w_stress_noise.py": "8998c4e7f1dba256d04061eba1cfbe8dfcec092e4d66225eb604b72c20136543",
+    "research/bonus_band_20261025/w_stress_noise_checks.json": "1a393386aacad2e75baf1c9b7bc7e4c7ecfe1bb842b7d925a2f80f81fd588eb9",
+    "research/bonus_band_20261025/w_stress_probe.py": "6f1b7f5f496ac77445d57aee50d3a0d957caa7c58945d4d0bd4ccb4eb6ef2167",
+    "research/bonus_band_20261025/w_stress_results.json": "91df64655e6355b1095acc4886eb7fac1c0aa32e3dd08a21c7dad2005283539e",
+    "research/bonus_band_20261025/w_stress_selections.json": "6b55ce58092c7eb036aa7da0d622b5d7ef69e931c5bdd217d6a47c996d2b3ea3",
+    "research/bonus_band_20261025/w_stress_summary.json": "f7fa6ac5915d9ed5b473c0d1442dabb5bf7ea362c24785196acd0689617e8450",
+    "research/bonus_band_20261025/w_stress_research.json": "325f83964e73118abfb03f2af82548c2a5f8dfeab4c5f4cec1ac226896cb790c"
+  },
+  "calibration_seeds": [
+    0,
+    1,
+    2,
+    6,
+    7,
+    8
+  ],
+  "cases": [
+    [
+      8,
+      1
+    ],
+    [
+      10,
+      1
+    ]
+  ],
+  "reproduction": "python -m research.bonus_band_20261025.w_stress_noise && python -m research.bonus_band_20261025.w_stress_probe",
+  "dependencies": "w_experiment_manifest.json and w_z_manifest.json; existing evaluator hashes unchanged"
+}

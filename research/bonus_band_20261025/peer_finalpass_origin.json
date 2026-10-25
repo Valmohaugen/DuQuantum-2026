@@ -1,0 +1,12 @@
+{
+  "source_directory": "research/bonus_terminal_finalpass_20261025",
+  "files": {
+    "integration_circuits.json": "cbed65c446eacf841c2e615556e3a37d9e670f91e8fc681ab473601adc791785",
+    "integration_results.json": "5b8ac7e3139f4a1ce3acf2ed7372ffcbebd8e53996863e4de2679cd529299528",
+    "integrate.py": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d",
+    "sources.json": "0ad128b251867cbf47dae0094360df8b09878bccae94592464c0baf125aaa809",
+    "coverage.json": "e160b44bd289fc95f2f36ae97e3aaf6223ae5034a288ab21b8cd6d20e1cc8945"
+  },
+  "previous_score": 47.714449422770166,
+  "score": 47.878031742696336
+}
