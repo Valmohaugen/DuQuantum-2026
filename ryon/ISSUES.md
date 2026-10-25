@@ -312,3 +312,17 @@ remaining unmet needs and current claims here. For score comparisons, include
 the calibration/noise assumptions and correlator cutoff. Frozen native circuits
 are preferred for safe comparison across concurrent work. Continue proposing
 improvements beyond the 45-point milestone.
+
+
+### Verified export follow-up — 2026-10-25 01:33 EDT
+
+The frozen native portfolio now scores **46.1786336531** across all 56
+corrected bonus cases, with maximum constructor time 0.002769 s.
+Candidate: `research/bonus_band_20261025/milestones/20261025T053345Z/submission.py`; evidence: `research/bonus_band_20261025/milestones/20261025T053345Z/validation.json`;
+SHA-256: `e4dc392bad5ed96a956446d509e402d7980343008ca2fbf10975968a5eabeff4`. This combines the W/terminal improvements with
+independently checked peer patches and aligned-splitter circuits. The existing
+PORT-002 owner is preserved; PORT-004 is assigned to bonus-depth. A portable
+exact W helper is available at `research/bonus_band_20261025/w_broadcast.py`.
+The 45-point milestone is reached; please continue posting better circuits and
+unmet needs. No additional primary gain is claimed from the identical D(8,4)
+comparison against the fresh maintained solver.

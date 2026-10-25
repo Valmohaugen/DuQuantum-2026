@@ -1,0 +1,199 @@
+{
+  "status": "algebra verified; native oracle and routing not implemented; no score assigned",
+  "derivation": "On N-1 uniform qubits mark weights k-1,k, with p=C(N,k)/2^(N-1). For p>=1/4 choose phi=acos(1-1/(2p)). Apply the marked-subspace phase exp(i phi), then I+(exp(i phi)-1)|s><s|. Every unmarked amplitude vanishes. Append k XOR parity into a fresh qubit to obtain D(N,k).",
+  "sources": [
+    "https://arxiv.org/abs/quant-ph/0006031",
+    "https://arxiv.org/abs/quant-ph/0005055"
+  ],
+  "required_work": [
+    "Native nearest-neighbor phase oracle for the two adjacent weights",
+    "Native phase on the all-zero state for the reflection",
+    "Count all ancillas and emitted moments",
+    "Validate all feed-forward branches and whole-diagonal readout if measurements are used"
+  ],
+  "cases": 26,
+  "rows": [
+    {
+      "N": 2,
+      "k": 1,
+      "marked_probability": 1.0,
+      "phase": 1.0471975511965979,
+      "state_l2_error": 2.220446049250313e-16
+    },
+    {
+      "N": 3,
+      "k": 1,
+      "marked_probability": 0.75,
+      "phase": 1.2309594173407747,
+      "state_l2_error": 2.1789194513272185e-16
+    },
+    {
+      "N": 4,
+      "k": 1,
+      "marked_probability": 0.5,
+      "phase": 1.5707963267948966,
+      "state_l2_error": 2.0770370905276122e-16
+    },
+    {
+      "N": 4,
+      "k": 2,
+      "marked_probability": 0.75,
+      "phase": 1.2309594173407747,
+      "state_l2_error": 1.9447810351271513e-16
+    },
+    {
+      "N": 5,
+      "k": 1,
+      "marked_probability": 0.3125,
+      "phase": 2.2142974355881813,
+      "state_l2_error": 1.3999379669858417e-16
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "marked_probability": 0.625,
+      "phase": 1.369438406004566,
+      "state_l2_error": 1.2632275320254672e-16
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "marked_probability": 0.46875,
+      "phase": 1.6375124752051218,
+      "state_l2_error": 2.8626019697717164e-16
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "marked_probability": 0.625,
+      "phase": 1.369438406004566,
+      "state_l2_error": 2.0083730961998146e-16
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "marked_probability": 0.328125,
+      "phase": 2.122113295926779,
+      "state_l2_error": 1.8316417691326438e-16
+    },
+    {
+      "N": 7,
+      "k": 3,
+      "marked_probability": 0.546875,
+      "phase": 1.484976736289001,
+      "state_l2_error": 1.8505081762069738e-17
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "marked_probability": 0.4375,
+      "phase": 1.714143895700262,
+      "state_l2_error": 3.436061898362346e-16
+    },
+    {
+      "N": 8,
+      "k": 4,
+      "marked_probability": 0.546875,
+      "phase": 1.484976736289001,
+      "state_l2_error": 1.5751369826419364e-16
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "marked_probability": 0.328125,
+      "phase": 2.122113295926779,
+      "state_l2_error": 2.5671918270752417e-16
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "marked_probability": 0.4921875,
+      "phase": 1.5866700092848522,
+      "state_l2_error": 1.7691689342527644e-16
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "marked_probability": 0.41015625,
+      "phase": 1.7916346041559765,
+      "state_l2_error": 3.7448513695782737e-16
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "marked_probability": 0.4921875,
+      "phase": 1.5866700092848522,
+      "state_l2_error": 4.907432105750428e-16
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "marked_probability": 0.322265625,
+      "phase": 2.1549758456766948,
+      "state_l2_error": 5.492632711936014e-16
+    },
+    {
+      "N": 11,
+      "k": 5,
+      "marked_probability": 0.451171875,
+      "phase": 1.679233823943889,
+      "state_l2_error": 4.759792558768368e-16
+    },
+    {
+      "N": 12,
+      "k": 5,
+      "marked_probability": 0.38671875,
+      "phase": 1.8680854170362633,
+      "state_l2_error": 7.974504447317118e-16
+    },
+    {
+      "N": 12,
+      "k": 6,
+      "marked_probability": 0.451171875,
+      "phase": 1.679233823943889,
+      "state_l2_error": 1.9987968660215585e-15
+    },
+    {
+      "N": 13,
+      "k": 5,
+      "marked_probability": 0.314208984375,
+      "phase": 2.203463229833026,
+      "state_l2_error": 1.6564011360065917e-15
+    },
+    {
+      "N": 13,
+      "k": 6,
+      "marked_probability": 0.4189453125,
+      "phase": 1.7654973272240626,
+      "state_l2_error": 2.8516150555262094e-15
+    },
+    {
+      "N": 14,
+      "k": 6,
+      "marked_probability": 0.3665771484375,
+      "phase": 1.9433223582619086,
+      "state_l2_error": 5.7872384209943395e-15
+    },
+    {
+      "N": 14,
+      "k": 7,
+      "marked_probability": 0.4189453125,
+      "phase": 1.7654973272240626,
+      "state_l2_error": 6.040566356000285e-15
+    },
+    {
+      "N": 15,
+      "k": 6,
+      "marked_probability": 0.30548095703125,
+      "phase": 2.2610894652863585,
+      "state_l2_error": 6.883739937065192e-15
+    },
+    {
+      "N": 15,
+      "k": 7,
+      "marked_probability": 0.39276123046875,
+      "phase": 1.8473460189150994,
+      "state_l2_error": 7.792083361575582e-15
+    }
+  ]
+}

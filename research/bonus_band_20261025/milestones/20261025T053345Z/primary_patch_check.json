@@ -1,0 +1,85 @@
+{
+  "model": "Synthetic calibration and local density model; 2 detuning samples, 10000 shots per basis, all X orders",
+  "source": "benchmark_outputs/ex/out/g_8_4_2xL_s1.json",
+  "source_sha256": "483e6a7c93854d88da1bd783b131b1cafe306105e54ed5c21f0e78ea21deeecb",
+  "rows": [
+    {
+      "seed": 0,
+      "variant": "baseline",
+      "N": 8,
+      "k": 4,
+      "moments": 21,
+      "CZ": 22,
+      "penalty_inverse_proxy": 0.8374574001385768,
+      "seconds": 0.42259948141872883,
+      "E_score": 0.8631179851872686,
+      "MC_standard_error": 0.002243359096440992,
+      "replicates": 4096
+    },
+    {
+      "seed": 0,
+      "variant": "patch",
+      "N": 8,
+      "k": 4,
+      "moments": 21,
+      "CZ": 22,
+      "penalty_inverse_proxy": 0.8374574001385768,
+      "seconds": 0.41673128586262465,
+      "E_score": 0.8631179851872686,
+      "MC_standard_error": 0.002243359096440992,
+      "replicates": 4096
+    },
+    {
+      "seed": 1,
+      "variant": "baseline",
+      "N": 8,
+      "k": 4,
+      "moments": 21,
+      "CZ": 22,
+      "penalty_inverse_proxy": 0.8496036145206998,
+      "seconds": 0.40932250767946243,
+      "E_score": 0.8708935373853144,
+      "MC_standard_error": 0.0022169197391648837,
+      "replicates": 4096
+    },
+    {
+      "seed": 1,
+      "variant": "patch",
+      "N": 8,
+      "k": 4,
+      "moments": 21,
+      "CZ": 22,
+      "penalty_inverse_proxy": 0.8496036145206998,
+      "seconds": 0.4078566487878561,
+      "E_score": 0.8708935373853144,
+      "MC_standard_error": 0.0022169197391648837,
+      "replicates": 4096
+    },
+    {
+      "seed": 2,
+      "variant": "baseline",
+      "N": 8,
+      "k": 4,
+      "moments": 21,
+      "CZ": 22,
+      "penalty_inverse_proxy": 0.8476010015739641,
+      "seconds": 0.4214689489454031,
+      "E_score": 0.8720293350602997,
+      "MC_standard_error": 0.002259632102508961,
+      "replicates": 4096
+    },
+    {
+      "seed": 2,
+      "variant": "patch",
+      "N": 8,
+      "k": 4,
+      "moments": 21,
+      "CZ": 22,
+      "penalty_inverse_proxy": 0.8476010015739641,
+      "seconds": 0.4200075389817357,
+      "E_score": 0.8720293350602997,
+      "MC_standard_error": 0.002259632102508961,
+      "replicates": 4096
+    }
+  ]
+}

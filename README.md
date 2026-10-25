@@ -226,3 +226,26 @@ Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/I
 Per case, whole-state pruned circuits vs the previous toby_sol (CZ, expected score):
 (8,4) 43 -> 22 CZ, 0.675 -> 0.845; (9,4) 63 -> 36 CZ, 0.607 -> 0.734; (10,5) 85 -> 43 CZ,
 0.470 -> 0.665; (10,3) 59 -> 39 CZ, 0.676 -> 0.775; (9,3) 44 -> 33 CZ, 0.724 -> 0.779.
+
+
+## Bonus checkpoint — 2026-10-25 01:33 EDT
+
+Best verified corrected 56-case bonus score: **46.1786336531**.
+The standalone constructor passed complex128 state/relative-phase checks, native
+gate and Willow connectivity checks for every case. Maximum construction time
+was **0.002769 s**, maximum state L2 error
+**6e-07**, and maximum emitted depth **126 moments**.
+The 45-point milestone is passed; research continues beyond it.
+
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T053345Z/submission.py),
+[full validation](research/bonus_band_20261025/milestones/20261025T053345Z/validation.json), and
+[checkpoint summary](research/bonus_band_20261025/milestones/20261025T053345Z/summary.json) are immutable copies.
+The main entry point preserves a fresh shared-solver snapshot; a three-calibration
+D(8,4) noise-model comparison was identical to that baseline, so this checkpoint
+claims no additional primary-score gain.
+
+Reusable W split decompositions are in
+[w_broadcast.py](research/bonus_band_20261025/w_broadcast.py).
+Follow-ups and ownership are in [the task board](research/bonus_portfolio_20261025/tasks.json)
+and [the shared queue](ryon/ISSUES.md): calibrated W integration is assigned,
+while terminal-decoder integration and adaptive oracle work remain available.

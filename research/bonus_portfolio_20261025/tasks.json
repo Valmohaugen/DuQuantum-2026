@@ -1,0 +1,135 @@
+[
+  {
+    "id": "PORT-001",
+    "title": "Complete six-site coherent path decoder with lower emitted depth",
+    "status": "assigned",
+    "assignee": "terminal_six",
+    "scope": "research/bonus_terminal6_20261025 only",
+    "inputs": [
+      "portfolio_submission.py",
+      "path_decoder_5_5_real_refined.json",
+      "complex_fit.py",
+      "real_fit.py"
+    ],
+    "acceptance": [
+      "Every unary input r=0..6 maps to D(6,r) with one common phase",
+      "Maximum column error below 1e-10",
+      "CZ edges follow a six-site path; remaining gates are native single-qubit gates",
+      "Report actual emitted moments, CZ count, and a reconstructible artifact",
+      "Preserve the best depth even when intermediate searches grow"
+    ]
+  },
+  {
+    "id": "PORT-002",
+    "title": "Choose W-state broadcast trees by native moment count",
+    "status": "assigned",
+    "assignee": "w_depth",
+    "scope": "Use a separate research directory; do not change maintained solvers",
+    "baseline": "N=9..15: depths 13,13,14,14,14,14,15",
+    "hypothesis": "Current tree selection minimizes broadcast rounds and calibration cost; compiling tied trees and child orders may expose shorter native schedules",
+    "acceptance": [
+      "Native Willow-valid circuits and exact W states for every accepted case",
+      "Compare actual moment count against the frozen portfolio",
+      "Return explicit native circuits or reproducible tree descriptions",
+      "Evaluate paired noise-model E[score] before proposing a main-constructor change"
+    ],
+    "contributors": [
+      "bonus-depth"
+    ],
+    "contributor_result": {
+      "contributor": "bonus-depth",
+      "status": "circuit pool validated; standalone verification pending",
+      "bonus_score": 45.14220419051065,
+      "cases": 56,
+      "W_trials": 921,
+      "circuits": "research/bonus_band_20261025/w_circuits.json",
+      "evidence": "research/bonus_band_20261025/w_results.json",
+      "implementation": "research/bonus_band_20261025/w_variants.py",
+      "reusable_function": "operations(root, children, kinds)",
+      "standalone_checkpoint": {
+        "status": "all 56 cases verified",
+        "score": 46.17863365311297,
+        "candidate": "research/bonus_band_20261025/milestones/20261025T053345Z/submission.py",
+        "validation": "research/bonus_band_20261025/milestones/20261025T053345Z/validation.json",
+        "source_sha256": "e4dc392bad5ed96a956446d509e402d7980343008ca2fbf10975968a5eabeff4",
+        "max_build_seconds": 0.0027686692774295807
+      }
+    },
+    "coordination_request": "w_depth: please review and reuse the completed bonus-depth W pool and operations() before duplicating decomposition or topology searches; the existing assignment remains unchanged."
+  },
+  {
+    "id": "PORT-003",
+    "title": "Improve the aligned two-count splitter without losing low-depth variants",
+    "status": "available",
+    "assignee": null,
+    "scope": "Use a separate research directory; read aligned_split.py and aligned_four.py",
+    "baseline": "Aligned coherent splitter: 10 CZ / 12 moments; an earlier 8-CZ / 13-moment variant also existed",
+    "acceptance": [
+      "All three input-count columns r=0..2 share one common phase",
+      "Maintain a Pareto set by emitted moments and CZ count",
+      "Fit or derive coefficients for (2,2),(3,2),(3,3),(4,3),(4,4)",
+      "Verify complete D(N,2) circuits through N=15 before claiming bonus gains"
+    ]
+  },
+  {
+    "id": "PORT-004",
+    "title": "Transfer exact W-depth improvements to calibrated preparation",
+    "status": "assigned",
+    "assignee": "bonus-depth",
+    "scope": "Isolated research/bonus_band_20261025 work; compare against a fresh frozen maintained solver, including its readout-aware W trees",
+    "inputs": [
+      "research/bonus_band_20261025/w_variants.py",
+      "research/bonus_band_20261025/w_circuits.json",
+      "research/bonus_band_20261025/w_results.json",
+      "research/bonus_band_20261025/w_broadcast.py"
+    ],
+    "acceptance": [
+      "Preserve native Willow connectivity and exact W amplitudes for every accepted case",
+      "Record paired calibration seeds, source hashes, emitted moments, CZ counts and constructor times",
+      "Compare both all-X-order and cutoff-four scoring, distinguishing E[1/penalty] from 1/E[penalty]",
+      "Use a fresh maintained-solver baseline and retain it unless paired noise-model evidence supports replacement",
+      "Coordinate with w_depth on the completed bonus search; do not repeat that search as hardware evidence"
+    ]
+  },
+  {
+    "id": "PORT-005",
+    "title": "Integrate certified five/six-site terminal decoders into the native portfolio",
+    "status": "available",
+    "assignee": null,
+    "suggested_owner": "Existing portfolio integration worker (BR-108); suggestion only, not an accepted assignment",
+    "scope": "Consume BR-109 and PORT-001 artifacts after their column checks; do not duplicate their decoder synthesis",
+    "inputs": [
+      "research/bonus_portfolio_20261025/path_decoder_5_5_real_refined.json",
+      "research/bonus_portfolio_20261025/path_decoder_5_5_complex_refined.json",
+      "PORT-001 outputs in research/bonus_terminal6_20261025"
+    ],
+    "acceptance": [
+      "Verify every supported unary input column with one common global phase and error below 1e-10",
+      "Verify terminal placement and input-count range after each longer-cascade prefix",
+      "Retain each case's existing best emitted native depth and keep CZ/depth alternatives when they differ",
+      "Run all 56 corrected bonus cases for exact state, native gates, Willow connectivity and build time below 60 seconds",
+      "Publish reconstructible circuits with source hashes and report the incremental score gain"
+    ]
+  },
+  {
+    "id": "PORT-006",
+    "title": "Evaluate adaptive uncomputation for the adjacent-weight-band oracle",
+    "status": "available",
+    "assignee": null,
+    "suggested_owner": "Adaptive-circuit researcher; unclaimed",
+    "scope": "A separate research directory; coordinate with issue 5 and BAND-005, and avoid overlapping numerical SCS searches",
+    "inputs": [
+      "research/bonus_band_20261025/band_resources.py",
+      "research/bonus_band_20261025/band_resources.json",
+      "research/bonus_band_20261025/band_amplification_proof.json"
+    ],
+    "acceptance": [
+      "Count emitted native CZ/single-qubit gates, all ancillas, routing, measurement and feed-forward moments",
+      "Respect the whole-diagonal readout rule for every measured row-plus-column diagonal",
+      "Prove or independently validate every nonzero-probability measurement branch, including cleanup and relative phases",
+      "Return exactly the requested Dicke state without postselection or hidden dense oracle gates",
+      "Compare resource counts against the frozen native portfolio before claiming a bonus improvement"
+    ],
+    "resource_findings": "The explicit clean-ancilla construction uses 115/149/159 native moments for (8,4)/(12,6)/(15,7), before Willow routing. It does not improve the current portfolio; an adaptive proposal needs a substantially cheaper implementation."
+  }
+]

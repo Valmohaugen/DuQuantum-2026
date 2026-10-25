@@ -1,0 +1,108 @@
+{
+  "cases": 56,
+  "score": 45.14220419051065,
+  "trials": 921,
+  "seconds": 180.2668104050681,
+  "improvements": [
+    {
+      "N": 8,
+      "k": 1,
+      "before": 11,
+      "depth": 10,
+      "state_l2_error": 3.9287561387859713e-16,
+      "trials": 11,
+      "round": 0,
+      "seconds": 1.3398588504642248
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "before": 14,
+      "depth": 13,
+      "state_l2_error": 8.390328403342939e-16,
+      "trials": 20,
+      "round": 0,
+      "seconds": 3.54109481908381
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "before": 14,
+      "depth": 13,
+      "state_l2_error": 6.330856926608338e-16,
+      "trials": 23,
+      "round": 0,
+      "seconds": 4.8282333724200726
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "before": 14,
+      "depth": 13,
+      "state_l2_error": 5.110558733770277e-16,
+      "trials": 26,
+      "round": 0,
+      "seconds": 6.150470777414739
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "before": 14,
+      "depth": 13,
+      "state_l2_error": 9.962138784983894e-16,
+      "trials": 29,
+      "round": 0,
+      "seconds": 7.655395888723433
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "before": 15,
+      "depth": 13,
+      "state_l2_error": 8.459304009881071e-16,
+      "trials": 32,
+      "round": 0,
+      "seconds": 9.135968565940857
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "before": 13,
+      "depth": 12,
+      "state_l2_error": 6.08200581831757e-16,
+      "trials": 50,
+      "round": 1,
+      "seconds": 12.189663474448025
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "before": 13,
+      "depth": 12,
+      "state_l2_error": 6.138642019845508e-16,
+      "trials": 80,
+      "round": 2,
+      "seconds": 18.172078114934266
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "before": 14,
+      "depth": 12,
+      "state_l2_error": 5.801100496966566e-16,
+      "trials": 218,
+      "round": 6,
+      "seconds": 44.633780075237155
+    },
+    {
+      "N": 7,
+      "k": 1,
+      "before": 10,
+      "depth": 9,
+      "state_l2_error": 5.227824558750047e-16,
+      "trials": 735,
+      "round": 22,
+      "seconds": 144.56428902223706
+    }
+  ]
+}

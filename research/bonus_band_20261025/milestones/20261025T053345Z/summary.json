@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "20261025T053345Z",
+  "bonus_score": 46.17863365311297,
+  "cases": 56,
+  "range": "N=2..15, k=1..floor(N/2)",
+  "source_sha256": "e4dc392bad5ed96a956446d509e402d7980343008ca2fbf10975968a5eabeff4",
+  "max_build_seconds": 0.0027686692774295807,
+  "max_state_l2_error": 6.004450501381107e-07,
+  "max_moments": 126,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "main_entry_point": "Fresh shared solver snapshot preserved; D(8,4) paired noise-model comparison gave identical baseline/candidate results for all three seeds.",
+  "status": "45-point milestone passed; research and coordination remain active"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "Resource estimate only; no Willow routing; not a scored candidate",
+  "rows": [
+    {
+      "N": 4,
+      "k": 2,
+      "qubits": 11,
+      "depth_unrestricted_connectivity": 59,
+      "CZ": 43,
+      "arithmetic_basis_cases": 8,
+      "small_full_state_error": 5.491292262671724e-15
+    },
+    {
+      "N": 8,
+      "k": 4,
+      "qubits": 32,
+      "depth_unrestricted_connectivity": 115,
+      "CZ": 167,
+      "arithmetic_basis_cases": 128,
+      "small_full_state_error": null
+    },
+    {
+      "N": 12,
+      "k": 6,
+      "qubits": 56,
+      "depth_unrestricted_connectivity": 149,
+      "CZ": 313,
+      "arithmetic_basis_cases": 2048,
+      "small_full_state_error": null
+    },
+    {
+      "N": 15,
+      "k": 7,
+      "qubits": 72,
+      "depth_unrestricted_connectivity": 159,
+      "CZ": 415,
+      "arithmetic_basis_cases": 16384,
+      "small_full_state_error": null
+    }
+  ]
+}

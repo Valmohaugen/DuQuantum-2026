@@ -1,0 +1,104 @@
+[
+  {
+    "id": "BAND-001",
+    "status": "verified",
+    "title": "Combine frozen shared start blocks, recursive splitters, and certified grid decoders",
+    "score": 41.65311360936584,
+    "cases": 56,
+    "max_build_seconds": 15.606306447647512,
+    "evidence": "grid_candidate_verified.json"
+  },
+  {
+    "id": "BAND-002",
+    "status": "verified",
+    "title": "Coherent six-qubit, four-excitation decoder on a grid with four boundary inputs",
+    "acceptance": "All five coherent unary input columns, common phase, native valid edges; full bonus validation after integration",
+    "depth_before": 76,
+    "depth_after": 70,
+    "max_column_error": 8.873920249874522e-16,
+    "evidence": "grid_half_6_4.json"
+  },
+  {
+    "id": "BAND-003",
+    "status": "verified; standalone export complete",
+    "title": "Optimize every line and ladder alternative before selection, and export fixed native circuits",
+    "acceptance": "All 56 native Willow state checks; constructor under 60 seconds",
+    "evidence": "native_submission_verified.json"
+  },
+  {
+    "id": "BAND-004",
+    "status": "verified in final portfolio",
+    "title": "Terminate longer SCS cascades with certified four-qubit coherent decoders",
+    "examples": {
+      "9,4": [
+        60,
+        55
+      ],
+      "13,3": [
+        75,
+        66
+      ],
+      "13,6": [
+        108,
+        103
+      ]
+    },
+    "evidence": "native_submission_verified.json"
+  },
+  {
+    "id": "BAND-005",
+    "status": "measured; this implementation is too deep before routing",
+    "title": "Compile the weight-band amplitude oracle using relative-phase arithmetic and one affine predicate",
+    "note": "Two adjacent count strings reduce to a predicate on all count bits except the low bit after a CNOT change of coordinates. Resource estimates must include clean ancillas, inverse networks, reflection and parity. No native score claimed.",
+    "evidence": "band_resources.json"
+  },
+  {
+    "id": "BAND-006",
+    "status": "not run; overlapping peer sweep discovered",
+    "title": "Grow and prune a whole native Dicke ladder using spare physical couplers",
+    "file": "warm_state.py",
+    "note": "ryon/ISSUES.md issue 9 covers these whole-state searches. Freeze and validate their numeric patches instead of duplicating their jobs."
+  },
+  {
+    "id": "BAND-007",
+    "status": "verified; rejected for depth regression",
+    "title": "Prune aligned two-excitation splitters and compare recursive depth",
+    "file": "prune_wdb.py",
+    "evidence": "aligned_recursive_results.json"
+  },
+  {
+    "id": "BAND-008",
+    "status": "verified; three improved cases",
+    "title": "Extend compact grid decoders along their boundary input row",
+    "file": "grid_tail.py",
+    "acceptance": "Native device connectivity and full-state validation before adding each circuit to the table",
+    "evidence": "tail_results.json"
+  },
+  {
+    "id": "BAND-009",
+    "status": "verified; peer patches merged into native portfolio",
+    "title": "Combine independently validated peer patches with private circuit improvements",
+    "sources": "external_patches.json",
+    "acceptance": "Treat source scores only as hints; compile native gates, check all amplitudes and qubits, and retain only lower depth",
+    "evidence": "incremental_results.json"
+  },
+  {
+    "id": "BAND-010",
+    "status": "verified",
+    "title": "Alternative W decompositions and broadcast topologies",
+    "score_after": 45.14220419051065,
+    "trials": 921,
+    "evidence": "w_results.json",
+    "coordination": "PORT-002 remains assigned to w_depth; bonus-depth is a contributor."
+  },
+  {
+    "id": "BAND-011",
+    "status": "verified; publication prepared",
+    "title": "Freeze and publish a fast native portfolio above 45",
+    "score": 46.17863365311297,
+    "cases": 56,
+    "max_build_seconds": 0.0027686692774295807,
+    "evidence": "research/bonus_band_20261025/milestones/20261025T053345Z/validation.json",
+    "next_work": "PORT-004 calibrated W integration; continue beyond the score milestone."
+  }
+]
