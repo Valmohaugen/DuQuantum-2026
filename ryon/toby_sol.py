@@ -8,6 +8,7 @@ import cirq_google
 
 max_moments = 1750
 ladder_budget_s = 8.0
+hard_limit_s = 35.0
 search_time_s = 20.0
 beam_width = 3000
 idle_penalty = 1e-3
@@ -30,9 +31,8 @@ def rate(entry):
 
 
 def readout_bias(qubits, n_qubits, n_exc, skew):
-    #uneven readout errors make some patterns show up more often than others, and the
-    #z score charges shots * sum (q_j - 1/C)^2 for that. skew[q] = P(1->0) - P(0->1).
-    #a random n-subset of the chosen qubits has variance n(N-n)/(N-1) * var(skew), so:
+    #uneven readout skew (p(1->0) - p(0->1)) makes some patterns more common, and the z score
+    #charges shots * sum (q_j - 1/c)^2 for it; an n-subset of m qubits varies by n(m-n)/(m-1) * var(skew)
     if not use_bias_penalty or n_qubits < 2:
         return 0.0
     d = [skew[q] for q in qubits]
@@ -518,7 +518,10 @@ def create_dicke_state(
     n_q, n = int(num_qubits), int(num_excitations)
     if n_q < 1 or not 0 <= n <= n_q:
         raise NotImplementedError(f"invalid (N, n) = ({n_q}, {n})")
-    deadline = time.monotonic() + search_time_s
+    entry = time.monotonic()
+    deadline = entry + search_time_s
+    #past hard_limit_s only the first candidate is still built, so slow machines stay under 60 s
+    late = lambda: time.monotonic() - entry > hard_limit_s
     adj, node = make_chip(cz_pauli_error_rate, sq_pauli_error_rate, zero_errors, one_errors, n_q, n)
     if len(node) < n_q:
         raise NotImplementedError("not enough working qubits")
@@ -546,7 +549,7 @@ def create_dicke_state(
     lab = best_patch(adj, node, patch[0], patch[1], bias) if patch else None
     if lab is not None:
         cands.append((lab, patch_ops(lab, *patch[1:])))
-    if layout_mode in ("auto", "line"):
+    if layout_mode in ("auto", "line") and not (cands and late()):
         steps, weights = line_plan(n_q, k, use_blocks)
         path = best_path(adj, node, weights, deadline, bias)
         cands.append((path, line_ops(path, k, steps)))
@@ -556,7 +559,7 @@ def create_dicke_state(
         splits = sorted(range(k, n_q - k + 1), key=lambda a: (abs(a - mid), a))
         started = time.monotonic()
         for a in splits:
-            if a != mid and time.monotonic() - started > ladder_budget_s:
+            if (a != mid and time.monotonic() - started > ladder_budget_s) or (cands and late()):
                 break
             lad = best_ladder(adj, node, n_q, k, use_blocks, bias, deadline + 15, a)
             if lad is not None:
@@ -566,6 +569,8 @@ def create_dicke_state(
         raise NotImplementedError("no layout found")
     best = None
     for qs, ops in cands:
+        if best is not None and late():
+            break
         c = compile_circuit(ops, qs if flip else (), dynamical_decoupling and not pack, pack)
         score = len(c) if pack else estimate_error(c, qs, adj, node, bias)
         if best is None or score < best[0]:
@@ -577,7 +582,7 @@ def create_dicke_state(
 
 def create_dicke_state_adaptive(num_qubits: int, num_excitations: int) -> tuple[cirq.Circuit, set[cirq.GridQubit]]:
     #bonus: same circuits on the full device with uniform errors, no dd, 1q gates packed into cz moments
-    #Willow105 only exists in newer cirq_google; willow_pink is the same chip
+    #willow105 only exists in newer cirq_google; willow_pink is the same chip
     device = getattr(cirq_google, "Willow105", None)
     if device is None:
         device = cirq_google.engine.create_device_from_processor_id("willow_pink")
@@ -586,7 +591,10 @@ def create_dicke_state_adaptive(num_qubits: int, num_excitations: int) -> tuple[
     uniform_p = {tuple(p): (1e-3, 0.0) for p in dev.qubit_pairs}
     #blocks save cz but the flagged steps sometimes pack shallower, so keep whichever is shorter
     best = None
+    started = time.monotonic()
     for use_blocks in (True, False):
+        if best is not None and time.monotonic() - started > hard_limit_s:
+            break
         circuit, qubits = create_dicke_state(num_qubits, num_excitations, uniform_p, uniform_q, uniform_q, uniform_q,
                                              dynamical_decoupling=False, pack=True, use_blocks=use_blocks)
         if best is None or len(circuit) < len(best[0]):
@@ -692,17 +700,15 @@ block_angles = {
 }
 
 
-#small (N, k) circuits on 2d grid patches, fitted offline with synth.py:
-#(cells as (row, col) offsets, cz sequence on cell indices, ry angles in patch_ops order,
-#optionally the cells that get a final z)
-#ladder halves fitted offline (synth.py): (path length, max excitations, min excitations) ->
-#(cz sequence on path positions, ry angles, optional final-z positions). each maps
-#|0^(a-l) 1^l> to D(a, l) for every l in range, so it replaces the line plan of that half
+#ladder halves fitted offline (synth.py), keyed (path length, max, min excitations): each maps
+#|0^(a-l) 1^l> to d(a, l) for every l in range, replacing the line plan of that half
 halves = {
     (4, 3, 0): (((1, 2), (1, 2), (2, 3), (0, 1), (1, 2), (1, 2), (2, 3), (0, 1), (1, 2), (0, 1), (0, 1), (1, 2)),
                 (-1.5707963258891742, -1.5707963533175953, 4.7123889561248795, 1.570796326417348, -2.356194487882588, 2.356194487739181, -4.712388999232681, -1.1609152704988209e-08, 4.712388981579096, -2.094395101646326, -3.2920562347510636, -3.1415926646086207, -1.5707963267916425, -5.759586530481251, 0.955316626864939, -3.141592651418572, 5.32786868509897, 1.5707963315714237, 5.497787145542351, -6.283185287002136, -0.7910793482054154, 1.5707963307093389, 1.6769886266394414, 1.5707963163135656, -3.141592664679205, 3.03479647569184, 3.141592648578505, -1.4871803890100105e-09)),
 }
 
+#small (n, k) circuits on 2d grid patches fitted offline with synth.py: cells as (row, col) offsets,
+#cz sequence on cell indices, ry angles in patch_ops order, optionally the cells that get a final z
 patches = {
     (4, 2): (((0, 0), (0, 1), (1, 0), (1, 1)), ((3, 2), (2, 0), (0, 1), (2, 0), (1, 3)),
              (1.107148713763576, -1.570796315714004, -2.225390530798368, -1.920221412087157, 2.60229140661367, 3.561182602987168, -1.570796336225327, 1.107148723429225, 1.570796336908662, 3.141592660823991, 3.141592671341913, -4.712389007131684, 1.570796327634962, -3.141592649593266)),
