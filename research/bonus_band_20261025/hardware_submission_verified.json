@@ -1,0 +1,212 @@
+{
+  "status": "passed; separate standalone candidate",
+  "candidate_sha256": "7c962504b1962c192ea274aaf13494e484cbd17b3df248a0b56f143a32e3b49d",
+  "preserved_sha256": "e513e4442ecfc2a23e17c79ff54cfafffc057973cc36f73df682836afa1b050c",
+  "current_main_sha256": "6af97c8588165a6dd6f8ea6ba1941fda34dee49b4c1d769f0f03d89874038f8a",
+  "exact_reference_matches": 18,
+  "rows": [
+    {
+      "N": 8,
+      "seed": 0,
+      "moments": 11,
+      "CZ": 13,
+      "seconds": 0.7432787958532572,
+      "state_l2_error": 3.8412691569637417e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 8,
+      "seed": 1,
+      "moments": 15,
+      "CZ": 13,
+      "seconds": 0.7056810166686773,
+      "state_l2_error": 4.400882432915618e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 8,
+      "seed": 2,
+      "moments": 15,
+      "CZ": 13,
+      "seconds": 0.6943549122661352,
+      "state_l2_error": 5.835603993082667e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 8,
+      "seed": 6,
+      "moments": 15,
+      "CZ": 13,
+      "seconds": 0.7629383066669106,
+      "state_l2_error": 6.83853574240869e-16,
+      "selected": "bias"
+    },
+    {
+      "N": 8,
+      "seed": 7,
+      "moments": 11,
+      "CZ": 13,
+      "seconds": 0.6891692336648703,
+      "state_l2_error": 3.6418275330081213e-16,
+      "selected": "bias"
+    },
+    {
+      "N": 8,
+      "seed": 8,
+      "moments": 11,
+      "CZ": 13,
+      "seconds": 0.6819737739861012,
+      "state_l2_error": 3.421350825581335e-16,
+      "selected": "bias"
+    },
+    {
+      "N": 8,
+      "seed": 12,
+      "moments": 15,
+      "CZ": 13,
+      "seconds": 0.6957168709486723,
+      "state_l2_error": 8.40859439947258e-16,
+      "selected": "prim"
+    },
+    {
+      "N": 8,
+      "seed": 13,
+      "moments": 11,
+      "CZ": 13,
+      "seconds": 0.680021844804287,
+      "state_l2_error": 3.613756336087922e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 8,
+      "seed": 14,
+      "moments": 15,
+      "CZ": 13,
+      "seconds": 0.7682223888114095,
+      "state_l2_error": 7.164224134488138e-16,
+      "selected": "prim"
+    },
+    {
+      "N": 10,
+      "seed": 0,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.139611640945077,
+      "state_l2_error": 4.646840871973244e-16,
+      "selected": "bias"
+    },
+    {
+      "N": 10,
+      "seed": 1,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.2409462314099073,
+      "state_l2_error": 9.204306759288773e-16,
+      "selected": "bias"
+    },
+    {
+      "N": 10,
+      "seed": 2,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.1683618547394872,
+      "state_l2_error": 6.003920763109635e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 10,
+      "seed": 6,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.1885923696681857,
+      "state_l2_error": 1.122707991288754e-15,
+      "selected": "bias"
+    },
+    {
+      "N": 10,
+      "seed": 7,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.131463911384344,
+      "state_l2_error": 5.544207217179295e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 10,
+      "seed": 8,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.1348254075273871,
+      "state_l2_error": 7.543162357078828e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 10,
+      "seed": 12,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.1320289066061378,
+      "state_l2_error": 9.204306759288775e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 10,
+      "seed": 13,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.1156826866790652,
+      "state_l2_error": 8.838060382787185e-16,
+      "selected": "baseline"
+    },
+    {
+      "N": 10,
+      "seed": 14,
+      "moments": 15,
+      "CZ": 17,
+      "seconds": 1.2039277218282223,
+      "state_l2_error": 1.1624729004280746e-15,
+      "selected": "bias"
+    }
+  ],
+  "fallback_checks": [
+    {
+      "N": 6,
+      "k": 1,
+      "options": {}
+    },
+    {
+      "N": 8,
+      "k": 7,
+      "options": {}
+    },
+    {
+      "N": 4,
+      "k": 2,
+      "options": {}
+    },
+    {
+      "N": 8,
+      "k": 0,
+      "options": {}
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "options": {
+        "dynamical_decoupling": false
+      }
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "options": {
+        "pack": true
+      }
+    }
+  ],
+  "bonus_exact_matches": 56,
+  "bonus_score": 48.018571018834095,
+  "max_build_seconds": 1.2409462314099073,
+  "max_state_l2_error": 1.1624729004280746e-15,
+  "scope": "N8/N10 k1 default-DD unpacked calls use evaluated robust selector; other main paths preserve the current maintained-solver snapshot. Noise-model gains are not hardware guarantees."
+}

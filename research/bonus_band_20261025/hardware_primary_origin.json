@@ -1,0 +1,7 @@
+{
+  "source": "ryon/toby_sol.py",
+  "sha256": "6af97c8588165a6dd6f8ea6ba1941fda34dee49b4c1d769f0f03d89874038f8a",
+  "commit": "761433b788d14bf4b93bc60fdeb8b9625c26c5ab",
+  "includes_working_tree_changes": false,
+  "purpose": "Fresh non-W main behavior preserved while adding guarded W selector and frozen56-case bonus cache."
+}

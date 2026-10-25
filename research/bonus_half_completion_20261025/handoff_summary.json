@@ -1,0 +1,747 @@
+{
+  "status": "Bounded continuation complete; no gain; CPU released",
+  "score": 48.018571018834095,
+  "baseline_score": 48.018571018834095,
+  "gain": 0.0,
+  "trials": 399,
+  "search_seconds": 120.93795459438115,
+  "total_seconds": 123.41831683926284,
+  "max_state_l2_error": 1.1862592072738487e-07,
+  "coverage_counts": {
+    "complete": 24,
+    "partial": 1,
+    "not-started": 98
+  },
+  "unfinished": [
+    {
+      "N": 13,
+      "k": 3,
+      "offset": -1,
+      "left_size": 6,
+      "status": "partial",
+      "blocks": [
+        {
+          "blocks": true,
+          "status": "complete",
+          "attempted": 9,
+          "previous_identical": 0,
+          "planned": 9
+        },
+        {
+          "blocks": false,
+          "status": "partial",
+          "attempted": 2,
+          "previous_identical": 0,
+          "planned": 9
+        }
+      ]
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "offset": -1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "offset": 1,
+      "left_size": 9,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "offset": 0,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "offset": -1,
+      "left_size": 3,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "offset": -1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "offset": 1,
+      "left_size": 9,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "offset": 0,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "offset": -1,
+      "left_size": 3,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "offset": -1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 7,
+      "k": 1,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "offset": 1,
+      "left_size": 9,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 15,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 7,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 5,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 6,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 7,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    }
+  ],
+  "lookup_transition": "lookup_transition.json",
+  "remaining_bottleneck": "High-weight k>=5 ladder tails remain deepest; restricted r<=4 decoder cannot replace them. The root builder has2k-1 CZ before global optimization, e.g13 for D14,7 versus175 in the full retained circuit. Audit seven-site all-count coherent expansion/decoder cost before compressed-root synthesis.",
+  "scope_limit": "All previously pending k4 ladder groups completed; eight k4 line-tail groups remain unattempted. New standard-certified alternatives in earlier complete PORT011 groups were not explored; unrelated completed groups were not rerun."
+}

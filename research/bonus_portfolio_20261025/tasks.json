@@ -147,14 +147,14 @@
       ],
       "result_status": "completed for N8/10 seeds0..5, four detuning realizations; held-out seeds3..5; no primary gain claimed"
     },
-    "pilot_status": "Coupling-aware selector confirmation complete: positive mean sampled deltas under all three models for N8/N10, six earlier-cohort seeds plus three fresh seeds. Standalone integration/validation next; maintained main unchanged.",
+    "pilot_status": "Standalone export functional checks passed; promotion rejected after signed-ZZ stress regression at N10seed17. Maintained main unchanged.",
     "pilot_evidence": [
       "research/bonus_band_20261025/w_hardware_results.json",
       "research/bonus_band_20261025/w_hardware_summary.json",
       "research/bonus_band_20261025/w_zz_confirmation_manifest.json",
       "research/bonus_band_20261025/w_zz_confirmation_summary.json"
     ],
-    "next_work": "Validate standalone robust selector equivalence, timing, native/state constraints and unchanged56-case bonus cache. Preserve published main until that candidate is independently checked.",
+    "next_work": "PORT016: extend Z-surrogate to heterogeneous coupling patterns and validate held-out outcomes before reconsidering promotion.",
     "cost_pilot_evidence": [
       "research/bonus_band_20261025/w_cost_summary.json",
       "research/bonus_band_20261025/w_tree_summary.json",
@@ -621,5 +621,189 @@
     ],
     "remaining_work": "Two N13,k4 balanced False-block candidates remain;122 planned additional split/line groups not started. Exact list in comparison_coverage.json. Consider exact-Clifford constrained polishing separately before repeating large integration; no such run started.",
     "pool_sha256": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507"
+  },
+  {
+    "id": "PORT-012",
+    "title": "Test exact-Clifford constraints in the certified restricted five-site decoder",
+    "status": "deferred; no distinct depth mechanism",
+    "assignee": "bonus-precision",
+    "scope": "Fixed26-CZ coefficient constraints only in research/bonus_half_clifford_20261025; preserve certified35-moment incumbent and ryon issue7 ownership. No topology search or main edits.",
+    "compute_budget_seconds": 60,
+    "inputs": [
+      "research/bonus_half_precision_20261025/original_five_four.json",
+      "research/bonus_half_precision_20261025/polished_five_four.json",
+      "research/bonus_band_20261025/best6_circuits.json"
+    ],
+    "acceptance": [
+      "Use nested conservative original-angle tolerances1e-8,1e-7,1e-6 while fixing selected rotations to exact pi/2 multiples.",
+      "Preserve all five coherent r=0..4 columns under one common phase and native error<1e-10; keep fixed26-CZ sequence.",
+      "Retain certified35-moment incumbent if no strict native-depth gain; record numerical failures, infeasible constraints, deadlines or certified ties explicitly.",
+      "No numerical work before explicit CPU release; optional integration is bounded and preserves every frozen pool depth."
+    ],
+    "preparation_finding": "All31 original near-Clifford angles are already within8.5e-16 of exact values in the incumbent; largest2e-4 coefficient movement was non-Clifford. Further emitted-depth gain is unlikely; this is a narrow reproducibility check.",
+    "artifacts": [
+      "research/bonus_half_clifford_20261025/constraint_plan.json",
+      "research/bonus_half_clifford_20261025/constrain.py",
+      "research/bonus_half_clifford_20261025/compare.py",
+      "research/bonus_half_clifford_20261025/sources.json",
+      "research/bonus_half_clifford_20261025/prepared_handoff.json",
+      "research/bonus_half_clifford_20261025/prepared_manifest.json"
+    ],
+    "handoff": "Preparation complete and syntax-checked; no numerical run. Await explicit CPU release. See prepared_handoff.json for exact commands, incumbent-preservation rules and conditional90-second integration.",
+    "result": "No numerical fit launched. All31 near-Clifford angles already exact within8.5e-16; retain certified35-moment incumbent. Prepared scripts remain reproducible.",
+    "publication_note": "This ticket records shared-workspace coordination; its in-progress/local artifacts are not included in this checkpoint unless explicitly linked in published evidence."
+  },
+  {
+    "id": "PORT-013",
+    "title": "Complete bounded integration coverage for the certified restricted five-site decoder",
+    "status": "complete",
+    "assignee": "bonus-precision",
+    "scope": "Isolated research/bonus_half_completion_20261025; freeze48.018571018834095 pool; remaining PORT011 coverage plus certified standard-half alternatives; no topology search or fitting.",
+    "compute_budget_seconds": 120,
+    "inputs": [
+      "research/bonus_half_precision_20261025/comparison_coverage.json",
+      "research/bonus_half_precision_20261025/polished_five_four.json",
+      "research/bonus_band_20261025/best6_circuits.json"
+    ],
+    "acceptance": [
+      "Start with unfinished N13,k4 balanced candidates; record all exact skips and changed standard-half alternatives.",
+      "Ensure private standard-half lookup also uses certified coefficients, never the original8e-8 table.",
+      "Preserve all56 best depths; verify retained state/device/native circuits and publish hashes."
+    ],
+    "result": {
+      "status": "Bounded continuation complete; no gain; CPU released",
+      "score": 48.018571018834095,
+      "baseline_score": 48.018571018834095,
+      "gain": 0.0,
+      "trials": 399,
+      "search_seconds": 120.93795459438115,
+      "total_seconds": 123.41831683926284,
+      "max_state_l2_error": 1.1862592072738487e-07,
+      "coverage_counts": {
+        "complete": 24,
+        "partial": 1,
+        "not-started": 98
+      },
+      "lookup_transition": "lookup_transition.json",
+      "remaining_bottleneck": "High-weight k>=5 ladder tails remain deepest; restricted r<=4 decoder cannot replace them. The root builder has2k-1 CZ before global optimization, e.g13 for D14,7 versus175 in the full retained circuit. Audit seven-site all-count coherent expansion/decoder cost before compressed-root synthesis.",
+      "scope_limit": "All previously pending k4 ladder groups completed; eight k4 line-tail groups remain unattempted. New standard-certified alternatives in earlier complete PORT011 groups were not explored; unrelated completed groups were not rerun."
+    },
+    "artifacts": [
+      "research/bonus_half_completion_20261025/comparison_circuits.json",
+      "research/bonus_half_completion_20261025/comparison_results.json",
+      "research/bonus_half_completion_20261025/comparison_coverage.json",
+      "research/bonus_half_completion_20261025/lookup_transition.json",
+      "research/bonus_half_completion_20261025/handoff_summary.json",
+      "research/bonus_half_completion_20261025/handoff_manifest.json"
+    ],
+    "pool_sha256": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507"
+  },
+  {
+    "id": "PORT-014",
+    "title": "Audit compressed complementary root labels for D(14,7)",
+    "status": "symbolic audit complete; routed depth undecided",
+    "assignee": "coordination-research",
+    "scope": "Follow up BR-103 using the literature audit and existing binary decoder artifacts; no broad half-decoder fitting that overlaps ryon issue7.",
+    "inputs": [
+      "research/bonus_band_20261025/compressed_splitter_research.json",
+      "research/bonus_band_20261025/compressed_splitter_targets.json",
+      "research/bonus_depth_20261024/binary_decoder.py"
+    ],
+    "hypothesis": "k7 complement is XOR7: three parallel cross-register CNOTs can distribute a precomputed3-bit Schmidt count. Total benefit depends on native local decoding.",
+    "acceptance": [
+      "Reuse existing BR-103 work; do not treat its unconverged5-site coefficients as valid.",
+      "Build and count an explicit native/routed binary-to-unary conversion plus certified terminal baseline.",
+      "Preserve all8 count columns with one common phase; benchmark total D(14,7) moments against current best before requesting fits."
+    ],
+    "compute_budget": "Small symbolic/resource audit first; coordinate local CPU before simulation.",
+    "current_scope": "Read-only/symbolic finite-cost audit of7-site binary-to-unary conversion plus existing coherent terminal decoder; no fit, simulation or heavy process while root validates hardware export.",
+    "result": {
+      "case": [
+        14,
+        7
+      ],
+      "converter_qubits": 7,
+      "external_ancillas": 0,
+      "supported_counts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "Toffoli": 4,
+      "CNOT": 10,
+      "unrouted_CZ": 34,
+      "exact_basis_and_phase_checks": 8,
+      "conservative_path_CZ_upper_bound": 376,
+      "conservative_serial_native_moment_upper_bound": 1164,
+      "naive_two_converter_CZ_overhead": 58,
+      "interpretation": "CZ-cost disadvantage of naive unchanged-terminal composition only; not a native-depth lower bound. Routing/parallelism/cancellations require emitted-circuit analysis."
+    },
+    "artifacts": [
+      "research/bonus_binary_resource_audit_20261025/audit.py",
+      "research/bonus_binary_resource_audit_20261025/converter_audit.json",
+      "research/bonus_binary_resource_audit_20261025/handoff_manifest.json"
+    ],
+    "next_work": "Do not repeat BR103 fitting. Only a fused seven-site binary decoder or demonstrated boundary cancellation establishes a distinct finite-depth mechanism; compare emitted/routed moments against108 for D14,7 before proposing synthesis."
+  },
+  {
+    "id": "PORT-015",
+    "title": "Check robust W selector against coupler-dependent ZZ signs",
+    "status": "complete; signed-coupling stress rejects current selector promotion",
+    "assignee": "bonus-depth",
+    "scope": "Separate noise-model experiment in research/bonus_band_20261025; no maintained solver edits. Start after standalone export validation releasesCPU.",
+    "hypothesis": "Uniform residualZZ can have cancellation patterns that do not survive independent coupler signs. Check held-out N8 calibration seeds15..20 with fixed physical-edge +/-100kHz fields; this is a stress assumption, not a measured Willow parameter.",
+    "acceptance": [
+      "Validate diagonal phase convention independently on3qubits.",
+      "Share physical-edge and detuning fields between baseline and candidate; retain4detuning realizations and32768 score samples.",
+      "Report E[1/penalty] for both cutoff4 andallX, with conditional MonteCarlo and calibration-seed uncertainty.",
+      "Report regressions explicitly; no promotion based solely on uniformZZ averages."
+    ],
+    "inputs": [
+      "research/bonus_band_20261025/w_stress_noise.py",
+      "research/bonus_band_20261025/w_zz_selection.py",
+      "research/bonus_band_20261025/hardware_submission.py"
+    ],
+    "result": {
+      "N8_signed_mean_delta": 0.02409076845003938,
+      "N10_signed_mean_delta": -0.014378248412389352,
+      "N10_seed17_delta": -0.09346465946013195,
+      "summary": "research/bonus_band_20261025/w_heterogeneous_summary.json"
+    },
+    "artifacts": [
+      "research/bonus_band_20261025/w_heterogeneous_noise.py",
+      "research/bonus_band_20261025/w_heterogeneous_noise_checks.json",
+      "research/bonus_band_20261025/w_heterogeneous_probe.py",
+      "research/bonus_band_20261025/w_heterogeneous_results.json",
+      "research/bonus_band_20261025/w_heterogeneous_selections.json",
+      "research/bonus_band_20261025/w_heterogeneous_n10_probe.py",
+      "research/bonus_band_20261025/w_heterogeneous_n10_results.json",
+      "research/bonus_band_20261025/w_heterogeneous_n10_selections.json",
+      "research/bonus_band_20261025/w_heterogeneous_summary.json",
+      "research/bonus_band_20261025/w_heterogeneous_manifest.json"
+    ]
+  },
+  {
+    "id": "PORT-016",
+    "title": "Model heterogeneous coupler interactions in W-tree placement",
+    "status": "assigned",
+    "assignee": "bonus-depth",
+    "scope": "Separate research; preserve current baseline and frozen experimental selector. No maintained solver change until held-out stress evidence supports it.",
+    "inputs": [
+      "research/bonus_band_20261025/w_zz_sensitivity.py",
+      "research/bonus_band_20261025/w_zz_selection.py",
+      "research/bonus_band_20261025/w_heterogeneous_summary.json"
+    ],
+    "hypothesis": "Uniform-field second-order cost misses cancellation changes across independently signed edges. Add calibration-seed-independent physical-edge patterns or an independent-edge second-order expectation while retaining the nominal-cost guard.",
+    "acceptance": [
+      "Independently verify any modified derivative with small exact density/state calculations.",
+      "Choose coupling patterns without using evaluation seed or held-out coupler fields.",
+      "Recheck known failure cases, then evaluate untouched calibration seeds for nominal,uniform andsignedcouplingmodels.",
+      "Preserve native exact-state behavior and constructorunder60s; report actual E[1/penalty] with uncertainty."
+    ]
   }
 ]

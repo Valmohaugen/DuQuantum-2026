@@ -1,0 +1,17 @@
+{
+  "private_table_key": [
+    5,
+    4,
+    0
+  ],
+  "old_coefficients_source": "research/bonus_half_precision_20261025/original_five_four.json",
+  "old_coefficients_sha256": "6a634a85a2c15f91de652882c5b9830315835f93bf4158446e21d44a92cdf3a3",
+  "new_coefficients_source": "research/bonus_half_completion_20261025/polished_five_four.json",
+  "new_coefficients_sha256": "7ce75852af8ec9c4d4c62d46a69c9c076f8c1f0a38ec25208bf471e21342b39d",
+  "snapshot_sha256": "6af97c8588165a6dd6f8ea6ba1941fda34dee49b4c1d769f0f03d89874038f8a",
+  "implementation_sha256": "0dcfc9fb5a4115eee1b5df6106951b62208eb33ebc75c9d5ab1ac69a9c11a18f",
+  "effect": "Only the in-memory private h.b.halves[5,4,0] is replaced after loading certified decoders. Frozen snapshot file and maintained solver are unchanged.",
+  "coverage_policy": "Only prior pending groups are visited. Previously attempted explicit non-standard alternatives are identical and skipped. All standard alternatives in these pending groups are reevaluated and renamed standard-certified because coefficient identity changed. Complete unrelated groups are not rerun.",
+  "prior_published_gains": "PORT011 accepted improvements all used five_four/five_four and are unaffected.",
+  "scope_limit": "New certified standard alternatives inside earlier complete groups have not been explored by this continuation."
+}

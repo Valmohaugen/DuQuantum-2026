@@ -1,0 +1,27 @@
+{
+  "status": "Exact symbolic audit complete; no fit, floating simulation or hardware change",
+  "sources": [
+    {
+      "path": "research/bonus_band_20261025/compressed_splitter_research.json",
+      "sha256": "a5c2d39b36b5d4a492a6aa2840556660622ae24cd1258fef96d159c1d85b98fb"
+    },
+    {
+      "path": "research/bonus_band_20261025/compressed_splitter_targets.json",
+      "sha256": "f54db3edd8e4fbb553054bc1ea490a60351ae86b0bb2585836729e4185df99ab"
+    },
+    {
+      "path": "research/bonus_depth_20261024/binary_decoder.py",
+      "sha256": "c191073895161bcbe343be14528d9a8886a0dd111dcd85b7e94b72e258fc7c5a"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "research/bonus_binary_resource_audit_20261025/audit.py",
+      "sha256": "6105c48d4368a04dd289f750fa257fabf0ecc1fc69f5b863853139271097bdcb"
+    },
+    {
+      "path": "research/bonus_binary_resource_audit_20261025/converter_audit.json",
+      "sha256": "f5a1ef3f2dce94653133111c0664f6c0418d85ef309c2e6820a85a353ecf90f1"
+    }
+  ]
+}

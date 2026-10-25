@@ -357,3 +357,28 @@ is **0.002501 s**, and maximum state L2 error is **1.19e-07**.
 [checkpoint summary](research/bonus_band_20261025/milestones/20261025T071120Z/summary.json),
 [precision evidence](research/bonus_half_precision_20261025/precision_results.json).
 The main entry point remains unchanged; hardware robustness research continues.
+
+
+## Standalone hardware candidate — 2026-10-25
+
+Bonus best remains **48.0185710188**. A separate
+[combined candidate](research/bonus_band_20261025/hardware_submission.py)
+preserves maintained main tables from commit761433b, all56 verified
+bonus circuits, and adds a guarded W-tree selector for N8/N10 with defaultDD
+and pack=False. It exactly matches the evaluated selector on18 calibration
+cases; maximum measured construction time was **1.241 s**.
+[Export verification](research/bonus_band_20261025/hardware_submission_verified.json)
+includes native/state checks, fallback comparisons and exact bonus equality.
+
+The selector had positive mean sampled score changes under nominal, coherent
+and assumed uniform100kHz ZZ models in both cohorts. These are simulated
+results, not hardware measurements; see the
+[confirmation](research/bonus_band_20261025/w_zz_confirmation_summary.json).
+The maintained solver is unchanged. A held-out coupler-dependent signed-ZZ study found mean changes of
+**+0.02409** (N8) and **-0.01438** (N10), including a substantial N10
+regression. This selector is **not promoted**; the standalone export is
+research evidence, not a recommended hardware replacement.
+[Signed-ZZ results](research/bonus_band_20261025/w_heterogeneous_summary.json)
+include both conditional Monte Carlo and calibration uncertainty. A further399 bonus comparisons found no improvement;
+[coverage](research/bonus_half_completion_20261025/handoff_summary.json)
+records unfinished groups so other agents can continue without repeating work.

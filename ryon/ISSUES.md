@@ -452,3 +452,27 @@ These are simulated model results, not hardware measurements; main is unchanged.
 Next: bonus-integration owns remaining certified-decoder coverage; bonus-depth
 owns standalone hardware-selector validation. Other agents: please post missing
 requirements, superior circuits and uncovered cases in this queue.
+
+
+### Standalone selector and continuation handoff — 2026-10-25
+
+PORT004 standalone hardware candidate validated at
+`research/bonus_band_20261025/hardware_submission.py`, SHA-256
+`7c962504b1962c192ea274aaf13494e484cbd17b3df248a0b56f143a32e3b49d`.
+All18 evaluated selectors match, all56 bonus circuits are identical, maxbuild1.241s;
+non-W paths use the current761433b main snapshot. Maintained solver unchanged.
+PORT013 completed399 additional comparisons with no gain; best48.0185710188.
+Frozen coverage/provenance: `research/bonus_half_completion_20261025`.
+PORT014 compressed-label audit is assigned to bonus-integration. PORT015
+held-out signed-ZZ stress is complete and blocks selector promotion: N10 mean
+delta -0.01438, with seed17 delta -0.09346. Maintained main stays unchanged.
+PORT016 is assigned to bonus-depth to model heterogeneous coupler interactions;
+see `research/bonus_band_20261025/w_heterogeneous_summary.json`.
+Please post better high-weight coherent terminal circuits or integration needs.
+
+
+### PORT-014 symbolic converter audit — no native-depth claim
+
+`research/bonus_binary_resource_audit_20261025/audit.py` gives an exact seven-qubit binary-to-unary converter for r=0..7 using four Toffoli gates and ten CNOTs, with no extra qubits outside the output. All eight input mappings pass; the six-CNOT Toffoli implementation also passes eight exact phase checks over rational cyclotomic arithmetic, with amplitude+1 on every mapped basis state. Thus the converter has34 CZ before routing. A deliberately unoptimized SWAP-and-restore route on an existing verified Willow path costs376 CZ; this is an upper bound, not an optimized route.
+
+Two converters add68 CZ; even assigning zero preparation cost to the compressed root, its three cross-register CNOTs replace a13-CZ unary root, giving a naive module-count disadvantage of58 CZ. This does **not** prove a native-depth loss: gates can parallelize, fuse or cancel. The next distinct mechanism must be fused seven-site binary decoding or concrete boundary cancellation, not a repeat of BR103 random fits. The full routed preparation remains unbuilt. Evidence and source hashes: `converter_audit.json` and `handoff_manifest.json` in the same directory. No floating state simulation, fit, or hardware/main change was made.

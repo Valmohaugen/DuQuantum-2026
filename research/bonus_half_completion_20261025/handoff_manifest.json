@@ -1,0 +1,109 @@
+{
+  "status": "Bounded continuation complete; no gain; CPU released",
+  "files": [
+    {
+      "path": "research/bonus_half_completion_20261025/baseline_circuits.json",
+      "sha256": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/baseline_results.json",
+      "sha256": "54a7832cb65ccd36e83e433a756592552fbc1ee6ae1828c9c3f5939d3b2b9f58"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/clean_clifford_tables.json",
+      "sha256": "d96165008545bdbece617635620b16ab6525b63c78415821cd91119f4a7979fd"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/compare.py",
+      "sha256": "0dcfc9fb5a4115eee1b5df6106951b62208eb33ebc75c9d5ab1ac69a9c11a18f"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/comparison_circuits.json",
+      "sha256": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/comparison_coverage.json",
+      "sha256": "277a9b719c0a9b1502e9644b287f6aca60511db1a606bb5bd749071ce418d13f"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/comparison_results.json",
+      "sha256": "31dbbade2ffd3ca2d527da8e80b15a5808aa462b85173fbc46a8b6774101d6e2"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/decoder_checks.json",
+      "sha256": "4fa4d922d90064a92757a0c4723cc0fd0a94130112756924415f3293b70a8a5a"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/five_complex.json",
+      "sha256": "58625bb615547fc142942b0bb0cdb46421c59c3023b2cfc68067813f81f582cc"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/five_four.json",
+      "sha256": "7ce75852af8ec9c4d4c62d46a69c9c076f8c1f0a38ec25208bf471e21342b39d"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/five_real.json",
+      "sha256": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/handoff_summary.json",
+      "sha256": "2469e7faf738e5d63076c806b6168ede3f9bd93c37924af68ae824b1ecde1a4f"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/lookup_transition.json",
+      "sha256": "0ce52586f5e72892df89c63038597fc6e1a8cef8414c27f169708fc491c6009d"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/polished_five_four.json",
+      "sha256": "7ce75852af8ec9c4d4c62d46a69c9c076f8c1f0a38ec25208bf471e21342b39d"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/precision_results.json",
+      "sha256": "19e838cf41c0fe922b32f47c330221dd384f9bcacff7075bfedcb1bef905b745"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/previous_coverage.json",
+      "sha256": "0aa574a2fef59f9fb903280c53611ec011d2d22c16cd56694be0e4f2d079d37d"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/refined_halves.json",
+      "sha256": "4f2db62fd3eefa138e48b756843dcb0ae0b7b319143e3acff47754f917af9440"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/run.log",
+      "sha256": "9c4ec315b7b2db167c21b8f3d971b3bdc04d8c66a7061cbcb88013d1004b4284"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/six_real.json",
+      "sha256": "7c16c4e27188432212472f2f648d36602cb2e39778a97ad2a7c4938b313db79d"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/snapshot.py",
+      "sha256": "6af97c8588165a6dd6f8ea6ba1941fda34dee49b4c1d769f0f03d89874038f8a"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/source_compare.py",
+      "sha256": "bfcffbc206e757397c979fec4034630c57334e6ca048ab1a3a73b3db993770de"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/source_helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "path": "research/bonus_half_completion_20261025/sources.json",
+      "sha256": "366b583eea5a52e597274c5b1b262393d980878527257f34066ea649c89cae3b"
+    }
+  ]
+}

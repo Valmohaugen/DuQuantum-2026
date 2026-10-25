@@ -1,0 +1,15 @@
+{
+  "status": "standalone candidate; not promoted to native_submission",
+  "candidate": "hardware_submission.py",
+  "candidate_sha256": "7c962504b1962c192ea274aaf13494e484cbd17b3df248a0b56f143a32e3b49d",
+  "domain": "N in {8,10}, k=1, default DD enabled and pack=False; all other calls use preserved baseline",
+  "sources": {
+    "native_submission.py": "e513e4442ecfc2a23e17c79ff54cfafffc057973cc36f73df682836afa1b050c",
+    "hardware_primary_snapshot.py": "6af97c8588165a6dd6f8ea6ba1941fda34dee49b4c1d769f0f03d89874038f8a",
+    "hardware_primary_origin.json": "2c1d537b623b12a230d714cb74c55920422bedcb4634566b3feecffb3900782d",
+    "w_z_sensitivity.py": "b5be11f4af7566baac6608bbeed501bcf672fd9554a42446d8e2bb7f604ffe12",
+    "w_zz_sensitivity.py": "1542665a179ff46069238c6c1aac78a3f38f94e4d76d993ba3d921250c4acbce",
+    "w_zz_selection.py": "2010b9c946432cdf8743251eb39247e038b2799c9a2dec1370dfdf8803c68871",
+    "export_hardware.py": "64312e53f3c74657b64e1cb990c9d20a0e6b135dfacb36bab45fb459724d841b"
+  }
+}

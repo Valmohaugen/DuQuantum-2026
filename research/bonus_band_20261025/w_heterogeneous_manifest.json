@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "files": {
+    "research/bonus_band_20261025/w_heterogeneous_noise.py": "20cc0f24a876a57f31f1bac1a67c94abfbf001c7b6e34d8a08208fb9d6d61573",
+    "research/bonus_band_20261025/w_heterogeneous_noise_checks.json": "69a734e7c7b580766afbe76e4d87187b7ea509a43abd466bfaa723d0fe04707a",
+    "research/bonus_band_20261025/w_heterogeneous_probe.py": "c25e78504a22204b471349c932f0c1f4f3af02e8eac44099e728c77aa887628f",
+    "research/bonus_band_20261025/w_heterogeneous_results.json": "394e135e96f6e7613a3ff02c2ef6af02d1dae4229a0f9ac5dd60a59286801377",
+    "research/bonus_band_20261025/w_heterogeneous_selections.json": "066c571f58fa255d75e628771c0795128d228db6c27e0725aec4e3bfd2ea8bff",
+    "research/bonus_band_20261025/w_heterogeneous_n10_probe.py": "6d861295af28fa8b502cad28c78ff202a7a045dd35508762c84dc5f465591678",
+    "research/bonus_band_20261025/w_heterogeneous_n10_results.json": "dbe84ffb43e422a69e9b97b535868ec065ed4fc81cfd9ab2f262f2312bbf5d7a",
+    "research/bonus_band_20261025/w_heterogeneous_n10_selections.json": "7c37fc4e25f04667080d35f32a554d5b106b606f3922c51f8aa15eaf355c306c",
+    "research/bonus_band_20261025/w_heterogeneous_summary.json": "a60782a003a80de308f92f76fa307db8cafef599d950e4915f5c0e53a488c220"
+  },
+  "dependencies": [
+    "w_stress_manifest.json",
+    "w_zz_manifest.json"
+  ],
+  "commands": [
+    "python -m research.bonus_band_20261025.w_heterogeneous_noise",
+    "python -m research.bonus_band_20261025.w_heterogeneous_probe",
+    "python -m research.bonus_band_20261025.w_heterogeneous_n10_probe"
+  ]
+}

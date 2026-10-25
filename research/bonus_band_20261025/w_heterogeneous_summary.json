@@ -1,0 +1,185 @@
+{
+  "status": "complete; robust-selector promotion rejected by signed-coupling stress criterion",
+  "seeds": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "summary": [
+    {
+      "N": 8,
+      "model": "nominal",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.006126508827277777,
+      "conditional_MC_standard_error": 0.002613516742401983,
+      "calibration_standard_error": 0.0031335069377002762,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 8,
+      "model": "nominal",
+      "cutoff": 8,
+      "cases": 6,
+      "mean_score_delta": 0.006127036668850669,
+      "conditional_MC_standard_error": 0.0026096369915288905,
+      "calibration_standard_error": 0.0031315107641491464,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 8,
+      "model": "signed_zz",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.024112930690741066,
+      "conditional_MC_standard_error": 0.0025073953310426004,
+      "calibration_standard_error": 0.014429342840741604,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 8,
+      "model": "signed_zz",
+      "cutoff": 8,
+      "cases": 6,
+      "mean_score_delta": 0.02409076845003938,
+      "conditional_MC_standard_error": 0.00250394605385405,
+      "calibration_standard_error": 0.01441881094681803,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "nominal",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.0021853106185232276,
+      "conditional_MC_standard_error": 0.0017037073536447344,
+      "calibration_standard_error": 0.001399230905910336,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "nominal",
+      "cutoff": 10,
+      "cases": 6,
+      "mean_score_delta": 0.002183900797268122,
+      "conditional_MC_standard_error": 0.0017024174197134033,
+      "calibration_standard_error": 0.0013985979268801867,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "signed_zz",
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": -0.014387817024026132,
+      "conditional_MC_standard_error": 0.0016622970357683382,
+      "calibration_standard_error": 0.01593436987223884,
+      "positive": 1,
+      "negative": 2,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "signed_zz",
+      "cutoff": 10,
+      "cases": 6,
+      "mean_score_delta": -0.014378248412389352,
+      "conditional_MC_standard_error": 0.001661058475078945,
+      "calibration_standard_error": 0.015926362035747942,
+      "positive": 1,
+      "negative": 2,
+      "unchanged": 3
+    }
+  ],
+  "regressions": [
+    {
+      "N": 10,
+      "seed": 17,
+      "model": "signed_zz",
+      "cutoff": 10,
+      "mean_delta": -0.09346465946013195,
+      "paired_MC_standard_error": 0.005626778413504482
+    },
+    {
+      "N": 10,
+      "seed": 20,
+      "model": "signed_zz",
+      "cutoff": 10,
+      "mean_delta": -0.003048715187982623,
+      "paired_MC_standard_error": 0.005710364029616381
+    }
+  ],
+  "scope": "Independent +/-100kHz per physical coupler, fixed across4detuning draws. Assumed stress model, not measured Willow behavior. Six held-out calibration seeds per size.",
+  "decision": "Keep maintained main unchanged. Standalone export is functionally validated research evidence, not a recommended hardware replacement. Extend surrogate to heterogeneous coupler fields before reevaluation.",
+  "seed17_diagnosis": [
+    {
+      "N": 10,
+      "seed": 17,
+      "model": "signed_zz",
+      "variant": "baseline",
+      "moments": 15,
+      "scores": {
+        "4": {
+          "E_score": 1.2378941960553753,
+          "MC_standard_error": 0.00428115224412989,
+          "valid_fraction": 0.9089914671077309,
+          "Z_floor": 1.0001162491342883,
+          "Z_bias": 0.04088828667470374,
+          "X_penalty": 0.004529632995203461,
+          "penalty_inverse_proxy": 0.956448894581538
+        },
+        "10": {
+          "E_score": 1.2375898999792871,
+          "MC_standard_error": 0.004278186088625138,
+          "valid_fraction": 0.9089914671077309,
+          "Z_floor": 1.0001162491342883,
+          "Z_bias": 0.04088828667470374,
+          "X_penalty": 0.004529649839139195,
+          "penalty_inverse_proxy": 0.9564488791727987
+        }
+      }
+    },
+    {
+      "N": 10,
+      "seed": 17,
+      "model": "signed_zz",
+      "variant": "candidate",
+      "moments": 15,
+      "scores": {
+        "4": {
+          "E_score": 1.144380276586008,
+          "MC_standard_error": 0.0037767651464438857,
+          "valid_fraction": 0.9135462287999743,
+          "Z_floor": 0.9946234521142955,
+          "Z_bias": 0.1190236972511588,
+          "X_penalty": 0.008127843122354522,
+          "penalty_inverse_proxy": 0.8914443686984471
+        },
+        "10": {
+          "E_score": 1.1441252405191553,
+          "MC_standard_error": 0.0037743492559780523,
+          "valid_fraction": 0.9135462287999743,
+          "Z_floor": 0.9946234521142955,
+          "Z_bias": 0.1190236972511588,
+          "X_penalty": 0.00812784878248185,
+          "penalty_inverse_proxy": 0.8914443642004964
+        }
+      }
+    }
+  ]
+}

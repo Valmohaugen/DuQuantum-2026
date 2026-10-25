@@ -1,0 +1,48 @@
+{
+  "status": "literature-derived finite-size proposal; no score claim",
+  "source": {
+    "title": "Depth-Efficient Quantum Circuit Synthesis for Deterministic Dicke State Preparation",
+    "url": "https://arxiv.org/html/2505.15413v1",
+    "sections": "3.1 and3.2",
+    "finding": "Ancilla-free overall construction borrows idle output qubits for temporary work. Hybrid unary, one-hot and binary representations parallelize coherent weight distribution. Grid routing is explicitly part of its asymptotic analysis."
+  },
+  "inference": "For current N<=15 cases, audit a fixed-weight root splitter with compressed Schmidt count labels rather than assuming asymptotic improvements transfer. Existing certified coherent terminal decoders provide a concrete comparison target.",
+  "proposal": {
+    "targets": [
+      [
+        12,
+        6
+      ],
+      [
+        14,
+        7
+      ],
+      [
+        15,
+        7
+      ]
+    ],
+    "split": "a=floor(N/2), b=N-a",
+    "state": "sum_i sqrt(C(a,i) C(b,k-i) / C(N,k)) |i>_A |k-i>_B",
+    "count_bits": "ceil(log2(min(a,k)+1)) and ceil(log2(min(b,k)+1))",
+    "obligation": "Expand count labels into the exact unary inputs expected by each terminal decoder, preserving one common phase for every supported i. Temporary work must end separable. Include encoder, complement arithmetic, SWAP routing and native compilation in depth.",
+    "acceptance": "Beat frozen per-case native moments using CZ edges on Willow and PhasedXZ gates; all-state complex128 check below1e-5, coherent component checks below1e-10; record total qubits and emitted depth.",
+    "priority": "Resource/circuit audit first; no broad topology fitting that overlaps ryon issue7."
+  },
+  "comparison": "Constant-depth global-CZ results rely on nonnative multi-qubit primitives; they do not by themselves give native Willow depth reductions.",
+  "comparison_source": "https://arxiv.org/html/2601.10693v1",
+  "existing_work": {
+    "ticket": "BR-103",
+    "source": "research/bonus_depth_20261024/binary_decoder.py",
+    "result": "Three-site7-CZ binary-label fit exists; five-site33-CZ fit did not converge. Reuse these and do not repeat random binary-decoder searches."
+  },
+  "narrow_new_test": {
+    "case": [
+      14,
+      7
+    ],
+    "identity": "For k=7, k-i equals bitwise complement of the3-bit count i. Prepare3 count qubits with amplitudes C(7,i)/sqrt(C(14,7)), copy via3 parallel boundary CNOTs and complement the copied register. This exactly prepares the compressed Schmidt state.",
+    "obstacle": "Requires coherent seven-site binary-label decoders for all eight counts. Root cross-cut savings alone do not establish total native-depth gain. Prefer analytic binary-to-unary expansion feeding certified terminals as a finite-cost screen before any synthesis.",
+    "status": "Algebraic identity checked for all8 counts; routed native circuit not yet built."
+  }
+}
