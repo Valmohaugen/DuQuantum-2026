@@ -129,6 +129,10 @@ trajectories: +0.005 for the line on average (+-0.06 per seed). Equal; kept the 
   warm starts only shave 5-9 %. Unbalanced splits don't rescue it: with the (6,4) half, (14,4) at 6 + 8 is 123 CZ
   vs 133, all splits are tried (0.1 s each), and estimate_error still picks 7 + 7 because the 8-qubit line half
   is deeper (57 vs 48 layers). Needs a shallower (7,4) / (8,4) half, not a different split.
+- Brickwork starts (search_brick.py kind=half) on paths never reached an exact fit for (7,4) (8,4) (7,7) at
+  depth 34..56 in 1.5 h; over-parameterised random starts failed the same way. Paths are the bottleneck.
+- Verification at 5732c7b (seed 33): N = 2..20, 100 cases, 0 rule/device failures, exact up to N = 14, max build
+  12.4 s at (19,3). fast_eval N <= 8 (3 seeds): 17.528. Bonus (test_dicke --bonus, N <= 15): 44.148.
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
