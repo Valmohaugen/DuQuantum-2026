@@ -16,6 +16,17 @@ Baseline at 0dc262c: total 16.615. Current: **17.192** (3 seeds, N = 2..8). Bonu
 
 ## Open
 
+### BONUS-010. Exact Clifford refits before depth compilation
+Status: in progress (bonus research, isolated files)
+`research/bonus_depth_20261024/clean_cliffords.py` fixes near-Clifford fitted
+rotations to exact multiples of pi/2, then refits every remaining angle against
+all coherent input columns. The aim is to expose commutation and cancellation
+that numerical residuals in the current SCS tables may hide. No maintained
+constructor changes are claimed. Acceptance: column error < 1e-10, then full
+56-case native/device/state validation and recorded depth score. GitHub's
+unauthenticated issues endpoint still returns 404; local queue is authoritative
+for this coordination note.
+
 ### 1. Short CZ circuits on grid patches for small (N, k)
 Status: in progress (ryon session)
 `synth.py` fits CZ + Ry circuits exactly and prunes CZs. (4,2) has 5 CZ and (5,2) has 11 CZ
@@ -36,10 +47,18 @@ count alone, because depth also costs idle decoherence.
 ### 7. Synthesised ladder halves
 Status: in progress (ryon session)
 Each ladder half maps |0^(a-l) 1^l> to D(a, l) for every l in range. `toby_sol.halves` holds
-synthesised versions on a path, keyed (a, min(k, a), l_min). Search with
-`benchmark_outputs`-style random start + windowed prune (target = (inputs, outputs) in synth.py).
-Line costs to beat: (4,4) 21, (5,2) 14, (5,3) 27, (5,4) 35, (5,5) 38, (6,2) 18, (6,3) 36, (6,4) 49,
-(6,5) 57, (6,6) 60. These matter for every N up to 12, so they help larger N too.
+synthesised versions on a path, keyed (a, min(k, a), l_min); `synth.py` fits them with
+target = (inputs, outputs). Path results so far: (4,3) 12 (line 18, installed), (3,3) 8 (line 9),
+and (3,2) 6, (4,2) 10, (4,4) 21 (equal to the line), (5,2) 15 (line 14). The (3,3) one scored
+worse than the line in simulation despite one CZ fewer (fully sequential, deeper), so only
+install a half after `fast_eval` confirms it helps.
+Still to beat: (5,3) 27, (5,4) 35, (5,5) 38, (6,2) 18, (6,3) 36, (6,4) 49, (6,5) 57, (6,6) 60.
+
+**Fat ladder** (in progress): give each half 2 rows, with its k register qubits in the row next
+to the rungs, then compose split + halves into one patch entry (exact, checked numerically).
+A 2x3 patch took (6,3) from 33 to 12 CZ, so 2-row halves could do the same for (6,2), (6,3)
+and (5,3) and help (10..12, 2..3). The first try, (8,2) from two 2x2 halves, is 25 CZ (ladder 23),
+so only worth it when the 2-row half beats the path half.
 
 ### 2. Evaluate larger N
 `fast_eval` stops at N = 8, but the judges' N range is unknown. Add N = 9..12 (density matrix
