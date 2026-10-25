@@ -40,6 +40,12 @@ is preserved. Cached native layers reconstruct in milliseconds; further runtime
 caching does not change the score. Offline angle learning and circuit changes
 produce the gains. The main constructor is preserved.
 
+Update 10:15: [ryon/slim_sol.py](ryon/slim_sol.py) scores **52.280** (56 cases, all exact at N <= 15, build 2 s).
+Main entry = toby/bonus_portfolio_squeeze_sol.py's, with its 8.4 MB of cached split / rotation angles replaced by the
+closed forms they were computed from (17.4 MB -> 8.9 MB; same circuits on 96 cases x 4 calibrations so far).
+Bonus = a frozen table of the shallowest verified circuit per case: the 52.162 checkpoint
+(research/bonus_optimize_20261025) plus (12,4) 65 -> 56 moments from depth-weighted pruning (ALPHA = 20) of the incumbent.
+
 ## Harmonic objective and paired evaluations — 2026-10-25
 
 The reported new primary objective, `1 / mean(1 / score)`, is the **harmonic
@@ -500,6 +506,7 @@ The target remains **45**. These are local bonus scores, not hardware results.
 | 2026-10-25 | 43.2219421632 | 56 | [Frozen native portfolio](research/bonus_portfolio_20261025/portfolio_submission.py) | [Validation](research/bonus_portfolio_20261025/validation.json), [source selection](research/bonus_portfolio_20261025/merge_results.json) |
 | 2026-10-25 09:45 | 51.4051 | 56 | [toby/bonus_squeeze_sol.py](toby/bonus_squeeze_sol.py): native_submission.py (51.3337) plus a z-ejection / realignment pass; (13,3) 55 -> 54, (14,3) 57 -> 55, (15,3) 67 -> 64 moments | all 56 pass Willow105.validate_circuit and judge.test_circuit, max build 2.6 s |
 | 2026-10-25 10:05 | 51.8367 | 56 | [toby/bonus_portfolio_squeeze_sol.py](toby/bonus_portfolio_squeeze_sol.py): exp/depth-search portfolio_sol.py (51.5954) plus the same pass | all 56 pass Willow105.validate_circuit and judge.test_circuit, max build 2.7 s |
+| 2026-10-25 10:15 | 52.2802 | 56 | [ryon/slim_sol.py](ryon/slim_sol.py): frozen best-per-case bonus table (52.162 checkpoint + (12,4) 65 -> 56) on the slimmed squeeze portfolio | all 56 pass Willow105.validate_circuit and judge.test_circuit at N <= 15, build 2 s |
 
 Reusable tasks and their acceptance criteria are recorded in
 [the shared issue queue](ryon/ISSUES.md) and
