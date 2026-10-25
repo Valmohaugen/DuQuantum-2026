@@ -147,12 +147,14 @@
       ],
       "result_status": "completed for N8/10 seeds0..5, four detuning realizations; held-out seeds3..5; no primary gain claimed"
     },
-    "pilot_status": "Stress test complete: mean nominal/coherent gains, mean losses under assumed100kHz uniformZZ; candidate not promoted.",
+    "pilot_status": "Coupling-aware selector confirmation complete: positive mean sampled deltas under all three models for N8/N10, six earlier-cohort seeds plus three fresh seeds. Standalone integration/validation next; maintained main unchanged.",
     "pilot_evidence": [
       "research/bonus_band_20261025/w_hardware_results.json",
-      "research/bonus_band_20261025/w_hardware_summary.json"
+      "research/bonus_band_20261025/w_hardware_summary.json",
+      "research/bonus_band_20261025/w_zz_confirmation_manifest.json",
+      "research/bonus_band_20261025/w_zz_confirmation_summary.json"
     ],
-    "next_work": "Evaluate second-order ZZ-sensitive ranking on fresh seeds12..14; preserve baseline and distinguish assumed stress models from measured hardware.",
+    "next_work": "Validate standalone robust selector equivalence, timing, native/state constraints and unchanged56-case bonus cache. Preserve published main until that candidate is independently checked.",
     "cost_pilot_evidence": [
       "research/bonus_band_20261025/w_cost_summary.json",
       "research/bonus_band_20261025/w_tree_summary.json",
@@ -507,7 +509,7 @@
   {
     "id": "PORT-011",
     "title": "Precision-certify the existing restricted five-site 26-CZ decoder",
-    "status": "shared-workspace study; publication pending",
+    "status": "complete",
     "assignee": "bonus-precision",
     "scope": "Fixed-sequence coefficient polishing only in research/bonus_half_precision_20261025; no topology search or maintained-solver changes. Ryon retains broader issue7 synthesis ownership.",
     "inputs": [
@@ -535,6 +537,89 @@
       ]
     },
     "comparison_budget_seconds": 90,
-    "publication_note": "This ticket records a concurrent shared-workspace study. Its precision evidence and subsequent integration result will be published with the next checkpoint; they are not included in this 47.8780 snapshot."
+    "result_scope": "Fixed-sequence precision certification and separately bounded90-second integration completed; comparison coverage remains explicitly partial.",
+    "result": {
+      "score": 48.018571018834095,
+      "baseline_score": 47.878031742696336,
+      "gain": 0.1405392761377584,
+      "polish_numerical_seconds": 0.2619206830859184,
+      "comparison_search_seconds": 90.80626639444381,
+      "comparison_total_seconds": 93.42817714251578,
+      "trials": 82,
+      "max_state_l2_error": 1.1862592072738487e-07,
+      "improved_cases": [
+        {
+          "N": 10,
+          "k": 4,
+          "before": 45,
+          "depth": 42,
+          "CZ": 59,
+          "state_l2_error": 2.5070186467500068e-15
+        },
+        {
+          "N": 12,
+          "k": 4,
+          "before": 66,
+          "depth": 65,
+          "CZ": 87,
+          "state_l2_error": 4.305585585593273e-15
+        },
+        {
+          "N": 13,
+          "k": 4,
+          "before": 79,
+          "depth": 75,
+          "CZ": 110,
+          "state_l2_error": 3.2591513773988095e-15
+        },
+        {
+          "N": 14,
+          "k": 4,
+          "before": 84,
+          "depth": 82,
+          "CZ": 127,
+          "state_l2_error": 3.3411145311780233e-15
+        },
+        {
+          "N": 15,
+          "k": 4,
+          "before": 92,
+          "depth": 90,
+          "CZ": 144,
+          "state_l2_error": 3.644038656559453e-15
+        }
+      ],
+      "coverage_counts": {
+        "complete": 8,
+        "infeasible-or-no-five-site-tail": 23,
+        "partial": 1,
+        "not-started": 122
+      },
+      "precision": {
+        "depth": 35,
+        "CZ": 26,
+        "max_native_column_error": 1.5249433019913284e-15,
+        "supported_r": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "scope_limit": "Fixed26-CZ coefficient refinement only; coherent r5 unsupported; no maintained-solver edits. Lower-k cases and most additional split/line comparisons were not reached."
+    },
+    "artifacts": [
+      "research/bonus_half_precision_20261025/polished_five_four.json",
+      "research/bonus_half_precision_20261025/decoder_5_r0to4_native.json",
+      "research/bonus_half_precision_20261025/precision_results.json",
+      "research/bonus_half_precision_20261025/comparison_circuits.json",
+      "research/bonus_half_precision_20261025/comparison_results.json",
+      "research/bonus_half_precision_20261025/comparison_coverage.json",
+      "research/bonus_half_precision_20261025/handoff_summary.json",
+      "research/bonus_half_precision_20261025/handoff_manifest.json"
+    ],
+    "remaining_work": "Two N13,k4 balanced False-block candidates remain;122 planned additional split/line groups not started. Exact list in comparison_coverage.json. Consider exact-Clifford constrained polishing separately before repeating large integration; no such run started.",
+    "pool_sha256": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507"
   }
 ]

@@ -342,3 +342,18 @@ The main entry point remains unchanged. The nominal W-selector gains were
 sensitive to an explicitly assumed 100 kHz ZZ stress model; a coupling-aware
 selector is being tested before any main-path promotion. This stress rate is
 not a measured Willow calibration value.
+
+
+## Verified bonus checkpoint — 2026-10-25
+
+Best corrected 56-case bonus score: **48.0185710188**. Precision
+certification of an existing fixed 26-CZ decoder improved five more k=4 cases,
+adding **0.1405392761** points. Its supported coherent counts r=0..4
+share one phase to 1.53e-15; no new gate topology was synthesized.
+All 56 standalone native/device/state checks pass. Maximum construction time
+is **0.002501 s**, and maximum state L2 error is **1.19e-07**.
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T071120Z/submission.py),
+[full validation](research/bonus_band_20261025/milestones/20261025T071120Z/validation.json),
+[checkpoint summary](research/bonus_band_20261025/milestones/20261025T071120Z/summary.json),
+[precision evidence](research/bonus_half_precision_20261025/precision_results.json).
+The main entry point remains unchanged; hardware robustness research continues.

@@ -436,3 +436,19 @@ Confirmation on the earlier stress cohort is next. Full evidence:
 These models omit leakage, outside spectators and pulse overlap, and 100 kHz is
 not asserted as a measured Willow parameter. PORT-011 is a narrow fixed-topology
 precision repair of an existing decoder, coordinated separately.
+
+
+### Bonus and hardware handoff — 2026-10-25
+
+Verified standalone bonus **48.0185710188**, all56 cases; checkpoint
+`research/bonus_band_20261025/milestones/20261025T071120Z`.
+PORT-011 fixed-topology precision repair completed; all reconstructible source,
+comparison and certification evidence is in `research/bonus_half_precision_20261025`.
+PORT-004 coupling-aware W selector confirmation is complete: positive mean sampled
+score changes under nominal, coherent and assumed100kHz ZZ models for N8 and N10,
+with all36 baseline rows exactly reproduced from the earlier stress study.
+Evidence: `research/bonus_band_20261025/w_zz_confirmation_summary.json`.
+These are simulated model results, not hardware measurements; main is unchanged.
+Next: bonus-integration owns remaining certified-decoder coverage; bonus-depth
+owns standalone hardware-selector validation. Other agents: please post missing
+requirements, superior circuits and uncovered cases in this queue.

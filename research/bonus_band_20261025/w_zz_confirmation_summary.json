@@ -1,0 +1,82 @@
+{
+  "status": "earlier-cohort confirmation complete; standalone integration next",
+  "seeds": [
+    0,
+    1,
+    2,
+    6,
+    7,
+    8
+  ],
+  "summary": [
+    {
+      "N": 8,
+      "model": "nominal",
+      "cases": 6,
+      "mean_score_delta": 0.006143664056682603,
+      "conditional_MC_standard_error": 0.0025266587893135587,
+      "calibration_standard_error": 0.004524189333842341,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 8,
+      "model": "coherent",
+      "cases": 6,
+      "mean_score_delta": 0.029472194756107444,
+      "conditional_MC_standard_error": 0.002477152805227597,
+      "calibration_standard_error": 0.014156638027738732,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 8,
+      "model": "zz",
+      "cases": 6,
+      "mean_score_delta": 0.036083119913437184,
+      "conditional_MC_standard_error": 0.0025305106806016997,
+      "calibration_standard_error": 0.020169553135978756,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "nominal",
+      "cases": 6,
+      "mean_score_delta": 0.00782121858801775,
+      "conditional_MC_standard_error": 0.0017469505897496336,
+      "calibration_standard_error": 0.005024328201051252,
+      "positive": 2,
+      "negative": 1,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "coherent",
+      "cases": 6,
+      "mean_score_delta": 0.015217867903114773,
+      "conditional_MC_standard_error": 0.0016780934545462907,
+      "calibration_standard_error": 0.007071654325266183,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    },
+    {
+      "N": 10,
+      "model": "zz",
+      "cases": 6,
+      "mean_score_delta": 0.008691512221364274,
+      "conditional_MC_standard_error": 0.001711957981657305,
+      "calibration_standard_error": 0.004297041944155798,
+      "positive": 3,
+      "negative": 0,
+      "unchanged": 3
+    }
+  ],
+  "baseline_reproduction": "All 36 baseline result rows exactly equal prior stress study.",
+  "scope": "Assumed noise models, not hardware measurements. Uniform 100 kHz residual ZZ is a stress assumption. Six calibration seeds per size; no population guarantee.",
+  "decision": "Positive mean changes under all three models in both cohorts support validating a guarded standalone N8/N10 W selector candidate. Published main still unchanged."
+}

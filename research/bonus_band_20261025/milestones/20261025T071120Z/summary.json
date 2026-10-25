@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "20261025T071120Z",
+  "bonus_score": 48.018571018834095,
+  "previous_score": 47.878031742696336,
+  "increment": 0.1405392761377584,
+  "cases": 56,
+  "source_sha256": "e513e4442ecfc2a23e17c79ff54cfafffc057973cc36f73df682836afa1b050c",
+  "max_build_seconds": 0.002500920556485653,
+  "max_state_l2_error": 1.1862592072738487e-07,
+  "max_moments": 119,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "improvement": "Five k4 native-depth reductions after fixed-topology precision certification of the26-CZ restricted5-site coherent decoder.",
+  "main_entry_point": "Unchanged published main; no experimental hardware-selector promotion."
+}

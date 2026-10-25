@@ -1,0 +1,66 @@
+COLUMN {'name': 'original-five-four', 'n': 5, 'k': 4, 'depth': 36, 'CZ': 26, 'max_column_error': 8.324408431976261e-08, 'column_errors': [4.6675643886779355e-08, 3.938351961377726e-08, 6.288628225720811e-08, 8.324408431976261e-08, 4.519520502536589e-08], 'common_phase': [-0.9385995680828414, 0.34500847930841255], 'accepted': False}
+COLUMN {'name': 'polished-five-four', 'n': 5, 'k': 4, 'depth': 35, 'CZ': 26, 'max_column_error': 1.5249433019913284e-15, 'column_errors': [1.1413262121219826e-15, 1.2445314138394776e-15, 1.5249433019913284e-15, 1.0159694277950047e-15, 1.1063205768210425e-15], 'common_phase': [-0.34490617149113734, -0.9386371678488585], 'accepted': True}
+{
+  "status": "certified",
+  "input_sha256": "6a634a85a2c15f91de652882c5b9830315835f93bf4158446e21d44a92cdf3a3",
+  "numerical_budget_seconds": 60.0,
+  "numerical_seconds": 0.2619206830859184,
+  "termination": "`xtol` termination condition is satisfied.",
+  "residual_calls": 36,
+  "real_common_sign": 1.0,
+  "derivative_max_errors": [
+    1.8854312555660613e-10,
+    1.3622120098588653e-10,
+    4.047898127801375e-11
+  ],
+  "original_native": {
+    "name": "original-five-four",
+    "n": 5,
+    "k": 4,
+    "depth": 36,
+    "CZ": 26,
+    "max_column_error": 8.324408431976261e-08,
+    "column_errors": [
+      4.6675643886779355e-08,
+      3.938351961377726e-08,
+      6.288628225720811e-08,
+      8.324408431976261e-08,
+      4.519520502536589e-08
+    ],
+    "common_phase": [
+      -0.9385995680828414,
+      0.34500847930841255
+    ],
+    "accepted": false
+  },
+  "polished_native": {
+    "name": "polished-five-four",
+    "n": 5,
+    "k": 4,
+    "depth": 35,
+    "CZ": 26,
+    "max_column_error": 1.5249433019913284e-15,
+    "column_errors": [
+      1.1413262121219826e-15,
+      1.2445314138394776e-15,
+      1.5249433019913284e-15,
+      1.0159694277950047e-15,
+      1.1063205768210425e-15
+    ],
+    "common_phase": [
+      -0.34490617149113734,
+      -0.9386371678488585
+    ],
+    "accepted": true
+  },
+  "fixed_topology_CZ": 26,
+  "fixed_parameter_count": 57,
+  "supported_r": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "maximum_angle_change": 0.00021822978387309178
+}

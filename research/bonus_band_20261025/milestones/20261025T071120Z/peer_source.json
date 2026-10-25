@@ -1,0 +1,13 @@
+{
+  "source_directory": "research/bonus_half_precision_20261025",
+  "files": {
+    "comparison_circuits.json": "418867119c817c9951c37335795e55ac2f34ccab5c720141bfbcfa51782d7507",
+    "comparison_results.json": "54a7832cb65ccd36e83e433a756592552fbc1ee6ae1828c9c3f5939d3b2b9f58",
+    "polish.py": "f0efc4955f6049aea7fc84fa251ac305c32dd4505e4d639139babbe3ddc5ab03",
+    "precision_results.json": "19e838cf41c0fe922b32f47c330221dd384f9bcacff7075bfedcb1bef905b745",
+    "polished_five_four.json": "7ce75852af8ec9c4d4c62d46a69c9c076f8c1f0a38ec25208bf471e21342b39d",
+    "sources.json": "2d1e0a8143e43ef169499e08ad45936bc5beb5a39929797adf9ca771481f6a00"
+  },
+  "previous_score": 47.878031742696336,
+  "score": 48.018571018834095
+}

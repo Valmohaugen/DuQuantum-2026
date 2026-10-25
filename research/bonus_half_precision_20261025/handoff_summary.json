@@ -1,0 +1,990 @@
+{
+  "score": 48.018571018834095,
+  "baseline_score": 47.878031742696336,
+  "gain": 0.1405392761377584,
+  "polish_numerical_seconds": 0.2619206830859184,
+  "comparison_search_seconds": 90.80626639444381,
+  "comparison_total_seconds": 93.42817714251578,
+  "trials": 82,
+  "max_state_l2_error": 1.1862592072738487e-07,
+  "improved_cases": [
+    {
+      "N": 10,
+      "k": 4,
+      "before": 45,
+      "depth": 42,
+      "CZ": 59,
+      "state_l2_error": 2.5070186467500068e-15
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "before": 66,
+      "depth": 65,
+      "CZ": 87,
+      "state_l2_error": 4.305585585593273e-15
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "before": 79,
+      "depth": 75,
+      "CZ": 110,
+      "state_l2_error": 3.2591513773988095e-15
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "before": 84,
+      "depth": 82,
+      "CZ": 127,
+      "state_l2_error": 3.3411145311780233e-15
+    },
+    {
+      "N": 15,
+      "k": 4,
+      "before": 92,
+      "depth": 90,
+      "CZ": 144,
+      "state_l2_error": 3.644038656559453e-15
+    }
+  ],
+  "coverage_counts": {
+    "complete": 8,
+    "infeasible-or-no-five-site-tail": 23,
+    "partial": 1,
+    "not-started": 122
+  },
+  "unfinished": [
+    {
+      "N": 13,
+      "k": 4,
+      "offset": 0,
+      "left_size": 7,
+      "status": "partial",
+      "blocks": [
+        {
+          "blocks": true,
+          "status": "complete",
+          "attempted": 5,
+          "planned": 5
+        },
+        {
+          "blocks": false,
+          "status": "partial",
+          "attempted": 3,
+          "planned": 5
+        }
+      ]
+    },
+    {
+      "N": 15,
+      "k": 4,
+      "offset": 0,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 4,
+      "offset": 1,
+      "left_size": 9,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "offset": 0,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "offset": -1,
+      "left_size": 3,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "offset": -1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "offset": 1,
+      "left_size": 9,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "offset": 0,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "offset": -1,
+      "left_size": 3,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "offset": -1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "offset": 1,
+      "left_size": 9,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "offset": 0,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "offset": 0,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "offset": 0,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "offset": 0,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "offset": -1,
+      "left_size": 3,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "offset": -1,
+      "left_size": 4,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "offset": -1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "offset": -1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "offset": -1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 7,
+      "k": 1,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "offset": 1,
+      "left_size": 5,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "offset": 1,
+      "left_size": 6,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "offset": 1,
+      "left_size": 7,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "offset": 1,
+      "left_size": 8,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "offset": 1,
+      "left_size": 9,
+      "status": "not-started",
+      "blocks": []
+    },
+    {
+      "N": 8,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 13,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 15,
+      "k": 4,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 7,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 8,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 9,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 14,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 5,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 12,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 14,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 15,
+      "k": 2,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 5,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 6,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 7,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 8,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 9,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 10,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 11,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 12,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 13,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 14,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    },
+    {
+      "N": 15,
+      "k": 1,
+      "kind": "line-tail",
+      "status": "not-started"
+    }
+  ],
+  "precision": {
+    "depth": 35,
+    "CZ": 26,
+    "max_native_column_error": 1.5249433019913284e-15,
+    "supported_r": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "scope_limit": "Fixed26-CZ coefficient refinement only; coherent r5 unsupported; no maintained-solver edits. Lower-k cases and most additional split/line comparisons were not reached."
+}

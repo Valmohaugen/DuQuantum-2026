@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "files": {
+    "research/bonus_band_20261025/w_zz_confirmation.py": "f209c66d0b4411813b0fdc45c7103d9a0f9b80c17d06a5c910ff6685a39c0ef0",
+    "research/bonus_band_20261025/w_zz_confirmation_results.json": "074d3213c1a8c91cf452621cf300e3d017a390d157a14d9d4affb9ac84bf9fa9",
+    "research/bonus_band_20261025/w_zz_confirmation_selections.json": "3dd83e685d9b5ccb4af346124af4ba8ad39c134f8441ed5997dd5c43ca00d6d0",
+    "research/bonus_band_20261025/w_zz_confirmation_summary.json": "c1a8f265c215b55f7dbbd10e863df70a759bf0b91ce2950647c3bb938f3ced02"
+  },
+  "dependencies": [
+    "w_zz_manifest.json",
+    "w_stress_manifest.json"
+  ],
+  "command": "python -m research.bonus_band_20261025.w_zz_confirmation"
+}
