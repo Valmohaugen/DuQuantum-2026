@@ -1,0 +1,5 @@
+{
+  "source": "ryon/synth.py",
+  "sha256": "c9b21fe445217bed039f6285b9decea8faa9419951182f6b8af3c123dab1b5a6",
+  "purpose": "Read-only real-column gauge wrapper checks. SYNTH_KERNEL=0 prevents compilation or writes to peer paths. No peer optimizer changes."
+}

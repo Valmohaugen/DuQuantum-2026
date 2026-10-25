@@ -1,0 +1,3900 @@
+{
+  "status": "bounded pilot complete; no native decoder claim",
+  "derivative_checks": [
+    {
+      "n": 3,
+      "gradient_error": 4.523562080471777e-10,
+      "jacobian_direction_error": 8.348233215826895e-11,
+      "global_X_commutator_error": 0.0
+    },
+    {
+      "n": 5,
+      "gradient_error": 1.510374547653015e-09,
+      "jacobian_direction_error": 9.159553671089782e-11,
+      "global_X_commutator_error": 0.0
+    }
+  ],
+  "trials": [
+    {
+      "n": 3,
+      "cycles": 1,
+      "insertions": "each",
+      "seed": 0,
+      "angles": [
+        3.1415926509133607,
+        4.712388978843722,
+        -1.5707963234422335,
+        3.3070590841591803,
+        -3.327130156305891e-09,
+        -1.3330588239134997,
+        1.3330588210180294,
+        3.1415926585658798,
+        -0.261799388988198,
+        0.7853981631252673,
+        -1.5707963264268203,
+        -3.1415926569902384
+      ],
+      "column_phases": [
+        -3.058859438525793,
+        -3.058859438565357
+      ],
+      "column_errors": [
+        0.40993751958879415,
+        0.668236895384649
+      ],
+      "max_phase_aligned_error": 0.668236895384649,
+      "seconds": 0.017656902782619,
+      "evaluations": 41,
+      "termination": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "core_CZ": 5,
+      "gates": [
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 0,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 1,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 2,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 3,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 4,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 5,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 6,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 7,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 8,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 9,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 10,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 11,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0,
+            1
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        }
+      ],
+      "status": "requires all-column native composition certificate"
+    },
+    {
+      "n": 3,
+      "cycles": 1,
+      "insertions": "each",
+      "seed": 1,
+      "angles": [
+        1.5707963265865532,
+        -3.977611776908245e-09,
+        3.3679974086664717,
+        1.5707963248310421,
+        1.570796330788631,
+        0.6509770162350844,
+        0.9198192998714323,
+        -7.245184665081797e-09,
+        -0.2617993890103088,
+        -2.3561944905950285,
+        -1.5707963376746306,
+        3.1415926490462933
+      ],
+      "column_phases": [
+        1.6839987042039626,
+        -1.4575939494090056
+      ],
+      "column_errors": [
+        0.40993751953165425,
+        0.6682368954197023
+      ],
+      "max_phase_aligned_error": 0.6682368954197023,
+      "seconds": 0.011206796392798424,
+      "evaluations": 25,
+      "termination": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "core_CZ": 5,
+      "gates": [
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 0,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 1,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 2,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 3,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 4,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 5,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 6,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 7,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 8,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 9,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 10,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 11,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0,
+            1
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        }
+      ],
+      "status": "requires all-column native composition certificate"
+    },
+    {
+      "n": 3,
+      "cycles": 2,
+      "insertions": "each",
+      "seed": 0,
+      "angles": [
+        2.980825506232122,
+        -2.2683368770727887,
+        -3.5443155382088243,
+        -1.6535986734955324,
+        1.1597392520635772,
+        -2.5150979803855686,
+        -2.1220885355236243,
+        7.066026853366835e-10,
+        0.7853981605613167,
+        -1.5707963292700187,
+        -0.055663328720812755,
+        1.343261516695828,
+        -0.027686616261256937,
+        -3.085929325637552,
+        -0.22713172524026895,
+        -1.5707963280549384,
+        1.570796326686051,
+        0.577369468478267,
+        0.9934268520006594,
+        -1.1161297953048515,
+        1.0369873661338633e-09,
+        1.5707963291913922,
+        -2.132023679389349e-09,
+        -3.141592654734143
+      ],
+      "column_phases": [
+        -2.617390026696577,
+        -0.8194619777993176
+      ],
+      "column_errors": [
+        0.3065269509593481,
+        0.3065269528930129
+      ],
+      "max_phase_aligned_error": 0.3065269528930129,
+      "seconds": 0.028469924814999104,
+      "evaluations": 39,
+      "termination": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "core_CZ": 10,
+      "gates": [
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 0,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 1,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 2,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 3,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 4,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 5,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 6,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 7,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 8,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 9,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 10,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 11,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0,
+            1
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 12,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 13,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 14,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 15,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 16,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 17,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 18,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 19,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 20,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 21,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 22,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 23,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1,
+            2
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        }
+      ],
+      "status": "requires all-column native composition certificate"
+    },
+    {
+      "n": 3,
+      "cycles": 2,
+      "insertions": "each",
+      "seed": 1,
+      "angles": [
+        -0.9559386337522592,
+        -2.3413512973283623,
+        1.3320074978796845,
+        0.17046289535219228,
+        0.8061743666765397,
+        0.9040785521629333,
+        1.9951373165841904,
+        -3.1415926594081482,
+        -0.7853981640551496,
+        1.570796325773441,
+        -2.7025809537512857,
+        1.555287411995981,
+        -0.30233326235214586,
+        1.8457447868753016,
+        1.5707963339891053,
+        1.5707963261347637,
+        -2.427632502764868,
+        2.192934799755331,
+        0.04959221288891843,
+        0.015508918740450735,
+        1.9413408881742456e-09,
+        -4.71238898484361,
+        3.141592651046429,
+        3.1415926512421444
+      ],
+      "column_phases": [
+        2.1483953490650416,
+        -0.9931973040594535
+      ],
+      "column_errors": [
+        0.30652695300999533,
+        0.30652695084236564
+      ],
+      "max_phase_aligned_error": 0.30652695300999533,
+      "seconds": 0.04977024905383587,
+      "evaluations": 68,
+      "termination": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "core_CZ": 10,
+      "gates": [
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 0,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 1,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 2,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 3,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 4,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 5,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 6,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 7,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 8,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 9,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 10,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 11,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0,
+            1
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 12,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 13,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 14,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 15,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 16,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 17,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 18,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 19,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 20,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 21,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 22,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 23,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1,
+            2
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        }
+      ],
+      "status": "requires all-column native composition certificate"
+    },
+    {
+      "n": 5,
+      "cycles": 2,
+      "insertions": "each",
+      "seed": 0,
+      "angles": [
+        -4.1373302271509,
+        -1.6052973869281966,
+        -1.4705502477403372,
+        -1.3978448018022922,
+        1.5443999929794532,
+        2.4386788715801666,
+        1.5707964271839525,
+        -1.5707966806620575,
+        0.544273077117841,
+        -3.71661765604273,
+        2.3212095242030517,
+        -1.1399721445799162,
+        1.3615508358329906,
+        -2.903938448867294,
+        1.5142124335961946,
+        -1.1179058734023252e-07,
+        -1.216955420656327,
+        0.33328205792273563,
+        1.2169559454891024,
+        2.218227909258448,
+        -0.35597487483719875,
+        -0.7111706417325484,
+        2.1148839885106594,
+        -0.6762747818561321,
+        2.6197368041923585,
+        1.0267087028928639,
+        -2.26829010699704,
+        0.32278574717973296,
+        1.5707966904902562,
+        0.6345370703048591,
+        -1.570795704477358,
+        -1.570796224237115,
+        -1.5707962267031679,
+        -0.3743160145973879,
+        2.5789999387438045,
+        3.3386204120737357,
+        0.3743160915369462,
+        1.2238160647504566,
+        1.570796318097373,
+        1.4935125700739714e-07,
+        1.1466984289725632,
+        1.5707958485867548,
+        0.4240977355821208,
+        1.4164485086458993,
+        3.400414705843244,
+        -0.40324940076114574,
+        -1.5707964857028192,
+        -1.9802321762776663e-07
+      ],
+      "column_phases": [
+        1.8562673321261796,
+        -1.285324891914441,
+        -1.285325253209882
+      ],
+      "column_errors": [
+        0.467810695943662,
+        0.9606630678515048,
+        1.0057317499300282
+      ],
+      "max_phase_aligned_error": 1.0057317499300282,
+      "seconds": 0.34191282745450735,
+      "evaluations": 228,
+      "termination": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "core_CZ": 18,
+      "gates": [
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 0,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 1,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 2,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 3,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 4,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 5,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 6,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 7,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 8,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 9,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 10,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 11,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 12,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 13,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 14,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 15,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 16,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 17,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 18,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 19,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 20,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 21,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 22,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 23,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0,
+            1
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 24,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 25,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 26,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 27,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 28,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 29,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 30,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 31,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 32,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 33,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 34,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 35,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 36,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 37,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 38,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 39,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 40,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 41,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 42,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 43,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 44,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 45,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 46,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 47,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1,
+            2
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        }
+      ],
+      "status": "requires all-column native composition certificate"
+    },
+    {
+      "n": 5,
+      "cycles": 2,
+      "insertions": "each",
+      "seed": 1,
+      "angles": [
+        1.1874127066717932,
+        -0.6498720668372958,
+        -1.543152023652964,
+        0.7107300104812183,
+        -2.0157588029959275,
+        -3.9803886231355334,
+        1.5707963875962667,
+        1.570796342840675,
+        1.8846223541447547,
+        0.326344757795669,
+        0.6061616629660684,
+        0.9696402526378595,
+        0.1288215565295124,
+        -3.708644562368128,
+        2.688683888905091,
+        3.261129708757618e-08,
+        -2.4029850368693517,
+        -3.889451687512541,
+        0.8321889128501274,
+        1.67536456713834,
+        2.4304220255842695,
+        -3.4975675095314696,
+        0.044972132746308784,
+        0.35999949875913906,
+        -1.6304862690022386,
+        -1.615768647969797,
+        1.290596911000779,
+        -2.3205305035029857,
+        1.5707962293580018,
+        -0.6345371458890081,
+        1.5707963238262574,
+        -1.5707963699841518,
+        1.5707964216066994,
+        -2.5714786139735066,
+        2.938166685229985,
+        -0.07980000898315985,
+        -2.1409103483834295,
+        0.22782126540849884,
+        -4.6133526565263324e-08,
+        -1.5707963164484402,
+        -1.5270086702341477,
+        -3.141592537582037,
+        -1.614583900360267,
+        3.152756974612737,
+        -3.4004146888962006,
+        -2.7383432503654936,
+        1.5707962394773367,
+        -8.268711547545054e-08
+      ],
+      "column_phases": [
+        1.3172817990622454,
+        -1.824310805734434,
+        1.3172817969150985
+      ],
+      "column_errors": [
+        0.4678106868696056,
+        0.9606630612918717,
+        1.0057317604164562
+      ],
+      "max_phase_aligned_error": 1.0057317604164562,
+      "seconds": 0.3277069181203842,
+      "evaluations": 216,
+      "termination": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "core_CZ": 18,
+      "gates": [
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 0,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 1,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 2,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 3,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 4,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 5,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 6,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 7,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 8,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 9,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 10,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 11,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 12,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 13,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 14,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 15,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 16,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 17,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 18,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 19,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 20,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 21,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 22,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 23,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0,
+            1
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 24,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 25,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 26,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 27,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 28,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 29,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 30,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 31,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 32,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 33,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 34,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 35,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 36,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 37,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 38,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 39,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 40,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 41,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 42,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 43,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 44,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 45,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 46,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 47,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1,
+            2
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        }
+      ],
+      "status": "requires all-column native composition certificate"
+    },
+    {
+      "n": 5,
+      "cycles": 3,
+      "insertions": "each",
+      "seed": 0,
+      "angles": [
+        -1.614543704355801,
+        1.6844906722122177,
+        1.4298257000868106,
+        2.8668552206329836,
+        0.15797154265443747,
+        1.5573096173765115,
+        -2.093239231093571,
+        -0.7184767845829825,
+        0.6179118081762232,
+        -2.875233992756729,
+        -0.09980996711787364,
+        -0.13748381419486905,
+        1.7149772658235736,
+        0.0943172287223247,
+        1.0792882359873879,
+        3.052367131235633,
+        -0.1848971360062392,
+        -2.5370225182780857,
+        0.9372212495464803,
+        2.013240552809257,
+        -1.2711865481159559,
+        -1.57079630854766,
+        2.6852215197761287,
+        -0.2840421515677578,
+        0.650509080118831,
+        1.9048057989437408,
+        0.2840406524375716,
+        -1.6180145477780121,
+        1.570796327066835,
+        -1.7069758476682524,
+        -1.2867884590011471,
+        -1.1572925070164435,
+        1.700080741859141,
+        -3.3632437475899066,
+        -1.1648644420481882,
+        -0.6819865076405798,
+        0.22165185557029526,
+        1.01102047934665,
+        -2.768946906300534e-07,
+        -1.5707953214953478,
+        1.9407512472493937,
+        0.027649112784776487,
+        1.0379602945581192,
+        2.7356630649014333,
+        1.5707962650081757,
+        2.55745985400374,
+        -2.1983713483245757,
+        -1.0964058874840263,
+        0.8812201155666367,
+        3.769168204219041,
+        -0.5599617766330252,
+        0.681984929013616,
+        3.1415927110517767,
+        0.17310623379327716,
+        -2.4314051227131688,
+        1.5707963909677902,
+        2.014488335911727,
+        2.2503921890032825,
+        1.581466096952057,
+        -1.7875453710219695,
+        0.8912009551410847,
+        0.4742811869246373,
+        1.6109151012744678,
+        4.178803534156606e-07,
+        -2.302808664640195,
+        -1.6301787055711996,
+        -2.409580346063497,
+        -1.5814666765071383,
+        -3.1415925901372845,
+        1.57079635804908,
+        -0.31176878935729846,
+        2.9969818750922026
+      ],
+      "column_phases": [
+        -1.6124292166052148,
+        0.9944161111423476,
+        3.099959775222766
+      ],
+      "column_errors": [
+        0.6339572309467967,
+        0.6589938950527366,
+        0.7713070168300987
+      ],
+      "max_phase_aligned_error": 0.7713070168300987,
+      "seconds": 0.905199914239347,
+      "evaluations": 414,
+      "termination": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "core_CZ": 27,
+      "gates": [
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 0,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 1,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 2,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 3,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 4,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 5,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 6,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 7,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 8,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 9,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 10,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 11,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 12,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 13,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 14,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 15,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 16,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 17,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 18,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 19,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 20,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 21,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 22,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 23,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0,
+            1
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 24,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 25,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 26,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 27,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 28,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 29,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 30,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 31,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 32,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 33,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 34,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 35,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 36,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 37,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 38,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 39,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 40,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 41,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 42,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 43,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 44,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 45,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 46,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 47,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1,
+            2
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 48,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 49,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 50,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 51,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 52,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 53,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 54,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 55,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 56,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 57,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 58,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 59,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 60,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 61,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 62,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 63,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 64,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 65,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 66,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 67,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 68,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 69,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 70,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 71,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1,
+            3
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        }
+      ],
+      "status": "requires all-column native composition certificate"
+    },
+    {
+      "n": 5,
+      "cycles": 3,
+      "insertions": "each",
+      "seed": 1,
+      "angles": [
+        -0.7820045126978192,
+        -1.89992280743702,
+        -2.479884118328806,
+        -2.2325051594602883,
+        1.612596287722925e-08,
+        -6.506902097969377e-08,
+        0.09123977617371255,
+        0.09123976256818465,
+        2.192764463340629,
+        -1.3453542985063893,
+        -2.8157205785297226,
+        -0.27192448405759034,
+        0.3663479573777749,
+        -2.9364404035433846,
+        -2.079913404612094,
+        0.09989519674426688,
+        -2.9833989145599613,
+        -0.07775945392070054,
+        -2.7977919628189944,
+        2.154012011381701,
+        -0.7271443285920232,
+        -4.712388985399526,
+        -2.7642710997493007,
+        -0.7906196234910541,
+        -2.9815562887390072,
+        -0.37732153373911653,
+        2.361415687285285,
+        -0.6371630134198731,
+        -3.141592976432939,
+        -1.6456626038352333,
+        3.1415926702848354,
+        -2.236549764508333,
+        -2.0346474445583067,
+        -2.615695085995768,
+        -3.3887896524769854,
+        0.2034596209068395,
+        1.044898680682445,
+        1.2037977150822308,
+        6.701369497182207e-07,
+        1.570796329583127,
+        1.9446936082204254,
+        2.362174137125588,
+        -1.9446922782491094,
+        -2.8943956352553757,
+        -1.03578076845203,
+        0.8396256116027373,
+        -2.8558223940156067,
+        0.15158374563426627,
+        2.034647526740881,
+        -3.4273629780059838,
+        -0.15158311116486242,
+        -0.20345951922430394,
+        -0.22191253836743263,
+        -3.1415926370329914,
+        3.1415926301803574,
+        3.3557501955492484,
+        1.5707964075333858,
+        0.05485741543645463,
+        0.2014969293560725,
+        3.1415925302007803,
+        1.515938850328096,
+        0.7794185087740619,
+        -1.5654008789557727,
+        -3.141592701733273,
+        -2.123494759072754,
+        3.1415926660313023,
+        3.6942911198291006,
+        -1.7722937936908247,
+        -2.6915010445421146e-08,
+        1.5707963197356898,
+        -2.2126564010965447e-08,
+        1.3130859636628334e-08
+      ],
+      "column_phases": [
+        -2.874196877109522,
+        -2.9654366373983967,
+        -1.303400291456882
+      ],
+      "column_errors": [
+        0.6163413076388383,
+        0.6607777235592766,
+        0.7560517200134306
+      ],
+      "max_phase_aligned_error": 0.7560517200134306,
+      "seconds": 0.7000663727521896,
+      "evaluations": 319,
+      "termination": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "core_CZ": 27,
+      "gates": [
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 0,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 1,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 2,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 3,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 4,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 5,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 6,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 7,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 8,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 9,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 10,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 11,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 12,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 13,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 14,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 15,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 16,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 17,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 18,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 19,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 20,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 21,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 22,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 23,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0,
+            1
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 24,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 25,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 26,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 27,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 28,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 29,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 30,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 31,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 32,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 33,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 34,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 35,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 36,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 37,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 38,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 39,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 40,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 41,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 42,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 43,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 44,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 45,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 46,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 47,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1,
+            2
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 48,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 49,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 50,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 51,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            0
+          ],
+          "parameter": 52,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 53,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 54,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            4
+          ],
+          "parameter": 55,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            0
+          ],
+          "parameter": 56,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 57,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 58,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            4
+          ],
+          "parameter": 59,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 60,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 61,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 62,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            2
+          ],
+          "parameter": 63,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 64,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            2
+          ],
+          "parameter": 65,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 66,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 67,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            1
+          ],
+          "parameter": 68,
+          "fixed": null
+        },
+        {
+          "kind": "Y",
+          "qubits": [
+            3
+          ],
+          "parameter": 69,
+          "fixed": null
+        },
+        {
+          "kind": "CZ",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1
+          ],
+          "parameter": 70,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            3
+          ],
+          "parameter": 71,
+          "fixed": null
+        },
+        {
+          "kind": "X",
+          "qubits": [
+            1,
+            3
+          ],
+          "parameter": null,
+          "fixed": 1.5707963267948966
+        }
+      ],
+      "status": "requires all-column native composition certificate"
+    }
+  ],
+  "elapsed_seconds": 2.430499432608485
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "n": 3,
+    "gradient_error": 4.523562080471777e-10,
+    "jacobian_direction_error": 8.348233215826895e-11,
+    "global_X_commutator_error": 0.0
+  },
+  {
+    "n": 5,
+    "gradient_error": 1.510374547653015e-09,
+    "jacobian_direction_error": 9.159553671089782e-11,
+    "global_X_commutator_error": 0.0
+  }
+]

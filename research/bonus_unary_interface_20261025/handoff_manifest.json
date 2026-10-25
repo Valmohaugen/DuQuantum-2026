@@ -1,0 +1,19 @@
+{
+  "research/bonus_unary_interface_20261025/benchmark_rule_reference.py": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f",
+  "research/bonus_unary_interface_20261025/folded_encoder.py": "0a9a027a44254781b0860077119f40fd8e5dab52bb66b1c22b58e13151526ae5",
+  "research/bonus_unary_interface_20261025/folded_encoder_plan.json": "f663749e17068c8eee87f964c4636bbea93fffa7f807069d3e8bb2ff91fbec3d",
+  "research/bonus_unary_interface_20261025/folded_native.json": "c164615d95c3fb13bac197094bee5e86d1b2a83dc18d8c5a0c69d4cabde802bf",
+  "research/bonus_unary_interface_20261025/folded_native_verified.json": "7a58e0662f9620e87eb9ab3ecf7f502cf72c9ac45f9634b4f64859b6953974b5",
+  "research/bonus_unary_interface_20261025/folded_root_14_native.json": "15da41c588563b72a001ba3577294424cc4ade34261be1b6069df00d138a41a3",
+  "research/bonus_unary_interface_20261025/folded_root_verified.json": "639c3e66c58bbd50c68393160bb023041ccaf40bcd25354a53a22b6d60955123",
+  "research/bonus_unary_interface_20261025/handoff_summary.json": "4ab2a6e6db04f53ecc6c69f423310d8dfd8e72bff0ce7fa0eef0fc8350b50bf8",
+  "research/bonus_unary_interface_20261025/interface.py": "26212cccd5b7a7c9dbfee15a7803f60ff4fb0c1f28287a9ed2f044389be31402",
+  "research/bonus_unary_interface_20261025/interface_results.json": "0854f1eefa1cd8c836b25b0ffc3f85762bc9b5bb8bf1c221b792fcaf5d4be2ae",
+  "research/bonus_unary_interface_20261025/peer_queue_snapshot.md": "0ffb4b9d1d0ba25389279c6fc1008b33b0772963cecedfaec3c694d248a7885f",
+  "research/bonus_unary_interface_20261025/sources.json": "0196d4c26ef67f0565fe749469edec7ff9b6bc65e5f9b55a286224469c07d1a7",
+  "research/bonus_unary_interface_20261025/splitter_source.py": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba",
+  "research/bonus_unary_interface_20261025/subspace_results.json": "cd5e4edfc2c6de1c1d04ff95484acb662c7437eed0e8a7f6feb0d3ce1e6be3b5",
+  "research/bonus_unary_interface_20261025/verification.log": "029e8225f76e7d52be850b4ccfda6657d423ef031794c97bf7420ac73b3aab35",
+  "research/bonus_unary_interface_20261025/verify_folded_encoder.py": "b0ddb50f760164441c2b7d027dfd6e2f85f17cfc2af8989a399f32e5b6b43daa",
+  "research/bonus_unary_interface_20261025/willow105_connectivity.json": "e2f3420a894b634cdad6486a357ac00a1fc9649b9f55b7cd1c00dd6f9fdb1cac"
+}

@@ -1,0 +1,20 @@
+{
+  "research/bonus_affine_encoder_20261025/baseline_native.json": "15da41c588563b72a001ba3577294424cc4ade34261be1b6069df00d138a41a3",
+  "research/bonus_affine_encoder_20261025/baseline_plan.json": "f663749e17068c8eee87f964c4636bbea93fffa7f807069d3e8bb2ff91fbec3d",
+  "research/bonus_affine_encoder_20261025/baseline_verified.json": "639c3e66c58bbd50c68393160bb023041ccaf40bcd25354a53a22b6d60955123",
+  "research/bonus_affine_encoder_20261025/candidate_00_native.json": "a4d91e3fe7a8349d4005398e44b52eee82ff44451e8f6c8fd970bb02e8a9e709",
+  "research/bonus_affine_encoder_20261025/candidate_00_plan.json": "da473a8c070c90ff1946b0869f8ba16b86d171c455cf97662f3efee4b3173cea",
+  "research/bonus_affine_encoder_20261025/candidate_00_verification.log": "278a5fa5457c1c7415b85dbe22ec79ba1df42bde26a58f7a4ba9e1e6fa73b8ea",
+  "research/bonus_affine_encoder_20261025/candidate_00_verified.json": "ce4fd6fa492e54b7965e9cc5cf8e11e2625ca91f83f189dc13055d08a70edd86",
+  "research/bonus_affine_encoder_20261025/candidate_01_native.json": "6495316df8794986a64fdabd1e562f379a000d1174b47e59653b56057cb4eedc",
+  "research/bonus_affine_encoder_20261025/candidate_01_plan.json": "61559672f006287d93a4e0c5b93c740460a1d15abb4fa50e54f395348e71db3c",
+  "research/bonus_affine_encoder_20261025/candidate_01_verification.log": "700fc89085bac301bc895b045caf35b8dc9cdde8b7b09a3359d3e34bfb5b8a6f",
+  "research/bonus_affine_encoder_20261025/candidate_01_verified.json": "109429384672f010554559c5438f7b6c5590944f97ea71dcfc4c83eef46b219b",
+  "research/bonus_affine_encoder_20261025/handoff_summary.json": "ce1ccaa1b5985f3a2f85ea909f921d6f1be55387855051c3ba522e0780f385b5",
+  "research/bonus_affine_encoder_20261025/search.log": "1418bd66990f7796f980e62f942f498b8af00074bbb09d0c848b50716cfa3db2",
+  "research/bonus_affine_encoder_20261025/search.py": "f13440d7261ba0cab02463c4b2b02dc42ced8c190594941e46f29302f908cdf5",
+  "research/bonus_affine_encoder_20261025/search_results.json": "91cd89a4bcb14192a8b3a2117a17b11ae6ff5940523bdcbc0de6cba0e06a6c51",
+  "research/bonus_affine_encoder_20261025/sources.json": "51cec82d792ef6dca914290af1f97c6ca7ae27099005a33a38b74f0dfdef9b05",
+  "research/bonus_affine_encoder_20261025/verify_native.py": "af6552c4e63e5adab1e985b1f6373e0d93abe4459ddfea08f25f7996bdbffbab",
+  "research/bonus_affine_encoder_20261025/willow105_connectivity.json": "e2f3420a894b634cdad6486a357ac00a1fc9649b9f55b7cd1c00dd6f9fdb1cac"
+}

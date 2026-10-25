@@ -1,0 +1,1745 @@
+{
+  "status": "Explicit routed folded-root encoding; native numerical verification separate",
+  "physical_qubit_order": [
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ]
+  ],
+  "left_logical_order": [
+    [
+      0,
+      8
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      0,
+      7
+    ]
+  ],
+  "right_logical_order": [
+    [
+      3,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "seed_order": [
+    [
+      2,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      0,
+      7
+    ]
+  ],
+  "branch_qubit": [
+    1,
+    7
+  ],
+  "external_ancillas": 0,
+  "intermediate_measurements": 0,
+  "logical_CNOT_encoder": [
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        0,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        0,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        7
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        7
+      ],
+      [
+        5,
+        7
+      ]
+    ]
+  ],
+  "routed_encoder": [
+    {
+      "logical_CX": [
+        "CX",
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "path": [
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "CZ": 4,
+      "stage": "branch"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          0,
+          8
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "path": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "CZ": 4,
+      "stage": "branch"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "path": [
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "CZ": 1,
+      "stage": "branch"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "path": [
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "CZ": 1,
+      "stage": "branch"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "path": [
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "CZ": 1,
+      "stage": "branch"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          3,
+          8
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "path": [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "CZ": 4,
+      "stage": "branch"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "path": [
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "CZ": 4,
+      "stage": "branch"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "path": [
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "CZ": 1,
+      "stage": "mix"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "path": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "CZ": 1,
+      "stage": "mix"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "path": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "CZ": 1,
+      "stage": "mix"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          0,
+          7
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "path": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "CZ": 16,
+      "stage": "copy"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          1,
+          8
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "path": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "CZ": 16,
+      "stage": "copy"
+    },
+    {
+      "logical_CX": [
+        "CX",
+        [
+          2,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "path": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "CZ": 8,
+      "stage": "copy"
+    }
+  ],
+  "encoder_CZ_by_stage": {
+    "branch": 19,
+    "mix": 3,
+    "copy": 40
+  },
+  "seed_preparation_CZ": 6,
+  "total_CZ": 68,
+  "seed_weights": [
+    "1/1716",
+    "49/1716",
+    "147/572",
+    "1225/1716"
+  ],
+  "seed_amplitudes": "(1,7,21,35)/sqrt1716",
+  "boolean_checks": [
+    {
+      "branch": 0,
+      "seed_bits": [
+        0,
+        0,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "branch": 0,
+      "seed_bits": [
+        0,
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "branch": 0,
+      "seed_bits": [
+        0,
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "branch": 0,
+      "seed_bits": [
+        0,
+        1,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "branch": 0,
+      "seed_bits": [
+        1,
+        0,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "branch": 0,
+      "seed_bits": [
+        1,
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "branch": 0,
+      "seed_bits": [
+        1,
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "branch": 0,
+      "seed_bits": [
+        1,
+        1,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "branch": 1,
+      "seed_bits": [
+        0,
+        0,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "branch": 1,
+      "seed_bits": [
+        0,
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "branch": 1,
+      "seed_bits": [
+        0,
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "branch": 1,
+      "seed_bits": [
+        0,
+        1,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "branch": 1,
+      "seed_bits": [
+        1,
+        0,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "branch": 1,
+      "seed_bits": [
+        1,
+        0,
+        1
+      ],
+      "exact": true
+    },
+    {
+      "branch": 1,
+      "seed_bits": [
+        1,
+        1,
+        0
+      ],
+      "exact": true
+    },
+    {
+      "branch": 1,
+      "seed_bits": [
+        1,
+        1,
+        1
+      ],
+      "exact": true
+    }
+  ],
+  "exact_GF2_routing_matrix_check": true,
+  "target_rows": [
+    {
+      "seed_count": 0,
+      "branch": 0,
+      "left_count": 0,
+      "basis": 127,
+      "amplitude_numerator": 1,
+      "amplitude_denominator_sqrt": 3432
+    },
+    {
+      "seed_count": 0,
+      "branch": 1,
+      "left_count": 7,
+      "basis": 16256,
+      "amplitude_numerator": 1,
+      "amplitude_denominator_sqrt": 3432
+    },
+    {
+      "seed_count": 1,
+      "branch": 0,
+      "left_count": 1,
+      "basis": 8303,
+      "amplitude_numerator": 7,
+      "amplitude_denominator_sqrt": 3432
+    },
+    {
+      "seed_count": 1,
+      "branch": 1,
+      "left_count": 6,
+      "basis": 8080,
+      "amplitude_numerator": 7,
+      "amplitude_denominator_sqrt": 3432
+    },
+    {
+      "seed_count": 2,
+      "branch": 0,
+      "left_count": 2,
+      "basis": 9326,
+      "amplitude_numerator": 21,
+      "amplitude_denominator_sqrt": 3432
+    },
+    {
+      "seed_count": 2,
+      "branch": 1,
+      "left_count": 5,
+      "basis": 7057,
+      "amplitude_numerator": 21,
+      "amplitude_denominator_sqrt": 3432
+    },
+    {
+      "seed_count": 3,
+      "branch": 0,
+      "left_count": 3,
+      "basis": 9830,
+      "amplitude_numerator": 35,
+      "amplitude_denominator_sqrt": 3432
+    },
+    {
+      "seed_count": 3,
+      "branch": 1,
+      "left_count": 4,
+      "basis": 6553,
+      "amplitude_numerator": 35,
+      "amplitude_denominator_sqrt": 3432
+    }
+  ],
+  "operations": [
+    [
+      "RY",
+      [
+        0,
+        7
+      ],
+      3.093307508157267
+    ],
+    [
+      "RY",
+      [
+        1,
+        8
+      ],
+      -1.400950038711223
+    ],
+    [
+      "CX",
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        7
+      ]
+    ],
+    [
+      "CZ",
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        7
+      ]
+    ],
+    [
+      "RY",
+      [
+        1,
+        8
+      ],
+      1.400950038711223
+    ],
+    [
+      "RY",
+      [
+        2,
+        7
+      ],
+      -1.0303768265243125
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        7
+      ]
+    ],
+    [
+      "CZ",
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        7
+      ]
+    ],
+    [
+      "RY",
+      [
+        2,
+        7
+      ],
+      1.0303768265243125
+    ],
+    [
+      "H",
+      [
+        1,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        0,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        0,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        0,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    [
+      "CX",
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    [
+      "X",
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "X",
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      "X",
+      [
+        4,
+        7
+      ]
+    ],
+    [
+      "X",
+      [
+        5,
+        8
+      ]
+    ],
+    [
+      "X",
+      [
+        5,
+        7
+      ]
+    ],
+    [
+      "X",
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      "X",
+      [
+        4,
+        8
+      ]
+    ]
+  ],
+  "identity": "For s0..3, p_s=C(7,s)^2/C(14,7)=p_(7-s). Prepare unary s with amplitudeC(7,s)/sqrt1716 and independent branch|+>. The encoder produces (|u_s>|X u_s>+|X u_s>|u_s>)/sqrt2 in the two three-arm logical orders.",
+  "scope": "Only the folded count root is prepared, not a Dicke state or a full decoder. Two independently certified global-X-symmetric cores are still required. No permutation interface or separate unary fold is used in this encoding.",
+  "comparison": "This explicit68CZ folded-root construction replaces the136CZ modular root/permutation/twofold upper construction. It is not an optimality bound, a native-depth result or a portfolio-score gain."
+}

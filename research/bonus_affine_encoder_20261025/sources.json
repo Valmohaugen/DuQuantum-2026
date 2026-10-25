@@ -1,0 +1,22 @@
+[
+  {
+    "source": "research/bonus_unary_interface_20261025/folded_encoder_plan.json",
+    "frozen": "research/bonus_affine_encoder_20261025/baseline_plan.json",
+    "sha256": "f663749e17068c8eee87f964c4636bbea93fffa7f807069d3e8bb2ff91fbec3d"
+  },
+  {
+    "source": "research/bonus_unary_interface_20261025/folded_root_verified.json",
+    "frozen": "research/bonus_affine_encoder_20261025/baseline_verified.json",
+    "sha256": "639c3e66c58bbd50c68393160bb023041ccaf40bcd25354a53a22b6d60955123"
+  },
+  {
+    "source": "research/bonus_unary_interface_20261025/folded_root_14_native.json",
+    "frozen": "research/bonus_affine_encoder_20261025/baseline_native.json",
+    "sha256": "15da41c588563b72a001ba3577294424cc4ade34261be1b6069df00d138a41a3"
+  },
+  {
+    "source": "research/bonus_unary_interface_20261025/willow105_connectivity.json",
+    "frozen": "research/bonus_affine_encoder_20261025/willow105_connectivity.json",
+    "sha256": "e2f3420a894b634cdad6486a357ac00a1fc9649b9f55b7cd1c00dd6f9fdb1cac"
+  }
+]

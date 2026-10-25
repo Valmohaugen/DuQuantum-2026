@@ -2279,7 +2279,7 @@
   {
     "id": "PORT-025",
     "title": "Replace full reversal with an adaptive unary-subspace transformation",
-    "status": "component verified; symmetric core and upstream interface pending",
+    "status": "interface and direct encoders verified; decoder cores remain open",
     "assignee": "coordination-research",
     "scope": "Use unary support a<=c<=b to replace a mirror swap by b<-b XOR c XOR a, AND-uncompute a, then copy c into a. No native depth gain until routed and composed with a certified symmetric decoder.",
     "acceptance": [
@@ -2294,12 +2294,75 @@
       "max_common_phase_error": 6.089007060838803e-16,
       "validation": "research/bonus_band_20261025/folded_unary_native_verified.json",
       "full_decoder": false,
-      "bonus_gain_claimed": false
+      "bonus_gain_claimed": false,
+      "direct_root_candidates": [
+        {
+          "CZ": 37,
+          "moments": 31
+        },
+        {
+          "CZ": 42,
+          "moments": 26
+        }
+      ],
+      "direct_root_handoff": "research/bonus_affine_encoder_20261025/handoff_manifest.json"
     },
     "next_actions": [
-      "Cost a compatible upstream unary splitter interface on the branched footprint.",
-      "Specify and validate a finite native global-X-symmetric core; repeated-block Lie algebra alone is insufficient.",
-      "Keep full-score pool unchanged until an entire composed candidate is independently checked."
+      "Use paired-core objective to cost and validate complete balanced-state constructions.",
+      "The26moment root leaves82moments versus the current108moment D14k7 circuit under sequential composition; this is a budget, not a gain."
+    ]
+  },
+  {
+    "id": "PORT-026",
+    "title": "Small global-X-symmetric core feasibility pilot",
+    "status": "complete bounded small-core pilot; no useful depth result",
+    "assignee": "bonus-depth",
+    "inputs": [
+      "research/bonus_band_20261025/symmetric_core_next_plan.json"
+    ],
+    "scope": "Six-angle2CZ symmetric blocks with fixed XX insertions; column phases corrected only before final all-count certification. No broad peer synthesis overlap.",
+    "acceptance": [
+      "Independent gradients/Jacobian and full-matrix global-X checks.",
+      "Record every attempted depth and seed, including failure.",
+      "Require routed native all-count common-phase certificate before any integration.",
+      "Compare complete transform plus core plus input interface; do not claim component cost as full decoder cost."
+    ],
+    "results": "research/bonus_symmetric_core_20261025/handoff_summary.json"
+  },
+  {
+    "id": "PORT-027",
+    "title": "Eliminate unary input signs before real-isometry fitting",
+    "status": "reference mechanism and tiny matched pilot complete; no exact4/6CZ improvement",
+    "assignee": "bonus-depth",
+    "artifacts": [
+      "research/bonus_symmetric_core_20261025/column_gauge.py",
+      "research/bonus_symmetric_core_20261025/column_gauge_checks.json",
+      "research/bonus_symmetric_core_20261025/gauge_pilot_results.json"
+    ],
+    "scope": "No peer optimizer edits. Independent signs require exact input-Z correction and final common-phase checks."
+  },
+  {
+    "id": "PORT-028",
+    "title": "Exploit known-zero inputs in folded-root CNOT encoding",
+    "status": "complete bounded affine search and native validation",
+    "assignee": "coordination-research",
+    "results": "research/bonus_affine_encoder_20261025/handoff_summary.json",
+    "scope": "745 encoders, six elimination orders, one fixed tree policy. No optimality claim; full Dicke cores still missing."
+  },
+  {
+    "id": "PORT-029",
+    "title": "Optimize paired general cores for the actual balanced Dicke state",
+    "status": "assigned; exact compressed objective verified, no fit yet",
+    "assignee": "bonus-depth",
+    "inputs": [
+      "research/bonus_symmetric_core_20261025/paired_core_objective.py",
+      "research/bonus_affine_encoder_20261025/candidate_01_native.json"
+    ],
+    "acceptance": [
+      "Freeze an exact folded-input warm start without overlapping current peer synthesis.",
+      "Use general real cores and actual joint-state fidelity; preserve correlated phase freedom.",
+      "Verify a bounded small pilot before larger pruning.",
+      "Require native full-state/device validation and complete depth improvement before changing any portfolio."
     ]
   }
 ]

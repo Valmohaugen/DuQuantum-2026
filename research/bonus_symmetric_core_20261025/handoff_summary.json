@@ -1,0 +1,71 @@
+{
+  "status": "bounded core and gauge studies complete; no portfolio change",
+  "initial_trials": 8,
+  "deeper_trials": 8,
+  "matched_gauge_trials": 24,
+  "initial_elapsed_seconds": 2.430499432608485,
+  "deeper_elapsed_seconds": 11.093421294353902,
+  "gauge_elapsed_seconds": 3.173521880991757,
+  "core_outcome": "Three-qubit cores reach precision with3cycles/15CZ; five-qubit trials fail through5cycles/45CZ. No n7 fit. Failure of these starts is not an impossibility proof.",
+  "native_full3": {
+    "status": "all-count native n3 feasibility decoder verified; not integrated",
+    "source_results_sha256": "45d3dce3eb46484af6ea625e09c0cb0067578fc613e9b2df1d4eeec8b60d1e93",
+    "selected": {
+      "n": 3,
+      "cycles": 3,
+      "seed": 3
+    },
+    "core_CZ": 15,
+    "full_native_CZ": 29,
+    "full_native_moments": 58,
+    "physical_qubits": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ]
+    ],
+    "checks": [
+      {
+        "count": 0,
+        "common_phase_l2_error": 3.9650331588906025e-14
+      },
+      {
+        "count": 1,
+        "common_phase_l2_error": 4.472589683762289e-14
+      },
+      {
+        "count": 2,
+        "common_phase_l2_error": 4.494908569153272e-14
+      },
+      {
+        "count": 3,
+        "common_phase_l2_error": 3.9443067430323754e-14
+      }
+    ],
+    "max_common_phase_l2_error": 4.494908569153272e-14,
+    "native_sha256": "1ab6cb25c2ecfc40806fc719ed3dc988c499cf68f507958251ab4b34bfbc49df",
+    "phase_correction": "Input Rz differences cancel all count phases before the folded transform; one shared output phase is fitted from r0 only.",
+    "scope": "Proof of a complete small decoder for this family, not a depth improvement. N5 attempts failed even at36/45 coreCZ. No N7 fit, maintained solver edit, or portfolio change."
+  },
+  "matched_gauge_outcome": "Neither objective found an exact3-site all-count decoder with the tested4/6CZ alternating-path schedules and six matched starts. Sign elimination helps some6CZ residuals but worsens others; no convergence or depth benefit established.",
+  "gauge_mechanism": "Unary input-Rz differences exactly correct independent per-count phases. The real-backend sign witness passes and preserves coherence after correction; its generic target is not Dicke.",
+  "remaining_actions": [
+    "Defer a larger symmetric-core fit until a stronger finite native-cost construction or initialization exists.",
+    "The isolated sign-gauge helper is available for peer experiments, with mandatory all-column common-phase certification after correction.",
+    "Continue direct-encoder simplification separately; count total root plus cores, not component CZ alone."
+  ],
+  "paired_core_followup": {
+    "implementation": "research/bonus_symmetric_core_20261025/paired_core_objective.py",
+    "checks": "research/bonus_symmetric_core_20261025/paired_core_checks.json",
+    "status": "compressed full-state overlap and gradient verified for half sizes3/5/7; no fit",
+    "reason": "Avoid requiring each core to commute with globalX or independently map every label to one fixed Dicke column; evaluate the actual paired state exactly."
+  }
+}

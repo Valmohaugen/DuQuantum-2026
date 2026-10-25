@@ -1,0 +1,61 @@
+{
+  "status": "Interface audit and direct folded-root native construction complete; no full decoder/score claim",
+  "peer_claim": "Issue13 has active5-hour Slurm whole-state pruning in body despite stale open/unassigned title. No synthesis was duplicated.",
+  "fixed_permutation_interface": {
+    "physical_qubits": 14,
+    "extra_sites": 0,
+    "SWAP": 25,
+    "CZ": 75,
+    "abstract_unfused_moments": 118,
+    "assignment_trials": 288,
+    "method": "One fixed deterministic leaf router with arm-label/root-orientation enumeration; no routing beam.",
+    "modular_precore_CZ": 136
+  },
+  "direct_folded_root": {
+    "native_file": "research/bonus_unary_interface_20261025/folded_root_14_native.json",
+    "verification_file": "research/bonus_unary_interface_20261025/folded_root_verified.json",
+    "CZ": 68,
+    "moments": 96,
+    "unfused_moments": 99,
+    "common_phase_L2_error": 6.866569325663117e-16,
+    "off_support_probability": 5.2000108498455375e-33,
+    "physical_qubits": 14,
+    "extra_qubits": 0,
+    "measurements": 0,
+    "seed_CZ": 6,
+    "encoder_CZ_by_stage": {
+      "branch": 19,
+      "mix": 3,
+      "copy": 40
+    },
+    "logical_CNOTs": 13,
+    "boolean_input_checks": 16,
+    "full_GF2_routing_matrix_checked": true,
+    "target": "Eight coherent branches with weightsC(7,s)/sqrt3432 for s0..3 and their global-X partners in two three-arm logical orders. Not Dicke.",
+    "device_and_native_gates_passed": true
+  },
+  "full_D14k7_reference": {
+    "N": 14,
+    "k": 7,
+    "before": 108,
+    "depth": 108,
+    "CZ": 175,
+    "state_l2_error": 1.1222259693402608e-14
+  },
+  "depth_caveat": "The96moment root alone leaves only12moments against the retained108moment D14k7 circuit under literal sequential composition; two finite symmetric cores, fusion/interface choices and final state verification remain missing. CZ-count reduction does not imply depth or score improvement.",
+  "readout_correction": {
+    "rule": "Every DEVICE qubit on touched row+col diagonals must be measured, not only used circuit qubits.",
+    "prior_adaptive_three_target_missing_device_qubits": 11,
+    "unitary_constructions_affected": false,
+    "source": "benchmark_rule_reference.py:check_readout_diagonals",
+    "scope": "Prior used-qubit grouping was insufficient; adaptive scheme remains unvalidated. Primary check_rules also explicitly disallows measurement/classical control."
+  },
+  "next_actions": [
+    "Root should independently reproduce folded_root_verified.json if this component is used.",
+    "Do not fit n7 merely because the input component exists: first establish a finite-depth core and total-depth budget.",
+    "A separately bounded exact CNOT-network simplification or alternative direct encoding could reduce the96moment root; current routing is constructive and unoptimized.",
+    "Keep peer issue13 synthesis, maintained solvers and portfolio unchanged until full composition passes."
+  ],
+  "queue_update": "PORT025 interface work now has an exact68CZ/96moment folded14qubit root on the existing2x7 Willow footprint, with no ancillas or measurements; common-phase target error6.87e-16. This replaces a136CZ modular interface upper construction, but is not a Dicke decoder and96root moments already consume most of the retained108moment D14k7 budget. Sources/native/checks are in research/bonus_unary_interface_20261025. Full-device readout diagonals, not just used-qubit groups, govern adaptive measurements. Issue13 active synthesis remains untouched.",
+  "writes": "Only research/bonus_unary_interface_20261025; shared solver, README, tasks and queue were not edited under the directory-only task scope."
+}

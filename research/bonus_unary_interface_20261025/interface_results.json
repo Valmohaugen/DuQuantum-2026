@@ -1,0 +1,3410 @@
+{
+  "status": "Explicit standard-splitter interface constructed with no extra sites; no decoder/core score claim",
+  "physical_qubits": [
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ]
+  ],
+  "total_physical_qubits": 14,
+  "returned_data_qubits": 14,
+  "extra_sites": 0,
+  "intermediate_measurements": 0,
+  "legal_stars_enumerated": 28,
+  "disjoint_star_tilings": 2,
+  "fixed_assignment_trials": 288,
+  "method": "Enumerate arm labeling/half assignment and root orientation only; each assignment uses one fixed tree-leaf routing algorithm. No beam search, coefficient fitting or variable-depth search.",
+  "selected": {
+    "left_input": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "right_input": [
+      [
+        6,
+        8
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        0,
+        8
+      ]
+    ],
+    "left_output": [
+      [
+        2,
+        8
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        8
+      ]
+    ],
+    "right_output": [
+      [
+        6,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    "swaps": [
+      [
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      [
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      [
+        [
+          4,
+          8
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      [
+        [
+          3,
+          8
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      [
+        [
+          2,
+          8
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      [
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      [
+        [
+          2,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        [
+          3,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      [
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      [
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      [
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      [
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      [
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      [
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      [
+        [
+          2,
+          8
+        ],
+        [
+          1,
+          8
+        ]
+      ]
+    ],
+    "left_star": [
+      [
+        1,
+        7
+      ],
+      [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      [
+        [
+          0,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          7
+        ]
+      ]
+    ],
+    "right_star": [
+      [
+        5,
+        8
+      ],
+      [
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    ]
+  },
+  "native_interface": {
+    "CZ": 75,
+    "unfused_abstract_native_moments": 118,
+    "operations": [
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 1,
+        "operation": [
+          "CZ",
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 3,
+        "operation": [
+          "CZ",
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 5,
+        "operation": [
+          "CZ",
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 1,
+        "operation": [
+          "CZ",
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 3,
+        "operation": [
+          "CZ",
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 5,
+        "operation": [
+          "CZ",
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 7,
+        "operation": [
+          "CZ",
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 8,
+        "operation": [
+          "H",
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 8,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 9,
+        "operation": [
+          "CZ",
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 11,
+        "operation": [
+          "CZ",
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 12,
+        "operation": [
+          "H",
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 1,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 2,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 3,
+        "operation": [
+          "CZ",
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 4,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 5,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 7,
+        "operation": [
+          "CZ",
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 8,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 8,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 9,
+        "operation": [
+          "CZ",
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 10,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 11,
+        "operation": [
+          "CZ",
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 12,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 13,
+        "operation": [
+          "CZ",
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 14,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 14,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 15,
+        "operation": [
+          "CZ",
+          [
+            4,
+            7
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 16,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 16,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 17,
+        "operation": [
+          "CZ",
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 18,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 19,
+        "operation": [
+          "CZ",
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 20,
+        "operation": [
+          "H",
+          [
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 20,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 21,
+        "operation": [
+          "CZ",
+          [
+            5,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 22,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 22,
+        "operation": [
+          "H",
+          [
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 23,
+        "operation": [
+          "CZ",
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 24,
+        "operation": [
+          "H",
+          [
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 24,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 25,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 26,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 26,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 27,
+        "operation": [
+          "CZ",
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 28,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 28,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 29,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 30,
+        "operation": [
+          "H",
+          [
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 30,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 31,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 31,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 32,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 33,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 33,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 34,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 35,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 36,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 37,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 37,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 38,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 39,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 39,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 40,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 41,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 42,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 43,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 43,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 44,
+        "operation": [
+          "CZ",
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 45,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 45,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 46,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 47,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 48,
+        "operation": [
+          "CZ",
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 49,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 49,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 50,
+        "operation": [
+          "CZ",
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 51,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 51,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 52,
+        "operation": [
+          "CZ",
+          [
+            1,
+            8
+          ],
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 53,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 12,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 54,
+        "operation": [
+          "CZ",
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 55,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 55,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 56,
+        "operation": [
+          "CZ",
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 57,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 57,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 58,
+        "operation": [
+          "CZ",
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 59,
+        "operation": [
+          "H",
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 59,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 60,
+        "operation": [
+          "CZ",
+          [
+            2,
+            7
+          ],
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 61,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 61,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 62,
+        "operation": [
+          "CZ",
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 63,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 63,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 64,
+        "operation": [
+          "CZ",
+          [
+            2,
+            7
+          ],
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 65,
+        "operation": [
+          "H",
+          [
+            1,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 65,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 66,
+        "operation": [
+          "CZ",
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 67,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 67,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 68,
+        "operation": [
+          "CZ",
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 69,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 69,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 70,
+        "operation": [
+          "CZ",
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 71,
+        "operation": [
+          "H",
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 71,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 72,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 73,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 73,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 74,
+        "operation": [
+          "CZ",
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 75,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 75,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 76,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 77,
+        "operation": [
+          "H",
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      {
+        "moment": 35,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 77,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 78,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 78,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 79,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 80,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 80,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 81,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 82,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 0,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 83,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 84,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 84,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 85,
+        "operation": [
+          "CZ",
+          [
+            5,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 86,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 86,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 87,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 88,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 6,
+        "operation": [
+          "H",
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 89,
+        "operation": [
+          "CZ",
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 90,
+        "operation": [
+          "H",
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 90,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 91,
+        "operation": [
+          "CZ",
+          [
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 92,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 92,
+        "operation": [
+          "H",
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 93,
+        "operation": [
+          "CZ",
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 94,
+        "operation": [
+          "H",
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 88,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 89,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 90,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 90,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 91,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 92,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 92,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 93,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 94,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 94,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 95,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 96,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 96,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 97,
+        "operation": [
+          "CZ",
+          [
+            5,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 98,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 98,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 99,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 100,
+        "operation": [
+          "H",
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 94,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 95,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 96,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 96,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 97,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 98,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 98,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 99,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 100,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 100,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 101,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 102,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 102,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 103,
+        "operation": [
+          "CZ",
+          [
+            4,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 104,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 104,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 105,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 106,
+        "operation": [
+          "H",
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 106,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 107,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 108,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 108,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 109,
+        "operation": [
+          "CZ",
+          [
+            3,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 110,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 110,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 111,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 112,
+        "operation": [
+          "H",
+          [
+            3,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 53,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 112,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 113,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 113,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 114,
+        "operation": [
+          "CZ",
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 115,
+        "operation": [
+          "H",
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 115,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 116,
+        "operation": [
+          "CZ",
+          [
+            2,
+            8
+          ],
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "moment": 117,
+        "operation": [
+          "H",
+          [
+            1,
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  "unary_pair_truth": [
+    {
+      "left_count": 0,
+      "right_count": 7,
+      "left_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "right_bits": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "coherent_amplitude": "+1"
+    },
+    {
+      "left_count": 1,
+      "right_count": 6,
+      "left_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "right_bits": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "coherent_amplitude": "+1"
+    },
+    {
+      "left_count": 2,
+      "right_count": 5,
+      "left_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "right_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "coherent_amplitude": "+1"
+    },
+    {
+      "left_count": 3,
+      "right_count": 4,
+      "left_bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "right_bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "coherent_amplitude": "+1"
+    },
+    {
+      "left_count": 4,
+      "right_count": 3,
+      "left_bits": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "right_bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "coherent_amplitude": "+1"
+    },
+    {
+      "left_count": 5,
+      "right_count": 2,
+      "left_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "right_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "coherent_amplitude": "+1"
+    },
+    {
+      "left_count": 6,
+      "right_count": 1,
+      "left_bits": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "right_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "coherent_amplitude": "+1"
+    },
+    {
+      "left_count": 7,
+      "right_count": 0,
+      "left_bits": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "right_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coherent_amplitude": "+1"
+    }
+  ],
+  "phase_argument": "EachSWAP=threeCNOT and eachCNOT=H-CZ-H has exact+1basis amplitude. The final token permutation matches all14logical wires, so it preserves arbitrary coherence, not only the eight tested count pairs.",
+  "logical_interface": "Standard split_ops uses two straight7-site columns with reversed right ordering and seven direct rungs. The fixed permutation sends those complete registers to the two three-arm logical orders before the certified unary folds.",
+  "primitive_budget": {
+    "existing_D14k7_splitter_CZ": 13,
+    "interface_CZ": 75,
+    "two_unary_folds_CZ": 48,
+    "total_before_symmetric_cores_CZ": 136,
+    "note": "Core gates, boundary cancellations, actual native fusion and full composition verification remain additional. CZ totals are explicit modular upper counts, not lower bounds or a native-depth comparison."
+  },
+  "readout_rule_correction": {
+    "source": "benchmark_rule_reference.py:check_readout_diagonals",
+    "rule": "Measure every Willow DEVICE qubit on each touched row+col diagonal; used-circuit-only grouping is insufficient.",
+    "prior_three_arm_adaptive_measurement": [
+      {
+        "diagonal": 8,
+        "all_device_qubits": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            2
+          ]
+        ],
+        "proposed_measured": [
+          [
+            1,
+            7
+          ]
+        ],
+        "missing_device_qubits": [
+          [
+            0,
+            8
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            2
+          ]
+        ]
+      },
+      {
+        "diagonal": 12,
+        "all_device_qubits": [
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "proposed_measured": [
+          [
+            5,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "missing_device_qubits": [
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            8,
+            4
+          ]
+        ]
+      }
+    ],
+    "prior_proposal_compliant_without_extra_measurements": false,
+    "unitary_interface_affected": false,
+    "warning": "Adding off-register measurements must be assessed against other registers, total qubit accounting, device rules and classical controls. No such adaptive extension is claimed here."
+  },
+  "peer_scope": "Issue13 heading is stale open/unassigned; body reports active5-hour Slurm whole-state pruning through~10:00. This interface audit does not fit or touch those searches.",
+  "limitations": [
+    "Native schedule is abstract H/CZ with exact identities; no Cirq PhasedXZ export/device gate validation or full splitter/fold/core statevector check in this CPU-light audit.",
+    "The root splitter is still the standard full unary encoder; no claim that this permutation is optimal or that input encoding absorbs V for free.",
+    "A CNOT-only half-local map agreeing with all n+1 unary images must equal the corresponding full wire permutation because successive unary differences span the basis. Cheaper support-specific alternatives require nonlinear gates or use the cross-register count relation.",
+    "The two symmetric cores must be mapped to these footprints; finite core cost and exact full decoder outputs remain unresolved."
+  ],
+  "next_action": "Export the fixed permutation into PhasedXZ/CZ, compose the standard13CZ splitter and two folded-unary modules, and verify all eight coherent count branches on this exact14-site footprint before adding a separately certified symmetric core.",
+  "seconds": 0.09552691876888275
+}

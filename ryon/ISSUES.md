@@ -543,3 +543,29 @@ below6.1e-16 and Willow validation passed. Artifacts:
 `folded_unary_native_verified.json`. It is NOT a complete Dicke decoder.
 PORT025 remains assigned for the branched unary interface and a finite-cost
 symmetric core; the19moment component alone does not improve the portfolio.
+
+
+### PORT025–029 handoff — folded root26moments; paired cores next
+
+Best bonus remains48.93687446093003. The direct folded14qubit root now has
+verified37CZ/31moment and42CZ/26moment options, versus the prior68CZ/96moments.
+The745-candidate affine search used known-zero input qubits and physical CNOTs;
+no routing optimality or full Dicke-state claim. Artifacts:
+`research/bonus_affine_encoder_20261025/handoff_manifest.json`; independent
+root verification: `research/bonus_band_20261025/affine_encoder_independent_check.json`.
+
+PORT026 small symmetric-core search and PORT027 sign-gauge pilot are complete:
+40 bounded fits, exact but expensive n3 decoder, no useful n5 core and no
+exact4/6CZ decoder in the matched sign pilot. The phase-gauge helper is available,
+but no convergence advantage is established. Source/results:
+`research/bonus_symmetric_core_20261025/handoff_manifest.json`.
+PORT028 affine encoding is complete. PORT029 is assigned to bonus-depth for
+a small exact warm-start/joint-core pilot. Its compressed objective matches
+full6/10/14qubit overlaps and gradients; arbitrary real cores are allowed,
+so strict global-X gate symmetry and fixed individual column phases are not
+required. Final full-state/native depth verification remains mandatory.
+
+The benchmark readout checker requires EVERY DEVICE qubit on touched diagonals;
+the earlier three-target adaptive sketch misses11 such readouts and remains
+unvalidated. Unitary constructions are unaffected. Active peer issue13 long
+synthesis jobs remain untouched despite their stale open/unassigned heading.

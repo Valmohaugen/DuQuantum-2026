@@ -1,0 +1,22 @@
+{
+  "research/bonus_symmetric_core_20261025/column_gauge.py": "6d629f7871965083a490b54fbb4291bf6517cba557855a41f4d69dca73203c37",
+  "research/bonus_symmetric_core_20261025/column_gauge_checks.json": "ed606de21dedaa069325dc584bf77cf8ad9272064aa8120011391bda2b081879",
+  "research/bonus_symmetric_core_20261025/continuation.py": "8e7a6b32ec9c4df987326956a474ba6b1617d0699aa3c32220bf83acc334d727",
+  "research/bonus_symmetric_core_20261025/continuation_prepared.json": "e43619f34e55c1bcba1fa1b433b627610cb3e3e61c9176d311e2316a8f11d356",
+  "research/bonus_symmetric_core_20261025/continuation_results.json": "45d3dce3eb46484af6ea625e09c0cb0067578fc613e9b2df1d4eeec8b60d1e93",
+  "research/bonus_symmetric_core_20261025/derivative_checks.json": "24c3e2e9e8ebc9d35b30da432cf87039dc44826b01e22cf3c22ce84c0bbd1224",
+  "research/bonus_symmetric_core_20261025/full3_native.json": "1ab6cb25c2ecfc40806fc719ed3dc988c499cf68f507958251ab4b34bfbc49df",
+  "research/bonus_symmetric_core_20261025/full3_verified.json": "f076bfcdc26e65989781d5ed277854189a764ffe70fab8528d72dea07d222535",
+  "research/bonus_symmetric_core_20261025/gauge_pilot.py": "b917e32456774058cecb06c7cd87e9453c172840186c7bf91029ee4f17a84bfb",
+  "research/bonus_symmetric_core_20261025/gauge_pilot_prepared.json": "296ba41875156c819e25cdf5cc6ec25b8099f0120ea9c65fb79fc8819f456bf5",
+  "research/bonus_symmetric_core_20261025/gauge_pilot_results.json": "aba6775a5f6be3a71f6a7757a27cd749a66c8c20f96c7f2b9627e6ea8ef85caf",
+  "research/bonus_symmetric_core_20261025/handoff_summary.json": "fed116b607793c34026c8f3c24c33f71e93346e7a2253834794329fa3af1f9b5",
+  "research/bonus_symmetric_core_20261025/paired_core_checks.json": "9d56349c4b439c2cd700737776a7e273d4fb973d78be956e91b5d375c896153b",
+  "research/bonus_symmetric_core_20261025/paired_core_objective.py": "743d75fae37768d1e719fb842b7fc432265065012ba9dcaab4efb18340c5fa48",
+  "research/bonus_symmetric_core_20261025/peer_synth_origin.json": "14a12436619177c6c621c64bbe9eb73fac4f4b512f0ae883609bad04a7c4e3ce",
+  "research/bonus_symmetric_core_20261025/peer_synth_snapshot.py": "c9b21fe445217bed039f6285b9decea8faa9419951182f6b8af3c123dab1b5a6",
+  "research/bonus_symmetric_core_20261025/pilot.py": "1b6df58c93912511791707faf3bbe7c2947939796e6519798075e8c82f025cb5",
+  "research/bonus_symmetric_core_20261025/pilot_results.json": "a32ac07570ec052c86478a56f9bad995f256535d1d864d0fe3caa9d0125e998e",
+  "research/bonus_symmetric_core_20261025/prepared_manifest.json": "7fcc4d5c5c02d835c128b2d84ae65adea65f88655c733179e2b5f7fb6c8201b8",
+  "research/bonus_symmetric_core_20261025/verify_small.py": "855013bacaf7d0f7ca4e45e987721113bf2a72348bf8562972d37f92e2378951"
+}

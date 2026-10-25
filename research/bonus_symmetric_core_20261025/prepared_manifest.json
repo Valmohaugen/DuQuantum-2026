@@ -1,0 +1,33 @@
+{
+  "status": "prepared bounded feasibility pilot",
+  "script_sha256": "1b6df58c93912511791707faf3bbe7c2947939796e6519798075e8c82f025cb5",
+  "configurations": [
+    [
+      3,
+      1,
+      "each"
+    ],
+    [
+      3,
+      2,
+      "each"
+    ],
+    [
+      5,
+      2,
+      "each"
+    ],
+    [
+      5,
+      3,
+      "each"
+    ]
+  ],
+  "seeds": [
+    0,
+    1
+  ],
+  "trial_seconds": 20,
+  "total_seconds": 180,
+  "scope": "Small global-X-symmetric cores only; no native decoder until all-count phase correction, fold/interface composition and device checks. Separate from active peer high-weight synthesis."
+}

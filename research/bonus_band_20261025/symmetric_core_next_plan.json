@@ -1,0 +1,22 @@
+{
+  "status": "small pilot completed; symmetric n5 cores not competitive; paired-core objective is next",
+  "motivation": "The19moment supported-unary transform makes a symmetric core worth a concrete native-cost screen. Avoid the impossible Rx/ZZ-only core and do not infer a shallow ansatz from full Lie algebra.",
+  "native_block": {
+    "expression": "Rx(a,alpha) Rx(b,beta) CZ(a,b) Ry(a,gamma) Ry(b,delta) CZ(a,b) Rx(a,epsilon) Rx(b,zeta)",
+    "CZ": 2,
+    "continuous_angles": 6,
+    "identity": "CZ (X tensor X) CZ = Y tensor Y. The middle Ry tensor Ry commutes with Y tensor Y, and outer Rx gates commute with X tensor X; hence the entire block commutes with X tensor X.",
+    "limitation": "This remains inside the old obstructed algebra unless a suitable XX block is added. XX breaks the antiunitary witness while preserving global-X symmetry. Parameter independence and shallow reachability are not implied."
+  },
+  "phase_gauge": {
+    "idea": "Allow per-column phases while fitting, then correct them on the original unary inputs in one local-Z layer.",
+    "derivation": "On u_r=0^(n-r)1^r, tensor Rz(theta_i) has phase f_r=f_0+sum(last r theta_i). For target relative phase phi_r, choose theta_(n-r)=-(phi_r-phi_(r-1)) for r=1..n. This cancels every relative count phase up to one global phase.",
+    "scope": "Fit phases need to be evaluated after the entire folded-input/core composition, and final all-column common-phase certification remains mandatory. This does not excuse amplitude or phase approximation errors."
+  },
+  "next_actions": [
+    "Do not repeat failed small symmetric skeletons or scale them blindly to n7.",
+    "Use the verified paired_core_objective.py to prepare an exact folded-input warm start with general real cores; no global-X constraint required.",
+    "Require total native root-plus-cores depth and independent full-state validation before portfolio integration."
+  ],
+  "results": "research/bonus_symmetric_core_20261025/handoff_summary.json"
+}

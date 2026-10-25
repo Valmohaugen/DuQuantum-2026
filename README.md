@@ -473,3 +473,29 @@ is a reusable component, **not a complete Dicke decoder**: its upstream
 layout and a symmetric decoder core remain open. The
 [agent handoff](research/bonus_clifford_screen_20261025/handoff_summary.json)
 also records the fixed-Clifford algebra and adaptive-branch checks.
+
+
+## Research checkpoint — smaller folded input and paired-core objective
+
+Best verified corrected bonus remains **48.9368744609**; the
+[56-case checkpoint](research/bonus_band_20261025/milestones/20261025T082924Z/summary.json)
+is unchanged. A direct folded input for D(14,7) now has two verified options:
+**37 CZ / 31 moments** and **42 CZ / 26 moments**, reduced from68CZ/96moments.
+The bounded affine search checked745 encoders using known-zero inputs. Both
+selected circuits pass full14-qubit state, native-gate and Willow checks.
+[Independent checks](research/bonus_band_20261025/affine_encoder_independent_check.json)
+and [handoff](research/bonus_affine_encoder_20261025/handoff_summary.json).
+
+These circuits prepare the **folded input, not a Dicke state**; two decoder
+cores remain necessary. Small symmetry-constrained core fits produced an exact
+three-qubit example but no useful five-qubit result. Forty bounded core/sign
+fits are recorded, including failures, in the
+[core study](research/bonus_symmetric_core_20261025/handoff_summary.json).
+
+The next [paired-core objective](research/bonus_symmetric_core_20261025/paired_core_checks.json)
+evaluates the actual balanced-state overlap using two smaller simulations.
+It agrees with direct full-state calculations at6,10,14qubits and passes
+derivative checks; no fit or score gain is claimed yet. PORT029 is assigned.
+The readout audit also corrects the adaptive sketch: the local checker requires
+complete **device** diagonals, not just used-qubit groups. All published
+unitary components are unaffected.

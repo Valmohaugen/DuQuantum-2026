@@ -1,0 +1,37 @@
+[
+  {
+    "source": "research/bonus_clifford_screen_20261025/willow105_connectivity.json",
+    "frozen": "research/bonus_unary_interface_20261025/willow105_connectivity.json",
+    "sha256": "e2f3420a894b634cdad6486a357ac00a1fc9649b9f55b7cd1c00dd6f9fdb1cac"
+  },
+  {
+    "source": "research/bonus_band_20261025/folded_unary_native_verified.json",
+    "frozen": "research/bonus_unary_interface_20261025/folded_native_verified.json",
+    "sha256": "7a58e0662f9620e87eb9ab3ecf7f502cf72c9ac45f9634b4f64859b6953974b5"
+  },
+  {
+    "source": "research/bonus_band_20261025/folded_unary_7_native.json",
+    "frozen": "research/bonus_unary_interface_20261025/folded_native.json",
+    "sha256": "c164615d95c3fb13bac197094bee5e86d1b2a83dc18d8c5a0c69d4cabde802bf"
+  },
+  {
+    "source": "research/bonus_clifford_screen_20261025/subspace_results.json",
+    "frozen": "research/bonus_unary_interface_20261025/subspace_results.json",
+    "sha256": "cd5e4edfc2c6de1c1d04ff95484acb662c7437eed0e8a7f6feb0d3ce1e6be3b5"
+  },
+  {
+    "source": "research/bonus_faithful_terminal_integration_20261025/snapshot.py",
+    "frozen": "research/bonus_unary_interface_20261025/splitter_source.py",
+    "sha256": "275025a7bf4d9bebe963db7227fbdb68e906200c4b3a82684c6b46c7e9d1a7ba"
+  },
+  {
+    "source": "ryon/ISSUES.md",
+    "frozen": "research/bonus_unary_interface_20261025/peer_queue_snapshot.md",
+    "sha256": "0ffb4b9d1d0ba25389279c6fc1008b33b0772963cecedfaec3c694d248a7885f"
+  },
+  {
+    "source": "ryon/test_dicke.py",
+    "frozen": "research/bonus_unary_interface_20261025/benchmark_rule_reference.py",
+    "sha256": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f"
+  }
+]

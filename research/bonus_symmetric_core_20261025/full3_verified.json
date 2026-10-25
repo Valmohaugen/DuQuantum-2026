@@ -1,0 +1,48 @@
+{
+  "status": "all-count native n3 feasibility decoder verified; not integrated",
+  "source_results_sha256": "45d3dce3eb46484af6ea625e09c0cb0067578fc613e9b2df1d4eeec8b60d1e93",
+  "selected": {
+    "n": 3,
+    "cycles": 3,
+    "seed": 3
+  },
+  "core_CZ": 15,
+  "full_native_CZ": 29,
+  "full_native_moments": 58,
+  "physical_qubits": [
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      7
+    ]
+  ],
+  "checks": [
+    {
+      "count": 0,
+      "common_phase_l2_error": 3.9650331588906025e-14
+    },
+    {
+      "count": 1,
+      "common_phase_l2_error": 4.472589683762289e-14
+    },
+    {
+      "count": 2,
+      "common_phase_l2_error": 4.494908569153272e-14
+    },
+    {
+      "count": 3,
+      "common_phase_l2_error": 3.9443067430323754e-14
+    }
+  ],
+  "max_common_phase_l2_error": 4.494908569153272e-14,
+  "native_sha256": "1ab6cb25c2ecfc40806fc719ed3dc988c499cf68f507958251ab4b34bfbc49df",
+  "phase_correction": "Input Rz differences cancel all count phases before the folded transform; one shared output phase is fitted from r0 only.",
+  "scope": "Proof of a complete small decoder for this family, not a depth improvement. N5 attempts failed even at36/45 coreCZ. No N7 fit, maintained solver edit, or portfolio change."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "prepared after initial pilot, before diagnostic outputs",
+  "configurations": [
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "seeds": [
+    2,
+    3
+  ],
+  "trial_seconds": 15,
+  "total_seconds": 120,
+  "files": {
+    "pilot.py": "1b6df58c93912511791707faf3bbe7c2947939796e6519798075e8c82f025cb5",
+    "continuation.py": "8e7a6b32ec9c4df987326956a474ba6b1617d0699aa3c32220bf83acc334d727",
+    "pilot_results.json": "a32ac07570ec052c86478a56f9bad995f256535d1d864d0fe3caa9d0125e998e"
+  },
+  "reason": "Initial shallow n3/n5 fits did not converge. Test deeper small cores to distinguish this shallow skeleton failure from an implementation defect or general infeasibility. No n7 fit yet."
+}

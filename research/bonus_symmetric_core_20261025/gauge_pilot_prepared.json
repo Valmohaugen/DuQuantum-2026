@@ -1,0 +1,28 @@
+{
+  "status": "frozen before paired fits",
+  "n": 3,
+  "counts": [
+    4,
+    6
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "modes": [
+    "common",
+    "independent_signs"
+  ],
+  "per_trial_seconds": 4,
+  "total_seconds": 120,
+  "files": {
+    "gauge_pilot.py": "b917e32456774058cecb06c7cd87e9453c172840186c7bf91029ee4f17a84bfb",
+    "column_gauge.py": "6d629f7871965083a490b54fbb4291bf6517cba557855a41f4d69dca73203c37",
+    "peer_synth_snapshot.py": "c9b21fe445217bed039f6285b9decea8faa9419951182f6b8af3c123dab1b5a6"
+  },
+  "scope": "No topology pruning or peer file changes. Test the phase/sign gauge on tiny complete unary isometries."
+}

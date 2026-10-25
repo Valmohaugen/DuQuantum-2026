@@ -1,0 +1,31 @@
+{
+  "status": "compressed paired-core objective and gradient verified; no fit performed",
+  "checks": [
+    {
+      "half_size": 3,
+      "total_qubits": 6,
+      "norm_error": 0.0,
+      "direct_state_overlap_error": 2.7755575615628914e-17,
+      "derivative_direction_error": 2.554001454768695e-11
+    },
+    {
+      "half_size": 5,
+      "total_qubits": 10,
+      "norm_error": 0.0,
+      "direct_state_overlap_error": 4.336808689942018e-18,
+      "derivative_direction_error": 9.705403147819425e-12
+    },
+    {
+      "half_size": 7,
+      "total_qubits": 14,
+      "norm_error": 2.220446049250313e-16,
+      "direct_state_overlap_error": 8.673617379884035e-19,
+      "derivative_direction_error": 1.5048448598342645e-12
+    }
+  ],
+  "target": "Balanced D(2m,m), odd half size m; folded root with complementary branch partners.",
+  "advantage": "Each core is simulated on m qubits with m+1 input columns. The overlap equals the full2m-qubit target overlap, including leakage; no inverse-mean or fidelity proxy is used.",
+  "freedom": "The cores need not commute with globalX or map each label to an individual Dicke state. The joint objective retains correlated phases and rotations within degenerate Schmidt pairs.",
+  "acceptance": "Any fit must still pass an independent full-state native/device check after composing the routed root and both cores. This helper alone provides no preparation circuit or score.",
+  "next_action": "Construct an exact folded-input warm start from existing full-count decoders and inverse folds, then compare a bounded joint pruning pilot to strict independent-column fitting. Do not restart the failed symmetric ansatz."
+}

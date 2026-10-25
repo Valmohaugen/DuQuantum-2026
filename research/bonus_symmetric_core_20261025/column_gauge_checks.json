@@ -1,0 +1,24 @@
+{
+  "status": "generic real-isometry sign witness and gradient passed; no Dicke improvement claim",
+  "original_common_overlap": -9.71445146547012e-17,
+  "phase_free_loss": 0.0,
+  "overlaps": [
+    0.9999999999999999,
+    -1.0000000000000002,
+    -1.0,
+    0.9999999999999999
+  ],
+  "corrected_common_phase_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "gradient_error": 9.40190980625033e-11,
+  "correction_CZ": 0,
+  "correction_layers": 1,
+  "witness_scope": "Targets are sign-modified outputs of a known random real circuit, not Dicke states. This proves the gauge mechanism, not better synthesis performance.",
+  "relevance": "The frozen peer backend optimizes square of mean overlap, imposing common sign. Mean squared individual overlaps instead allows independent signs; unary-input Z corrections restore the required coherent common phase without extra CZ.",
+  "limitations": "Real Ry-only circuits have only sign freedom. Complex circuits permit arbitrary phases using the same difference formula. Final native all-column error remains mandatory. No pruning or fit was run.",
+  "peer_sha256": "c9b21fe445217bed039f6285b9decea8faa9419951182f6b8af3c123dab1b5a6"
+}

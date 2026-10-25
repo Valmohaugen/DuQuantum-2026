@@ -1,0 +1,29 @@
+{
+  "status": "root independent cross-check passed; folded input only, not Dicke",
+  "target_source": "research/bonus_unary_interface_20261025/folded_encoder_plan.json",
+  "target_source_sha256": "f663749e17068c8eee87f964c4636bbea93fffa7f807069d3e8bb2ff91fbec3d",
+  "rows": [
+    {
+      "path": "research/bonus_unary_interface_20261025/folded_root_14_native.json",
+      "sha256": "15da41c588563b72a001ba3577294424cc4ade34261be1b6069df00d138a41a3",
+      "CZ": 68,
+      "moments": 96,
+      "target_l2_error": 6.742029067949564e-16
+    },
+    {
+      "path": "research/bonus_affine_encoder_20261025/candidate_00_native.json",
+      "sha256": "a4d91e3fe7a8349d4005398e44b52eee82ff44451e8f6c8fd970bb02e8a9e709",
+      "CZ": 37,
+      "moments": 31,
+      "target_l2_error": 6.867073293250574e-16
+    },
+    {
+      "path": "research/bonus_affine_encoder_20261025/candidate_01_native.json",
+      "sha256": "6495316df8794986a64fdabd1e562f379a000d1174b47e59653b56057cb4eedc",
+      "CZ": 42,
+      "moments": 26,
+      "target_l2_error": 7.454503017097083e-16
+    }
+  ],
+  "core_scope": "Two paired core circuits remain necessary. No portfolio change or new bonus score."
+}

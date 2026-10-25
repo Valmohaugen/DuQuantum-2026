@@ -1,0 +1,168 @@
+{
+  "status": "Two verified affine-subspace folded-root components; no full Dicke decoder or score gain",
+  "search_budget_seconds": 30,
+  "search_seconds": 0.23692232090979815,
+  "completed_candidates": 745,
+  "coverage": [
+    {
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "complete",
+      "completed_candidates": 151
+    },
+    {
+      "order": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "status": "complete",
+      "completed_candidates": 107
+    },
+    {
+      "order": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "status": "complete",
+      "completed_candidates": 142
+    },
+    {
+      "order": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "status": "complete",
+      "completed_candidates": 134
+    },
+    {
+      "order": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "status": "complete",
+      "completed_candidates": 109
+    },
+    {
+      "order": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "status": "complete",
+      "completed_candidates": 102
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": "candidate_00",
+      "native_file": "research/bonus_affine_encoder_20261025/candidate_00_native.json",
+      "verification_file": "research/bonus_affine_encoder_20261025/candidate_00_verified.json",
+      "CZ": 37,
+      "moments": 31,
+      "encoder_CZ": 33,
+      "seed_CZ": 4,
+      "seed_order": [
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "branch_pivot": [
+        0,
+        8
+      ],
+      "column_order": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "native_L2_error": 6.867073293250574e-16,
+      "off_target_probability": 3.081487911019578e-33,
+      "all16_boolean_seeds": true,
+      "device_and_native_rules_passed": true
+    },
+    {
+      "candidate": "candidate_01",
+      "native_file": "research/bonus_affine_encoder_20261025/candidate_01_native.json",
+      "verification_file": "research/bonus_affine_encoder_20261025/candidate_01_verified.json",
+      "CZ": 42,
+      "moments": 26,
+      "encoder_CZ": 38,
+      "seed_CZ": 4,
+      "seed_order": [
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "branch_pivot": [
+        6,
+        7
+      ],
+      "column_order": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "native_L2_error": 7.935582001251469e-16,
+      "off_target_probability": 1.533432380647674e-35,
+      "all16_boolean_seeds": true,
+      "device_and_native_rules_passed": true
+    }
+  ],
+  "baseline": {
+    "CZ": 68,
+    "moments": 96,
+    "immutable_original": "research/bonus_unary_interface_20261025/folded_root_14_native.json",
+    "sha256": "15da41c588563b72a001ba3577294424cc4ade34261be1b6069df00d138a41a3"
+  },
+  "physical_qubits": 14,
+  "extra_sites": 0,
+  "measurements": 0,
+  "target_unchanged": true,
+  "method": "Reverse columnB first and the6orders of3t columns. Legal unit-row pivots preserve connected residual graph; sorted-BFS trees are pruned, filled then cleared in postorder. ReverseCNOTs synthesize only four-bit input subspace with ten zeros. New seed routes avoid prior prepared information bits; any branch-pivot intermediary is returned0 before H.",
+  "limitations": [
+    "Only deterministicBFS trees and legal pivot choices were explored; not exhaustive all-tree/Clifford optimization.",
+    "Independent native checks covered the two selected Pareto candidates; the remaining743candidates have exact Boolean checks, not full native simulation.",
+    "Both outputs are the weighted folded-root state, not Dicke states; compatible finite symmetric cores and full composition checks are still required."
+  ],
+  "next_action": "Use42CZ/26moment candidate for a depth-first core composition and37CZ/31moment candidate as lower-CZ alternative; freeze both and compare complete circuits only after independent symmetric-core certification.",
+  "future_phase_gauge": {
+    "status": "Analytical option, not applied to these exports",
+    "assumption": "Both cores commute with globalX, so their summed count phase gamma_s is the same on the two branch partners for eachs0..3.",
+    "correction": "After unary seed preparation but before branchH/encoder, apply Rz(theta_t0,t1,t2) with theta_tj=-(gamma_(j+1)-gamma_j). The cumulative unary phase cancels all four pair phases up to one global phase. Final full-Dicke common-phase verification remains required."
+  },
+  "queue_update": "Affine subspace encoding now yields two independently verified14qubit folded-root components:37CZ/31moments and42CZ/26moments, errors below8e-16. All6column orders and745legal pivot combinations were screened in0.24s with all16seed Boolean checks; only two selected native circuits were fully simulated. No ancillas, measurements, fit, maintained edits or portfolio gain. The68CZ/96moment baseline remains immutable. Finite symmetric cores are still missing.",
+  "writes": "Only research/bonus_affine_encoder_20261025; no shared board/queue or maintained source edit."
+}

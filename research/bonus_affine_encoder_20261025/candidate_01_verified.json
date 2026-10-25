@@ -1,0 +1,279 @@
+{
+  "status": "Verified native folded-root state, NOT a Dicke state/full decoder",
+  "cirq": "1.8.0.dev20261023221525",
+  "source_sha256": "61559672f006287d93a4e0c5b93c740460a1d15abb4fa50e54f395348e71db3c",
+  "native_sha256": "6495316df8794986a64fdabd1e562f379a000d1174b47e59653b56057cb4eedc",
+  "physical_qubit_order": [
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ]
+  ],
+  "left_logical_order": [
+    [
+      0,
+      8
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      0,
+      7
+    ]
+  ],
+  "right_logical_order": [
+    [
+      3,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "target": "sum_s C(7,s)/sqrt3432 * (|u_s>_L|X u_s>_R + |X u_s>_L|u_s>_R), s=0..3 in the recorded three-arm orders",
+  "independent_target_indexing_check": true,
+  "physical_qubits": 14,
+  "extra_qubits": 0,
+  "measurements": 0,
+  "checks": [
+    {
+      "stage": "logical-CNOT-reference",
+      "moments": 16,
+      "CZ": 2,
+      "max_common_phase_l2_error": 6.856723582110972e-16,
+      "common_phase": [
+        1.0,
+        0.0
+      ],
+      "off_target_support_probability": 1.956022599768287e-34,
+      "seconds": 0.010557045228779316,
+      "native_device_check": false,
+      "branch_amplitude_errors": [
+        {
+          "basis": 127,
+          "error": 4.683753385137379e-16
+        },
+        {
+          "basis": 6553,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "basis": 7057,
+          "error": 5.551115123125783e-17
+        },
+        {
+          "basis": 8080,
+          "error": 1.3877787807814457e-17
+        },
+        {
+          "basis": 8303,
+          "error": 1.3877787807814457e-17
+        },
+        {
+          "basis": 9326,
+          "error": 5.551115123125783e-17
+        },
+        {
+          "basis": 9830,
+          "error": 1.1102230246251565e-16
+        },
+        {
+          "basis": 16256,
+          "error": 4.683753385137379e-16
+        }
+      ]
+    },
+    {
+      "stage": "unfused-native",
+      "moments": 27,
+      "CZ": 42,
+      "max_common_phase_l2_error": 6.942059052366036e-16,
+      "common_phase": [
+        -0.6898309991668965,
+        0.7239704362668418
+      ],
+      "off_target_support_probability": 1.9259299443872363e-34,
+      "seconds": 0.027589859440922737,
+      "native_device_check": true,
+      "branch_amplitude_errors": [
+        {
+          "basis": 127,
+          "error": 4.778557086579062e-16
+        },
+        {
+          "basis": 6553,
+          "error": 5.551115123125783e-17
+        },
+        {
+          "basis": 7057,
+          "error": 8.326672684688674e-17
+        },
+        {
+          "basis": 8080,
+          "error": 5.003707553108401e-17
+        },
+        {
+          "basis": 8303,
+          "error": 5.003707553108401e-17
+        },
+        {
+          "basis": 9326,
+          "error": 8.326672684688674e-17
+        },
+        {
+          "basis": 9830,
+          "error": 5.551115123125783e-17
+        },
+        {
+          "basis": 16256,
+          "error": 4.778557086579062e-16
+        }
+      ]
+    },
+    {
+      "stage": "faithful-local-merge",
+      "moments": 26,
+      "CZ": 42,
+      "max_common_phase_l2_error": 7.935582001251469e-16,
+      "common_phase": [
+        0.05096770995850896,
+        -0.9987003016629091
+      ],
+      "off_target_support_probability": 1.533432380647674e-35,
+      "seconds": 0.022690825164318085,
+      "native_device_check": true,
+      "branch_amplitude_errors": [
+        {
+          "basis": 127,
+          "error": 4.688186477212838e-16
+        },
+        {
+          "basis": 6553,
+          "error": 2.2228841655759984e-16
+        },
+        {
+          "basis": 7057,
+          "error": 1.716587549445839e-16
+        },
+        {
+          "basis": 8080,
+          "error": 1.2723933587929954e-16
+        },
+        {
+          "basis": 8303,
+          "error": 1.2723933587929954e-16
+        },
+        {
+          "basis": 9326,
+          "error": 1.716587549445839e-16
+        },
+        {
+          "basis": 9830,
+          "error": 2.2228841655759984e-16
+        },
+        {
+          "basis": 16256,
+          "error": 4.688186477212838e-16
+        }
+      ]
+    }
+  ],
+  "maximum_local_matrix_error": 1.798766884999431e-16,
+  "total_seconds": 0.10424134507775307,
+  "optimization": "Only faithful local matrix fusion; no eject/drop-negligible/target-gateset passes.",
+  "limitations": [
+    "Selected affine folded root only. Both finite-cost symmetric cores and final Dicke-state verification remain absent.",
+    "No portfolio integration, score improvement, hardware experiment, or maintained-source change claimed."
+  ]
+}

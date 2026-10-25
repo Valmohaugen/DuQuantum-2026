@@ -1,0 +1,160 @@
+{
+  "status": "native supported-subspace transform verified; not a Dicke decoder",
+  "source": "/home/rpeddap/Documents/DuQuantum-2026/research/bonus_clifford_screen_20261025/subspace_results.json",
+  "source_sha256": "cd5e4edfc2c6de1c1d04ff95484acb662c7437eed0e8a7f6feb0d3ce1e6be3b5",
+  "native": "/home/rpeddap/Documents/DuQuantum-2026/research/bonus_band_20261025/folded_unary_7_native.json",
+  "native_sha256": "c164615d95c3fb13bac197094bee5e86d1b2a83dc18d8c5a0c69d4cabde802bf",
+  "cirq": "1.8.0.dev20261023221525",
+  "logical_qubit_order": [
+    [
+      1,
+      7
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      2,
+      7
+    ]
+  ],
+  "checks": {
+    "unfused": {
+      "moments": 25,
+      "CZ": 24,
+      "max_common_phase_l2_error": 6.792500219376273e-16,
+      "common_phase": [
+        7.771561172376098e-16,
+        -1.0
+      ],
+      "columns": [
+        {
+          "count": 0,
+          "input_basis": 0,
+          "output_basis": 0,
+          "common_phase_l2_error": 3.6005438392215953e-16
+        },
+        {
+          "count": 1,
+          "input_basis": 1,
+          "output_basis": 1,
+          "common_phase_l2_error": 2.6793476571179445e-16
+        },
+        {
+          "count": 2,
+          "input_basis": 3,
+          "output_basis": 3,
+          "common_phase_l2_error": 3.3691170371081316e-16
+        },
+        {
+          "count": 3,
+          "input_basis": 7,
+          "output_basis": 7,
+          "common_phase_l2_error": 1.6925781495328414e-16
+        },
+        {
+          "count": 4,
+          "input_basis": 15,
+          "output_basis": 120,
+          "common_phase_l2_error": 1.6925781495328414e-16
+        },
+        {
+          "count": 5,
+          "input_basis": 31,
+          "output_basis": 124,
+          "common_phase_l2_error": 3.3954525662403384e-16
+        },
+        {
+          "count": 6,
+          "input_basis": 63,
+          "output_basis": 126,
+          "common_phase_l2_error": 6.78310153037761e-16
+        },
+        {
+          "count": 7,
+          "input_basis": 127,
+          "output_basis": 127,
+          "common_phase_l2_error": 6.792500219376273e-16
+        }
+      ]
+    },
+    "merged": {
+      "moments": 19,
+      "CZ": 24,
+      "max_common_phase_l2_error": 6.089007060838803e-16,
+      "common_phase": [
+        -1.0,
+        2.2204460492503126e-16
+      ],
+      "columns": [
+        {
+          "count": 0,
+          "input_basis": 0,
+          "output_basis": 0,
+          "common_phase_l2_error": 3.074429753094706e-16
+        },
+        {
+          "count": 1,
+          "input_basis": 1,
+          "output_basis": 1,
+          "common_phase_l2_error": 2.851816315054095e-16
+        },
+        {
+          "count": 2,
+          "input_basis": 3,
+          "output_basis": 3,
+          "common_phase_l2_error": 1.8279150064469639e-16
+        },
+        {
+          "count": 3,
+          "input_basis": 7,
+          "output_basis": 7,
+          "common_phase_l2_error": 4.974178609811839e-16
+        },
+        {
+          "count": 4,
+          "input_basis": 15,
+          "output_basis": 120,
+          "common_phase_l2_error": 6.089007060838803e-16
+        },
+        {
+          "count": 5,
+          "input_basis": 31,
+          "output_basis": 124,
+          "common_phase_l2_error": 5.522059211040672e-16
+        },
+        {
+          "count": 6,
+          "input_basis": 63,
+          "output_basis": 126,
+          "common_phase_l2_error": 2.3706017587266694e-16
+        },
+        {
+          "count": 7,
+          "input_basis": 127,
+          "output_basis": 127,
+          "common_phase_l2_error": 3.074429753094706e-16
+        }
+      ]
+    }
+  },
+  "device": "Willow105.validate_circuit passed",
+  "limitations": "Only the eight unary columns are certified. No Dicke-state output is produced by this module alone. A symmetric coherent core and compatible upstream unary layout remain necessary; neither cost is included. No measurements, fitting, or maintained solver changes."
+}
