@@ -536,3 +536,94 @@ verified an exact logical 10-qubit starting point; none of ten bounded gate
 deletions passed. No routed-circuit or bonus gain is claimed from that pilot.
 [Further literature screening](research/bonus_band_20261025/literature_followup_best10.json)
 and the [task board](research/bonus_portfolio_20261025/tasks.json) track continued work.
+
+
+## Bonus checkpoint — 2026-10-25 06:34 EDT
+
+Best independently verified corrected bonus: **49.5188839849**,
+up **0.4073647034** from the previous checkpoint. All 56 cases pass
+state, native-gate, Willow connectivity and constructor-time checks. Maximum
+build time is **0.002310 seconds**, maximum state L2 error
+**2.52e-07**, and maximum depth **119 moments**.
+
+| Case | Previous moments | New moments | CZ gates |
+| --- | ---: | ---: | ---: |
+| D(4,2) |9|7|5|
+| D(10,5) |35|32|40|
+| D(15,3) |69|67|73|
+
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T103409Z/submission.py),
+[validation](research/bonus_band_20261025/milestones/20261025T103409Z/validation.json), and
+[immutable summary](research/bonus_band_20261025/milestones/20261025T103409Z/summary.json).
+SHA-256: `d917bf8e716d3636e206332cc5eae05bac54a0afe4f9e5b9fba787dc00e9b714`.
+
+The [D(4,2) construction](research/bonus_d4_paper_20261025/handoff_summary.json)
+uses an exact two-qubit Schmidt preparation and a square-compatible affine
+transformation. Forty native variants pass; the selected circuit has state
+error below 4e-16 in the standalone check. The [published six-CNOT template](https://si2.epfl.ch/demichel/publications/archive/2024/DATE_QC.pdf)
+motivated this construction; no global optimality is claimed.
+
+The [eight-site decoder](research/bonus_peer8_precision_20261025/handoff_summary.json)
+is certified at 63 moments / 38 CZ, with four common-phase column errors
+below 1.7e-15. Its integration completed 65 of 72 groups within the bounded
+search; seven unfinished groups are recorded. The D(10,5) gain comes from
+the frozen peer circuit in commit484dc11 and passes the whole-state tolerance
+of 1e-5; it is not claimed as a precision-certified reusable decoder.
+
+The existing native and W-selector exports retain their main behavior. A
+[separate D(4,2) prototype](research/bonus_d4_export_20261025/d4_hardware_submission.py)
+preserves the newer maintained baseline outside its guarded D(4,2) case and
+includes this bonus cache. It passed 38 saved selections, 38 calibration-map
+roundtrips, six fallback calls, and all 56 bonus equivalence checks.
+
+Six pilot calibrations and 32 disjoint confirmation calibrations were evaluated
+under four assumed noise models. More precise paired finite-shot estimates
+used the same frozen distributions and preserved their marginals:
+
+| Confirmation model | Aggregate expected-score change | Negative seed estimates |
+| --- | ---: | ---: |
+| Nominal |+0.289%|8/32|
+| Coherent |+0.039%|10/32|
+| Uniform ZZ |+1.666%|0/32|
+| Signed ZZ |+0.707%|6/32|
+
+The coherent mean remains smaller than its calibration uncertainty. Some
+negative seed estimates are also within Monte Carlo uncertainty; both are
+reported in the [coupled-score summary](research/bonus_d4_coupled_score_20261025/summary.json).
+These are modeled expectations, **not measured hardware improvements**. The
+prototype remains separate; no maintained main solver was changed.
+[Original confirmation](research/bonus_d4_confirmation_20261025/summary.json)
+and [task ownership](research/bonus_portfolio_20261025/tasks.json) remain available.
+
+
+## Bonus checkpoint — 2026-10-25 06:53 EDT
+
+Best independently verified corrected bonus: **51.0367831003**.
+This is **+1.5178991154** over the preceding verified
+checkpoint and **+1.9252638187** over the last pushed
+49.1115 checkpoint. All 56 cases pass complex128 state, native-gate, Willow
+connectivity and construction checks. Maximum build time is **0.002395s**,
+maximum state L2 error **7.34e-07**, maximum depth **119 moments**.
+
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T105326Z/submission.py),
+[validation](research/bonus_band_20261025/milestones/20261025T105326Z/validation.json), and
+[immutable summary](research/bonus_band_20261025/milestones/20261025T105326Z/summary.json).
+SHA-256: `22c5806b5c5b95cbf37e4aed60a2f8eeb525beb051b3e2afd7adfaa584eea399`.
+
+The [issue14 handoff](research/bonus_issue14_refresh_20261025/handoff_summary.json)
+contributes 13 strict depth gains from peer commit0a848a5. All 14 supplied
+circuits were checked independently; the exact seven-moment D(4,2) tie is
+retained. No further scheduling or synthesis gain is attributed to this pass.
+D(10,5) now uses31moments/48CZ instead of32moments/40CZ: this is a bonus-depth
+tradeoff, with no primary-score claim. Existing main constructor behavior
+remains unchanged.
+
+The [latest separate D(4,2) prototype](research/bonus_band_20261025/d4_hardware_submission.py)
+also carries the51.0368bonus cache. Its guarded main path matches the previously
+validated prototype; [cache-refresh checks](research/bonus_band_20261025/d4_bonus_refresh_verified.json)
+prove all56bonus circuits equal this independently verified export. Modeled
+hardware findings and uncertainties remain those reported above.
+
+PORT039 is complete. Remaining integration coverage is in PORT035; active
+peer high-depth searches retain their owners. Research continues beyond this
+checkpoint.

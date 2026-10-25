@@ -1,0 +1,242 @@
+{
+  "ticket": "PORT-037",
+  "files": [
+    {
+      "source": "research/bonus_d4_hardware_20261025/baseline.py",
+      "frozen": "baseline.py",
+      "sha256": "dfb6eab1ec26c4b33116ad00b2329d2d8a0d2dc6dfd9c6d78d7d008ba5863787"
+    },
+    {
+      "source": "research/bonus_band_20261025/native_submission.py",
+      "frozen": "verified_bonus_source.py",
+      "sha256": "d917bf8e716d3636e206332cc5eae05bac54a0afe4f9e5b9fba787dc00e9b714"
+    },
+    {
+      "source": "research/bonus_band_20261025/native_submission_verified.json",
+      "frozen": "verified_bonus_report.json",
+      "sha256": "7be34d54fa21e309a35e3677524da5e77d5c129e1303d80c89def6f7c0c2d3c7"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/template_native.json",
+      "frozen": "template_native.json",
+      "sha256": "f42de9bd086962e9f75d5a915c6e2ef67223b5d27236cf8e0d41188889b96c5a"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/compare.py",
+      "frozen": "pilot_implementation.py",
+      "sha256": "434e9608784a51f83113f74b63e6c9c1617be10902dba8b83e97886e673f3cee"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/paired_circuits.json",
+      "frozen": "pilot_circuits.json",
+      "sha256": "efd489568643e95bfd39118db2ca8a89b762d78e11c642f31f9c29d7e9a903fa"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/paired_circuits.json",
+      "frozen": "confirmation_circuits.json",
+      "sha256": "362674de1d1cd4de0b980dcb43075f53859f1cbf7ef575218331374fb45bf7c6"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/results.json",
+      "frozen": "pilot_results.json",
+      "sha256": "ba4a2c973a1ff955ab128e888acf79a876dce46191d221ed4c668d4186e50655"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/results.json",
+      "frozen": "confirmation_results.json",
+      "sha256": "d11046d6a9baa6cd5148e1954094bf5210dc2a7b290bb3c0eeb1db853789bde4"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/calibration_41.json",
+      "frozen": "calibration_41.json",
+      "sha256": "e814060473217716df85b89857738925a8222675990d207a8dfc94291f9e61f8"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/calibration_42.json",
+      "frozen": "calibration_42.json",
+      "sha256": "662e25f899dee617c3afbaec0180299768299dfb6261e6d9776ca85b52ad3d14"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/calibration_43.json",
+      "frozen": "calibration_43.json",
+      "sha256": "d9ea90c499c0aea9f21ea29e876cb5bb3e935141634fe6f00a7dbb96d3326b27"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/calibration_44.json",
+      "frozen": "calibration_44.json",
+      "sha256": "d9d93b753ad383bbbd2a8971b26da34f47b16ad5517c489c158930818bf971d2"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/calibration_45.json",
+      "frozen": "calibration_45.json",
+      "sha256": "717bc5972c15d0ccf5733e5d176dee6ff440f3963db314e9981590752662a633"
+    },
+    {
+      "source": "research/bonus_d4_hardware_20261025/calibration_46.json",
+      "frozen": "calibration_46.json",
+      "sha256": "bb1c9a5b591cd564a50bc61c4e272675e1af3999f55b65ca1b8730ab8c55dcf1"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_47.json",
+      "frozen": "calibration_47.json",
+      "sha256": "4ca7dd8972e78300cce3814720cd2896c348fae4ee37b5a6f800f10b66372aaf"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_48.json",
+      "frozen": "calibration_48.json",
+      "sha256": "cbd73b6a2026dac1a25740a8c2a009f37480be38e498deca56ea7ac8e53e8c81"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_49.json",
+      "frozen": "calibration_49.json",
+      "sha256": "a380ff40a4540eeee0e783da46e9911577fcdfd2241cb305c78052c5e6397714"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_50.json",
+      "frozen": "calibration_50.json",
+      "sha256": "b1f501939d04dd7c07f56b2646de5875ddaaaa5fcdcd7cbb4ab80141760fcd70"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_51.json",
+      "frozen": "calibration_51.json",
+      "sha256": "70a305addd4de6a984ef8e34ca4425b5830f8734a6cc3cacefdee4c829a50972"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_52.json",
+      "frozen": "calibration_52.json",
+      "sha256": "3f6347e27193890381b56997237d8d5d3820bb8a9ceef0647c25c57f8c92a2ed"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_53.json",
+      "frozen": "calibration_53.json",
+      "sha256": "adb4e86debc031b60389a89be69236827bc92bb3f4df5f92509f37abaf2969fe"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_54.json",
+      "frozen": "calibration_54.json",
+      "sha256": "5d980e786c5f3bb5957fac75e5b1dd16651346a6ed26e657b61b0cc1dba35a2b"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_55.json",
+      "frozen": "calibration_55.json",
+      "sha256": "6ef8b78d905ca810f8331c6998973fee68588dfcb675223a6794ff94d11e0f62"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_56.json",
+      "frozen": "calibration_56.json",
+      "sha256": "b653f03fd88e8cd5f7fb565776a86f46b6c38b8bae9fdbe605fa00eda6872dea"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_57.json",
+      "frozen": "calibration_57.json",
+      "sha256": "bc42c83711b1b966fffa0eea34979a833f1e44270959da9e2bcde192c41d9cc4"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_58.json",
+      "frozen": "calibration_58.json",
+      "sha256": "3782d9d15e94c546bf8824f20798dcdf3cd92bc9d841c87ea57e795d941bac9f"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_59.json",
+      "frozen": "calibration_59.json",
+      "sha256": "fad654320f6f0dfbc722b3e2cf8293175bc89885968224d95749ace491b21cdf"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_60.json",
+      "frozen": "calibration_60.json",
+      "sha256": "cbfc024c93e85acc08e11df5440c8e1ffb7446ae9d57fdc5028e6a1041b42d10"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_61.json",
+      "frozen": "calibration_61.json",
+      "sha256": "52d7490f19ec4c8a5f76f79c6fcd377fe00000c79f98e81adf5b0ca5b50a9cd8"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_62.json",
+      "frozen": "calibration_62.json",
+      "sha256": "d1693f81ddb04c7d37433e22cb5815895a822aa332f1fe63b1de120db6fade6b"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_63.json",
+      "frozen": "calibration_63.json",
+      "sha256": "284d47a341df5e03b773454f2f40a87c8901b450a7d96135667496d69e56441f"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_64.json",
+      "frozen": "calibration_64.json",
+      "sha256": "c0b192ed7b556883a6d87d7fc16ff30a62b855bf455179e833502d642455f95c"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_65.json",
+      "frozen": "calibration_65.json",
+      "sha256": "7c7849ada3386f3a9730d608c7c987f51c83ecd143e6762d03af6f688caa4ba3"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_66.json",
+      "frozen": "calibration_66.json",
+      "sha256": "7e65cdcf4fcd2ab7e014833b47e60dc77045ac5c3ebd784d186731897b8f1f72"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_67.json",
+      "frozen": "calibration_67.json",
+      "sha256": "052e27147af89ba11432bf282f262b34b66ea62c562e326fdec7fd740cfa23a9"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_68.json",
+      "frozen": "calibration_68.json",
+      "sha256": "157605a69221912c2c1369c0be56a2f00e7960f59a209ab883c0ef1c866678a5"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_69.json",
+      "frozen": "calibration_69.json",
+      "sha256": "d9f215fd352fa2f9f4418ee3e70c4ada61a1801e0be898d3ae52acf71921b63b"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_70.json",
+      "frozen": "calibration_70.json",
+      "sha256": "a2b78121868249dbb6632aed6e6099bb8b856d0afcf16263c7a569505de0e0de"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_71.json",
+      "frozen": "calibration_71.json",
+      "sha256": "e96216edb5e82fe903fa68159281f789c8d74eba34528cd5c91b256bf41964d7"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_72.json",
+      "frozen": "calibration_72.json",
+      "sha256": "0763d70492355ea45a9ec83f4b527e161287df0c2dcbd0d5d217b1800e92d8d8"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_73.json",
+      "frozen": "calibration_73.json",
+      "sha256": "783e3ee18e7582a6897a5f54cd43050406c6a5447bf78a763c9040e8efacfc83"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_74.json",
+      "frozen": "calibration_74.json",
+      "sha256": "464c88186b2eb38affc36e2db9ac30bdd0f20b78c1bd862d8273cde880eccfe9"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_75.json",
+      "frozen": "calibration_75.json",
+      "sha256": "79783f73b72efc4eb51420b61ded6198483af3a15d676abf766a8d72fb227577"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_76.json",
+      "frozen": "calibration_76.json",
+      "sha256": "1082fd863093c625b544efeedc99ff45b952c5b26033480c6d96f7b0a3cb56e7"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_77.json",
+      "frozen": "calibration_77.json",
+      "sha256": "496e00fb724d820182b66547af4e05a6ceb5565ef719397bb8f5ba91a3526ec7"
+    },
+    {
+      "source": "research/bonus_d4_confirmation_20261025/calibration_78.json",
+      "frozen": "calibration_78.json",
+      "sha256": "6c0c35047f0f77cbad7491d9d41e9302a743f1c3ee2b05a1b4a1b6c02a9758c5"
+    }
+  ],
+  "baseline_commit": "19ace9cf9364bd169201245350b1073a00c3155a",
+  "bonus_score": 49.518883984909195
+}

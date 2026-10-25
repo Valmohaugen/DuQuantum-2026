@@ -1,0 +1,1052 @@
+{
+  "status": "bounded affine-equivalent square search complete",
+  "baseline_moments": 9,
+  "baseline_CZ": 7,
+  "best": {
+    "plus": 2,
+    "sequence": [
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "final_flip": 5,
+    "moments": 9,
+    "CZ": 6,
+    "state_error": 3.4541476525300604e-16
+  },
+  "coverage": [
+    {
+      "minimum_affine_CNOT": 4,
+      "visited_supports": 272,
+      "shortest_sequences": 20,
+      "plus": 2,
+      "completed": 20,
+      "complete": true
+    },
+    {
+      "minimum_affine_CNOT": 4,
+      "visited_supports": 272,
+      "shortest_sequences": 20,
+      "plus": 3,
+      "completed": 20,
+      "complete": true
+    }
+  ],
+  "rows": [
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.4541476525300604e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.5381555418772976e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.4541476525300604e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.5381555418772976e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 5.114110738415689e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.5039696624640786e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 5.495323605393213e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 5.243343394831945e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 5.114110738415689e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.5039696624640786e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 6.338367190366754e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 5.359593745848245e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.3766115072321297e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.7534221109798764e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.3766115072321297e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.7534221109798764e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.3766115072321297e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.7534221109798764e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.3766115072321297e-16
+    },
+    {
+      "plus": 2,
+      "sequence": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.7534221109798764e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.602883265548576e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.920321537349984e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.602883265548576e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.920321537349984e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.602883265548576e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.920321537349984e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.602883265548576e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.920321537349984e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.9594279570806816e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.860919290733388e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.920321537349984e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.602883265548576e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.920321537349984e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.860919290733388e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.920321537349984e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.602883265548576e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 5.125396027766235e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.6348149084233214e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 5,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 5.125396027766235e-16
+    },
+    {
+      "plus": 3,
+      "sequence": [
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "final_flip": 10,
+      "moments": 9,
+      "CZ": 6,
+      "state_error": 3.6348149084233214e-16
+    }
+  ],
+  "seconds": 0.43508876115083694,
+  "scope": "Shortest CNOT support mappings on one square, both distinct initial placements; final X flips are free only in graph search and counted by native compilation. No lower bound on arbitrary native circuits, other footprints, non-shortest mappings, or alternative state-preparation prefixes."
+}

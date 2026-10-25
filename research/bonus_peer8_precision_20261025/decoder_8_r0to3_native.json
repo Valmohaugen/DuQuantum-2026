@@ -1,0 +1,2424 @@
+{
+  "cirq_type": "Circuit",
+  "moments": [
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 0.844625651543678,
+            "z_exponent": 2.220446049250313e-16
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.22763710853703523,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.6957645762107766,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 0.9999999999999999,
+            "z_exponent": 2.220446049250313e-16
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.669252569984436,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.20357091087519832,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.49999999999999983,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.33333333333333337,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 4.651652026975998e-17,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.33333333333333337,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5875942917731376,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.9124057082268624,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 3.611633109405846e-18,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.7026210198544456,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 0.15548051156662385,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.20262101985444556,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.4113891993638486,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.9853065754777359,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.3218813356286967,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 2.170962697422917e-17,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 7,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.9999999999999999,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5428772643186568,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5517093537108668,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 0.10650618686748034,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5353554671306098,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.38293806982570255,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5230885885309517,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.40183440538242376,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 7.724299024706026e-10,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 1.0,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5546453345070126,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.3078285360241453,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.11772660160152298,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.6261835196270423,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.2601772009073401,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 1.0,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.6780734430673512,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 0.12316374191188836,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.9999999981539679,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 0.9999999968893815,
+            "z_exponent": 2.220446049250313e-16
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.6957202497151207,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 1.0,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 3.1106185679610897e-09,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5000000007724299,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 6,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.4970513850683113,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.6418299469718938,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5000000018460322,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 5,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.7251289704971694,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.8136157895413394,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.4367196783730338,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.30408672398469644,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 4,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 0.17063634249095636,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0,
+            "x_exponent": 0.0,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.6587508804407687,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.6666666666666669,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.6666666666666667,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.36257994268197036,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.4422317453870271,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 1.0,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 3,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5000000000000002,
+            "x_exponent": 1.4283073911298647e-17,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.8182564856713277,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5081791140746857,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.30408672398469644,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.011572109381729442,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.75,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": -0.5,
+            "x_exponent": 0.5,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.75,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 2,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "CZPowGate",
+            "exponent": 1.0,
+            "global_shift": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            },
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cirq_type": "Moment",
+      "operations": [
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.5,
+            "x_exponent": 0.5000000000000001,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 1,
+              "col": 7
+            }
+          ]
+        },
+        {
+          "cirq_type": "GateOperation",
+          "gate": {
+            "cirq_type": "PhasedXZGate",
+            "axis_phase_exponent": 0.0,
+            "x_exponent": 1.0,
+            "z_exponent": 0.0
+          },
+          "qubits": [
+            {
+              "cirq_type": "GridQubit",
+              "row": 0,
+              "col": 7
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2388,7 +2388,7 @@
   {
     "id": "PORT-032",
     "title": "Triage remaining fresh6,4 and8,3 coherent halves",
-    "status": "assigned; owner accepted, cost and supported-column comparison pending",
+    "status": "cost triage and8-site precision repair complete; bounded integration improvedD15k3, seven groups unfinished",
     "assignee": "coordination-research",
     "scope": "Separate directory. Compare identical supported-column ranges with faithful compilation against certified alternatives; polish the supplied fixed topology only if a strict native-depth opportunity survives. No broad synthesis or maintained edits; preserve issue11/13 ownership.",
     "inputs": [
@@ -2401,12 +2401,14 @@
       "Require one common phase and max error below1e-10 across every claimed input.",
       "Report strict cost comparison before any precision repair or integration.",
       "If integration is justified, preserve all retained depths and validate complete states/device constraints."
-    ]
+    ],
+    "results": "research/bonus_peer8_precision_20261025/handoff_summary.json",
+    "triage": "research/bonus_peer_remaining_20261025/handoff_summary.json"
   },
   {
     "id": "PORT-033",
     "title": "Test the published six-CNOT D4k2 template on native device layouts",
-    "status": "assigned; primary-source screen complete, circuit test pending",
+    "status": "complete; exact nativeD4k2 improves9\u21927moments at5CZ",
     "assignee": "bonus-depth",
     "scope": "Separate small research directory; transcribe Fig6 of the DATE2024 exact CNOT synthesis paper and compare against retained9moments/7CZ. No package installation or broad search.",
     "inputs": [
@@ -2416,6 +2418,102 @@
       "Verify exact target state before native translation.",
       "Compare actual scheduled native depth across small Willow embeddings; count routing and all single-qubit layers.",
       "Retain current circuit unless native depth strictly improves; store a CZ-only alternative separately."
+    ],
+    "results": "research/bonus_d4_paper_20261025/handoff_summary.json",
+    "checkpoint": "research/bonus_band_20261025/milestones/20261025T103409Z/summary.json",
+    "next_action": "PORT034 compares calibrated primary behavior before any promotion."
+  },
+  {
+    "id": "PORT-034",
+    "title": "Evaluate exact seven-moment D4k2 preparation on the calibrated primary path",
+    "status": "complete six-seed pilot; positive model means with regressions, no maintained promotion",
+    "assignee": "coordination-research",
+    "scope": "Separate bonus_d4_hardware_20261025; freeze current19ace9c maintained baseline and evaluator dependencies. No maintained source edits or promotion.",
+    "inputs": [
+      "research/bonus_d4_paper_20261025/schmidt_best_native.json"
+    ],
+    "acceptance": [
+      "Validate general-k sufficient-statistic scoring against the actual judge; do not reuse W-only formulas.",
+      "Seeds41\u201346; four matched assumed models; report raw candidate and baseline-fallback selector separately.",
+      "Require state/native/device/build checks and compute finite-shot E[1/penalty] with uncertainty, not only inverse mean penalty.",
+      "Disclose every regression and model limitation; no measured hardware claims."
+    ],
+    "results": "research/bonus_d4_hardware_20261025/summary.json"
+  },
+  {
+    "id": "PORT-035",
+    "title": "Complete seven unfinished changed-eight-site integration groups",
+    "status": "available",
+    "assignee": null,
+    "scope": "Reuse certified frozen8,3 decoder and latest standalonepool; no synthesis. Prioritize only groups containing that newdecoder.",
+    "inputs": [
+      "research/bonus_peer8_precision_20261025/harvest_results.json",
+      "research/bonus_band_20261025/best11_circuits.json"
+    ],
+    "remaining_groups": [
+      "N11,k3,left8",
+      "N11,k2,left2",
+      "N11,k2,left3",
+      "N11,k2,left8",
+      "N11,k2,left9",
+      "N10,k2,left2",
+      "N10,k2,left8"
+    ],
+    "acceptance": [
+      "Record complete or truncated coverage explicitly.",
+      "Preserve all retained native depths and require full-state/device checks for every new candidate."
     ]
+  },
+  {
+    "id": "PORT-036",
+    "title": "Confirm fixed D4k2 selector on disjoint calibration seeds",
+    "status": "complete32seed confirmation; paired Monte Carlo precision follow-up assigned",
+    "assignee": "coordination-research",
+    "scope": "Frozen selector, seeds47\u201378, samefourmodels; no retuning or maintained promotion.",
+    "results": "research/bonus_d4_confirmation_20261025/summary.json"
+  },
+  {
+    "id": "PORT-037",
+    "title": "Export and validate separate guarded D4k2 primary prototype",
+    "status": "validated; separate prototype, not maintained promotion",
+    "assignee": "coordination-research",
+    "scope": "Preserve19ace9c baseline; guard onlydefaultD4k2; include verified49.5188839849bonuscache. No composition with Wselector.",
+    "results": "research/bonus_d4_export_20261025/validation.json",
+    "latest_bonus_refresh": "research/bonus_band_20261025/d4_bonus_refresh_verified.json"
+  },
+  {
+    "id": "PORT-038",
+    "title": "Reduce finite-shot score estimation noise with exact joint-shot coupling",
+    "status": "complete152pairs; marginal checks pass and Monte Carlo uncertainty reduced",
+    "assignee": "bonus-depth",
+    "scope": "Use frozenpilot/confirmation pz/px. A joint multinomial with prescribed marginals changes only estimator covariance;65536repetitions,75secondbudget.",
+    "inputs": [
+      "research/bonus_d4_coupled_score_20261025/prepared_manifest.json"
+    ],
+    "acceptance": [
+      "Verify joint probability marginals and identical/disjoint boundary cases.",
+      "Report Monte Carlo SE of the cohort mean separately from calibration-seed SE.",
+      "Preserve previous raw reports; disclose coverage and unfinishedpairs ifbudgetreached."
+    ],
+    "results": "research/bonus_d4_coupled_score_20261025/summary.json"
+  },
+  {
+    "id": "PORT-039",
+    "title": "Independently validate and integrate issue14 shallow native circuits",
+    "status": "complete14candidate checks and13depth gains; standalone51.03678310025989verified",
+    "assignee": "coordination-research",
+    "scope": "No-fit reuse of14 explicit nativecircuits from0a848a5, independentcomplex128whole-state1e-5checks andnative/devicevalidation; preserveD4precisiontie andallretaineddepths. Bounded45secondschedulersearchplusall56checks.",
+    "inputs": [
+      "research/primary_depth_20261025/summary.json",
+      "research/bonus_band_20261025/best11_circuits.json"
+    ],
+    "acceptance": [
+      "Do not rely on default-simulator overlap values, some exceed1 fromroundoff.",
+      "Freeze sourceJSONandcommit hashes; no freshpeer synthesis ormaintainededits.",
+      "Retain allvalid strictdepthgains, recordsourceversusscheduleddepthanderror.",
+      "Returnnewexplicitpool andall56verifiedscore beforeexport."
+    ],
+    "results": "research/bonus_issue14_refresh_20261025/handoff_summary.json",
+    "checkpoint": "research/bonus_band_20261025/milestones/20261025T105326Z/summary.json"
   }
 ]

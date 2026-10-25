@@ -1,7 +1,7 @@
 {
   "status": "passed; separate standalone candidate",
-  "candidate_sha256": "cfb0a278d892ff567f1bd60347819299686a9e835895284b7b23101ff09f6c6a",
-  "preserved_sha256": "5b91bb1bf7ad046aed8ff63399e233e36d12aee45de5e683013ca3b6884ef576",
+  "candidate_sha256": "e68005e98b6a2bd561a2b9e7aa3a548dbad1f9f2accdd998f94a232fb4d8e6d0",
+  "preserved_sha256": "22c5806b5c5b95cbf37e4aed60a2f8eeb525beb051b3e2afd7adfaa584eea399",
   "current_main_sha256": "8f752750f7246eb7d92a56015958e63debf229f4f3909cb69585ccd8252db7b8",
   "exact_reference_matches": 24,
   "rows": [
@@ -259,7 +259,7 @@
     }
   ],
   "bonus_exact_matches": 56,
-  "bonus_score": 49.111519281511065,
+  "bonus_score": 51.03678310025989,
   "max_build_seconds": 1.4395052874460816,
   "max_state_l2_error": 1.1635168350594537e-15,
   "scope": "N8/N10 k1 default-DD unpacked calls use evaluated robust selector; other main paths preserve the current maintained-solver snapshot. Noise-model gains are not hardware guarantees.",

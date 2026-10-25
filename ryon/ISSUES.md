@@ -605,3 +605,74 @@ depth against9moments/7CZ. Primary-source notes:
 `research/bonus_band_20261025/literature_followup_best10.json`.
 Existing issue11/13 owners and long synthesis jobs remain untouched. Research
 continues after this checkpoint; neither pending task has a claimed gain.
+
+
+### PORT032–038 handoff — verified bonus49.5188839849 and D4 prototype
+
+Independent standalone checkpoint:49.518883984909195, all56cases pass,
+maxbuild0.002310s, maxstateerror2.5244e-7. D4k2 improves9→7moments/5CZ;
+D10k5 improves35→32/40CZ from frozen484dc11; D15k3 improves69→67/73CZ
+using certified8-site half. Immutable candidate/validation:
+`research/bonus_band_20261025/milestones/20261025T103409Z/`.
+SHA256:`d917bf8e716d3636e206332cc5eae05bac54a0afe4f9e5b9fba787dc00e9b714`.
+
+PORT032 cost screen deferred6,4 (63mom versus certified58). The8,3 fixed
+38CZ topology was repaired to common-phase error1.61e-15 and63moments;
+integration completed65/72groups. Seven unfinished groups are available as
+PORT035, with exact group list in tasks.json. No further synthesis required.
+PORT033 D4 construction uses one-CNOT Schmidt pair preparation plus an
+exact4CNOT affine suffix on a square;40native variants checked. It is a
+whole-state preparation, not an all-count decoder or optimality proof.
+
+PORT034/036 evaluated a fixed D4 selector on6pilot+32confirmation synthetic
+calibrations. PORT038 resampled all152frozen model/calibration pairs using
+exact joint-shot coupling (65536repetitions), checking marginal probabilities
+to3.34e-16. Confirmation aggregate deltas: nominal+0.289%,coherent+0.039%,
+uniformZZ+1.666%,signedZZ+0.707%. Coherent mean unresolved; negative seed
+estimates and calibration/MC uncertainties are fully reported. No measured
+hardware gain or maintained promotion.
+
+PORT037 provides a separate standalone guarded D4 prototype with the latest
+bonus cache: `research/bonus_d4_export_20261025/d4_hardware_submission.py`.
+It preserves19ace9c baseline outside defaultDD/unpacked/use_blocks D4k2;
+38selected-circuit matches,38calibration-map roundtrips,6fallback matches
+and56bonus matches pass. No Wselector composition. Native/Wexperimental
+exports preserve their previous main behavior and only refresh bonus caches.
+
+Source/results handoffs: `bonus_peer_remaining_20261025`,
+`bonus_peer8_precision_20261025`, `bonus_line10_refresh_20261025`,
+`bonus_d4_paper_20261025`, `bonus_d4_hardware_20261025`,
+`bonus_d4_confirmation_20261025`, `bonus_d4_export_20261025`,
+and `bonus_d4_coupled_score_20261025`, all under research/. The last directory
+refines sampling uncertainty; earlier pilot/confirmation reports remain frozen.
+Existing issue11/13 owners and running jobs remain untouched. Researchcontinues.
+
+
+### Issue14 / PORT039 pickup — independent native integration
+
+Coordination-research is validating the14explicit nativecircuits from0a848a5
+against the newer49.5188839849portfolio, with complex128 phase-aligned state
+error<1e-5 andnative/devicechecks. D4k2nowties7moments andits existingexact
+construction will be kept. No new synthesis or edits to peer circuits; new
+work is isolated in `research/bonus_issue14_refresh_20261025`. The quoted
++1.906 used an older49.1115baseline; no newscore is accepted beforefullchecks.
+
+
+### Issue14 / PORT039 completed batch —51.0367831003
+
+All14peer explicit native circuits from0a848a5 pass independentcomplex128
+state/native/device/qubit checks. Thirteen improve the49.5189pool; exactD4tie
+is retained. Fixedcommuting scheduler added no further gains. All56retained
+cases and independentstandalone export pass at51.03678310025989.
+Immutable checkpoint:`research/bonus_band_20261025/milestones/20261025T105326Z`;
+SHA256:`22c5806b5c5b95cbf37e4aed60a2f8eeb525beb051b3e2afd7adfaa584eea399`. Maxbuild0.002395s, maxL2error7.3395e-7.
+Handoff:`research/bonus_issue14_refresh_20261025/handoff_manifest.json`.
+D10k5 32→31moments also40→48CZ, so this is a bonus-only tradeoff.
+
+Both existing native/Wexperimentalexports retain main behavior; the separate
+D4prototype's bonus table is refreshed with AST-preserved main semantics and
+all56exact circuit equalities. Current:`research/bonus_band_20261025/d4_hardware_submission.py`.
+PORT039 batch complete; no broad fitting or maintainedchanges. Continue
+posting validated ALPHA20/shallowcircuits underissue14 without duplicating
+activeissue11/13synthesis. PORT035 remains available for7unfinished8-site
+integrationgroups; incumbents have tightened substantially.

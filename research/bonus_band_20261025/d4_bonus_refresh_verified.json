@@ -1,0 +1,17 @@
+{
+  "status": "Bonus-only refresh passed; guarded primary semantics unchanged",
+  "candidate_sha256": "1e7c399aea37e6bf68f5076f836107665b1cc0004462812f8a45c778679c505a",
+  "prior_candidate": "/home/rpeddap/Documents/DuQuantum-2026/research/bonus_d4_export_20261025/d4_hardware_submission.py",
+  "prior_candidate_sha256": "d64c64eb7b4c43de1935d4e6ec84fef69046e58e10870ceeff83584443dd4362",
+  "prior_validation": "/home/rpeddap/Documents/DuQuantum-2026/research/bonus_d4_export_20261025/validation.json",
+  "prior_validation_sha256": "ac933b5a3c75f9a0dadf76a1ea463adbff5e34435c87778e2971380059650467",
+  "AST_identical_except_bonus_cache": true,
+  "bonus_cache_readers": [
+    "create_dicke_state_adaptive"
+  ],
+  "bonus_exact_matches": 56,
+  "bonus_score": 51.03678310025989,
+  "independent_bonus_source_sha256": "22c5806b5c5b95cbf37e4aed60a2f8eeb525beb051b3e2afd7adfaa584eea399",
+  "reused_main_validation": "38selectionmatches,38calibrationroundtrips,6fallbackmatches; original main AST and globals unchanged except the cache read only by adaptivewrapper.",
+  "limitations": "Separate prototype, no maintained promotion or W-selector composition. Hardware modeled uncertainty remains reported in frozen pilot/confirmation and coupled-score summaries."
+}

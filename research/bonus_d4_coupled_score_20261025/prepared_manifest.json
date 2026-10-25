@@ -1,0 +1,13 @@
+{
+  "status": "Frozen before resampling",
+  "replicates": 65536,
+  "shots": 10000,
+  "seconds": 75,
+  "files": {
+    "confirmation_results.json": "d11046d6a9baa6cd5148e1954094bf5210dc2a7b290bb3c0eeb1db853789bde4",
+    "pilot_results.json": "ba4a2c973a1ff955ab128e888acf79a876dce46191d221ed4c668d4186e50655",
+    "prior_independent_checks.json": "d37cbfa7a05d6b7b2a46275a3ec10269927f13e6860a424e32a8a4402562aa7f",
+    "resample.py": "1a41dfcdb506d5c38135885d2182865ca8747c54ac10a079afc195c5a75ee474",
+    "score.py": "eebfe3e679e4e1539e97663c6bc6569430206d3e1811538d8af50bbdc49e1683"
+  }
+}

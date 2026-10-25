@@ -1,0 +1,14 @@
+{
+  "status": "Combinedpeer8/line10/D4nativepool; standaloneverificationpending",
+  "baseline_score": 49.26491573094094,
+  "score": 49.518883984909195,
+  "D4_before": 9,
+  "D4_after": 7,
+  "D4_CZ": 5,
+  "sources": {
+    "research/bonus_peer8_precision_20261025/harvest_circuits.json": "b0953f93140c65d3c610df94de5d3388e5a844e2d52d0fe7f12c1fd7847633bf",
+    "research/bonus_peer8_precision_20261025/harvest_results.json": "282335086aec8e3dbb593e9e54ebf062c9e1bf489159359dcf6e0cfb70955b0c",
+    "research/bonus_d4_paper_20261025/schmidt_best_native.json": "f42de9bd086962e9f75d5a915c6e2ef67223b5d27236cf8e0d41188889b96c5a",
+    "research/bonus_d4_paper_20261025/schmidt_results.json": "12969c423fa60809ef8967c0824422ba7efdbbba625cb6c1391c6f5938dbe6a0"
+  }
+}

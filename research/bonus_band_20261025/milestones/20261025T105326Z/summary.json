@@ -1,0 +1,124 @@
+{
+  "timestamp_utc": "20261025T105326Z",
+  "bonus_score": 51.03678310025989,
+  "previous_verified_score": 49.518883984909195,
+  "previous_published_score": 49.111519281511065,
+  "increment_from_verified": 1.5178991153506942,
+  "increment_from_published": 1.9252638187488245,
+  "cases": 56,
+  "source_sha256": "22c5806b5c5b95cbf37e4aed60a2f8eeb525beb051b3e2afd7adfaa584eea399",
+  "max_build_seconds": 0.002394729293882847,
+  "max_state_l2_error": 7.339471653933899e-07,
+  "max_moments": 119,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "changes": [
+    {
+      "N": 6,
+      "k": 2,
+      "before": 15,
+      "after": 13,
+      "CZ": 15,
+      "state_error": 1.0496213676792183e-08
+    },
+    {
+      "N": 6,
+      "k": 3,
+      "before": 15,
+      "after": 12,
+      "CZ": 12,
+      "state_error": 1.4839764888756005e-08
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "before": 16,
+      "after": 15,
+      "CZ": 18,
+      "state_error": 2.976517660353192e-08
+    },
+    {
+      "N": 7,
+      "k": 3,
+      "before": 21,
+      "after": 17,
+      "CZ": 20,
+      "state_error": 8.590160615498792e-09
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "before": 18,
+      "after": 17,
+      "CZ": 23,
+      "state_error": 1.225852850089924e-08
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "before": 20,
+      "after": 19,
+      "CZ": 29,
+      "state_error": 4.515724584901373e-08
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "before": 22,
+      "after": 21,
+      "CZ": 32,
+      "state_error": 3.553425253182432e-08
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "before": 35,
+      "after": 29,
+      "CZ": 45,
+      "state_error": 1.8693209400041814e-07
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "before": 32,
+      "after": 31,
+      "CZ": 48,
+      "state_error": 6.570210722078682e-08
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "before": 25,
+      "after": 23,
+      "CZ": 37,
+      "state_error": 5.642919754032942e-08
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "before": 45,
+      "after": 35,
+      "CZ": 55,
+      "state_error": 7.036836355165352e-08
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "before": 45,
+      "after": 41,
+      "CZ": 74,
+      "state_error": 7.339471653933899e-07
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "before": 29,
+      "after": 27,
+      "CZ": 51,
+      "state_error": 1.3082815094929394e-07
+    }
+  ],
+  "main_prefix_unchanged": true,
+  "status": "Independent standalone validation passed; ongoing research",
+  "attribution": "All13newstrictdepthgains reuse peerexplicitnativecircuits in0a848a5. No additional scheduling or synthesis gains; exactD4tie retained from earlierSchmidtconstruction."
+}

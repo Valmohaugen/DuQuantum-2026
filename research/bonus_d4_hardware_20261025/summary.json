@@ -1,0 +1,145 @@
+{
+  "status": "Completed fixed six-seed pilot; no maintained promotion",
+  "case": [
+    4,
+    2
+  ],
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "models": [
+    "nominal",
+    "coherent",
+    "zz",
+    "signed_zz"
+  ],
+  "rows": 48,
+  "paired_selected_rows": 24,
+  "stats": [
+    {
+      "model": "nominal",
+      "mean_delta": 0.007148844839771831,
+      "calibration_seed_standard_error": 0.004081795934742877,
+      "positive_seeds": 5,
+      "negative_seeds": 1,
+      "minimum_delta": -0.0021474177401227213,
+      "maximum_delta": 0.022564856255541676,
+      "deltas": [
+        0.0012425719581701665,
+        0.0037101819911657796,
+        0.0008922433195034155,
+        0.022564856255541676,
+        0.016630633254372668,
+        -0.0021474177401227213
+      ]
+    },
+    {
+      "model": "coherent",
+      "mean_delta": 0.005115741663155022,
+      "calibration_seed_standard_error": 0.016848728976475654,
+      "positive_seeds": 2,
+      "negative_seeds": 4,
+      "minimum_delta": -0.024876998742586028,
+      "maximum_delta": 0.08104628617302521,
+      "deltas": [
+        -0.019440171487732527,
+        -0.003947842248164065,
+        -0.024392568254658832,
+        0.08104628617302521,
+        0.02230574453904637,
+        -0.024876998742586028
+      ]
+    },
+    {
+      "model": "zz",
+      "mean_delta": 0.034357533143896606,
+      "calibration_seed_standard_error": 0.010612578922446742,
+      "positive_seeds": 6,
+      "negative_seeds": 0,
+      "minimum_delta": 0.01513406412779097,
+      "maximum_delta": 0.08503724825812659,
+      "deltas": [
+        0.036955657908616504,
+        0.028219775567128572,
+        0.01513406412779097,
+        0.08503724825812659,
+        0.022234803717397257,
+        0.018563649284319736
+      ]
+    },
+    {
+      "model": "signed_zz",
+      "mean_delta": 0.02168408712107071,
+      "calibration_seed_standard_error": 0.012400031191777228,
+      "positive_seeds": 5,
+      "negative_seeds": 1,
+      "minimum_delta": -0.007165844624224455,
+      "maximum_delta": 0.0790949525612903,
+      "deltas": [
+        0.01865221011985258,
+        0.0009629133373439637,
+        0.01513406412779097,
+        0.0790949525612903,
+        0.0234262272043709,
+        -0.007165844624224455
+      ]
+    }
+  ],
+  "selections": "Candidate selected by estimate_error on all six seeds; raw and selected deltas therefore coincide. Baseline fallback implemented but not exercised in this cohort.",
+  "placements": [
+    {
+      "seed": 41,
+      "same_qubits": true,
+      "baseline_moments": 9,
+      "candidate_moments": 7
+    },
+    {
+      "seed": 42,
+      "same_qubits": true,
+      "baseline_moments": 9,
+      "candidate_moments": 7
+    },
+    {
+      "seed": 43,
+      "same_qubits": true,
+      "baseline_moments": 9,
+      "candidate_moments": 7
+    },
+    {
+      "seed": 44,
+      "same_qubits": false,
+      "baseline_moments": 19,
+      "candidate_moments": 7
+    },
+    {
+      "seed": 45,
+      "same_qubits": true,
+      "baseline_moments": 9,
+      "candidate_moments": 7
+    },
+    {
+      "seed": 46,
+      "same_qubits": true,
+      "baseline_moments": 9,
+      "candidate_moments": 7
+    }
+  ],
+  "max_build_seconds": 0.060282482765614986,
+  "baseline_tolerance": 1e-05,
+  "baseline_max_state_error": 1.866702495035452e-08,
+  "candidate_tolerance": 1e-10,
+  "candidate_max_state_error": 4.1864020941524295e-16,
+  "general_k_score_audit_max_error": 4.440892098500626e-16,
+  "scoring": "Exact sufficient-statistic Monte Carlo of E[1/(Z+X)], not inverse expected penalty. C=binom(4,2)=6 Z cells; all four X correlators.32768 repetitions,10000shots per basis. MC error is separate from across-calibration standard error.",
+  "interpretation": "Positive cohort means under all four defined models, but coherent model regresses on4/6seeds; nominal and signed regress atseed46. Seed44 contributes large gain because baseline chose19mom/9CZ versus usual9mom/5CZ. This small mixed pilot does not establish robust hardware benefit.",
+  "limitations": "Synthetic calibrations and assumed coherent/ZZ fields,not measured hardware. Six calibration seeds are independent units; MC errors are shot-repetition errors,not hardware/generalization uncertainty. Raw and selected variants share seeds,not necessarily placement. No ancillas/measurements in preparation.",
+  "followup": "Freeze selector, then reserve new calibration seeds47..52 for confirmation if authorized; do not retune on41..46. Retain separate baseline fallback and compare model means plus individual regressions. No real hardware claim.",
+  "reproducer": "python -m research.bonus_d4_hardware_20261025.compare",
+  "replay_note": "After first run, calibration_for reuses saved explicit calibration maps. This reader was added after the pilot and AST-checked only; pilot used fake_calibration directly and saved the exact maps. Frozen evaluator imports point only to local modules.",
+  "no_main_changes": true
+}

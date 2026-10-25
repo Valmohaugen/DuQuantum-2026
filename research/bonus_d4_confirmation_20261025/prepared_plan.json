@@ -1,0 +1,105 @@
+{
+  "ticket": "PORT-036",
+  "status": "Frozen before confirmation run",
+  "seeds": [
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78
+  ],
+  "pilot_seeds": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "models": [
+    "nominal",
+    "coherent",
+    "zz",
+    "signed_zz"
+  ],
+  "budget_seconds": 90,
+  "algorithm_changed": false,
+  "changes": "Only disjoint seeds, between-case/model deadline checks, report labels. select/verify/calibration_for ASTs identical; scorer/noise/baseline byte-identical.",
+  "files": [
+    {
+      "path": "baseline.py",
+      "sha256": "dfb6eab1ec26c4b33116ad00b2329d2d8a0d2dc6dfd9c6d78d7d008ba5863787"
+    },
+    {
+      "path": "compare.py",
+      "sha256": "100d2421a6a5bcb496184f98468daf3bd599ba4db3569131454dd732826ef778"
+    },
+    {
+      "path": "fast_eval.py",
+      "sha256": "2541605ace0f54b115dc38331dbb118867200c3a7ac0bc11d0828b6455cb4075"
+    },
+    {
+      "path": "judge.py",
+      "sha256": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6"
+    },
+    {
+      "path": "pilot_manifest.json",
+      "sha256": "f775e2bc17812d9e3f59992c500cdab8b1225ebb937eb706ea15f4f0eac06104"
+    },
+    {
+      "path": "pilot_results.json",
+      "sha256": "ba4a2c973a1ff955ab128e888acf79a876dce46191d221ed4c668d4186e50655"
+    },
+    {
+      "path": "score.py",
+      "sha256": "eebfe3e679e4e1539e97663c6bc6569430206d3e1811538d8af50bbdc49e1683"
+    },
+    {
+      "path": "signed_noise.py",
+      "sha256": "c83e5bc981858b8f6014202b5b4604f5b404a0c0116dcb6c26ef6d746f6be9a7"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "8ce2a6c1dd2f1c378f2f2dcaced622a715cfb3b993e6c6339f12086e98196612"
+    },
+    {
+      "path": "stress_noise.py",
+      "sha256": "f05a1b6351e444d68074aabcf548b8a88877684a84627a922833d99a49dbaeca"
+    },
+    {
+      "path": "template_native.json",
+      "sha256": "f42de9bd086962e9f75d5a915c6e2ef67223b5d27236cf8e0d41188889b96c5a"
+    },
+    {
+      "path": "test_dicke.py",
+      "sha256": "310e484706607e051bcc65331b501b59dbb831b849c066812403d6c100a81080"
+    }
+  ]
+}

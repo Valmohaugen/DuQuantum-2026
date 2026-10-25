@@ -1,0 +1,65 @@
+{
+  "numerical_budget_seconds": 60,
+  "numerical_seconds": 3.076682916842401,
+  "termination": "`xtol` termination condition is satisfied.",
+  "evaluations": 56,
+  "derivative_max_errors": [
+    1.6099505925218166e-10,
+    1.0572902687014567e-10,
+    2.469741078314769e-11
+  ],
+  "maximum_angle_change": 0.003579207889853997,
+  "raw_before": {
+    "source_sha256": "6781b9a336c9ec77f17f797a01945211e737dd4dd9c5ac899a7dadd4e817d7e1",
+    "raw_column_errors": [
+      2.86257321243152e-07,
+      2.0631289310507104e-06,
+      4.137301541959244e-06,
+      5.494010490504767e-06
+    ],
+    "native": {
+      "depth": 65,
+      "CZ": 38,
+      "column_errors": [
+        2.862573210853905e-07,
+        2.0631289312530395e-06,
+        4.137301541673617e-06,
+        5.4940104904991565e-06
+      ],
+      "max_column_error": 5.4940104904991565e-06,
+      "accepted": false,
+      "common_phase": [
+        0.6804811363605976,
+        0.7327655989860536
+      ]
+    },
+    "common_real_sign": -1.0
+  },
+  "raw_after_column_errors": [
+    8.039424476121149e-16,
+    6.801511141771622e-16,
+    7.265217249071292e-16,
+    6.59375281262664e-16
+  ],
+  "raw_after_max_error": 8.039424476121149e-16,
+  "faithful_native": {
+    "depth": 63,
+    "CZ": 38,
+    "column_errors": [
+      1.3187004433973595e-15,
+      1.541019368367621e-15,
+      1.6056471126006698e-15,
+      1.3606899850852282e-15
+    ],
+    "max_column_error": 1.6056471126006698e-15,
+    "accepted": true,
+    "common_phase": [
+      -0.7318699132752963,
+      0.6814443704679131
+    ]
+  },
+  "integration_eligible": true,
+  "same_range_incumbent_depth": 67,
+  "no_topology_change": true,
+  "no_default_ejection": true
+}

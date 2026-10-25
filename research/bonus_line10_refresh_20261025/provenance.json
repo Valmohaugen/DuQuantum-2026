@@ -1,0 +1,45 @@
+{
+  "status": "Read-only provenance freeze; no candidate construction or simulation yet",
+  "inputs": [
+    {
+      "label": "prior",
+      "commit": "5732c7bb2bc95181fa218ffe2a8733426800dd71",
+      "source": "ryon/toby_sol.py",
+      "source_sha256": "71d305df83fbccfe9bcd228e16fdbf1aaeee9511f70b4dcc585ccf8036784d05",
+      "frozen": "prior_10_5.json",
+      "payload_sha256": "e9e96fd2e0221fefdbc1cfe48a837d8fb0734d1fc4fa8641dcdbd6b9b7386074",
+      "CZ": 42,
+      "parameters": 94
+    },
+    {
+      "label": "changed",
+      "commit": "484dc118fee3bdb632c01e5c403a530896ef99aa",
+      "source": "ryon/toby_sol.py",
+      "source_sha256": "dfb6eab1ec26c4b33116ad00b2329d2d8a0d2dc6dfd9c6d78d7d008ba5863787",
+      "frozen": "changed_10_5.json",
+      "payload_sha256": "34244ebe0e0acdb3b40021e162f6e58bae977204dbfae9672f72568b3df42497",
+      "CZ": 40,
+      "parameters": 90
+    },
+    {
+      "label": "latest",
+      "commit": "19ace9cf9364bd169201245350b1073a00c3155a",
+      "source": "ryon/toby_sol.py",
+      "source_sha256": "dfb6eab1ec26c4b33116ad00b2329d2d8a0d2dc6dfd9c6d78d7d008ba5863787",
+      "frozen": "latest_10_5.json",
+      "payload_sha256": "34244ebe0e0acdb3b40021e162f6e58bae977204dbfae9672f72568b3df42497",
+      "CZ": 40,
+      "parameters": 90
+    }
+  ],
+  "changed_payload_persists": true,
+  "current_published_incumbent": {
+    "N": 10,
+    "k": 5,
+    "depth": 35,
+    "CZ": 42,
+    "score": 49.111519281511065
+  },
+  "future_check": "Construct from frozen changed_10_5.json, independently check native/device/state and compare against frozen 35-moment incumbent before any retained-pool change. Peer commit noisy mean claim is not a bonus-depth measurement.",
+  "no_fit": true
+}

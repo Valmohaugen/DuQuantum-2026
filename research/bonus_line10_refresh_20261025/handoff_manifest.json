@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "path": "research/bonus_line10_refresh_20261025/baseline_results.json",
+      "sha256": "a0de5cb91182250cc5d3ab1933105aa1b0ab0162f38da4d8166970d13253d03a"
+    },
+    {
+      "path": "research/bonus_line10_refresh_20261025/changed_10_5.json",
+      "sha256": "34244ebe0e0acdb3b40021e162f6e58bae977204dbfae9672f72568b3df42497"
+    },
+    {
+      "path": "research/bonus_line10_refresh_20261025/latest_10_5.json",
+      "sha256": "34244ebe0e0acdb3b40021e162f6e58bae977204dbfae9672f72568b3df42497"
+    },
+    {
+      "path": "research/bonus_line10_refresh_20261025/prior_10_5.json",
+      "sha256": "e9e96fd2e0221fefdbc1cfe48a837d8fb0734d1fc4fa8641dcdbd6b9b7386074"
+    },
+    {
+      "path": "research/bonus_line10_refresh_20261025/provenance.json",
+      "sha256": "18043f9ee1d85f90f534e93cd0195e01ecaadd8fb7906d97e1b8079f9fbd3862"
+    }
+  ],
+  "status": "Frozen handoff; no further writes planned"
+}

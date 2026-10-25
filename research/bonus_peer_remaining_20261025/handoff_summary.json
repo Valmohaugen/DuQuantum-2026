@@ -1,0 +1,45 @@
+{
+  "ticket": "PORT-032",
+  "status": "Cost triage complete; awaiting coordination before any fit",
+  "unchanged_portfolio_score": 49.111519281511065,
+  "coverage": {
+    "completed_incumbent_compositions": 28,
+    "planned_incumbent_compositions": 28,
+    "peer_screens": 2,
+    "seconds": 4.656917688436806
+  },
+  "decisions": [
+    {
+      "case": [
+        6,
+        4
+      ],
+      "action": "Defer coefficient repair",
+      "reason": "Uncertified 63-moment/39-CZ peer is slower than certified 58-moment/40-CZ composition for the same r=0..4 range."
+    },
+    {
+      "case": [
+        8,
+        3
+      ],
+      "action": "Conditional narrow fixed-topology precision repair is warranted",
+      "reason": "Uncertified 65-moment/38-CZ peer is two moments shallower than best screened certified 67-moment/39-CZ same-range composition. Error 5.4940104904991565e-6 currently fails strict certificate."
+    }
+  ],
+  "bounded_repair_plan": {
+    "authorization": "Not executed; obtain CPU release and parent authorization before fitting.",
+    "input": "peer_8_3.json",
+    "input_sha256": "6781b9a336c9ec77f17f797a01945211e737dd4dd9c5ac899a7dadd4e817d7e1",
+    "fixed_structure": "8 qubits; 38 ordered CZ edges; 84 Ry coefficients; existing terminal Z set unchanged. No topology search.",
+    "budget_seconds": 60,
+    "method": "Freeze raw supported columns before fit. Use existing analytic real state/Jacobian model for unary r=0..3, one shared real sign, fixed common-phase residual; independently finite-difference selected derivatives. Least-squares only on the 84 existing coefficients with explicit deadline.",
+    "certificate": "Both raw and faithful-native maximum coherent column L2 error must be <1e-10 under one common phase. Do not relax tolerance or snap/eject small rotations. Check Willow edges and PhasedXZ/CZ gate set.",
+    "cost_gate": "Retain strict native depth advantage versus 67 moments in identical compiler/scheduler; record actual post-repair depth and CZ count. No guarantee supplied cost survives repair.",
+    "conditional_integration": "Only if strict certification and depth advantage survive, request bounded integration of affected k<=3 cases containing an 8-site tail; prioritize N15 split7/8 then remaining compatible asymmetric splits. Freeze 49.111519281511065 baseline, retain every best depth, record complete coverage and verify all56 retained circuits.",
+    "failure_handling": "Preserve raw/compiled errors and best iterate; stop at budget. A failed numerical repair does not prove fixed topology impossible."
+  },
+  "ownership": "This is precision/cost triage only. Maintained issue11/13 synthesis owners and all maintained solver files are preserved.",
+  "scope": "Measured comparator library and two prefix modes only; no optimality claim. No portfolio changes or score gains are claimed.",
+  "reproducer": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLCONFIGDIR=/tmp/duq-mpl XDG_CACHE_HOME=/tmp/duq-cache PYTHONWARNINGS=ignore /home/rpeddap/.venvs/duq/bin/python -m research.bonus_peer_remaining_20261025.triage",
+  "portability": "Run triage module from repository root; its imported helper files and required frozen data are included. Legacy helper standalone entrypoints are not supported replay commands."
+}

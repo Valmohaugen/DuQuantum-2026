@@ -1,0 +1,46 @@
+{
+  "status": "D4k2 exact native-depth improvement verified",
+  "before": {
+    "moments": 9,
+    "CZ": 7
+  },
+  "after": {
+    "plus": 2,
+    "sequence": [
+      [
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "flip": 5,
+    "moments": 7,
+    "CZ": 5,
+    "state_error": 4.017373885259503e-16
+  },
+  "max_state_error": 5.242425040609151e-16,
+  "square_shortest_affine_variants": 40,
+  "schmidt_prefix_variants": 40,
+  "full_search_seconds": 0.8146243607625365,
+  "artifact": "schmidt_best_native.json",
+  "source_paper": "https://si2.epfl.ch/demichel/publications/archive/2024/DATE_QC.pdf",
+  "contribution": "The paper supplied a6CNOT logical template. Exact support search replaces its triangular affine suffix by a4CNOT square suffix. A real Schmidt decomposition of the initial two-qubit state then removes one more entangler. The complete native circuit uses5CZ in7moments.",
+  "limitations": [
+    "This is one exact D4k2 preparation, not a reusable all-count decoder.",
+    "No global depth optimality or hardware-score gain is established.",
+    "The six-CNOT alternative matches9moments and is retained as a research result.",
+    "extend.py was prepared but not run after the exact Schmidt-prefix improvement; no extended-search result is claimed."
+  ],
+  "next": "Independently export/validate the full portfolio and test calibrated primary performance against a fresh maintained baseline."
+}

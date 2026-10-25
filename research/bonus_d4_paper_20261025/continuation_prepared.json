@@ -1,0 +1,12 @@
+{
+  "status": "Prepared before longer-affine and Schmidt-prefix results",
+  "files": {
+    "search.py": "b9790c24246d2f169e36c1f943637c00dd2921b6bba14505bc75fa87f657594b",
+    "search_results.json": "4b5da0623d468a3c926e2d3f6a05c9151af7edd797acf984e683f8eea34dd867",
+    "best_native.json": "bfe4eedc687fd58a95933d7da599111782f98071c246cad484686d24df0aa76d",
+    "extend.py": "df52fa05ac29773a073a9822bc255813a5514a902c8226dd770f21b3fb5f5d4a",
+    "schmidt.py": "b4d5bc38bf0db02a0d7ba221fc087a4bae959ecdd94ef589a5e7fbf32644cdcf",
+    "commuting_schedule.py": "f5011dd42d715bec9cc9830e7ef0575af78791c753d5633d612700dddb637cbb"
+  },
+  "priority": "Run exact40case Schmidt-prefix test first; longer suffixes only if useful."
+}

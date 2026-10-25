@@ -1,0 +1,193 @@
+{
+  "status": "General-k sufficient statistics match explicit notebook bitstring scores",
+  "checks": [
+    {
+      "n": 4,
+      "k": 2,
+      "cutoff": 4,
+      "repeat": 0,
+      "errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 4,
+      "k": 2,
+      "cutoff": 4,
+      "repeat": 1,
+      "errors": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 4,
+      "k": 2,
+      "cutoff": 4,
+      "repeat": 2,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 4,
+      "k": 2,
+      "cutoff": 4,
+      "repeat": 3,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "cutoff": 4,
+      "repeat": 0,
+      "errors": [
+        5.551115123125783e-17,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "cutoff": 5,
+      "repeat": 0,
+      "errors": [
+        5.551115123125783e-17,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "cutoff": 4,
+      "repeat": 1,
+      "errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "cutoff": 5,
+      "repeat": 1,
+      "errors": [
+        5.551115123125783e-17,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "cutoff": 4,
+      "repeat": 2,
+      "errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "cutoff": 5,
+      "repeat": 2,
+      "errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "cutoff": 4,
+      "repeat": 3,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "cutoff": 5,
+      "repeat": 3,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 4,
+      "k": 1,
+      "cutoff": 4,
+      "repeat": 0,
+      "errors": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 4,
+      "k": 1,
+      "cutoff": 4,
+      "repeat": 1,
+      "errors": [
+        5.551115123125783e-17,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "n": 4,
+      "k": 1,
+      "cutoff": 4,
+      "repeat": 2,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 4,
+      "k": 1,
+      "cutoff": 4,
+      "repeat": 3,
+      "errors": [
+        0.0,
+        1.1102230246251565e-16,
+        0.0
+      ]
+    }
+  ],
+  "maximum_error": 4.440892098500626e-16,
+  "zero_valid_policy": "Retain NaN/undefined as in judge; evaluation rejects nonfinite samples, never coerces them to zero.",
+  "stress_model_check": {
+    "nominal_density_error": 0.0,
+    "independent_Cirq_unitary_density_error": 2.4983193193580397e-16,
+    "status": "nominal channel equivalence and coherent/ZZ phase convention checked independently"
+  },
+  "signed_model_check": {
+    "independent_signed_Cirq_density_error": 2.498146703015634e-16,
+    "nominal_density_error": 0.0,
+    "status": "signed phase convention and nominal equivalence passed"
+  }
+}

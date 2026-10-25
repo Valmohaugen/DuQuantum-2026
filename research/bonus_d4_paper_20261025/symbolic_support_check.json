@@ -1,0 +1,39 @@
+{
+  "status": "Exact supported-basis permutation verified; rotation algebra derived, floating circuit test pending",
+  "columns": [
+    {
+      "input": "0000",
+      "output": "0101",
+      "weight": 2
+    },
+    {
+      "input": "0010",
+      "output": "1010",
+      "weight": 2
+    },
+    {
+      "input": "0100",
+      "output": "1001",
+      "weight": 2
+    },
+    {
+      "input": "0110",
+      "output": "0110",
+      "weight": 2
+    },
+    {
+      "input": "0001",
+      "output": "1100",
+      "weight": 2
+    },
+    {
+      "input": "0011",
+      "output": "0011",
+      "weight": 2
+    }
+  ],
+  "common_amplitude": "1/sqrt(6)",
+  "reason": "First two CNOTs plus q2 rotations produce q2=plus forq4=0 andq2=0 forq4=1, without minus signs. At theta=2asin(1/sqrt3), allsix amplitudes equal. The remaining four affine gates map exactly onto all weight2strings.",
+  "next_research": "Search affine equivalents on a4cycle: because allsix amplitudes agree, any support-to-weight2 bijection is acceptable. Canonicalize support under bit flips and BFS native CNOTs to avoid blindly routing the triangular published graph.",
+  "native_depth_claim": false
+}

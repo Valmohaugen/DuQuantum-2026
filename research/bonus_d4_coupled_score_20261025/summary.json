@@ -1,0 +1,162 @@
+{
+  "status": "All152 frozen model/calibration pairs resampled with exact joint-shot coupling",
+  "rows": 152,
+  "replicates": 65536,
+  "seconds": 30.606989352963865,
+  "confirmation": [
+    {
+      "model": "nominal",
+      "seeds": 32,
+      "mean_delta": 0.005315033996703782,
+      "calibration_seed_standard_error": 0.0015723605745384486,
+      "MC_standard_error_of_mean": 0.0004515426121570746,
+      "baseline_total": 58.85694474455688,
+      "candidate_total": 59.0270258324514,
+      "relative_total_delta": 0.0028897369483360793,
+      "negative_estimated_deltas": 8,
+      "negative_beyond_two_MC_standard_errors": 3
+    },
+    {
+      "model": "coherent",
+      "seeds": 32,
+      "mean_delta": 0.0007057181989905948,
+      "calibration_seed_standard_error": 0.002923636023844543,
+      "MC_standard_error_of_mean": 0.0005886340190409679,
+      "baseline_total": 58.40045231659725,
+      "candidate_total": 58.423035298964955,
+      "relative_total_delta": 0.00038669190857073226,
+      "negative_estimated_deltas": 10,
+      "negative_beyond_two_MC_standard_errors": 8
+    },
+    {
+      "model": "zz",
+      "seeds": 32,
+      "mean_delta": 0.03022437986415598,
+      "calibration_seed_standard_error": 0.0016735423610680844,
+      "MC_standard_error_of_mean": 0.000579945431028949,
+      "baseline_total": 58.05929671913871,
+      "candidate_total": 59.0264768747917,
+      "relative_total_delta": 0.016658488998440957,
+      "negative_estimated_deltas": 0,
+      "negative_beyond_two_MC_standard_errors": 0
+    },
+    {
+      "model": "signed_zz",
+      "seeds": 32,
+      "mean_delta": 0.012925004138410818,
+      "calibration_seed_standard_error": 0.002745985571768463,
+      "MC_standard_error_of_mean": 0.0005178832505133702,
+      "baseline_total": 58.48451667976579,
+      "candidate_total": 58.898116812194935,
+      "relative_total_delta": 0.007071959484487656,
+      "negative_estimated_deltas": 6,
+      "negative_beyond_two_MC_standard_errors": 3
+    }
+  ],
+  "pilot": [
+    {
+      "model": "nominal",
+      "seeds": 6,
+      "mean_delta": 0.011218086572434479,
+      "calibration_seed_standard_error": 0.0057146001656574056,
+      "MC_standard_error_of_mean": 0.0012380402178091816,
+      "baseline_total": 11.028328526008007,
+      "candidate_total": 11.095637045442613,
+      "relative_total_delta": 0.006103238516686713,
+      "negative_estimated_deltas": 1,
+      "negative_beyond_two_MC_standard_errors": 0
+    },
+    {
+      "model": "coherent",
+      "seeds": 6,
+      "mean_delta": 0.0031968191615961935,
+      "calibration_seed_standard_error": 0.016685967019122065,
+      "MC_standard_error_of_mean": 0.0014120845637564166,
+      "baseline_total": 10.974485219439783,
+      "candidate_total": 10.993666134409361,
+      "relative_total_delta": 0.0017477735480112382,
+      "negative_estimated_deltas": 4,
+      "negative_beyond_two_MC_standard_errors": 2
+    },
+    {
+      "model": "zz",
+      "seeds": 6,
+      "mean_delta": 0.03792918979560873,
+      "calibration_seed_standard_error": 0.00987890989711923,
+      "MC_standard_error_of_mean": 0.0015451354644173529,
+      "baseline_total": 10.854448480922246,
+      "candidate_total": 11.082023619695898,
+      "relative_total_delta": 0.020966071115786116,
+      "negative_estimated_deltas": 0,
+      "negative_beyond_two_MC_standard_errors": 0
+    },
+    {
+      "model": "signed_zz",
+      "seeds": 6,
+      "mean_delta": 0.026162402147407542,
+      "calibration_seed_standard_error": 0.010280444482377209,
+      "MC_standard_error_of_mean": 0.001438880184914164,
+      "baseline_total": 10.9050954956333,
+      "candidate_total": 11.062069908517746,
+      "relative_total_delta": 0.014394593146598496,
+      "negative_estimated_deltas": 0,
+      "negative_beyond_two_MC_standard_errors": 0
+    }
+  ],
+  "pooled": [
+    {
+      "model": "nominal",
+      "seeds": 38,
+      "mean_delta": 0.006247094929713893,
+      "calibration_seed_standard_error": 0.0016019864615392757,
+      "MC_standard_error_of_mean": 0.0004275509049739101,
+      "baseline_total": 69.88527327056487,
+      "candidate_total": 70.122662877894,
+      "relative_total_delta": 0.003396847378847048,
+      "negative_estimated_deltas": 9,
+      "negative_beyond_two_MC_standard_errors": 3
+    },
+    {
+      "model": "coherent",
+      "seeds": 38,
+      "mean_delta": 0.0010990499299283216,
+      "calibration_seed_standard_error": 0.003463204861957215,
+      "MC_standard_error_of_mean": 0.0005435272292860455,
+      "baseline_total": 69.37493753603701,
+      "candidate_total": 69.41670143337429,
+      "relative_total_delta": 0.0006020026658125904,
+      "negative_estimated_deltas": 14,
+      "negative_beyond_two_MC_standard_errors": 10
+    },
+    {
+      "model": "zz",
+      "seeds": 38,
+      "mean_delta": 0.03144092880070115,
+      "calibration_seed_standard_error": 0.0020668192195923227,
+      "MC_standard_error_of_mean": 0.0005459221490044134,
+      "baseline_total": 68.91374520006096,
+      "candidate_total": 70.1085004944876,
+      "relative_total_delta": 0.017336966536330215,
+      "negative_estimated_deltas": 0,
+      "negative_beyond_two_MC_standard_errors": 0
+    },
+    {
+      "model": "signed_zz",
+      "seeds": 38,
+      "mean_delta": 0.01501511961351556,
+      "calibration_seed_standard_error": 0.002864421663623749,
+      "MC_standard_error_of_mean": 0.000491741687635322,
+      "baseline_total": 69.3896121753991,
+      "candidate_total": 69.96018672071268,
+      "relative_total_delta": 0.008222766022547087,
+      "negative_estimated_deltas": 6,
+      "negative_beyond_two_MC_standard_errors": 3
+    }
+  ],
+  "max_marginal_error": 3.3306690738754696e-16,
+  "raw_equals_selected_on_both_cohorts": true,
+  "source_hashes_match": true,
+  "interpretation": "Nominal, uniformZZ and signedZZ confirmation means remain positive relative to calibration-seed SE. Coherent mean remains unresolved. The nominal confirmation aggregate change is about+0.289%; eight negative per-seed estimates include three below minus2MCSE. No real hardware measurements or universal improvement.",
+  "scope": "Frozen synthetic distributions and four detuning realizations per model. No new circuits, noise draws, calibrations, selector tuning or measured hardware data. Per-seed negative Monte Carlo estimates are distinguished from negatives exceeding2MCstandarderrors. Across-calibration and Monte Carlo uncertainty remain separate.",
+  "next": "Use separate validated prototype for review; preserve baseline/main files. Any selector revision needs fresh disjoint validation; do not tune against these cohorts."
+}

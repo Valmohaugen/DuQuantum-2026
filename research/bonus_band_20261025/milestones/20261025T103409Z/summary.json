@@ -1,0 +1,41 @@
+{
+  "timestamp_utc": "20261025T103409Z",
+  "bonus_score": 49.518883984909195,
+  "previous_published_score": 49.111519281511065,
+  "increment": 0.40736470339813025,
+  "cases": 56,
+  "source_sha256": "d917bf8e716d3636e206332cc5eae05bac54a0afe4f9e5b9fba787dc00e9b714",
+  "max_build_seconds": 0.0023100394755601883,
+  "max_state_l2_error": 2.524387355133699e-07,
+  "max_moments": 119,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "changes": [
+    {
+      "N": 4,
+      "k": 2,
+      "before": 9,
+      "after": 7,
+      "CZ": 5,
+      "state_error": 3.9594279570806816e-16
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "before": 35,
+      "after": 32,
+      "CZ": 40,
+      "state_error": 2.524387355133699e-07
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "before": 69,
+      "after": 67,
+      "CZ": 73,
+      "state_error": 1.875316452114089e-15
+    }
+  ],
+  "main_prefix_unchanged": true,
+  "status": "Independent standalone validation passed; research active"
+}

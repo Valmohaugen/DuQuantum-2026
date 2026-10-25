@@ -1,0 +1,62 @@
+{
+  "baseline_commit": "19ace9cf9364bd169201245350b1073a00c3155a",
+  "files": [
+    {
+      "source": "19ace9cf9364bd169201245350b1073a00c3155a:ryon/toby_sol.py",
+      "source_sha256": "dfb6eab1ec26c4b33116ad00b2329d2d8a0d2dc6dfd9c6d78d7d008ba5863787",
+      "frozen": "baseline.py",
+      "sha256": "dfb6eab1ec26c4b33116ad00b2329d2d8a0d2dc6dfd9c6d78d7d008ba5863787",
+      "changes": []
+    },
+    {
+      "source": "19ace9cf9364bd169201245350b1073a00c3155a:ryon/judge.py",
+      "source_sha256": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6",
+      "frozen": "judge.py",
+      "sha256": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6",
+      "changes": []
+    },
+    {
+      "source": "19ace9cf9364bd169201245350b1073a00c3155a:ryon/test_dicke.py",
+      "source_sha256": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f",
+      "frozen": "test_dicke.py",
+      "sha256": "310e484706607e051bcc65331b501b59dbb831b849c066812403d6c100a81080",
+      "changes": [
+        "import judge -> package-relative frozen judge"
+      ]
+    },
+    {
+      "source": "19ace9cf9364bd169201245350b1073a00c3155a:ryon/fast_eval.py",
+      "source_sha256": "95d512861996d76c23c714676c0ac731f57564bef6226a958386adc39ff4d924",
+      "frozen": "fast_eval.py",
+      "sha256": "2541605ace0f54b115dc38331dbb118867200c3a7ac0bc11d0828b6455cb4075",
+      "changes": [
+        "import judge -> package-relative frozen judge",
+        "test_dicke import -> package-relative frozen evaluator"
+      ]
+    },
+    {
+      "source": "research/bonus_band_20261025/w_stress_noise.py",
+      "source_sha256": "8998c4e7f1dba256d04061eba1cfbe8dfcec092e4d66225eb604b72c20136543",
+      "frozen": "stress_noise.py",
+      "sha256": "f05a1b6351e444d68074aabcf548b8a88877684a84627a922833d99a49dbaeca",
+      "changes": [
+        "from .w_hardware_probe import fast_eval as fe -> from . import fast_eval as fe"
+      ]
+    },
+    {
+      "source": "research/bonus_band_20261025/w_heterogeneous_noise.py",
+      "source_sha256": "20cc0f24a876a57f31f1bac1a67c94abfbf001c7b6e34d8a08208fb9d6d61573",
+      "frozen": "signed_noise.py",
+      "sha256": "c83e5bc981858b8f6014202b5b4604f5b404a0c0116dcb6c26ef6d746f6be9a7",
+      "changes": [
+        "from . import w_stress_noise as stress -> from . import stress_noise as stress"
+      ]
+    },
+    {
+      "source": "research/bonus_d4_paper_20261025/schmidt_best_native.json",
+      "frozen": "template_native.json",
+      "sha256": "f42de9bd086962e9f75d5a915c6e2ef67223b5d27236cf8e0d41188889b96c5a",
+      "changes": []
+    }
+  ]
+}

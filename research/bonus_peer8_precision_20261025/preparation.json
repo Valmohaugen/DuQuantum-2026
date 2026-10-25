@@ -1,0 +1,51 @@
+{
+  "status": "Prepared; no numerical work run; wait for CPU release",
+  "ticket": "PORT-032",
+  "entrypoint": "python -m research.bonus_peer8_precision_20261025.polish",
+  "budget_seconds": 60,
+  "baseline_score": 49.111519281511065,
+  "comparator": "cost_triage_results.json: same supported r=0..3 range, same faithful compiler, best certified 67 moments/39 CZ",
+  "no_topology_search": true,
+  "files": [
+    {
+      "path": "baseline_circuits.json",
+      "sha256": "054aeeeee18d54ee8636a428a7f843b73044b4c67115d0197f01c42f71178381"
+    },
+    {
+      "path": "baseline_results.json",
+      "sha256": "a0de5cb91182250cc5d3ab1933105aa1b0ab0162f38da4d8166970d13253d03a"
+    },
+    {
+      "path": "commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "path": "cost_triage_results.json",
+      "sha256": "ebe3c1a983fe9cf7673c2071b2d8310923d81320e6fec1fb565933b6b4659596"
+    },
+    {
+      "path": "helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "path": "original_8_3.json",
+      "sha256": "6781b9a336c9ec77f17f797a01945211e737dd4dd9c5ac899a7dadd4e817d7e1"
+    },
+    {
+      "path": "polish.py",
+      "sha256": "6496aaccd97f7c80a030c2f46d941d0a98176c6a957cc66a6058eaa93e43913f"
+    },
+    {
+      "path": "probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "path": "snapshot.py",
+      "sha256": "71d305df83fbccfe9bcd228e16fdbf1aaeee9511f70b4dcc585ccf8036784d05"
+    },
+    {
+      "path": "state_jacobian.py",
+      "sha256": "5af8081f4030132fd79366544abb1e0ac3c44c9f4543be5d89174c4a1d86d694"
+    }
+  ]
+}

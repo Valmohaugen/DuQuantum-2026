@@ -1,0 +1,148 @@
+{
+  "ticket": "PORT-032",
+  "status": "Bounded precision repair and integration complete; CPU released; standalone export by root pending",
+  "score": 49.26491573094094,
+  "baseline_score": 49.111519281511065,
+  "improvements": [
+    {
+      "N": 10,
+      "k": 5,
+      "source": "fresh-line-484dc11-default",
+      "depth": 32,
+      "CZ": 40,
+      "before": 35,
+      "accepted": true,
+      "state_l2_error": 2.524387355133699e-07
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "source": "new8-split-7-True-standard-polished_8_3",
+      "depth": 67,
+      "CZ": 73,
+      "before": 69,
+      "accepted": true,
+      "state_l2_error": 1.875316452114089e-15
+    }
+  ],
+  "repair": {
+    "source_sha256": "6781b9a336c9ec77f17f797a01945211e737dd4dd9c5ac899a7dadd4e817d7e1",
+    "fixed_CZ": 38,
+    "fixed_parameters": 84,
+    "numerical_seconds": 3.076682916842401,
+    "evaluations": 56,
+    "raw_after_error": 8.039424476121149e-16,
+    "native_after": {
+      "depth": 63,
+      "CZ": 38,
+      "column_errors": [
+        1.3187004433973595e-15,
+        1.541019368367621e-15,
+        1.6056471126006698e-15,
+        1.3606899850852282e-15
+      ],
+      "max_column_error": 1.6056471126006698e-15,
+      "accepted": true,
+      "common_phase": [
+        -0.7318699132752963,
+        0.6814443704679131
+      ]
+    },
+    "maximum_angle_change": 0.003579207889853997,
+    "supported_columns": "unary r=0..3 with one common phase; no certificate for r>=4"
+  },
+  "same_range_cost": "Raw peer65/38 versus certified exact7site-prefix67/39; polished peer63/38. Six-site r<=4 raw63/39 was deferred because certified5site-prefix58/40 is shallower.",
+  "validation": {
+    "cases": 56,
+    "maximum_retained_state_error": 2.524387355133699e-07,
+    "native_gate_set": "PhasedXZ/CZ only",
+    "device": "Willow105.validate_circuit",
+    "new_terminal_tolerance": 1e-10,
+    "new_terminal_composition_tolerance": 1e-10,
+    "whole_state_tolerance": 1e-05,
+    "preserved_every_prior_depth": true
+  },
+  "whole_state_attribution": "(10,5) improvement comes from peer484dc11 frozen40CZ line, not half polishing. Default pipeline32mom/error2.524387355e-7; faithful33mom/error2.534540291e-7. Both evaluated against prior35mom incumbent; lower-depth default retained.",
+  "coverage": {
+    "budget_seconds": 90,
+    "search_seconds": 90.16160282026976,
+    "total_seconds": 92.68564677424729,
+    "attempts": 292,
+    "complete_groups": 65,
+    "planned_groups": 72,
+    "unfinished_groups": [
+      {
+        "N": 11,
+        "k": 3,
+        "left_size": 8,
+        "status": "partial",
+        "blocks": [
+          {
+            "blocks": true,
+            "status": "partial",
+            "attempted": 0,
+            "planned": 1
+          }
+        ]
+      },
+      {
+        "N": 11,
+        "k": 2,
+        "left_size": 2,
+        "status": "not-started",
+        "blocks": []
+      },
+      {
+        "N": 11,
+        "k": 2,
+        "left_size": 3,
+        "status": "not-started",
+        "blocks": []
+      },
+      {
+        "N": 11,
+        "k": 2,
+        "left_size": 8,
+        "status": "not-started",
+        "blocks": []
+      },
+      {
+        "N": 11,
+        "k": 2,
+        "left_size": 9,
+        "status": "not-started",
+        "blocks": []
+      },
+      {
+        "N": 10,
+        "k": 2,
+        "left_size": 2,
+        "status": "not-started",
+        "blocks": []
+      },
+      {
+        "N": 10,
+        "k": 2,
+        "left_size": 8,
+        "status": "not-started",
+        "blocks": []
+      }
+    ]
+  },
+  "scope": "Bounded asymmetric splits with a side>=8 for N10..15,k2/3, explicit changed8 terminal required; counterpart uses top-three frozen alternatives. Not exhaustive decoder placement/topology or compiler optimization. 90-second deadline checked between indivisible candidate operations, measured overrun0.162seconds.",
+  "next_narrow_action": "If authorized in a future phase, finish only seven unfinished low-N groups recorded in coverage. No additional fitting needed. Higher-N groups complete in this restricted search.",
+  "ownership": "Maintained issue11/13 owners preserved. No maintained code, old frozen directory, shared taskboard, README, branch, or remote changed.",
+  "reproducers": [
+    "python -m research.bonus_peer8_precision_20261025.polish",
+    "python -m research.bonus_peer8_precision_20261025.integrate"
+  ],
+  "environment": {
+    "python": "/home/rpeddap/.venvs/duq/bin/python",
+    "threads": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1",
+    "cirq": "1.8.0.dev20261023221525",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "networkx": "3.6.1"
+  },
+  "portability": "Run supported module entrypoints from repository root; all imported local helper files and required data are frozen here. Legacy helper __main__ routines are not supported replay entrypoints."
+}

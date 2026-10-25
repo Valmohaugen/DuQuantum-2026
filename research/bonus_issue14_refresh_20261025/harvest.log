@@ -1,0 +1,14 @@
+ACCEPT {'N': 6, 'k': 3, 'before': 15, 'depth': 12, 'CZ': 12, 'source': 'd_6_3.json', 'state_l2_error': 1.4839764888756005e-08}
+ACCEPT {'N': 7, 'k': 3, 'before': 21, 'depth': 17, 'CZ': 20, 'source': 'd_7_3.json', 'state_l2_error': 8.590160615498792e-09}
+ACCEPT {'N': 11, 'k': 3, 'before': 45, 'depth': 35, 'CZ': 55, 'source': 'd_11_3.json', 'state_l2_error': 7.036836355165352e-08}
+ACCEPT {'N': 10, 'k': 3, 'before': 35, 'depth': 29, 'CZ': 45, 'source': 'd_10_3.json', 'state_l2_error': 1.8693209400041814e-07}
+ACCEPT {'N': 6, 'k': 2, 'before': 15, 'depth': 13, 'CZ': 15, 'source': 'd_6_2.json', 'state_l2_error': 1.0496213676792183e-08}
+ACCEPT {'N': 12, 'k': 3, 'before': 45, 'depth': 41, 'CZ': 74, 'source': 'd_12_3.json', 'state_l2_error': 7.339471653933899e-07}
+ACCEPT {'N': 11, 'k': 2, 'before': 25, 'depth': 23, 'CZ': 37, 'source': 'd_11_2.json', 'state_l2_error': 5.642919754032942e-08}
+ACCEPT {'N': 13, 'k': 2, 'before': 29, 'depth': 27, 'CZ': 51, 'source': 'd_13_2.json', 'state_l2_error': 1.3082815094929394e-07}
+ACCEPT {'N': 7, 'k': 2, 'before': 16, 'depth': 15, 'CZ': 18, 'source': 'd_7_2.json', 'state_l2_error': 2.976517660353192e-08}
+ACCEPT {'N': 8, 'k': 2, 'before': 18, 'depth': 17, 'CZ': 23, 'source': 'd_8_2.json', 'state_l2_error': 1.225852850089924e-08}
+ACCEPT {'N': 10, 'k': 5, 'before': 32, 'depth': 31, 'CZ': 48, 'source': 'd_10_5.json', 'state_l2_error': 6.570210722078682e-08}
+ACCEPT {'N': 9, 'k': 2, 'before': 20, 'depth': 19, 'CZ': 29, 'source': 'd_9_2.json', 'state_l2_error': 4.515724584901373e-08}
+ACCEPT {'N': 10, 'k': 2, 'before': 22, 'depth': 21, 'CZ': 32, 'source': 'd_10_2.json', 'state_l2_error': 3.553425253182432e-08}
+COMPLETE 51.03678310025989 8.846780871972442 11.348039446398616

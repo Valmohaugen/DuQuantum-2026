@@ -1,0 +1,109 @@
+{
+  "ticket": "PORT-039",
+  "claim": "Issue14 no-fit native integration only; no synthesis ownership transfer",
+  "commit": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe",
+  "files": [
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/summary.json",
+      "frozen": "summary.json",
+      "sha256": "18bff0d99bb4c6aff9407ce98fbe62d5adf6bca6c77d7b8d617008741edf28ec"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/export_bonus.py",
+      "frozen": "export_bonus.py",
+      "sha256": "c7477bd45dfd5c80ac80b197d34a89bc26c89f6cde918342f8ecd2ee93fc24fd"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/bonus_cmp.py",
+      "frozen": "bonus_cmp.py",
+      "sha256": "7afa0430283c0f01d6d2b2b30ece461d8254445bdfcdd1e7afb0fcf0196e8fb4"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_4_2.json",
+      "frozen": "d_4_2.json",
+      "sha256": "2d46d12badfccaa348e587a115c573621f08f8fba845d37d38525249bde69589"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_6_2.json",
+      "frozen": "d_6_2.json",
+      "sha256": "157757d6b3ec51314eda880c564173b590ebf5e327541439302eb7bd6b746926"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_6_3.json",
+      "frozen": "d_6_3.json",
+      "sha256": "046ea22c437caf1097c2a57006d11415caa49d76b1d0c2682e20cc88a3eca2b3"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_7_2.json",
+      "frozen": "d_7_2.json",
+      "sha256": "d1eb9048dd054819dd2966f76d2f4144f501a6eadc0429b40ce85835b5044f11"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_7_3.json",
+      "frozen": "d_7_3.json",
+      "sha256": "9335d21c487f4e4bcbeebc2d91465e054fad5bacb93e64b2de94ab58f7ce0e8c"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_8_2.json",
+      "frozen": "d_8_2.json",
+      "sha256": "672bade73f73a3260984a5bf654add5de4e01fe9c2ddd55296c8d4f929132a0d"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_9_2.json",
+      "frozen": "d_9_2.json",
+      "sha256": "ec3ffc2ebd688b4c32af728af5c7202d720ac4f6d517d6310d3533aa3e28c3dd"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_10_2.json",
+      "frozen": "d_10_2.json",
+      "sha256": "f61ad6ed79b03876a70694833c4820e4379d7f29dfd2c3431acebfe4a1d7f263"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_10_3.json",
+      "frozen": "d_10_3.json",
+      "sha256": "eb0b900c9fd52f0e92f8741289302a38d8513ccf3f3f8d5b0cbd97ad9f26433d"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_10_5.json",
+      "frozen": "d_10_5.json",
+      "sha256": "8a1e25f9e176dbece28326b9499e4d91d3056ed8721200d0cf8918bc52972921"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_11_2.json",
+      "frozen": "d_11_2.json",
+      "sha256": "e5bf5e0775cea6ec70cfb41da148a54af8ca7953ae5625a039cfcc53573e9705"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_11_3.json",
+      "frozen": "d_11_3.json",
+      "sha256": "e77fbeb21930455855b8aca0603ce34d9a8deba6b1f948d62e98a30f3823d3b8"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_12_3.json",
+      "frozen": "d_12_3.json",
+      "sha256": "044efc350283b9cf90f49adce459265746444dcc24eaad73bca7dc42d62e145b"
+    },
+    {
+      "source": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe:research/primary_depth_20261025/d_13_2.json",
+      "frozen": "d_13_2.json",
+      "sha256": "b6bfb1f1f826e328909617275decf973cfa11c7957ab4d7245d1ee583075cfd6"
+    },
+    {
+      "source": "research/bonus_band_20261025/native_submission.py",
+      "frozen": "baseline_submission.py",
+      "sha256": "d917bf8e716d3636e206332cc5eae05bac54a0afe4f9e5b9fba787dc00e9b714"
+    },
+    {
+      "source": "research/bonus_band_20261025/native_submission_verified.json",
+      "frozen": "baseline_verified.json",
+      "sha256": "7be34d54fa21e309a35e3677524da5e77d5c129e1303d80c89def6f7c0c2d3c7"
+    },
+    {
+      "source": "research/bonus_peer8_precision_20261025/commuting_schedule.py",
+      "frozen": "commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    }
+  ],
+  "baseline_score": 49.518883984909195,
+  "budget_seconds": 45
+}

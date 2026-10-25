@@ -1,0 +1,9 @@
+{
+  "status": "Standalone reviewable prototype; no maintained promotion",
+  "candidate": "d4_hardware_submission.py",
+  "candidate_sha256": "d64c64eb7b4c43de1935d4e6ec84fef69046e58e10870ceeff83584443dd4362",
+  "baseline_sha256": "dfb6eab1ec26c4b33116ad00b2329d2d8a0d2dc6dfd9c6d78d7d008ba5863787",
+  "verified_bonus_sha256": "d917bf8e716d3636e206332cc5eae05bac54a0afe4f9e5b9fba787dc00e9b714",
+  "domain": "N4,k2,DD=True,pack=False,use_blocks=True only; all other primary calls use unchanged19ace9c baseline.",
+  "limitation": "No W selector composition. Finite synthetic cohorts have coherent-error uncertainty and individual regressions."
+}

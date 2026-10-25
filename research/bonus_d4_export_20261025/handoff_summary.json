@@ -1,0 +1,27 @@
+{
+  "ticket": "PORT-037",
+  "status": "Completed isolated standalone export; reviewable, unpromoted; CPU released",
+  "candidate": "d4_hardware_submission.py",
+  "candidate_sha256": "d64c64eb7b4c43de1935d4e6ec84fef69046e58e10870ceeff83584443dd4362",
+  "baseline_commit": "19ace9cf9364bd169201245350b1073a00c3155a",
+  "baseline_prefix_byte_identical": true,
+  "baseline_original_functions_preserved": 33,
+  "selected_saved_circuit_matches": 38,
+  "calibration_roundtrips": 38,
+  "fallback_checks": 6,
+  "bonus_exact_matches": 56,
+  "bonus_score": 49.518883984909195,
+  "max_build_seconds": 0.31740008015185595,
+  "max_selected_state_error": 4.1864020941524295e-16,
+  "total_validation_seconds": 5.259568847715855,
+  "domain": "Only N4,k2 with literal default flags DD=True,pack=False,use_blocks=True; all other main calls fall back unchanged. Candidate chosen only if existing estimate_error is lower than preserved baseline.",
+  "dependencies": "Single file; standard library plus cirq/cirq_google; constructors read no files or research modules.",
+  "validation_scope": "38saved pilot/confirmationselected circuits, explicit serialized calibration reader roundtrip and independent map parse,6representative and optionguard fallbacks,56exactbonus equalities. Original baseline prefix and functionASTs preserved; verifiedbonus state checks reused only after exactcircuit equality.",
+  "hardware_limitations": "No Wselector composition or maintained promotion. Coherent-error benefit remains unresolved. Same-seed multinomial score coupling is weak; root plans maximal-coupling re-estimation of frozen outcome distributions before stronger hardware inference. Existing hardware reports remain historical.",
+  "reproducers": [
+    "python -m research.bonus_d4_export_20261025.export",
+    "python -m research.bonus_d4_export_20261025.verify"
+  ],
+  "no_maintained_edits": true,
+  "no_remote_actions": true
+}

@@ -1,0 +1,91 @@
+{
+  "files": [
+    {
+      "source": "research/bonus_peer7_precision_20261025/helpers.py",
+      "frozen": "research/bonus_peer_remaining_20261025/helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/snapshot.py",
+      "frozen": "research/bonus_peer_remaining_20261025/snapshot.py",
+      "sha256": "71d305df83fbccfe9bcd228e16fdbf1aaeee9511f70b4dcc585ccf8036784d05"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/probe.py",
+      "frozen": "research/bonus_peer_remaining_20261025/probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/commuting_schedule.py",
+      "frozen": "research/bonus_peer_remaining_20261025/commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/clean_clifford_tables.json",
+      "frozen": "research/bonus_peer_remaining_20261025/clean_clifford_tables.json",
+      "sha256": "d96165008545bdbece617635620b16ab6525b63c78415821cd91119f4a7979fd"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/refined_halves.json",
+      "frozen": "research/bonus_peer_remaining_20261025/refined_halves.json",
+      "sha256": "4f2db62fd3eefa138e48b756843dcb0ae0b7b319143e3acff47754f917af9440"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/polished_6_3.json",
+      "frozen": "research/bonus_peer_remaining_20261025/polished_6_3.json",
+      "sha256": "cc67bdcf372c23e663e35e0bdfb94f544dc0dbf9a76655251c6c911313d19b81"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/halves_6_4.json",
+      "frozen": "research/bonus_peer_remaining_20261025/peer_6_4.json",
+      "sha256": "2e96a4f7193d5ce3ed858da0e71ff0a6b23a8b5cd605495cc81d27f0a98707d5"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/halves_8_3.json",
+      "frozen": "research/bonus_peer_remaining_20261025/peer_8_3.json",
+      "sha256": "6781b9a336c9ec77f17f797a01945211e737dd4dd9c5ac899a7dadd4e817d7e1"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/polished_7_3.json",
+      "frozen": "research/bonus_peer_remaining_20261025/polished_7_3.json",
+      "sha256": "1392628a3682dfa7f44fcf798dc985c2a7b26d7cf0672d1cbebc365e22636f76"
+    },
+    {
+      "source": "research/bonus_depth_20261024/grid_half_5_3.json",
+      "frozen": "research/bonus_peer_remaining_20261025/certified_5_3.json",
+      "sha256": "6293f3e4cb8f07826df3cd70a78233d0b513219b8fec2080a187871baa0bbcb5"
+    },
+    {
+      "source": "research/bonus_half_precision_20261025/decoder_5_r0to4_native.json",
+      "frozen": "research/bonus_peer_remaining_20261025/native5_r4.json",
+      "sha256": "ad3b13e6e247377f8aa0c416279a2918892703843ba1de197c0aa4daf6c73b72"
+    },
+    {
+      "source": "research/bonus_terminal_integration_20261025/decoder_5_allcounts_native.json",
+      "frozen": "research/bonus_peer_remaining_20261025/native5_all.json",
+      "sha256": "5976de8f8af8cf6f59a7e7073bb5640e2b773928fc5dd7db70cd58b38b41a57b"
+    },
+    {
+      "source": "research/bonus_terminal_integration_20261025/decoder_6_allcounts_native.json",
+      "frozen": "research/bonus_peer_remaining_20261025/native6_all.json",
+      "sha256": "1491d612f68085c1b988e2682c161920665e9a1e3a23d9f7d99982f5a58f98d1"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/handoff_manifest.json",
+      "frozen": "research/bonus_peer_remaining_20261025/peer_input_manifest.json",
+      "sha256": "2ccceba7fb1f8846240495ac448a2efa2d26a22842d3592aa361b970b7d22484"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/harvest_circuits.json",
+      "frozen": "research/bonus_peer_remaining_20261025/baseline_circuits.json",
+      "sha256": "054aeeeee18d54ee8636a428a7f843b73044b4c67115d0197f01c42f71178381"
+    },
+    {
+      "source": "research/bonus_peer7_precision_20261025/harvest_results.json",
+      "frozen": "research/bonus_peer_remaining_20261025/baseline_results.json",
+      "sha256": "a0de5cb91182250cc5d3ab1933105aa1b0ab0162f38da4d8166970d13253d03a"
+    }
+  ],
+  "baseline_score": 49.111519281511065,
+  "no_fitting_authorized": true
+}

@@ -1,0 +1,234 @@
+{
+  "ticket": "PORT-039",
+  "issue": "Shared issue14 no-fit bonus integration",
+  "status": "Complete bounded harvest; CPU released; standalone root export pending",
+  "source_commit": "0a848a5e0b7ac016d76527f4bde5b31725b6aefe",
+  "baseline_score": 49.518883984909195,
+  "score": 51.03678310025989,
+  "gain": 1.5178991153506942,
+  "cases": 56,
+  "source_cases": 14,
+  "accepted_improvements": 13,
+  "coverage_complete": true,
+  "search_seconds": 8.846780871972442,
+  "total_seconds": 11.348039446398616,
+  "search_budget_seconds": 45,
+  "maximum_state_l2_error": 7.339471653933899e-07,
+  "whole_state_tolerance": 1e-05,
+  "improvements": [
+    {
+      "N": 6,
+      "k": 3,
+      "before": 15,
+      "depth": 12,
+      "CZ": 12,
+      "source": "d_6_3.json",
+      "state_l2_error": 1.4839764888756005e-08
+    },
+    {
+      "N": 7,
+      "k": 3,
+      "before": 21,
+      "depth": 17,
+      "CZ": 20,
+      "source": "d_7_3.json",
+      "state_l2_error": 8.590160615498792e-09
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "before": 45,
+      "depth": 35,
+      "CZ": 55,
+      "source": "d_11_3.json",
+      "state_l2_error": 7.036836355165352e-08
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "before": 35,
+      "depth": 29,
+      "CZ": 45,
+      "source": "d_10_3.json",
+      "state_l2_error": 1.8693209400041814e-07
+    },
+    {
+      "N": 6,
+      "k": 2,
+      "before": 15,
+      "depth": 13,
+      "CZ": 15,
+      "source": "d_6_2.json",
+      "state_l2_error": 1.0496213676792183e-08
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "before": 45,
+      "depth": 41,
+      "CZ": 74,
+      "source": "d_12_3.json",
+      "state_l2_error": 7.339471653933899e-07
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "before": 25,
+      "depth": 23,
+      "CZ": 37,
+      "source": "d_11_2.json",
+      "state_l2_error": 5.642919754032942e-08
+    },
+    {
+      "N": 13,
+      "k": 2,
+      "before": 29,
+      "depth": 27,
+      "CZ": 51,
+      "source": "d_13_2.json",
+      "state_l2_error": 1.3082815094929394e-07
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "before": 16,
+      "depth": 15,
+      "CZ": 18,
+      "source": "d_7_2.json",
+      "state_l2_error": 2.976517660353192e-08
+    },
+    {
+      "N": 8,
+      "k": 2,
+      "before": 18,
+      "depth": 17,
+      "CZ": 23,
+      "source": "d_8_2.json",
+      "state_l2_error": 1.225852850089924e-08
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "before": 32,
+      "depth": 31,
+      "CZ": 48,
+      "source": "d_10_5.json",
+      "state_l2_error": 6.570210722078682e-08
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "before": 20,
+      "depth": 19,
+      "CZ": 29,
+      "source": "d_9_2.json",
+      "state_l2_error": 4.515724584901373e-08
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "before": 22,
+      "depth": 21,
+      "CZ": 32,
+      "source": "d_10_2.json",
+      "state_l2_error": 3.553425253182432e-08
+    }
+  ],
+  "preserved_exact_D4_tie": true,
+  "scheduler": "Fixed3restart commuting scheduler after raw-state/device/native validity; no extra improvement. Every scheduled candidate independently state checked; phase-aligned raw-vs-scheduled comparison<1e-10.",
+  "CZ_alternatives": [
+    {
+      "N": 7,
+      "k": 3,
+      "incumbent_depth": 21,
+      "incumbent_CZ": 21,
+      "candidate_depth": 17,
+      "candidate_CZ": 20,
+      "candidate_source": "d_7_3.json",
+      "incumbent_source": "baseline_circuits.json",
+      "note": "Different CZ cost recorded; primary objective remains minimum native moments."
+    },
+    {
+      "N": 11,
+      "k": 3,
+      "incumbent_depth": 45,
+      "incumbent_CZ": 45,
+      "candidate_depth": 35,
+      "candidate_CZ": 55,
+      "candidate_source": "d_11_3.json",
+      "incumbent_source": "baseline_circuits.json",
+      "note": "Different CZ cost recorded; primary objective remains minimum native moments."
+    },
+    {
+      "N": 10,
+      "k": 3,
+      "incumbent_depth": 35,
+      "incumbent_CZ": 40,
+      "candidate_depth": 29,
+      "candidate_CZ": 45,
+      "candidate_source": "d_10_3.json",
+      "incumbent_source": "baseline_circuits.json",
+      "note": "Different CZ cost recorded; primary objective remains minimum native moments."
+    },
+    {
+      "N": 12,
+      "k": 3,
+      "incumbent_depth": 45,
+      "incumbent_CZ": 52,
+      "candidate_depth": 41,
+      "candidate_CZ": 74,
+      "candidate_source": "d_12_3.json",
+      "incumbent_source": "baseline_circuits.json",
+      "note": "Different CZ cost recorded; primary objective remains minimum native moments."
+    },
+    {
+      "N": 11,
+      "k": 2,
+      "incumbent_depth": 25,
+      "incumbent_CZ": 43,
+      "candidate_depth": 23,
+      "candidate_CZ": 37,
+      "candidate_source": "d_11_2.json",
+      "incumbent_source": "baseline_circuits.json",
+      "note": "Different CZ cost recorded; primary objective remains minimum native moments."
+    },
+    {
+      "N": 10,
+      "k": 5,
+      "incumbent_depth": 32,
+      "incumbent_CZ": 40,
+      "candidate_depth": 31,
+      "candidate_CZ": 48,
+      "candidate_source": "d_10_5.json",
+      "incumbent_source": "baseline_circuits.json",
+      "note": "Different CZ cost recorded; primary objective remains minimum native moments."
+    },
+    {
+      "N": 9,
+      "k": 2,
+      "incumbent_depth": 20,
+      "incumbent_CZ": 27,
+      "candidate_depth": 19,
+      "candidate_CZ": 29,
+      "candidate_source": "d_9_2.json",
+      "incumbent_source": "baseline_circuits.json",
+      "note": "Different CZ cost recorded; primary objective remains minimum native moments."
+    },
+    {
+      "N": 10,
+      "k": 2,
+      "incumbent_depth": 22,
+      "incumbent_CZ": 35,
+      "candidate_depth": 21,
+      "candidate_CZ": 32,
+      "candidate_source": "d_10_2.json",
+      "incumbent_source": "baseline_circuits.json",
+      "note": "Different CZ cost recorded; primary objective remains minimum native moments."
+    }
+  ],
+  "important_tradeoff": "D10k5 improves32\u219231moments while increasing40\u219248CZ; this is a bonus-depth gain, not evidence of primary hardware gain. Other differing CZ alternatives are recorded.",
+  "ownership": "Issue14 invited bonus-portfolio integration. No issue11/13/primary-search synthesis jobs or source ownership changed. No fitting or maintained solver edits.",
+  "reproducer": "python -m research.bonus_issue14_refresh_20261025.harvest",
+  "portability": "All native inputs,baseline source and scheduler are frozen locally. Supported harvest entrypoint reads no live peer source; copied export_bonus.py and bonus_cmp.py are provenance only and are NOT supported replay entrypoints.",
+  "next_priority": "Among earlier choices, PORT035 is a cheap finite coverage closure, but expected score opportunity is low: unfinished N10k2/N11k2/N11k3 incumbents now21/23/35moments versus standalone8site63.9/10halves remain71/81faithful moments and failstrictprecision; any follow-up must first compare against certified8prefix at same r0..3 range and assess N<=15 applicability before fitting. D4variantselection is separate primary research and would require frozen training/evaluation separation; issue14 ALPHA20primarydepthsearch remains with peer owner."
+}

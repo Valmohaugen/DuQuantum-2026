@@ -1,0 +1,75 @@
+{
+  "status": "Frozen before first simulation",
+  "seeds": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "case": [
+    4,
+    2
+  ],
+  "models": [
+    "nominal",
+    "coherent",
+    "zz",
+    "signed_zz"
+  ],
+  "repetitions": 32768,
+  "shots_per_basis": 10000,
+  "detuning_realizations": 4,
+  "selection": "existing best_patch placement and estimate_error comparison; original maintained baseline on tie/no placement",
+  "state_tolerances": {
+    "maintained_baseline": 1e-05,
+    "new_exact_candidate": 1e-10
+  },
+  "independent_check": "general-k sufficient statistics versus explicit judge bitstrings before pilot, plus frozen stress model independent unitary checks",
+  "no_main_changes": true,
+  "source_manifest": "sources.json",
+  "entrypoint": "python -m research.bonus_d4_hardware_20261025.compare",
+  "files": [
+    {
+      "path": "baseline.py",
+      "sha256": "dfb6eab1ec26c4b33116ad00b2329d2d8a0d2dc6dfd9c6d78d7d008ba5863787"
+    },
+    {
+      "path": "compare.py",
+      "sha256": "1e15dcb9b5c8c9da064021f45c643ba15aeca96060689b4255ca75b106a4869a"
+    },
+    {
+      "path": "fast_eval.py",
+      "sha256": "2541605ace0f54b115dc38331dbb118867200c3a7ac0bc11d0828b6455cb4075"
+    },
+    {
+      "path": "judge.py",
+      "sha256": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6"
+    },
+    {
+      "path": "score.py",
+      "sha256": "eebfe3e679e4e1539e97663c6bc6569430206d3e1811538d8af50bbdc49e1683"
+    },
+    {
+      "path": "signed_noise.py",
+      "sha256": "c83e5bc981858b8f6014202b5b4604f5b404a0c0116dcb6c26ef6d746f6be9a7"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "8ce2a6c1dd2f1c378f2f2dcaced622a715cfb3b993e6c6339f12086e98196612"
+    },
+    {
+      "path": "stress_noise.py",
+      "sha256": "f05a1b6351e444d68074aabcf548b8a88877684a84627a922833d99a49dbaeca"
+    },
+    {
+      "path": "template_native.json",
+      "sha256": "f42de9bd086962e9f75d5a915c6e2ef67223b5d27236cf8e0d41188889b96c5a"
+    },
+    {
+      "path": "test_dicke.py",
+      "sha256": "310e484706607e051bcc65331b501b59dbb831b849c066812403d6c100a81080"
+    }
+  ]
+}

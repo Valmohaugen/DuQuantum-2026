@@ -1,0 +1,70 @@
+{
+  "status": "Figure6 transcribed visually; exact angle inferred algebraically, simulation/native comparison pending",
+  "paper_url": "https://si2.epfl.ch/demichel/publications/archive/2024/DATE_QC.pdf",
+  "paper_sha256": "486516ace0d692cf2d2856c4863c05af513013809fb81c84cc5ed8c71ff15344",
+  "figure": "6, page5",
+  "logical_qubit_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4"
+  ],
+  "initial_rotations": [
+    [
+      "q2",
+      "pi/4"
+    ],
+    [
+      "q3",
+      "pi/2"
+    ],
+    [
+      "q4",
+      "2*asin(sqrt(1/3))"
+    ]
+  ],
+  "operations": [
+    [
+      "CNOT",
+      "q4",
+      "q2"
+    ],
+    [
+      "Ry",
+      "q2",
+      "pi/4"
+    ],
+    [
+      "CNOT",
+      "q4",
+      "q2"
+    ],
+    [
+      "CNOT_negative_control",
+      "q4",
+      "q1"
+    ],
+    [
+      "CNOT_negative_control",
+      "q3",
+      "q4"
+    ],
+    [
+      "CNOT_negative_control",
+      "q3",
+      "q2"
+    ],
+    [
+      "CNOT",
+      "q2",
+      "q1"
+    ]
+  ],
+  "angle_note": "Figure prints0.39*pi onq4. Exact value inferred: after the first two CNOTs, four basis amplitudes have magnitude cos(theta/2)/2 and two have sin(theta/2)/sqrt(2); equality requires sin(theta/2)=1/sqrt(3). This inference must be verified by full simulation.",
+  "hardware_observation": "Logical interaction graph contains triangles (q1,q2,q4 andq2,q3,q4), so all six CNOTs cannot be directly placed on a bipartite Willow footprint. Routing or equivalent circuit transformations must be counted.",
+  "baseline": {
+    "CZ": 7,
+    "moments": 9
+  },
+  "next": "Verify logical state and then bounded routing/native scheduling; preserve9moment incumbent unless strict improvement."
+}

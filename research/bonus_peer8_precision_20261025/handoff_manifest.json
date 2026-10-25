@@ -1,0 +1,141 @@
+{
+  "files": [
+    {
+      "path": "research/bonus_peer8_precision_20261025/baseline_circuits.json",
+      "sha256": "054aeeeee18d54ee8636a428a7f843b73044b4c67115d0197f01c42f71178381"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/baseline_results.json",
+      "sha256": "a0de5cb91182250cc5d3ab1933105aa1b0ab0162f38da4d8166970d13253d03a"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/clean_clifford_tables.json",
+      "sha256": "d96165008545bdbece617635620b16ab6525b63c78415821cd91119f4a7979fd"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/coordination_note.txt",
+      "sha256": "2a8a2c33221ddd6eac4f87cc43c531ca7f3b155ae2d00325a8b0bec7aecfbf20"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/cost_triage_results.json",
+      "sha256": "ebe3c1a983fe9cf7673c2071b2d8310923d81320e6fec1fb565933b6b4659596"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/decoder_8_r0to3_native.json",
+      "sha256": "b94b8f8314b53ee49bdae33dbaa5a2ab1b4f1e37bdd8091919806b00847eadb0"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/decoder_checks.json",
+      "sha256": "849d875db1a46bb5c5dddc4b0508e918a96670fe3b7dccb6f2a89ee025930bb0"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/five_complex.json",
+      "sha256": "58625bb615547fc142942b0bb0cdb46421c59c3023b2cfc68067813f81f582cc"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/five_four.json",
+      "sha256": "7ce75852af8ec9c4d4c62d46a69c9c076f8c1f0a38ec25208bf471e21342b39d"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/five_real.json",
+      "sha256": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/fresh_line_10_5.json",
+      "sha256": "34244ebe0e0acdb3b40021e162f6e58bae977204dbfae9672f72568b3df42497"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/fresh_line_provenance.json",
+      "sha256": "18043f9ee1d85f90f534e93cd0195e01ecaadd8fb7906d97e1b8079f9fbd3862"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/handoff_summary.json",
+      "sha256": "b8dbfe9d2c575ab44b9e7d3bc624a8e6b0570a76c1a7deda234093e73ebe10fd"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/harvest_circuits.json",
+      "sha256": "b0953f93140c65d3c610df94de5d3388e5a844e2d52d0fe7f12c1fd7847633bf"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/harvest_results.json",
+      "sha256": "282335086aec8e3dbb593e9e54ebf062c9e1bf489159359dcf6e0cfb70955b0c"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/integrate.log",
+      "sha256": "0b64c1000f00e55e906e886e774bd4f7bc3de89a578e261f80baede8d4182364"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/integrate.py",
+      "sha256": "ba602bdce7a13c21326e3129873721c2b42869b359a235ffec8cada24baf67b5"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/integration_sources.json",
+      "sha256": "6ec8a48ede6c18f5ff511225b52d552fd45666633aeb581e3448975f043211f4"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/original_8_3.json",
+      "sha256": "6781b9a336c9ec77f17f797a01945211e737dd4dd9c5ac899a7dadd4e817d7e1"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/polish.log",
+      "sha256": "0741d7acdae893c7acb9e61d83c8a1317df17749fe77845bb8356d8c7920bb2c"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/polish.py",
+      "sha256": "6496aaccd97f7c80a030c2f46d941d0a98176c6a957cc66a6058eaa93e43913f"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/polished_6_3.json",
+      "sha256": "cc67bdcf372c23e663e35e0bdfb94f544dc0dbf9a76655251c6c911313d19b81"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/polished_7_3.json",
+      "sha256": "1392628a3682dfa7f44fcf798dc985c2a7b26d7cf0672d1cbebc365e22636f76"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/polished_8_3.json",
+      "sha256": "54ae0441491bb998c53317f1954cc6a0e24471e0938c0f4d5f68ddf92f1de8b7"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/precision_results.json",
+      "sha256": "9face74b8a05324354d1eeaee049e20ad873fcb7ee807cddb02dce1930c79cc0"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/preparation.json",
+      "sha256": "b0985e4acf3fe746dc66f714d0bf6b4d47fa6110045334fe1362844db59461fe"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/raw_precision_before_fit.json",
+      "sha256": "37238434c854fffef5abf8c32134ee5d42e3c7ff76eb27ce0c87bf1d9cb5c6f2"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/refined_halves.json",
+      "sha256": "4f2db62fd3eefa138e48b756843dcb0ae0b7b319143e3acff47754f917af9440"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/six_real.json",
+      "sha256": "7c16c4e27188432212472f2f648d36602cb2e39778a97ad2a7c4938b313db79d"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/snapshot.py",
+      "sha256": "71d305df83fbccfe9bcd228e16fdbf1aaeee9511f70b4dcc585ccf8036784d05"
+    },
+    {
+      "path": "research/bonus_peer8_precision_20261025/state_jacobian.py",
+      "sha256": "5af8081f4030132fd79366544abb1e0ac3c44c9f4543be5d89174c4a1d86d694"
+    }
+  ],
+  "status": "Frozen handoff; no further writes planned"
+}
