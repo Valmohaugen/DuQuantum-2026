@@ -241,13 +241,18 @@ Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/I
 | 2026-10-25 02:30 | 8993717 | pruned line circuits (7,3) (8,3) (9,3) (10,4), patches (10,3) (11,3) | 17.473 |
 | 2026-10-25 02:50 | 761433b | (10,4) 48-cz line, (9,4) 35-cz patch, (8,4) brickwork line, (9,3) 33-cz line | 17.480 |
 | 2026-10-25 03:45 | 5a0a94f | N >= 11: (11,4) (11,5) (12,3) (12,4) (13,4) (15,3) | 17.480 (N <= 8 unchanged) |
+| 2026-10-25 04:05 | c2e760e | brickwork-start lines (8,3) (9,3); (9,4) 33 cz; (10,5) 42 cz | 17.495 |
+| 2026-10-25 04:10 | 0dc1b2c | (10,4) 45-cz line; (11,5) 59 cz (in bec93b1) | 17.495 (N <= 8 unchanged) |
+
+Readout-only ceiling for the same placements (gate and idle noise switched off): 18.474 for N = 2..8,
+so roughly 1.0 is still recoverable at small N; the theoretical maximum (no noise at all) is 19.18.
 
 Per case, whole-state pruned circuits vs the previous toby_sol (CZ, expected score):
 (8,4) 43 -> 22 CZ, 0.675 -> 0.845; (9,4) 63 -> 36 CZ, 0.607 -> 0.734; (10,5) 85 -> 43 CZ,
-0.470 -> 0.685; (10,4) 77 -> 54 CZ, 0.546 -> 0.634; (10,3) 59 -> 39 CZ, 0.676 -> 0.785;
+0.470 -> 0.708; (10,4) 77 -> 45 CZ, 0.546 -> 0.724; (10,3) 59 -> 39 CZ, 0.676 -> 0.785;
 (11,3) 68 -> 44 CZ, 0.633 -> 0.763; (9,3) 44 -> 36 CZ, 0.724 -> 0.803; (7,3) 26 -> 20 CZ, 0.840 -> 0.903.
 Bonus (moments, N <= 15) also rises with these tables: 38.30 -> 39.60.
-N >= 11: (11,5) 104 -> 62 CZ (89 -> 55 moments), (12,3) 77 -> 51 CZ (0.611 -> 0.724, 1 seed),
+N >= 11: (11,5) 104 -> 59 CZ (89 -> 53 moments), (12,3) 77 -> 51 CZ (0.611 -> 0.724, 1 seed),
 (12,4) 105 -> 96, (13,4) 119 -> 112, (15,3) 91 -> 68. Robust under coherent CZ errors and ZZ crosstalk
 (toby's trajectory check, ISSUES #10).
 

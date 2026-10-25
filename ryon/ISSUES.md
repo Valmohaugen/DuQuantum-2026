@@ -171,6 +171,14 @@ path, fit, then prune) beat the line-construction start in score even with more 
 ((8,3) 0.005 vs 0.013), i.e. errors spread more evenly over the in-subspace patterns. (10,4) 45 cz 0.724,
 (10,5) 42 cz 0.708, (9,4) 33 cz 0.778. Readout-only bound for N = 2..8 (gate/idle noise off, same placement):
 18.474 vs 17.495 now, so about 1.0 is left at small N, mostly (8,2..4) and N = 7. Brickwork k = 2 runs going.
+Negative: pruning inside the weight-preserving family (givens + cz + z only, wfit.py) stalls far above toby_sol
+((7,2) 34 -> 32 vs 19), and brickwork k = 2 circuits are shallower but lose on Zb (seed-dependent 0.027..0.078).
+
+### 13. N = 12..14 with k >= 5 (open, unassigned)
+Every start stalls near toby_sol's own count: (12,5) 115-134, (12,6) 128-158, (13,5) 142, (14,7) 187-229 CZ, while
+(11,5) went 104 -> 59 from a 3-row line start. Ideas: longer 3-row runs (they need hours at N = 12), splitting the
+circuit into overlapping windows of about 8 qubits and pruning each window against the full state, or a better
+seed (e.g. the D(11,5)-style structure extended by one SCS step and refitted). Scripts: benchmark_outputs/ex/runfp.sh.
 Next (me): install N = 10..16 path/patch winners as they converge; brickwork-start pruning for k >= 3.
 k = 2 from an over-parameterised brickwork start on 2-row ladder footprints (toby): negative. Greedy
 single-CZ deletion gets stuck far above toby_sol: (6,2) 42 -> 17 CZ (toby_sol 15), (7,2) 80 -> 61 (19); (8,2) and
