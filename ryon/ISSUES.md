@@ -96,6 +96,10 @@ Status: in progress (ryon session, claimed 2026-10-25 01:35). Running on the clu
 for a = 7, 8 (fallback for N = 13..16 when no whole-state line fits) and a = 9, 10 (N = 17..20),
 warm-started from the line plan of each half (`benchmark_outputs/synth/search_half_warm.py`), with
 windowed prune so depth never grows. Results go into `halves` after an A/B with `ab.py`.
+Results so far (installed; they went in with 5a0a94f): (6,3) 36 -> 25 CZ and (7,3) 45 -> 32 CZ halves.
+Trajectory A/B (2 seeds, 60 trajectories, no-Zb): (12,3) +0.006, (13,3) +0.070, (14,3) +0.118 (95 -> 69 CZ).
+Also found, not used by any current case: (5,3) 19, (5,5) 35. `synth.py` now has a C kernel for fid_grad
+(15-25x faster, 3a43d2a), so half searches up to a = 10 are running again from the line plan.
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
