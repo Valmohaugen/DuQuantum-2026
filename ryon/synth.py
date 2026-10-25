@@ -142,13 +142,13 @@ def n_params(N, edges):
     return N + 2 * len(edges)
 
 
-def polish(N, k, edges, x0, target=None):
+def polish(N, k, edges, x0, target=None, maxiter=3000):
     target = _problem(N, k, target)
 
     def loss(x):
         ff, gg = fid_grad(N, edges, x[None], target)
         return 1 - ff[0] ** 2, -2 * ff[0] * gg[0]
-    r = minimize(loss, x0, jac=True, method="L-BFGS-B", options=dict(maxiter=3000, gtol=1e-14, ftol=1e-16))
+    r = minimize(loss, x0, jac=True, method="L-BFGS-B", options=dict(maxiter=maxiter, gtol=1e-14, ftol=1e-16))
     return float(r.fun), r.x
 
 
@@ -195,12 +195,13 @@ def layers(edges):
     return depth
 
 
-def prune(N, k, edges, theta, rng, tol=1e-10, restarts=16, iters=300, target=None, window=0):
+def prune(N, k, edges, theta, rng, tol=1e-10, restarts=16, iters=300, target=None, window=0, polish_iters=3000):
     """Drop CZs one at a time while an exact fit survives.
 
     Each try first polishes from the old angles. If that fails and restarts > 0, it refits with
     random restarts: all angles if window = 0, else only the angles of the CZs within window
     places of the removed one (the rest stay warm, which works far better on long circuits).
+    polish_iters caps each warm polish; a few hundred is enough to tell on large isometries.
     """
     target = _problem(N, k, target)
     edges = list(edges)
@@ -211,7 +212,7 @@ def prune(N, k, edges, theta, rng, tol=1e-10, restarts=16, iters=300, target=Non
             trial = edges[:i] + edges[i + 1:]
             p = N + 2 * i
             x0 = np.concatenate([theta[:p], theta[p + 2:]])
-            inf, x = polish(N, k, trial, x0, target)
+            inf, x = polish(N, k, trial, x0, target, polish_iters)
             if inf > tol and restarts:
                 free = None
                 if window:
