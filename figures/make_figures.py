@@ -281,7 +281,7 @@ def fig_resources():
         ax.set_ylabel(label)
         ax.grid(axis="y", which="major")
         panel_label(ax, tag, x=-0.15)
-    axes[0].legend(loc="upper left", handlelength=1.6)
+    axes[0].legend(loc="lower right", handlelength=1.6)
     axes[1].set_xlabel(r"Qubits $N$ (with $n = \lfloor N/2 \rfloor$)")
     axes[1].set_xticks(range(2, 16))
     save(fig, "fig6_resources")

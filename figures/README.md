@@ -51,3 +51,11 @@ expected score 1/(Z + X) for every case with N ≤ 8 and n ≤ N/2. Each bar is 
 synthetic calibrations in the local noise model (gate and readout errors, T1/T2, 7.5 kHz detuning).
 Ticks mark the noiseless limit for 10,000 shots per basis, where the Z term's shot-noise floor
 remains even for a perfect state. The circuits reach 17.66 of the possible 19.18 (92 %).
+
+**Fig. 6** ([pdf](fig6_resources.pdf), [png](fig6_resources.png)), single column. Circuit cost of
+D(N, ⌊N/2⌋) against the textbook construction: Bärtschi–Eidenbenz split-and-cyclic-shift, routed
+onto the chip with `cirq.RouteCQC`, which was the team's first solution (`archive/dicke_solution.py`).
+All three are compiled to CZ + PhasedXZ on Willow, and the main entry and the baseline use the same
+synthetic calibration. (a) CZ gates. (b) Depth in moments. At N = 15 the main entry uses 207 CZ in
+130 moments and the bonus 207 CZ in 119 moments, against 447 CZ in 529 moments for the baseline.
+That is 2.2× fewer CZ gates and 4–4.4× less depth.
