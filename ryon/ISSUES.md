@@ -12,7 +12,7 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **17.077** (3 seeds, N = 2..8). Bonus (N <= 15): 37.81.
+Baseline at 0dc262c: total 16.615. Current: **17.173** (3 seeds, N = 2..8). Bonus (N <= 15): 37.81.
 
 ## Open
 
@@ -32,6 +32,14 @@ sequence that's heavily over-parameterised (L = 90 for (7,3) fits exactly in und
 then `synth.prune(..., window=4)`, which re-randomises only the angles near the removed CZ.
 Shapes to try: 2x3, 2x3+1, 2x4, 3x3 minus a corner. Rank finalists with `fast_eval`, not by CZ
 count alone, because depth also costs idle decoherence.
+
+### 7. Synthesised ladder halves
+Status: in progress (ryon session)
+Each ladder half maps |0^(a-l) 1^l> to D(a, l) for every l in range. `toby_sol.halves` holds
+synthesised versions on a path, keyed (a, min(k, a), l_min). Search with
+`benchmark_outputs`-style random start + windowed prune (target = (inputs, outputs) in synth.py).
+Line costs to beat: (4,4) 21, (5,2) 14, (5,3) 27, (5,4) 35, (5,5) 38, (6,2) 18, (6,3) 36, (6,4) 49,
+(6,5) 57, (6,6) 60. These matter for every N up to 12, so they help larger N too.
 
 ### 2. Evaluate larger N
 `fast_eval` stops at N = 8, but the judges' N range is unknown. Add N = 9..12 (density matrix
@@ -69,6 +77,7 @@ dephasing. Check how much comes from depth and how much from CZ error, and wheth
 DD placement or a shallower schedule recovers it.
 
 ## Done
+- Ladder half (4,3) on a path: 18 -> 12 CZ. (7,3) 0.789 -> 0.830, (8,3) 0.768 -> 0.824, and (9,3) 50 -> 44 CZ.
 - Merged toby/ladder_sol.py (ladder split, doubling tree, two-variant bonus) with the patch table: 16.755 -> 17.077, bonus 26.35 -> 37.81.
 - (6,2) 18 -> 14 CZ and (6,3) 33 -> 12 CZ on a 2x3 patch: E[s] 0.932 -> 0.962 and 0.825 -> 0.934.
 - (5,2) on a 5-qubit patch: 11 CZ, E[s] 0.986 -> 1.005 (0dc262c).

@@ -317,8 +317,8 @@ def best_ladder(adj, node, n_q, k, use_blocks, bias, deadline, a=None):
     #two half paths joined by a straight 2-row ladder of k rungs; returns (left, right, plans) or none
     a = (n_q + 1) // 2 if a is None else a
     b = n_q - a
-    lsteps, lw = line_plan(a, k, use_blocks, max(0, k - b))
-    rsteps, rw = line_plan(b, k, use_blocks, max(0, k - a))
+    lsteps, lw = half_plan(a, k, use_blocks, max(0, k - b))
+    rsteps, rw = half_plan(b, k, use_blocks, max(0, k - a))
     found = []
     for q0 in node:
         for d in ((0, 1), (0, -1), (1, 0), (-1, 0)):
@@ -357,8 +357,25 @@ def best_ladder(adj, node, n_q, k, use_blocks, bias, deadline, a=None):
     return best[1], best[2], lsteps, rsteps
 
 
+def half_plan(n_qubits, k, use_blocks, l_min):
+    #one half of the ladder: a synthesised circuit from the halves table if there is one, else the line plan
+    h = halves.get((n_qubits, min(k, n_qubits), l_min))
+    if h is None:
+        return line_plan(n_qubits, k, use_blocks, l_min)
+    weights = [0] * (n_qubits - 1)
+    for a, b in h[0]:
+        weights[min(a, b)] += 1
+    return ("half", h), weights
+
+
+def half_ops(path, k, steps):
+    if steps and steps[0] == "half":
+        return patch_ops(path, *steps[1])
+    return line_ops(path, k, steps, False)
+
+
 def ladder_ops(left, right, k, lsteps, rsteps):
-    return split_ops(left, right, k) + line_ops(left, k, lsteps, False) + line_ops(right, k, rsteps, False)
+    return split_ops(left, right, k) + half_ops(left, k, lsteps) + half_ops(right, k, rsteps)
 
 
 def estimate_error(circuit, qubits, adj, node, bias):
@@ -635,6 +652,14 @@ block_angles = {
 #small (N, k) circuits on 2d grid patches, fitted offline with synth.py:
 #(cells as (row, col) offsets, cz sequence on cell indices, ry angles in patch_ops order,
 #optionally the cells that get a final z)
+#ladder halves fitted offline (synth.py): (path length, max excitations, min excitations) ->
+#(cz sequence on path positions, ry angles, optional final-z positions). each maps
+#|0^(a-l) 1^l> to D(a, l) for every l in range, so it replaces the line plan of that half
+halves = {
+    (4, 3, 0): (((1, 2), (1, 2), (2, 3), (0, 1), (1, 2), (1, 2), (2, 3), (0, 1), (1, 2), (0, 1), (0, 1), (1, 2)),
+                (-1.5707963258891742, -1.5707963533175953, 4.7123889561248795, 1.570796326417348, -2.356194487882588, 2.356194487739181, -4.712388999232681, -1.1609152704988209e-08, 4.712388981579096, -2.094395101646326, -3.2920562347510636, -3.1415926646086207, -1.5707963267916425, -5.759586530481251, 0.955316626864939, -3.141592651418572, 5.32786868509897, 1.5707963315714237, 5.497787145542351, -6.283185287002136, -0.7910793482054154, 1.5707963307093389, 1.6769886266394414, 1.5707963163135656, -3.141592664679205, 3.03479647569184, 3.141592648578505, -1.4871803890100105e-09)),
+}
+
 patches = {
     (4, 2): (((0, 0), (0, 1), (1, 0), (1, 1)), ((3, 2), (2, 0), (0, 1), (2, 0), (1, 3)),
              (1.107148713763576, -1.570796315714004, -2.225390530798368, -1.920221412087157, 2.60229140661367, 3.561182602987168, -1.570796336225327, 1.107148723429225, 1.570796336908662, 3.141592660823991, 3.141592671341913, -4.712389007131684, 1.570796327634962, -3.141592649593266)),
