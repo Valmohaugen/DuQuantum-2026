@@ -100,6 +100,11 @@ Results so far (installed; they went in with 5a0a94f): (6,3) 36 -> 25 CZ and (7,
 Trajectory A/B (2 seeds, 60 trajectories, no-Zb): (12,3) +0.006, (13,3) +0.070, (14,3) +0.118 (95 -> 69 CZ).
 Also found, not used by any current case: (5,3) 19, (5,5) 35. `synth.py` now has a C kernel for fid_grad
 (15-25x faster, 3a43d2a), so half searches up to a = 10 are running again from the line plan.
+(8,3) half 54 -> 38 CZ: (16,3) 113 -> 85 CZ, +0.138 / +0.164 / +0.050 on seeds 0..2 at 100 trajectories.
+**Use >= 100 trajectories for N >= 13 A/B**: the same comparison at 30 trajectories read -0.06.
+Candidate with 10 more halves (CZ and depth both below the line plan): (5,5) 32, (6,4) 46, (6,5) 52,
+(7,4) 58, (7,5) 72, (7,6) 80, (7,7) 83, (8,3) 38, (8,4) 72, (9,3) 43. Exact at N = 12..14; A/B at
+N = 14..16 running (`benchmark_outputs/synth/ab2.py`), installs after it passes.
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
