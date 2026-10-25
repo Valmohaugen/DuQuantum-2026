@@ -26,7 +26,10 @@ footprint (row 0 = left half, row 1 = right half).
 Random starting sequences don't converge exactly at N >= 7. What works there: take the line
 circuit on a Hamiltonian path of the patch, convert it with `synth.from_ops` (the leftover Z
 layer becomes the patch's `zset`), insert cancelling CZ pairs on patch edges, perturb, polish,
-then prune. (7,2) went 22 -> 18 in about 3 minutes this way.
+then prune. (7,2) went 22 -> 18 in about 3 minutes this way. Pruning the ladder circuit itself
+didn't help (its footprint has no spare edges). What converges reliably at N = 7: a random
+sequence that's heavily over-parameterised (L = 90 for (7,3) fits exactly in under a minute),
+then `synth.prune(..., window=4)`, which re-randomises only the angles near the removed CZ.
 Shapes to try: 2x3, 2x3+1, 2x4, 3x3 minus a corner. Rank finalists with `fast_eval`, not by CZ
 count alone, because depth also costs idle decoherence.
 
@@ -36,9 +39,8 @@ size 4^N, so N = 12 is about 256 MB) with fewer seeds, so changes aren't tuned t
 
 ### 3. Better n >= 2 construction for N >= 9
 Partly done: toby's two-half ladder (toby/ladder_sol.py) is merged into toby_sol and chosen per
-case by `estimate_error`. That selector is crude: on (5,2) and (6,2) it sometimes picks the
-option that simulates worse. A better estimate (or a small numpy noise simulation for N <= 8,
-since numpy is a cirq dependency) would fix it.
+case by `estimate_error`. Its selector is crude, but an oracle that always picks the best
+simulated candidate gains only +0.006 over N = 4..8 (5 seeds), so it's not worth replacing.
 The line split-and-cyclic-shift costs about 5 CZ per flagged gate and uses only a path. Options
 to evaluate: a grid-native layout (shorter paths between the SCS blocks), divide-and-conquer
 (Aktar, Bartschi, Badawy, Eidenbenz, IEEE TQE 2022), and the short-depth 2D construction of
