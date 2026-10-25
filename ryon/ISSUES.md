@@ -126,8 +126,9 @@ trajectories: +0.005 for the line on average (+-0.06 per seed). Equal; kept the 
   benchmark_outputs/halfuse.txt), it cuts >= 15 % CZ with less depth, and a 100-trajectory A/B passes
   (`benchmark_outputs/synth/ab2.py` against a copy in AB_SOL, or `ab.py halves <a,k,0> <N:n> <seed> 100`).
 - Still open: k >= 4 halves for N >= 14 (line plan still used everywhere there, e.g. (14,7) 187, (16,8) 253 CZ);
-  warm starts only shave 5-9 %. Possibly unbalanced ladder splits: with the (6,4) half, (14,4) at 6 + 8 would be
-  123 CZ vs 133, but the 8 s split budget may stop before a = 6 is tried.
+  warm starts only shave 5-9 %. Unbalanced splits don't rescue it: with the (6,4) half, (14,4) at 6 + 8 is 123 CZ
+  vs 133, all splits are tried (0.1 s each), and estimate_error still picks 7 + 7 because the 8-qubit line half
+  is deeper (57 vs 48 layers). Needs a shallower (7,4) / (8,4) half, not a different split.
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
