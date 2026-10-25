@@ -16,6 +16,21 @@ Baseline at 0dc262c: total 16.615. Current: **17.192** (3 seeds, N = 2..8). Bonu
 
 ## Open
 
+### 9. Whole-state CZ pruning for every (N, k), N = 7..12 (primary score)
+Status: in progress (ryon session, Slurm sweep running; please don't duplicate, add footprints instead)
+Same idea as BR-105, applied to the hardware problem: build toby_sol's circuit inside a grid
+footprint (2xL ladder, 3-row snake, near-square), rewrite it as the real CZ + Ry ansatz, then delete
+one CZ at a time and refit against the final state only; when stuck, insert a cancelling CZ pair on
+a footprint edge. Scripts: `benchmark_outputs/ex/gprune.py` (serial) and `gpar.py` (32 deletion
+trials in parallel per step), results `benchmark_outputs/ex/out/g*_N_k_*.json` (same keys as the
+patch installer). `ex_sol.py` there is toby_sol with these patches swapped in, for A/B in fast_eval.
+First 40 s of search, CZ counts (current toby_sol in brackets): (7,3) 21 [26], (8,3) 26 [29],
+(8,4) 24 [43], (9,3) 34 [50], (9,4) 45 [63], (10,3) 40 [59], (10,5) 57 [85], (11,3) 46 [68],
+(12,3) 56 [77]. fast_eval N = 7..8, 3 seeds: (8,4) 0.675 -> 0.809, (7,3) 0.840 -> 0.872.
+k = 2 and k = 1 circuits don't prune at all from the toby_sol start (W uses 2N - 3, k = 2 uses
+4N - 9); a different start (over-parameterised random brickwork, then prune) is needed there.
+A complex Rz Ry Rz ansatz did not beat the real one on (5,2) 11 or (6,3) 12.
+
 ### BR-101. Exact Clifford refits before depth compilation
 Status: measured (bonus research, isolated files)
 `research/bonus_depth_20261024/clean_cliffords.py` fixes near-Clifford fitted
@@ -56,15 +71,44 @@ notebook (`grid_score_validation.json`), and the calibrated selector chooses
 These are local model results. The 19-CZ half is available for integration.
 
 ### BR-105. Global state-only depth search escapes the ladder-isometry cost
-Status: independent D(8,4) validation passed; larger targets running
+Status: complete-suite validation and paired D(8,4) hardware-model checks passed
 `global_grid_8_4.json`: **25 CZ / 26 moments** as emitted before final compiler
 and commutation passes; complete constructor is **25 CZ / 25 moments**, versus
 49 CZ / 43 moments. Full complex128 state error 1.3e-15 and Willow native/device
 validation pass (`global_grid_8_4_independent.json`). Unlike a half-isometry fit,
 the optimization constrains only the final pure state, while alternating topology
-growth with pruning and preserving the best depth. Calibrated hardware-model
-comparison is running. Searches also target (9,4) and (10,5). No shared constructor
-edits; the patch data are in the research directory.
+growth with pruning and preserving the best depth. `grid_submission_v3.py`
+passes all 56 cases at **42.3530245451**, including this new patch. The local
+three-calibration mean E[score] for D(8,4) is **0.68164 -> 0.84200**;
+hardware schedule is 46 -> 27 moments, 49 -> 25 CZ. Each score uses 4096
+Monte Carlo repetitions of 10,000 shots, two detuning realizations and all X
+orders (`global_hardware_probe.json`). No shared constructor edits.
+
+### BR-106. Direct vector residuals and native full Jacobians for large cases
+Status: measured without improvement in first two bounded fits
+The first global searches gave (9,4) 60 -> 57 moments and no improvement on
+(10,5) in their bounded runs. `residual_kernel.c` computes the full forward
+state Jacobian; its states and derivatives match NumPy and finite differences
+at N=3,5. `residual_fit.py` uses nonlinear least squares rather than a scalar
+squared-overlap objective. New runs insert four cancelling CZ pairs before
+pruning, so they do not spend the entire first pass in the old topology.
+Outputs carry the `_gn` suffix and are excluded from candidate exports until
+they have strict state/native validation. First results: (9,4) stays at 60
+moments and (10,5) stays at 69, so the scalar-overlap search currently wins.
+These bounded experiments do not establish lower bounds. The score target
+remains 45.
+
+### BR-107. State-only portfolio for higher score gain per removed moment
+Status: running serially on the existing compute session
+`run_global_portfolio.py` targets (7,3), (8,3), (9,3), (10,3), (11,3),
+(12,3), 180 seconds per search. These use the new routed half circuits as
+warm starts, then constrain only the final state. `global_portfolio_run.json`
+records completed cases; a running status file alone is not proof of a live
+process. The explicit native-moment cache, `grid_cached_submission.py`, passes
+all 56 cases at 42.3530245451, with maximum constructor time 0.076 s in the
+complete exact-state/native/device validation run. Its main entry point also
+includes the globally synthesized (8,4) patch; calibrated k=3 half selection
+remains in the separate experimental `grid_hardware_candidate.py`.
 
 ### BR-103. Compressed binary Schmidt labels
 Status: exploratory
