@@ -245,12 +245,16 @@ Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/I
 | 2026-10-25 04:10 | 0dc1b2c | (10,4) 45-cz line; (11,5) 59 cz (in bec93b1) | 17.495 (N <= 8 unchanged) |
 | 2026-10-25 05:40 | 5fbdb31 | depth-weighted pruning (cost = cz + 3 x cz layers): (5,2) (6,2) (6,3) (7,2) | 17.528 |
 | 2026-10-25 06:15 | 484dc11 | (10,5) 40-cz depth-weighted line, 0.708 -> 0.728 | 17.528 (N <= 8 unchanged) |
+| 2026-10-25 07:10 | a453a9c | (9,4) 37-cz shallow line, 0.778 -> 0.784 | 17.528 (N <= 8 unchanged) |
+
+Part 2 (bonus): the same searches gave 15 circuits shallower than the bonus portfolio (+2.2 points vs milestone
+101047Z); most are now merged (milestone 105326Z, 51.04). Remaining 4 are in research/primary_depth_20261025 (ISSUES 14).
 
 Readout-only ceiling for the same placements (gate and idle noise switched off): 18.474 for N = 2..8,
 so roughly 1.0 is still recoverable at small N; the theoretical maximum (no noise at all) is 19.18.
 
 Per case, whole-state pruned circuits vs the previous toby_sol (CZ, expected score):
-(8,4) 43 -> 22 CZ, 0.675 -> 0.845; (9,4) 63 -> 36 CZ, 0.607 -> 0.734; (10,5) 85 -> 43 CZ,
+(8,4) 43 -> 22 CZ, 0.675 -> 0.845; (9,4) 63 -> 37 CZ, 0.607 -> 0.784; (10,5) 85 -> 43 CZ,
 0.470 -> 0.728; (10,4) 77 -> 45 CZ, 0.546 -> 0.724; (10,3) 59 -> 39 CZ, 0.676 -> 0.785;
 (11,3) 68 -> 44 CZ, 0.633 -> 0.763; (9,3) 44 -> 36 CZ, 0.724 -> 0.803; (7,3) 26 -> 20 CZ, 0.840 -> 0.903.
 Bonus (moments, N <= 15) also rises with these tables: 38.30 -> 39.60.
