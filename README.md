@@ -564,6 +564,13 @@ reaches only 0.988, below main's real 1.050. Depth costs about 3 % in this model
 explain the gap. The model has T1 = 68 us, T2 = 89 us, 7.5 kHz detuning and no crosstalk (ISSUES #10 covers
 ZZ and coherent CZ errors).
 
+Main entry of toby/bonus_portfolio_squeeze_sol.py vs toby_sol at larger N (trajectories, seed 0, Z floor + X for N >= 11;
+[rows](research/new_metric_20261025/rows_traj_portfolio.jsonl)): 0.834 / 0.825 for N = 2..12, 0.673 / 0.661 for N = 2..14,
+0.537 / 0.525 for N = 2..16 and 0.423 / 0.422 for N = 2..18. The clear wins are where the portfolio uses fewer CZ:
+(15,7) 216 -> 207 CZ, 6.51 -> 5.01; (15,6) 4.64 -> 3.82; (12,5) 2.56 -> 2.22. Its one clear loss is (15,3), where it uses
+102 CZ / 55 moments against 68 / 95 (1.59 -> 2.00). For N >= 16 the two often emit the same CZ and moment counts,
+and differences there (up to +-0.5) are trajectory noise at 30 to 80 trajectories.
+
 The bonus build is about 15 % shallower, but its penalty is 5 to 25 % higher than main's in all
 36 cases (N = 2..12). It places circuits without calibration data, and the packed 1q gates
 raise Z bias (zb 0.05 to 0.13 against 0.01 to 0.02). Depth does cost score: zeroing the
