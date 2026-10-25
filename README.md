@@ -19,6 +19,11 @@ strict emitted-depth improvements even when they use more CZ gates.
 Update 09:45: [toby/bonus_squeeze_sol.py](toby/bonus_squeeze_sol.py) scores **51.4051** (56 cases, all validated).
 It runs that export, then a z-ejection and realignment pass verified against the export's own state:
 (13,3) 55 -> 54, (14,3) 57 -> 55, (15,3) 67 -> 64. The pass is generic and can wrap later exports.
+Update 10:05: [toby/bonus_portfolio_squeeze_sol.py](toby/bonus_portfolio_squeeze_sol.py) scores **51.8367** (56 cases, all
+validated, max 119 moments, build <= 2.7 s). It applies the same pass to the unpushed calibrated portfolio
+`toby/portfolio_sol.py` from exp/depth-search 4df75cc, which scores 51.5954 on its own. It is equal to or shallower than
+bonus_squeeze_sol in every case: (8,3) 23 -> 21, (11,3) 33 -> 32, (11,4) 61 -> 60, (12,3) 39 -> 38,
+(13,3) 54 -> 51, (14,3) 55 -> 51, (15,3) 64 -> 52.
 
 ## Harmonic objective and paired evaluations — 2026-10-25
 
@@ -479,6 +484,7 @@ The target remains **45**. These are local bonus scores, not hardware results.
 | --- | ---: | ---: | --- | --- |
 | 2026-10-25 | 43.2219421632 | 56 | [Frozen native portfolio](research/bonus_portfolio_20261025/portfolio_submission.py) | [Validation](research/bonus_portfolio_20261025/validation.json), [source selection](research/bonus_portfolio_20261025/merge_results.json) |
 | 2026-10-25 09:45 | 51.4051 | 56 | [toby/bonus_squeeze_sol.py](toby/bonus_squeeze_sol.py): native_submission.py (51.3337) plus a z-ejection / realignment pass; (13,3) 55 -> 54, (14,3) 57 -> 55, (15,3) 67 -> 64 moments | all 56 pass Willow105.validate_circuit and judge.test_circuit, max build 2.6 s |
+| 2026-10-25 10:05 | 51.8367 | 56 | [toby/bonus_portfolio_squeeze_sol.py](toby/bonus_portfolio_squeeze_sol.py): exp/depth-search portfolio_sol.py (51.5954) plus the same pass | all 56 pass Willow105.validate_circuit and judge.test_circuit, max build 2.7 s |
 
 Reusable tasks and their acceptance criteria are recorded in
 [the shared issue queue](ryon/ISSUES.md) and
