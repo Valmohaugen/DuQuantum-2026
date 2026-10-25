@@ -1,0 +1,83 @@
+[
+  {
+    "name": "patches_5_2.json",
+    "table": "patches",
+    "n": 5,
+    "k": 2,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(5, 2)",
+    "sha256": "378789fab9e9dbf2e75f9c9c513af4bdec40c15e5b3e3e2a4d7dbdd743a119d9"
+  },
+  {
+    "name": "patches_6_2.json",
+    "table": "patches",
+    "n": 6,
+    "k": 2,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(6, 2)",
+    "sha256": "c3b4a3a9841e2d615e25b341b64f115b4f59e5344a77d0d837489d2ace457e91"
+  },
+  {
+    "name": "patches_7_2.json",
+    "table": "patches",
+    "n": 7,
+    "k": 2,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(7, 2)",
+    "sha256": "fd90461b3e7703e03dce1d0f53e22b990679c12372584fc97ff044aed4871b36"
+  },
+  {
+    "name": "patches_11_5.json",
+    "table": "patches",
+    "n": 11,
+    "k": 5,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(11, 5)",
+    "sha256": "c4d6ac78a60c06d0e2ac43363964c29384ba3ed4ef8116c0f24c4d2aad726772"
+  },
+  {
+    "name": "lines_6_3.json",
+    "table": "lines",
+    "n": 6,
+    "k": 3,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(6, 3)",
+    "sha256": "d5a9b1c6fb3baac2f8596c955ae71887fb164e1bc9183c42705328bd75027bff"
+  },
+  {
+    "name": "halves_7_3.json",
+    "table": "halves",
+    "n": 7,
+    "k": 3,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(7, 3, 0)",
+    "sha256": "7ec51cdef569a512abb3ff84dbe9dec921f9980b226eb5309d7f39b0939aeba0"
+  },
+  {
+    "name": "halves_8_3.json",
+    "table": "halves",
+    "n": 8,
+    "k": 3,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(8, 3, 0)",
+    "sha256": "6781b9a336c9ec77f17f797a01945211e737dd4dd9c5ac899a7dadd4e817d7e1"
+  },
+  {
+    "name": "halves_9_3.json",
+    "table": "halves",
+    "n": 9,
+    "k": 3,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(9, 3, 0)",
+    "sha256": "18a7b94d4494edfe70984971992194b972e80fbc8ba1df26996244546f07a4f9"
+  },
+  {
+    "name": "halves_10_3.json",
+    "table": "halves",
+    "n": 10,
+    "k": 3,
+    "source": "5732c7bb2bc95181fa218ffe2a8733426800dd71:(10, 3, 0)",
+    "sha256": "9091464547b48a9304663d8f899532024026a79dff3f5480d962afb583b94d75"
+  },
+  {
+    "name": "halves_6_4.json",
+    "table": "halves",
+    "n": 6,
+    "k": 4,
+    "source": "benchmark_outputs/synth/sol_hwarm_6_4_s12.json",
+    "source_sha256": "f78e37ed39d137b580158d4fd8907c8835d371add61bf354c01ca49f0940865f",
+    "sha256": "2e96a4f7193d5ce3ed858da0e71ff0a6b23a8b5cd605495cc81d27f0a98707d5"
+  }
+]

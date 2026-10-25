@@ -1,0 +1,23 @@
+{
+  "status": "Exact logical warm start verified; bounded deletion pilot completed without accepted reductions",
+  "source": "full5_source.json",
+  "raw_coefficients_already_pass": true,
+  "raw_column_error": 8.019452329676307e-16,
+  "coefficients_changed": false,
+  "logical_core_CZ": 47,
+  "full_state_error": 1.1719936499030627e-15,
+  "trials": 10,
+  "accepted": 0,
+  "best_trial_error": 0.020059226285194645,
+  "seconds": 50.71666033845395,
+  "jacobian_direction_error": 8.777134574700085e-11,
+  "limitations": [
+    "Every trial reached its five-second deadline; no impossibility or topology lower bound follows.",
+    "Logical circuits contain nonadjacent edges and start from an ideal folded root vector. No physical routing or hardware score is claimed.",
+    "The source max_column_error metadata described compiled behavior; direct raw coefficients already pass. The precision call made no coefficient update."
+  ],
+  "next_actions": [
+    "Screen exact correlated Schmidt-pair transformations or topology changes before longer deletion fits.",
+    "Count root, both routed cores and all interfaces before any portfolio comparison."
+  ]
+}

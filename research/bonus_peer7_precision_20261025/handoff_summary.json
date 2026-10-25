@@ -1,0 +1,129 @@
+{
+  "status": "Fixed-topology precision repair and bounded faithful integration complete",
+  "baseline_score": 49.043290104110376,
+  "score": 49.111519281511065,
+  "delta": 0.06822917740068846,
+  "improvements": [
+    {
+      "N": 14,
+      "k": 3,
+      "before": 59,
+      "depth": 57,
+      "CZ": 65,
+      "state_l2_error": 1.8820514345768696e-15,
+      "source": "ladder-7-True-standard-standard"
+    },
+    {
+      "N": 13,
+      "k": 3,
+      "before": 57,
+      "depth": 55,
+      "CZ": 60,
+      "state_l2_error": 1.4630928661663685e-15,
+      "source": "ladder-6-True-standard-standard"
+    },
+    {
+      "N": 15,
+      "k": 3,
+      "before": 71,
+      "depth": 69,
+      "CZ": 74,
+      "state_l2_error": 1.763226241388592e-15,
+      "source": "ladder-7-True-standard-peer_new7"
+    }
+  ],
+  "all56_retained_verified": true,
+  "max_retained_state_error": 1.486027890605259e-07,
+  "precision": {
+    "numerical_budget_seconds": 60,
+    "numerical_seconds": 0.18385619577020407,
+    "termination": "`xtol` termination condition is satisfied.",
+    "derivative_max_errors": [
+      2.3704628167918336e-10,
+      1.2012360121582822e-10,
+      6.986822231880296e-11
+    ],
+    "evaluations": 4,
+    "maximum_angle_change": 5.79217600105153e-07,
+    "raw_before": {
+      "source_sha256": "7ec51cdef569a512abb3ff84dbe9dec921f9980b226eb5309d7f39b0939aeba0",
+      "raw_column_errors": [
+        4.480367568440393e-08,
+        4.7782447589806476e-08,
+        6.383631067247715e-08,
+        1.1603577066528063e-07
+      ],
+      "raw_max_error": 1.1603577066528063e-07,
+      "raw_passes": false,
+      "faithful_native": {
+        "name": "unmodified-peer7-faithful",
+        "n": 7,
+        "k": 3,
+        "depth": 51,
+        "CZ": 30,
+        "max_column_error": 1.1603577067728718e-07,
+        "column_errors": [
+          4.480367532417143e-08,
+          4.778244737320506e-08,
+          6.383631085370854e-08,
+          1.1603577067728718e-07
+        ],
+        "common_phase": [
+          -0.9953070418955395,
+          -0.09676720701328059
+        ],
+        "accepted": false
+      },
+      "common_real_sign": 1.0,
+      "note": "Written before least_squares is called. No coefficient change if raw and native already pass."
+    },
+    "raw_after_column_errors": [
+      7.429481302347383e-16,
+      8.127579458679864e-16,
+      8.754225721911859e-16,
+      7.970017286060746e-16
+    ],
+    "raw_after_max_error": 8.754225721911859e-16,
+    "faithful_native": {
+      "name": "polished-peer7-faithful",
+      "n": 7,
+      "k": 3,
+      "depth": 51,
+      "CZ": 30,
+      "max_column_error": 1.1667206144775692e-15,
+      "column_errors": [
+        1.0080857660351931e-15,
+        1.0035350883805848e-15,
+        1.1667206144775692e-15,
+        1.0017489560911772e-15
+      ],
+      "common_phase": [
+        0.9953070521965246,
+        0.09676710106159357
+      ],
+      "accepted": true
+    },
+    "integration_eligible": true,
+    "no_topology_change": true,
+    "no_default_ejection": true,
+    "incumbent_same_range_depth": 53
+  },
+  "attempt_count": 170,
+  "coverage_counts": {
+    "complete": 48
+  },
+  "unfinished_groups": [],
+  "search_budget_seconds": 90,
+  "search_seconds": 41.906277537345886,
+  "total_seconds": 44.456942482851446,
+  "gain_attribution": "N13 split6/7 uses certified25CZ six-site and new30CZ seven-site; N14 split7/7 uses newseven onboth sides; N15 split7/8 uses newseven onboth sides plus a line prefix on8-site side.",
+  "changed_lookup_identity": "Private(7,3,0) lookup changes from previous32CZ/53moment coefficients to new30CZ/51moment coefficients; these combinations therefore contain a genuinely changed module. k2standard7 alternatives not containing the newdecoder are filtered out.",
+  "coherent_range": "All four unary columns r0..3 share one phase; no r4..7 support claimed.",
+  "scope": "Fixed gate sequence only,67angles/30CZ;0.184s numerical repair, no default ejection or topology search. Broader ryon synthesis/issue13 claims preserved; only new isolated directory written.",
+  "queue_update": "Latest retained56-case bonus49.111519281511065 after fixed-topology new7,3 precision repair: raw1.16e-7\u21928.75e-16, faithful native1.17e-15 at51moments/30CZ. N13k3 57\u219255, N14k3 59\u219257, N15k3 71\u219269; all newly composed state errors<2e-15. Frozen coefficients/nativepool/results/source hashes: research/bonus_peer7_precision_20261025. No r>3 claim, broad synthesis or maintained edit. All planned balanced/adjacent changed-module groups completed; CPU released.",
+  "remaining_needs": [
+    "Parent standalone export and immutable milestone check remain separate.",
+    "New6,4/8,3/9,3/10,3 raw tables remain excluded; no polish of those was attempted.",
+    "No further integration of unchanged PORT022 alternatives is required."
+  ]
+}

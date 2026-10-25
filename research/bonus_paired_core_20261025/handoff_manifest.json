@@ -1,0 +1,14 @@
+{
+  "research/bonus_paired_core_20261025/full5_polished.json": "697fa36985a660fbe5451fa6b5114a77f454bc3d064de6eb626348b619648e95",
+  "research/bonus_paired_core_20261025/full5_source.json": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d",
+  "research/bonus_paired_core_20261025/handoff_summary.json": "05305b7e44c539a5446fea6df5a38e7de2e7440fb796b24af603db095230351d",
+  "research/bonus_paired_core_20261025/paired_core_objective.py": "743d75fae37768d1e719fb842b7fc432265065012ba9dcaab4efb18340c5fa48",
+  "research/bonus_paired_core_20261025/peer_synth_snapshot.py": "c9b21fe445217bed039f6285b9decea8faa9419951182f6b8af3c123dab1b5a6",
+  "research/bonus_paired_core_20261025/prune.py": "0a77273d279fe6acf3c1ab98f79676111b3905cd33c97f7edc5f5e87d5829111",
+  "research/bonus_paired_core_20261025/prune_prepared.json": "92d84f2ac45bb629a82035d13e0c39aabfd2613566a84968c277c672d3121afc",
+  "research/bonus_paired_core_20261025/prune_results.json": "2ca524f0dbfd25f5e90ccffa2661bee8c81933a8a0838c33401161e759e58ec7",
+  "research/bonus_paired_core_20261025/sources.json": "f48357f754b36f73401312044c66ea372bfe9bb3d046bd3d32828d7ebf0b51bc",
+  "research/bonus_paired_core_20261025/warmstart.json": "ac0df534bf608e49a3fad4d212b1162834933e1760d987e6cc6e0267bd269358",
+  "research/bonus_paired_core_20261025/warmstart.py": "b75092de2b6161c45a43ac8b2a253e6e19aabe873115ea14636e8d5f722cfea2",
+  "research/bonus_paired_core_20261025/warmstart_logical_core.json": "2f9ea6d0ff3b4c98c5813ce9b3e2cf30196fff8041eb5227656ea9c3feec09aa"
+}

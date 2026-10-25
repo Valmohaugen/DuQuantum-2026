@@ -1,0 +1,85 @@
+{
+  "files": [
+    {
+      "source": "research/bonus_peer_refresh_20261025/helpers.py",
+      "frozen": "research/bonus_peer7_precision_20261025/helpers.py",
+      "sha256": "4f9699805553b3c043b44ed06fbcb2b4a542273911d2de4d3f5c795e533fc85d"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/snapshot.py",
+      "frozen": "research/bonus_peer7_precision_20261025/snapshot.py",
+      "sha256": "71d305df83fbccfe9bcd228e16fdbf1aaeee9511f70b4dcc585ccf8036784d05"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/probe.py",
+      "frozen": "research/bonus_peer7_precision_20261025/probe.py",
+      "sha256": "c455a077251ca044a4f4c4f9aa4835aba1319a27db673e54aae31d953e84151b"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/commuting_schedule.py",
+      "frozen": "research/bonus_peer7_precision_20261025/commuting_schedule.py",
+      "sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/clean_clifford_tables.json",
+      "frozen": "research/bonus_peer7_precision_20261025/clean_clifford_tables.json",
+      "sha256": "d96165008545bdbece617635620b16ab6525b63c78415821cd91119f4a7979fd"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/refined_halves.json",
+      "frozen": "research/bonus_peer7_precision_20261025/refined_halves.json",
+      "sha256": "4f2db62fd3eefa138e48b756843dcb0ae0b7b319143e3acff47754f917af9440"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/five_real.json",
+      "frozen": "research/bonus_peer7_precision_20261025/five_real.json",
+      "sha256": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/five_complex.json",
+      "frozen": "research/bonus_peer7_precision_20261025/five_complex.json",
+      "sha256": "58625bb615547fc142942b0bb0cdb46421c59c3023b2cfc68067813f81f582cc"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/six_real.json",
+      "frozen": "research/bonus_peer7_precision_20261025/six_real.json",
+      "sha256": "7c16c4e27188432212472f2f648d36602cb2e39778a97ad2a7c4938b313db79d"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/five_four.json",
+      "frozen": "research/bonus_peer7_precision_20261025/five_four.json",
+      "sha256": "7ce75852af8ec9c4d4c62d46a69c9c076f8c1f0a38ec25208bf471e21342b39d"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/polished_6_3.json",
+      "frozen": "research/bonus_peer7_precision_20261025/polished_6_3.json",
+      "sha256": "cc67bdcf372c23e663e35e0bdfb94f544dc0dbf9a76655251c6c911313d19b81"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/halves_7_3.json",
+      "frozen": "research/bonus_peer7_precision_20261025/original_7_3.json",
+      "sha256": "7ec51cdef569a512abb3ff84dbe9dec921f9980b226eb5309d7f39b0939aeba0"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/half_checks.json",
+      "frozen": "research/bonus_peer7_precision_20261025/source_half_checks.json",
+      "sha256": "eea30ab755cefed95dbdac28ffa0424b216b9c54bf304ae67e220fd5e21589e1"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/refresh_circuits.json",
+      "frozen": "research/bonus_peer7_precision_20261025/baseline_circuits.json",
+      "sha256": "50fa75178171c4ad9f2e6ea176faa9b235f7a4efbfbebdae4f98fc2290be8b93"
+    },
+    {
+      "source": "research/bonus_peer_refresh_20261025/refresh_results.json",
+      "frozen": "research/bonus_peer7_precision_20261025/baseline_results.json",
+      "sha256": "c38f81795bb69de6ba38544bd4330756bf9d963e9c4dfa629845a9fc49028d13"
+    },
+    {
+      "source": "research/bonus_faithful_terminal_integration_20261025/harvest.py",
+      "frozen": "research/bonus_peer7_precision_20261025/harvest.py",
+      "sha256": "69cc14f2da10171414a774699903c83bab1d15e8691f3e573622583abab383e8"
+    }
+  ],
+  "baseline_score": 49.043290104110376
+}

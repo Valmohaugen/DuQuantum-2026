@@ -1,0 +1,14 @@
+{
+  "status": "frozen before deletion results",
+  "files": {
+    "prune.py": "0a77273d279fe6acf3c1ab98f79676111b3905cd33c97f7edc5f5e87d5829111",
+    "warmstart.py": "b75092de2b6161c45a43ac8b2a253e6e19aabe873115ea14636e8d5f722cfea2",
+    "warmstart.json": "ac0df534bf608e49a3fad4d212b1162834933e1760d987e6cc6e0267bd269358",
+    "paired_core_objective.py": "743d75fae37768d1e719fb842b7fc432265065012ba9dcaab4efb18340c5fa48",
+    "peer_synth_snapshot.py": "c9b21fe445217bed039f6285b9decea8faa9419951182f6b8af3c123dab1b5a6"
+  },
+  "scope": "Ten independent left inverse-fold single-CZ deletions, no native acceptance without later routing/full-state validation",
+  "trial_seconds": 5,
+  "total_seconds": 60,
+  "strict_logical_error": 1e-10
+}

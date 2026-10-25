@@ -1,0 +1,22 @@
+{
+  "python": "/home/rpeddap/.venvs/duq/bin/python",
+  "versions": {
+    "cirq-core": "1.8.0.dev20261023221525",
+    "cirq-google": "1.8.0.dev20261023221525",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "networkx": "3.6.1"
+  },
+  "environment": {
+    "SYNTH_KERNEL": "0",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "supported_replay": [
+    "python -m research.bonus_peer_refresh_20261025.screen",
+    "python -m research.bonus_peer7_precision_20261025.polish",
+    "python -m research.bonus_peer7_precision_20261025.integrate --seconds 90",
+    "python -m research.bonus_band_20261025.verify_bonus research.bonus_band_20261025.native_submission"
+  ],
+  "limitations": "Frozen helper/probe/schedule legacy __main__ harnesses are not supported replay entrypoints. Published standalone constructor and native JSON do not need those harnesses. Repository requirements elsewhere do not describe this tested environment."
+}

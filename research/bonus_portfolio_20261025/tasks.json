@@ -2352,7 +2352,7 @@
   {
     "id": "PORT-029",
     "title": "Optimize paired general cores for the actual balanced Dicke state",
-    "status": "assigned; exact compressed objective verified, no fit yet",
+    "status": "bounded logical pilot complete; no accepted deletion or native gain",
     "assignee": "bonus-depth",
     "inputs": [
       "research/bonus_symmetric_core_20261025/paired_core_objective.py",
@@ -2363,6 +2363,59 @@
       "Use general real cores and actual joint-state fidelity; preserve correlated phase freedom.",
       "Verify a bounded small pilot before larger pruning.",
       "Require native full-state/device validation and complete depth improvement before changing any portfolio."
+    ],
+    "results": "research/bonus_paired_core_20261025/handoff_summary.json",
+    "next_action": "Screen correlated Schmidt-pair transformations before longer fitting; all ten independent five-second deletions failed strict state tolerance."
+  },
+  {
+    "id": "PORT-030",
+    "title": "Harvest fresh committed whole-state circuits without new synthesis",
+    "status": "complete; two improved cases, all56 retained checks pass",
+    "assignee": "coordination-research",
+    "scope": "Frozen committed payloads only; preserve existing portfolio depths.",
+    "results": "research/bonus_peer_refresh_20261025/handoff_summary.json",
+    "score": 49.043290104110376
+  },
+  {
+    "id": "PORT-031",
+    "title": "Precision-certify the new30CZ seven-site half and integrate changed modules",
+    "status": "complete; three improved cases, standalone49.111519281511065 verified",
+    "assignee": "coordination-research",
+    "scope": "Fixed67-angle/30CZ topology; four supported columns share one phase below1e-10. Faithful compilation, bounded90second integration; no broad synthesis.",
+    "results": "research/bonus_peer7_precision_20261025/handoff_summary.json",
+    "checkpoint": "research/bonus_band_20261025/milestones/20261025T101047Z/summary.json"
+  },
+  {
+    "id": "PORT-032",
+    "title": "Triage remaining fresh6,4 and8,3 coherent halves",
+    "status": "assigned; owner accepted, cost and supported-column comparison pending",
+    "assignee": "coordination-research",
+    "scope": "Separate directory. Compare identical supported-column ranges with faithful compilation against certified alternatives; polish the supplied fixed topology only if a strict native-depth opportunity survives. No broad synthesis or maintained edits; preserve issue11/13 ownership.",
+    "inputs": [
+      "research/bonus_peer_refresh_20261025/halves_6_4.json",
+      "research/bonus_peer_refresh_20261025/halves_8_3.json",
+      "research/bonus_peer_refresh_20261025/half_checks.json"
+    ],
+    "acceptance": [
+      "Record raw and faithful native column errors before fitting.",
+      "Require one common phase and max error below1e-10 across every claimed input.",
+      "Report strict cost comparison before any precision repair or integration.",
+      "If integration is justified, preserve all retained depths and validate complete states/device constraints."
+    ]
+  },
+  {
+    "id": "PORT-033",
+    "title": "Test the published six-CNOT D4k2 template on native device layouts",
+    "status": "assigned; primary-source screen complete, circuit test pending",
+    "assignee": "bonus-depth",
+    "scope": "Separate small research directory; transcribe Fig6 of the DATE2024 exact CNOT synthesis paper and compare against retained9moments/7CZ. No package installation or broad search.",
+    "inputs": [
+      "research/bonus_band_20261025/literature_followup_best10.json"
+    ],
+    "acceptance": [
+      "Verify exact target state before native translation.",
+      "Compare actual scheduled native depth across small Willow embeddings; count routing and all single-qubit layers.",
+      "Retain current circuit unless native depth strictly improves; store a CZ-only alternative separately."
     ]
   }
 ]

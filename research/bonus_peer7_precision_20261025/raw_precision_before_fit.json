@@ -1,0 +1,32 @@
+{
+  "source_sha256": "7ec51cdef569a512abb3ff84dbe9dec921f9980b226eb5309d7f39b0939aeba0",
+  "raw_column_errors": [
+    4.480367568440393e-08,
+    4.7782447589806476e-08,
+    6.383631067247715e-08,
+    1.1603577066528063e-07
+  ],
+  "raw_max_error": 1.1603577066528063e-07,
+  "raw_passes": false,
+  "faithful_native": {
+    "name": "unmodified-peer7-faithful",
+    "n": 7,
+    "k": 3,
+    "depth": 51,
+    "CZ": 30,
+    "max_column_error": 1.1603577067728718e-07,
+    "column_errors": [
+      4.480367532417143e-08,
+      4.778244737320506e-08,
+      6.383631085370854e-08,
+      1.1603577067728718e-07
+    ],
+    "common_phase": [
+      -0.9953070418955395,
+      -0.09676720701328059
+    ],
+    "accepted": false
+  },
+  "common_real_sign": 1.0,
+  "note": "Written before least_squares is called. No coefficient change if raw and native already pass."
+}

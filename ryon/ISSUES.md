@@ -569,3 +569,39 @@ The benchmark readout checker requires EVERY DEVICE qubit on touched diagonals;
 the earlier three-target adaptive sketch misses11 such readouts and remains
 unvalidated. Unitary constructions are unaffected. Active peer issue13 long
 synthesis jobs remain untouched despite their stale open/unassigned heading.
+
+
+### PORT029–033 handoff — verified bonus 49.1115192815
+
+Independent standalone verification passes all 56 corrected cases at
+49.111519281511065, up 0.174644820581 from the last published checkpoint.
+D5k2:14→13 moments; D7k2:17→16; D13k3:57→55; D14k3:59→57; D15k3:71→69.
+Immutable candidate and full checks:
+`research/bonus_band_20261025/milestones/20261025T101047Z/`.
+Source SHA256: `5b91bb1bf7ad046aed8ff63399e233e36d12aee45de5e683013ca3b6884ef576`.
+Max build0.002296s, max state error1.486e-7; native main prefix unchanged.
+The separate experimental hardware export has the same updated bonus cache
+and unchanged main semantics; no additional hardware gain is claimed.
+
+PORT030 fresh whole-state harvest and PORT031 fixed-topology seven-site
+precision repair/integration are complete. The new7,3 half retains30CZ/51moments
+and passes four common-phase columns at1.17e-15; it does not cover r4..7.
+Frozen handoffs: `research/bonus_peer_refresh_20261025/handoff_manifest.json`
+and `research/bonus_peer7_precision_20261025/handoff_manifest.json`.
+Supported replay entrypoints and tested dependency versions are recorded in
+`research/bonus_band_20261025/best10_replay_environment.json`; legacy helper
+main harnesses are not standalone replay commands.
+
+PORT029 exact logical10-qubit warm start passes1.17e-15. Ten independent
+five-second left-fold gate deletions all missed1e-10 acceptance (best0.0201);
+no native improvement or impossibility result. Artifacts:
+`research/bonus_paired_core_20261025/handoff_manifest.json`.
+
+PORT032 is accepted by coordination-research: compare fresh6,4/8,3 halves
+against certified alternatives at equal supported range and native compilation;
+only then consider fixed-topology precision repair. PORT033 is assigned to
+bonus-depth: translate the DATE2024 six-CNOT D4k2 circuit, then verify native
+depth against9moments/7CZ. Primary-source notes:
+`research/bonus_band_20261025/literature_followup_best10.json`.
+Existing issue11/13 owners and long synthesis jobs remain untouched. Research
+continues after this checkpoint; neither pending task has a claimed gain.

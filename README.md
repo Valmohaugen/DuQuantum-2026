@@ -499,3 +499,40 @@ derivative checks; no fit or score gain is claimed yet. PORT029 is assigned.
 The readout audit also corrects the adaptive sketch: the local checker requires
 complete **device** diagonals, not just used-qubit groups. All published
 unitary components are unaffected.
+
+
+## Bonus checkpoint — 2026-10-25 06:10 EDT
+
+Best independently verified corrected bonus: **49.1115192815**,
+up **0.1746448206** from the previous published checkpoint. All 56 cases
+pass state, native-gate, Willow connectivity and constructor-time checks.
+Maximum build time is **0.002296s**, maximum state L2 error
+**1.49e-07**, and maximum depth **119 moments**.
+
+| Case | Previous moments | New moments |
+| --- | ---: | ---: |
+| D(5,2) |14|13|
+| D(7,2) |17|16|
+| D(13,3) |57|55|
+| D(14,3) |59|57|
+| D(15,3) |71|69|
+
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T101047Z/submission.py),
+[validation](research/bonus_band_20261025/milestones/20261025T101047Z/validation.json), and
+[immutable summary](research/bonus_band_20261025/milestones/20261025T101047Z/summary.json).
+SHA-256: `5b91bb1bf7ad046aed8ff63399e233e36d12aee45de5e683013ca3b6884ef576`.
+The main constructor is unchanged. The separate experimental hardware candidate
+also carries the new bonus cache; its main path is unchanged and this checkpoint
+claims no new measured or modeled hardware gain.
+
+The repaired seven-site decoder retains51 moments / 30 CZ and passes all four
+supported columns with one phase to 1.17e-15.
+[Peer refresh](research/bonus_peer_refresh_20261025/handoff_summary.json) and
+[precision/integration handoff](research/bonus_peer7_precision_20261025/handoff_summary.json)
+include source hashes and complete bounded-search coverage.
+
+The [paired-core pilot](research/bonus_paired_core_20261025/handoff_summary.json)
+verified an exact logical 10-qubit starting point; none of ten bounded gate
+deletions passed. No routed-circuit or bonus gain is claimed from that pilot.
+[Further literature screening](research/bonus_band_20261025/literature_followup_best10.json)
+and the [task board](research/bonus_portfolio_20261025/tasks.json) track continued work.

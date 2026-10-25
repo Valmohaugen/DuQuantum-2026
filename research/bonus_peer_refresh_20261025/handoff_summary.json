@@ -1,0 +1,334 @@
+{
+  "score": 49.043290104110376,
+  "baseline_score": 48.93687446093003,
+  "delta": 0.10641564318034824,
+  "improvements": [
+    {
+      "N": 5,
+      "k": 2,
+      "source": "patches_5_2.json:default",
+      "depth": 13,
+      "CZ": 9,
+      "state_l2_error": 2.380627688363285e-09,
+      "before": 14,
+      "accepted": true
+    },
+    {
+      "N": 7,
+      "k": 2,
+      "source": "patches_7_2.json:default",
+      "depth": 16,
+      "CZ": 18,
+      "state_l2_error": 9.727616601032453e-09,
+      "before": 17,
+      "accepted": true
+    }
+  ],
+  "whole_payloads": 5,
+  "whole_native_variants": 10,
+  "new_half_payloads": 5,
+  "half_checks": [
+    {
+      "name": "halves_7_3.json",
+      "n": 7,
+      "k": 3,
+      "raw": {
+        "max_column_error": 1.1603577063342422e-07,
+        "column_errors": [
+          4.4803675069517874e-08,
+          4.778244744827717e-08,
+          6.383631089946045e-08,
+          1.1603577063342422e-07
+        ],
+        "accepted": false
+      },
+      "variants": [
+        {
+          "name": "halves_7_3.json",
+          "pipeline": "default",
+          "n": 7,
+          "k": 3,
+          "depth": 51,
+          "CZ": 30,
+          "max_column_error": 1.1729382526868443e-07,
+          "column_errors": [
+            5.668406576537814e-08,
+            5.4181867659176705e-08,
+            6.545033648562599e-08,
+            1.1729382526868443e-07
+          ],
+          "accepted": false
+        },
+        {
+          "name": "halves_7_3.json",
+          "pipeline": "faithful",
+          "n": 7,
+          "k": 3,
+          "depth": 51,
+          "CZ": 30,
+          "max_column_error": 1.1603577067728718e-07,
+          "column_errors": [
+            4.480367532417143e-08,
+            4.778244737320506e-08,
+            6.383631085370854e-08,
+            1.1603577067728718e-07
+          ],
+          "accepted": false
+        }
+      ],
+      "same_range_incumbent_depth": 53
+    },
+    {
+      "name": "halves_8_3.json",
+      "n": 8,
+      "k": 3,
+      "raw": {
+        "max_column_error": 5.4940104904483345e-06,
+        "column_errors": [
+          2.862573212414113e-07,
+          2.0631289312587726e-06,
+          4.137301541937702e-06,
+          5.4940104904483345e-06
+        ],
+        "accepted": false
+      },
+      "variants": [
+        {
+          "name": "halves_8_3.json",
+          "pipeline": "default",
+          "n": 8,
+          "k": 3,
+          "depth": 63,
+          "CZ": 38,
+          "max_column_error": 5.493884480724446e-06,
+          "column_errors": [
+            2.8724290244596265e-07,
+            2.0637175490083457e-06,
+            4.137644911144816e-06,
+            5.493884480724446e-06
+          ],
+          "accepted": false
+        },
+        {
+          "name": "halves_8_3.json",
+          "pipeline": "faithful",
+          "n": 8,
+          "k": 3,
+          "depth": 65,
+          "CZ": 38,
+          "max_column_error": 5.4940104904991565e-06,
+          "column_errors": [
+            2.862573210853905e-07,
+            2.0631289312530395e-06,
+            4.137301541673617e-06,
+            5.4940104904991565e-06
+          ],
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "name": "halves_9_3.json",
+      "n": 9,
+      "k": 3,
+      "raw": {
+        "max_column_error": 1.684240903886347e-07,
+        "column_errors": [
+          4.463806310745452e-08,
+          4.4535418183800554e-08,
+          6.106745424424259e-08,
+          1.684240903886347e-07
+        ],
+        "accepted": false
+      },
+      "variants": [
+        {
+          "name": "halves_9_3.json",
+          "pipeline": "default",
+          "n": 9,
+          "k": 3,
+          "depth": 68,
+          "CZ": 41,
+          "max_column_error": 1.690613315597258e-07,
+          "column_errors": [
+            4.0235798908555014e-08,
+            4.411018481002171e-08,
+            6.453245764702209e-08,
+            1.690613315597258e-07
+          ],
+          "accepted": false
+        },
+        {
+          "name": "halves_9_3.json",
+          "pipeline": "faithful",
+          "n": 9,
+          "k": 3,
+          "depth": 71,
+          "CZ": 41,
+          "max_column_error": 1.6842409043089747e-07,
+          "column_errors": [
+            4.463806308090611e-08,
+            4.453541792040447e-08,
+            6.106745405479262e-08,
+            1.6842409043089747e-07
+          ],
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "name": "halves_10_3.json",
+      "n": 10,
+      "k": 3,
+      "raw": {
+        "max_column_error": 5.884105769448794e-07,
+        "column_errors": [
+          4.118869892684287e-07,
+          2.38788044589904e-07,
+          4.1557206213336446e-07,
+          5.884105769448794e-07
+        ],
+        "accepted": false
+      },
+      "variants": [
+        {
+          "name": "halves_10_3.json",
+          "pipeline": "default",
+          "n": 10,
+          "k": 3,
+          "depth": 81,
+          "CZ": 51,
+          "max_column_error": 5.929891490187565e-07,
+          "column_errors": [
+            4.1157542830026695e-07,
+            2.3639787057071593e-07,
+            4.1509579724339667e-07,
+            5.929891490187565e-07
+          ],
+          "accepted": false
+        },
+        {
+          "name": "halves_10_3.json",
+          "pipeline": "faithful",
+          "n": 10,
+          "k": 3,
+          "depth": 81,
+          "CZ": 51,
+          "max_column_error": 5.884105770330857e-07,
+          "column_errors": [
+            4.1188698925402195e-07,
+            2.3878804444035616e-07,
+            4.1557206213911703e-07,
+            5.884105770330857e-07
+          ],
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "name": "halves_6_4.json",
+      "n": 6,
+      "k": 4,
+      "raw": {
+        "max_column_error": 1.0003896029339866e-07,
+        "column_errors": [
+          4.68328087016898e-08,
+          5.624198255951317e-08,
+          1.0003896029339866e-07,
+          9.368246958970843e-08,
+          9.167004497644026e-08
+        ],
+        "accepted": false
+      },
+      "variants": [
+        {
+          "name": "halves_6_4.json",
+          "pipeline": "default",
+          "n": 6,
+          "k": 4,
+          "depth": 62,
+          "CZ": 39,
+          "max_column_error": 1.0023417080157735e-07,
+          "column_errors": [
+            4.166745809349154e-08,
+            5.794596418033383e-08,
+            1.0023417080157735e-07,
+            9.45666864875047e-08,
+            9.128095146676913e-08
+          ],
+          "accepted": false
+        },
+        {
+          "name": "halves_6_4.json",
+          "pipeline": "faithful",
+          "n": 6,
+          "k": 4,
+          "depth": 63,
+          "CZ": 39,
+          "max_column_error": 1.0003896029575823e-07,
+          "column_errors": [
+            4.68328088466349e-08,
+            5.624198239235199e-08,
+            1.0003896029575823e-07,
+            9.368246946437611e-08,
+            9.16700448812651e-08
+          ],
+          "accepted": false
+        }
+      ],
+      "certified_superset_incumbent_depth": 70
+    }
+  ],
+  "certified_halves": [],
+  "no_fit": true,
+  "half_reuse": false,
+  "all56_retained_verified": true,
+  "max_retained_state_error": 1.486027890605259e-07,
+  "coverage": [
+    {
+      "name": "patches_5_2.json",
+      "status": "complete"
+    },
+    {
+      "name": "patches_6_2.json",
+      "status": "complete"
+    },
+    {
+      "name": "patches_7_2.json",
+      "status": "complete"
+    },
+    {
+      "name": "patches_11_5.json",
+      "status": "complete"
+    },
+    {
+      "name": "lines_6_3.json",
+      "status": "complete"
+    },
+    {
+      "name": "halves_7_3.json",
+      "status": "complete"
+    },
+    {
+      "name": "halves_8_3.json",
+      "status": "complete"
+    },
+    {
+      "name": "halves_9_3.json",
+      "status": "complete"
+    },
+    {
+      "name": "halves_10_3.json",
+      "status": "complete"
+    },
+    {
+      "name": "halves_6_4.json",
+      "status": "complete"
+    }
+  ],
+  "search_seconds": 7.503005972132087,
+  "total_seconds": 9.94708226621151,
+  "remaining_work": "New7,3 fixed30CZ table has51native moments versus certified53, but raw and faithful column error1.16e-7. A separately authorized fixed-topology repair is needed before integration; no PORT022 combination was repeated. Six-site k4 table also fails1e-10; broader synthesis remains with its existing owner.",
+  "peer_status": "Issue11 handoff is timed~07:30 with searches writing~07:40; do not assume released before then. Issue13 active Slurm pruning remains untouched.",
+  "queue_update": "Fresh committed5732c7b payload screen improves N5k2 14\u219213moments/9CZ andN7k2 17\u219216moments/18CZ; verified56-case score49.043290104110376. All5newhalf tables fail strict1e-10 common-phase certification, including7,3 at51moments/30CZ with1.16e-7 raw/native error; nofit orhalf reuse performed. Frozenpool/results/sources in research/bonus_peer_refresh_20261025. Root handles standalone export/publication; existing synthesis claims preserved."
+}

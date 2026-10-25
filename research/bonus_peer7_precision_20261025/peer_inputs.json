@@ -1,0 +1,14 @@
+[
+  {
+    "name": "peer_polished6",
+    "n": 6,
+    "k": 3,
+    "frozen": "polished_6_3.json"
+  },
+  {
+    "name": "peer_new7",
+    "n": 7,
+    "k": 3,
+    "frozen": "polished_7_3.json"
+  }
+]

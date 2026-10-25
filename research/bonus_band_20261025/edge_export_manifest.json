@@ -1,10 +1,10 @@
 {
   "status": "standalone candidate; not promoted to native_submission",
   "candidate": "edge_hardware_submission.py",
-  "candidate_sha256": "2b1bffed4382b517295d4d5861e5fbdd1a2d84bf308590b67d007b2be74e97df",
+  "candidate_sha256": "cfb0a278d892ff567f1bd60347819299686a9e835895284b7b23101ff09f6c6a",
   "domain": "N in {8,10}, k=1, default DD enabled and pack=False; all other calls use preserved baseline",
   "sources": {
-    "native_submission.py": "e9e13c948d7fd24f0c297192e513cdefc2959295b28738f55de5a34b61d2b233",
+    "native_submission.py": "5b91bb1bf7ad046aed8ff63399e233e36d12aee45de5e683013ca3b6884ef576",
     "edge_primary_snapshot.py": "8f752750f7246eb7d92a56015958e63debf229f4f3909cb69585ccd8252db7b8",
     "edge_primary_origin.json": "c6047fa48866c9e4b3047c2b95c4af2f47e8a534e1403b2043c33c066fc3bf4d",
     "w_z_sensitivity.py": "b5be11f4af7566baac6608bbeed501bcf672fd9554a42446d8e2bb7f604ffe12",

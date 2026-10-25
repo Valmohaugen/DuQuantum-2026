@@ -1,0 +1,39 @@
+{
+  "status": "Literature screen; no imported circuit or score improvement",
+  "sources": [
+    {
+      "title": "Quantum State Preparation Using an Exact CNOT Synthesis Formulation",
+      "url": "https://si2.epfl.ch/demichel/publications/archive/2024/DATE_QC.pdf",
+      "authors": [
+        "Hanyu Wang",
+        "Jason Cong",
+        "Giovanni De Micheli"
+      ],
+      "method": "A* over amplitude-preserving state transitions; optimality is relative to the specified gate/transition library, not unrestricted native depth.",
+      "table_III_CNOT_counts": {
+        "3,1": 4,
+        "4,1": 7,
+        "4,2": 6,
+        "5,1": 10,
+        "5,2": 16,
+        "6,1": 13,
+        "6,2": 22,
+        "6,3": 25
+      },
+      "code_link_in_paper": "https://github.com/Nozidoali/quantum-xyz",
+      "local_inference": "Most small-case counts exceed our retained CZ counts; D4k2 at6CNOT versus our7CZ is a narrow candidate for native-depth translation. It may not beat9moments after routing. No package execution or install has occurred."
+    },
+    {
+      "title": "Scalable Multi-QPU Circuit Design for Dicke State Preparation: Optimizing Communication Complexity and Local Circuit Costs",
+      "url": "https://arxiv.org/abs/2601.20393",
+      "version": "v1, 2026-01-28",
+      "finding": "Distributed construction targets communication and local circuit costs; its asymptotic communication result does not establish a Willow native-depth improvement.",
+      "local_inference": "Use as a source for interfaces only after explicit small-instance cost screening; do not launch broad synthesis from the abstract."
+    }
+  ],
+  "next_test": {
+    "case": "D4k2",
+    "task": "Transcribe the published6CNOT circuit, independently verify exact state, compile all small device embeddings and compare native moments/CZ against9moments/7CZ.",
+    "acceptance": "Only replace retained circuit for strictly lower native depth with full state/device validation; record a CZ-only alternative separately."
+  }
+}

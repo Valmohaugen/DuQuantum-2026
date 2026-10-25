@@ -1,0 +1,14 @@
+{
+  "peer_synth_snapshot.py": {
+    "source": "research/bonus_symmetric_core_20261025/peer_synth_snapshot.py",
+    "sha256": "c9b21fe445217bed039f6285b9decea8faa9419951182f6b8af3c123dab1b5a6"
+  },
+  "paired_core_objective.py": {
+    "source": "research/bonus_symmetric_core_20261025/paired_core_objective.py",
+    "sha256": "743d75fae37768d1e719fb842b7fc432265065012ba9dcaab4efb18340c5fa48"
+  },
+  "full5_source.json": {
+    "source": "research/bonus_matched_half_precision_20261025/five_real.json",
+    "sha256": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d"
+  }
+}
