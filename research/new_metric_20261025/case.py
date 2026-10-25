@@ -1,7 +1,7 @@
 """One (variant, N, n, seed) case under the fast_eval noise model; writes a json row."""
 import importlib, json, sys, time
 variant, root, N, n, seed, out = sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), sys.argv[6]
-sys.path[:0] = [f"{root}/ryon", f"{root}/toby", f"{root}/research/new_metric_20261025"]
+sys.path[:0] = [f"{root}/ryon", f"{root}/toby", f"{root}/research/new_metric_20261025", f"{root}/research/bonus_band_20261025"]
 import numpy as np
 import fast_eval, judge
 from test_dicke import expected_score
@@ -12,6 +12,8 @@ if variant.startswith("knob:"):
     for kv in variant[5:].split(","):
         k, v = kv.split("="); setattr(m, k, type(getattr(m, k))(eval(v)))
     c, qs = m.create_dicke_state(N, n, *cal)
+elif variant.startswith("adaptive:"):
+    m = importlib.import_module(variant[9:]); c, qs = m.create_dicke_state_adaptive(N, n)
 elif variant == "main":
     m = importlib.import_module("toby_sol"); c, qs = m.create_dicke_state(N, n, *cal)
 elif variant == "main_pack":
@@ -28,7 +30,7 @@ def fits(mp):
     ok = all(mp[q] in cal[1] for q in c.all_qubits())
     return ok and all((mp[o.qubits[0]], mp[o.qubits[1]]) in cal[0] or (mp[o.qubits[1]], mp[o.qubits[0]]) in cal[0]
                       for o in c.all_operations() if len(o.qubits) == 2)
-if variant.startswith("bonus"):
+if variant.startswith("bonus") or variant.startswith("adaptive:"):
     allq = list(c.all_qubits())
     mp = {q: q for q in allq}
     if not fits(mp):

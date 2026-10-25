@@ -530,6 +530,8 @@ fast_eval's, with all X correlator sizes and three fake calibrations (seed 0 onl
 | 2026-10-25 09:10 | de2d0d0 | ryon/toby_sol.py (main entry point) | 1.050 | 0.959 | 0.805 | 14.1 |
 | 2026-10-25 09:10 | 105326Z | bonus milestone 51.04, `create_dicke_state_adaptive` (bonus_sub_105326Z.py) | 0.951 | 0.872 | 0.715 | 12.0 |
 | 2026-10-25 10:15 | 9a76864 | toby/bonus_portfolio_squeeze_sol.py (portfolio_sol.py main entry) | 1.058 | 0.959 | not run | |
+| 2026-10-25 10:30 | 5764eb4 | bonus 51.33 `native_submission.py`, `create_dicke_state_adaptive` | 0.953 | 0.874 | not run | 11.9 |
+| 2026-10-25 10:30 | 9a76864 | bonus 51.84 `toby/bonus_portfolio_squeeze_sol.py`, `create_dicke_state_adaptive` | 0.951 | 0.868 | not run | 11.8 |
 
 The bonus build is about 15 % shallower, but its penalty is 5 to 25 % higher than main's in all
 36 cases (N = 2..12). It places circuits without calibration data, and the packed 1q gates
