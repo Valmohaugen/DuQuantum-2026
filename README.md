@@ -118,6 +118,7 @@ PYTHONPATH=.. python fast_eval.py --solution qubillionaires_solution --seeds 0 1
 | --- | --- |
 | `qubillionaires_solution.py` | Our submission (both entry points) |
 | `Google Quantum AI Challenge.ipynb` | The original challenge notebook, unchanged |
+| [`figures/`](figures/README.md) | Publication figures (IEEE sizing, PDF + 600 dpi PNG), their data and scripts |
 | [`archive/`](archive/README.md) | Earlier solutions, their scores, and the evaluation and synthesis tools |
 
 The solution was developed as `ryon/slim_sol.py`; `git log --follow qubillionaires_solution.py`

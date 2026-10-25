@@ -1,0 +1,26 @@
+time_edt,commit,metric,value,source
+2026-10-25 01:41,6e7dbdb,bonus,46.1786,milestone 20261025T053345Z summary.json
+2026-10-25 01:57,cde1672,bonus,46.5862,milestone 20261025T055319Z summary.json
+2026-10-25 02:37,eb34bc3,bonus,47.4262,milestone 20261025T063113Z summary.json
+2026-10-25 03:16,9e5d2e2,bonus,47.8780,milestone 20261025T070208Z summary.json
+2026-10-25 03:26,4a89a44,bonus,48.0186,milestone 20261025T071120Z summary.json
+2026-10-25 03:47,3dd72ff,bonus,48.4141,milestone 20261025T074513Z summary.json
+2026-10-25 04:37,86dac7c,bonus,48.9369,milestone 20261025T082924Z summary.json
+2026-10-25 06:21,8064733,bonus,49.1115,milestone 20261025T101047Z summary.json
+2026-10-25 06:56,7bbe765,bonus,51.0368,milestone 20261025T105326Z summary.json
+2026-10-25 09:37,5764eb4,bonus,51.3337,research/bonus_priority_20261025/README.md
+2026-10-25 09:37,2b134a2,bonus,51.4051,toby/bonus_squeeze_sol.py (README row)
+2026-10-25 09:55,9a76864,bonus,51.8367,toby/bonus_portfolio_squeeze_sol.py (README row)
+2026-10-25 10:13,4e6be5b,bonus,52.1616,commit message
+2026-10-25 10:14,a0e54b3,bonus,52.2802,commit message
+2026-10-25 10:28,27f07e4,bonus,52.3618,commit message
+2026-10-25 10:31,180e9f4,bonus,52.4821,commit message; re-verified 52.4819
+2026-10-24 20:59,0dc262c,main_proxy,16.615,README leaderboard
+2026-10-25 00:36,a26041d,main_proxy,17.199,README leaderboard
+2026-10-25 01:15,ef0ec5d,main_proxy,17.435,README leaderboard
+2026-10-25 01:24,f1f5bba,main_proxy,17.458,README leaderboard
+2026-10-25 01:37,8993717,main_proxy,17.473,README leaderboard
+2026-10-25 02:06,761433b,main_proxy,17.480,README leaderboard
+2026-10-25 03:59,c2e760e,main_proxy,17.495,README leaderboard
+2026-10-25 05:35,5fbdb31,main_proxy,17.528,README leaderboard
+2026-10-25 09:55,9a76864,main_proxy,17.658,README leaderboard; re-measured 17.6583 on qubillionaires_solution.py
