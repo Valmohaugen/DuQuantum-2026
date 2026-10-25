@@ -25,7 +25,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def penalties(z_counts, x_counts, n, k):
+def penalties(z_counts, x_counts, n, k, max_correlator_size=None):
     """Notebook Z+X penalty from sector counts and X Hamming-weight counts.
 
     z_counts ends with one outside-sector bin. A draw with no in-sector Z
@@ -43,7 +43,7 @@ def penalties(z_counts, x_counts, n, k):
     def comb(a, b):
         return math.comb(a, b) if 0 <= b <= a else 0
 
-    for order in range(1, n + 1):
+    for order in range(1, (n if max_correlator_size is None else max_correlator_size) + 1):
         parity = np.array(
             [
                 sum((-1) ** j * comb(w, j) * comb(n - w, order - j) for j in range(order + 1))

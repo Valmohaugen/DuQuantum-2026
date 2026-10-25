@@ -10,7 +10,8 @@ from claude.scripts.evaluate_candidates import builders, penalties, summary
 
 
 @pytest.mark.parametrize("n,k", [(2, 1), (3, 1), (4, 1), (4, 2), (5, 2), (6, 3)])
-def test_count_penalties_match_notebook(n, k):
+@pytest.mark.parametrize("cutoff", [2, None])
+def test_count_penalties_match_notebook(n, k, cutoff):
     path = Path(__file__).resolve().parents[2] / "ryon/judge.py"
     spec = importlib.util.spec_from_file_location("eval_judge_test", path)
     judge = importlib.util.module_from_spec(spec)
@@ -24,12 +25,12 @@ def test_count_penalties_match_notebook(n, k):
     z_counts = np.array([sum(encoded == i) for i in states] + [sum(~sector)])
     x_counts = np.bincount(x.sum(axis=1), minlength=n + 1)
     expected = judge.check_z_bitstring_distribution(z, k) + judge.check_x_bitstring_distribution(
-        x, k, n
+        x, k, n if cutoff is None else cutoff
     )
-    assert penalties(z_counts, x_counts, n, k) == pytest.approx(expected, abs=1e-12)
-    assert penalties(np.stack([z_counts] * 2), np.stack([x_counts] * 2), n, k) == pytest.approx(
-        [expected] * 2
-    )
+    assert penalties(z_counts, x_counts, n, k, cutoff) == pytest.approx(expected, abs=1e-12)
+    assert penalties(
+        np.stack([z_counts] * 2), np.stack([x_counts] * 2), n, k, cutoff
+    ) == pytest.approx([expected] * 2)
 
 
 def test_undefined_z_draw_fails():

@@ -1,0 +1,200 @@
+{
+  "complete": true,
+  "seed": 2,
+  "shots_per_basis": 10000,
+  "noise": "calibrated Pauli gate errors + asymmetric readout; no idle noise",
+  "calibration": "original notebook cells 11\u201312, shared RNG explicitly seeded",
+  "cirq": "1.6.1",
+  "qsim": "0.22.1",
+  "threads": 1,
+  "willow_fallback": true,
+  "sources_sha256": {
+    "claude/scripts/evaluate_chart_noise.py": "cf409f245fe4cacb71a9d34807aca56e8cabc34aa826b7191f4778c0e9e046b2",
+    "Google Quantum AI Challenge.ipynb": "ee1d7d53f64bde2e5f8da114d0bc198ea2666e40cc65ea4eadca2f97c062acd1",
+    "claude/scripts/evaluate_candidates.py": "96828f4f928cca4febea11e99ac447526cf83eb28daa21ddbd6ed9dd954dd841",
+    "claude/dicke_prep.py": "75f9cad7b8d8c831fa8df43e6bad26336bc52af786993846c4de4c522adf29ed",
+    "ryon/judge.py": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6",
+    "ryon/test_dicke.py": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f",
+    "ryon/toby_sol.py": "c03efe47ca996ccebed0db87c25004023fb976922e30c9126f6818e1c1e7f89b",
+    "research/bonus_band_20261025/native_submission.py": "b5a4e8bedaac1255ef88c1ff8bb7a148a6f0fcf98541f496e1ff4ccb361629f2",
+    "research/chart_comparison_20261025/old_solution_partial.py": "6a51a3e23a81044619f3e3eb3c951c1c35517015a90191d80ab2a619c094a38d"
+  },
+  "records": [
+    {
+      "variant": "peer",
+      "N": 10,
+      "n": 3,
+      "moments": 37,
+      "cz": 39,
+      "fidelity": 0.9999999999999885,
+      "scores": {
+        "2": 0.7159993474198612,
+        "4": 0.7038587625854318,
+        "10": 0.6859873199464119
+      },
+      "reused_identical": false,
+      "circuit_sha256": "8c7f6d410405c85fbf6aecc4986910697c38c8c1d8c73a3a15366c68713f914b",
+      "seconds": 16.71799947042018
+    },
+    {
+      "variant": "standalone",
+      "N": 10,
+      "n": 3,
+      "moments": 55,
+      "cz": 59,
+      "fidelity": 0.9999999999999991,
+      "scores": {
+        "2": 0.8109726528327864,
+        "4": 0.7945159259573639,
+        "10": 0.7702741409975008
+      },
+      "reused_identical": false,
+      "circuit_sha256": "d2f9e68020d82c6acda79665dd55c95b20b5cb97513ff69b523d568ffbbd0e2d",
+      "seconds": 27.091223933734
+    },
+    {
+      "variant": "simple",
+      "N": 10,
+      "n": 3,
+      "moments": 91,
+      "cz": 65,
+      "fidelity": 1.0,
+      "scores": {
+        "2": 1.1421134253112322,
+        "4": 1.1077763525771451,
+        "10": 1.0585680667874766
+      },
+      "reused_identical": false,
+      "circuit_sha256": "01402a314f17b8a494150e1c2006b1c68131d0cda7b3a2f52aacb410e225f691",
+      "seconds": 30.146471109241247
+    },
+    {
+      "variant": "old_partial",
+      "N": 10,
+      "n": 3,
+      "moments": 106,
+      "cz": 69,
+      "fidelity": 0.9999999999999951,
+      "scores": {
+        "2": 1.1153948352205307,
+        "4": 1.0766232176600243,
+        "10": 1.016433509482076
+      },
+      "reused_identical": false,
+      "circuit_sha256": "ef5367d25ab7f4c459b7bc97861cd03267fdfabfb820f7a8357c05886feb80fb",
+      "seconds": 33.02625814732164
+    },
+    {
+      "variant": "peer",
+      "N": 10,
+      "n": 5,
+      "moments": 33,
+      "cz": 40,
+      "fidelity": 0.9999999999999365,
+      "scores": {
+        "2": 0.8110194299961425,
+        "4": 0.8031390182369492,
+        "10": 0.7568503006038452
+      },
+      "reused_identical": false,
+      "circuit_sha256": "a23372a985c1e07730ed8535cf067fc0688804a59c8515137a99d6a07d24cc5a",
+      "seconds": 17.393670030869544
+    },
+    {
+      "variant": "standalone",
+      "N": 10,
+      "n": 5,
+      "moments": 73,
+      "cz": 85,
+      "fidelity": 0.9999999999999991,
+      "scores": {
+        "2": 0.7814016121223605,
+        "4": 0.7533345901952411,
+        "10": 0.6337136010661834
+      },
+      "reused_identical": false,
+      "circuit_sha256": "533d949bd1995f1daff59754ae661254e3402ef555ef7401908301a09800beb4",
+      "seconds": 38.90907702129334
+    },
+    {
+      "variant": "simple",
+      "N": 10,
+      "n": 5,
+      "moments": 123,
+      "cz": 105,
+      "fidelity": 0.9999999999999991,
+      "scores": {
+        "2": 0.7315422607782974,
+        "4": 0.7077797915474515,
+        "10": 0.5942366133012413
+      },
+      "reused_identical": false,
+      "circuit_sha256": "b5f9850b2863489405545cb558b2f0a5a289360145d368a69ab8e777e3e6fb2d",
+      "seconds": 47.87804732937366
+    },
+    {
+      "variant": "old_partial",
+      "N": 10,
+      "n": 5,
+      "moments": 134,
+      "cz": 115,
+      "fidelity": 0.9999999999999007,
+      "scores": {
+        "2": 0.7824353805399659,
+        "4": 0.7519211044042674,
+        "10": 0.608434090099818
+      },
+      "reused_identical": false,
+      "circuit_sha256": "71dabf35e3cc4bd1472ac88477a0a969c02a2eb8f8aea950b496b224ad11e97d",
+      "seconds": 53.09717047214508
+    },
+    {
+      "variant": "peer",
+      "N": 15,
+      "n": 4,
+      "moments": 118,
+      "cz": 147,
+      "fidelity": 0.9999999999999631,
+      "scores": {
+        "2": 0.6557317498359742,
+        "4": 0.6254403152883102,
+        "15": 0.5379686645003291
+      },
+      "reused_identical": false,
+      "circuit_sha256": "287eeca5172de3f5f409151b458a2d8cab728ce513403c2404d2ccd17c7b0ee6",
+      "seconds": 107.57241187151521
+    },
+    {
+      "variant": "standalone",
+      "N": 15,
+      "n": 4,
+      "moments": 118,
+      "cz": 147,
+      "fidelity": 0.9999999999999631,
+      "scores": {
+        "2": 0.6557317498359742,
+        "4": 0.6254403152883102,
+        "15": 0.5379686645003291
+      },
+      "reused_identical": true,
+      "circuit_sha256": "287eeca5172de3f5f409151b458a2d8cab728ce513403c2404d2ccd17c7b0ee6",
+      "seconds": 0.044632879085838795
+    },
+    {
+      "variant": "simple",
+      "N": 15,
+      "n": 4,
+      "moments": 193,
+      "cz": 159,
+      "fidelity": 0.9999999999999978,
+      "scores": {
+        "2": 0.6960928348364276,
+        "4": 0.6623676928850146,
+        "15": 0.5889123912198723
+      },
+      "reused_identical": false,
+      "circuit_sha256": "47c1f5f02d8403594b775609ef0fcc5bf0e8ffe6766e2a8540fc7bed3c760144",
+      "seconds": 112.27793011907488
+    }
+  ]
+}

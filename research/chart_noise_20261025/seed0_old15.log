@@ -1,0 +1,5 @@
+/tmp/duquantum-eval-venv/lib/python3.11/site-packages/google/api_core/_python_version_support.py:254: FutureWarning: You are using a Python version (3.11.5) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2027-10-24). Please upgrade to the latest Python version, or at least Python 3.12, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+seed=0 old D(15,4) Z sampled in 56.1s
+seed=0 old D(15,4) X sampled in 111.9s
+seed=0 old D(15,4) scores={'2': 0.6443526490683049, '4': 0.6045197614796493, '15': 0.5170501725891625}

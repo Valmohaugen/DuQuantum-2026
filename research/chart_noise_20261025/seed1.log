@@ -1,0 +1,33 @@
+/tmp/duquantum-eval-venv/lib/python3.11/site-packages/google/api_core/_python_version_support.py:254: FutureWarning: You are using a Python version (3.11.5) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2027-10-24). Please upgrade to the latest Python version, or at least Python 3.12, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+seed=1 peer D(10,3) Z sampled in 8.1s
+seed=1 peer D(10,3) X sampled in 16.7s
+seed=1 peer D(10,3) scores={'2': 0.962717595179749, '4': 0.9455469223267883, '10': 0.922645311585726}
+seed=1 standalone D(10,3) Z sampled in 13.2s
+seed=1 standalone D(10,3) X sampled in 26.7s
+seed=1 standalone D(10,3) scores={'2': 0.7374350816286719, '4': 0.7194546874054688, '10': 0.6902189234812406}
+seed=1 simple D(10,3) Z sampled in 14.6s
+seed=1 simple D(10,3) X sampled in 29.7s
+seed=1 simple D(10,3) scores={'2': 1.1602889720944474, '4': 1.1245049581940818, '10': 1.0824638656912573}
+seed=1 old_partial D(10,3) Z sampled in 15.9s
+seed=1 old_partial D(10,3) X sampled in 32.7s
+seed=1 old_partial D(10,3) scores={'2': 0.8470805863018905, '4': 0.8301518048567231, '10': 0.8093410560280209}
+seed=1 peer D(10,5) Z sampled in 8.5s
+seed=1 peer D(10,5) X sampled in 17.5s
+seed=1 peer D(10,5) scores={'2': 0.7893620947645341, '4': 0.7802332791615552, '10': 0.7340352817662553}
+seed=1 standalone D(10,5) Z sampled in 18.9s
+seed=1 standalone D(10,5) X sampled in 38.7s
+seed=1 standalone D(10,5) scores={'2': 0.9090946986463289, '4': 0.8753765518195431, '10': 0.7256675870135268}
+seed=1 simple D(10,5) Z sampled in 23.7s
+seed=1 simple D(10,5) X sampled in 47.9s
+seed=1 simple D(10,5) scores={'2': 0.7818714380633408, '4': 0.7519533888143068, '10': 0.6182606954411108}
+seed=1 old_partial D(10,5) Z sampled in 26.3s
+seed=1 old_partial D(10,5) X sampled in 53.0s
+seed=1 old_partial D(10,5) scores={'2': 0.7331834162958983, '4': 0.7004529092390566, '10': 0.5675038317197424}
+seed=1 peer D(15,4) Z sampled in 53.5s
+seed=1 peer D(15,4) X sampled in 107.5s
+seed=1 peer D(15,4) scores={'2': 0.7064194962547162, '4': 0.6699567255027216, '15': 0.5849671098094937}
+seed=1 standalone D(15,4) scores={'2': 0.7064194962547162, '4': 0.6699567255027216, '15': 0.5849671098094937}
+seed=1 simple D(15,4) Z sampled in 54.1s
+seed=1 simple D(15,4) X sampled in 107.7s
+seed=1 simple D(15,4) scores={'2': 0.7058968762415301, '4': 0.6706337476307813, '15': 0.5783347492463112}

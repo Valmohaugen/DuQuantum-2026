@@ -149,20 +149,107 @@ The calibration is synthetic: these measurements do not establish the exact
 depth selected under the chart's unavailable calibration.
 
 The supplied old source is cut off mid-angle-table and literally ends with
-`... (32 KB left)`. The
+`... (32 KB left)`. The initial
 [partial recovery](research/chart_comparison_20261025/old_solution_partial.py)
 preserves complete required tables through N=11 and rejects larger requests.
-It reproduces **106 and 134 moments** on the two N=10 cases; no old D(15,4)
-circuit has been reconstructed. [Recovery provenance](research/chart_comparison_20261025/provenance.json)
+It reproduces **106 and 134 moments** on the two N=10 cases.
+The [complete old source](research/chart_comparison_20261025/old_solution_recovered.py)
+was subsequently recovered from commit `6b0b1a6`: its complete supplied prefix
+matches byte for byte, including all 24 functions and the visible angle tables.
+It reproduces **215 moments and 166 CZ gates** for D(15,4), with exact noiseless
+state fidelity. [Full recovery evidence](research/chart_comparison_20261025/full_recovery.json),
+[initial recovery provenance](research/chart_comparison_20261025/provenance.json)
 and [resource results](research/chart_comparison_20261025/resources.json) retain
 the original file hash and the measured evidence.
 
-The chart and code contain no actual calibration maps or judging noise
-configuration. Exact noisy-score reproduction still requires those maps,
-noise channels/timings, shot count, X-correlator cutoff, seeds and aggregation
-procedure. A noisy N=15 calculation also needs a separately chosen simulation
-method; the paired density evaluator intentionally remains capped at ten total
-qubits. No synthetic noisy score is presented as a reproduction of this chart.
+The chart and code contain no fixed calibration maps or judging noise
+configuration. The original notebook does provide a synthetic calibration
+recipe and specifies 10,000 shots in each basis and a sum of case scores.
+The previous small-case evaluations already used that recipe through
+`judge.fake_calibration`; the chart-specific simulations below extract its
+functions directly. Exact chart reproduction still requires its particular
+calibration realization, noise model and X-correlator cutoff. No synthetic
+noisy score is presented as an exact reproduction of the chart.
+
+## Notebook-based noisy simulation of the chart cases
+
+[evaluate_chart_noise.py](claude/scripts/evaluate_chart_noise.py) directly loads
+the unchanged original notebook's calibration functions (cells 11–12). Its
+error-rate medians are 0.0004 for single-qubit gates, 0.0025 for CZ gates,
+0.005 for 0→1 readout and 0.01 for 1→0 readout; lognormal spread is 0.5,
+with 1% qubit and coupler dropout. Each seed saves its generated maps,
+including the notebook's uncertainty fields. These uncertainty fields are
+measurement uncertainties, not extra per-shot error probabilities.
+
+The simulation applies a stochastic Pauli channel with the calibrated error
+probability after each gate, including the X measurement basis rotation,
+then applies the asymmetric readout errors. The notebook does not specify
+idle decay, detuning, leakage or coherent noise channels, so this minimal
+model adds none. Thus depth reductions alone do not imply proportional
+score gains in this model. The gate/readout model differs from the earlier
+timed T1/T2/detuning model; their absolute scores should not be compared.
+
+The CPU qsim trajectory simulator generates **10,000 actual noisy shots per
+basis**, including N=15, without constructing an exponentially larger density
+matrix. This avoids plugging a small trajectory average into a nonlinear
+score. The exact notebook score is calculated from sufficient count statistics
+for X cutoffs 2, 4 and N; the notebook leaves that argument unspecified.
+Tests verify the calibration recipe, compare the score with the notebook
+helper copy at multiple cutoffs and compare qsim with an exact density result
+on a small noisy circuit. qsim is only an evaluation dependency and is not
+imported by submitted constructors.
+
+Example for a fresh seed/run directory (qsim is additionally required):
+
+```bash
+python -m claude.scripts.evaluate_chart_noise --seed 0 \
+  --output research/my_chart_noise_seed0
+```
+
+Pass `--variants peer standalone simple old` and `--cases 10,3 10,5 15,4`
+to select constructors/cases. The default uses all of them. Each process uses
+one CPU thread by default. Archived calibration seeds 0–2, sampled measurements,
+circuits and runtime versions are in [the chart-noise evidence](research/chart_noise_20261025/).
+
+Results using **all X-correlator orders**, with mean ± SE across the three
+calibration/shot seeds:
+
+| Constructor | D(10,3) score | D(10,5) score | D(15,4) score | Sum |
+| --- | ---: | ---: | ---: | ---: |
+| Recovered old submission | 0.8237 ± 0.1074 | 0.5897 ± 0.0119 | 0.5243 ± 0.0055 | 1.9377 ± 0.1133 |
+| Simple maintained constructor, DD off | 1.0271 ± 0.0440 | 0.5891 ± 0.0185 | 0.5812 ± 0.0039 | **2.1974 ± 0.0639** |
+| Frozen standalone | 0.7297 ± 0.0231 | 0.6741 ± 0.0271 | 0.5525 ± 0.0163 | 1.9563 ± 0.0228 |
+| Newest peer | 0.8497 ± 0.0820 | 0.7488 ± 0.0074 | 0.5525 ± 0.0163 | **2.1509 ± 0.0851** |
+
+There are 36 case/seed/constructor evaluations, with three identical N=15
+peer/standalone circuits reusing their measurements: **33 distinct sampled
+contexts and 660,000 noisy shots**. Every circuit passes exact noiseless and
+native/device checks. Full [statistics](research/chart_noise_20261025/summary.json),
+[table](research/chart_noise_20261025/summary.md) and
+[reproduction script](research/chart_noise_20261025/summarize.py) are saved.
+The simple constructor has the highest arithmetic total in this small run;
+the peer has the highest pooled harmonic score (**0.6896**, versus **0.6820**
+for simple, 0.6418 for standalone and 0.6171 for old). This is not sufficient
+evidence for a constructor promotion. The peer-minus-old paired sum change is
+**+0.2132 ± 0.1936 SE**; one of the three calibration seeds regresses.
+These SEs include calibration and finite-shot variation across three seeds,
+not uncertainty in the hardware noise model or calibration uncertainty fields.
+
+The unspecified X cutoff materially changes the arithmetic totals:
+
+| Constructor | Cutoff 2 | Cutoff 4 | All orders |
+| --- | ---: | ---: | ---: |
+| Recovered old | 2.2947 | 2.2008 | 1.9377 |
+| Simple | 2.5313 | 2.4396 | 2.1974 |
+| Standalone | 2.3077 | 2.2219 | 1.9563 |
+| Newest peer | 2.3789 | 2.3194 | 2.1509 |
+
+The old submission's simulated total **1.9377** differs substantially from
+the chart's **1.1190**. For the final pair, old simulation gives **0.5243**
+versus chart **0.3919**. Consequently, **2.1509 is a conditional local model
+estimate, not a prediction of the official score**. The notebook's recipe
+allows simulation, but its random rates and a Pauli/readout model cannot
+recover an unknown calibration realization or unmodeled judging noise.
 
 ## Environment and local checks
 

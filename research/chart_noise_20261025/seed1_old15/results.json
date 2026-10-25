@@ -1,0 +1,49 @@
+{
+  "complete": true,
+  "cases": [
+    [
+      15,
+      4
+    ]
+  ],
+  "variants": [
+    "old"
+  ],
+  "seed": 1,
+  "shots_per_basis": 10000,
+  "noise": "calibrated Pauli gate errors + asymmetric readout; no idle noise",
+  "calibration": "original notebook cells 11\u201312, shared RNG explicitly seeded",
+  "cirq": "1.6.1",
+  "qsim": "0.22.1",
+  "threads": 1,
+  "willow_fallback": true,
+  "sources_sha256": {
+    "claude/scripts/evaluate_chart_noise.py": "c50a37cc07bdd2fe4eb2a41e47ff1d9e406229aa5f93a6ab2e8529efcdbf4b0a",
+    "Google Quantum AI Challenge.ipynb": "ee1d7d53f64bde2e5f8da114d0bc198ea2666e40cc65ea4eadca2f97c062acd1",
+    "claude/scripts/evaluate_candidates.py": "96828f4f928cca4febea11e99ac447526cf83eb28daa21ddbd6ed9dd954dd841",
+    "claude/dicke_prep.py": "75f9cad7b8d8c831fa8df43e6bad26336bc52af786993846c4de4c522adf29ed",
+    "ryon/judge.py": "ac62d0bbedc38974d3967638844a7326f11305a6e932bd064102d3ea2ca0c1c6",
+    "ryon/test_dicke.py": "c4b222ee87a77c51d8b2f02f5cd811bd7e56584fbc5f48b5907a660c392c869f",
+    "ryon/toby_sol.py": "c03efe47ca996ccebed0db87c25004023fb976922e30c9126f6818e1c1e7f89b",
+    "research/bonus_band_20261025/native_submission.py": "b5a4e8bedaac1255ef88c1ff8bb7a148a6f0fcf98541f496e1ff4ccb361629f2",
+    "research/chart_comparison_20261025/old_solution_recovered.py": "cea33dc83d8cbbb014a2db09bd6fbe14be35ac2ea057b80eba6814ac9d8e0ac8"
+  },
+  "records": [
+    {
+      "variant": "old",
+      "N": 15,
+      "n": 4,
+      "moments": 215,
+      "cz": 166,
+      "fidelity": 0.9999999999999654,
+      "scores": {
+        "2": 0.6887003136094815,
+        "4": 0.6430077090817912,
+        "15": 0.5351722184621639
+      },
+      "reused_identical": false,
+      "circuit_sha256": "4e5272e85e6694913d8bc8ecce44d755c68b2354bc113065195d6ee4b247ef4c",
+      "seconds": 118.56542312726378
+    }
+  ]
+}

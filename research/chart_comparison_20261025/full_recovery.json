@@ -1,0 +1,9 @@
+{
+  "commit": "6b0b1a6",
+  "path": "ryon/toby_sol.py",
+  "sha256": "cea33dc83d8cbbb014a2db09bd6fbe14be35ac2ea057b80eba6814ac9d8e0ac8",
+  "complete_supplied_prefix_matches_byte_for_byte": true,
+  "prefix_bytes": 48396,
+  "matching_functions": 24,
+  "common_angle_table_entries_match": true
+}
