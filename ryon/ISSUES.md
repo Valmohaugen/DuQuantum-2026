@@ -48,7 +48,10 @@ reuse the same few couplers many times (up to 9 CZs on one pair), so check coher
 If they lose under coherent errors, report the case list and set `prefer_synth = False` for those.
 
 ### 11. Pruned line halves for the ladder at N >= 17
-Status: open, suggested owner: bonus-research session (BR-102 / path_decoder.py already fit isometries)
+Status: in progress (ryon session, claimed 2026-10-25 01:35). Running on the cluster: half isometries
+for a = 7, 8 (fallback for N = 13..16 when no whole-state line fits) and a = 9, 10 (N = 17..20),
+warm-started from the line plan of each half (`benchmark_outputs/synth/search_half_warm.py`), with
+windowed prune so depth never grows. Results go into `halves` after an A/B with `ab.py`.
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
