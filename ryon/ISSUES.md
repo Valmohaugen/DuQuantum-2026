@@ -95,6 +95,11 @@ For (8,4), X is about 0.42 out of 1.77 in the denominator. High-weight X correla
 dephasing. Check how much comes from depth and how much from CZ error, and whether a different
 DD placement or a shallower schedule recovers it.
 
+Diagnosis (toby, D(12,6) with toby_sol @7e7133a, 2 calibrations, noise sources switched off one at a time):
+full E 0.457 (X 0.332, f 0.556); no detuning 0.470 (X 0.325); no Tphi 0.509 (X 0.281); no T1 0.580 (X 0.155);
+no gate error 0.609 (X 0.129). The X term near N/2 comes from T1 decay and gate error, not dephasing: DD already
+removes the detuning, so DD placement can't recover it. Only shorter circuits (less T1 time) and fewer CZ help.
+
 ## Done
 - Ported multi-split ladder search from toby/combined_sol.py (tries splits outward from balanced for 8 s): 17.173 -> 17.192. Max build time 20 s at N = 20.
 - Ladder half (4,3) on a path: 18 -> 12 CZ. (7,3) 0.789 -> 0.830, (8,3) 0.768 -> 0.824, and (9,3) 50 -> 44 CZ.
