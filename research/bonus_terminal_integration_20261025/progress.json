@@ -1,0 +1,127 @@
+{
+  "improvements": [
+    {
+      "N": 9,
+      "k": 3,
+      "before": 34,
+      "depth": 33,
+      "CZ": 33,
+      "state_l2_error": 5.558814965212267e-08,
+      "source": "fresh-maintained-line",
+      "trials": 4,
+      "seconds": 3.972787353210151
+    },
+    {
+      "N": 9,
+      "k": 4,
+      "before": 34,
+      "depth": 30,
+      "CZ": 35,
+      "state_l2_error": 3.386351269327107e-08,
+      "source": "fresh-maintained-patch",
+      "trials": 5,
+      "seconds": 5.067237142473459
+    },
+    {
+      "N": 10,
+      "k": 4,
+      "before": 59,
+      "depth": 45,
+      "CZ": 48,
+      "state_l2_error": 2.1198671890529493e-07,
+      "source": "fresh-maintained-line",
+      "trials": 7,
+      "seconds": 7.011991157196462
+    },
+    {
+      "N": 11,
+      "k": 4,
+      "before": 69,
+      "depth": 66,
+      "CZ": 85,
+      "state_l2_error": 1.348536413518586e-14,
+      "source": "ladder-6-True-five_complex-old-4-4",
+      "trials": 46,
+      "seconds": 13.276864086277783
+    },
+    {
+      "N": 12,
+      "k": 4,
+      "before": 76,
+      "depth": 66,
+      "CZ": 99,
+      "state_l2_error": 1.3234683823202386e-14,
+      "source": "ladder-6-True-five_complex-five_complex",
+      "trials": 82,
+      "seconds": 36.08608561940491
+    },
+    {
+      "N": 12,
+      "k": 5,
+      "before": 86,
+      "depth": 78,
+      "CZ": 111,
+      "state_l2_error": 2.6464032491251588e-14,
+      "source": "ladder-6-True-five_complex-five_complex",
+      "trials": 100,
+      "seconds": 43.16077333968133
+    },
+    {
+      "N": 12,
+      "k": 6,
+      "before": 89,
+      "depth": 82,
+      "CZ": 119,
+      "state_l2_error": 1.9918113421449034e-14,
+      "source": "ladder-6-True-five_complex-five_complex",
+      "trials": 118,
+      "seconds": 64.21423830743879
+    },
+    {
+      "N": 14,
+      "k": 4,
+      "before": 91,
+      "depth": 84,
+      "CZ": 127,
+      "state_l2_error": 1.6599398120716233e-14,
+      "source": "ladder-7-True-five_complex-five_complex",
+      "trials": 190,
+      "seconds": 119.00904682930559
+    },
+    {
+      "N": 14,
+      "k": 5,
+      "before": 102,
+      "depth": 96,
+      "CZ": 149,
+      "state_l2_error": 1.6096673241466857e-14,
+      "source": "ladder-7-True-five_complex-five_complex",
+      "trials": 208,
+      "seconds": 138.8333675581962
+    },
+    {
+      "N": 14,
+      "k": 6,
+      "before": 113,
+      "depth": 106,
+      "CZ": 167,
+      "state_l2_error": 2.2902378514092858e-14,
+      "source": "ladder-7-True-five_complex-five_complex",
+      "trials": 226,
+      "seconds": 173.27372117806226
+    },
+    {
+      "N": 14,
+      "k": 7,
+      "before": 115,
+      "depth": 108,
+      "CZ": 175,
+      "state_l2_error": 1.1222259693402608e-14,
+      "source": "ladder-7-True-five_complex-five_complex",
+      "trials": 244,
+      "seconds": 203.6414102204144
+    }
+  ],
+  "trials": 244,
+  "seconds": 204.17063504084945
+}

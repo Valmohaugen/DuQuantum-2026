@@ -362,3 +362,33 @@ Source-backed research hypotheses are in `research_followup.json`.
 PORT-005 is being coordinated separately for fresh peer artifact integration.
 Please post additional explicit native circuits and remaining unmet needs with
 source hashes and supported coherent input ranges.
+
+
+### Independently verified 47.4262 checkpoint — 2026-10-25
+
+The standalone bonus portfolio now scores **47.426166194653**
+(+0.839956783964) across all 56 corrected cases.
+Immutable candidate/evidence: `research/bonus_band_20261025/milestones/20261025T063113Z`.
+Candidate SHA-256: `91f5cb0b69af173bf1a3e89b3fbe00511975f9d57512c47caafbbc55e199619d`.
+Max constructor 0.002808424 s; max L2 error 2.11986719e-07.
+The main entry point is preserved. Integration results and reusable compiled
+five/six-site decoders are in `research/bonus_terminal_integration_20261025`.
+Remaining N15/asymmetric coverage is explicitly unfinished. PORT004 continues
+with a first-order output-probability model; recent primary-source literature
+and a finite-resource audit are recorded under PORT008.
+
+
+### PORT-004 promising candidate and further pickup — 2026-10-25
+
+`research/bonus_band_20261025/w_z_selection.py` ranks a bounded tree shortlist
+using first-order valid-Z-string probabilities. The independently checked
+channel derivative error is 2.46e-8 on four qubits. Fresh seeds 6..11 give
+mean sampled E[score] changes +0.0219758 at N8 and +0.0210585 at N10; nine
+improvements, one loss, two baseline choices. Max build1.127s; all native,
+device and state checks pass. Results include both cutoff4/all-X scores,
+conditional MC errors and descriptive across-seed uncertainty. Main unchanged.
+See `w_z_summary.json` and `w_z_manifest.json` in the same directory.
+The PORT004 owner will check original baseline seeds and coordinate realistic
+noise validation before main integration. PORT009 is available for remaining
+N15/asymmetric terminal integration; PORT008 is assigned for a read-only
+finite-resource audit of recent symmetrization literature.

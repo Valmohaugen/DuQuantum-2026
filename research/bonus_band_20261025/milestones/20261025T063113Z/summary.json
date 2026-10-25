@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "20261025T063113Z",
+  "bonus_score": 47.42616619465258,
+  "previous_score": 46.586209410688724,
+  "increment": 0.8399567839638564,
+  "cases": 56,
+  "source_sha256": "91f5cb0b69af173bf1a3e89b3fbe00511975f9d57512c47caafbbc55e199619d",
+  "max_build_seconds": 0.002808423712849617,
+  "max_state_l2_error": 2.1198671890529493e-07,
+  "max_moments": 126,
+  "candidate": "submission.py",
+  "validation": "validation.json",
+  "improvement": "Eleven native-depth reductions from fresh peer full-state circuits and certified complex five-site terminal integration.",
+  "main_entry_point": "Preserved frozen main entry point; no additional hardware-score gain claimed.",
+  "remaining_work": "The bounded integration did not exhaust balanced N15 or asymmetric splits. PORT004 hardware research continues; PORT008 audits recent deterministic symmetrization resources."
+}

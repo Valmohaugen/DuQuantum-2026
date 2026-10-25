@@ -147,24 +147,28 @@
       ],
       "result_status": "completed for N8/10 seeds0..5, four detuning realizations; held-out seeds3..5; no primary gain claimed"
     },
-    "pilot_status": "fixed-tree and tree-placement pilots complete; no replacement accepted; objective refinement in progress",
+    "pilot_status": "First-order Z-probability selector improves fresh-seed mean scores; baseline-seed and robustness validation pending; main unchanged",
     "pilot_evidence": [
       "research/bonus_band_20261025/w_hardware_results.json",
       "research/bonus_band_20261025/w_hardware_summary.json"
     ],
-    "next_work": "Derive a first-order estimate of valid Z-string probabilities, including within-sector bias; check against scaled-noise density matrices before another placement pilot.",
+    "next_work": "Validate the analytic Z-penalty selector on the original baseline seeds and with the maintained-solver owner before installing a main-constructor change. Preserve baseline outside the bounded pilot domain.",
     "cost_pilot_evidence": [
       "research/bonus_band_20261025/w_cost_summary.json",
       "research/bonus_band_20261025/w_tree_summary.json",
       "research/bonus_band_20261025/w_experiment_manifest.json"
     ],
     "research_sources": "research/bonus_band_20261025/research_followup.json",
-    "publication_note": "Completed artifact paths are included in this branch. Some original search inputs/scripts refer to the shared research workspace; the published standalone submission and W helper are self-contained."
+    "publication_note": "Completed artifact paths are included in this branch. Some original search inputs/scripts refer to the shared research workspace; the published standalone submission and W helper are self-contained.",
+    "z_sensitive_evidence": [
+      "research/bonus_band_20261025/w_z_manifest.json",
+      "research/bonus_band_20261025/w_z_summary.json"
+    ]
   },
   {
     "id": "PORT-005",
     "title": "Integrate certified five/six-site terminal decoders into the native portfolio",
-    "status": "in progress",
+    "status": "complete",
     "assignee": "bonus-integration",
     "suggested_owner": "Existing portfolio integration worker (BR-108); suggestion only, not an accepted assignment",
     "scope": "Consume BR-109 and PORT-001 artifacts after their column checks; do not duplicate their decoder synthesis",
@@ -185,7 +189,57 @@
     ],
     "publication_note": "Completed artifact paths are included in this branch. Some original search inputs/scripts refer to the shared research workspace; the published standalone submission and W helper are self-contained.",
     "integration_directory": "research/bonus_terminal_integration_20261025",
-    "current_scope": "Bounded reuse/integration of frozen terminal-five, terminal-six and maintained (5,4,0) tables; no new decoder synthesis. Baseline best2_circuits.json; preserve per-case best native depth."
+    "current_scope": "Bounded reuse/integration of frozen terminal-five, terminal-six and maintained (5,4,0) tables; no new decoder synthesis. Baseline best2_circuits.json; preserve per-case best native depth.",
+    "result_scope": "Completed bounded 240-second search budget plus final validation (243.85 seconds total) and full 56-case retained-pool validation; truncated N=15 and asymmetric-split follow-ups remain explicit.",
+    "result": {
+      "score": 47.42616619465258,
+      "baseline_score": 46.586209410688724,
+      "gain": 0.8399567839638564,
+      "cases": 56,
+      "trials": 274,
+      "elapsed_seconds": 243.85437892191112,
+      "accepted_changes": 11,
+      "standalone_score": 47.42616619465258,
+      "standalone_candidate": "research/bonus_band_20261025/milestones/20261025T063113Z/submission.py",
+      "standalone_validation": "research/bonus_band_20261025/milestones/20261025T063113Z/validation.json",
+      "standalone_sha256": "91f5cb0b69af173bf1a3e89b3fbe00511975f9d57512c47caafbbc55e199619d",
+      "standalone_max_build_seconds": 0.0028084,
+      "standalone_max_state_l2_error": 2.1198672e-07
+    },
+    "artifacts": [
+      "research/bonus_terminal_integration_20261025/sources.json",
+      "research/bonus_terminal_integration_20261025/integration_circuits.json",
+      "research/bonus_terminal_integration_20261025/integration_results.json",
+      "research/bonus_terminal_integration_20261025/decoder_checks.json",
+      "research/bonus_terminal_integration_20261025/decoder_5_allcounts_native.json",
+      "research/bonus_terminal_integration_20261025/decoder_6_allcounts_native.json",
+      "research/bonus_terminal_integration_20261025/exported_decoder_checks.json",
+      "research/bonus_terminal_integration_20261025/handoff_manifest.json"
+    ],
+    "remaining_work": [
+      "Complete the truncated N=15 balanced sweep",
+      "Evaluate unattempted asymmetric splits",
+      "Precision-certify the existing restricted (5,4,0) half before reuse; current coherent-column error 8.324408431976261e-8 exceeds 1e-10"
+    ],
+    "decoder_findings": {
+      "five_allcounts": {
+        "depth": 46,
+        "CZ": 32,
+        "max_column_error": 1.0113326766156543e-14
+      },
+      "six_allcounts": {
+        "depth": 70,
+        "CZ": 54,
+        "max_column_error": 1.6922325318704498e-14
+      },
+      "restricted_five_four": {
+        "accepted": false,
+        "depth": 36,
+        "CZ": 26,
+        "max_column_error": 8.324408431976261e-08,
+        "required_max_column_error": 1e-10
+      }
+    }
   },
   {
     "id": "PORT-006",
@@ -229,5 +283,43 @@
     "renamed_from": "PORT-004",
     "duplicate_of": "PORT-004",
     "publication_note": "Completed artifact paths are included in this branch. Some original search inputs/scripts refer to the shared research workspace; the published standalone submission and W helper are self-contained."
+  },
+  {
+    "id": "PORT-008",
+    "title": "Audit finite Willow resources for deterministic low-depth symmetrization",
+    "status": "in progress",
+    "assignee": "coordination-research",
+    "scope": "Paper/resource audit only before numerical synthesis; coordinate after PORT005 integration.",
+    "inputs": [
+      "research/bonus_band_20261025/recent_literature_2026.json",
+      "https://journals.aps.org/prx/pdf/10.1103/9qhy-ms2y"
+    ],
+    "acceptance": [
+      "Use a probability-one construction or explicitly solve every failure branch; do not substitute near-unit success for determinism.",
+      "Give finite ancilla counts, native two-qubit depth and Willow routing at N=8,12,15.",
+      "Identify every non-native global primitive and count its decomposition.",
+      "Compare emitted resource estimates with the current frozen portfolio before authorizing any synthesis effort."
+    ],
+    "suggested_owner": "coordination researcher after PORT005; not yet accepted",
+    "current_scope": "Read-only audit of deterministic probability-one symmetrization and finite Willow resources; no simulation, synthesis, Slurm submission or hardware changes.",
+    "audit_directory": "research/bonus_symmetrization_audit_20261025"
+  },
+  {
+    "id": "PORT-009",
+    "title": "Finish bounded terminal integration at N15 and asymmetric splits",
+    "status": "available",
+    "assignee": null,
+    "scope": "Reuse PORT005 frozen decoder library and 47.4261661947 best3 portfolio; no new coefficient synthesis.",
+    "inputs": [
+      "research/bonus_terminal_integration_20261025/integrate.py",
+      "research/bonus_terminal_integration_20261025/integration_circuits.json",
+      "research/bonus_band_20261025/milestones/20261025T063113Z"
+    ],
+    "acceptance": [
+      "Prioritize unvisited N15 k>=4 balanced cases, then splits offset +/-1.",
+      "Retain every previous per-case best depth; report coverage and elapsed budget.",
+      "Maintain coherent decoder error <1e-10 and revalidate all 56 native state/device cases before publishing any score."
+    ],
+    "suggested_owner": "Portfolio integration worker; available for pickup"
   }
 ]

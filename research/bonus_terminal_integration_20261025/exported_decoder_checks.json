@@ -1,0 +1,47 @@
+[
+  {
+    "n": 5,
+    "k": 5,
+    "depth": 46,
+    "CZ": 32,
+    "max_column_error": 1.0113326766156543e-14,
+    "column_errors": [
+      7.338206445068994e-15,
+      9.775955346454075e-15,
+      1.0113326766156543e-14,
+      9.215985732117652e-15,
+      8.621880758181041e-15,
+      8.915579102475082e-15
+    ],
+    "common_phase": [
+      0.27717352358302955,
+      -0.9608198779295566
+    ],
+    "encoding": "|0^(n-r)1^r> -> D(n,r), r=0..n, with one common phase",
+    "circuit": "decoder_5_allcounts_native.json",
+    "source": "Existing complex five-site decoder plus unchanged analytic prefix; native compilation only"
+  },
+  {
+    "n": 6,
+    "k": 6,
+    "depth": 70,
+    "CZ": 54,
+    "max_column_error": 1.6922325318704498e-14,
+    "column_errors": [
+      1.2339183575899553e-14,
+      1.6922325318704498e-14,
+      1.5641974037426078e-14,
+      1.3727937687369246e-14,
+      1.3107043467386241e-14,
+      1.341070246091167e-14,
+      1.4031857831680496e-14
+    ],
+    "common_phase": [
+      0.9679323526148707,
+      -0.2512109885364127
+    ],
+    "encoding": "|0^(n-r)1^r> -> D(n,r), r=0..n, with one common phase",
+    "circuit": "decoder_6_allcounts_native.json",
+    "source": "Existing complex five-site decoder plus unchanged analytic prefix; native compilation only"
+  }
+]

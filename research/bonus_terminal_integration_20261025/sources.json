@@ -1,0 +1,57 @@
+{
+  "snapshot.py": {
+    "source": "ryon/toby_sol.py",
+    "source_sha256": "6af97c8588165a6dd6f8ea6ba1941fda34dee49b4c1d769f0f03d89874038f8a",
+    "snapshot_sha256": "6af97c8588165a6dd6f8ea6ba1941fda34dee49b4c1d769f0f03d89874038f8a"
+  },
+  "probe.py": {
+    "source": "research/bonus_band_20261025/probe.py",
+    "source_sha256": "18997af23863706157611cae6b9faa74f584479873865bf1dc45891408fe4e08",
+    "snapshot_sha256": "e80e22b986894ca8503c4eca5b8369fc9c757055e84794b6321cc176b7c95f1e"
+  },
+  "commuting_schedule.py": {
+    "source": "research/bonus_band_20261025/commuting_schedule.py",
+    "source_sha256": "f5011dd42d715bec9cc9830e7ef0575af78791c753d5633d612700dddb637cbb",
+    "snapshot_sha256": "9d389aef622fe78a8ef386ff46b02272780e9282bb1a1663906049f4cb763ee1"
+  },
+  "refined_halves.json": {
+    "source": "research/bonus_band_20261025/refined_halves.json",
+    "source_sha256": "4f2db62fd3eefa138e48b756843dcb0ae0b7b319143e3acff47754f917af9440",
+    "snapshot_sha256": "4f2db62fd3eefa138e48b756843dcb0ae0b7b319143e3acff47754f917af9440"
+  },
+  "clean_clifford_tables.json": {
+    "source": "research/bonus_band_20261025/clean_clifford_tables.json",
+    "source_sha256": "d96165008545bdbece617635620b16ab6525b63c78415821cd91119f4a7979fd",
+    "snapshot_sha256": "d96165008545bdbece617635620b16ab6525b63c78415821cd91119f4a7979fd"
+  },
+  "five_real.json": {
+    "source": "research/bonus_portfolio_20261025/path_decoder_5_5_real_refined.json",
+    "source_sha256": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d",
+    "snapshot_sha256": "6851e31f2515d05a4be354f1dda38cce9c1832cc4048f239e622227134a77e7d"
+  },
+  "five_complex.json": {
+    "source": "research/bonus_portfolio_20261025/path_decoder_5_5_complex_refined.json",
+    "source_sha256": "58625bb615547fc142942b0bb0cdb46421c59c3023b2cfc68067813f81f582cc",
+    "snapshot_sha256": "58625bb615547fc142942b0bb0cdb46421c59c3023b2cfc68067813f81f582cc"
+  },
+  "six_real.json": {
+    "source": "research/bonus_terminal6_20261025/six_decoder_baseline_refined.json",
+    "source_sha256": "7c16c4e27188432212472f2f648d36602cb2e39778a97ad2a7c4938b313db79d",
+    "snapshot_sha256": "7c16c4e27188432212472f2f648d36602cb2e39778a97ad2a7c4938b313db79d"
+  },
+  "five_four.json": {
+    "source": "benchmark_outputs/synth/sol_half_5_4_0_s2.json",
+    "source_sha256": "6a634a85a2c15f91de652882c5b9830315835f93bf4158446e21d44a92cdf3a3",
+    "snapshot_sha256": "6a634a85a2c15f91de652882c5b9830315835f93bf4158446e21d44a92cdf3a3"
+  },
+  "baseline_circuits.json": {
+    "source": "research/bonus_band_20261025/best2_circuits.json",
+    "source_sha256": "6c61f969ebd2cd6fec030c04d30019d4f0723e0c1f98e7f25070ad9a4db56b04",
+    "snapshot_sha256": "6c61f969ebd2cd6fec030c04d30019d4f0723e0c1f98e7f25070ad9a4db56b04"
+  },
+  "baseline_results.json": {
+    "source": "research/bonus_band_20261025/best2_results.json",
+    "source_sha256": "adb1f1206564cf13de538addcf907ffc7c5800337b4d7eaf61b30c1e5dee033e",
+    "snapshot_sha256": "adb1f1206564cf13de538addcf907ffc7c5800337b4d7eaf61b30c1e5dee033e"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "completed fresh-seed follow-up",
+  "seeds": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "baseline_sha256": "02512364d908c1e6f28fe288f5c94ff301fbf36e99e7fd0b9b853c462eceaae3",
+  "files": {
+    "research/bonus_band_20261025/w_z_sensitivity.py": "b5be11f4af7566baac6608bbeed501bcf672fd9554a42446d8e2bb7f604ffe12",
+    "research/bonus_band_20261025/w_z_sensitivity_checks.json": "67d50392f825c51ceb93da52fceeef0e56ef882ed2c0e17efece9f2102a6a3c4",
+    "research/bonus_band_20261025/w_z_selection.py": "51a90599b28fa29d36e544514cb64303a4454da734d0a5c0af679e275b7daee6",
+    "research/bonus_band_20261025/w_z_probe.py": "f98abfc835b509faf7c59cff5e138d0102d98e466fe39c13fc34485e889ac5ae",
+    "research/bonus_band_20261025/w_z_results.json": "1a5d6fcbf31767fc016610c680a8e60f1e870ca753ef0f1d6a13c3ae4fd7c40c",
+    "research/bonus_band_20261025/w_z_pools.json": "bddd803e7ea21acaaa0880fdf84f79dadb2152766bb25ff33e6db8730ad404a8",
+    "research/bonus_band_20261025/w_z_summary.json": "92a2378da39f3187972263542262b17afd0550c5509ce412c45a21b8cd5afdf8"
+  },
+  "dependencies": "w_experiment_manifest.json records unchanged baseline, calibration and noise-evaluator sources",
+  "command": "python -m research.bonus_band_20261025.w_z_probe",
+  "observations": "Selection objective uses only analytic first-order probabilities and the supplied calibration. Full noisy evaluation is used only after selection; no per-seed selection tuning."
+}

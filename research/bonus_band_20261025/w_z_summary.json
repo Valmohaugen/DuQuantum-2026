@@ -1,0 +1,59 @@
+{
+  "status": "fresh-seed pilot complete; promising experimental candidate, no maintained constructor change",
+  "cases": 12,
+  "calibration_seeds": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "changed_choices": 10,
+  "max_build_seconds": 1.126681107096374,
+  "max_state_l2_error": 1.046459222976852e-15,
+  "summary": [
+    {
+      "N": 8,
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.02198755385232305,
+      "conditional_MC_standard_error_of_mean": 0.003334062778503432,
+      "calibration_sample_standard_error": 0.0070275131823604245,
+      "positive_cases": 5,
+      "negative_cases": 0
+    },
+    {
+      "N": 8,
+      "cutoff": 8,
+      "cases": 6,
+      "mean_score_delta": 0.021975826369504032,
+      "conditional_MC_standard_error_of_mean": 0.0033283542931737005,
+      "calibration_sample_standard_error": 0.007012828598748449,
+      "positive_cases": 5,
+      "negative_cases": 0
+    },
+    {
+      "N": 10,
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.02107151964395911,
+      "conditional_MC_standard_error_of_mean": 0.002306234672960253,
+      "calibration_sample_standard_error": 0.009760640632931302,
+      "positive_cases": 4,
+      "negative_cases": 1
+    },
+    {
+      "N": 10,
+      "cutoff": 10,
+      "cases": 6,
+      "mean_score_delta": 0.02105854630352069,
+      "conditional_MC_standard_error_of_mean": 0.002304389918038608,
+      "calibration_sample_standard_error": 0.009753547522329587,
+      "positive_cases": 4,
+      "negative_cases": 1
+    }
+  ],
+  "decision": "Validate the analytic Z-penalty selector on the original baseline seeds and with the maintained-solver owner before installing a main-constructor change. Preserve baseline outside the bounded pilot domain.",
+  "uncertainty": "MC uncertainty conditions on four detuning draws; calibration sample uncertainty is descriptive for six synthetic seeds per size. Neither is a real-hardware guarantee. Coupling across layouts uses sorted qubit positions, not one physical-chip detuning draw."
+}

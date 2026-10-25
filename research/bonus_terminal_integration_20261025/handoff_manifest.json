@@ -1,0 +1,27 @@
+{
+  "status": "complete bounded integration; no live owned processes",
+  "score": 47.42616619465258,
+  "baseline_score": 46.586209410688724,
+  "gain": 0.8399567839638564,
+  "cases": 56,
+  "trials": 274,
+  "seconds": 243.85437892191112,
+  "accepted_changes": 11,
+  "files": {
+    "integrate.py": "61960dd5ca0872576af9a08210ab27608d9e2ed81f62e284e1f55ee3c3b4beb4",
+    "export_decoders.py": "ff6d9a18e0b324f3a16946ffabd6aa9b7b8847e444b3c22356d9502b63f88b10",
+    "sources.json": "07d7c6f7532f794d5f2acac4f7515554edba262372a549d0d51fa1c4980ab435",
+    "integration_circuits.json": "691ac70c3a54e94814c1ece639ec09c03983d75abc115b0b15821c45657410af",
+    "integration_results.json": "671666d6cd99a9e3103099385f11a0738879084217b831c8f057834e0f86422b",
+    "decoder_checks.json": "ede7a467a752f83386be169b7c1f78b24ec7eb6c6fc46258541c7ded1e91f87d",
+    "decoder_5_allcounts_native.json": "5976de8f8af8cf6f59a7e7073bb5640e2b773928fc5dd7db70cd58b38b41a57b",
+    "decoder_6_allcounts_native.json": "1491d612f68085c1b988e2682c161920665e9a1e3a23d9f7d99982f5a58f98d1",
+    "exported_decoder_checks.json": "34112dda50f0eebf489deae75fd14b094e72f2d974685743fe261044b7a787f0"
+  },
+  "remaining_scope": [
+    "Complete the truncated N=15 balanced sweep",
+    "Evaluate unattempted asymmetric splits",
+    "Precision-certify the existing restricted (5,4,0) half before reuse; current coherent-column error 8.324408431976261e-8 exceeds 1e-10"
+  ],
+  "standalone_validation": "research/bonus_band_20261025/milestones/20261025T063113Z/validation.json"
+}

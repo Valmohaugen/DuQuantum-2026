@@ -1,0 +1,13 @@
+{
+  "source_directory": "research/bonus_terminal_integration_20261025",
+  "files": {
+    "integration_circuits.json": "691ac70c3a54e94814c1ece639ec09c03983d75abc115b0b15821c45657410af",
+    "integration_results.json": "671666d6cd99a9e3103099385f11a0738879084217b831c8f057834e0f86422b",
+    "integrate.py": "61960dd5ca0872576af9a08210ab27608d9e2ed81f62e284e1f55ee3c3b4beb4",
+    "sources.json": "07d7c6f7532f794d5f2acac4f7515554edba262372a549d0d51fa1c4980ab435",
+    "decoder_checks.json": "ede7a467a752f83386be169b7c1f78b24ec7eb6c6fc46258541c7ded1e91f87d"
+  },
+  "previous_score": 46.586209410688724,
+  "score": 47.42616619465258,
+  "integration_scope": "Bounded existing-artifact merge; N15 balanced sweep and asymmetric sweeps were not exhausted."
+}

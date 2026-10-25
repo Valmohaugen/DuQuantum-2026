@@ -1,0 +1,34 @@
+{
+  "review_date": "2026-10-25",
+  "status": "resource leads only; no new accepted circuit or score",
+  "sources": [
+    {
+      "title": "Constant-depth adaptive preparation of Dicke and symmetric states",
+      "url": "https://arxiv.org/abs/2608.01144",
+      "date": "2026-08-02",
+      "finding": "The abstract gives exact but probabilistic Dicke preparation with polynomial ancilla overhead; repetition suppresses failure rather than removing it.",
+      "challenge_implication": "Not an accepted deterministic circuit without an explicit treatment of all failure branches, routing and diagonal readout."
+    },
+    {
+      "title": "Constant-Depth Unitary Preparation of Dicke States",
+      "url": "https://arxiv.org/abs/2601.10693v3",
+      "date": "2026-08-25 revision",
+      "finding": "Constant-depth results assume unbounded CZ interactions; arbitrary-weight exact clean preparation also uses quantum fan-out.",
+      "challenge_implication": "These are not native Willow two-qubit CZ primitives. Any comparison must decompose and route them."
+    },
+    {
+      "title": "Efficient Preparation of Dicke States",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/9gjk-rgql",
+      "date": "2026-01-20",
+      "finding": "The abstract reports adaptive global projective measurements and global rotations with polylogarithmic depth and ancillary resources.",
+      "challenge_implication": "Needs a finite native measurement/feed-forward circuit and branch analysis; no native-depth gain inferred from the abstract."
+    },
+    {
+      "title": "Low-Depth Quantum Symmetrization",
+      "url": "https://journals.aps.org/prx/pdf/10.1103/9qhy-ms2y",
+      "date": "2026-08-31",
+      "finding": "Result 1 has near-unit success probability and approximately logarithmic depth. Result 2 succeeds with probability one, uses O(n log n) ancillas, and has approximately log-cubed depth. Section IC2 applies these to Dicke states; the conclusion highlights restricted-connectivity sorting as open work.",
+      "challenge_implication": "Audit Result 2 at finite N rather than treating Result 1 as a deterministic native implementation. Count sorting/comparison workspace and routing explicitly before pursuing synthesis."
+    }
+  ]
+}

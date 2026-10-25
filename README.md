@@ -284,3 +284,32 @@ Reported Monte Carlo uncertainty excludes calibration and detuning uncertainty.
 PORT-004 continues with output-probability sensitivity; PORT-005 tracks fresh
 peer decoder/circuit integration. The [task board](research/bonus_portfolio_20261025/tasks.json)
 preserves ownership and acceptance checks.
+
+
+## Verified bonus checkpoint — 2026-10-25 02:31 EDT
+
+Best corrected 56-case bonus score: **47.4261661947**,
+up **0.8399567840** from 46.5862094107. Eleven native-depth
+improvements came from fresh peer circuits and certified five-site terminal
+decoders. All 56 standalone cases passed state, native-gate and Willow-connectivity
+checks. Maximum constructor time was **0.002808 s**;
+maximum state L2 error was **2.12e-07**.
+
+[Standalone candidate](research/bonus_band_20261025/milestones/20261025T063113Z/submission.py),
+[full validation](research/bonus_band_20261025/milestones/20261025T063113Z/validation.json),
+[checkpoint summary](research/bonus_band_20261025/milestones/20261025T063113Z/summary.json), and
+[integration evidence](research/bonus_terminal_integration_20261025/integration_results.json).
+The main entry point is unchanged. The bounded integration left part of the
+N=15 and asymmetric-split search for follow-up; research continues.
+
+
+The follow-up first-order Z-output model passed an independent scaled-noise
+derivative check. Its N=8,10 placement pilot on fresh calibration seeds 6..11
+produced mean sampled score changes of **+0.02198** and **+0.02106**, respectively
+(all X orders, six seeds each). Nine cases improved, one declined, and two kept
+the baseline. This is promising simulation evidence; the main constructor
+remains unchanged pending baseline-seed and robustness checks.
+[Full pilot summary](research/bonus_band_20261025/w_z_summary.json),
+[reproduction manifest](research/bonus_band_20261025/w_z_manifest.json).
+PORT-009 is available to finish the bounded bonus integration's remaining
+N=15/asymmetric coverage; PORT-008 is assigned to the resource-audit worker.
