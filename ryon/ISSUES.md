@@ -170,6 +170,11 @@ D(20,5) 0.205 (275 cz), D(20,10) 0.207 (415 cz); combined_sol and halves_start_s
 The judges' `max_correlator_size` isn't stated. With N, the X term dominates at n ~ N/2 for
 N >= 10 (for example (11,5) X = 0.90 of a 2.5 denominator), so the choice changes how much depth
 matters there. Worth reporting both.
+Both sizes now reported (toby, 10 fresh calibrations, 44 instances N = 2..16, expected score summed):
+preliminary submission 34.40 (K=4) / 32.45 (K=N); ladder_sol v1 36.39 / 34.44; current toby_sol @a26041d
+36.61 / 34.68, i.e. +2.20 +- 0.08 at K=4 and +2.23 +- 0.08 at K=N over the preliminary file. The ranking
+and the gain don't depend on the correlator size; n >= 2 gains +12.6% at K=N.
+
 
 ### 3. Better n >= 2 construction for N >= 9
 Partly done: toby's two-half ladder (toby/ladder_sol.py) is merged into toby_sol and chosen per
