@@ -7,6 +7,163 @@ The organizer confirmed bonus grading for **2 ≤ N ≤ 15** and corrected the o
 validator to use `range(len(qubits))`. Hidden grading cases and correlator sizes remain
 undisclosed. The original challenge notebook stays unchanged and supplies the official scorer.
 
+## Harmonic objective and paired evaluations — 2026-10-25
+
+The reported new primary objective, `1 / mean(1 / score)`, is the **harmonic
+mean**. Since each notebook score is `1 / (Z_penalty + X_penalty)`, pooling
+individual scores this way is exactly equivalent to minimizing their mean
+total penalty. Weak cases matter more than under the previous arithmetic
+score sum: the marginal benefit of improving score s scales as `1 / s²`.
+The depth bonus remains a separate objective; its historical totals below
+have not been reinterpreted as primary harmonic scores.
+
+The offline ranking is now recovered from `~/dat.txt`: see the
+[archived chart](research/chart_comparison_20261025/chart.txt). Its early
+`solution` entry places 4/5. Its displayed primary totals match the **sum**
+of three per-case means (for example, Tanish: 0.3900 + 0.4328 + 0.5088 =
+1.3316), not the harmonic mean. A revised harmonic rule therefore still needs
+independent confirmation. This chart does not establish the rank of the
+current exports. The averaging order also needs
+confirmation: pooling individual observations differs from first averaging
+scores within a case. The evaluator records **both** interpretations.
+
+[evaluate_candidates.py](claude/scripts/evaluate_candidates.py) compares
+constructors on matching synthetic calibration seeds, shots, cases and seeded
+detuning draws. It checks native gates, Willow connectivity and exact noiseless
+state fidelity before simulation. Finite-shot Z-sector counts and X Hamming-weight
+counts reproduce the notebook penalties, including X sampling variance; tests
+compare these compressed statistics directly with the notebook helper copy.
+The older `fast_eval` reciprocal-mean-penalty proxy is reported separately.
+Undefined draws fail explicitly rather than disappearing from the aggregate.
+
+The full paired run covers **16 cases** (`2 <= N <= 8`, `1 <= n <= N//2`),
+calibration seeds 0–2, four detuning realizations at 7.5 kHz, and 256 independent
+finite-shot repeats of 10,000 shots per basis for each frozen distribution.
+All **288 evaluated circuits** pass state/native/device checks; minimum
+complex128 fidelity is 0.9999999999999978.
+
+| Candidate | Pooled harmonic score | Harmonic of case mean scores | Mean moments | Maximum moments | Mean CZ |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Current peer (`ryon/toby_sol.py`) | **1.053658** | **1.426576** | 14.08 | 25 | 12.75 |
+| Latest native standalone export | 1.045147 | 1.412098 | 15.21 | 29 | 12.60 |
+| Simple: maintained optimized constructor, DD off | 0.976381 | 1.286525 | 27.92 | 81 | 19.06 |
+| Simple plus EARLIEST packing | 0.966408 | 1.281143 | 27.77 | 81 | 19.06 |
+| Maintained constructor, sparse DD | 0.956589 | 1.257639 | 27.92 | 81 | 19.06 |
+| Maintained constructor, default dense DD | 0.946067 | 1.243806 | 27.92 | 81 | 19.06 |
+
+[Full results and settings](research/harmonic_eval_20261025/full/results.json)
+and [compact table](research/harmonic_eval_20261025/full/summary.md) retain
+per-case/per-seed scores, source hashes, circuits and noisy distributions.
+The sampled harmonic objective ranks the peer **11.37%** above the maintained
+dense-DD constructor; turning off dense DD gains **3.20%** in this run.
+These comparisons have the same direction at each calibration seed. Three
+calibrations are a small sample, not a hardware-wide confidence claim.
+
+The separate [four-case screen](research/harmonic_eval_20261025/screen/summary.md)
+also compares the older analytic construction and the roughly 40-line
+`ryon/minimal_dicke.py` reference. Their pooled harmonic scores are 0.902035
+and 0.313181, respectively, versus 0.934793 for the optimized simple variant.
+That screen uses two detuning realizations, so compare scores **within** a run.
+The minimal reference reaches 558–601 moments at D(8,4), whereas the current
+peer uses 21 moments and the maintained constructor uses 81. Small source
+code alone does not imply a shallow native circuit. The peer's fitted weights
+and synthesis tables have substantial measured value and should be retained.
+
+The newer candidate has already resolved much of the early depth problem:
+D(6,3) is 15 moments versus 43 in the maintained constructor; D(8,4) is 21
+versus 81. Generic extra packing saved little depth and reduced the full-run
+score, so it is not promoted. Disabling DD globally is also not established:
+on held-out calibration 5, DD improves the peer's D(4,2) layout. Separate
+[DD-off](research/harmonic_eval_20261025/peer_no_dd.py) and
+[packing](research/harmonic_eval_20261025/peer_packed.py) ablations preserve
+the peer's weights and stay outside the maintained solver.
+
+Held-out seeds **3–5**, on D(4,2), D(6,3) and D(8,4), confirm that the newer
+peer remains preferable under the tested stronger-detuning assumption:
+
+| Candidate | Harmonic, 7.5 kHz | Harmonic, assumed 30 kHz stress |
+| --- | ---: | ---: |
+| Current peer | **0.958260** | **0.961275** |
+| Peer, DD off | 0.955567 | 0.956838 |
+| Peer, depth-oriented packing | 0.956498 | 0.954529 |
+| Simple maintained constructor, DD off | 0.809445 | 0.775959 |
+| Maintained dense-DD constructor | 0.762427 | 0.759515 |
+
+[Nominal confirmation](research/harmonic_eval_20261025/heldout_nominal/results.json)
+and [detuning stress results](research/harmonic_eval_20261025/heldout_detuning30/results.json)
+record another **90** passing state/native/device evaluations. The small
+differences among peer variants do not establish a reliable improvement;
+even their near-tie ordering changes when averaging scores within cases first.
+The slight increase in the peer's stressed aggregate is finite sampling/model
+variation, not evidence that extra detuning helps. Across the screen, full
+comparison and confirmations, **462 circuits** were evaluated. No selector,
+packing tweak or global DD removal is promoted into the maintained constructors
+or current exports on this evidence. Retain the newer shallow circuits and
+use the harmonic evaluator to gate further changes.
+
+Run a focused comparison with the project environment:
+
+```bash
+python -m claude.scripts.evaluate_candidates \
+  --cases 2,1 4,2 6,3 8,4 --seeds 0 1 2 \
+  --variants simple analytic current sparse packed \
+  --candidate peer=ryon/toby_sol.py \
+  --candidate standalone=research/bonus_band_20261025/native_submission.py \
+  --candidate minimal=ryon/minimal_dicke.py \
+  --output research/my_harmonic_comparison
+```
+
+Candidate paths can point to frozen or tweaked implementations exposing
+`create_dicke_state`. Use a fresh output directory; completed results are
+never overwritten. This session used isolated Python 3.11.5/Cirq 1.6.1 with
+the explicit `--willow-fallback` device alias because the documented project
+environment was unavailable. [Runtime versions](research/harmonic_eval_20261025/runtime.txt)
+are recorded; these are local modeled comparisons, not a locked-runtime
+certification or hardware leaderboard reproduction. The existing model omits
+leakage, coherent errors, ZZ crosstalk and drift, and these runs do not cover
+N=9–15 or undisclosed hardware grading cases.
+
+## Recovered chart cases and current depths — 2026-10-25
+
+The actual chart cases are **(10,3), (10,5), (15,4)**. Its final pair is
+therefore D(15,4), rather than D(8,4) or D(15,7). A fresh constructor-only
+comparison using `judge.fake_calibration(0)` gives:
+
+| Constructor | D(10,3) moments | D(10,5) moments | D(15,4) moments | Mean moments |
+| --- | ---: | ---: | ---: | ---: |
+| Old `solution`, chart | 106 | 134 | 215 | 151.67 |
+| Newest peer (`ryon/toby_sol.py`) | **37** | **33** | **118** | **62.67** |
+| Current native standalone, main entry point | 55 | 73 | 118 | 82.00 |
+| Simple maintained constructor, DD off | 91 | 123 | 193 | 135.67 |
+
+The reported old depth of **152** is the rounded mean, `(106+134+215)/3`,
+not the depth of a single case. Compare that mean with 62.67 for the newest
+peer or 82.00 for the current standalone, under the synthetic calibration used here.
+
+All newly constructed circuits pass native/device checks and complex128
+noiseless state checks. These are primary-constructor depths, not bonus-cache
+depths. The newest peer reduces the final pair's depth by **45.1%** relative
+to the chart, with **147 CZ gates**. The frozen standalone's main path trails
+the newest peer on the two N=10 cases, despite its up-to-date bonus cache.
+The calibration is synthetic: these measurements do not establish the exact
+depth selected under the chart's unavailable calibration.
+
+The supplied old source is cut off mid-angle-table and literally ends with
+`... (32 KB left)`. The
+[partial recovery](research/chart_comparison_20261025/old_solution_partial.py)
+preserves complete required tables through N=11 and rejects larger requests.
+It reproduces **106 and 134 moments** on the two N=10 cases; no old D(15,4)
+circuit has been reconstructed. [Recovery provenance](research/chart_comparison_20261025/provenance.json)
+and [resource results](research/chart_comparison_20261025/resources.json) retain
+the original file hash and the measured evidence.
+
+The chart and code contain no actual calibration maps or judging noise
+configuration. Exact noisy-score reproduction still requires those maps,
+noise channels/timings, shot count, X-correlator cutoff, seeds and aggregation
+procedure. A noisy N=15 calculation also needs a separately chosen simulation
+method; the paired density evaluator intentionally remains capped at ten total
+qubits. No synthetic noisy score is presented as a reproduction of this chart.
+
 ## Environment and local checks
 
 Use the project environment with Python **3.12.15**. The dependency lock targets the tested
@@ -228,8 +385,10 @@ Reusable tasks and their acceptance criteria are recorded in
 
 ## Best results so far (primary score)
 
-Local metric: `cd ryon && python fast_eval.py --seeds 0 1 2` (expected notebook score, N = 2..8,
+Historical local metric: `cd ryon && python fast_eval.py --seeds 0 1 2` (summed score proxy, N = 2..8,
 n <= N/2, three fake calibrations, density-matrix noise model with all X correlator sizes).
+These arithmetic totals do not measure the revised harmonic objective; see the paired
+evaluation above. The proxy omits X finite-shot variance and is not E[1/penalty].
 Larger N are spot checks with `benchmark_outputs/ex/sel.py`. Work queue: `ryon/ISSUES.md`.
 
 | date (EDT) | commit | change | total N = 2..8 |

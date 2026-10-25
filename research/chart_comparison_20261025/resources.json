@@ -1,0 +1,131 @@
+{
+  "calibration": "judge.fake_calibration(0), NOT the unavailable chart calibration",
+  "cirq": "1.6.1",
+  "rows": [
+    {
+      "variant": "peer",
+      "N": 10,
+      "n": 3,
+      "moments": 37,
+      "cz": 39,
+      "fidelity": 0.9999999999999891,
+      "build_and_check_seconds": 0.12597558926790953
+    },
+    {
+      "variant": "peer",
+      "N": 10,
+      "n": 5,
+      "moments": 33,
+      "cz": 40,
+      "fidelity": 0.9999999999999365,
+      "build_and_check_seconds": 0.4187145233154297
+    },
+    {
+      "variant": "peer",
+      "N": 15,
+      "n": 4,
+      "moments": 118,
+      "cz": 147,
+      "fidelity": 0.9999999999999629,
+      "build_and_check_seconds": 3.719611614011228
+    },
+    {
+      "variant": "standalone",
+      "N": 10,
+      "n": 3,
+      "moments": 55,
+      "cz": 59,
+      "fidelity": 0.9999999999999982,
+      "build_and_check_seconds": 1.2017891500145197
+    },
+    {
+      "variant": "standalone",
+      "N": 10,
+      "n": 5,
+      "moments": 73,
+      "cz": 85,
+      "fidelity": 0.9999999999999987,
+      "build_and_check_seconds": 0.7504195803776383
+    },
+    {
+      "variant": "standalone",
+      "N": 15,
+      "n": 4,
+      "moments": 118,
+      "cz": 147,
+      "fidelity": 0.9999999999999629,
+      "build_and_check_seconds": 3.7517411494627595
+    },
+    {
+      "variant": "simple",
+      "N": 10,
+      "n": 3,
+      "moments": 91,
+      "cz": 65,
+      "fidelity": 1.0000000000000004,
+      "build_and_check_seconds": 0.5150579856708646
+    },
+    {
+      "variant": "simple",
+      "N": 10,
+      "n": 5,
+      "moments": 123,
+      "cz": 105,
+      "fidelity": 0.9999999999999991,
+      "build_and_check_seconds": 0.5667367447167635
+    },
+    {
+      "variant": "simple",
+      "N": 15,
+      "n": 4,
+      "moments": 193,
+      "cz": 159,
+      "fidelity": 0.9999999999999973,
+      "build_and_check_seconds": 1.084122259169817
+    },
+    {
+      "variant": "old_partial",
+      "N": 10,
+      "n": 3,
+      "moments": 106,
+      "cz": 69,
+      "fidelity": 0.9999999999999953,
+      "build_and_check_seconds": 0.5046578785404563
+    },
+    {
+      "variant": "old_partial",
+      "N": 10,
+      "n": 5,
+      "moments": 134,
+      "cz": 115,
+      "fidelity": 0.9999999999999012,
+      "build_and_check_seconds": 0.6054650042206049
+    }
+  ],
+  "sources_sha256": {
+    "ryon/toby_sol.py": "c03efe47ca996ccebed0db87c25004023fb976922e30c9126f6818e1c1e7f89b",
+    "claude/dicke_prep.py": "75f9cad7b8d8c831fa8df43e6bad26336bc52af786993846c4de4c522adf29ed",
+    "research/bonus_band_20261025/native_submission.py": "b5a4e8bedaac1255ef88c1ff8bb7a148a6f0fcf98541f496e1ff4ccb361629f2",
+    "research/chart_comparison_20261025/old_solution_partial.py": "6a51a3e23a81044619f3e3eb3c951c1c35517015a90191d80ab2a619c094a38d"
+  },
+  "chart_cases": [
+    [
+      10,
+      3
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      15,
+      4
+    ]
+  ],
+  "chart_old_depths": [
+    106,
+    134,
+    215
+  ],
+  "scope": "Native resource counts plus exact noiseless state validation; no noisy-score reproduction claimed."
+}

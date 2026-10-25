@@ -1,0 +1,10 @@
+"""Ablation using the peer solver's existing depth-oriented packing option."""
+
+from ryon.toby_sol import create_dicke_state as prepare
+from ryon.toby_sol import create_dicke_state_adaptive
+
+__all__ = ["create_dicke_state", "create_dicke_state_adaptive"]
+
+
+def create_dicke_state(*args):
+    return prepare(*args, pack=True)

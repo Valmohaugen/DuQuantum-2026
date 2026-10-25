@@ -1,0 +1,27 @@
+{
+  "original_path": "/home/rpeddap/dat.txt",
+  "original_sha256": "50e239b452400da470fda367d7ff28915ab5a89323e05c5d2d64a15f594e2633",
+  "source_start_line": 41,
+  "incomplete_line": 500,
+  "recovery": "Discard incomplete (11,8) angle row, close dict, reject N>11; other source preserved.",
+  "chart_cases": [
+    [
+      10,
+      3
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      15,
+      4
+    ]
+  ],
+  "chart_old_depths": [
+    106,
+    134,
+    215
+  ],
+  "calibrations_present": false
+}

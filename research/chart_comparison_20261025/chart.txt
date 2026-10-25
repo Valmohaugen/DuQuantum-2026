@@ -1,0 +1,24 @@
+Rank	Student	Valid Circuits	Mean Circuit Depth	Problem 1 (Mean ± SE)	Bonus Implemented	Bonus Score	Bonus Point	Total Score
+1	sub1 - Kai Sandberg	3	80.000000	1.2201 ± 0.0172	True	41.103632	1.0	2.2201 ± 0.0172
+2	DuQuantum_submission_v4_executed - Tanish Rajpal	3	89.666667	1.3316 ± 0.0148	True	33.850096	0.0	1.3316 ± 0.0148
+3	submission - Bryan Zhong	3	86.333333	1.2417 ± 0.0162	True	37.154240	0.0	1.2417 ± 0.0162
+4	solution - Ryon Peddapalli	3	151.666667	1.1190 ± 0.0262	True	25.196125	0.0	1.1190 ± 0.0262
+5	brandon - Samuel Orellana Mateo	3	95.333333	0.4113 ± 0.0089	False	0.000000	0.0	0.4113 ± 0.0089
+
+And here is a more detailed breakdown of the scores for the individual (N, n) pairs:
+
+N	n	Tanish Rajpal Score (Mean ± SE)	Tanish Rajpal Circuit Depth	Samuel Orellana Mateo Score (Mean ± SE)	Samuel Orellana Mateo Circuit Depth	Ryon Peddapalli Score (Mean ± SE)	Ryon Peddapalli Circuit Depth	Kai Sandberg Score (Mean ± SE)	Kai Sandberg Circuit Depth	Bryan Zhong Score (Mean ± SE)	Bryan Zhong Circuit Depth
+10	3	0.3900 ± 0.0074	64	0.1688 ± 0.0072	64	0.4782 ± 0.0213	106	0.5518 ± 0.0154	51	0.4856 ± 0.0134	55
+10	5	0.4328 ± 0.0121	76	0.1503 ± 0.0049	78	0.2488 ± 0.0146	134	0.3029 ± 0.0046	73	0.3581 ± 0.0080	79
+15	4	0.5088 ± 0.0041	129	0.0922 ± 0.0021	144	0.3919 ± 0.0045	215	0.3653 ± 0.0060	116	0.3981 ± 0.0044	125
+
+(Column groups correspond to submissions: DuQuantum_submission_v4_executed - Tanish Rajpal, brandon - Samuel Orellana Mateo, solution - Ryon Peddapalli, sub1 - Kai Sandberg, submission - Bryan Zhong.)
+
+Ranking by Problem 1 only:
+
+Rank	Student	Valid Circuits	Mean Circuit Depth	Problem 1 (Mean ± SE)
+1	DuQuantum_submission_v4_executed - Tanish Rajpal	3	89.666667	1.3316 ± 0.0148
+2 (Tied - 2σ)	submission - Bryan Zhong	3	86.333333	1.2417 ± 0.0162
+2 (Tied - 2σ)	sub1 - Kai Sandberg	3	80.000000	1.2201 ± 0.0172
+4	solution - Ryon Peddapalli	3	151.666667	1.1190 ± 0.0262
+5	brandon - Samuel Orellana Mateo	3	95.333333	0.4113 ± 0.0089
