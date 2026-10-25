@@ -12,20 +12,42 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **17.192** (3 seeds, N = 2..8). Bonus (N <= 15): 37.81.
+Baseline at 0dc262c: total 16.615. Current: **17.192** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
 
 ## Open
 
-### BONUS-010. Exact Clifford refits before depth compilation
-Status: in progress (bonus research, isolated files)
+### BR-101. Exact Clifford refits before depth compilation
+Status: measured (bonus research, isolated files)
 `research/bonus_depth_20261024/clean_cliffords.py` fixes near-Clifford fitted
 rotations to exact multiples of pi/2, then refits every remaining angle against
 all coherent input columns. The aim is to expose commutation and cancellation
 that numerical residuals in the current SCS tables may hide. No maintained
 constructor changes are claimed. Acceptance: column error < 1e-10, then full
-56-case native/device/state validation and recorded depth score. GitHub's
+56-case native/device/state validation and recorded depth score. Result:
+all accepted blocks have column error below 4e-15, but total bonus score is only
+39.4903307292 versus 39.4452746282. Native commuting-CZ rescheduling saves one
+additional moment on (15,7), with no change on (8,4), (10,5), or (12,6). GitHub's
 unauthenticated issues endpoint still returns 404; local queue is authoritative
 for this coordination note.
+
+### BR-102. Warm topology growth for two-row coherent halves
+Status: in progress (isolated bonus experiment; overlaps fat-ladder layout)
+`research/bonus_depth_20261024/grid_half_5_3.json` currently holds a coherent
+(5,3,0) decoder with **19 CZ, depth 34** versus 27 CZ and depth 47 at start.
+Its cells follow a snake path on a 2x3 patch with one missing corner; final three
+unary count qubits occupy the boundary row. Every r=0..3 input maps to D(5,r)
+with one common global sign (column error 1.85e-8 before final precision refit).
+The search inserts cancelling CZ pairs on unused grid edges and allows
+intermediate depth increases while retaining the best depth. The shared
+constructor has not been edited; table may be useful to the fat-ladder work.
+
+### BR-103. Compressed binary Schmidt labels
+Status: exploratory
+A three-qubit binary-to-Dicke decoder was fitted with 7 CZ (unary uses 8).
+The first five-qubit, four-column binary-label search at 33 CZ did not converge
+exactly (best infidelity 0.00134); those fitted angles are not a valid candidate.
+Files: `research/bonus_depth_20261024/binary_decoder.py`,
+`binary_decoder_3.json`, `binary_5_3_0_20.json`.
 
 ### 1. Short CZ circuits on grid patches for small (N, k)
 Status: in progress (ryon session)
@@ -106,6 +128,7 @@ no gate error 0.609 (X 0.129). The X term near N/2 comes from T1 decay and gate 
 removes the detuning, so DD placement can't recover it. Only shorter circuits (less T1 time) and fewer CZ help.
 
 ## Done
+- Ported start blocks (restricted-range scs steps) from toby/halves_start_sol.py; ryon/toby_sol.py logic now matches it. Bonus 37.81 -> 38.30, N <= 8 unchanged.
 - Ported multi-split ladder search from toby/combined_sol.py (tries splits outward from balanced for 8 s): 17.173 -> 17.192. Max build time 20 s at N = 20.
 - Ladder half (4,3) on a path: 18 -> 12 CZ. (7,3) 0.789 -> 0.830, (8,3) 0.768 -> 0.824, and (9,3) 50 -> 44 CZ.
 - Merged toby/ladder_sol.py (ladder split, doubling tree, two-variant bonus) with the patch table: 16.755 -> 17.077, bonus 26.35 -> 37.81.
