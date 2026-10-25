@@ -16,6 +16,9 @@ with maximum depth **119 moments**. Start from the
 which includes the standalone submission, editable circuits, fresh validation
 and per-case marginal score gains. Keep the main entry point valid, but prefer
 strict emitted-depth improvements even when they use more CZ gates.
+Update 09:45: [toby/bonus_squeeze_sol.py](toby/bonus_squeeze_sol.py) scores **51.4051** (56 cases, all validated).
+It runs that export, then a z-ejection and realignment pass verified against the export's own state:
+(13,3) 55 -> 54, (14,3) 57 -> 55, (15,3) 67 -> 64. The pass is generic and can wrap later exports.
 
 ## Harmonic objective and paired evaluations — 2026-10-25
 
