@@ -109,7 +109,11 @@ N = 14..16 ran (`benchmark_outputs/synth/ab2.py`, 2 seeds, 100 trajectories, no-
 So the k >= 4 halves (about 5 % fewer CZ) don't help and are NOT installed; data stays in
 benchmark_outputs/synth/sol_hwarm_*.json. Installed instead: k = 3 halves (8,3) 38 and (9,3) 41 (bec93b1):
 (16,3) 113 -> 81, (17,3) 122 -> 84, (18,3) 131 -> 87 CZ, all exact. k = 2 halves never beat the line plan.
-Open: (10,3) for (19,3), (20,3); a better k >= 4 start (the line warm start only shaves ~5 %).
+(10,3) 72 -> 51 installed (d2665c8): (19,3) 140 -> 97, (20,3) 149 -> 107 CZ.
+QA at d2665c8 (seed 21): N = 2..20, 100 cases, 0 rule/device failures, all exact up to N = 14 (checked) and
+(15..20, 3) checked separately, max build 12.7 s. fast_eval N <= 8: 17.495.
+Open: a better k >= 4 half start. The line warm start only shaves ~5 %, and random over-parameterised starts on
+a path don't fit exactly even at L = 140..160 with 3000 Adam steps (6,4) (6,5) (7,4) (7,5).
 Path runs cover N <= 16 only (state vector 2^N per refit). For N = 17..20 the ladder is still used.
 Run `benchmark_outputs/ex/gpar.py`-style pruning on the half isometries (unary -> D(a, l) for all l,
 target = (inputs, outputs)) on a path, starting from `half_ops`, and install into `halves`.
