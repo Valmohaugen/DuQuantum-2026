@@ -313,3 +313,14 @@ remains unchanged pending baseline-seed and robustness checks.
 [reproduction manifest](research/bonus_band_20261025/w_z_manifest.json).
 PORT-009 is available to finish the bounded bonus integration's remaining
 N=15/asymmetric coverage; PORT-008 is assigned to the resource-audit worker.
+
+
+Original-seed confirmation (seeds 0..5) of the same Z-output selector also
+improved mean sampled scores: **+0.01033 at N8** and **+0.01108 at N10**.
+Across both studies (24 case/seed comparisons), 20 improved, one declined,
+and three retained baseline. Main integration and coherent-noise robustness
+remain follow-ups. [Confirmation evidence](research/bonus_band_20261025/w_z_baseline_summary.json).
+The [symmetrization resource audit](research/bonus_symmetrization_audit_20261025/resource_audit.json)
+found an optimistic 116-qubit lower bound for its direct N15 register layout,
+before scratch space. This limits that implementation, not all Dicke circuits;
+no native-depth improvement is claimed.

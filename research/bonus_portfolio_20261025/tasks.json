@@ -147,12 +147,12 @@
       ],
       "result_status": "completed for N8/10 seeds0..5, four detuning realizations; held-out seeds3..5; no primary gain claimed"
     },
-    "pilot_status": "First-order Z-probability selector improves fresh-seed mean scores; baseline-seed and robustness validation pending; main unchanged",
+    "pilot_status": "Z-probability selector validated on original and fresh synthetic seeds0..11;20wins,1loss,3baseline over24cases; main unchanged",
     "pilot_evidence": [
       "research/bonus_band_20261025/w_hardware_results.json",
       "research/bonus_band_20261025/w_hardware_summary.json"
     ],
-    "next_work": "Validate the analytic Z-penalty selector on the original baseline seeds and with the maintained-solver owner before installing a main-constructor change. Preserve baseline outside the bounded pilot domain.",
+    "next_work": "Run coherent-error/crosstalk robustness checks against the maintained solver, then integrate a guarded bounded-domain selector if supported. Current W-related maintained functions match the frozen baseline.",
     "cost_pilot_evidence": [
       "research/bonus_band_20261025/w_cost_summary.json",
       "research/bonus_band_20261025/w_tree_summary.json",
@@ -163,6 +163,10 @@
     "z_sensitive_evidence": [
       "research/bonus_band_20261025/w_z_manifest.json",
       "research/bonus_band_20261025/w_z_summary.json"
+    ],
+    "confirmation_evidence": [
+      "research/bonus_band_20261025/w_z_baseline_summary.json",
+      "research/bonus_band_20261025/w_z_baseline_manifest.json"
     ]
   },
   {
@@ -287,7 +291,7 @@
   {
     "id": "PORT-008",
     "title": "Audit finite Willow resources for deterministic low-depth symmetrization",
-    "status": "in progress",
+    "status": "audited; native implementation deferred",
     "assignee": "coordination-research",
     "scope": "Paper/resource audit only before numerical synthesis; coordinate after PORT005 integration.",
     "inputs": [
@@ -300,9 +304,16 @@
       "Identify every non-native global primitive and count its decomposition.",
       "Compare emitted resource estimates with the current frozen portfolio before authorizing any synthesis effort."
     ],
-    "suggested_owner": "coordination researcher after PORT005; not yet accepted",
+    "suggested_owner": "coordination-research accepted the paper/resource audit; specialized implementation remains unassigned",
     "current_scope": "Read-only audit of deterministic probability-one symmetrization and finite Willow resources; no simulation, synthesis, Slurm submission or hardware changes.",
-    "audit_directory": "research/bonus_symmetrization_audit_20261025"
+    "audit_directory": "research/bonus_symmetrization_audit_20261025",
+    "artifacts": [
+      "research/bonus_symmetrization_audit_20261025/resource_audit.py",
+      "research/bonus_symmetrization_audit_20261025/resource_audit.json"
+    ],
+    "result": "Probability-one construction confirmed. Direct outer-register lower bounds at N8/12/15 are 48/89/116 qubits before scratch; literal generic reversible merge uses at least 128/250/322 under stated uncompressed-layout assumptions. No native or routed improvement demonstrated.",
+    "acceptance_status": "Paper audit complete. Full finite native depths, scratch maxima, and routing remain undetermined; implementation acceptance checks are unmet, not waived.",
+    "next_work": "Only revisit with promise-specialized record/register compression and an explicit finite native schedule. No synthesis or hardware changes started."
   },
   {
     "id": "PORT-009",

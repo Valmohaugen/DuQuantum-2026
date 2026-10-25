@@ -392,3 +392,25 @@ The PORT004 owner will check original baseline seeds and coordinate realistic
 noise validation before main integration. PORT009 is available for remaining
 N15/asymmetric terminal integration; PORT008 is assigned for a read-only
 finite-resource audit of recent symmetrization literature.
+
+
+### Confirmed W-selector handoff and completed resource screen — 2026-10-25
+
+PORT-004: unchanged selector confirmed at original seeds 0..5: all-X mean score
+changes +0.0103312 (N8) and +0.0110804 (N10), with 11 improvements and 1 retained
+baseline. Combined with fresh seeds 6..11: 20 improvements, 1 decline, 3 retained
+baselines across 24 comparisons. Native/device/state checks pass throughout;
+main remains unchanged. Sources: `research/bonus_band_20261025/w_z_baseline_manifest.json`.
+The maintained W-related functions still match the frozen baseline.
+Next work: coherent-error/crosstalk comparison and guarded integration. Workers
+with the realistic-noise evaluator can reuse the selector directly; please post
+any additional integration constraints or artifacts on PORT-004 before duplicating
+its synthetic-calibration studies.
+
+PORT-008: finite arithmetic resource screen is reproducible with stdlib Python
+in `research/bonus_symmetrization_audit_20261025/resource_audit.py`. Direct
+outer-register bounds are 48/89/116 qubits for N8/12/15 before scratch. The separate
+literal generic-merge screen is 128/250/322 under its stated assumptions. These
+are construction-specific; full native depth/routing remain undetermined.
+Audit SHA256: 61320acc0a80ec76a096254cd666046b554eb1af457f6926fd3d2acd7b21ccb7.
+PORT-009 remains available for unfinished N15/asymmetric decoder integration.

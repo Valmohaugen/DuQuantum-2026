@@ -1,0 +1,59 @@
+{
+  "status": "original-seed confirmation complete; no maintained constructor change",
+  "cases": 12,
+  "calibration_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "changed_choices": 11,
+  "max_build_seconds": 1.1210374925285578,
+  "max_state_l2_error": 1.1272428820163253e-15,
+  "summary": [
+    {
+      "N": 8,
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.010328121488938965,
+      "conditional_MC_standard_error_of_mean": 0.003550624281080859,
+      "calibration_sample_standard_error": 0.0025552341085326134,
+      "positive_cases": 6,
+      "negative_cases": 0
+    },
+    {
+      "N": 8,
+      "cutoff": 8,
+      "cases": 6,
+      "mean_score_delta": 0.010331227861377601,
+      "conditional_MC_standard_error_of_mean": 0.0035452967123473394,
+      "calibration_sample_standard_error": 0.0025567296219583995,
+      "positive_cases": 6,
+      "negative_cases": 0
+    },
+    {
+      "N": 10,
+      "cutoff": 4,
+      "cases": 6,
+      "mean_score_delta": 0.011084701139714331,
+      "conditional_MC_standard_error_of_mean": 0.00226706198726562,
+      "calibration_sample_standard_error": 0.003317529663854708,
+      "positive_cases": 5,
+      "negative_cases": 0
+    },
+    {
+      "N": 10,
+      "cutoff": 10,
+      "cases": 6,
+      "mean_score_delta": 0.011080363221434774,
+      "conditional_MC_standard_error_of_mean": 0.002265259484650004,
+      "calibration_sample_standard_error": 0.0033161325512551672,
+      "positive_cases": 5,
+      "negative_cases": 0
+    }
+  ],
+  "decision": "Candidate supported on original and fresh synthetic calibrations. Next perform coherent-error/crosstalk robustness comparison and guarded integration; no per-seed tuning.",
+  "uncertainty": "Conditional Monte Carlo uncertainty excludes detuning uncertainty; across-seed standard errors describe six synthetic calibrations per size."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "files": {
+    "research/bonus_band_20261025/w_z_baseline_probe.py": "071f1e03b9f6118c00108a9051c7327bb76b28a02d301280bb8220dee21f7da6",
+    "research/bonus_band_20261025/w_z_baseline_results.json": "09ff5c2caf015ac8a59a8bcf0265d026bea9d9ce361d2ddd3f7290445b494b97",
+    "research/bonus_band_20261025/w_z_baseline_pools.json": "cb29df7039a48d78030bf1620eaae6da488545442c2b87a76bcd58a2147db0e5",
+    "research/bonus_band_20261025/w_z_baseline_summary.json": "f915ca7ed32e1df764ce2eb1cdbc6ff0f031af695e8cbb07a854e2b98e289c04",
+    "research/bonus_band_20261025/w_z_selection.py": "51a90599b28fa29d36e544514cb64303a4454da734d0a5c0af679e275b7daee6",
+    "research/bonus_band_20261025/w_z_sensitivity.py": "b5be11f4af7566baac6608bbeed501bcf672fd9554a42446d8e2bb7f604ffe12"
+  },
+  "dependencies": "w_experiment_manifest.json and w_z_manifest.json",
+  "command": "python -m research.bonus_band_20261025.w_z_baseline_probe",
+  "selector_note": "Identical selector to fresh-seed study; no tuning between studies"
+}
