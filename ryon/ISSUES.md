@@ -183,6 +183,9 @@ Every start stalls near toby_sol's own count: (12,5) 115-134, (12,6) 128-158, (1
 (11,5) went 104 -> 59 from a 3-row line start. Ideas: longer 3-row runs (they need hours at N = 12), splitting the
 circuit into overlapping windows of about 8 qubits and pruning each window against the full state, or a better
 seed (e.g. the D(11,5)-style structure extended by one SCS step and refitted). Scripts: benchmark_outputs/ex/runfp.sh.
+Running until about 10:00 (Slurm jobs U12.5.. U13.6): 5-hour 3-row line-start runs, two per case, writing
+benchmark_outputs/ex/out/gp_{N}_{k}_u1.json / _u2.json (+ hist_*.jsonl). Check with `python3 status.py`, compare with
+`python proxy.py N k <files>` and install with `python inst.py <file>` if CZ and moments both drop.
 Next (me): install N = 10..16 path/patch winners as they converge; brickwork-start pruning for k >= 3.
 k = 2 from an over-parameterised brickwork start on 2-row ladder footprints (toby): negative. Greedy
 single-CZ deletion gets stuck far above toby_sol: (6,2) 42 -> 17 CZ (toby_sol 15), (7,2) 80 -> 61 (19); (8,2) and
