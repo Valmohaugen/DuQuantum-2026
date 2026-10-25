@@ -1,7 +1,7 @@
 """Trajectory version of case.py for N >= 11 (main vs bonus build)."""
 import importlib, json, sys, time
 variant, root, N, n, seed, traj, out = sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]), sys.argv[7]
-sys.path[:0] = [f"{root}/ryon", f"{root}/toby", f"{root}/bonus56"]
+sys.path[:0] = [f"{root}/ryon", f"{root}/toby", f"{root}/research/new_metric_20261025"]
 import numpy as np, cirq
 import traj_eval, judge
 cal = judge.fake_calibration(seed)
@@ -9,8 +9,8 @@ def build(N, n, cal):
     if variant == "main":
         return importlib.import_module("toby_sol").create_dicke_state(N, n, *cal)
     if variant == "bonus_main":
-        return importlib.import_module("bonus_sub").create_dicke_state(N, n, *cal)
-    c, qs = importlib.import_module("bonus_sub").create_dicke_state_adaptive(N, n)
+        return importlib.import_module("bonus_sub_105326Z").create_dicke_state(N, n, *cal)
+    c, qs = importlib.import_module("bonus_sub_105326Z").create_dicke_state_adaptive(N, n)
     allq = list(c.all_qubits())
     def fits(mp):
         return all(mp[q] in cal[1] for q in allq) and all((mp[o.qubits[0]], mp[o.qubits[1]]) in cal[0] or (mp[o.qubits[1]], mp[o.qubits[0]]) in cal[0]
