@@ -1,4 +1,4 @@
-# Qubillionaires — DuQuantum 2026 Google Quantum AI Challenge
+# QuBillionaires — DuQuantum 2026 Google Quantum AI Challenge
 
 Our solution to the Google Quantum AI challenge at DuQuantum 2026: prepare the N-qubit,
 weight-n Dicke state on Google's Willow processor using only CZ gates between calibrated
