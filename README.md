@@ -465,6 +465,7 @@ The target remains **45**. These are local bonus scores, not hardware results.
 | Date | Best verified bonus score | Cases | Candidate | Evidence |
 | --- | ---: | ---: | --- | --- |
 | 2026-10-25 | 43.2219421632 | 56 | [Frozen native portfolio](research/bonus_portfolio_20261025/portfolio_submission.py) | [Validation](research/bonus_portfolio_20261025/validation.json), [source selection](research/bonus_portfolio_20261025/merge_results.json) |
+| 2026-10-25 09:45 | 51.4051 | 56 | [toby/bonus_squeeze_sol.py](toby/bonus_squeeze_sol.py): native_submission.py (51.3337) plus a z-ejection / realignment pass; (13,3) 55 -> 54, (14,3) 57 -> 55, (15,3) 67 -> 64 moments | all 56 pass Willow105.validate_circuit and judge.test_circuit, max build 2.6 s |
 
 Reusable tasks and their acceptance criteria are recorded in
 [the shared issue queue](ryon/ISSUES.md) and
@@ -518,6 +519,12 @@ already at the optimum: `idle_err` 1e-3 and 3e-3, `idle_penalty` 3e-3, `prefer_s
 all land within 0.001 of main. Packing 1q gates into CZ moments (`pack=True`) scores lower (1.036).
 Bonus metric (sum N n / moments, N = 2..15) is unchanged: milestone 105326Z 51.04, toby_sol
 `create_dicke_state_adaptive` 44.00.
+
+Larger N (trajectories, seed 0, Z floor + X; [summary_largeN.txt](research/new_metric_20261025/summary_largeN.txt)):
+main / bonus build 0.581 / 0.526 for N = 2..15, 0.520 / 0.456 for N = 2..16, 0.420 / 0.360 for N = 2..18.
+Penalties of 4 to 6 at N >= 14, n near N/2 dominate the mean. A 300-trajectory, 2-seed head-to-head over
+10 cases at N = 14..16 ([rows_traj300.jsonl](research/new_metric_20261025/rows_traj300.jsonl)) has main ahead or tied in every case.
+The bonus build's apparent N = 15 wins at 80 trajectories were noise.
 
 Part 2 (bonus): the same searches gave 15 circuits shallower than the bonus portfolio (+2.2 points vs milestone
 101047Z); most are now merged (milestone 105326Z, 51.04). Remaining 4 are in research/primary_depth_20261025 (ISSUES 14).

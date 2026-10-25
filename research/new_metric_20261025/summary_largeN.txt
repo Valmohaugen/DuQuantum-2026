@@ -1,0 +1,9 @@
+N=2..12: main 0.8057 (36 cases) | bonus_adaptive 0.7278 (36 cases)
+N=2..13: main 0.7365 (42 cases) | bonus_adaptive 0.6519 (42 cases)
+N=2..14: main 0.6514 (49 cases) | bonus_adaptive 0.5799 (49 cases)
+N=2..15: main 0.5812 (56 cases) | bonus_adaptive 0.5255 (56 cases)
+N=2..16: main 0.5203 (64 cases) | bonus_adaptive 0.4563 (64 cases)
+N=2..17: main 0.4682 (72 cases) | bonus_adaptive 0.4064 (72 cases)
+N=2..18: main 0.4196 (81 cases) | bonus_adaptive 0.3604 (81 cases)
+N=2..19: main incomplete | bonus_adaptive incomplete
+N=2..20: main incomplete | bonus_adaptive incomplete
