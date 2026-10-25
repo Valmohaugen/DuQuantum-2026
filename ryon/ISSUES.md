@@ -12,7 +12,7 @@ error, so it moves almost one-for-one with fidelity, and the X term only matters
 **Compute.** One CPU per shell. Inside the Slurm job, `srun --overlap -N1 -n1 -w <node> ...` runs
 a worker on another node of the allocation (16 nodes x 1 CPU).
 
-Baseline at 0dc262c: total 16.615. Current: **17.480** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
+Baseline at 0dc262c: total 16.615. Current: **17.495** (3 seeds, N = 2..8). Bonus (N <= 15): 38.30.
 
 ## Open
 
@@ -156,6 +156,11 @@ Search notes: for N >= 11 the 3-row footprint started from the line construction
 screening (fold the CZ's angles into neighbours, try lowest-loss deletions first; SCREEN=1 in gpar.py)
 did not beat random deletion order, so it is off by default. A grow-from-D(N-1,k-1) seeding idea is
 impossible (window unitary can't raise the Schmidt rank across the window boundary from k to k+1).
+c2e760e and after: (8,3) 27-cz and (9,3) 33-cz lines from a brickwork start (gbrick.py: random brickwork on a
+path, fit, then prune) beat the line-construction start in score even with more CZs: their Zb is about half
+((8,3) 0.005 vs 0.013), i.e. errors spread more evenly over the in-subspace patterns. (10,4) 45 cz 0.724,
+(10,5) 42 cz 0.708, (9,4) 33 cz 0.778. Readout-only bound for N = 2..8 (gate/idle noise off, same placement):
+18.474 vs 17.495 now, so about 1.0 is left at small N, mostly (8,2..4) and N = 7. Brickwork k = 2 runs going.
 Next (me): install N = 10..16 path/patch winners as they converge; brickwork-start pruning for k >= 3.
 k = 2 from an over-parameterised brickwork start on 2-row ladder footprints (toby): negative. Greedy
 single-CZ deletion gets stuck far above toby_sol: (6,2) 42 -> 17 CZ (toby_sol 15), (7,2) 80 -> 61 (19); (8,2) and
