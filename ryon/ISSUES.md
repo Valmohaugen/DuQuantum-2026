@@ -17,7 +17,7 @@ Baseline at 0dc262c: total 16.615. Current: **17.473** (3 seeds, N = 2..8). Bonu
 ## Open
 
 ### BR-110. Verified bonus portfolio exceeds 45
-Status: complete scientific checkpoint; publication being prepared
+Status: scientific checkpoint complete; a qualifying published checkpoint independently verified
 `research/bonus_portfolio_20261025/portfolio_submission.py` scores
 **46.2165739570** over all 56 corrected bonus cases. Full complex128 amplitudes
 and relative phases, native gates, Willow edges/qubits, inclusive moment limit,
@@ -26,6 +26,15 @@ L2 error is 1.21e-7; the slowest observed constructor call was below 0.1 s.
 The portfolio merges independently verified complete circuits, and returns
 explicit native moments with no fitting or hidden nested circuits at runtime.
 README records both the archived 43.222 checkpoint and the current best.
+The concurrent checkpoint on `bonus-native-20261025T053245Z`, commit
+`6e7dbdbc28796918a68756c6c7954c9c23d403b7`, was fetched from GitHub and
+independently revalidated over all 56 cases at **46.1786336531**. Its committed
+candidate SHA-256 matches the published validation report. Evidence:
+`research/bonus_portfolio_20261025/remote_publication_audit.json`.
+This supplies the requested periodic publication. The higher local 46.216574
+checkpoint remains available on the separately prepared branch pending its
+requested review; no duplicate remote push was made. Open follow-up tasks and
+their current owners remain in the shared task board.
 
 ### BR-111. Mixed exact splitting identities shorten W-state broadcasts
 Status: complete; calibrated main-path integration is available for pickup
@@ -92,6 +101,10 @@ Status: open, unassigned (research)
 Whole-state pruning never removed a CZ from the W trees (N = 4..12). Is 2N - 3 optimal for CZ + 1q gates?
 A proof or a counterexample (e.g. fit random 2N - 4 CZ sequences on trees / paths, many restarts) settles it.
 W cases are about 40 % of the small-N score, so even one CZ matters at N >= 8.
+Evidence (ryon, numerical, not a proof): W3 with 2 CZ fails for every 2-CZ sequence on 3 qubits, even with
+general complex 1q gates (U3 everywhere, 12 BFGS restarts each, best infidelity 0.127). W4 with 3 or 4 CZ fails
+on the path and the 4-cycle with real (Ry) gates (best 0.25 and 0.067). The split step alone (|10> -> a|10> + b|01>,
+|00> fixed) needs 2 CZ. So 2N - 3 holds for N = 3, 4 in these searches.
 Evidence (ryon): random CZ sequences on a 2x2 / 2x3 patch with random restarts never fit W(4) with 4 CZ
 (28k tries) or W(5) with 6 CZ (19k tries), while 2N - 3 fits in a few tries. Likely optimal; low priority.
 Exhaustive (toby, research/toby_offline/w_bound.py): every CZ sequence up to qubit relabelling, all-to-all
@@ -395,3 +408,24 @@ explicit native circuits here, including artifact paths, source hashes,
 actual depths/CZ counts and validation evidence. State any current claim so
 other workers can coordinate the next frozen merge. Research continues beyond
 this published milestone.
+
+
+### Continued checkpoint — 2026-10-25 01:53 EDT
+
+The validated native portfolio is now **46.5862094107** after merging
+peer W improvements; immutable evidence is `research/bonus_band_20261025/milestones/20261025T055319Z/validation.json`.
+The named publication branch is `bonus-native-20261025T053245Z` (first checkpoint
+commit `6e7dbdbc28796918a68756c6c7954c9c23d403b7`; further checkpoints stay on that branch).
+PORT-004's N=8,10 pilot is complete: unconditional all-Givens substitution is not
+accepted for the main solver. See `research/bonus_band_20261025/w_hardware_summary.json`;
+next work is calibration-aware selection accounting for single-qubit cost and
+schedule duration. PORT-007 is the preserved duplicate, tracked by PORT-004.
+Please continue posting better native circuits, hashes, validation and unmet
+needs; the 45 milestone is not a stop condition.
+
+
+Publication pointer: `bonus-native-20261025T053245Z` now contains commit
+`cde1672e759b831e1dfd9b931b70097fbfea3f5e` with the validated **46.5862094107**
+checkpoint, completed peer decoder/W artifacts, and the calibrated-W pilot.
+The existing PORT-004 owner continues calibration-aware selection; completed
+PORT-001/002 owners and the remaining available tickets are preserved.
